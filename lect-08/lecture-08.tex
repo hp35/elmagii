@@ -1,0 +1,515 @@
+%
+% File: teaching/elmag/lect-08/lecture-08.tex [plain TeX code]
+% Last change: November 28, 2024
+%
+% Lecture No 8 in the course ``Elektromagnetism II, 1TE626 (2023)'',
+% held November 28, 2024, at Uppsala University, Sweden.
+%
+% Copyright (C) 2024, Fredrik Jonsson
+%
+\input macros/epsf.tex
+\input macros/eplain.tex
+\font\ninerm=cmr9
+\font\twelvesc=cmcsc10
+\input amssym % to get the {\Bbb E} font (strikethrough E)
+\def\captionwide{\advance\leftskip by 60pt
+  \advance\rightskip by 60pt}
+\def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
+    \else\hfill\fi}
+  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
+    \hfil{\it Elektromagnetism II, 1TE626 (2024)}}
+  \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2024)}
+    \hfil{\it F\"orel\"asning #1}}
+  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{macros/UU_logo_color.eps}}
+  \vskip-42pt\hfill\vbox{\hbox{{\it Elektromagnetism II, 1TE626 (2024)}}
+  \hbox{{\it Lecture Notes, Fredrik Jonsson}}}\vskip 36pt
+    \centerline{\twelvesc F\"orel\"asning #1}
+  \vskip 24pt\noindent}
+\def\section #1 {\medskip\goodbreak\noindent{\bf #1}
+  \par\nobreak\smallskip\noindent}
+\def\subsection #1 {\smallskip\goodbreak\noindent{\it #1}
+  \par\nobreak\smallskip\noindent}
+\def\iint{\mathop{\int\kern-7pt\int}}
+\def\iiint{\mathop{\int\kern-7pt\int\kern-7pt\int}}
+\def\Re{\mathop{\rm Re}\nolimits} % real part
+\def\Im{\mathop{\rm Im}\nolimits} % imaginary part
+\def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
+
+%\def\section#1{\bigskip\noindent{\bf#1}\par\medskip\goodbreak\noindent}
+%\def\ffig#1{\smallskip\centerline{\epsfbox{#1}}}
+\lecture{8}
+\centerline{\twelvesc Multipolutvecklingen}
+\centerline{Fredrik Jonsson, Uppsala Universitet, 28 november 2024}
+\vskip24pt
+\section{Multipolutveckling av f\"alt}
+\item{$\bullet$}{Formalism f{\"o}r att projicera ut olika bidrag (``moment'')
+   till elektromagnetiska f{\"a}lt.} 
+\item{$\bullet$}{Ofta f{\"o}rekommande f{\"o}r karakterisering av antenner.}
+\item{$\bullet$}{Molekyler som interagerar med elekromagnetiska f{\"a}lt agerar
+   som ``antenner'' vilka kan beskrivas utifr{\aa}n deras multipolutvecklingar,}
+\item{$\bullet$}{Basen f\"or beskrivning av $\varepsilon_{\rm r}$ i konstitutiva
+   relationen ${\bf P}=\varepsilon_0\varepsilon_{\rm r}{\bf E}$ (hur material
+   polariseras av elektriska f\"alt) eller ${\bf B}=\mu_0\mu_{\rm r}{\bf H}$
+   (hur material magnetiseras av magnetiska f{\"a}lt).}
+\item{$\bullet$}{Oftast fokus p\aa\ elektrisk dipol-approximation, men vissa
+   fenomen, som optisk aktivitet, kan bara beskrivas om h{\"o}gre ordningars
+   termer tas med.}
+\medskip
+\noindent
+Vi kommer h{\"a}r att i huvudsak anv{\"a}nda de generella uttrycken f{\"o}r
+elektrisk skal{\"a}r potential och vektorpotentialen,
+som\numberedfootnote{F{\"o}r formulering av skal{\"a}ra potentialen
+  $\Phi({\bf x})$ samt vektorpotentialen ${\bf A}({\bf x})$ fr{\aa}n en
+  generell laddningsdistribution, se Griffiths Ekv.~(10.26), s.~445.}
+$$
+  \Phi({\bf x})={{1}\over{4\pi\varepsilon_0}}
+    \iiint_{{\Bbb R}^3}{{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+    \qquad\qquad
+  {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
+    \iiint_{{\Bbb R}^3}{{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+$$
+d{\"a}r $\varepsilon_0= 8.854\times10^{-12}\ {\rm F}/{\rm m}$ {\"a}r den
+{\it elektriska permittiviteten f{\"o}r vakuum} (electric permittivity of
+vacuum), samt $\mu_0=1.257\times10^{-6}\ {\rm N}/{\rm A}^2$ den {\it magnetiska
+permeabiliteten f{\"o}r vakuum} (vacuum magnetic permeability). I dessa uttryck
+{\"a}r $\rho$ den eletriska laddningsdensiteten (${\rm C}/{\rm m}^3$) och
+${\bf J}$ den eletriska str{\"o}mt{\"a}theten (${\rm A}/{\rm m}^2$).
+Vi anv{\"a}nder h{\"a}r de generella, tredimensionella uttrycken f{\"o}r
+potentialerna f{\"o}r att {\"o}va p{\aa} deras till{\"a}mpningen, samt f{\"o}r
+att bygga upp en generell verktygsl{\aa}da f{\"o}r att probleml{\"o}sning inom
+elektromagnetisk f{\"a}ltteori.
+
+F{\"o}r att rekapitulera sj{\"a}lva vitsen med att anv{\"a}nda den skal{\"a}ra
+potentialen och vektorpotentialen, s{\aa} kan vi ur dessa extrahera de
+{\it statiska} (ej tidsberoende) elektriska och magnetiska f{\"a}lten
+som\numberedfootnote{Recap p{\aa} ursprunget f{\"o}r vektorpotentialen:
+  $\nabla\cdot{\bf B}=0\quad\Leftrightarrow
+    \quad\exists{\bf A}: {\bf B}=\nabla\times{\bf A}$.}
+$$
+  {\bf E}=-\nabla\Phi-\underbrace{{{\partial{\bf A}}\over{\partial t}},}_{=0}
+  \qquad
+  {\bf B}=\nabla\times{\bf A}.
+$$
+Vi kan ocks{\aa} konstatera att SI-enheterna f{\"o}r den skal{\"a}ra
+potentialen och vektorpotentialen {\"a}r
+$$
+  \eqalign{
+    [\Phi]&={{[\rho][dV']}\over{[\varepsilon_0][{\bf x}]}}
+        ={{({\rm C}/{\rm m}^3){\rm m}^3}\over{({\rm F}/{\rm m}){\rm m}}}
+	=\{\ {\rm F}={\rm C}/{\rm V}\ \}
+	={\rm V},\cr
+    [{\bf A}]&={{[\mu_0][{\bf J}][dV']}\over{[{\bf x}]}}
+        ={{({\rm N}/{\rm A}^2)({\rm A}/{\rm m}^2){\rm m}^3}\over{{\rm m}}}
+        ={\rm N}/{\rm A}.\cr
+  }
+$$
+\vfill\eject
+
+\section{Multipolutveckling f\"or skal{\"a}r potential f{\"o}r en
+         elektrisk dipol}
+Ett av de enklaste testobjekten inom elektromagnetism {\"a}r den elektriska
+dipolen,\numberedfootnote{The English prefixes {\it bi-}, derived from Latin,
+  and its Greek variant {\it di-} both mean ``two''. The Latin prefix is far
+  more prevalent in common words, such as {\it bilingual}, {\it biceps}, and
+  {\it biped}; the more technical Greek {\it di-} appears in such words as
+  {\it diphthong} and {\it dilemma}.} best{\aa}ende av en positiv och negativ
+laddning separerade ett avst{\aa}nd $L$.
+\"Aven f\"or en elektrisk {\it di}pol finns det (paradoxalt) termer av
+{\it multi}polmoment d\aa\ vi l\"amnar approximationen att den skal\"ara
+elektriska potentialen enbart ges av skal\"arprodukten mellan dipolmomentet
+och ortsvektorn till observationspunkten.
+Vi betraktar en klassisk elektrisk dipol med tv\aa\ laddningar $+q$ or $-q$
+separerade avst{\aa}ndet $L=2b$. Dipolen kan beskrivas med en
+laddningsf{\"o}rdelning enligt {\it distributionen}
+$$
+  \rho({\bf x})=(+q)\delta({\bf x}-b{\bf e}_z)
+     +(-q)\delta({\bf x}+b{\bf e}_z)
+$$
+\smallskip
+\centerline{\epsfbox{figs/eldipole.1}}
+\medskip
+\noindent
+{\it Elektrisk skal\"ar potential} fr{\aa}n denna specifika distribution av
+tv\aa\ punktk\"allor (vi utg{\aa}r h{\"a}r ifr{\aa}n den generella
+tre-dimensionella volymintegralen av en laddningsdensitet $\rho({\bf x})$,
+bara f{\"o}r att illustrera hur vi kan till{\"a}mpa denna {\"a}ven f{\"o}r
+lokaliserade punktladdningar):
+$$
+  \eqalign{
+    \Phi({\bf x})&={{1}\over{4\pi\varepsilon_0}}
+        \iiint_{V}{{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'\cr
+      &={{1}\over{4\pi\varepsilon_0}}\left(
+         {{(+q)}\over{|{\bf x}-b{\bf e}_z|}}+{{(-q)}\over{|{\bf x}+b{\bf e}_z|}}
+        \right)\cr
+      &={{q}\over{4\pi\varepsilon_0}}\left(
+          {{1}\over{r-b\cos\theta}}-{{1}\over{r+b\cos\theta}}
+        \right)\cr
+      &=\big\{\ \hbox{Definiera}\ \varepsilon \equiv (b/r)\cos\theta\ \big\}\cr
+      &={{q}\over{4\pi\varepsilon_0 r}}\left(
+          {{1}\over{1-\varepsilon}}-{{1}\over{1+\varepsilon}}
+        \right)\cr
+      &=\big\{\ \hbox{Taylor-utveckling f{\"o}r litet}\ \varepsilon\ \big\}\cr
+      &={{q}\over{4\pi\varepsilon_0 r}}\left(
+          (1+\varepsilon+\varepsilon^2+\varepsilon^3+\ldots)
+            -(1-\varepsilon+\varepsilon^2-\varepsilon^3+\ldots)
+        \right)\cr
+      &={{q}\over{2\pi\varepsilon_0 r}}\left(
+          \varepsilon+\varepsilon^3+\varepsilon^5+\ldots
+        \right)\cr
+%      &={{q}\over{2\pi\varepsilon_0 r}}\Bigg(
+%         {{b}\over{r}}\cos\theta
+%         +\Big({{b}\over{r}}\cos\theta\Big)^3
+%         +\Big({{b}\over{r}}\cos\theta\Big)^5
+%	 +\ldots
+%        \Bigg)\cr
+      &={{q}\over{2\pi\varepsilon_0}}\Bigg(
+         \underbrace{{{b\cos\theta}\over{r^2}}}_{\rm dipol}
+         +\underbrace{{{(b\cos\theta)^3}\over{r^4}}}_{\rm oktopol}
+         +\underbrace{{{(b\cos\theta)^5}\over{r^6}}}_{\rm dotriacontapol}
+	 +\ldots
+        \Bigg)\cr
+  }
+$$
+\vfill\eject
+\centerline{\epsfxsize=144mm\epsfbox{multipoles/multipoles/lindipole.eps}}
+\noindent
+{\captionwide Skal{\"a}r potential $\Phi(x,y)$ f{\"o}r en elektrisk dipol.}
+\medskip
+\centerline{\epsfxsize=144mm\epsfbox{multipoles/multipoles/lindipole-str.eps}}
+\noindent
+{\captionwide Skal{\"a}r potential $\Phi(x,y)$ f{\"o}r en elektrisk dipol med
+f{\"a}ltlinjer f{\"o}r ${\bf E}(x,y)=-\nabla\Phi(x,y)$.}
+
+\section{Exempel p\aa\ multipoler}
+Som en relativt enkel illustration av multipoler kan vi konstruera olika
+multipolmoment utifr{\aa}n diskreta laddningar.
+\bigskip
+\centerline{\epsfbox{figs/quadrupole.1}}
+\medskip
+\noindent
+\bigskip
+\centerline{\epsfbox{figs/octopole.1}}
+\medskip
+\noindent
+En intressant {\"o}vning {\"a}r att g{\aa} igenom dessa specifika multipoler
+och upprepa den geometriska analysen f{\"o}r dipolen, f{\"o}r att p{\aa} s{\aa}
+s{\"a}tt extrahera styrkan p{\aa} de olika multipolmomenten.
+
+\section{Multipolutveckling f\"or skal{\"a}r potential f\"or en
+         linj{\"a}r elektrisk kvadrupol}
+L{\aa}t oss g{\"o}ra en liten {\"a}ndring p{\aa} den elektriska dipolen i
+f{\"o}reg{\aa}ende exempel, och ist{\"a}llet l{\"a}gga en punktladdning $-2q$
+i centrum med tv{\aa} punktladdningar $+q$ p{\aa} diametralt motsatt sida om
+denna. Denna konfiguration kan beskrivas med {\it distributionen}
+$$
+  \rho({\bf x})=(+q)\delta({\bf x}-b{\bf e}_z)
+  +(-2q)\delta({\bf x})
+  +(+q)\delta({\bf x}+b{\bf e}_z),
+$$
+precis analogt med det f{\"o}reg{\aa}ende fallet f{\"o}r den elektriska dipolen.
+\smallskip
+\centerline{\epsfbox{figs/linelquadpole.1}}
+\vfill\eject
+\noindent
+P{\aa} exakt samma s{\"a}tt som tidigare, med den enda skillnaden att vi nu
+har {\it tre} laddningar (k{\"a}ll\-termer) f{\"o}r den skal{\"a}ra potentialen
+$\Phi({\bf x})$, s{\aa} har vi att
+$$
+  \eqalign{
+    \Phi({\bf x})&={{1}\over{4\pi\varepsilon_0}}
+        \iiint_{V}{{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'\cr
+      &={{1}\over{4\pi\varepsilon_0}}\left(
+          {{(+q)}\over{|{\bf x}-b{\bf e}_z|}}
+            +{{(-2q)}\over{|{\bf x}|}}
+            +{{(+q)}\over{|{\bf x}+b{\bf e}_z|}}
+        \right)\cr
+      &={{q}\over{4\pi\varepsilon_0}}\left(
+          {{1}\over{r-b\cos\theta}}
+            -{{2}\over{r}}
+            +{{1}\over{r+b\cos\theta}}
+        \right)\cr
+      &=\big\{\ \hbox{Definiera}\ \varepsilon \equiv (b/r)\cos\theta\ \big\}\cr
+      &={{q}\over{4\pi\varepsilon_0 r}}\left(
+          {{1}\over{1-\varepsilon}}
+            -2
+            +{{1}\over{1+\varepsilon}}
+        \right)\cr
+      &=\big\{\ \hbox{Taylor-utveckling f{\"o}r litet}\ \varepsilon\ \big\}\cr
+      &={{q}\over{4\pi\varepsilon_0 r}}\left(
+          (1+\varepsilon+\varepsilon^2+\varepsilon^3+\ldots)
+            -2
+            +(1-\varepsilon+\varepsilon^2-\varepsilon^3+\ldots)
+        \right)\cr
+      &={{q}\over{2\pi\varepsilon_0 r}}\left(
+          \varepsilon^2+\varepsilon^4+\varepsilon^6+\ldots
+        \right)\cr
+%      &={{q}\over{2\pi\varepsilon_0 r}}\Bigg(
+%         {{b}\over{r}}\cos\theta
+%         +\Big({{b}\over{r}}\cos\theta\Big)^3
+%         +\Big({{b}\over{r}}\cos\theta\Big)^5
+%	 +\ldots
+%        \Bigg)\cr
+      &={{q}\over{2\pi\varepsilon_0}}\Bigg(
+         \underbrace{{{(b\cos\theta)^2}\over{r^3}}}_{\rm kvadrupol}
+         +\underbrace{{{(b\cos\theta)^4}\over{r^5}}}_{\rm hexadecapol}
+         +\underbrace{{{(b\cos\theta)^6}\over{r^7}}}_{\rm hexacontatetrapol}
+         +\ldots
+        \Bigg)\cr
+  }
+$$
+I denna serieutveckling {\aa}terfinns nu endast {\it udda} potenser av
+avst{\aa}ndet $r$, varav den dominerande termen p{\aa} stora avst{\aa}nd
+kommer att vara den som g{\aa}r som $O(1/r^3)$, svarande mot en elektrisk
+{\it kvadrupol}. V{\"a}rt att notera {\"a}r att i denna serieutveckling
+{\aa}terfinns {\it ingen dipolterm}.
+
+\section{Klassificering av multipolmoment}
+Multipolutvecklingen klassificeras term f{\"o}r term av hur beroendet av
+avst{\aa}ndet $r=|{\bf x}-{\bf x}'|$ mellan k{\"a}llpunkt ${\bf x}'$ och
+f{\"a}ltpunkt ${\bf x}$ ser ut:
+\item{$\bullet$}{Monopol           (1-pol):  $\Phi({\bf x})\sim 1/r$}
+\item{$\bullet$}{Dipol             (2-pol):  $\Phi({\bf x})\sim 1/r^2$}
+\item{$\bullet$}{Kvadrupol         (4-pol):  $\Phi({\bf x})\sim 1/r^3$}
+\item{$\bullet$}{Oktopol           (8-pol):  $\Phi({\bf x})\sim 1/r^4$}
+\item{$\bullet$}{Hexadecapol       (16-pol): $\Phi({\bf x})\sim 1/r^5$}
+\item{$\bullet$}{Dotriacontapol    (32-pol): $\Phi({\bf x})\sim 1/r^6$}
+\item{$\bullet$}{Hexacontatetrapol (64-pol): $\Phi({\bf x})\sim 1/r^7$}
+\item{$\bullet$}{$\ldots$}
+\medskip
+\noindent
+Sammanfattningsvis s\aa\ har en klassisk elektrisk dipol samtliga
+multipolmoment som \"ar {\it j\"amna}, det vill s\"aga {\it dipol}
+($\Phi\sim 1/r^2$), {\it oktopol} ($\Phi\sim 1/r^4$), {\it dotriacontapole}
+($\Phi\sim 1/r^6$), etc.
+\vfill\eject
+\section{Skal{\"a}r potential och elektriskt f{\"a}lt f{\"o}r en linj{\"a}r
+         elektrisk kvadrupol}
+\centerline{\epsfxsize=142mm
+  \epsfbox{multipoles/multipoles/linquadrupole.eps}}
+\noindent
+{\captionwide Skal{\"a}r potential $\Phi(x,y)$ f{\"o}r en linj{\"a}r elektrisk
+kvadrupol.}
+\medskip
+\centerline{\epsfxsize=142mm
+  \epsfbox{multipoles/multipoles/linquadrupole-str.eps}}
+\noindent
+{\captionwide Skal{\"a}r potential $\Phi(x,y)$ f{\"o}r en elektrisk linj{\"a}r
+kvadrupol med f{\"a}ltlinjer f{\"o}r ${\bf E}(x,y)=-\nabla\Phi(x,y)$.}
+\vfill\eject
+
+\section{Skal{\"a}r potential och elektriskt f{\"a}lt f{\"o}r en kvadratisk
+         elektrisk kvadrupol}
+\centerline{\epsfxsize=142mm
+  \epsfbox{multipoles/multipoles/quadquadrupole.eps}}
+\noindent
+{\captionwide Skal{\"a}r potential $\Phi(x,y)$ f{\"o}r en kvadratisk elektrisk
+kvadrupol.}
+\medskip
+\centerline{\epsfxsize=142mm
+  \epsfbox{multipoles/multipoles/quadquadrupole-str.eps}}
+\noindent
+{\captionwide Skal{\"a}r potential $\Phi(x,y)$ f{\"o}r en kvadratisk
+elektrisk kvadrupol med f{\"a}ltlinjer ${\bf E}(x,y)=-\nabla\Phi(x,y)$.}
+
+\section{Multipolutveckling f\"or generella laddningsf{\"o}rdelningar
+         (i termer av skal{\"a}r potential)}
+Betrakta en generell laddningsf{\"o}rdelning enligt figur.
+Laddningsf{\"ordelningen} kan vara en generell distribution i 3D, men {\"a}ven
+i kombinationer av 2D (ytladdningar, sk{\"a}rmar, jordplan),
+1D (linjeladdningar, antenner) eller 0D (punktladdningar). Vi kommer i det
+f{\"o}ljande att anv{\"a}nda en geometri i vilken laddningst{\"a}theten
+$\rho({\bf x})$ {\"a}r lokaliserad i n{\"a}rheten av origo (vilket g{\"o}r
+det enklare att r{\"a}tt av till{\"a}mpa en serieutveckling f{\"o}r
+laddningsdensiteten i en Taylor-serie), enligt figur.
+\bigskip
+\centerline{\epsfbox{figs/chargedist.1}}
+\medskip
+\noindent
+Skal{\"a}r (elektrisk) potential $\Phi({\bf x})$ fr{\aa}n punktk{\"a}lla $q$ i
+${\bf x}'$:
+$$
+  \Phi({\bf x})={{q}\over{4\pi\varepsilon_0|{\bf x}-{\bf x}'|}}
+$$
+\noindent
+Skal{\"a}r (elektrisk) potential fr{\aa}n distributionen $\rho({\bf x})$ ges
+analogt genom att helt enkelt summera upp alla bidrag fr{\aa}n samtliga
+$\rho({\bf x}')dV'$ i volymen $V$:
+$$
+  \Phi({\bf x})={{1}\over{4\pi\varepsilon_0}}
+     \iiint_{V}{{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
+$$
+I denna integral s{\aa} kan vi se det som att vi summerar upp alla element
+$dV$'s infinitesimala laddningar $dq=\rho({\bf x}')dV'$ (eller
+str{\"o}mt{\"a}theter ${\bf J}({\bf x}')dV$ i fallet med vektorpotentialen
+${\bf A}$), viktade med en faktor
+$$
+  f({\bf x}')={{1}\over{|{\bf x}-{\bf x}'|}}
+$$
+som kort och gott {\"a}r det inversa geometriska avst{\aa}ndet mellan
+k{\"a}llpunkten ${\bf x}'$ och f{\"a}ltpunkten (observationspunkten) ${\bf x}$.
+Vi kan, om vi s{\aa} vill, se detta som en summation av potentialbidragen
+fr{\aa}n alla infinitesimala elektriska {\it monopoler} som ryms i volymen
+$V$.
+
+Liksom i det enkla fallet med dipolen, siktar vi h{\"a}r mot en serieutveckling
+av denna viktfunktion f{\"o}r att enklare kunna tolka de termer som blir
+resultatet. F{\"o}r att rekapitulera, s{\aa} var serieutvecklingen i fallet
+med dipolen i grund och botten en serieutveckling av position f{\"o}r
+k{\"a}lltermerna, med ``litet separations-avst{\aa}nd $L$ i f{\"o}rh{\aa}llande
+till avst{\aa}ndet till observationspunkten ${\bf x}$''. Vi {\"o}nskar
+d{\"a}rmed att uttrycka serieutvecklingen i koordinaten ${\bf x}'$ f{\"o}r
+{\it k{\"a}llan} $\rho({\bf x}')$. Generellt har vi att en Taylor-utveckling i
+tre dimensioner ges av
+$$
+  f({\bf x}') = f({\bf 0})
+  +\sum^{3}_{k=1} x'_k
+     {{\partial f({\bf x}')}
+       \over{\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}
+  +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1} x'_j x'_k
+     {{\partial^2 f({\bf x}')}
+       \over{\partial x'_j\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}
+  +\ldots
+$$
+F{\"o}r ``viktfunktionen''
+$f({\bf x}')$ har vi att
+$$
+  \eqalign{
+    f({\bf x}')&={{1}\over{|{\bf x}-{\bf x}'|}}
+      ={{1}\over{\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}}},\cr
+    {{\partial f({\bf x}')}\over{\partial x'_k}}
+      &={{\partial}\over{\partial x'_k}}
+      {{1}\over{\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}}}\cr
+      &=-{{1}\over{2}}
+      {{-2(x_k-x'_k)}\over{({(x-x')^2+(y-y')^2+(z-z')^2})^{3/2}}}
+      =\ldots
+      ={{x_k-x'_k}\over{|{\bf x}-{\bf x}'|^3}},\cr
+    {{\partial^2 f({\bf x}')}\over{\partial x'_j \partial x'_k}}
+      &={{\partial^2}\over{\partial x'_j \partial x'_k}}
+          {{1}\over{\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}}}\cr
+      &={{\partial}\over{\partial x'_j}}
+          {{x_k-x'_k}\over{((x-x')^2+(y-y')^2+(z-z')^2)^{3/2}}}\cr
+      &={{{{\partial(x_k-x'_k)}\over{\partial x'_j}}
+          ((x-x')^2+(y-y')^2+(z-z')^2)^{3/2}-
+            (x_k-x'_k){{\partial ((x-x')^2+(y-y')^2+(z-z')^2)^{3/2}}
+	      \over{\partial x'_j}}}\over{((x-x')^2+(y-y')^2+(z-z')^2)^{3}}}\cr
+      &=\ldots\cr
+      &={{3(x_j-x'_j)(x_k-x'_k)
+      -\delta_{jk}((x-x')^2+(y-y')^2+(z-z')^2)}
+             \over{((x-x')^2+(y-y')^2+(z-z')^2)^{5/2}}}\cr
+      &={{3(x_j-x'_j)(x_k-x'_k)-\delta_{jk}|{\bf x}-{\bf x}'|^2}
+          \over{|{\bf x}-{\bf x}'|^5}}\cr
+  }
+$$
+F{\"o}r koefficienterna i Taylor-utvecklingen inneb{\"a}r detta specifikt att
+$$
+    f({\bf 0})
+      ={{1}\over{|{\bf x}|}},\qquad\qquad
+    {{\partial f({\bf x}')}
+      \over{\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}
+        ={{x_k}\over{|{\bf x}|^3}},\qquad\qquad
+    {{\partial^2 f({\bf x}')}
+      \over{\partial x'_j \partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}
+        ={{3 x_j x_k - \delta_{jk}|{\bf x}|^2}\over{|{\bf x}|^5}},
+$$
+och v{\aa}r Taylor-utveckling av viktsfunktionen bist{\aa}r direkt med
+respektive multipol-termer i uttrycket f{\"o}r skal{\"a}ra elektriska
+potentialen som
+$$
+  \eqalign{
+    \Phi({\bf x})
+      &={{1}\over{4\pi\varepsilon_0}}
+        \iiint_{V} 
+        \bigg(
+          {{1}\over{|{\bf x}|}}
+            +\sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}} x'_k
+            +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
+              {{3 x_j x_k - \delta_{jk}|{\bf x}|^2}\over{|{\bf x}|^5}} x'_j x'_k
+            +\ldots
+        \bigg) \rho({\bf x}')\,dV'\cr
+      &={{1}\over{4\pi\varepsilon_0}}
+        \Bigg(
+        {{1}\over{|{\bf x}|}}
+	\underbrace{
+	  \iiint_{V} \rho({\bf x}')\,dV'
+	}_{{\rm monopol},\ q}
+      +\sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}}
+	\underbrace{
+	  \iiint_{V} x'_k \rho({\bf x}')\,dV'
+	}_{{\rm dipolmoment},\ p_k}
+	\cr&\hskip150pt
+      +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
+          {{3 x_j x_k - \delta_{jk}|{\bf x}|^2}\over{|{\bf x}|^5}}
+	\underbrace{
+          \iiint_{V} x'_j x'_k \rho({\bf x}')\,dV'
+	}_{{\rm kvadrupolmoment},\ Q_{jk}}
+      +\ldots
+        \Bigg)\cr
+      &={{1}\over{4\pi\varepsilon_0}}
+        \Bigg(
+        {{q}\over{|{\bf x}|}}
+      +\sum^{3}_{k=1} {{x_k p_k}\over{|{\bf x}|^3}}
+      +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
+          {{(3 x_j x_k - \delta_{jk}|{\bf x}|^2)Q_{jk}}\over{|{\bf x}|^5}}
+      +\ldots
+        \Bigg)
+  }
+$$
+Notera att f{\"o}r dipoltermen utg{\"o}rs skal{\"a}ra potentialen av en
+{\it skal{\"a}rprodukt} ${\bf x}\cdot{\bf p}$, medan kvadrupoltermen svarar mot
+en {\it matrisprodukt} fr{\aa}n vilken sp{\aa}ret (``trace'') subtraheras,
+$3{\bf x}^{\rm T}{\Bbb Q}{\bf x}-|{\bf x}|^2\Tr[{\Bbb Q}]$.
+
+Analysen f{\"o}r vektorpotentialen ${\bf A}({\bf x})$ f{\"o}ljer p{\aa} samma
+s{\"a}tt, med en helt och h{\aa}llet analog serieutveckling av
+``viktfunktionen'' $f({\bf x}')$ f{\"o}r den elektriska str{\"o}mdensiteten
+${\bf J}({\bf x})$.
+
+\section{Dipolapproximationen f{\"o}r station{\"a}ra laddningsf{\"o}rdelningar
+   och str{\"o}mmar}
+F\"or att sammanfatta ges den station\"ara skal\"ara potentialen
+$\Phi({\bf x})$ och vektorpotentialen ${\bf A}({\bf x})$ fr{\aa}n en
+laddnings- och str\"omt\"athet i n{\"a}rheten av origo, i dipolapproximation
+och p\aa\ l{\aa}ngt avst{\aa}nd fr{\aa}n k{\"a}llan, som
+$$
+  \Phi({\bf x})\approx{{1}\over{4\pi\varepsilon_0}}\bigg(
+      {{q}\over{|{\bf x}|}} + {{{\bf p}\cdot{\bf x}}\over{|{\bf x}|^3}}
+    \bigg),\qquad\qquad
+  {\bf A}({\bf x})\approx{{\mu_0}\over{4\pi}}
+      {{{\bf m}\times{\bf x}}\over{|{\bf x}|^3}},
+$$
+d\"ar
+$$
+  q=\underbrace{
+      \iiint_{V} \rho({\bf x}')\,dV'
+    }_{{\rm nettoladdning}\ [{\rm C}]},\qquad
+  {\bf p}=\underbrace{
+      \iiint_{V} x'_k \rho({\bf x}')\,dV'
+    }_{{\rm elektriskt\ dipolmoment}\ [{\rm C}{\rm m}]},\qquad
+  {\bf m}=\underbrace{
+      {{1}\over{2}}\iiint_{V} {\bf x}'\times{\bf J}({\bf x}')\,dV'
+    }_{{\rm magnetiskt\ dipolmoment}\ [{\rm A}{\rm m}^2]}.
+$$
+Fr{\aa}n dessa ges de {\it statiska} elektriska och magnetiska f\"alten
+som\numberedfootnote{Notera att Ekv.~(8.1.5) i Olov {\AA}grens
+  {\it Elektromagnetism} (Studentlitteratur, 2014) definierar magnetiska
+  f\"altet utifr{\aa}n en konstruerad {\it magnetisk skal\"ar potential}
+  ist\"allet f\"or vektorpotentialen. Vektorpotentialen \"ar h\"ar dock mest
+  naturlig att anv\"anda, utifr{\aa}n den grundl\"aggande egenskapen
+  $\nabla\cdot{\bf B}=0\Leftrightarrow{\bf B}=\nabla\times{\bf A}$ hos
+  magnetiska f\"altet, med ${\bf A}$ som vektorpotentialen.}
+$$
+  {\bf E}({\bf x})=-\nabla\Phi({\bf x}),\qquad\qquad
+  {\bf B}({\bf x})=\nabla\times{\bf A}({\bf x}).
+$$
+Man kan h{\"a}r fr{\aa}ga sig varf{\"o}r multipolutvecklingen f{\"o}r
+vektorpotentialen ${\bf A}$ b{\"o}rjar med dipolmomentet, som g{\aa}r som
+$\sim 1/|{\bf x}|^3$, och inte som den skal{\"a}ra potentialen inneh{\aa}ller
+n{\aa}gon term som g{\aa}r som $\sim 1/|{\bf x}|$? Svaret p{\aa} denna
+fr{\aa}ga {\"a}r sj{\"a}lvfallet att vektorpotentialen, som {\"a}r direkt
+l{\"a}nkad till magnetf{\"a}ltet genom ${\bf B}=\nabla\times{\bf A}$, till
+skillnad fr{\aa}n det elektrostatiska fallet {\it aldrig kan involvera
+magnetiska monopoler}, varf{\"o}r monopoltermer ocks{\aa} saknas f{\"o}r
+just vektorpotentialen.
+\bye
