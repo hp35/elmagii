@@ -1,0 +1,455 @@
+%
+% File: teaching/elmagii/2024/lect-07/lecture-07.tex [plain TeX code]
+% Last change: November 18, 2024
+%
+% Lecture No 7 in the course ``Elektromagnetism II, 1TE626 (2024)'',
+% held November 19, 2024, at Uppsala University, Sweden.
+%
+% Copyright (C) 2024, Fredrik Jonsson
+%
+\input macros/epsf.tex
+\input macros/eplain.tex
+\font\ninerm=cmr9
+\font\twentyrm=cmr12 at 20 truept
+\font\twelvesc=cmcsc10
+\input amssym % to get the {\Bbb E} font (strikethrough E)
+\def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
+    \else\hfill\fi}
+  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
+    \hfil{\it Elektromagnetism II, 1TE626 (2024)}}
+  \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2024)}
+    \hfil{\it F\"orel\"asning #1}}
+  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{macros/UU_logo_color.eps}}
+  \vskip-42pt\hfill\vbox{\hbox{{\it Elektromagnetism II, 1TE626 (2024)}}
+  \hbox{{\it Lecture Notes, Fredrik Jonsson}}}\vskip 36pt
+    \centerline{\twelvesc F\"orel\"asning #1}
+  \vskip 24pt\noindent}
+\def\section #1 {\medskip\goodbreak\noindent{\bf #1}
+  \par\nobreak\smallskip\noindent}
+\def\subsection #1 {\smallskip\goodbreak\noindent{\it #1}
+  \par\nobreak\smallskip\noindent}
+\def\iint{\mathop{\int\kern-8pt\int}}
+\def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+\def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
+\def\Re{\mathop{\rm Re}\nolimits} % real part
+\def\Im{\mathop{\rm Im}\nolimits} % imaginary part
+\def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
+\def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+
+\lecture{7}
+\centerline{\twelvesc Magnetiska f\"alt i material}
+\centerline{Fredrik Jonsson, Uppsala Universitet, 19 november 2024}
+\vskip24pt
+\noindent
+I denna f{\"o}rel{\"a}sning analyserar vi vad som h{\"a}nder d{\aa} det
+magnetiska spinnet hos material linjeras och magnetiserar materialet, antingen
+genom ett externt p{\aa}lagt magnetiskt f{\"a}lt eller genom att spinnen {\"a}r
+naturligt linjerade i materialet, i s{\aa} kallade permanentmagneter.
+
+\section{Dipolmodellen av magneter}
+L{\aa}t oss anta att det fanns en magnetisk motsvarighet till elektrisk
+laddning, motsvarande magnetiska monopoler. Fr{\aa}n $\nabla\cdot{\bf B}=0$
+f{\"o}ljer det direkt via Gauss lag att om vi skulle f{\"o}rs{\"o}ka isolera
+en s{\aa}dan magnetisk laddning $Q_{\rm m}$, s{\aa} skulle vi ha att
+$$
+  \iiint_V\underbrace{\nabla\cdot{\bf B}}_{=0}\,dV=Q_{\rm m}=0,
+$$
+det vill s{\"a}ga att den enda m{\"o}jligheten {\"a}r att laddningen {\"a}r
+just noll. {\it Med andra ord s{\aa} existerar inga magnetiska monopoler.}
+Trots detta, s{\aa} kan vi {\"a}nd{\aa} t{\"a}nka oss magnetisering som
+best{\aa}ende av en magnetisk ``nord-monopol'' och en ``syd-monopol''.
+Denna modell betecknas med ``Gilbert-modellen''.
+\medskip
+\centerline{\epsfbox{figs/magdipole.1}}
+\medskip
+\noindent
+En mer fysikalisk modell {\"a}r dock att ans{\"a}tta varje magnetisk dipol som
+best{\aa}ende av en str{\"o}mslinga uppb{\"a}rande en str{\"o}m, skapandes en
+inducerad magnetisk dipol. Denna modell kan vi kalla ``Am\`ere-modellen'',
+d{\aa} dipolmomentet i den direkt f{\"o}ljer av Amp\`eres klassiska lag.
+I Gilbert-modellen {\"a}r det magnetiska moment som genereras kort och gott
+$$
+  {\bf m}=I\iint_A\,d{\bf A}=IA{\bf e}_{\bf n},
+$$
+d{\"a}r $A$ {\"a}r arean som innesluts av den str{\"o}mb{\"o}rande loopen, med
+riktningen ${\bf e}_n$ normal mot loopens plan. F{\"o}r att sammanfatta, s{\aa}
+f{\"o}ljer magnetism inte av n{\aa}gra magnetiska monopoler, utan kommer
+fr{\aa}n {\it r{\"o}relse av elektrisk laddning}.
+\vfill\eject
+\section{Krafter och moment p\aa\ dipoler}
+Elektriska och magnetiska dipoler i externt p{\aa}lagda elektriska respektive
+magnetiska f{\"a}lt upplagrar energierna
+$$
+  W_{\rm e} = -{\bf p}\cdot{\bf E}_{\rm ext},\qquad\qquad
+  W_{\rm m} = -{\bf m}\cdot{\bf B}_{\rm ext}
+$$
+J{\"a}mf{\"o}r med elektrisk dipol placerad i f{\"a}lt med sin positiva
+laddning n{\"a}rmst k{\"a}llan f{\"o}r elektriska f{\"a}ltet (med linjer
+fr{\aa}n ``$+$''). Den elektriska dipolen str{\"a}var efter att linjera sig
+(med axeln pekande fr{\aa}n negative till positiv laddning) l{\"a}ngs med
+det externa elektriska f{\"a}ltet.
+
+Kraften p{\aa} den elektriska respektiva magnetiska dipolen ges d{\aa} av
+gradienten av den upplagrade energin, som (observera tecken p{\aa} $\nabla$!)%
+\numberedfootnote{Fys.~dimension:
+$[\nabla({\bf p}\cdot{\bf E}_{\rm ext})]={\rm m}^{-1}{\rm C}{\rm m}{\rm V/m}
+={\rm J/m}={\rm N}$;
+$[\nabla({\bf m}\cdot{\bf B}_{\rm ext})]={\rm m}^{-1}{\rm A}{\rm m}^2{\rm N/Am}
+={\rm N}$.}
+$$
+  {\bf F}_{\rm e} = -\nabla W_{\rm e}
+    =\nabla({\bf p}\cdot{\bf E}_{\rm ext}),\qquad\qquad
+  {\bf F}_{\rm m} = -\nabla W_{\rm m}
+    =\nabla({\bf m}\cdot{\bf B}_{\rm ext}).
+$$
+Notera att f{\"o}r att ha en kraft p{\aa} en elektrisk dipol som saknar
+netto-laddning, s{\aa} kr{\"a}vs det att det p{\aa}lagda elektriska f{\"a}ltet
+${\bf E}$ har en gradient vid dipolen ${\bf p}$. Omv{\"a}nt, om det p{\aa}lagda
+elektriska f{\"a}ltet {\"a}r homogent (utan gradienter), s{\aa} m{\aa}ste
+dipolen ha en nettoladdning f{\"o}r att kunna p{\aa}verkas av en kraft.
+
+F{\"o}r det magnetiska fallet har vi att det inte existerar n{\aa}gon magnetisk
+nettoladdning (eftersom $\nabla\cdot{\bf B}=0$ alltid g{\"a}ller;
+j{\"a}mf{\"o}r med $\nabla\cdot{\bf E}=\rho/\varepsilon_0$), s{\aa} d{\"a}r
+blir kravet att det magnetiska f{\"a}ltet ${\bf B}$ ovillkorligen m{\aa}ste ha
+en gradient f{\"o}r att kunna ut{\"o}va en nettokraft p{\aa} den magnetiska
+dipolen ${\bf m}$.
+
+Vridmomentet $\tau$ (SI-enhet ${\rm N}{\rm m}$) p{\aa} en elektrisk respektive
+magnetis dipol i externt p{\aa}lagda f{\"a}lt {\"a}r
+$$
+  {\bf \tau}={\bf p}\times{\bf E}_{\rm ext},\qquad\qquad
+  {\bf \tau}={\bf m}\times{\bf B}_{\rm ext}.
+$$
+Notera att vridmomenten blir noll d{\aa} dipolerna {\"a}r parallella med
+f{\"a}lten (${\bf e}\times{\bf e}\equiv{\bf 0}$); dock {\"a}r endast fallen
+d{\aa} dipolerna dessutom pekar i samma riktning som f{\"a}lten stabila (detta
+f{\"o}ljer fr{\aa}n att energierna $W_{\rm e}$ och $W_{\rm m}$ d{\aa} minimeras;
+att dessutom visa att energimaximum {\"a}r instabilt {\"a}r enkelt att visa
+genom att uttrycka skal{\"a}rprodukten som en faktor $\cos\theta$ i sf{\"a}riska
+koordinater och analysera andraderivatan av energierna med avseende p{\aa}
+$\theta$).
+
+\section{Magnetisering - ``magnetisk polarisationsdensitet''}
+Liksom f{\"o}r den elektriska polarisationsdensiteten ${\bf P}$ f{\"o}ljer att
+ett material som regel linjerar sina mikroskopiska magnetiska dipoler
+(molekyl{\"a}ra spinn) efter ett externt p{\aa}lagt magnetiskt f{\"a}lt.
+{\"A}ven om man kan t{\"a}nka sig en bild av detta som en dipol best{\aa}ende
+av en moln av positiva och negativa ``magnetiska laddningar'', s{\aa} {\"a}r
+detta en felaktig bild d{\aa} det inte existerar magnetiska laddningar
+({\aa}terigen, fr{\aa}n $\nabla\cdot{\bf B}=0$). Ist{\"a}llet kan vi
+f{\"o}rest{\"a}lla oss detta som en ensemble av mikroskopiska
+str{\"o}mb{\"a}rande slutna slingor som var och en bidrar med ett magnetisk
+dipolmoment.
+\bigskip\centerline{\epsfbox{figs/magdensity.1}}\medskip
+\noindent
+Vi beskriver detta som en magnetisering ${\bf M}$ av magnetiska dipolmoment
+per volymenhet (d{\"a}rav en slags ``magnetisk polarisationsdensitet'').
+Som en f{\"o}renklad modell kan vi se denna inducerade magnetisering
+som linj{\"a}rt beroende av det p{\aa}lagda magnetiska f{\"a}ltet,
+$$
+  {\bf M} \equiv \Big\langle{{d{\bf m}}\over{dV}}\Big\rangle
+    = {{1}\over{\mu_0}}\Big(1-{{1}\over{\mu_{\rm r}}}\Big){\bf B}
+$$
+d{\"a}r $\mu_{\rm r}$ {\"a}r den {\it relativa magnetiska permeabiliteten}
+f{\"o}r materialet ($\mu_{\rm r}$ {\"a}r dimensionsl{\"o}s).
+
+Liksom f{\"o}r den elektriska polarisationsdensiteten ${\bf P}$ {\"a}r det
+inom elektromagnetisk f{\"a}ltteori bekv{\"a}mt att baka ihop det magnetiska
+f{\"a}ltet ${\bf B}$ och magnetiseringen ${\bf M}$ till
+{\it magnetiseringsstyrkan}
+$$
+  {\bf H}\equiv{{\bf B}\over{\mu_0}}-{\bf M}
+    ={{\bf B}\over{\mu_0\mu_{\rm r}}},
+$$
+en konstitutiv relation som {\"a}r lite avigt definierad d{\aa} vi ser ${\bf B}$
+som den prim{\"a}ra beskrivningen av magnetf{\"a}ltet. Normalt uttrycker vi inom
+elektromagnetisk f{\"a}ltteori denna p{\aa} formen\numberedfootnote{Griffiths
+  betecknar $H$-f{\"a}ltet som ``auxiliary field''; se Griffiths sidan~279.}
+$$
+  {\bf B}=\mu_0\mu_{\rm r}{\bf H},
+$$
+d{\aa} detta {\"a}r den naturliga tolkningen (${\bf B}$ som funktion av
+${\bf H}$ och inte tv{\"a}rtom) d{\aa} vi formulerar de elektromagnetiska
+v{\aa}gekvationerna fr{\aa}n Maxwells ekvationer. Dock, om vi utg{\aa}r
+fr{\aa}n Faradays induktionslag,
+$$
+  \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}},
+$$
+s{\aa} faller sig paret $[{\bf E},{\bf B}]$ som det mest naturliga att
+anv{\"a}nda, trots att ${\bf E}$ r{\"a}knas som en (elektrisk)
+{\it f{\"a}ltstyrka} och ${\bf B}$ som en (magnetisk)
+{\it fl{\"o}dest{\"a}thet}.
+\medskip
+\item{$\bullet$}{F{\"o}r {\it diamagnetiska material} har vi att
+   $\mu_{\rm r}\le 1$, f{\"o}r vilka magnetiseringen i materialet {\"a}r riktat
+   i {\it motsatt riktning} mot det p{\aa}lagda magnetf{\"a}ltet.
+   Supraledare {\"a}r exempel p{\aa} perfekta diamagneter, d{\"a}r de helt
+   repellerar the p{\aa}lagda f{\"a}ltet fr{\aa}n det interna magnetf{\"a}ltet
+   (som i en supraledare {\"a}r noll).}
+\item{$\bullet$}{F{\"o}r {\it paramagnetiska} material {\"a}r $\mu_{\rm r}>1$,
+   f{\"o}r vilka magnetiseringen i materialet {\"a}r riktat i {\it samma
+   riktning} som det p{\aa}lagda magnetf{\"a}ltet.}
+\item{$\bullet$}{I {\it ferromagnetiska} material {\"a}r de magnetiska
+   momenten (molekyl{\"a}ra spinn) permanent linjerade i en huvudsaklig
+   riktning. {\it Curietemperaturen} f{\"o}r ett ferromagnetiskt material
+   {\"a}r den temperatur d{\"a}r materialet {\"o}verg{\aa}r fr{\aa}n att
+   vara ferromagnetiskt till att bli paramagnetiskt.}
+\medskip
+\noindent
+I elektromagnetisk v{\aa}gpropagation och analys av v{\aa}gekvationen kan vi
+s{\aa} gott som alltid anta att mediet {\"a}r ickemagnetiskt, med
+$\mu_{\rm r}=1$, det vill s{\"a}ga att vi ur magnetisk synpunkt kan betrakta
+materialet som om det vore vakuum. (Detta antagande g{\"a}ller dock alltsom
+oftast {\it ej} f{\"o}r den elektriska polarisationsdensiteten.)
+
+\section{Upplagrad energi i magnetf{\"a}lt}
+I likhet med ett dielektrikum kommer ett p{\aa}lagt magnetiskt f{\"a}lt
+${\bf B}$ d{\aa} det magnetiserar mediet att lagra upp energi. Uttrycket
+f{\"o}r den upplagrade energin (i Joule) hos ett magnetiskt material under
+ett externt p{\aa}lagt magnetiskt f{\"a}lt ${\bf B}$ ges av
+$$
+  W = {{1}\over{2}}\iiint{\bf B}\cdot{\bf H}\,dV
+$$
+Vid hysteres\numberedfootnote{Griffiths sid.~291.}, som {\"a}r en vanligt
+f{\"o}rekommande effekt i magnetiska material, finns det ett ``minne'' av
+historiken hur magnetf{\"a}ltet har varit riktat och med vilket styrka.
+N{\"a}r ett externt p{\aa}lagt magnetf{\"a}lt st{\"a}ngs av kan en kvarvarande
+magnetisering finnas kvar, och om vi cykliskt varierar det p{\aa}lagda
+f{\"a}ltet kommer eftersl{\"a}pningen att inneb{\"a}ra en tr{\"o}ghet d{\"a}r
+materialets magnetisering arbetar mot f{\"o}r{\"a}ndringar av det p{\aa}lagda
+f{\"a}ltet. Med andra ord s{\aa} utf{\"o}rs vid hysteres ett internt arbete som
+leder till att v{\"a}rme utvecklas.
+\medskip
+\centerline{\epsfbox{figs/hysteres.1}}
+\medskip
+\noindent
+Vi kan se denna utvecklade v{\"a}rme som att vi i hystereskurvan f{\"o}r
+materialet t{\"a}cker in en viss ``area'' $B\cdot H$ som har dimensionen
+energi per volymsenhet, och ju st{\"o}rre area vi t{\"a}cker in d{\aa} vi
+g{\aa}r runt med en kurva i hysteresdiagrammet, desto st{\"o}rre
+v{\"a}rmeutveckling.
+
+\section{Vektorpotential fr{\aa}n ett magnetiserat objekt}
+Vi kommer nu att studera ett objekt som har den rumsberoende statiska
+magnetiseringen ${\bf M}({\bf x})$ given. Vi har sedan tidigare att
+s{\aa}v{\"a}l elektriska som magnetiska f{\"a}lt kan uttryckas i termer av
+skal{\"a}r potential och vektorpotential, d{\"a}r speciellt magnetf{\"a}ltet
+${\bf B}({\bf x})$ direkt kan uttryckas i
+vektorpotentialen\numberedfootnote{Recap: Existensen av en
+   vektorpotential ${\bf A}$ motiveras av ``teoremet om att inga magnetiska
+   dipoler existerar'',
+   $$
+     \nabla\cdot{\bf B}=0
+     \qquad\Leftrightarrow\qquad
+     {\bf B}=\nabla\times{\bf A},
+   $$
+   detta eftersom vi har vektoridentiteten $\nabla\cdot(\nabla\times{\bf A})
+   \equiv 0$ f{\"o}r {\it godtycklig} vektorfunktion ${\bf A}$.}
+${\bf A}({\bf x})$ som
+$$
+  {\bf B}({\bf x})=\nabla\times{\bf A}({\bf x}).
+$$
+Det {\"a}r d{\"a}rf{\"o}r av intresse att se om vi utifr{\aa}n en magnetisering
+${\bf M}({\bf x})$ kan f{\aa} fram vektorpotentialen ${\bf A}({\bf x})$ eftersom
+vi via den kan extrahera {\"o}vriga f{\"a}lt.\numberedfootnote{Vi f{\"o}ljer
+h{\"a}r i huvudsak Griffiths kapitel 6.2.1, sidorna 274--275.}
+
+Som en f{\"o}rsta b{\"o}rjan i den kommande vektoralgebran, s{\aa} kan vi
+konstatera att vektorpotentialen i en {\it observationspunkt} ${\bf x}$
+fr{\aa}n en enda, isolerad magnetisk dipol ${\bf m}$ i {\it k{\"a}llpunkten}
+${\bf x}'$ ges av\numberedfootnote{Se Griffiths Ekv.~(5.85), sidan 253.}
+$$
+  {\bf A}({\bf x})={{\mu_0}\over{4\pi}}{{{\bf m}\times{\bf e}_r}\over{r^2}},
+$$
+d{\"a}r
+$$
+  r=|{\bf x}-{\bf x}'|
+  \qquad\hbox{och}\qquad
+  {\bf e}_r=({\bf x}-{\bf x}')/|{\bf x}-{\bf x}'|
+$$
+{\"a}r respektive avst{\aa}ndet och enhetsvektorn fr{\aa}n k{\"a}llpunkten
+${\bf x}'$ till observationspunkten ${\bf x}$. Med denna enkla relation kan
+vi enkelt g{\aa} vidare med en generalisering om vi ser sm{\aa} volumselement
+$dV$ som en ensemble av k{\"a}llpunkter, var och en uppb{\"a}rande en
+rumsberoende magnetisering (``magnetisk polarisationsdensitet'')
+${\bf M}({\bf x}')$.
+\medskip
+\centerline{\epsfbox{figs/vectpot.1}}
+\medskip
+\noindent
+Bidraget $d{\bf A}({\bf x})$ till vektorpotentialen vid observationspunkten
+${\bf x}$ fr{\aa}n ett enskild magnetiskt dipolmoment $d{\bf m}$ vid
+k{\"a}llpunkten ${\bf x}'$ har tagits fram tidigare, och ges av
+$$
+  d{\bf A}({\bf x})={{\mu_0}\over{4\pi}}
+     {{d{\bf m}\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
+$$
+Varje volymselement $dV'$ av det magnetiserade mediet uppb{\"a}r ett magnetiskt
+moment
+$$
+  d{\bf m}({\bf x}')={\bf M}({\bf x}')dV',
+$$
+och den totala vektorpotentialen vid observationspunkten ${\bf x}$ ges d{\aa}
+genom att summera (integrera) all delbidrag $d{\bf A}({\bf x})$, enligt
+$$
+  {\bf A}({\bf x}) = \iiint_V d{\bf A}({\bf x})
+  ={{\mu_0}\over{4\pi}}
+     \iiint_V{{{\bf M}({\bf x}')\times({\bf x}-{\bf x}')}
+                       \over{|{\bf x}-{\bf x}'|^3}}\,dV'.
+$$
+I princip {\"a}r detta uttryck en helt acceptabel slutdestination; dock finns
+det ett ``trick'' som vi kan till{\"a}mpa, och som vi {\"a}ven kommer att
+anv{\"a}nda senare i kursen f{\"o}r att f{\"o}renkla uttryck f{\"o}r
+mutipolutveckling f{\"o}r elektriska f{\"a}lt och skal{\"a}r potential.
+Detta ``trick'' g{\aa}r ut p{\aa} att utnyttja relationen\numberedfootnote{Detta
+  eftersom
+  $$
+    \eqalign{
+      \nabla'{{1}\over{|{\bf x}-{\bf x}'|}}
+      &\equiv\bigg(
+         {{\partial}\over{\partial x'}},
+         {{\partial}\over{\partial y'}},
+         {{\partial}\over{\partial z'}}
+       \bigg)
+       {{1}\over{[(x-x')^2+(y-y')^2+(z-z')^2]^{1/2}}}\cr
+      &= -{{1}\over{2}}{{\Big(-2(x-x'),-2(y-y'),-2(z-z')\Big)}
+       \over{[(x-x')^2+(y-y')^2+(z-z')^2]^{3/2}}}\cr
+      &= {{{\bf x}-{\bf x}'}\over{|{\bf x}-{\bf x}'|^3}}\cr
+    }
+  $$}
+$$
+  \nabla'{{1}\over{|{\bf x}-{\bf x}'|}}
+  \equiv
+     \bigg(
+       {{\partial}\over{\partial x'}},
+       {{\partial}\over{\partial y'}},
+       {{\partial}\over{\partial z'}}
+     \bigg)
+     {{1}\over{|{\bf x}-{\bf x}'|}}
+  ={{{\bf x}-{\bf x}'}\over{|{\bf x}-{\bf x}'|^3}},
+$$
+vilket till{\aa}ter oss att formulera vektorpotentialen som
+$$
+  {\bf A}({\bf x}) = {{\mu_0}\over{4\pi}}\iiint_V
+     \bigg[
+       {\bf M}({\bf x}')\times\bigg(
+         \nabla'{{1}\over{|{\bf x}-{\bf x}'|}}
+       \bigg)
+     \bigg]
+     \,dV'.
+$$
+Vi kan h{\"a}r till{\"a}mpa partiell integration\numberedfootnote{Av n{\aa}gon
+outgrundlig anledning kallar Griffiths denna f{\"o}r ``integration by parts,
+using product rule 7'' p{\aa} sidan 274. Varf{\"o}r? Jo, den finns p{\aa}
+insidan av p{\"a}rmen som en ``Product Rule''.} p{\aa} detta uttryck, genom
+att observera att rotationen av en produkt mellan en skal{\"a}r funktion $f$
+och vektor ${\bf G}$ ges som
+$$
+  \eqalign{
+    \nabla\times(f{\bf G})=f\nabla&\times{\bf G}-{\bf G}\times(\nabla f)\cr
+      &\Updownarrow\cr
+    {\bf G}\times(\nabla f) = f\nabla&\times{\bf G} - \nabla\times(f{\bf G})\cr
+  }
+$$
+vilket ger oss att vektorpotentialen kan uttryckas som
+$$
+  {\bf A}({\bf x}) =
+     {{\mu_0}\over{4\pi}}\iiint_V
+     {{\big(\nabla'\times{\bf M}({\bf x}')\big)}\over{|{\bf x}-{\bf x}'|}}\,dV'
+    -{{\mu_0}\over{4\pi}}
+     \underbrace{
+       \iiint_V
+       \nabla'\times
+       \bigg(
+         {{{\bf M}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}
+       \bigg)
+       \,dV'
+     }_{\hbox{Stokes! Gauss? (Eller?)}}
+$$
+\vfill\eject
+\noindent
+Den sista termen har en form som {\"a}r misst{\"a}nkt lik grunden f{\"o}r
+Stokes teorem; detta {\"a}r dock en {\aa}terv{\"a}ndsgr{\"a}nd i och med att
+vi h{\"a}r har att g{\"o}ra med en {\it volymsintegral} av en ing{\aa}ende
+rotation (och inte en ytintegral, som annars {\"a}r integranden i Stokes
+teorem). (Med andra ord varken Stokes eller Gauss teorem, i den bem{\"a}rkelsen
+vi normalt anv{\"a}nder terminologin i denna kurs.) Ist{\"a}llet kan vi h{\"a}r
+anv{\"a}nda en liknande variant,\numberedfootnote{Denna form finns som ett
+   h{\"a}rlednings-problem 1.61 (b) i Griffiths, sidan 56. L{\"o}sningen {\"a}r
+   som f{\"o}ljer, enligt Griffiths ledtr{\aa}dar: Ans{\"a}tt f{\"o}rst
+   ${\bf v}\to{\bf v}\times{\bf c}$, d{\"a}r ${\bf c}$ {\"a}r en konstant
+   godtycklig vektor, och anv{\"a}nd denna form i Gauss teorem:
+   $$
+      \iiint_V\nabla\cdot({\bf v}\times{\bf c}) dV
+        =\oiint_S({\bf v}\times{\bf c})\cdot d{\bf A}.
+   $$
+   Genom anv{\"a}ndande av produktregeln (``product rule \#6'' i p{\"a}rmen i
+   Griffiths),
+   $$
+     \nabla\cdot({\bf v}\times{\bf c})
+       ={\bf c}\cdot(\nabla\times{\bf v})
+         -{\bf v}\cdot\underbrace{(\nabla\times{\bf c})}_{=0}
+       ={\bf c}\cdot(\nabla\times{\bf v}),
+   $$
+   samt att vi genom vektoridentiteten (1) i p{\"a}rmen i Griffiths har att
+   $$
+     d{\bf A}\cdot({\bf v}\times{\bf c})
+       = {\bf c}\cdot(d{\bf A}\times{\bf v})
+       = -{\bf c}\cdot({\bf v}\times d{\bf A}),
+   $$
+   s{\aa} omformuleras Gauss teorem enligt ovan till
+   $$
+     \iiint_V {\bf c}\cdot(\nabla\times{\bf v})\,dV
+       =\oiint_S -{\bf c}\cdot({\bf v}\times d{\bf A})
+     \qquad\Leftrightarrow\qquad
+     \iiint_V (\nabla\times{\bf v})\,dV
+       =-\oiint_S ({\bf v}\times d{\bf A}).
+     \qquad\hbox{(Q.E.D.)}
+   $$}
+$$
+  \iiint_V(\nabla\times{\bf v})\,dV = -\oiint_{\Omega} {\bf v}\times d{\bf A}.
+$$
+Den andra integralen i h{\"o}gerledet kan nu omformuleras med hj{\"a}lp av
+detta ``kvasi-Gauss-teorem'' som
+$$
+  \iiint_V
+  \nabla'\times\bigg({{{\bf M}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)\,dV'
+  = \oiint_{\Omega}
+  \bigg({{{\bf M}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)\times d{\bf A}'.
+$$
+Vektorpotentialen enligt ovan uttrycks d{\"a}rmed (n{\"a}stan) slutligen som
+$$
+  {\bf A}({\bf x}) = {{\mu_0}\over{4\pi}}\iiint_V
+    {{\big(\nabla'\times{\bf M}({\bf x}')\big)}\over{|{\bf x}-{\bf x}'|}}\,dV'
+  +{{\mu_0}\over{4\pi}}\oiint_V
+     \bigg({{{\bf M}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)\times d{\bf A}'.
+$$
+Den f{\"o}rsta termen kan tolkas som ett potentialbidrag fr{\aa}n en
+{\it volymsstr{\"o}m} orsakad av {\it bundna laddningar},
+$$
+  {\bf J}_{\rm b}=\nabla\times{\bf M},
+$$
+medan den andra termen ist{\"a}llet kan tolkas som ett potentialbidrag fr{\aa}n
+en {\it ytstr{\"o}m}, {\"a}ven den orsakad av bundna laddningar,
+$$
+  {\bf K}_{\rm b}={\bf M}\times{\bf e}_n,
+$$
+d{\"a}r ${\bf e}_n$ {\"a}r normalvektorn ut fr{\aa}n den slutna ytan. Summa
+summarum kan allts{\aa} vektorpotentialen skrivas i termer av ekvivalenta
+volyms- och ytstr{\"o}mmar som
+$$
+  {\bf A}({\bf x}) = {{\mu_0}\over{4\pi}}\iiint_V
+    {{{\bf J}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
+  +{{\mu_0}\over{4\pi}}\oiint_V
+    \bigg({{{\bf K}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)\times d{\bf A}'.
+$$
+Detta betyder att vektorpotentialen ${\bf A}({\bf x})$, och d{\"a}rmed {\"a}ven
+det magnetiska f{\"a}ltet ${\bf B}({\bf x})=\nabla\times{\bf A}({\bf x})$
+fr{\aa}n det magnetiserade objektet ges som om objektet ist{\"a}llet hade
+uppburit en motsvarande volyms-str{\"o}m ${\bf J}_{\rm b}$ och en ytstr{\"o}m
+${\bf K}_{\rm b}$. Detta illustrerar den t{\"a}ta kopplingen mellan magnetiska
+f{\"a}lt och ekvivalenta str{\"o}mmar.
+\bye
