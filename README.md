@@ -1,8 +1,8 @@
 # Lecture Notes on Electromagnetic Theory II (1TE626) at Uppsala University
 
-This repository contains all TeX code, MetaPost figures and supporting material
-as used in my lectures on Electromagnetic Theory II (1TE626) for Engineering
-Physics (master level) at Uppsala University.
+This repository contains all TeX code (plain TeX, no LaTeX), MetaPost figures
+and supporting material as used in my lectures on Electromagnetic Theory II
+(1TE626) for Engineering Physics (master level) at Uppsala University.
 
 The directory contains the following subdirectories:
 
