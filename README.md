@@ -6,8 +6,20 @@ Physics (master level) at Uppsala University.
 
 The directory contains the following subdirectories:
 
-    `lect-06`   Elektriska fält i material (Electric fields in materials)
-    `lect-07`   Magnetiska fält i material (Magnetic fields in materials)
+    `lect-06`   Elektriska fält i material
+                (Electric fields in materials)
+    `lect-07`   Magnetiska fält i material
+                (Magnetic fields in materials)
+    `lect-08`   Multipolutvecklingen
+                (The multipole expansion)
+    `lect-09`   Maxwells ekvationer och vågutbredning
+                (Maxwell's equations and electromagnetic waves)
+    `lect-10`   Vågutbredning i homogena och isotropa dielektrika
+                (Electromagnetic waves in homogeneous and isotropic dielectrics)
+    `lect-11`   Retarderade potentialer som l{\"o}sningar till Maxwells ekvationer
+                (Retarded potentials as solutions to Maxwell's equations)
+
+Vågutbredning i homogena och isotropa dielektrika
 
 ## Compiling the TeX code and figures
 
