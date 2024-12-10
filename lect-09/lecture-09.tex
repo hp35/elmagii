@@ -1,0 +1,545 @@
+%
+% File: teaching/elmag/lect-09/lecture-09.tex [plain TeX code]
+% Last change: December 2, 2024
+%
+% Lecture No 9 in the course ``Elektromagnetism II, 1TE626 (2023)'',
+% held December 3, 2024, at Uppsala University, Sweden.
+%
+% Copyright (C) 2024, Fredrik Jonsson
+%
+\input macros/epsf.tex
+\input macros/eplain.tex
+\font\ninerm=cmr9
+\font\twentyrm=cmr12 at 20 truept
+\font\twelvesc=cmcsc10
+\input amssym % to get the {\Bbb E} font (strikethrough E)
+\def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
+    \else\hfill\fi}
+  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
+    \hfil{\it Elektromagnetism II, 1TE626 (2024)}}
+  \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2024)}
+    \hfil{\it F\"orel\"asning #1}}
+  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{macros/UU_logo_color.eps}}
+  \vskip-42pt\hfill\vbox{\hbox{{\it Elektromagnetism II, 1TE626 (2024)}}
+  \hbox{{\it Lecture Notes, Fredrik Jonsson}}}\vskip 36pt
+    \centerline{\twelvesc F\"orel\"asning #1}
+  \vskip 24pt\noindent}
+\def\section #1 {\medskip\goodbreak\noindent{\bf #1}
+  \par\nobreak\smallskip\noindent}
+\def\subsection #1 {\smallskip\goodbreak\noindent{\it #1}
+  \par\nobreak\smallskip\noindent}
+\def\iint{\mathop{\int\kern-8pt\int}}
+\def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+\def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
+\def\Re{\mathop{\rm Re}\nolimits} % real part
+\def\Im{\mathop{\rm Im}\nolimits} % imaginary part
+\def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
+\def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+
+\lecture{9}
+\centerline{\twelvesc Maxwells ekvationer och v{\aa}gutbredning}
+\centerline{Fredrik Jonsson, Uppsala Universitet, 3 december 2024}
+\vskip24pt
+
+\section{Maxwells generalisering av Amp\`eres lag}
+S{\aa} l{\aa}ngt i kursen\numberedfootnote{Den f{\"o}ljande behandlingen i
+  denna f{\"o}rel{\"a}sning, d{\"a}r vi till slut kommer fram till en mer
+  generell form av Maxwell's ekvationer {\"a}n vad man som oftast st{\"o}ter
+  p{\aa} i standard-textb{\"o}cker, f{\"o}ljer i huvudsak Griffiths kapitel
+  7.3. Dock tycker jag att Griffiths saknar po{\"a}ngen att k{\"a}lltermerna
+  f{\"o}r s{\aa}v{\"a}l det elektriska som magnetiska f{\"a}ltet i sj{\"a}lva
+  verket har en gemensam form, best{\aa}ende av den fria str{\"o}mt{\"a}theten,
+  tidsderivatan av den elektriska polarisationsdensiteten, samt rotationen av
+  magnetf{\"a}ltet. Min f{\"o}rhoppning {\"a}r att analysen h{\"a}r, om {\"a}n
+  n{\aa}got mer omfattande, skall belysa denna {\it fundamenta} och v{\"a}cka
+  intresset f{\"o}r denna oerh{\"o}rt vackra del av elektromagnetisk teori.}
+har Maxwells ekvationer baserats p{\aa} frirymds-formen
+$$
+  \nabla\cdot{\bf E}={{\rho}\over{\varepsilon_0}},\qquad
+  \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}},\qquad
+  \nabla\cdot{\bf B}=0,
+$$
+samt med Amp\`eres lag (s{\aa} l{\aa}ngt) p{\aa} den {\it statiska} formen
+$$
+  \hskip70pt\nabla\times{\bf B}=\mu_0{\bf J}.\hskip30pt(\hbox{Statisk!})
+$$
+Utifr{\aa}n en {\it elektrostatisk} betraktelse, s{\aa} ser vi direkt att det
+elektriska f{\"a}lt har sin k{\"a}lla i statiska elektriska laddningar, via
+Gauss lag f{\"o}r det elektriska f{\"a}ltet, medan magnetf{\"a}ltet i sin tur
+har sin k{\"a}lla i motsvarande {\it r{\"o}relse} av de elektriska laddningarna
+(det vill s{\"a}ga {\it str{\"o}m}). Redan i Faradays lag ovan har vi dock en
+f{\"o}rsta koppling till en {\it elektrodynamisk} koppling i och med att
+tidsvariationen hos det magnetiska f{\"a}ltet kopplar till rotationen hos det
+elektriska f{\"a}ltet. Denna koppling sker dessutom via ett omv{\"a}nt tecken,
+vilket i grund och botten fastst{\"a}ller {\it Lenz lag} (som s{\"a}ger att en
+inducerad elektromotorisk kraft alltid riktas s{\aa} att den motverkar
+k{\"a}llan som inducerade den).
+
+Som ett grundl{\"a}ggande krav f{\"o}r att dessa tre ekvationer skall vara
+fysikaliskt korrekta m{\aa}ste dessutom lagen om {\it konservering av elektrisk
+laddning}\numberedfootnote{Notera att man talade om elektrisk laddning
+  l{\aa}ngt innan elektronen 1897 uppt{\"a}cktes experimentellt av brittiske
+  fysikern och nobelpristagaren Joseph John Thomson. Elektronens existens
+  framf{\"o}rdes dock som hypotes 1838 av den brittiske naturfilosofen
+  Richard Laming, d.v.s. mindre {\"a}n 20 {\aa}r innan Maxwell konsoliderade
+  ``sina'' ekvationer.
+} vara uppfylld,\numberedfootnote{Notera att tecknet f{\"o}r
+  $-\partial\rho/\partial t$ i lagen f{\"o}r konservering av elektrisk
+  laddning h{\"a}nger ihop med att str{\"o}mmen ${\bf J}$ r{\"a}knas som
+  positiv {\it ut} fr{\aa}n punkten f{\"o}r {\it positiv} laddningstransport.
+  Med $\nabla\cdot{\bf J}({\bf x})>0$ m{\aa}ste vi d{\"a}rf{\"o}r ha en
+  {\it ackumulering av negativ laddning} i punkten ${\bf x}$, och d{\"a}rmed
+  att $\partial\rho({\bf x})/\partial t < 0$.}
+$$
+  {{\partial\rho}\over{\partial t}}+\nabla\cdot{\bf J}=0.
+$$
+\smallskip
+\centerline{\epsfbox{figs/chargeconsv.1}}
+\medskip
+\noindent
+L{\aa}t oss d{\"a}rf{\"o}r en g{\aa}ng f{\"o}r alla kontrollera att den
+elektriska laddningen {\"a}r konserverad utifr{\aa}n ekvationerna ovan!
+Fr{\aa}n den {\it statiska} formen av Amp\`eres lag har vi dessv{\"a}rre att
+$$
+  \nabla\cdot{\bf J}
+    = {{1}\over{\mu_0}}\nabla\cdot(\nabla\times{\bf B})
+    \equiv \{\ \hbox{vektoridentitet}\ \}
+    \equiv 0,
+$$
+{\it fast vi egentligen skulle beh{\"o}vt ett ``$-\partial\rho/\partial t$'' i
+h{\"o}gerledet ist{\"a}llet f{\"o}r en nolla.} Detta visar tydligt hur Amp\`eres
+lag p{\aa} formen ovan (i sin statiska form) {\it ej} kan till{\"a}mpas p{\aa}
+generella tidsberoende problem.
+
+Ett av James Clerk Maxwells viktigare bidrag till elektromagnetisk f{\"a}ltteori
+var n{\"a}r han 1856 ins{\aa}g hur Amp\`eres lag b{\"o}r modifieras f{\"o}r att
+dessutom uppfylla kravet p{\aa} konservering av elektrisk laddning. Argumentet
+lyder i stort som f{\"o}ljer: Om vi fr{\aa}n kravet p{\aa} konservering av
+laddning har att ``$-\partial\rho/\partial t$'' saknas i h{\"o}gerledet ovan,
+kan vi d{\aa} inte helt enkelt l{\"a}gga till en s{\aa}dan term och se vad som
+h{\"a}nder?
+$$
+    \nabla\cdot{\bf J}
+       = {{1}\over{\mu_0}}\nabla\cdot(\nabla\times{\bf B})
+       \eqq -{{\partial\rho}\over{\partial t}}
+       = -{{\partial}\over{\partial t}}(\varepsilon_0\nabla\cdot{\bf E})
+       = -\varepsilon_0\nabla\cdot{{\partial{\bf E}}\over{\partial t}}.
+$$
+Vi anv{\"a}nde i mellansteget ovan Gauss lag f{\"o}r elektrisk laddning.
+Uppenbarligen s{\aa} skulle en modifiering av Amp\`eres ``statiska'' lag med
+den (fria) str{\"o}mt{\"a}theten ersatt med
+$$
+  {\bf J}\to{\bf J}+\varepsilon_0{{\partial{\bf E}}\over{\partial t}}
+$$
+direkt l{\"o}sa problemet med konservering av laddning f{\"o}r tidsberoende
+problem, och detta {\"a}r ocks{\aa} sj{\"a}lva k{\"a}rnan i den modifiering
+som Maxwell introducerade.
+
+I n{\"a}rvaron av fria str{\"o}mmar (men utan att befinna sig i ett medium som
+kan polariseras elektriskt) {\"a}r d{\"a}rf{\"o}r den generella (tidsberoende)
+formen av Amp\`eres lag
+$$
+  \nabla\times{\bf B}=\mu_0\bigg({\bf J}
+    +\varepsilon_0{{\partial{\bf E}}\over{\partial t}}\bigg),
+$$
+d{\"a}r
+$$
+  \varepsilon_0{{\partial{\bf E}}\over{\partial t}}
+    =\hbox{``f{\"o}rskjutningsstr{\"o}mmen'' (i vakuum, paradoxalt nog!)}
+$$
+Att det {\"a}r just $\varepsilon_0{\bf E}$ som dyker upp i derivatan, och att
+denna term samtidigt finns naturligt i uttrycket f{\"o}r den elektriska
+polarisationsdensiteten hos ett material (se exempelvis f{\"o}reg{\aa}ende
+f{\"o}rel{\"a}sning), leder oss till att fundera p{\aa} om det i det generella
+fallet (inuti ett elektriskt polariserbart medium, och inte bara i vakuum)
+i sj{\"a}lva verket inte snarare {\"a}r ${\bf D}=\varepsilon_0{\bf E}+{\bf P}$
+som borde ing{\aa}. I sj{\"a}lva verket {\"a}r det exakt s{\aa} som den
+korrekta generella formen {\"a}r, som\numberedfootnote{Vi inf{\"o}r h{\"a}r
+   beteckningen ${\bf J}_{\rm f}$ f{\"o}r den {\it fria} str{\"o}mt{\"a}theten,
+   identisk med all str{\"o}mt{\"a}thet som diskuterats tidigare i kursen, bara
+   f{\"o}r att vara noga med att s{\"a}rskilja denna fr{\aa}n r{\"o}relsen hos
+   {\it bundna} laddningar hos mediet. Notera att f{\"o}r statiska problem
+   {\"a}r ${\bf E}$ tidsoberoende och Amp\`eres statiska lag op{\aa}verkad
+   av denna modifikation.}
+$$
+  {\bf J}_{\rm tot} = {\bf J}_{\rm f}+{{\partial{\bf D}}\over{\partial t}},
+$$
+d{\"a}r ${\bf J}_{\rm f}$ {\"a}r str{\"o}mmen av {\it fria laddningar}, medan
+${{\partial{\bf D}}/{\partial t}}$ {\"a}r ``str{\"o}mmen'' av {\it bundna
+laddningar}. Maxwell sj{\"a}lv kallade denna form f{\"o}r ``{\it The Law of
+Total Currents}''.
+
+S{\aa} varf{\"o}r kallar vi ${{\partial{\bf D}}/{\partial t}}$ f{\"o}r just
+``f{\"o}rskjutningsstr{\"o}m''? Till att b{\"o}rja med dyker denna term upp
+som en naturlig korrektion till str{\"o}mmen ${\bf J}_{\rm f}$ av fria
+laddningar, och har sj{\"a}lvfallet samma fysikaliska dimension som
+str{\"o}mt{\"a}thet (${\rm C}/{\rm m}^2)$. Ut{\"o}ver detta, s{\aa} involverar
+${\bf D}$ {\"a}ven den elektriska polarisationen av mediet, med en
+{\it f{\"o}rskjutning} av elektrisk laddning som en direkt f{\"o}ljd av det
+p{\aa}lagda elektriska f{\"a}ltet. Tidsderivatan av denna f{\"o}rskjutning av
+elektrisk laddning blir d{\aa} en effektiv elektrisk {\it str{\"o}m}
+(f{\"o}rflyttning av elektrisk laddning per tidsenhet), och d{\"a}rav att
+${{\partial{\bf D}}/{\partial t}}$ {\"a}r en effektiv
+``f{\"o}rskjutningsstr{\"o}m''. Viktigt h{\"a}r {\"a}r att notera att en
+{\it str{\"o}m} kan utg{\"o}ras {\"a}ven av {\it bundna} laddningar,
+exempelvis i ett annars icke elektriskt ledande dielektrikum.
+\smallskip
+\centerline{\epsfbox{figs/poldensity.1}}
+\medskip
+\noindent
+Exempelvis {\"a}r en oscillerande molekyl{\"a}r elektrisk dipol ett exempel
+p{\aa} denna f{\"o}rskjutningsstr{\"o}m, vilket vi kan se som en elektriskt
+driven antenn p{\aa} mikroskopisk niv{\aa}, d{\"a}r en medelv{\"a}rdesbildning
+som omfattar antennen ger vid hand att ingen netto-str{\"o}m genom volymen sker
+trots att ``antennen'' lokalt uppb{\"a}r en periodiskt oscillerande effektiv
+(och h{\"o}gst lokal) str{\"o}m.
+
+\section{Maxwells ekvationer}
+Maxwells fyra ekvationer\numberedfootnote{Det var faktiskt inte
+   f{\"o}rr{\"a}n 1884 som Oliver Heaviside (samme Heaviside som stegfunktionen
+   $H(x)$), samtidigt med liknande liknande arbeten av Josiah Willard Gibbs och
+   Heinrich Hertz, f{\"o}renklade och grupperade ihop de ursprungligen 20
+   ekvationerna till endast fyra, under anv{\"a}nd\-an\-de av modern
+   vektornotation. Denna grupp av fyra vektor-ekvationer genom historien har
+   kallats s{\aa}v{\"a}l {Hertz--Heavisides ekvationer} som {Maxwell--Hertz
+   ekvationer}, men {\"a}r idag kort och gott k{\"a}nda som {\it Maxwells
+   ekvationer}.}
+kan uttryckas antingen i en differentiell form eller i integralform.
+Ekvationerna involverar de tre elektriska f{\"a}lten (${\bf E}$, ${\bf D}$
+och polarisationsdensiteten ${\bf P}$) och de tre magnetiska f{\"a}lten
+(${\bf B}$, ${\bf H}$ och magnetiseringen ${\bf M}$).
+
+F{\"o}r v{\aa}gpropagation i fri rymd (vakuum) kan vi anta att den relativa
+elektriska permittiviteten $\varepsilon_{\rm r}=1$ och att den relativa
+magnetiska permeabiliteten $\mu_{\rm r}=1$, f{\"o}r vilket fall vi frikopplar
+ekvationerna f{\"o}r ${\bf E}$ och ${\bf B}$ fr{\aa}n konstitutiva relationer.
+Vi kommer h{\"a}r att ist{\"a}llet f{\"o}r att utg{\aa} ifr{\aa}n ett
+f{\"o}renklat fall anta att vi har en mer generell situation i ett material.
+Maxwells ekvationer kan i sin generella form sammanfattas med
+$$\hbox{~\hskip33pt}
+  \matrix{
+  &
+    \displaystyle\oiint{\bf D}\cdot d{\bf S}=\iiint\rho\,dV\hfill&
+    \quad\Leftrightarrow\quad&
+    \displaystyle\nabla\cdot{\bf D}=\rho\hfill&
+    &\hfill\hbox{(Gauss lag)}\cr
+  &
+    \displaystyle\oiint{\bf B}\cdot d{\bf S}=0\hfill&
+    \quad\Leftrightarrow\quad&
+    \displaystyle\nabla\cdot{\bf B}=0\hfill&
+    &\hfill\hbox{(Gauss lag)}\cr
+  &
+    \displaystyle\oint{\bf E}\cdot d{\bf l}
+       =-{{\partial}\over{\partial t}}\iint{\bf B}\cdot d{\bf S}\hfill&
+    \quad\Leftrightarrow\quad&
+    \displaystyle\nabla\times{\bf E}
+       =-{{\partial{\bf B}}\over{\partial t}}\hfill&
+    &\hfill\hbox{(Faradays lag)}\cr
+  &
+    \displaystyle\oint{\bf H}\cdot d{\bf l}=\iint{\bf J}_{\rm f}\cdot d{\bf S}
+       +{{\partial}\over{\partial t}}\iint{\bf D}\cdot d{\bf S}\hfill&
+    \quad\Leftrightarrow\quad&
+    \displaystyle\nabla\times{\bf H}={\bf J}_{\rm f}
+       +{{\partial{\bf D}}\over{\partial t}}\hfill&
+    &\hfill\hbox{(Amp\`eres lag)}\cr
+  }
+$$
+I dessa ekvationer {\"a}r $\rho$ den {\it fria elektriska
+laddningst{\"a}theten}\numberedfootnote{Till skillnad fr{\aa}n den fria
+   str{\"o}mt{\"a}theten l{\aa}ter vi h{\"a}r bli att s{\"a}tta ett explicit
+   index ``f'' p{\aa} laddningsdensiteten, eftersom det alltid {\"a}r klart
+   att $\rho$ relaterar just till {\it fria} laddningar, till skillnad
+   fr{\aa}n ${\bf J}_{\rm f}$ som {\"a}r separerad fr{\aa}n
+   f{\"o}rskjutningsstr{\"o}mmen $\partial{\bf D}/\partial t$.}
+${\rm C}/{\rm m}^3$) och ${\bf J}_{\rm f}$ den {\it fria elektriska
+str{\"o}mt{\"a}theten} (${\rm A}/{\rm m}^2$). Ut{\"o}ver dessa ekvationer
+har vi (fr{\aa}n exempelvis f{\"o}reg{\aa}ende f{\"o}rel{\"a}sning) de
+{\it konstitutiva relationerna}
+$$
+  \eqalign{
+    {\bf D}&=\varepsilon_0{\bf E}+{\bf P}
+            =\varepsilon_0\varepsilon_{\rm r}{\bf E},\cr
+    {\bf B}&=\mu_0({\bf H}+{\bf M})
+            =\mu_0\mu_{\rm r}{\bf H}.\cr
+  }
+$$
+Notera att vi har en lite ``avig'' relation f{\"o}r magnetiska f{\"a}lten
+om vi betraktar paret (${\bf E}$,${\bf B}$) som v{\aa}ra prim{\"a}ra
+f{\"a}ltvariabler. I m{\aa}nga fall {\"a}r det en fr{\aa}ga om tycke och
+smak om man v{\"a}ljer att definiera f{\"a}ltproblemet utifr{\aa}n paret
+(${\bf E}$,${\bf B}$) eller (${\bf E}$,${\bf H}$), och speciellt i fallet
+med propagation i fri rymd {\"a}r valet egalt, men alltsom oftast {\"a}r det
+mest bekv{\"a}mt att inom elektromagnetisk f{\"a}ltteori h{\aa}lla sig till
+(${\bf E}$,${\bf B}$). Vi skall strax se varf{\"o}r.
+
+De ing{\aa}ende f{\"a}lten och deras respektive SI-enheter {\"a}r, f{\"o}r
+att rekapitulera,
+$$
+  \eqalign{
+    {\bf E} &= \hbox{Elektrisk f{\"a}ltstyrka (``elektriskt\ f{\"a}lt'')}
+               \ ({\rm V}/{\rm m})\cr
+    {\bf D} &= \hbox{Elektrisk fl{\"o}dest{\"a}thet}
+               \ ({\rm C}/{\rm m}^2)\cr
+    {\bf P} &= \hbox{Elektrisk polarisationsdensitet}
+               \ ({\rm C}/{\rm m}^2)\cr
+    {\bf B} &= \hbox{Magnetisk fl{\"o}dest{\"a}thet (``B-f{\"a}lt'')}
+               \ ({\rm T})\cr
+    {\bf H} &= \hbox{Magnetisk f{\"a}ltstyrka (``H-f{\"a}lt'')}
+               \ ({\rm A}/{\rm m})\cr
+    {\bf M} &= \hbox{Magnetisering}
+               \ ({\rm A}/{\rm m})\cr
+  }
+$$
+
+\section{Fr{\aa}n Maxwells ekvationer till elektromagnetisk v{\aa}gekvation}
+{\"O}verg{\aa}ngen fr{\aa}n Maxwells ekvationer till de tv{\aa} vektoriella
+elektromagnetiska v{\aa}gekvationerna {\"a}r onekligen en av de stiligaste
+h{\"a}rledningarna i klassisk elektrodynamik. Det kan starkt rekommenderas att
+en g{\aa}ng f{\"o}r alla g{\aa} igenom denna h{\"a}rledning med papper och
+penna, om s{\aa} inte annat bara f{\"o}r att f{\"o}lja den aningen ov{\"a}ntade
+kopplingen mellan klassisk induktion till elektromagnetisk v{\aa}gutbredning.
+(Dessutom {\"a}r det en ganska kul och enkel exercis i vektoralgebra!)
+
+Maxwells ekvationer i den form som de st{\aa}r i den klassiska beskrivningen
+kan tolkas ganska direkt som relationer f{\"o}r induktions- och k{\"a}llagar.
+De beskriver dock inte sj{\"a}lvklart v{\aa}gekvationer, {\aa}tminstone inte
+vid en f{\"o}rsta anblick. Vi kommer h{\"a}r att h{\"a}rleda v{\aa}gekvationerna
+f{\"o}r ${\bf E}$- och ${\bf B}$-f{\"a}lten genom att eliminera den elektriska
+fl{\"o}dest{\"a}theten ${\bf D}$ och den magnetiska f{\"a}ltstyrkan ${\bf H}$,
+till f{\"o}rm{\aa}n f{\"o}r en beskrivning direkt i termer av fri
+str{\"o}mt{\"a}thet ${\bf J}$, elektrisk polarisationsdensitet ${\bf P}$ samt
+magnetiseringen ${\bf M}$.
+
+Vi b{\"o}rjar med den elektriska f{\"a}ltstyrkan ${\bf E}$ genom att applicera
+$\nabla\times$ (``ta rotationen'') p{\aa} Faradays generella induktionslag,
+$$
+  \eqalign{
+    \nabla\times\nabla\times{\bf E}
+      &=\nabla\times\bigg(-{{\partial{\bf B}}\over{\partial t}}\bigg)\cr
+      &=\{\ \hbox{Konstitutiv relation}
+             \ {\bf B}=\mu_0({\bf H}+{\bf M})\ \}\cr
+      &=-{{\partial}\over{\partial t}}
+          \nabla\times\bigg(\mu_0({\bf H}+{\bf M})\bigg)\cr
+      &=-\mu_0{{\partial}\over{\partial t}}\nabla\times{\bf H}
+          -\mu_0{{\partial}\over{\partial t}}\nabla\times{\bf M}\cr
+      &=\{\ \hbox{Till{\"a}mpa Amp\`eres lag}\ \}\cr
+      &=-\mu_0{{\partial}\over{\partial t}}
+          \bigg({\bf J}_{\rm f}+{{\partial{\bf D}}\over{\partial t}}\bigg)
+          -\mu_0{{\partial}\over{\partial t}}\nabla\times{\bf M}\cr
+      &=\{\ \hbox{Konstitutiv relation}
+             \ {\bf D}=\varepsilon_0{\bf E}+{\bf P}\ \}\cr
+      &=-\mu_0{{\partial^2}\over{\partial t^2}}
+          \big(\varepsilon_0{\bf E}+{\bf P}\big)
+          -\mu_0{{\partial}\over{\partial t}}
+	     \big({\bf J}_{\rm f}+\nabla\times{\bf M}\big)\cr
+      &=\{\ \hbox{Kombinera polarisationsdensiteten in i k{\"a}llterm}\ \}\cr
+      &=-\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}
+          -\underbrace{
+	     \mu_0{{\partial}\over{\partial t}}
+	     \bigg({\bf J}_{\rm f}
+	        +{{\partial{\bf P}}\over{\partial t}}
+	        +\nabla\times{\bf M}\bigg)}_{\hbox{k{\"a}llterm}}\cr
+  }
+$$
+Notera att denna ekvation f{\"o}r ${\bf E}$ g{\"a}ller {\it oavsett} eventuella
+spatiala variationer hos relativa permittiviteten eller permeabiliteten, det
+vill s{\"a}ga oavsett om relationen mellan de exciterande f{\"a}lten och den
+resulterande elektriska polarisationsdensiteten eller magnetiseringen
+{\"a}ndras. P{\aa} samma s{\"a}tt har vi f{\"o}r magnetiska
+fl{\"o}dest{\"a}theten ${\bf B}=\mu_0({\bf H}+{\bf M})$ att
+$$
+  \eqalign{
+    \nabla\times\nabla\times{\bf B}
+      &=\mu_0\nabla\times\nabla\times{\bf H}
+           +\mu_0\nabla\times\nabla\times{\bf M}\cr
+      &=\{\ \hbox{Till{\"a}mpa Amp\`eres lag}\ \}\cr
+      &=\mu_0\nabla\times\bigg({\bf J}_{\rm f}
+           +{{\partial{\bf D}}\over{\partial t}}\bigg)
+           +\mu_0\nabla\times\nabla\times{\bf M}\cr
+      &=\mu_0{{\partial}\over{\partial t}}\nabla\times{\bf D}
+           +\mu_0\nabla\times\bigg({\bf J}_{\rm f}+\nabla\times{\bf M}\bigg)\cr
+      &=\{\ \hbox{Konstitutiv relation}
+             \ {\bf D}=\varepsilon_0{\bf E}+{\bf P}\ \}\cr
+      &=\mu_0\varepsilon_0{{\partial}\over{\partial t}}\nabla\times{\bf E}
+           +\mu_0\nabla\times\bigg({\bf J}_{\rm f}
+	   +{{\partial{\bf P}}\over{\partial t}}
+	   +\nabla\times{\bf M}\bigg)\cr
+      &=\{\ \hbox{Till{\"a}mpa Faradays lag}\ \}\cr
+      &=-\mu_0\varepsilon_0{{\partial{\bf B}}^2\over{\partial t^2}}
+           +\mu_0\nabla\times\bigg({\bf J}_{\rm f}
+	   +{{\partial{\bf P}}\over{\partial t}}
+	   +\nabla\times{\bf M}\bigg)\cr
+  }
+$$
+{\"A}ven denna ekvation f{\"o}r ${\bf B}$ g{\"a}ller {\it oavsett} eventuella
+spatiala variationer hos relativa permittiviteten eller permeabiliteten.
+F{\"o}r att sammanfatta resultaten f{\"o}r den elektriska f{\"a}ltstyrkan
+${\bf E}$ och den magnetiska fl{\"o}dest{\"a}theten ${\bf B}$:
+$$
+  \eqalign{
+    \nabla\times\nabla\times{\bf E}
+      +\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}&=
+         -\mu_0{{\partial}\over{\partial t}}
+          \underbrace{
+             \bigg({\bf J}_{\rm f}
+	        +{{\partial{\bf P}}\over{\partial t}}
+	        +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}},\cr
+    \nabla\times\nabla\times{\bf B}
+      +\mu_0\varepsilon_0{{\partial^2{\bf B}}\over{\partial t^2}}&=
+          \mu_0\nabla\times
+          \underbrace{
+	     \bigg({\bf J}_{\rm f}
+	        +{{\partial{\bf P}}\over{\partial t}}
+	        +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}}.\cr
+  }
+$$
+I dessa ekvationer svarar v{\"a}nsterleden mot de tre-dimensionella
+v{\aa}gekvationerna for elektriska och magnetiska f{\"a}lt, medan
+h{\"o}gerleden svarar mot k{\"a}lltermer inkluderande fria str{\"o}mmar,
+f{\"o}rskjut\-nings\-str{\"o}mmens bidrag fr{\aa}n materialet i sig (via
+polarisationsdensiteten ${\bf P}$, som regel en funktion beroende av elektriska
+f{\"a}ltet), samt magnetiseringen ${\bf M}$ (som regel en funktion beroende av
+magnetf{\"a}ltet).
+
+V{\"a}rt att notera i ekvationerna f{\"o}r de elektromagnetiska f{\"a}lten
+{\"a}r den gemensamma formen av k{\"a}lltermerna, d{\"a}r den enda skillnaden
+(f{\"o}rutom omv{\"a}nt tecken) {\"a}r tidsderivatan respektive rotationen.
+Dessa ekvationer har i sig ingen inneboende best{\"a}md frekvens eller liknande
+f{\"o}r f{\"a}lten, utan detta best{\"a}ms av randv{\"a}rden (exempelvis en
+drivande antenn eller laser) samt materialegenskaperna som modelleras via
+${\bf J}_{\rm f}$, ${\bf P}$ och ${\bf M}$.
+
+\section{Aprop{\aa} s{\"a}rskiljning av polarisationsdensitet och magnetisering}
+En intressant f{\"o}ljd av den gemensamma formen p{\aa} k{\"a}lltermerna i
+h{\"o}gerleden i ekvationerna f{\"o}r ${\bf E}$ och ${\bf B}$ {\"a}r att
+effekterna av den fria str{\"o}mmen, polarisationsdensiteten och magnetiseringen
+ej {\"a}r entydigt best{\"a}mda relativt varandra, utan har en viss grad av
+godtycklighet mellan sig. Som ett exempel, om vi antar att
+polarisationsdensiteten har en godtycklig term i sig som beskrivs av en
+rotation, s{\"a}g
+$$
+  {\bf P}={\bf P}'+\nabla\times{\bf G},
+$$
+s{\aa} {\"a}r det egalt om termen $\nabla\times{\bf G}$ formellt ing{\aa}r i
+polarisationsdensiteten ${\bf P}$ eller magnetiseringen ${\bf M}$, eftersom
+$$
+  {\partial\over{\partial t}}\big({\bf P}'+\nabla\times{\bf G}\big)
+    +\nabla\times{\bf M}
+  = {{\partial{\bf P}}'\over{\partial t}}
+      +\nabla\times\big({\bf M}+{\bf G}\big)
+$$
+Eftersom ingen av ekvationerna f{\"o}r f{\"a}lten ${\bf E}$ eller ${\bf B}$
+ovan p{\aa}verkas av om vi har antingen en modell f{\"o}r
+polarisationsdensiteten som ${\bf P}={\bf P}'+\nabla\times{\bf G}$ eller
+magnetiseringen som ${\bf M}={\bf M}'+{\bf G}$, s{\aa} blir fr{\aa}gan vad
+som egenttligen {\"a}r polarisationsdensitet eller magnetisering till viss
+del en fr{\aa}ga om godtycklighet och konvention, {\aa}tminstone vad
+betr{\"a}ffar den elektromagnetiska f{\"a}ltteorin.
+
+Ett exempel p{\aa} en polarisationsdensitet som inneh{\aa}ller just
+$\nabla\times{\bf E}$ {\"a}r fallet d{\aa} ett medium {\"a}r optiskt aktivt,
+under vilket det roterar polarisationstillst{\aa}ndet hos ljuset runt axeln
+l{\"a}ngs vilken ljuset propagerar. I detta fall kan inte effekten av optisk
+aktivitet s{\"a}rskiljas fr{\aa}n fallet med Faraday-effekt, d{\"a}r vi har
+ett tatiskt magnetf{\"a}lt p{\aa}lagt l{\"a}ngs med axeln f{\"o}r ljusets
+propagationsriktning. (F{\"o}r att s{\"a}rskilja dessa fall kr{\"a}vs att vi
+{\"a}ven studerar motsvarande effekter vid motpropagerande f{\"a}lt, men detta
+{\"a}r l{\aa}ngt utanf{\"o}r vad denna kurs t{\"a}cker.)
+
+Ett annat s{\"a}tt att se p{\aa} k{\"a}lltermerna i h{\"o}gerleden {\"a}r som
+{\it effektiva str{\"o}mt{\"a}theter} ${\bf J}_{\rm eff}$ involverande
+tidsderivatan av ${\bf P}$ (f{\"o}rskjutningsstr{\"o}mmen) och rotationen
+av ${\bf M}$ som till{\"a}ggstermer till den fria str{\"o}mt{\"o}theten
+${\bf J}_{\rm f}$, som
+$$
+  {\bf J}_{\rm eff}= {\bf J}_{\rm f}
+    +{{\partial{\bf P}}\over{\partial t}} + \nabla\times{\bf M},
+$$
+och helt enkelt reducera f{\"a}ltekvationerna till
+$$
+  \eqalign{
+    \nabla\times\nabla\times{\bf E}
+      +\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}&=
+         -\mu_0{{\partial{\bf J}_{\rm eff}}\over{\partial t}},\cr
+    \nabla\times\nabla\times{\bf B}
+      +\mu_0\varepsilon_0{{\partial^2{\bf B}}\over{\partial t^2}}&=
+          \mu_0\nabla\times{\bf J}_{\rm eff}.\cr
+  }
+$$
+\vfill\eject
+\section{V{\aa}gekvation, induktion, elektrostatik, elektrodynamik, vad
+         g{\"a}ller detta egentligen?}
+I h{\"a}rledandet av formen p{\aa} v{\aa}gekvationerna f{\"o}r f{\"a}lten
+${\bf E}$ och ${\bf B}$ ovan, s{\aa} har vi varken lagt till eller tagit bort
+n{\aa}got. Allt utg{\aa}r ifr{\aa}n Faradays och Amp\`eres lagar, inklusive
+Maxwells korrektion f{\"o}r att uppfylla villkoret f{\"o}r laddnings\-%
+konservering, och ekvationerna beskriver i en form eller annan d{\"a}rmed
+{\it samtliga} omr{\aa}den som vi hittills behandlat i kursen.
+
+Allt handlar om att reducera v{\aa}gekvationerna till relevant situation,
+exempelvis om vi har att g{\"o}ra med ett statiskt problem, om vi har avsaknad
+av magnetisering eller om vi rent av har att g{\"o}ra med ett frirymdsproblem.
+Allt handlar med andra ord om vilka f{\"o}ruts{\"a}ttningar vi s{\aa} att
+s{\"a}ga ``matar in som antaganden'' i v{\aa}gekvationerna ovan. Om man s{\aa}
+vill, s{\aa} kan man s{\"a}ga att grunden f{\"o}r samtliga elektrodynamiska
+problem {\"a}r tv{\aa} v{\aa}gekvationer, f{\"o}r ${\bf E}$- och ${\bf B}$-%
+f{\"a}lten, och att statiska problem helt enkelt reducerar v{\aa}gekvationerna
+till enbart spatial dom{\"a}n genom att tidsderivator f{\"o}rsvinner.
+\bigskip
+\noindent{\it Exempel I: Elektrostatik}
+\smallskip
+\noindent
+Om vi till exempel behandlar fallet elektrostatik i n{\"a}rvaro av konstanta
+str{\"o}mmar, s{\aa} reducerar ekvationen ovan for det (statiska) elektriska
+f{\"a}ltet till
+$$
+  \nabla\times\nabla\times{\bf E}=0,
+$$
+vilket under anv{\"a}ndande av vektoridentiteten
+$\nabla\times\nabla\times{\bf A}=\nabla\cdot(\nabla{\bf A})-\nabla^2{\bf A}$
+reducerar till
+$$
+  \nabla(\nabla\cdot{\bf E})-\nabla^2{\bf E}=0.
+$$
+Det {\"a}r h{\"a}r l{\"a}tt att f{\"o}rledas att tro att $\nabla\cdot{\bf E}=0$
+om vi inte har n{\aa}gra fria laddningar. Dock, vi m{\aa}ste komma ih{\aa}g att
+detta argument bara h{\aa}ller f{\"o}r frirymdsformen av Gauss lag
+($\nabla\cdot{\bf E}=\rho/\varepsilon_0$). Om materialet {\"a}r {\it inhomogent}
+men i {\"o}vrigt fritt fr{\aa}n fria laddningar ($\rho=0$), s{\aa} m{\aa}ste vi
+g{\aa} p{\aa} den egentliga formen av Gauss lag som g{\"a}ller den elektriska
+fl{\"o}dest{\"a}theten,
+$$
+  \nabla\cdot{\bf D}
+    =\varepsilon_0\nabla\cdot(\varepsilon_{\rm r}{\bf E})=0
+  \qquad\Leftrightarrow\qquad
+  {\bf E}\cdot\nabla\varepsilon_{\rm r}+
+    \varepsilon_{\rm r}\nabla\cdot{\bf E}=0
+  \qquad\Leftrightarrow\qquad
+  \nabla\cdot{\bf E}=
+    -{{1}\over{\varepsilon_{\rm r}}}{\bf E}\cdot\nabla\varepsilon_{\rm r}.
+$$
+Allts{\aa}, elektrostatik i {\it inhomogena media} beskrivs av ekvationen
+$$
+  \nabla^2{\bf E}=-\nabla\bigg(
+      {{1}\over{\varepsilon_{\rm r}}}{\bf E}\cdot\nabla\varepsilon_{\rm r}
+    \bigg).
+$$
+\bigskip
+\noindent{\it Exempel II: Magnetostatik}
+\smallskip
+\noindent
+P{\aa} samma s{\"a}tt har vi f{\"o}r det magnetiska f{\"a}ltet ${\bf B}$ i
+n{\"a}rvaro av en konstant str{\"o}mt{\"a}thet ${\bf J}_{\rm f}$, men i
+fr{\aa}nvaro av magnetisering ${\bf M}$, att ekvationen ovan for det (statiska)
+magnetiska f{\"a}ltet enligt ovan reducerar till
+$$
+  \nabla\times\nabla\times{\bf B}=\mu_0\nabla\times{\bf J}_{\rm f}
+  \qquad\Leftrightarrow\qquad
+  \nabla\times{\bf B}=\mu_0{\bf J}_{\rm f},
+$$
+det vill s{\"a}ga svarandes mot frirymdsformen av Amp\'eres lag, precis som
+f{\"o}rv{\"a}ntat utifr{\aa}n premisserna f{\"o}r reduktionen fr{\aa}n de
+generella v{\aa}gekvationerna ovan.
+\bye
