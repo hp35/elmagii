@@ -1,0 +1,487 @@
+%
+% File: teaching/elmag/lect-10/lecture-10.tex [plain TeX code]
+% Last change: November 30, 2023
+%
+% Lecture No 10 in the course ``Elektromagnetism II, 1TE626 (2023)'',
+% held December 10, 2024, at Uppsala University, Sweden.
+%
+% Copyright (C) 2024, Fredrik Jonsson
+%
+\input macros/epsf.tex
+\input macros/eplain.tex
+\font\ninerm=cmr9
+\font\twentyrm=cmr12 at 20 truept
+\font\twelvesc=cmcsc10
+\input amssym % to get the {\Bbb E} font (strikethrough E)
+\def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
+    \else\hfill\fi}
+  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
+    \hfil{\it Elektromagnetism II, 1TE626 (2024)}}
+  \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2024)}
+    \hfil{\it F\"orel\"asning #1}}
+  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{macros/UU_logo_color.eps}}
+  \vskip-42pt\hfill\vbox{\hbox{{\it Elektromagnetism II, 1TE626 (2024)}}
+  \hbox{{\it Lecture Notes, Fredrik Jonsson}}}\vskip 36pt
+    \centerline{\twelvesc F\"orel\"asning #1}
+  \vskip 24pt\noindent}
+\def\section #1 {\medskip\goodbreak\noindent{\bf #1}
+  \par\nobreak\smallskip\noindent}
+\def\subsection #1 {\smallskip\goodbreak\noindent{\it #1}
+  \par\nobreak\smallskip\noindent}
+\def\iint{\mathop{\int\kern-8pt\int}}
+\def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+\def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
+\def\Re{\mathop{\rm Re}\nolimits} % real part
+\def\Im{\mathop{\rm Im}\nolimits} % imaginary part
+\def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
+\def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+
+\lecture{10}
+\centerline{\twelvesc V{\aa}gutbredning i homogena och isotropa dielektrika}
+\centerline{Fredrik Jonsson, Uppsala Universitet, 10 december 2024}
+\vskip24pt
+
+\section{Elektromagnetiska v{\aa}gekvationen i homogena dielektrika}
+Under den f{\"o}rra f{\"o}rel{\"a}sningen tog vi ur Maxwells ekvationer fram
+de generella v{\aa}gekvationerna f{\"o}r ${\bf E}$- och ${\bf B}$-f{\"a}lten.
+Dessa visade sig ha en gemensam form p{\aa} k{\"a}lltermerna i h{\"o}gerledet
+som
+$$
+  \eqalign{
+    \nabla\times\nabla\times{\bf E}
+      +\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}&=
+         -\mu_0{{\partial}\over{\partial t}}
+          \underbrace{
+             \bigg({\bf J}_{\rm f}
+	        +{{\partial{\bf P}}\over{\partial t}}
+	        +\nabla\times{\bf M}\bigg)
+                }_{\hbox{gemensam k{\"a}llterm}},\cr
+    \nabla\times\nabla\times{\bf B}
+      +\mu_0\varepsilon_0{{\partial^2{\bf B}}\over{\partial t^2}}&=
+          \mu_0\nabla\times
+          \underbrace{
+	     \bigg({\bf J}_{\rm f}
+	        +{{\partial{\bf P}}\over{\partial t}}
+	        +\nabla\times{\bf M}\bigg)
+                }_{\hbox{gemensam k{\"a}llterm}}.\cr
+  }
+$$
+{\"A}ven om de generella v{\aa}gekvationerna f{\"o}r ${\bf E}$ och ${\bf B}$
+enligt tidigare har en viktig betydelse i sig, i och med deras generalitet och
+fr{\aa}nvaro av approximationer, s{\aa} {\"a}r de i rent praktisk mening av
+begr{\"a}nsad betydelse eftersom de inte {\"a}nnu klarg{\"o}r hur effekten av
+mediet f{\"o}r v{\aa}gpropagationen sl{\aa}r in. Vi kommer d{\"a}rf{\"o}r att
+nu g{\"o}ra f{\"o}ljande f{\"o}renklingar:
+\medskip
+\item{$\bullet$}{${\bf J}_{\rm f}={\bf 0}$ (inga fria str{\"o}mmar)}
+\item{$\bullet$}{$\rho={\bf 0}$ (inga fria laddningar)}
+\item{$\bullet$}{${\bf P}=\varepsilon_0(\varepsilon_{\rm r}-1){\bf E}$
+   ({\it linj{\"a}rt} medium, och vi antar {\"a}ven homogent
+   $\varepsilon_{\rm r}({\bf x})=\hbox{konstant}$)}
+\item{$\bullet$}{${\bf M}={\bf 0}$ (f{\"o}rsumbar magnetisering,
+   $\mu_{\rm r}\approx1$)}
+\medskip
+\noindent
+Med ``linj{\"a}rt'' medium menar vi h{\"a}r att polarisationsdensiteten
+${\bf P}$ kort och gott {\"a}r en linj{\"a}r funktion av det p{\aa}lagda
+elektriska f{\"a}ltet ${\bf E}$. Genom att inf{\"o}ra dessa f{\"o}renklingar,
+speciellt f{\"o}r polarisationsdensiteten
+${\bf P}=\varepsilon_0(1-\varepsilon_{\rm r}){\bf E}$, har vi att
+$$
+  \eqalign{
+    \nabla\times\nabla\times{\bf E}
+      +\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}
+        &=-\mu_0{{\partial^2{\bf P}}\over{\partial t^2}}\cr
+        &=-\mu_0\varepsilon_0(\varepsilon_{\rm r}-1)
+            {{\partial^2{\bf E}}\over{\partial t^2}},\cr
+    \nabla\times\nabla\times{\bf B}
+      +\mu_0\varepsilon_0{{\partial^2{\bf B}}\over{\partial t^2}}
+        &= \mu_0\nabla\times{{\partial{\bf P}}\over{\partial t}}\cr
+        &= \mu_0\varepsilon_0(\varepsilon_{\rm r}-1)
+	  \nabla\times{{\partial{\bf E}}\over{\partial t}}\cr
+    &= \{\ \hbox{Byt ordning p{\aa}}\ \nabla\times\ \hbox{och}
+           \ \partial/\partial t\ \}\cr
+    &= \mu_0\varepsilon_0(\varepsilon_{\rm r}-1)
+          {{\partial}\over{\partial t}}\nabla\times{\bf E}\cr
+    &= \{\ \hbox{Faradays lag}\ \}\cr
+    &= -\mu_0\varepsilon_0(\varepsilon_{\rm r}-1)
+          {{\partial^2{\bf B}}\over{\partial t^2}}.\cr
+  }
+$$
+Vi ser redan h{\"a}r en fundamental egenskap i elektrodynamiken, n{\"a}mligen
+att ekvationerna f{\"o}r v{\aa}gutbredningen av elektriska och magnetiska
+f{\"a}lt i fr{\aa}nvaro av p{\aa}verkan av externa k{\"a}llor {\"a}r
+{\it identiska}. Detta f{\aa}r till f{\"o}ljd att vi (efter att ha definierat
+respektive randvillkor och initialv{\"a}rden till de partiella
+differentialekvationerna) kan behandla elektriska och magnetiska f{\"a}lt
+p{\aa} samma s{\"a}tt, och om f{\"a}lten har ett gemensamt ursprung, exempelvis
+fr{\aa}n en antenn, laser eller liknande, s{\aa} kommer ${\bf E}$- och
+${\bf B}$-f{\"a}lten att f{\"o}ljas {\aa}t d{\aa} de f{\"o}ljer {\it exakt}
+samma ekvationer.
+
+Vi kan f{\"o}renkla v{\"a}nsterledets spatiala differentialtermer n{\aa}got,
+genom att f{\"o}rst konstatera att
+$$
+  \nabla\times\nabla\times{\bf E}
+    =\nabla(\nabla\cdot{\bf E})-\nabla^2{\bf E}.
+$$
+F{\"o}r v{\aa}gutbredning i {\it homogena} material {\it utan fria laddningar}
+blir termen $\nabla(\nabla\cdot{\bf E})$ noll, eftersom
+$$
+  \nabla\cdot{\bf E}
+    =\nabla\cdot\bigg({{{\bf D}}\over{\varepsilon_0\varepsilon_{\rm r}}}\bigg)
+    ={{1}\over{\varepsilon_0\varepsilon_{\rm r}}}\nabla\cdot{\bf D}
+    ={{\rho}\over{\varepsilon_0\varepsilon_{\rm r}}}
+    =0.
+$$
+Notera dock att Gauss lag f{\"o}r elektriska f{\"a}ltet formellt kommer fr{\aa}n
+$\nabla\cdot{\bf D}=0$, och {\it ej} fr{\aa}n ``$\nabla\cdot{\bf E}=0$'' (som
+i grund och botten bara {\"a}r ett specialfall, om {\"a}n vanligt
+f{\"o}rekommande).
+
+F{\"o}r det magnetiska f{\"a}ltet g{\"a}ller samma sak, speciellt eftersom vi
+{\it alltid} har att $\nabla\cdot{\bf B}=0$. Med andra ord, f{\"o}r
+{\it homogena} media utan fria laddningar kan vi ers{\"a}tta
+$$
+  \nabla\times\nabla\times\qquad\to\qquad-\nabla^2,
+$$
+och ekvationerna f{\"o}r elektromagnetisk v{\aa}gutbredning antar d{\aa} formen
+$$
+  \nabla^2{\bf E} - \mu_0\varepsilon_0\varepsilon_{\rm r}
+    {{\partial^2{\bf E}}\over{\partial t^2}} = 0,
+  \qquad\qquad
+  \nabla^2{\bf B} - \mu_0\varepsilon_0\varepsilon_{\rm r}
+    {{\partial^2{\bf B}}\over{\partial t^2}} = 0.
+$$
+Med detta i bagaget kan vi s{\aa} l{\"a}nge g{\aa} vidare med att enbart
+studera det elektriska f{\"a}ltet, och konstatera att en analys av det
+magnetiska f{\"a}ltet f{\"o}ljer helt analogt. Notera dock att {\"a}ven om
+dessa ekvationer skenbart ger vid hand att ${\bf E}$- och ${\bf B}$-f{\"a}lten
+ser ut att vara helt frikopplade fr{\aa}n varandra, s{\aa} har de fortfarande
+kopplingen sinsemellan via exempelvis Faradays induktionslag. D{\"a}rf{\"o}r
+{\"a}r det oftast en mer korrekt v{\"a}g, med f{\"a}rre f{\"a}llor att ramla
+ner i vad g{\"a}ller korrekt formulerade randvillkor och initialv{\"a}rden,
+om man f{\"o}rst l{\"o}ser f{\"a}ltproblemet f{\"o}r det elektriska f{\"a}ltet
+och d{\"a}refter (om man beh{\"o}ver det magnetiska f{\"a}ltet i analysen)
+anv{\"a}nda Faradays eller Amp\`eres lag f{\"o}r att direkt l{\"a}nka in
+l{\"o}sningen f{\"o}r magnetf{\"a}ltet.
+
+\section{Plana elektromagnetiska f{\"a}lt och d'Alemberts generella l{\"o}sning
+         till v{\aa}gekvationen}
+Formen med ``$\nabla^2$'' f{\"o}r de elektromagnetiska f{\"a}ltekvationerna
+{\"a}r viktig och kan i m{\aa}nga fall l{\"o}sas {\"a}ven analytiskt, givet
+att geometrin {\"a}r tillr{\"a}ckligt enkel. Denna form kan anv{\"a}ndas
+s{\aa}v{\"a}l f{\"o}r att beskriva diffraktion som tidsberoende fenomen som
+dispersion och pulsbreddning. Denna generella form {\"a}r sj{\"a}lvfallet
+ocks{\aa} anv{\"a}ndbar som utg{\aa}ngspunkt f{\"o}r analys i cylindriska
+eller sf{\"a}riska koordinater, i vilket fall vi f{\aa}r uttrycka $\nabla^2$
+i respektive system.
+
+Vi kommer nu dock att ytterligare f{\"o}renkla beskrivningen genom att anta att
+v{\aa}gutbredningen sker i form av {\it o{\"a}ndligt utstr{\"a}ckta plana
+v{\aa}gor}, f{\"o}r vilka vi kan f{\"o}rsumma spatial breddning eller
+fokusering tv{\"a}rs axeln l{\"a}ngs med vilken v{\aa}gorna breder ut sig.
+I detta fall ers{\"a}tter vi, om vi antar v{\aa}gutbredning l{\"a}ngs med
+$z$-axeln i ett kartesiskt koordinatsystem,
+$$
+  \nabla^2\qquad\to\qquad{{\partial^2}\over{\partial z^2}}
+$$
+Eftersom den elektromagnetiska v{\aa}gekvationen s{\aa} l{\aa}ngt i
+approximationen f{\"o}rvisso {\"a}r p{\aa} vektoriell form, men med samtliga
+koefficienter och operatorer som skal{\"a}rer ({\"a}ven $\nabla^2$!), s{\aa}
+kan vi {\"a}ven v{\"a}lja att studera endast en komponent av respektive
+f{\"a}lt. F{\"o}r att g{\aa} vidare endast med det elektriska f{\"a}ltet,
+eftersom magnetiska f{\"a}ltet som vi sett dessutom f{\"o}ljer analogt, s{\aa}
+blir den partiella differentialekvationen omformulerad som
+$$
+  {{\partial^2 E(z,t)}\over{\partial z^2}}
+    -\mu_0\varepsilon_0\varepsilon_{\rm r}
+      {{\partial^2 E(z,t)}\over{\partial t^2}} = 0.
+$$
+Redan h{\"a}r kan vi med viss grad av kunskap om partiella
+differentialekvationer dra slutsatsen att hastigheten f{\"o}r v{\aa}gor som
+beskrivs av denna ekvation m{\aa}ste ha beloppet
+$(\mu_0\varepsilon_0\varepsilon_{\rm r})^{-1/2}$.
+Vi kommer d{\"a}rf{\"o}r att, enbart f{\"o}r att f{\"o}renkla notationen,
+{\it definiera}
+$$
+  c \equiv {{1}\over{(\mu_0\varepsilon_0\varepsilon_{\rm r})^{1/2}}},
+$$
+{\"a}ven om vi s{\aa} l{\"a}nge kommer att h{\aa}lla sj{\"a}lva tolkningen av
+$c$ {\"o}ppen fram till dess att vi explicit visat hur l{\"o}sningen ser ut.
+
+Homogena partiella differentialekvationer med termer d{\"a}r derivatorna med
+avseende p{\aa} olika variabler {\"a}r separerade {\"a}r skolexempel p{\aa}
+fall d{\"a}r vi kan till{\"a}mpa {\it variabelseparation}. Vi kommer dock
+h{\"a}r att beskriva ``standards{\"a}ttet'' att angripa v{\aa}gekvationen
+p{\aa}.\numberedfootnote{Griffiths v{\"a}ljer tyv{\"a}rr att inte g{\aa}
+  igenom d'Alemberts f{\"o}rh{\aa}llandevis enkla f{\"o}rklaring till att
+  v{\aa}gekvationen st{\"o}djer godtycklig v{\aa}gform s{\aa} l{\"a}nge som
+  vi har argument av formen $z\pm ct$, utan v{\"a}ljer att bara visa att
+  dessa l{\"o}sningar uppfyller v{\aa}gekvationen. Se Griffiths sid.~382--385.}
+F{\"o}rst av allt, byt variabler till\numberedfootnote{Detta
+   tillv{\"a}gag{\aa}ngss{\"a}tt f{\"o}ljer i stort sett den h{\"a}rledning av
+   den generella l{\"o}sningen till v{\aa}g\-ekva\-tionen som gjordes 1747 av
+   den franske matematikern Jean le Rond d'Alembert. Faktum {\"a}r att
+   d'Alembert-operatorn
+   $$
+     \square\equiv{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}-\nabla^2
+   $$
+   {\"a}r uppkallad efter honom. F{\"o}r en detaljerad om {\"a}n n{\aa}got
+   ostrukturerad beskrivning av metodiken, se Wikipedia-artikeln
+   {\tt https://en.wikipedia.org/wiki/D\%27Alembert\%27s\_formula}.}
+$$
+  \xi = z - ct,
+  \qquad\qquad
+  \eta = z + ct.
+$$
+F{\"o}r derivatorna med avseende p{\aa} $\xi$ och $\eta$ har vi med
+anv{\"a}ndande av kedjeregeln i tv{\aa} variabler att
+$$
+  \eqalign{
+    {{\partial}\over{\partial z}}
+      &=\underbrace{{{\partial\xi}\over{\partial z}}}_{=1}
+           {{\partial}\over{\partial\xi}}
+         +\underbrace{{{\partial\eta}\over{\partial z}}}_{=1}
+	   {{\partial}\over{\partial\eta}}
+       ={{\partial}\over{\partial\xi}}
+         +{{\partial}\over{\partial\eta}}\cr
+  &\hskip20pt\Rightarrow
+    {{\partial^2 E}\over{\partial z^2}}
+       =\bigg({{\partial}\over{\partial\xi}}
+         +{{\partial}\over{\partial\eta}}\bigg)
+        \bigg({{\partial E}\over{\partial\xi}}
+         +{{\partial E}\over{\partial\eta}}\bigg)
+       ={{\partial^2 E}\over{\partial\xi^2}}
+	 +2{{\partial^2 E}\over{\partial\xi\partial\eta}}
+         +{{\partial^2 E}\over{\partial\eta^2}},\cr
+    {{\partial}\over{\partial t}}
+      &=\underbrace{{{\partial\xi}\over{\partial t}}}_{=-c}
+           {{\partial}\over{\partial\xi}}
+         +\underbrace{{{\partial\eta}\over{\partial t}}}_{=c}
+	   {{\partial}\over{\partial\eta}}
+       =-c\bigg({{\partial}\over{\partial\xi}}
+         -{{\partial}\over{\partial\eta}}\bigg)\cr
+  &\hskip20pt\Rightarrow
+    {{\partial^2 E}\over{\partial t^2}}
+       =c^2\bigg({{\partial}\over{\partial\xi}}
+         -{{\partial}\over{\partial\eta}}\bigg)
+        \bigg({{\partial E}\over{\partial\xi}}
+         -{{\partial E}\over{\partial\eta}}\bigg)
+       =c^2\bigg({{\partial^2 E}\over{\partial\xi^2}}
+	 -2{{\partial^2 E}\over{\partial\xi\partial\eta}}
+         +{{\partial^2 E}\over{\partial\eta^2}}\bigg).\cr
+  }
+$$
+Detta f{\"o}r {\"o}ver den partiella differentialekvationen f{\"o}r $E$ till
+formen
+$$
+  \underbrace{
+  {{\partial^2 E}\over{\partial\xi^2}}
+     +2{{\partial^2 E}\over{\partial\xi\partial\eta}}
+     +{{\partial^2 E}\over{\partial\eta^2}}
+     }_{\displaystyle={{\partial^2E}\over{\partial z^2}}}
+   -{{1}\over{c^2}}
+  \underbrace{
+     c^2\bigg({{\partial^2 E}\over{\partial\xi^2}}
+     -2{{\partial^2 E}\over{\partial\xi\partial\eta}}
+     +{{\partial^2 E}\over{\partial\eta^2}}\bigg)
+     }_{\displaystyle={{\partial^2E}\over{\partial t^2}}} = 0
+  \qquad\Leftrightarrow\qquad
+  {{\partial^2 E}\over{\partial\xi\partial\eta}} = 0.
+$$
+\vfill\eject
+\noindent
+Denna partiella differentialekvation (PDE) {\"a}r {\it linj{\"a}r}, s{\aa}
+superpositionsprincipen -- som s{\"a}ger att l{\"o}sningar som individuellt
+satisfierar ekvationen kan adderas till varandra och fortfarande (som summa
+betraktad) bist{\aa} med en l{\"o}sning till ekvationen -- g{\"a}ller generellt.
+Den speciella formen p{\aa} ekvationen s{\"a}ger oss ocks{\aa} att om vi finner
+en l{\"o}sning s{\aa} kan den {\it enbart} vara en funktion av {\it antingen}
+$\xi$ {\it eller} $\eta$, eftersom andraderivatan i den andra, parvisa,
+variabeln garanterar att endast l{\"o}sningar av denna form kommer att
+satisfiera ekvationen.
+$$
+  \hbox{Alternativ I: Integrera f{\"o}rst m.a.p.}\ \xi:
+  \hbox{\hphantom{II}\hphantom{$\eta$}}
+  \qquad E_1=f(\xi)\quad\Rightarrow
+  {{\partial E_1(\xi)}\over{\partial\eta}}=0
+$$
+$$
+  \hbox{Alternativ II: Integrera f{\"o}rst m.a.p.}\ \xi:
+  \hbox{\hphantom{I}\hphantom{$\xi$}}
+  \qquad E_2=f(\eta)\quad\Rightarrow
+  {{\partial E_2(\eta)}\over{\partial\xi}}=0
+$$
+Med andra ord m{\aa}ste l{\"o}sningen best{\aa} av en funktion, s{\"a}g,
+$f(\xi)=f(x-ct)$ samt en annan funktion, s{\"a}g, $g(\eta)=g(x+ct)$ (b{\aa}da
+med sina respektive amplituder, som givetvis {\"a}ven kan vara noll).
+Sammantaget med superpositionsprincipen f{\"o}r linj{\"a}ra (ordin{\"a}ra
+s{\aa} v{\"a}l som partiella) differentialekvationer ger d{\aa} att
+$$
+  E = f(x-ct) + g(x+ct).
+$$
+Denna generella l{\"o}sning beskriver dels en v{\aa}g $f(x-ct)$ som r{\"o}r sig
+i {\it positiv} $z$-led med hastigheten $c$, dels en v{\aa}g $g(x+ct)$ som
+r{\"o}r sig i {\it negativ} $z$-led med samma hastighet. B{\aa}da dessa
+v{\aa}gor {\"a}r generella till sin form, och beh{\"o}ver ej vara ``klassiska
+harmoniska sinusv{\aa}gor''. V{\aa}gorna beh{\"o}ver ej heller vara repetitiva,
+utan kan lika v{\"a}l beskriva solit{\"a}ra pulser.
+
+Det intressanta h{\"a}r {\"a}r att vi nu har en tolkning av
+$$
+  c \equiv {{1}\over{(\mu_0\varepsilon_0\varepsilon_{\rm r})^{1/2}}}
+$$
+som varandes den hastighet som den elektromagnetiska v{\aa}gr{\"o}relsen har i
+mediet, och d{\aa} ljus\-hastig\-heten i vakuum {\"a}r
+$$
+  c_0 \equiv {{1}\over{(\mu_0\varepsilon_0)^{1/2}}}
+      = 299\,792\,458\ {\rm m}/{\rm s}\qquad(\hbox{exakt})
+$$
+s{\aa} inneb{\"a}r det att vi i $c$ har en v{\aa}g som propagerar
+l{\aa}ngsammare med en faktor $n$ enligt
+$$
+  c = c_0/n,
+$$
+d{\"a}r
+$$
+  n \equiv\varepsilon^{1/2}_{\rm r}
+$$
+{\"a}r {\it brytningsindex} f{\"o}r mediet.
+
+F{\"o}r den formella l{\"o}sningen f{\"o}r $E(x,t)$ {\"o}ver en dom{\"a}n,
+s{\"a}g, $0\le z\le L$, beh{\"o}ver vi dessutom dels initialv{\"a}rdet
+$$
+  E(z,0) = f(x) + g(x),
+$$
+men {\"a}ven tidsderivatan
+$$
+  {{\partial E(z,t)}\over{\partial t}}\bigg|_{t=0}
+    = -c{{df(z)}\over{dz}} + c{{dg(z)}\over{dz}},
+$$
+varefter vi kan integrera l{\"o}sningen och f{\aa} fram tidsberoendet hos de
+fram{\aa}t- och bak{\aa}tpropagerande v{\aa}gorna. F{\"o}r detaljer kring
+d'Alemberts l{\"o}sningsmetodik f{\"o}r dessa initialv{\"a}rdesproblem, se
+praktiskt taget vilken standardbok som helst f{\"o}r en grundkurs i partiella
+differentialekvationer.\numberedfootnote{Exempelvis D.~W.~Trim, {\it Applied
+Partial Differential Equations} (PWS-Kent, 1990), s.~48.}
+
+\section{Tidsharmoniska f{\"a}lt och planv{\aa}gsuppdelning}
+I f{\"o}reg{\aa}ende sektion visade vi f{\"o}r en plan v{\aa}g att vi har en
+generell l{\"o}sning i form av en fram{\aa}tg{\aa}ende och en
+bak{\aa}tg{\aa}ende v{\aa}g med samma fashastighet $c$. Detta visade vi f{\"o}r
+en {\it generell v{\aa}gform}, som inte beh{\"o}ver vara av harmonisk
+karakt{\"a}r (med vilket vi l{\"o}st formulerat menar av typen
+``sinus-l{\"o}sning''). Samtidigt vet vi fr{\aa}n teorin bakom
+differentialekvationer ({\"a}ven partiella s{\aa}dana) att
+superpositionsprincipen g{\"a}ller, varvid vi kan analysera l{\"o}sningar
+f{\"o}r olika delar av ett elektromagnetiskt f{\"a}lt, och d{\"a}refter
+sammanfoga den totala l{\"o}sningen f{\"o}r f{\"a}ltet.
+
+Formen p{\aa} den homogena differentialekvationen,\numberedfootnote{Den
+  f{\"o}ljande behandlingen av plana v{\aa}gor f{\"o}ljer i huvudsak
+  Griffiths Kap.~9.2, sid.~393--415.}
+$$
+  \nabla^2{\bf E} - \mu_0\varepsilon_0\varepsilon_{\rm r}
+    {{\partial^2{\bf E}}\over{\partial t^2}} = 0,
+  \qquad\qquad
+  \nabla^2{\bf B} - \mu_0\varepsilon_0\varepsilon_{\rm r}
+    {{\partial^2{\bf B}}\over{\partial t^2}} = 0,
+$$
+ger dels vid hand att det i det h{\"a}r antagna {\it isotropa} och
+{\it homogena} mediet g{\aa}r att frikoppla olika polarisationstillst{\aa}nd
+fr{\aa}n varandra (eftersom ekvationerna till{\aa}ter att vi helt enkelt
+skal{\"a}r±-multipli\-cerar med en enhetsvektor {\aa}t n{\aa}got h{\aa}ll
+och direkt f{\aa}r en frikopplad skal{\"a}r partiell differentialekvation
+f{\"o}r just det polarisationstillst{\aa}ndets f{\"a}lt), men {\"a}ven att
+vi kan dela f{\"a}lten i deras respektive harmoniska frekvensinneh{\aa}ll,
+enligt
+$$
+  {\bf E}({\bf x},t)=\sum_{\bf k}
+     \Re[{\bf E}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega({\bf k}) t)],
+  \qquad\qquad
+  {\bf B}({\bf x},t)=\sum_{\bf k}
+     \Re[{\bf B}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega({\bf k}) t)],
+$$
+d{\"a}r ${\bf k}$ {\"a}r {\it v{\aa}gvektorn} f{\"o}r komponenten med komplex
+amplitud ${\bf E}_{\bf k}$ samt d{\"a}r $\omega({\bf k})$ {\"a}r
+vinkelhastigheten (rad/s) f{\"o}r oscillationen hos f{\"a}lten i tid.
+Om vi har generella v{\aa}gformer som inte {\"a}r av ``sinus-typ'', s{\aa} kan
+vi alltid f{\aa} fram dessa genom addition av harmoniska f{\"a}lt till en
+{\it Fourier-utveckling}, med respektive amplitud hos varje frekvenskomponent
+som {\it Fourier-koefficienter}.
+
+Denna tids- och rums-harmoniska form f{\"o}r {\"o}ver de partiella
+differentialekvationerna f{\"o}r f{\"a}lten p{\aa} formen
+$$
+  (k^2 - \mu_0\varepsilon_0\varepsilon_{\rm r}\omega^2) {\bf E} = 0,
+  \qquad\qquad
+  (k^2 - \mu_0\varepsilon_0\varepsilon_{\rm r}\omega^2) {\bf B} = 0,
+$$
+fr{\aa}n vilket vi direkt (f{\"o}r noll-skilda f{\"a}lt) f{\"o}r beloppet
+$k=|{\bf k}|$ f{\"o}r v{\aa}gvektorn f{\aa}r att
+$$
+  k = (\mu_0\varepsilon_0\varepsilon_{\rm r})^{1/2}\omega
+    = {{\omega}\over{(c_0/n)}}
+    = {{\omega}\over{c}},
+$$
+d{\"a}r
+$$
+  \hskip60pt\hphantom{ljushastigheten}
+  c_0 = {{1}\over{\sqrt{\mu_0\varepsilon_0}}}
+  \hskip60pt(\hbox{ljushastigheten})
+$$
+samt
+$$
+  \hskip69pt\hphantom{brytningsindex}
+  n = \sqrt{\varepsilon_{\rm r}}
+  \hskip69pt(\hbox{brytningsindex})
+$$
+Med den tids- och rums-harmoniska formen f{\aa}r vi {\"a}ven direkt ett par
+andra karakteristiska egenskaper f{\"o}r elektromagnetisk v{\aa}gutbredning
+i homogena och isotropa material, exempelvis fr{\aa}n Faradays lag, att
+$$
+  i{\bf k}\times{\bf E}_{\bf k} = i\omega{\bf B}_{\bf k}
+  \qquad\Leftrightarrow\qquad
+  {\bf B}_{\bf k}={\bf k}\times{\bf E}_{\bf k}/\omega,
+$$
+fr{\aa}n vilket vi direkt har ortogonalitet mellan den elektriska
+f{\"a}ltstyrkan ${\bf E}_{\bf k}$ och magnetiska fl{\"o}des\-t{\"a}t\-heten
+${\bf B}_{\bf k}$ som
+$$
+  {\bf E}_{\bf k}\cdot{\bf B}_{\bf k}=0,
+$$
+men {\"a}ven ortogonatlitet mellan magnetiska fl{\"o}dest{\"a}theten och
+v{\aa}gvektorn, d{\aa}
+$$
+  {\bf k}\cdot{\bf B}_{\bf k}=0.
+$$
+Fr{\aa}n Gauss lag\numberedfootnote{I fr{\aa}nvaro av fria elektriska
+  laddningar, $\nabla\cdot{\bf D}=\nabla\cdot(\varepsilon_0\varepsilon_{\rm r}
+  {\bf E})=\varepsilon_0\varepsilon_{\rm r}\nabla\cdot{\bf E}=0$ med
+  $\varepsilon_{\rm r}$ som oberoende av rumskoordinater.}
+har vi {\"a}ven motsvarande ortogonalitet mellan den elektriska f{\"a}ltstyrkan
+och v{\aa}gvektorn som
+$$
+  {\bf k}\cdot{\bf E}_{\bf k}=0.
+$$
+Detta sammantaget inneb{\"a}r att vektorerna $({\bf E}_{\bf k},{\bf B}_{\bf k},
+{\bf k})$ bildar ett {\it h{\"o}gerhands-orienterat system}. Med andra ord,
+s{\aa} kan vi sammanfatta detta med att de elektriska och magnetiska f{\"a}lten
+i homogena och isotropa media alltid {\"a}r ortogonala mot varandra samt
+ortogonala mot v{\aa}gvektorn (riktningen) f{\"o}r v{\aa}gutbredningen.
+\smallskip
+\centerline{\epsfbox{figs/ebk.1}}
+\medskip
+
+\section{Poynting-vektorn}
+Som ett m{\aa}tt p{\aa} den effekt som transporteras per ytenhet i
+tv{\"a}rsnitt av ett elektromagnetiskt f{\"a}lt, definieras
+{\it Poynting-vektorn} som
+$$
+  {\bf S}={\bf E}\times{\bf H},
+$$
+med enheten ${\rm W}/{\rm m}^2$.
+\bye
