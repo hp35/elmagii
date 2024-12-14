@@ -110,7 +110,7 @@ beginfig(1);
      {{\rho({\bf x}',t-|{\bf x}-{\bf x}'|/c)}\over{|{\bf x}-{\bf x}'|}}dV'$
      etex,(56u,32u));
   label.urt(btex $\displaystyle d{\bf A}({\bf x},t)=
-     {{4\pi}\over{\mu_0}}
+     {{\mu_0}\over{4\pi}}
      {{{\bf J}_{\rm f}({\bf x}',t-|{\bf x}-{\bf x}'|/c)}\over{|{\bf x}-{\bf x}'|}}dV'$
      etex,(56u,20u));
 
