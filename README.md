@@ -49,7 +49,7 @@ density.](lect-07/figs/magdensity.svg)
 
 The geometry used in calculating the equivalent volume and surface currents
 matching the (possibly inhomogeneous) general magnetization of a body.
-[!The geometry used in calculating the equivalent volume and surface
+![The geometry used in calculating the equivalent volume and surface
 currents matching the (possibly inhomogeneous) general magnetization
 of a body.](lect-07/figs/vectpot.svg)
 
