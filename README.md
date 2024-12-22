@@ -47,11 +47,20 @@ form a magnetic polarization density.
 ![The orientation of spin to form a magnetic polarization
 density.](lect-07/figs/magdensity.svg)
 
+<i>Lecture 7 - Magnetic fields in materials</i>:
 The geometry used in calculating the equivalent volume and surface currents
 matching the (possibly inhomogeneous) general magnetization of a body.
 ![The geometry used in calculating the equivalent volume and surface
 currents matching the (possibly inhomogeneous) general magnetization
 of a body.](lect-07/figs/vectpot.svg)
+
+<i>Lecture 8 - The multipole expansion</i>:
+The scalar potential and static electric field from a linear electric
+quadrupole, being the simplest construction with a quadrupole moment as
+the first appearing term.
+![The scalar potential and static electric field from a linear electric
+quadrupole, being the simplest construction with a quadrupole moment as
+the first appearing term.](lect-08/multipoles/multipoles/linquadrupole-str.png)
 
 <i>Lecture 8 - The multipole expansion</i>: The scalar potential and static
 electric field from a quadratic electric quadrupole.
