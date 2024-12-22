@@ -42,5 +42,10 @@ density.
 ![Boundary conditions for normal component of electric field across a surface
 with non-zero charge density.](lect-06/figs/esurfnorm.svg)
 
+<i>Lecture 7 - Magnetic fields in materials</i>: The orientation of spin to
+form a magnetic polarization density.
+![The orientation of spin to form a magnetic polarization
+density.](lect-07/figs/magdensity.svg)
+
 ## Copyright
 Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
