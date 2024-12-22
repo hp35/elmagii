@@ -3,7 +3,21 @@
 % Gauss' law in order to extract boundary conditions for the elektric field
 % normal to the surface.
 %
-% Copyright (C) 2023, Fredrik Jonsson
+% Copyright (C) 2024, Fredrik Jonsson, under Gnu General Public License
+% (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
 %
 u = 1mm;
 beginfig(1);

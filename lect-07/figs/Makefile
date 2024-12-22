@@ -1,21 +1,30 @@
 #
 # Makefile for compilation of figures written in MetaPost.
 #
-# Copyright (C) 2022, Mycronic AB
-# Fredrik Jonsson <fredrik.jonsson@mycronic.com>
+# Copyright (C) 2024 under GPL 3.0, Fredrik Jonsson
 #
 SHELL    = /bin/sh
 METAPOST = mpost
 TEX      = tex
 DVIPS    = dvips
 PS2PDF   = ps2pdf
+PDFCROP  = pdfcrop
+PDF2SVG  = pdf2svg
 
 srcs = $(wildcard *.mp)
 dvis = $(patsubst %.mp,%.dvi,$(srcs))
 epss = $(patsubst %.dvi,%.eps,$(dvis))
 pdfs = $(patsubst %.eps,%.pdf,$(epss))
+svgs = $(patsubst %.pdf,%.svg,$(pdfs))
 
-all: $(pdfs)
+all: $(svgs)
+
+$(svgs): $(pdfs)
+	$(eval BASE = $(shell basename $@ .svg))
+	@echo "Converting PDF file $< to SVG (target $@)."
+	$(PDFCROP) $(BASE).pdf $(BASE)-crop.pdf
+	$(PDF2SVG) $(BASE)-crop.pdf $(BASE).svg
+	@echo "SVG file for $(BASE).pdf written to $(BASE).svg."
 
 $(pdfs): $(epss)
 	$(eval BASE = $(shell basename $@ .pdf))

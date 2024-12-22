@@ -1,8 +1,8 @@
 #
 # Makefile for compilation of Lecture Notes in Electromagnetic Theory,
-# Uppsala University, 2023. Code for the lectures written in plain TeX.
+# Uppsala University, 2024. Code for the lectures written in plain TeX.
 #
-# Fredrik Jonsson <fredrik@jonsson.eu>
+# Copyright (C) 2024 under GPL 3.0, Fredrik Jonsson
 #
 FIGURES = $(wildcard metapost/*.pdf)
 PROJECT = lecture-07
