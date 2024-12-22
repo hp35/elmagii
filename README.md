@@ -47,5 +47,16 @@ form a magnetic polarization density.
 ![The orientation of spin to form a magnetic polarization
 density.](lect-07/figs/magdensity.svg)
 
+The geometry used in calculating the equivalent volume and surface currents
+matching the (possibly inhomogeneous) general magnetization of a body.
+[!The geometry used in calculating the equivalent volume and surface
+currents matching the (possibly inhomogeneous) general magnetization
+of a body.](lect-07/figs/vectpot.svg)
+
+<i>Lecture 8 - The multipole expansion</i>: The orientation of spin to
+form a magnetic polarization density.
+![The orientation of spin to form a magnetic polarization
+density.](lect-07/figs/magdensity.svg)
+
 ## Copyright
 Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
