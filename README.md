@@ -36,11 +36,13 @@ just run `make clean` in the `elmagii` root directory.
 
 ## Gallery of illustrations used in the course
 
-<i>Lecture 6 - Electric fields in materials</i>: Boundary conditions for
-the normal component of electric field across a surface with non-zero charge
-density.
+<i>Lecture 6 - Electric fields in materials</i>:
+Boundary conditions for the normal and tangential components of electric field
+across a surface with non-zero charge density.
 ![Boundary conditions for normal component of electric field across a surface
 with non-zero charge density.](lect-06/figs/esurfnorm.svg)
+![Boundary conditions for the tangential component of electric field across
+a surface with non-zero charge density.](lect-06/figs/esurftang.svg)
 
 <i>Lecture 7 - Magnetic fields in materials</i>: The orientation of spin to
 form a magnetic polarization density.
