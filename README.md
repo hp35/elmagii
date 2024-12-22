@@ -56,7 +56,7 @@ of a body.](lect-07/figs/vectpot.svg)
 <i>Lecture 8 - The multipole expansion</i>: The scalar potential and static
 electric field from a quadratic electric quadrupole.
 ![The scalar potential and static electric field from a quadratic electric
-quadrupole.](lect-08/multipoles/multipoles/quadquadrupole.png)
+quadrupole.](lect-08/multipoles/multipoles/quadquadrupole-str.png)
 
 ## Copyright
 Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
