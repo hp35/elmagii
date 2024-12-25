@@ -2,9 +2,7 @@
 
 This directory contains the Lecture Notes for Lecture 6, <i>Elektriska fält i
 material</i> (English: <i>Electric fields in materials</i>), including all TeX
-code (plain TeX, no LaTeX), MetaPost figures and supporting material as used
-in my lectures on Electromagnetic Theory II (1TE626) for Engineering Physics
-(master level) at Uppsala University.
+code (plain TeX, no LaTeX), MetaPost figures and supporting material.
 
 ## Compiling the TeX code and figures
 
