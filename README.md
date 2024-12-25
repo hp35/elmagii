@@ -6,19 +6,23 @@ and supporting material as used in my lectures on Electromagnetic Theory II
 
 The directory contains the following subdirectories:
 
-`lect-06`   <i>Elektriska fält i material</i> (English: <i>Electric fields in materials</i>)
+  `lect-06` <i>Elektriska fält i material</i>
+         (<i>Electric fields in materials</i>)
 
-`lect-07`   <i>Magnetiska fält i material</i> (English: <i>Magnetic fields in materials</i>)
+  `lect-07` <i>Magnetiska fält i material</i>
+         (<i>Magnetic fields in materials</i>)
 
-`lect-08`   <i>Multipolutvecklingen</i> (English: <i>The multipole expansion</i>)
+  `lect-08` <i>Multipolutvecklingen</i>
+         (<i>The multipole expansion</i>)
 
-`lect-09`   <i>Maxwells ekvationer och vågutbredning</i> (English: <i>Maxwell's equations and electromagnetic waves</i>)
+  `lect-09` <i>Maxwells ekvationer och vågutbredning</i>
+         (<i>Maxwell's equations and electromagnetic waves</i>)
 
-`lect-10`   <i>Vågutbredning i homogena och isotropa dielektrika</i> (English: <i>Electromagnetic waves in homogeneous and isotropic dielectrics</i>)
+  `lect-10` <i>Vågutbredning i homogena och isotropa dielektrika</i>
+         (<i>Electromagnetic waves in homogeneous and isotropic dielectrics</i>)
 
-`lect-11` -  <i>Retarderade potentialer som lösningar till Maxwells ekvationer</i> (English: Retarded potentials as solutions to Maxwell's equations)
-
-Vågutbredning i homogena och isotropa dielektrika
+  `lect-11` <i>Retarderade potentialer som lösningar till Maxwells ekvationer</i>
+         (<i>Retarded potentials as solutions to Maxwell's equations</i>)
 
 ## Compiling the TeX code and figures
 
