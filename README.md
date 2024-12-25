@@ -6,22 +6,22 @@ and supporting material as used in my lectures on Electromagnetic Theory II
 
 The directory contains the following subdirectories:
 
-  `lect-06` <i>Elektriska fält i material</i>
+`lect-06` <i>Elektriska fält i material</i>
          (<i>Electric fields in materials</i>)
 
-  `lect-07` <i>Magnetiska fält i material</i>
+`lect-07` <i>Magnetiska fält i material</i>
          (<i>Magnetic fields in materials</i>)
 
-  `lect-08` <i>Multipolutvecklingen</i>
+`lect-08` <i>Multipolutvecklingen</i>
          (<i>The multipole expansion</i>)
 
-  `lect-09` <i>Maxwells ekvationer och vågutbredning</i>
+`lect-09` <i>Maxwells ekvationer och vågutbredning</i>
          (<i>Maxwell's equations and electromagnetic waves</i>)
 
-  `lect-10` <i>Vågutbredning i homogena och isotropa dielektrika</i>
+`lect-10` <i>Vågutbredning i homogena och isotropa dielektrika</i>
          (<i>Electromagnetic waves in homogeneous and isotropic dielectrics</i>)
 
-  `lect-11` <i>Retarderade potentialer som lösningar till Maxwells ekvationer</i>
+`lect-11` <i>Retarderade potentialer som lösningar till Maxwells ekvationer</i>
          (<i>Retarded potentials as solutions to Maxwell's equations</i>)
 
 ## Compiling the TeX code and figures
@@ -34,7 +34,7 @@ In order to generate all documents and figures in all lectures, just run
 `make` in the `elmagii` root directory. In order to clean up all directories,
 just run `make clean` in the `elmagii` root directory.
 
-## Gallery of illustrations used in the course
+## Gallery of sample illustrations used in the course
 
 <i>Lecture 6 - Electric fields in materials</i>:
 Boundary conditions for the normal and tangential components of electric field
