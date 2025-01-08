@@ -4,7 +4,6 @@
 #
 # Copyright (C) 2024 under GPL 3.0, Fredrik Jonsson
 #
-FIGURES = $(wildcard metapost/*.pdf)
 PROJECT = lecture-08
 
 all: figures $(PROJECT).pdf
