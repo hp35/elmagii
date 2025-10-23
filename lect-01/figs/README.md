@@ -1,7 +1,7 @@
 # Figures for Lecture No.1 in Electromagnetic Theory II (1TE626)
 
-This repository contains all MetaPost code for the figures used in Lecture 11
-of my series of lectures on Electromagnetic Theory II (1TE626) for Engineering
+This repository contains all MetaPost code for the figures used in Lecture 1
+of the series of lectures on Electromagnetic Theory II (1TE626) for Engineering
 Physics (master level) at Uppsala University.
 
 ## Compiling the MetaPost figures
