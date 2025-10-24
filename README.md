@@ -6,6 +6,12 @@ and supporting material as used in my lectures on Electromagnetic Theory II
 
 The directory contains the following subdirectories:
 
+`lect-01` <i>Elektrostatik, superpositionsprincipen och Gauss lag</i>
+         (<i>Electrostatics, the superposition principle and Gauss' law</i>)
+
+`lect-02` <i>Elektrostatisk potential och tillämpningar av Gauss lag</i>
+         (<i>Electrostatic potential and applications of Gauss' law</i>)
+
 `lect-06` <i>Elektriska fält i material</i>
          (<i>Electric fields in materials</i>)
 
