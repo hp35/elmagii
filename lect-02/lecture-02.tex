@@ -3,7 +3,7 @@
 % Last change: October 24, 2025
 %
 % Lecture No 2 in the course ``Elektromagnetism II, 1TE626 (2025)'',
-% held October 4, 2025, at Uppsala University, Sweden.
+% held November 4, 2025, at Uppsala University, Sweden.
 %
 % Copyright (C) 2025, Fredrik Jonsson, under Gnu General Public License
 % (GPL) v3. See the enclosed LICENSE for details.
@@ -280,7 +280,7 @@ $$
 $$
 d{\"a}r skillnaden $W_b-W_a$ {\"a}r skillnaden i potentiell energi f{\"o}r testladdningen under det att den f{\"o}rflyttats fr{\aa}n ${\bf x}_a$ till ${\bf x}_b$.
 
-Som en avslutning p{\aa} denna f{\"o}rel{\"a}sning b{\"o}r vi passa p{\aa} att erinra oss att sj{\"a}lva ordet ``potential'' medf{\"o}r en stor risk att man per automatik leds in till tankebanan att $\phi$ i sig skulle vara en ``potentiell energi'', vilket ej {\"a}r fallet. V{\aa}r potential har dock den fysikaliska dimensionen av Volt, och en potentialskillnad l{\aa}ter sig sj{\"a}lvfallet uttryckas i denna enhet.
+Vi b{\"o}r h{\"a}r passa p{\aa} att erinra oss att sj{\"a}lva ordet ``potential'' medf{\"o}r en stor risk att man per automatik leds in till tankebanan att $\phi$ i sig skulle vara en ``potentiell energi'', vilket ej {\"a}r fallet. V{\aa}r potential har dock den fysikaliska dimensionen av Volt, och en potentialskillnad l{\aa}ter sig sj{\"a}lvfallet uttryckas i denna enhet.
 
 En annan m{\"a}rklig egenskap hos den skal{\"a}ra elektrostatiska potentialen {\"a}r att denna variabel via gradienten i definitionen av det elektrostatiska f{\"a}ltet ${\bf E}=-\nabla\phi$ ger upphov till {\it tre} komponenter $(E_x,E_y,E_z)$. Hur {\"a}r detta magiska m{\"o}jligt? Hur kan {\it en} variabel pl{\"o}tsligt ge upphov till {\it tre} oberoende variabler?
 
@@ -291,6 +291,13 @@ $$
   {{\partial E_z}\over{\partial y}}={{\partial E_y}\over{\partial z}},\qquad
   {{\partial E_x}\over{\partial z}}={{\partial E_z}\over{\partial x}}.
 $$
+
+\section{Poissons ekvation f{\"o}r den skal{\"a}ra potentialen}
+Som en avslutning p{\aa} denna f{\"o}rel{\"a}sning vi passar vi p{\aa} att konstatera att Gauss lag p{\aa} differentialform, $\nabla\cdot{\bf E}=\rho/\varepsilon_0$, sammantaget med sj{\"a}lva definitionen f{\"o}r den skal{\"a}ra potentialen, ${\bf E}=-\nabla\phi$, ger att den partiella differentialekvation som beskriver den elektriska potentialen ges som {\it Poissons ekvation},
+$$
+  \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0.
+$$
+Denna skal{\"a}ra ekvation {\"a}r fundamental vid ber{\"a}kningar av elektrostatiska f{\"a}ltproblem och {\"a}r synnerligen v{\"a}l l{\"a}mpad f{\"o}r numerisk analys. Griffiths anser den s{\aa} fundamental att den till och med {\"a}r en av de tv{\aa} ekvationer som listas p{\aa} omslaget till hans {\it Introduction to Electrodynamics}!
 \vfill\eject
 
 \section{Sammanfattning}
@@ -342,4 +349,9 @@ $$
   W=q\big(\phi({{\bf x}_b})-\phi({{\bf x}_a})\big)=W_b-W_a,
 $$
 d{\"a}r skillnaden $W_b-W_a$ {\"a}r skillnaden i potentiell energi f{\"o}r testladdningen mellan punkterna.}
+\item{$\bullet$}{Den skal{\"a}ra potentialen $\phi$ lyder {\it Poissons ekvation},
+$$
+  \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0.
+$$
+}
 \bye
