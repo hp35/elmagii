@@ -1,5 +1,6 @@
 %
-% File: teaching/elmagii/2024/lect-06/lecture-06.tex [plain TeX code]
+% File: teach/elmagii/lect-06/lecture-06.tex [plain TeX code]
+% Github: https://github.com/elmagii/lect-06/
 % Last change: November 18, 2024
 %
 % Lecture No 6 in the course ``Elektromagnetism II, 1TE626 (2024)'',
@@ -24,8 +25,7 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 \font\ninerm=cmr9
-\font\twentyrm=cmr12 at 20 truept
-\font\twelvesc=cmcsc10
+\font\twelvesc=cmcsc10 at 12 truept
 \input amssym % to get the {\Bbb E} font (strikethrough E)
 \def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -42,7 +42,7 @@
   \vskip 24pt\noindent}
 \def\section #1 {\medskip\goodbreak\noindent{\bf #1}
   \par\nobreak\smallskip\noindent}
-\def\subsection #1 {\smallskip\goodbreak\noindent{\it #1}
+\def\subsection #1 {\medskip\goodbreak\noindent{\it #1}
   \par\nobreak\smallskip\noindent}
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
@@ -51,6 +51,11 @@
 \def\Im{\mathop{\rm Im}\nolimits} % imaginary part
 \def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+\def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
+  \leftskip=0pt\rightskip=0pt\smallskip}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip\noindent}
 
 \lecture{6}
 \centerline{\twelvesc Elektriska f\"alt i material}
@@ -161,10 +166,7 @@ d{\"a}r vi projicerar atomens eller molekylens v{\aa}gfunktion p{\aa} en
 dipoloperator. Dessutom f{\"o}rsummar denna modell helt och h{\aa}llet
 eventuella multipolmoment hos systemet (mer om detta i kommande
 f{\"o}rel{\"a}sningar).
-\bigskip
-\centerline{\epsfbox{figs/dipole.1}}
-\medskip
-\noindent
+\epsfig{figs/dipole.1}
 Eftersom k{\"a}rnan {\"a}r mycket tyngre {\"a}n elektronmolnet s{\aa} kan vi
 dessutom g{\"o}ra det enkelt f{\"o}r oss och helt enkelt se k{\"a}rnan som fix
 i rummet och med elektronmolnet r{\"o}rligt kring k{\"a}rnan.
@@ -178,10 +180,7 @@ det elektriska f{\"a}ltet), och vi kommer att f{\aa} en resulterande elektrisk
 dipol.
 \vfill\eject
 
-\bigskip
-\centerline{\epsfbox{figs/displace.1}}
-\medskip
-\noindent
+\epsfig{figs/displace.1}
 F{\"o}r att ta fram relationen mellan det resulterande dipolmomentet ${\bf p}$
 och det externa elektriska f{\"a}ltet ${\bf E}_{\rm ext}$, s{\aa} kan vi
 exempelvis betrakta krafterna som verkar p{\aa} k{\"a}rnan. F{\"o}rst av
@@ -360,10 +359,7 @@ att dras mot den ``positiva'' k{\"a}llan f{\"o}r de elektriska
 f{\"a}ltlinjerna, och kommer d{\"a}rmed ocks{\aa} att orsaka en elektrisk
 polarisering av materialet. I den h{\"a}r modellen blir polariseringen av
 mediet riktad {\it l{\"a}ngs med} f{\"a}ltlinjerna f{\"o}r ${\bf E}$-f{\"a}ltet.
-\bigskip
-\centerline{\epsfbox{figs/poldensity.1}}
-\medskip
-\noindent
+\epsfig{figs/poldensity.1}
 Vi m{\"a}ter denna inducerade (``p{\aa}tvingade'') polarisering som en
 {\it elektrisk polarisationsdensitet} ${\bf P}$, beskrivande det elektriska
 dipolmomentet per volymenhet (d{\"a}rav ``densitet''). Som en f{\"o}renklad
@@ -460,10 +456,7 @@ gr{\"a}nsytan mellan media.\numberedfootnote{Se Griffiths s.~185.}
 \noindent
 F{\"o}rst av allt en liten recap p{\aa} randvillkor (``hoppvillkor'') {\"o}ver
 gr{\"a}nsytor som uppb{\"a}r en ytladdning $\sigma$!
-\bigskip
-\centerline{\epsfbox{figs/esurfnorm.1}}
-\medskip
-\noindent
+\epsfig{figs/esurfnorm.1}
 Om vi betraktar en yta med en ytladdningst{\"a}thet
 $\sigma$ (${\rm C}/{\rm m}^2$), och innesl{\aa}ter denna yta med en sluten
 yta\numberedfootnote{Jackson's {\it Classical Electrodynamics} kallar denna
@@ -485,10 +478,7 @@ $$
   \quad\Leftrightarrow\quad
   E^{\perp}_2-E^{\perp}_1={{\sigma}\over{\varepsilon_0}}
 $$
-\bigskip
-\centerline{\epsfbox{figs/esurftang.1}}
-\medskip
-\noindent
+\epsfig{figs/esurftang.1}
 P{\aa} liknande s{\"a}tt kan vi analysera tangentiella komposanter ($\parallel$), parallella med ytan, genom att ist{\"a}llet anv{\"a}nda Stokes teorem i en sluten rektangul{\"a}r slinga $\Sigma$ av h{\"o}jd $h\to0$ och som innefattar gr{\"a}nsytan:
 $$
   \hbox{Stokes:}\qquad

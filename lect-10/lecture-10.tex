@@ -1,5 +1,6 @@
 %
-% File: teaching/elmag/lect-10/lecture-10.tex [plain TeX code]
+% File: teach/elmagii/lect-10/lecture-10.tex [plain TeX code]
+% Github: https://github.com/elmagii/lect-10/
 % Last change: November 30, 2023
 %
 % Lecture No 10 in the course ``Elektromagnetism II, 1TE626 (2023)'',
@@ -24,8 +25,7 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 \font\ninerm=cmr9
-\font\twentyrm=cmr12 at 20 truept
-\font\twelvesc=cmcsc10
+\font\twelvesc=cmcsc10 at 12 truept
 \input amssym % to get the {\Bbb E} font (strikethrough E)
 \def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -42,7 +42,7 @@
   \vskip 24pt\noindent}
 \def\section #1 {\medskip\goodbreak\noindent{\bf #1}
   \par\nobreak\smallskip\noindent}
-\def\subsection #1 {\smallskip\goodbreak\noindent{\it #1}
+\def\subsection #1 {\medskip\goodbreak\noindent{\it #1}
   \par\nobreak\smallskip\noindent}
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
@@ -51,6 +51,11 @@
 \def\Im{\mathop{\rm Im}\nolimits} % imaginary part
 \def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+\def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
+  \leftskip=0pt\rightskip=0pt\smallskip}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip\noindent}
 
 \lecture{10}
 \centerline{\twelvesc V{\aa}gutbredning i homogena och isotropa dielektrika}
@@ -491,9 +496,7 @@ Detta sammantaget inneb{\"a}r att vektorerna $({\bf E}_{\bf k},{\bf B}_{\bf k},
 s{\aa} kan vi sammanfatta detta med att de elektriska och magnetiska f{\"a}lten
 i homogena och isotropa media alltid {\"a}r ortogonala mot varandra samt
 ortogonala mot v{\aa}gvektorn (riktningen) f{\"o}r v{\aa}gutbredningen.
-\smallskip
-\centerline{\epsfbox{figs/ebk.1}}
-\medskip
+\epsfig{figs/ebk.1}
 
 \section{Poynting-vektorn}
 Som ett m{\aa}tt p{\aa} den effekt som transporteras per ytenhet i

@@ -1,9 +1,10 @@
 %
-% File: teaching/elmag/lect-01/lecture-01.tex [plain TeX code]
+% File: teach/elmagii/lect-01/lecture-01.tex [plain TeX code]
+% Github: https://github.com/elmagii/lect-01/
 % Last change: October 6, 2025
 %
 % Lecture No 1 in the course ``Elektromagnetism II, 1TE626 (2025)'',
-% held October 3, 2025, at Uppsala University, Sweden.
+% held November 3, 2025, at Uppsala University, Sweden.
 %
 % Copyright (C) 2025, Fredrik Jonsson, under Gnu General Public License
 % (GPL) v3. See the enclosed LICENSE for details.
@@ -50,11 +51,11 @@
 \def\Im{\mathop{\rm Im}\nolimits} % imaginary part
 \def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
-%
-% The 'boxit' macro from D.E. Knuths "The TeXbook", Exercise 21.3.
-%
 \def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+\def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
+  \leftskip=0pt\rightskip=0pt\smallskip}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip\noindent}
 
 \lecture{1}
 \centerline{\twelvesc Elektrostatik, superpositionsprincipen och Gauss lag}
@@ -79,7 +80,8 @@ $$
   }_{\sim O(1/|{\bf x}-{\bf x}'|^2)}
 $$
 d{\"a}r $\varepsilon_0\approx8.854\times10^{12}\ {\rm F}/{\rm m}$ {\"a}r konstanten f{\"o}r den {\it elektriska permittiviteten i vakuum}, eller kort och gott {\it vakuumpermittiviteten}.
-\bigskip\centerline{\epsfbox{figs/coulomb.1}}
+\bigskip
+\centerline{\epsfbox{figs/coulomb.1}}
 \medskip
 \noindent
 Om vi ist{\"a}llet f{\"o}r en enskild punktladdning vid k{\"a}llpunkten betraktar ett system av $N$ laddningar $q'_k$ vid respektive positioner ${\bf x}'_k$ (med prim f{\"o}r konsekvent notation f{\"o}r k{\"a}llpunkter), {\"a}r den totala kraften som verkar p{\aa} laddningen $q$ vid observationspunkten uppenbarligen
@@ -99,7 +101,8 @@ $$
   {\bf E}({\bf x})\equiv{{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
      q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}}.
 $$
-\bigskip\centerline{\epsfbox{figs/coulombsys.1}}
+\bigskip
+\centerline{\epsfbox{figs/coulombsys.1}}
 \medskip
 \noindent
 Ett par observationer kring det elektriska f{\"a}ltet:
@@ -119,7 +122,8 @@ $$
   +\underbrace{{{1}\over{4\pi\varepsilon_0}}\sum^{N}_{k=M+1}
      q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}}}_{\vbox{\hbox{Grupp 2 $\rightarrow\ {\bf E}_2({\bf x})$}\hbox{($N-M$ laddningar)}}}={\bf E}_1({\bf x})+{\bf E}_2({\bf x}).
 $$
-\bigskip\centerline{\epsfbox{figs/coulombsyspart.1}}
+\bigskip
+\centerline{\epsfbox{figs/coulombsyspart.1}}
 \medskip
 \noindent
 Med andra ord, s{\aa} l{\"a}nge som inte de inb{\"o}rdes positionerna eller laddningarna p{\aa}verkas av varandra (inga fria r{\"o}relser eller tillf{\"o}rsel av str{\"o}mmar) och om vi r{\aa}kar ha en geometri som p{\aa} n{\aa}got s{\"a}tt gynnar framtagandet av komponenter f{\"o}r det totala elektriska f{\"a}ltet, s{\aa} st{\aa}r det oss fritt att ber{\"a}kna komponenterna separat och d{\"a}refter sammanfoga dessa till en total l{\"o}sning f{\"o}r det elektriska f{\"a}ltet. Denna superpositionsprincip g{\"a}ller generellt f{\"o}r s{\aa} kallade {\it linj{\"a}ra problem}.
@@ -133,7 +137,8 @@ Vi skulle h{\"a}r i princip bara kunna h{\"a}nvisa till den generella formen av 
 
 \subsection{Definition: Elektriskt fl{\"o}de}
 F{\"o}r att diskutera resultaten i dessa fyra steg kommer vi att anv{\"a}nda konceptet {\it elektriskt fl{\"o}de} $\Phi_{\rm E}$ (enhet: ${\rm V}\cdot{\rm m}$), som definieras som den integrerade normalkomponenten av den elektriska f{\"a}ltstyrkan {\"o}ver en yta~$A$,
-\bigskip\centerline{\epsfbox{figs/elecflow.1}}
+\bigskip
+\centerline{\epsfbox{figs/elecflow.1}}
 \medskip
 \noindent
 Notera att det {\it inte finns n{\aa}got fysikaliskt fl{\"o}de associerat med ett elektriskt f{\"a}lt}, men att vi i analogi med andra vektorf{\"a}lt inom ``riktiga fl{\"o}den'' hos gaser eller v{\"a}tskor t{\"a}nker oss ett fl{\"o}de {\"a}ven f{\"o}r det elektriska f{\"a}ltet.\numberedfootnote{Notera {\"a}ven den lite olyckliga associationen man l{\"a}tt g{\"o}r till ``elektriskt fl{\"o}de'' som en slags str{\"o}m; det elektriska f{\"a}ltet i sig inneb{\"a}r ju dock ej n{\aa}gon explicit transport av laddning, vilket i s{\aa} fall skulle betecknas som en elektrisk str{\"o}m. F{\"o}rst i n{\"a}rvaro av fria laddningar har vi ett fysikaliskt fl{\"o}de i form av en str{\"o}m associerad med det elektriska fl{\"o}det.}
@@ -144,7 +149,8 @@ Vi kan lite handviftande s{\"a}ga att det elektriska fl{\"o}det {\"a}r ett m{\aa
 Antag att vi har en punktladdning $q'$ placerad i position vid ortsvektorn ${\bf x}'$. D{\aa} vi ber{\"a}knar det elektriska fl{\"o}det ut fr{\aa}n denna laddning, s{\aa} kan vi se det som att fl{\"o}det h{\"a}rr{\"o}r fr{\aa}n en {\it k{\"a}lla}, och vi kommer fram{\"o}ver i kursen ofta att relatera till ``k{\"a}lladdningar'' som ger upphov till elektriska f{\"a}lt och fl{\"o}den.\numberedfootnote{Genomg{\aa}ende kommer vi i kursen att s{\"a}tta ett prim ($'$) p{\aa} de objekt som vi betraktar som k{\"a}llor, som ${\bf x}'$, $dA'$ eller $dV'$, och l{\aa}ta observationspunkt och m{\"a}tetal vid denna vara oprimmade. Vi kommer {\"a}ven att genomg{\aa}ende explicit anv{\"a}nda Leibniz notation (${{\partial}\over{\partial x}}$, ${{d}\over{dx}}$) f{\"o}r derivator, f{\"o}r att inte r{\aa}ka in i situationer d{\"a}r ett prim kan misstas f{\"o}r en derivata.}
 
 Vi l{\"a}gger en hypotetisk sf{\"a}r $A$ med radien $|{\bf x}-{\bf x}'|=r=\hbox{konstant}$ runt punktladdningen, med syfte att f{\"o}rs{\"o}ka ber{\"a}kna det totala elektriska fl{\"o}det ut genom ytan.
-\bigskip\centerline{\epsfbox{figs/gauss-step-1.1}}
+\bigskip
+\centerline{\epsfbox{figs/gauss-step-1.1}}
 \medskip
 \noindent
 Det elektriska fl{\"o}det ut genom den slutna sf{\"a}ren $A$, r{\"a}knat gentemot ytans normalvektor ${\bf n}$, ges med utnyttjandet av den sf{\"a}riska symmetrin som
@@ -170,7 +176,8 @@ Notera att det elektriska fl{\"o}det $\Phi_{\rm E}$ tolkat som ``hur m{\aa}nga f
 
 \subsection{Steg 2: Godtycklig omslutande yta och punktladdning}
 L{\aa}t oss nu generalisera Steg 1 genom att ers{\"a}tta den sf{\"a}riska referensytan mot en yta av godtycklig form, med det enda kravet att vi fortfarande omsluter punktladdningen $q'$. Denna nya yta beh{\"o}ver inte vara, s{\"a}g, {\"o}verallt konvex, och vi till{\aa}ter {\"a}ven att ytan exempelvis f{\aa}r vika sig runt sig sj{\"a}lv.
-\bigskip\centerline{\epsfbox{figs/gauss-step-2.1}}
+\bigskip
+\centerline{\epsfbox{figs/gauss-step-2.1}}
 \medskip
 \noindent
 Om vi nu betraktar det elektriska fl{\"o}det som m{\aa}ttet p{\aa} ``hur m{\aa}nga fl{\"o}deslinjer som passerar ytan, r{\"a}knat gentemot ytans normalvektor'', s{\aa} ser vi att oavsett hur den omslutande ytan {\"a}r formad s{\aa} kommer exakt lika m{\aa}nga sk{\"a}rningspunkter att erh{\aa}llas som i Steg 1 under sf{\"a}risk symmetri. I de fall d{\"a}r en f{\"a}ltlinje sk{\"a}r en del av den omslutande ytan som {\"a}r vikt omlott, s{\aa} kommer varje sk{\"a}rning in i volymen att exakt motsvaras av en sk{\"a}rning ut ifr{\aa}n ytan, med f{\"o}ljd att samtliga f{\"a}ltlinjer kommer att ha ett resultat av exakt en sk{\"a}rning ut{\aa}t.
@@ -188,7 +195,8 @@ det vill s{\"a}ga att {\it det totala elektriska fl{\"o}det ut genom den slutna 
 
 \subsection{Steg 3: Godtycklig omslutande yta och system av punktladdningar}
 Vi kommer nu att ytterligare generalisera f{\"o}reg{\aa}ende resultat genom att betrakta ett system av $N$ statiska punktladdningar, fixerade i rummet och liksom tidigare inneslutna av en hypotetisk godtyckig yta $A$ med samma egenskaper som tidigare.
-\bigskip\centerline{\epsfbox{figs/gauss-step-3.1}}
+\bigskip
+\centerline{\epsfbox{figs/gauss-step-3.1}}
 \medskip
 \noindent
 Vi ser att situationen f{\"o}r varje enskild laddning i sig {\"a}r identisk med situationen som vi analyserade i Steg~2. Varje enskild innesluten punktladdning (``k{\"a}lla'') $q'_k$ skulle d{\"a}rmed ge ett bidrag till det totala elektriska fl{\"o}det som $q'_k/\varepsilon_0$.
@@ -214,7 +222,8 @@ Slutsatsen av detta resultat {\"a}r att {\it det totala elektriska fl{\"o}det $\
 Antag att vi nu ist{\"a}llet f{\"o}r diskreta punktladdningar $q'_k$ har en laddningsf{\"o}rdelning $\rho({\bf x})$ (enhet ${\rm C}/{\rm m}^3$) i en sluten (i rummet begr{\"a}nsad) volym $V$. Denna laddningsf{\"o}rdelning kan variera kontinuerligt (j{\"a}mnt) i rummet s{\aa}v{\"a}l som diskontinuerligt (stegvis), och vi l{\"a}mnar {\"a}ven {\"o}ppet f{\"o}r att $\rho({\bf x})$ skall kunna tolkas som en f{\"o}rdelning inneh{\aa}llande (Dirac-)delta-funktioner $\delta({\bf x}-{\bf x}'_k)$, med betydelsen av diskreta punktladdningar placerade vid k{\"a}llpositioner ${\bf x}'_k$.
 
 I termer av laddningsf{\"o}rdelningen $\rho({\bf x})$ uppb{\"a}r d{\aa} varje infinitesimalt {\it k{\"a}llelement} med volymen $dV'$ vid k{\"a}llpositionen ${\bf x}'$ laddningen $dq'=\rho({\bf x}')dV'$, vilken vi kan betrakta som en infinitesimal punktladdning.
-\bigskip\centerline{\epsfbox{figs/gauss-step-4.1}}
+\bigskip
+\centerline{\epsfbox{figs/gauss-step-4.1}}
 \medskip
 \noindent
 Med det tidigare resultatet f{\"o}r framtagandet av det elektriska f{\"a}ltet fr{\aa}n diskreta laddningar s{\aa} f{\"o}ljer det kontinuerliga fallet helt analogt, och med anv{\"a}ndande av superpositionsprincipen f{\aa}r vi direkt att den tidigare summan {\"o}ver diskreta laddningar i rummet ers{\"a}tts av volymsintegralen\numberedfootnote{Notera att Griffiths (sid.~70) olyckligtvis anv{\"a}nder den udda och vilseledande notationen $Q_{\rm enc}=\int_V\rho\,d\tau$ f{\"o}r volymintegralen. Normalt anv{\"a}nder vi $\tau$ som integrationsvariabel i {\it tid}.}
@@ -240,7 +249,8 @@ D{\aa} Coulombs lag bygger p{\aa} ett (f{\"o}r v{\aa}r del) mer eller mindre heu
 
 \section{Kontinuerliga laddningsf{\"o}rdelningar}
 Konceptet kontinuerlig laddningsf{\"o}rdelning kan sj{\"a}lvfallet appliceras p{\aa} {\"a}ven trajektorior i rummet (linjeladdningar), ytor (ytladdningar). I de fall d{\"a}r man har att g{\"o}ra med punktladdningar p{\aa} linjer, ytor eller i volymer, s{\aa} kan dessa modelleras som spatiala delta-pulser $\delta({\bf x}-{\bf x}')$ d{\"a}r ${\bf x}'$ {\"a}r positionen f{\"o}r punktladdningen.
-\bigskip\centerline{\epsfbox{figs/chargetypes.1}}
+\bigskip
+\centerline{\epsfbox{figs/chargetypes.1}}
 \medskip
 \noindent
 

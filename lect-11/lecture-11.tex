@@ -1,5 +1,6 @@
 %
-% File: teaching/elmag/lect-11/lecture-11.tex [plain TeX code]
+% File: teach/elmagii/lect-11/lecture-11.tex [plain TeX code]
+% Github: https://github.com/elmagii/lect-11/
 % Last change: December 10, 2024
 %
 % Lecture No 11 in the course ``Elektromagnetism II, 1TE626 (2023)'',
@@ -24,8 +25,7 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 \font\ninerm=cmr9
-\font\twentyrm=cmr12 at 20 truept
-\font\twelvesc=cmcsc10
+\font\twelvesc=cmcsc10 at 12 truept
 \input amssym % to get the {\Bbb E} font (strikethrough E)
 \def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -42,7 +42,7 @@
   \vskip 24pt\noindent}
 \def\section #1 {\medskip\goodbreak\noindent{\bf #1}
   \par\nobreak\smallskip\noindent}
-\def\subsection #1 {\smallskip\goodbreak\noindent{\it #1}
+\def\subsection #1 {\medskip\goodbreak\noindent{\it #1}
   \par\nobreak\smallskip\noindent}
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
@@ -51,6 +51,11 @@
 \def\Im{\mathop{\rm Im}\nolimits} % imaginary part
 \def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+\def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
+  \leftskip=0pt\rightskip=0pt\smallskip}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip\noindent}
 
 \lecture{11}
 \centerline{\twelvesc Retarderade potentialer som l{\"o}sningar till Maxwells
@@ -106,9 +111,8 @@ Partikeln startar med en horisontell hastighet $v_0$ vid h{\"o}jden $z=h$
 och f{\"a}rdas nedf{\"o}r en backe beskriven av funktionen $z=f(x)$.
 En typisk uppgift skulle h{\"a}r kunna vara att r{\"a}kna ut sluthastigheten
 $v$ vid $z=0$.
-\smallskip\centerline{\epsfbox{figs/analogi.1}}
-\medskip
-\noindent
+
+\epsfig{figs/analogi.1}
 Vi kan naturligtvis rent principiellt st{\"a}lla upp r{\"o}relseekvationerna
 f{\"o}r denna massa, g{\"o}ra vissa antaganden om huruvida hastigheten {\"a}r
 l{\aa}g nog f{\"o}r att vi ej skall f{\aa} lyft fr{\aa}n underlaget med mera,
@@ -560,9 +564,7 @@ respektive ${\bf A}({\bf x},t)$ vid tidpunkten $t$ kommer att bero p{\aa}
 summan av deras infinitesimala bidrag $d\Phi({\bf x},t')$ och
 $d{\bf A}({\bf x},t')$ fr{\aa}n en {\it tidigare} tidpunkt $t'$.
 
-\smallskip\centerline{\epsfbox{figs/chargedist.1}}
-\medskip
-\noindent
+\epsfig{figs/chargedist.1}
 Den tid som det tar f{\"o}r den elektromagnetiska potentialen (eller f{\"o}r
 den delen, det elektromagnetiska f{\"a}ltet) att n{\aa} observationspunkten
 ${\bf x}$ fr{\aa}n k{\"a}llpunkten ${\bf x}'$ {\"a}r helt enkelt
@@ -611,9 +613,8 @@ $$
 $$
 f{\"o}r $-\lambda/4\le z\le \lambda/4$ och med $\omega/c=2\pi/\lambda$.
 Evaluera f{\"a}lten vid en punkt ${\bf x}=x{\bf e}_x$ d{\"a}r $x\gg\lambda$.
-\smallskip\centerline{\epsfbox{figs/example.1}}
-\medskip
-\noindent
+
+\epsfig{figs/example.1}
 {\it F{\"o}rst av allt: N{\aa}gra kvalificerade gissningar}
 \smallskip
 \noindent

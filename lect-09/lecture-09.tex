@@ -1,5 +1,6 @@
 %
-% File: teaching/elmag/lect-09/lecture-09.tex [plain TeX code]
+% File: teach/elmagii/lect-09/lecture-09.tex [plain TeX code]
+% Github: https://github.com/elmagii/lect-09/
 % Last change: December 2, 2024
 %
 % Lecture No 9 in the course ``Elektromagnetism II, 1TE626 (2023)'',
@@ -24,8 +25,7 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 \font\ninerm=cmr9
-\font\twentyrm=cmr12 at 20 truept
-\font\twelvesc=cmcsc10
+\font\twelvesc=cmcsc10 at 12 truept
 \input amssym % to get the {\Bbb E} font (strikethrough E)
 \def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -42,7 +42,7 @@
   \vskip 24pt\noindent}
 \def\section #1 {\medskip\goodbreak\noindent{\bf #1}
   \par\nobreak\smallskip\noindent}
-\def\subsection #1 {\smallskip\goodbreak\noindent{\it #1}
+\def\subsection #1 {\medskip\goodbreak\noindent{\it #1}
   \par\nobreak\smallskip\noindent}
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
@@ -51,6 +51,11 @@
 \def\Im{\mathop{\rm Im}\nolimits} % imaginary part
 \def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+\def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
+  \leftskip=0pt\rightskip=0pt\smallskip}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip\noindent}
 
 \lecture{9}
 \centerline{\twelvesc Maxwells ekvationer och v{\aa}gutbredning}
@@ -109,10 +114,7 @@ laddning}\numberedfootnote{Notera att man talade om elektrisk laddning
 $$
   {{\partial\rho}\over{\partial t}}+\nabla\cdot{\bf J}=0.
 $$
-\smallskip
-\centerline{\epsfbox{figs/chargeconsv.1}}
-\medskip
-\noindent
+\epsfig{figs/chargeconsv.1}
 L{\aa}t oss d{\"a}rf{\"o}r en g{\aa}ng f{\"o}r alla kontrollera att den
 elektriska laddningen {\"a}r konserverad utifr{\aa}n ekvationerna ovan!
 Fr{\aa}n den {\it statiska} formen av Amp\`eres lag har vi dessv{\"a}rre att
@@ -199,10 +201,7 @@ ${{\partial{\bf D}}/{\partial t}}$ {\"a}r en effektiv
 ``f{\"o}rskjutningsstr{\"o}m''. Viktigt h{\"a}r {\"a}r att notera att en
 {\it str{\"o}m} kan utg{\"o}ras {\"a}ven av {\it bundna} laddningar,
 exempelvis i ett annars icke elektriskt ledande dielektrikum.
-\smallskip
-\centerline{\epsfbox{figs/poldensity.1}}
-\medskip
-\noindent
+\epsfig{figs/poldensity.1}
 Exempelvis {\"a}r en oscillerande molekyl{\"a}r elektrisk dipol ett exempel
 p{\aa} denna f{\"o}rskjutningsstr{\"o}m, vilket vi kan se som en elektriskt
 driven antenn p{\aa} mikroskopisk niv{\aa}, d{\"a}r en medelv{\"a}rdesbildning

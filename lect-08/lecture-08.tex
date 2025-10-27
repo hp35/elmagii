@@ -1,5 +1,6 @@
 %
-% File: teaching/elmag/lect-08/lecture-08.tex [plain TeX code]
+% File: teach/elmagii/lect-08/lecture-08.tex [plain TeX code]
+% Github: https://github.com/elmagii/lect-08/
 % Last change: November 28, 2024
 %
 % Lecture No 8 in the course ``Elektromagnetism II, 1TE626 (2023)'',
@@ -24,7 +25,7 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 \font\ninerm=cmr9
-\font\twelvesc=cmcsc10
+\font\twelvesc=cmcsc10 at 12 truept
 \input amssym % to get the {\Bbb E} font (strikethrough E)
 \def\captionwide{\advance\leftskip by 60pt
   \advance\rightskip by 60pt}
@@ -43,16 +44,19 @@
   \vskip 24pt\noindent}
 \def\section #1 {\medskip\goodbreak\noindent{\bf #1}
   \par\nobreak\smallskip\noindent}
-\def\subsection #1 {\smallskip\goodbreak\noindent{\it #1}
+\def\subsection #1 {\medskip\goodbreak\noindent{\it #1}
   \par\nobreak\smallskip\noindent}
 \def\iint{\mathop{\int\kern-7pt\int}}
 \def\iiint{\mathop{\int\kern-7pt\int\kern-7pt\int}}
 \def\Re{\mathop{\rm Re}\nolimits} % real part
 \def\Im{\mathop{\rm Im}\nolimits} % imaginary part
 \def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+\def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
+  \leftskip=0pt\rightskip=0pt\smallskip}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip\noindent}
 
-%\def\section#1{\bigskip\noindent{\bf#1}\par\medskip\goodbreak\noindent}
-%\def\ffig#1{\smallskip\centerline{\epsfbox{#1}}}
 \lecture{8}
 \centerline{\twelvesc Multipolutvecklingen}
 \centerline{Fredrik Jonsson, Uppsala Universitet, 28 november 2024}
@@ -141,10 +145,7 @@ $$
   \rho({\bf x})=(+q)\delta({\bf x}-b{\bf e}_z)
      +(-q)\delta({\bf x}+b{\bf e}_z)
 $$
-\smallskip
-\centerline{\epsfbox{figs/eldipole.1}}
-\medskip
-\noindent
+\epsfig{figs/eldipole.1}
 {\it Elektrisk skal\"ar potential} fr{\aa}n denna specifika distribution av
 tv\aa\ punktk\"allor (vi utg{\aa}r h{\"a}r ifr{\aa}n den generella
 tre-dimensionella volymintegralen av en laddningsdensitet $\rho({\bf x})$,
@@ -199,14 +200,8 @@ f{\"a}ltlinjer f{\"o}r ${\bf E}(x,y)=-\nabla\Phi(x,y)$.}
 \section{Exempel p\aa\ multipoler}
 Som en relativt enkel illustration av multipoler kan vi konstruera olika
 multipolmoment utifr{\aa}n diskreta laddningar.
-\bigskip
-\centerline{\epsfbox{figs/quadrupole.1}}
-\medskip
-\noindent
-\bigskip
-\centerline{\epsfbox{figs/octopole.1}}
-\medskip
-\noindent
+\epsfig{figs/quadrupole.1}
+\epsfig{figs/octopole.1}
 En intressant {\"o}vning {\"a}r att g{\aa} igenom dessa specifika multipoler
 och upprepa den geometriska analysen f{\"o}r dipolen, f{\"o}r att p{\aa} s{\aa}
 s{\"a}tt extrahera styrkan p{\aa} de olika multipolmomenten.
@@ -223,10 +218,7 @@ $$
   +(+q)\delta({\bf x}+b{\bf e}_z),
 $$
 precis analogt med det f{\"o}reg{\aa}ende fallet f{\"o}r den elektriska dipolen.
-\smallskip
-\centerline{\epsfbox{figs/linelquadpole.1}}
-\vfill\eject
-\noindent
+\epsfig{figs/linelquadpole.1}
 P{\aa} exakt samma s{\"a}tt som tidigare, med den enda skillnaden att vi nu
 har {\it tre} laddningar (k{\"a}ll\-termer) f{\"o}r den skal{\"a}ra potentialen
 $\Phi({\bf x})$, s{\aa} har vi att
@@ -337,10 +329,7 @@ f{\"o}ljande att anv{\"a}nda en geometri i vilken laddningst{\"a}theten
 $\rho({\bf x})$ {\"a}r lokaliserad i n{\"a}rheten av origo (vilket g{\"o}r
 det enklare att r{\"a}tt av till{\"a}mpa en serieutveckling f{\"o}r
 laddningsdensiteten i en Taylor-serie), enligt figur.
-\bigskip
-\centerline{\epsfbox{figs/chargedist.1}}
-\medskip
-\noindent
+\epsfig{figs/chargedist.1}
 Skal{\"a}r (elektrisk) potential $\Phi({\bf x})$ fr{\aa}n punktk{\"a}lla $q$ i
 ${\bf x}'$:
 $$
