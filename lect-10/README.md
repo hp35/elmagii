@@ -5,6 +5,12 @@ homogena och isotropa dielektrika</i> (English: <i>Electromagnetic waves in
 homogeneous and isotropic dielectrics</i>), including all TeX code (plain TeX,
 no LaTeX), MetaPost figures and supporting material.
 
+## Primary files of interest
+
+[lecture-10.tex](lecture-10.tex) - Plain TeX source code for the lecture.
+
+[lecture-10.pdf](lecture-10.pdf) - Compiled document containing the Lecture Notes.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the

@@ -4,6 +4,12 @@ This directory contains the Lecture Notes for Lecture 7, <i>Magnetiska fält i
 material</i> (English: <i>Magnetic fields in materials</i>), including all TeX
 code (plain TeX, no LaTeX), MetaPost figures and supporting material.
 
+## Primary files of interest
+
+[lecture-07.tex](lecture-07.tex) - Plain TeX source code for the lecture.
+
+[lecture-07.pdf](lecture-07.pdf) - Compiled document containing the Lecture Notes.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the

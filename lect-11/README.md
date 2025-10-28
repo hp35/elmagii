@@ -5,6 +5,12 @@ potentialer som lösningar till Maxwells ekvationer</i> (English: <i>Retarded
 potentials as solutions to Maxwell's equations</i>), including all TeX code
 (plain TeX, no LaTeX), MetaPost figures and supporting material.
 
+## Primary files of interest
+
+[lecture-11.tex](lecture-11.tex) - Plain TeX source code for the lecture.
+
+[lecture-11.pdf](lecture-11.pdf) - Compiled document containing the Lecture Notes.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the

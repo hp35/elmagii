@@ -5,6 +5,12 @@ till potentialproblem, randvillkor och spegelladdningar}</i> (English: <i>Unique
 theorem, boundary conditions and method of images for the scalar potential</i>),
 including all TeX code (plain TeX, no LaTeX), MetaPost figures and supporting material.
 
+## Primary files of interest
+
+[lecture-03.tex](lecture-03.tex) - Plain TeX source code for the lecture.
+
+[lecture-03.pdf](lecture-03.pdf) - Compiled document containing the Lecture Notes.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
