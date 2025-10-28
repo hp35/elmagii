@@ -1,0 +1,299 @@
+%
+% File: teach/elmagii/lect-03/lecture-03.tex [plain TeX code]
+% Github: https://github.com/elmagii/lect-03/
+% Last change: October 24, 2025
+%
+% Lecture No 3 in the course ``Elektromagnetism II, 1TE626 (2025)'',
+% held November 10, 2025, at Uppsala University, Sweden.
+%
+% Copyright (C) 2025, Fredrik Jonsson, under Gnu General Public License
+% (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
+\input macros/epsf.tex
+\input macros/eplain.tex
+\font\ninerm=cmr9
+\font\twelvesc=cmcsc10 at 12 truept
+\input amssym % to get the {\Bbb E} font (strikethrough E)
+\def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
+    \else\hfill\fi}
+  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
+    \hfil{\it Elektromagnetism II, 1TE626 (2025)}}
+  \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2025)}
+    \hfil{\it F\"orel\"asning #1}}
+  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{macros/UU_logo_color.eps}}
+  \vskip-42pt\hfill\vbox{\hbox{{\it Elektromagnetism II, 1TE626 (2025)}}
+  \hbox{{\it Lecture Notes, Fredrik Jonsson}}}\vskip 36pt
+    \centerline{\twelvesc F\"orel\"asning #1}
+  \vskip 24pt\noindent}
+\def\section #1 {\medskip\goodbreak\noindent{\bf #1}
+  \par\nobreak\smallskip\noindent}
+\def\subsection #1 {\medskip\goodbreak\noindent{\it #1}
+  \par\nobreak\smallskip\noindent}
+\def\iint{\mathop{\int\kern-8pt\int}}
+\def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+\def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
+\def\sgn{\mathop{\rm sgn}\nolimits} % sign
+\def\Re{\mathop{\rm Re}\nolimits}   % real part
+\def\Im{\mathop{\rm Im}\nolimits}   % imaginary part
+\def\Tr{\mathop{\rm Tr}\nolimits}   % quantum mechanical trace
+\def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+\def\quote#1{\par\leftskip=36pt\rightskip=36pt\bigskip\noindent#1\par
+  \leftskip=0pt\rightskip=0pt\bigskip}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
+
+\lecture{3}
+\centerline{\twelvesc Entydighet f{\"o}r l{\"o}sningar till potentialproblem,}
+\centerline{\twelvesc randvillkor och spegelladdningar}
+\centerline{Fredrik Jonsson, Uppsala Universitet, 10 november 2025}
+\vskip24pt
+
+\section{Laplaces ekvation f{\"o}r den elektrostatiska potentialen}
+Det kan tyckas aningen {\"o}verdrivet att ge sig in p{\aa} mer matematiskt betingade sp{\"o}rsm{\aa}l kring huruvida l{\"o}sningar till problem inom elektrostatiken {\"a}r unika eller ej. Trots allt, s{\aa} {\"a}r vi ju inte speciellt oroliga f{\"o}r att vi i det ``verkliga livet'' som ingenj{\"o}rer skall kunna r{\aa}ka ut f{\"o}r tv{\aa} olika f{\"a}lt som uppfyller samma ekvation och randvillkor, right?
+
+Fr{\aa}gan {\"a}r dock befogad rent generellt, och n{\"a}rhelst ickelinj{\"a}ra fenomen inkluderas, s{\aa} finns det gott om bistabila l{\"o}sningar med olika f{\"a}ltf{\"o}rdelningar som kan uppfylla samma ekvationer och randvillkor. Inom ramen f{\"o}r elektrostatiken i denna f{\"o}rel{\"a}sningsserie behandlar vi dock uteslutande linj{\"a}ra problem i det elektriska f{\"a}ltet, men som vi skall se finns det icke desto mindre mycket att h{\"a}mta i praktiskt probleml{\"o}sande med bas i entydighet f{\"o}r l{\"o}sningar till den elektrostatiska potentialen.
+
+Vi kan b{\"o}rja med att konstatera att vi i elektrostatiska problem alltsom oftast s{\"o}ker en l{\"o}sning till det elektriska f{\"a}ltet, vilket vi fr{\aa}n den f{\"o}rsta f{\"o}rel{\"a}sningen vet kan ber{\"a}knas genom Coulombs generaliserade lag,\numberedfootnote{Vi f{\"o}ljer h{\"a}r Griffiths sid.~113--124.}
+$$
+  {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
+    {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'.
+$$
+Oturligt nog f{\"o}r oss {\"a}r denna explicita form inte s{\"a}rskilt v{\"a}l l{\"a}mpad vare sig f{\"o}r ber{\"a}kning med papper och penna eller med numeriska metoder. En del av detta problem ligger i redundansen hos det elektriska f{\"a}ltet\numberedfootnote{Vi visade f{\"o}rra f{\"o}rel{\"a}sningen p{\aa} kopplingen mellan komponenterna hos det elektriska f{\"a}ltet via $\nabla\times{\bf E}={\bf 0}$, resulterande i att ${{\partial E_x}/{\partial y}}={{\partial E_y}/{\partial x}}$, etc.}, och vi kan d{\"a}rf{\"o}r redan i detta f{\"o}rsta stadie konstatera att det nog {\"a}r l{\"a}mpligare att ist{\"a}llet ``g{\aa} till pudelns k{\"a}rna'' och ist{\"a}llet s{\"o}ka ber{\"a}kna den skal{\"a}ra potentialen.
+
+Under f{\"o}rra f{\"o}rel{\"a}sningen fann vi att det elektriska f{\"a}ltet kunde tolkas som en (negativ) gradient ${\bf E}=-\nabla\phi$, d{\"a}r $\phi$ l{\"a}gligt nog {\"a}r explicit definierad som integralen
+$$
+  \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V
+    {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
+$$
+{\AA}terigen, tyv{\"a}rr, {\"a}r denna explicita form inte s{\aa} v{\"a}ldigt mycket b{\"a}ttre i analytiskt h{\"a}nseende annat {\"a}n f{\"o}r att ber{\"a}kna potentialen i mycket enkla geometrier. Vidare, s{\aa} {\"a}r integralformerna ovan prim{\"a}rt l{\"a}mpade f{\"o}r att ber{\"a}kna resulterande f{\"a}lt och potentialer fr{\aa}n fixa, givna laddnings\-f{\"o}r\-del\-ningar. I en verklig situation kommer laddningsf{\"o}rdelningen att geometriskt flytta sig i rummet s{\aa} snart som vi har n{\"a}rvaro av ledare med fria elektroner. Med andra ord s{\aa} beh{\"o}ver vi g{\aa} ytterligare ett sn{\"a}pp innan vi har n{\aa}got som handfast kan utnyttjas i fall d{\aa} laddningarna har frihet att r{\"o}ra p{\aa} sig.
+
+Som en intressant slutkl{\"a}m p{\aa} f{\"o}rra f{\"o}rel{\"a}sningen konstaterade vi att Gauss lag p{\aa} differentialform, $\nabla\cdot{\bf E}=\rho/\varepsilon_0$, trivialt kunde omformuleras till Poissons ekvation f{\"o}r den skal{\"a}ra potentialen genom identiteten ${\bf E}=-\nabla\phi$, som
+$$
+  \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0.
+$$
+Evaluerad med randvillkor {\"a}r partiella differentialekvation f{\"o}r $\phi$ ekvivalent med integralekvationen ovan. Dessutom {\"a}r Poissons ekvation f{\"o}r $\phi$ synnerligen v{\"a}l l{\"a}mpad f{\"o}r ber{\"a}kning i dom{\"a}ner d{\"a}r vi inte befinner oss i n{\aa}gon laddningst{\"a}thet, eftersom vi d{\aa} har att $\nabla^2\phi({\bf x})=0$ med l{\"o}sningar best{\"a}mda av randvillkor, dessutom -- som vi strax skall visa -- l{\"o}sningar som {\"a}r{\it entydigt} best{\"a}mda. Att laddningst{\"a}theten i omr{\aa}det vi tittar p{\aa} {\"a}r fritt fr{\aa}n laddningar betyder inte p{\aa} n{\aa}got vis att inga laddningar finns med i problemet, bara att de inte finns n{\"a}rvarande precis i observationspunkten ${\bf x}$. I dessa fall reduceras d{\"a}rmed problemet med f{\"a}ltbeskrivningen, eller om man s{\aa} vill {\it potentialbeskrivningen}, till {\it Laplaces ekvation} f{\"o}r $\phi$,\numberedfootnote{L{\"o}sningen till Laplaces ekvation $\nabla^2\phi=0$ kallas ofta ``harmonisk funktion'' ({\it harmonic function}).}
+$$
+  \nabla^2\phi({\bf x})=0.
+$$
+Griffiths g{\aa}r s{\aa} l{\aa}ngt att beskriva Laplaces ekvation som s{\aa} fundamental att l{\"a}ran om elektrostatik praktiskt taget {\it {\"a}r} studiet av just Laplaces ekvation, som ut{\"o}ver till{\"a}mpningen i elektrostatik {\"a}r av samma form inom magnetism och gravitation.
+
+\section{Entydighet hos l{\"o}sningar till Laplace ekvation}
+Vi har reducerat problemet till Laplaces ekvation, men enbart denna kompakta ekvation kommer inte att bist{\aa} med l{\"o}sningen till potentialen. Det som ytterligare beh{\"o}vs {\"a}r l{\"a}mpliga (fysikaliska) randvillkor till den dom{\"a}n d{\"a}r vi {\"o}nskar l{\"o}sa ekvationen.\numberedfootnote{Vi f{\"o}ljer h{\"a}r i huvudsak Griffiths sid.~119--124.}
+
+\subsection{Laplaces ekvation till{\aa}ter bara extrempunkter p{\aa} randen till en dom{\"a}n}
+V{\aa}r plan {\"a}r att skapa en differens mellan tv{\aa} antaget oberoende separata l{\"o}sningar $\phi_1$ och $\phi_2$ till Laplaces ekvation, och s{\"o}ka bevis f{\"o}r att $\nabla^2U=0$ dessutom betyder att $U=0$ {\"o}verallt. Innan vi g{\aa}r {\"o}ver till detta bevis skall vi f{\"o}rst visa p{\aa} en annan egenskap hos l{\"o}sningar till Laplaces ekvation, n{\"a}mligen att l{\"o}sningarna ej kan ha n{\aa}gra andra extrempunkter (minima eller maxima) annat {\"a}n de som finns p{\aa} randytan $S$ till volymen $V$ d{\"a}r vi betraktar ekvationen. Med andra ord:\numberedfootnote{Vi hoppar h{\"a}r direkt in i fallet f{\"o}r tre dimensioner. Griffiths beskriver {\"a}ven en- och tv{\aa}\-dimen\-sion\-ella fallen (sid.~114--116), vilka kan vara l{\"a}mpliga att studera f{\"o}r att f{\aa} en mer intuitiv k{\"a}nsla f{\"o}r det tredimensionella fallet. Specifikt {\"a}r den tv{\aa}dimensionella analogin med ett uppsp{\"a}nt gummimembran en mycket pedagogisk illustration av Laplace ekvation och fr{\aa}nvaron av lokala extrempunkter. Teorem~I betecknas i internationell litteratur ofta som {\it Maximum (or minimum) principle for harmonic functions}.}
+\quote{{\bf Teorem~I.}
+L{\"o}sningar till Laplaces ekvation saknar lokala extrempunkter.}
+\noindent
+Vi kommer nu att bevisa detta p{\aa}st{\aa}ende p{\aa} ett lite annorlunda s{\"a}tt {\"a}n i Griffiths, d{\"a}r man ist{\"a}llet fokuserar p{\aa} medelv{\"a}rde hos potentialen i en omgivning till en laddning (``k{\"a}lla'') via Coulombs lag. H{\"a}r kommer vi ist{\"a}llet att anta en mer matematisk approach.
+
+\quote{{\bf Matematiskt bevis.} [Motbevis] Antag att $\phi$ uppfyller Laplaces ekvation $\nabla\phi^2=0$ och har ett lokalt {\it maximum} i punkten ${\bf x}'$. I denna punkt har vi d{\"a}rmed att: (1)~Alla f{\"o}rstaderivator f{\"o}rsvinner, det vill s{\"a}ga att
+$$
+\nabla\phi({\bf x}')={\bf 0},$$
+samt (2) att alla andraderivator {\"a}r negativa i en omgivning till ${\bf x}'$,
+$$
+{{\partial^2\phi}\over{\partial x^2_k}}<0,\quad k=1,2,3,
+$$
+eftersom vi har att g{\"o}ra med ett {\it maximum} och att funktionen $\phi$ d{\"a}rmed m{\aa}ste ``halka ned{\aa}t'' i alla riktningar runt ${\bf x}'$.
+Genom att summera upp alla andraderivator erh{\aa}ller vi
+$$
+\sum^3_{k=1}{{\partial^2\phi}\over{\partial x^2_k}}=\nabla^2\phi<0.
+$$
+Laplace ekvation s{\"a}ger dock att $\nabla^2\phi=0$, vilket endast kan vara uppfyllt om {\it samtliga} andraderivator {\"a}r noll, vilket ger en mots{\"a}gelse. Enda m{\"o}jligheten {\"a}r d{\"a}rmed att $\phi$ inte kan ha ett lokalt maximum i en dom{\"a}n d{\"a}r $\nabla^2\phi=0$. Mot\-svar\-ande bevis f{\"o}r minima f{\"o}ljer analogt ur detta.}
+\noindent
+L{\aa}t oss {\"a}ven g{\aa} igenom ett alternativt, aningen mer fysikaliskt fokuserat bevis.
+\quote{{\bf ``Fysikaliskt'' bevis.} Vi har att $\phi$ {\"a}r en l{\"o}sning till Laplaces ekvation f{\"o}r den elektrostatiska potentialen i vilket vi rekapitulerar {\"a}r en laddningsfri region, med $\rho({\bf v})=0$ f{\"o}r alla punkter ${\bf x}$ i volymen $V$.
+Detta betyder att f{\"o}r {\it godtyckligt vald punkt} ${\bf x}$ i volymen $V$, s{\aa} {\"a}r potentialen given som ett medelv{\"a}rde av potentialen i en omgivning av observationspunkten, s{\"a}g i form av en sf{\"a}r med radien $r$ centrerad i punkten ${\bf x}$ som
+$$
+  \phi({\bf x})={{1}\over{4\pi r^2}}\oiint_{S}\phi({\bf x}')\,dS'.
+$$
+Med andra ord {\"a}r v{\"a}rdet f{\"o}r potentialen vid ${\bf x}$ ett medelv{\"a}rde av potentialen i alla n{\"a}rliggande punkter p{\aa} den omgivande sf{\"a}ren. Ett medelv{\"a}rde kan dock aldrig vara st{\"o}rre {\"a}n det maximala v{\"a}rdet eller mindre {\"a}n det minimala v{\"a}rdet f{\"o}r potentialen p{\aa} denna sf{\"a}r, med andra ord kan inga lokala extremv{\"a}rden finnas f{\"o}r $\phi$ i dom{\"a}nen d{\"a}r den uppfyller Laplaces ekvation $\nabla^2\phi=0$.}
+\bigskip
+\noindent
+Intuitiv fysikalisk tolkning: Att $\nabla^2\phi=0$ i volymen $V$ betyder att det inte finns n{\aa}gra k{\"a}llor ({\it sources}) eller s{\"a}nkor ({\it sinks}) f{\"o}r potentialen i $V$, vilket vi kan {\"o}vers{\"a}tta till att det inte finns n{\aa}gon m{\"o}jlighet att ``bygga upp toppar'' eller ``dr{\"a}nera dalar'' inom dom{\"a}nen. D{\"a}rf{\"o}r kan potentialen $\phi$ inte heller ha n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
+
+\subsection{F{\"o}rsta entydighetsteoremet f{\"o}r den elektrostatiska potentialen}
+\quote{{\bf Teorem~II.} [{\it First uniqueness theorem} enligt Griffiths]
+L{\"o}sningen till Laplaces ekvation $\nabla^2\phi=0$ i en godtycklig volym $V$ {\"a}r unikt best{\"a}md om potentialen $\phi$ {\"a}r specificerad p{\aa} randen $S$ till volymen. [Griffiths, sid.~119]}
+\epsfig{figs/unique.1}\noindent
+\quote{{\bf Bevis.}\numberedfootnote{Ett alternativt bevis g{\aa}s igenom av exempelvis J.~D.~Jackson, {\it Classical Electrodynamics}, med anv{\"a}ndandet av Greens f{\"o}rsta teorem, som f{\"o}r godtyckliga funktioner $\varphi$ och $\psi$ (d{\"a}r vi allts{\aa} skriver ``$\varphi$'' ist{\"a}llet f{\"o}r ``$\phi$'' f{\"o}r att undvika f{\"o}rv{\"a}xling) lyder
+$$
+  \iiint_V\big(\varphi\nabla^2\psi+(\nabla\varphi)\cdot(\nabla\psi)\big)\,dV=\oiint \varphi{{\partial\psi}\over{\partial n}}\,dA.
+$$
+Vi definierar i samma notation som Griffiths differensen $U\equiv\phi_2-\phi_1$ i en sluten volym $V$ med randen $S$, med egenskaperna $\nabla^2U=0$ inuti $V$ samt att $U=0$ och $\partial U/\partial n=0$ p{\aa} randen $S$, d{\"a}r ${{\partial U}/{\partial n}}$ betecknar normalderivatan av $U$ p{\aa} densamma.
+Vi erh{\aa}ller d{\aa} med Greens f{\"o}rsta teorem, med $\varphi=\psi=U$, att
+$$
+  \iiint_V\big(U\nabla^2U+(\nabla U)\cdot(\nabla U)\big)\,dV=\oiint U{{\partial U}\over{\partial n}}\,dA.
+$$
+Med egenskaperna hos $U$ reduceras detta till
+$$
+  \iiint_V|\nabla U|^2\,dV=0,
+$$
+det vill s{\"a}ga att $U$ {\"o}verallt {\"a}r konstant. F{\"o}r Dirichlet-randvillkor $U=0$ p{\aa} randen $S$ till $V$ (eftersom vi kr{\"a}ver samma v{\"a}rden f{\"o}r $\phi_1$ och $\phi_2$ p{\aa} $S$), betyder detta att {\"o}verallt i $V$ {\"a}r $\phi_1=\phi_2$, vilket i sin tur visar att en l{\"o}sning till Laplaces ekvation i $V$ alltid {\"a}r unik. Greens teorem och Greensfunktioner {\"a}r dock utanf{\"o}r vad denna kurs omfattar.} Antag att vi har tv{\aa} oberoende l{\"o}sningar $\phi_1$ och $\phi_2$ till Laplaces ekvation i en volym $V$, $\nabla^2\phi_1=0$ och $\nabla^2\phi_2=0$, med b{\"a}gge l{\"o}sningarna antagande samma v{\"a}rden p{\aa} randen $S$ till $V$.
+Vi definierar differensen mellan l{\"o}sningarna som
+$$
+  U\equiv\phi_2-\phi_1,
+$$
+som trivialt {\"a}ven den satisfierar Laplaces ekvation
+$$
+  \nabla^2 U=\underbrace{\nabla^2\phi_2}_{=0}-\underbrace{\nabla^2\phi_1}_{=0}=0
+$$
+{\"o}verallt i volymen $V$. Specifikt har differensen v{\"a}rdet $U=0$ p{\aa} alla punkter som tillh{\"o}r randen $S$ till $V$,
+$$
+  U({\bf x})=0,\qquad{\bf x}\in S.
+$$
+Som vi just sett i Teorem~I ovan till{\aa}ter dock Laplaces ekvation inga lokala extrempunkter inuti $V$ (specifikt f{\"o}r differensen $U$ som ju lyder Laplace ekvation) och med andra ord {\"a}r
+$$
+  \min(U({\bf x}))=\max(U({\bf x}))=0
+  \quad\Leftrightarrow\quad
+  U({\bf x})\equiv0
+  \quad\Leftrightarrow\quad
+  \phi_1({\bf x})=\phi_2({\bf x}),
+$$
+vilket d{\"a}rmed leder till slutsatsen att enda m{\"o}jligheten {\"a}r att det endast finns en enda unik (entydig) l{\"o}sning f{\"o}r den skal{\"a}ra potentialen $\phi$.}
+\vfill\eject
+
+\quote{{\bf F{\"o}ljdsats} [Inkludering av laddning i volymen $V$]
+L{\"o}sningen till Poissons ekvation\numberedfootnote{``Laplaces ekvation fast med en k{\"a}lla i h{\"o}gerledet.''} $\nabla^2\phi=-\rho/\varepsilon_0$ i en godtycklig volym $V$ {\"a}r unikt best{\"a}md om (I) potentialen $\phi$ {\"a}r specificerad p{\aa} randen $S$ till volymen samt (II) laddningst{\"a}theten $\rho$ i dom{\"a}nen {\"a}r specificerad. [Griffiths, sid.~121]}
+\quote{{\bf Bevis} Vi har just visat att i en dom{\"a}n d{\"a}r inga laddningar finns, s{\aa} {\"a}r en l{\"o}sning till {\it Laplaces} ekvation entydig. Vad h{\"a}nder d{\aa} om vi l{\"a}gger till en godtycklig laddningst{\"a}thet $\rho({\bf x})$ i volymen, s{\aa} att vi i sj{\"a}lva verket har att g{\"o}ra med {\it Poissons} ekvation?
+I detta fall f{\"o}ljer vi samma argument som tidigare, med en differens $U=\phi_2-\phi_1$, men d{\"a}r de tv{\aa} potentialerna ist{\"a}llet f{\"o}ljer
+$$
+  \nabla^2\phi_1=-\rho/\varepsilon_0,\qquad
+  \nabla^2\phi_2=-\rho/\varepsilon_0,
+$$
+s{\aa} att differensen $U$ i dom{\"a}nen $V$ liksom tidigare blir
+$$
+  \nabla^2U
+    =\nabla^2\phi_2-\nabla^2\phi_1
+    =-\rho/\varepsilon_0-(-\rho/\varepsilon_0)=0.
+$$
+{\AA}terigen satisfierar $U({\bf x})$ Laplaces ekvation och har liksom tidigare v{\"a}rdet noll f{\"o}r alla punkter p{\aa} randen,
+$$
+U({\bf })=0,\qquad{\bf x}\in S.
+$$
+Med exakt samma argument kring $\min(U)=\max(U)=0$ som tidigare, s{\aa} drar vi d{\"a}rmed slutsatsen att {\"a}ven n{\"a}r laddningar {\"a}r n{\"a}rvarande i dom{\"a}nen, s{\aa} g{\"a}ller entydighetsteoremet. Notera att ``n{\"a}rvaro av laddningar'' h{\"a}r m{\aa}ste tolkas som ``n{\"a}rvaron av laddningar som {\"a}r station{\"a}ra i rummet''.}
+
+\subsection{Elektriska ledare och andra entydighetsteoremet f{\"o}r
+  den elektrostatiska potentialen}
+\quote{{\bf Teorem~III.} [{\it Second uniqueness theorem} enligt Griffiths]
+I en volym $V$ omgiven av ledare och inneslutande en laddningst{\"a}thet $\rho$, {\"a}r det elektriska f{\"a}ltet unikt best{\"a}mt om den totala laddningen p{\aa} varje ledare {\"a}r given. Hela dom{\"a}nen kan vara begr{\"a}nsad av en annan ledare, alternativt obegr{\"a}nsad. [Griffiths, sid.~121]}
+\quote{{\bf Bevis.} [{\it Att eventuellt inkluderas i dessa Lecture Notes. Se Griffiths sid.~121--123.}]}
+\vfill\eject
+
+\section{Faradays bur}
+Som en direkt f{\"o}ljd av Teorem~II -- g{\"a}llande att l{\"o}sningen till Laplaces ekvation $\nabla^2\phi=0$ i en godtycklig volym $V$ {\"a}r unikt best{\"a}md om potentialen $\phi$ {\"a}r specificerad p{\aa} randen $S$ till volymen -- s{\aa} f{\"o}ljer det att om en perfekt ledare omsluter en dom{\"a}n $V$, med andra ord att den omslutande ytan {\"o}verallt {\"a}r knuten till samma konstanta potential $\phi=\phi_0$, {\it s{\aa} {\"a}r den elektriska potentialen konstant {\"o}verallt inuti volymen}, givet att ingen laddning omsluts.
+\epsfig{figs/faradaycage.1}\noindent
+Av detta f{\"o}ljer trivialt att det elektriska f{\"a}ltet i hela volymen {\"a}r identiskt noll, eftersom vi d{\aa} har att
+$$
+  {\bf E}=-\nabla\phi_0=0
+$$
+f{\"o}r $\phi=\hbox{konstant}$ p{\aa} $S$.
+
+Exempel~I: Luckan till en mikrov{\aa}gsugn fungerar som d{\"o}rr till en Faraday-bur, d{\"a}r det elektriskt ledande n{\"a}tet i luckan har h{\aa}l som {\"a}r v{\"a}sentligt mindre {\"a}n v{\aa}gl{\"a}ngden f{\"o}r det elektromagnetiska f{\"a}lt som utg{\aa}r mikrov{\aa}gorna (cirka $2.4 {\rm GHz}$, vilket ger en v{\aa}gl{\"a}ngd p{\aa} cirka $(3\times10^8\ {\rm m}/{\rm s})/(2.4\times10^9 1/{\rm s}))\approx 12.5\ {\rm cm}$). Genom att det elektromagnetiska f{\"a}ltet inte kan transmitteras genom n{\"a}tet (eller h{\aa}lmatrisen) s{\aa} {\"a}r mikrov{\aa}gsugnen fortfarande s{\"a}ker trots att man kan se igenom luckan.
+
+Exempel~II: En bilkaross s{\"a}gs effektivt skydda mot blixtnedslag, men vad om de ganska stora {\"o}ppna glasytorna? Riskerar inte ett blixtnedslag att leta sig in i kup\'en genom glasrutorna? L{\"o}sningen ligger {\"a}ven h{\"a}r i att betrakta vilken v{\aa}gl{\"a}ngd den elektromagnetiska pulsen har:
+\item{$\bullet$}{Den dominerande v{\aa}gl{\"a}ngden hos det emitterade elektromagnetiska f{\"a}ltet i ett blixtnedslag ligger i VLF-spannet\numberedfootnote{VLF = Very Low Frequency, {\tt https://en.wikipedia.org/wiki/Very\_low\_frequency}.} 3--30~kHz, motsvarande v{\aa}gl{\"a}ngder p{\aa} 10--100~km. Dessa v{\aa}gl{\"a}ngder {\"a}r mycket st{\"o}rre {\"a}n {\"o}ppningen i det ledande skalet hos bilen, vilka typiskt {\"a}r i storleksordningen 1~m.\numberedfootnote{V{\"a}rldsarvet radiostationen Grimeton, Varberg, har regelbundet s{\"a}ndningar p{\aa} 17.2~kHz (ja, {\it kHz}, inte {MHz}), eller en elektromagnetisk v{\aa}gl{\"a}ngd p{\aa} cirka 17.4~km, och vi kan med detta dra slutsatsen att vi ej kan uppf{\aa}nga Grimetons uts{\"a}ndningar inne i en bilkup\'e! {\tt https://grimeton.org}}}
+\item{$\bullet$}{Blixtnedslaget har naturligtvis ocks{\aa} synligt ljus med en v{\aa}gl{\"a}ngd av cirka 500~nm i sitt spektrum; det {\"a}r ju trots allt s{\aa} att vi tydligt ser blixtnedslaget, vilket {\"a}r en f{\"o}ljd av att denna del av spektrum har en v{\aa}gl{\"a}ngd som {\"a}r markant mindre {\"a}n f{\"o}nster{\"o}ppningarna i bilens kaross.}
+\item{$\bullet$}{Ut{\"o}ver detta inneh{\aa}ller urladdningen {\"a}ven extremt kortv{\aa}gig gammastr{\aa}lning ({\it gamma-ray bursts}, GRB).}
+\vfill\eject
+
+\section{Sammanfattning av vitsen med entydighetsteoremet}
+Griffiths sammanfattar p{\aa} sid.~120 (sektion 3.1.5) vitsen med hela denna exercis kring entydighet mycket precist:\numberedfootnote{``The uniqueness theorem is a license to your imagination. It doesn't matter {\it how} you come by your solution; if (a) it satisfies Laplace's equation and (b) it has the correct value on the boundaries, then it's {\it right}.''}
+\quote{``Entydighetsteoremet {\"a}r en licens till din fantasi. Det spelar ingen roll {\it hur} du finner din l{\"o}sning; om den (a) uppfyller Laplaces ekvation och (b) har korrekt v{\"a}rde p{\aa} randen, s{\aa} {\"a}r den {\it korrekt}.''}
+\noindent
+Vi kommer nu att utnyttja v{\aa}r erh{\aa}llna licens p{\aa} l{\"o}sandet av problem med hj{\"a}lp av s{\aa} kallade {\it spegelladdningar}.
+
+\section{Spegelladdningar}
+S{\aa} l{\aa}ngt har vi haft att g{\"o}ra med givna laddningar och laddningsf{\"o}rdelningar, fixt placerade i rummet. Vad h{\"a}nder om vi har ledare som till{\aa}ter laddningsf{\"o}rdelningar att relaxera till steady-state, men d{\"a}r vi inte p{\aa} rak arm vet exakt {\it hur} dessa laddningar kommer att placera sig? Vi kommer nu att visa p{\aa} ett s{\"a}tt att angripa s{\aa}dana problem, med metoden f{\"o}r {\it spegelladdningar}.
+
+Antag att vi har en punktladdning $q$ placerad p{\aa} ett avst{\aa}nd $h$ ovan ett o{\"a}ndligt och perfekt ledande plan $z=0$.
+\epsfig{figs/mirrorplane.1}\noindent
+Att planet $z=0$ {\"a}r perfekt ledande betyder att laddningar fritt kan transporteras i planet utan f{\"o}rlust, och om vi t{\"a}nker oss att laddningen $q$ {\"a}r positiv, s{\aa} inneb{\"a}r detta att positiva laddningar i planet kommer att attraheras mot origo $(x,y)=(0,0)$. I praktiken inneb{\"a}r sj{\"a}lvfallet ``transport av positiva laddningar'' att negativt laddade elektroner skyfflas undan, eller repelleras fr{\aa}n den positiva laddningen; vi se detta som att vi har en tv{\aa}dimensionell ``gas'' av fria elektroner i ytan.
+
+Rent matematiskt formulera detta problem enligt f{\"o}ljande:
+\smallskip
+\item{1.}{Vi har laddningst{\"a}theten $\rho=q\delta({\bf x}-h{\bf e}_z)$.}
+\item{2.}{Den skal{\"a}ra potentialen uppfyller $\nabla^2\phi=0$ {\"o}verallt
+  utom just i punkten ${\bf x}=h{\bf e}_z$ f{\"o}r punktladdningen.}
+\item{3.}{P{\aa} randen $z=0$ m{\aa}ste potentialen uppfylla $\phi=0$.}
+\item{4.}{P{\aa} ett avst{\aa}nd l{\aa}ngt fr{\aa}n laddningen
+  f{\"o}rv{\"a}ntar vi oss $\phi({\bf x})\to0$, f{\"o}r $|{\bf x}|\to\infty$.}
+\smallskip
+\noindent
+Utifr{\aa}n f{\"o}ljdsatsen till entydighetsteoremet f{\"o}r Poissons ekvation kan vi lita p{\aa} att {\it om vi finner en l{\"o}sning till problemet ovan, s{\aa} {\"a}r det den korrekta l{\"o}sningen, oavsett hur vi kommit fram till den.} S{\aa}, hur skall vi resonera h{\"a}r f{\"o}r att finna denna l{\"o}sning?
+
+Om vi utf{\"o}r ett litet {it gedankenexperiment} kring hur vi till att b{\"o}rja med skulle skapa en l{\"o}sning som satisfierar $\phi=0$ p{\aa} ytan $z=0$, s{\aa} kan vi se laddningen i $h{\bf e}_z$ som en k{\"a}lla till potentialen, som s{\aa} att s{\"a}ga ``lyfts'' till en viss f{\"o}rdelning i rummet $z>0$. Detta ``lyft'' kan vi f{\"o}rest{\"a}lla oss som till{\"a}mpbart p{\aa} en positiv laddning $q$, men tanke-experimentet {\"a}r sj{\"a}lvfallet lika giltigt f{\"o}r negativa laddingar. Fr{\aa}gan {\"a}r hur vi d{\aa} trycker ner denna potential s{\aa} att vi n{\aa}r randvillkoret $\phi=0$ p{\aa} $z=0$?
+
+L{\aa}t oss t{\"a}nka ``utanf{\"o}r l{\aa}dan'' och f{\"o}rest{\"a}lla oss att vi hade friheten att l{\"a}gga en laddning med motsatt tecken n{\aa}gonstans i regionen $z<0$. Genom ren symmetri b{\"o}r i s{\aa} fall en laddning av samma belopp men motsatt tecken rimligen placeras p{\aa} exakt samma avst{\aa}nd fr{\aa}n ytan, men ist{\"a}llet i negativ $z$-led, vid punkten $-{\bf e}_z$.
+Vi inser att detta skulle inneb{\"a}ra att $\phi=0$ vid $z=0$ p{\aa} grund av antisymmetrin i det nya problemet, men vi b{\"o}r undvika att f{\"o}rlita oss p{\aa} intuition s{\aa} l{\aa}t oss f{\"o}r s{\"a}kerhets skull kontrollera den resulterande potentialen. Om nu vi genom detta uppfyller potentialen p{\aa} $z=0$, s{\aa} kan vi helt sonika ta bort det ledande planet och ist{\"a}llet betrakta $z=0$ enbart som en yta som genom ``magisk konstruktion'' uppfyller just randvillkoret $\phi=0$.
+\epsfig{figs/mirrorplane-gedanken.1}\noindent
+P{\aa} planet $z=0$, om nu nu t{\"a}nker oss att vi tagit bort den perfekt ledande ytan, s{\aa} {\"a}r potentialen given fr{\aa}n de tv{\aa} laddningarna $q$ och $-q$ som
+$$
+  \phi(x,y,z=0)={{1}\over{4\pi\varepsilon_0}}\bigg(
+  {{q}\over{\sqrt{x^2+y^2+h^2}}}+{{(-q)}\over{\sqrt{x^2+y^2+h^2}}}
+  \bigg)=0,
+$$
+med andra ord har vi nu visat att randvillkoret vid $z=0$ {\"a}r uppfyllt.
+\vfill\eject
+
+\epsfig{figs/mirrorplane-gedanken-general.1}\noindent
+V{\aa}rt antagande att vi kan {\it konstruera} en l{\"o}sning genom att l{\"a}gga en {\it spegelladdning} p{\aa} motsatt sida om den perfekta ledaren\numberedfootnote{Rekapitulera att en spegel faktiskt {\"a}r just ett mer eller mindre perfekt ledande plan!} har d{\"a}rmed markant f{\"o}rst{\"a}rkts, och vi kan redan nu gissa att l{\"o}sningen skall formuleras som den potential i rummet som motsvaras av de tv{\aa} laddningarna, som
+$$
+  \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\bigg(
+  {{q}\over{\sqrt{x^2+y^2+(z-h)^2}}}+{{(-q)}\over{\sqrt{x^2+y^2+(z+h)^2}}}
+  \bigg),\qquad z\ge0.
+$$
+Med denna konstruktion uppfylls {\"a}ven randvillkoret d{\aa} ${\bf x}\to\infty$ trivialt, s{\aa} slutsatsen blir att potentialen enligt ovan faktiskt {\"a}r den korrekta l{\"o}sningen.
+
+L{\aa}t oss sammanfatta denna f{\"o}rsta {\"o}vning i spegelladdningar med att:
+\quote{{\it L{\"o}sningen $\phi({\bf x})$ till Poissons ekvation f{\"o}r en punktladdning $q$ placerad ett avst{\aa}nd $z=h$ ovanf{\"o}r ett perfekt ledande plan $z=0$ ges som frirymdl{\"o}sningen med en virtuell spegelladdning $-q$ placerad p{\aa} samma avst{\aa}nd bakom planet, vid $z=-h$.}}
+\noindent
+Det {\"a}r v{\"a}rt att notera hur fundamentalt entydighetsteoremet (f{\"o}r Laplaces ekvation med $\rho=0$) och dess f{\"o}ljdsats (f{\"o}r Poissons ekvation med $\rho\ne0$) {\"a}r f{\"o}r konstruktionen med spegelladdningar.
+
+\section{Sammanfattning}
+\item{$\bullet$}{L{\"o}sningar till Laplaces ekvation $\nabla^2\phi=0$
+  saknar lokala extrempunkter. Extrempunkter till $\phi$ finns endast
+  p{\aa} randen $S$ till den volym $V$ i vilket Laplace ekvation g{\"a}ller.
+  [Teorem~I]}
+\item{$\bullet$}{Genom att anv{\"a}nda denna information kan vi visa
+  att {\it l{\"o}sningen till Laplaces ekvation $\nabla^2\phi=0$ i en
+  godtycklig volym $V$ {\"a}r unikt (entydigt) best{\"a}md om potentialen
+  $\phi$ {\"a}r specificerad p{\aa} randen $S$ till volymen.}
+  [Teorem~II, {\it First uniqueness theorem} enligt Griffiths]}
+\item{$\bullet$}{Detta betyder i sin tur att om vi finner en l{\"o}sning
+  till Laplace ekvation, {\it s{\aa} {\"a}r detta den enda l{\"o}sningen,
+  oavsett hur vi funnit eller konstruerat l{\"o}sningen s{\aa} l{\"a}nge
+  som l{\"o}sningen uppfyller de f{\"o}reskrivna randvillkoren}.
+  Detta argument {\"a}r sj{\"a}lva k{\"a}rnan i hur vi motiverar
+  anv{\"a}ndandet av spegelladdningar i l{\"o}sningen av potentialproblem,
+  med n{\"a}rvaro av ledare med fria laddningar.}
+\item{$\bullet$}{``Entydighetsteoremet {\"a}r en licens till din fantasi.
+  Det spelar ingen roll {\it hur} du finner din l{\"o}sning; om den
+  (a) uppfyller Laplaces (eller Poissons!) ekvation och (b) har korrekt
+  v{\"a}rde p{\aa} randen, s{\aa} {\"a}r den {\it korrekt}.''}
+\item{$\bullet$}{[Spegling av laddning i plan] L{\"o}sningen $\phi({\bf x})$ till
+  Poissons ekvation f{\"o}r en punktladdning $q$ placerad ett avst{\aa}nd
+  $z=h$ ovanf{\"o}r ett perfekt ledande plan $z=0$ ges som frirymdl{\"o}sningen
+  med en virtuell spegelladdning $-q$ placerad p{\aa} samma avst{\aa}nd bakom
+  planet, vid $z=-h$.}
+
+
+
+
+\bye
