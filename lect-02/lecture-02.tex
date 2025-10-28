@@ -56,7 +56,7 @@
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip\noindent}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{2}
 \centerline{\twelvesc Elektrisk potential och till{\"a}mpningar av Gauss lag}
@@ -65,10 +65,7 @@
 
 \section{Till{\"a}mpning av Gauss lag - Rak linjeladdning}
 Antag att vi vill ber{\"a}kna den elektriska f{\"a}ltstyrkan (``det elektriska f{\"a}ltet'') p{\aa} avst{\aa}ndet $r$ vinkelr{\"a}tt fr{\aa}n fr{\aa}n en laddning f{\"o}rdelad p{\aa} en o{\"a}ndlig och rak linje, med linjeladdningst{\"a}theten $\lambda$ (${\rm C}/{\rm m}$). Ett s{\"a}tt att attackera detta problem vore att betrakta varje liten del $dl$ av linjeladdningen som en punktladdning $dq=\lambda dl$ och integrera alla delbidrag genom Coulombs lag, f{\"o}rhoppningsvis med konvergens trots att vi integrerar fr{\aa}n minus till plus o{\"a}ndligheten.\numberedfootnote{P{\aa} f{\"o}rhand vet vi att detta kommer att vara giltigt, d{\aa} vi vet att det elektriska f{\"a}ltet avklingar med kvadraten p{\aa} avst{\aa}ndet.} Att utf{\"o}ra denna integral {\"a}r f{\"o}rvisso m{\"o}jligt, men genom att anv{\"a}nda Gauss lag applicerad p{\aa} symmetrin i detta specifika problem kan vi komma fram till l{\"o}sningen v{\"a}sentligt mycket enklare.
-\bigskip
-\centerline{\epsfbox{figs/linecharge.1}}
-\medskip
-\noindent
+\epsfig{figs/linecharge.1}\noindent
 Vi placerar en ``gaussisk cylinder'' av radie $r$ och l{\"a}ngd $l$ centrerad runt linjeladdningen och antar vidare att linjeladdningen inte kommer att ge n{\aa}got nettobidrag av f{\"a}ltlinjer genom {\"a}ndytorna av cylindern. Gauss lag ger d{\aa} direkt, utan att beh{\"o}va l{\"o}sa n{\aa}gon integral, att
 $$
   \oiint_A {\bf E}\cdot d{\bf A}
@@ -114,10 +111,7 @@ $$
 \section{Till{\"a}mpning av Gauss lag - Plan ytladdning}
 N{\"a}sta exempel p{\aa} till{\"a}mpning av Gauss lag g{\"a}ller att best{\"a}mma det elektriska f{\"a}ltet p{\aa} avst{\aa}ndet $a$ fr{\aa}n en plan yta, uppb{\"a}rande laddningst{\"a}theten $\sigma$ (${\rm C}/{\rm m}^2$), med m{\aa}let att best{\"a}mma det elektriska f{\"a}ltet ut fr{\aa}n denna yta. Vi utnyttjar planariteten genom att l{\"a}gga en plan-parallell ``gaussisk burk'' inneslutande en del av ytan. Om vi konstruerar burken s{\aa} att de planparallella ytorna omsluter ytan med samma avst{\aa}nd till ytan, s{\aa} kan vi dessutom utnyttja {\"o}msesidig symmetri mellan dessa.
 I figuren {\"a}r denna ``gaussiska burk'' utritad som en cylinder, men formen av burken {\"a}r betydelsel{\"o}s s{\aa} l{\"a}ngs som locket och botten {\"a}r planparallella mot ytan.\numberedfootnote{Griffiths anv{\"a}nder i Exempel~2.5, sid. 74, en rektangul{\"a}r ``Gaussian pillbox'' f{\"o}r samma uppgift.}
-\bigskip
-\centerline{\epsfbox{figs/surfcharge.1}}
-\medskip
-\noindent
+\epsfig{figs/surfcharge.1}\noindent
 P{\aa} samma s{\"a}tt som f{\"o}r linjeladdningen i f{\"o}reg{\aa}ende exempel, ger Gauss lag direkt, utan att beh{\"o}va l{\"o}sa n{\aa}gon integral, att
 $$
   \oiint_A {\bf E}\cdot d{\bf A}
@@ -147,10 +141,7 @@ Som vi har sett kan det statiska elektriska f{\"a}ltet r{\"a}knas fram genom att
 Betrakta en punktladdning, som vi f{\"o}r enkelhets skull nu placerar i origo ${\bf x}'={\bf 0}$ f{\"o}r observationssystemet.
 Vi kommer i denna analys att utnytta Stokes teorem applicerat p{\aa} en linjeintegral f{\"o}r en godtycklig trajektoria runt om i det statiska elektriska f{\"a}lt som omger punktladdningen.
 Redan nu kan vi passa p{\aa} att mentalt associera denna situation med en analogi med massa och gravitation.
-\bigskip
-\centerline{\epsfbox{figs/lineintegral.1}}
-\medskip
-\noindent
+\epsfig{figs/lineintegral.1}\noindent
 Med punktladdningen $q'$ placerad i origo har vi det statiska elektriska f{\"a}ltet uttryckt i sf{\"a}riska koordinater som
 $$
   {\bf E}(r) % ={{q}\over{4\pi\varepsilon_0}}{{{\bf x}}\over{|{\bf x}|^3}}
@@ -256,10 +247,7 @@ $$
 
 \section{Arbete och upplagrad energi vid f{\"o}rflyttning av elektriska laddningar}
 Med definitionen av den elektrostatiska skal{\"a}ra potentialen i bagaget betraktar vi nu en testladdning $q$ som f{\"o}rflyttas\numberedfootnote{Notera sj{\"a}lvmots{\"a}gelsen i detta, i och med att vi s{\aa} fort vi f{\"o}rflyttar en laddning inte l{\"a}ngre har att g{\"o}ra med n{\aa}gon ``elektrostatik'' hos stillast{\aa}ende laddningar; vi antar h{\"a}r dock att f{\"o}rflyttningen sker s{\aa} pass l{\aa}ngsamt (adiabatiskt) att Lorentz-kraften p{\aa} laddningen kan f{\"o}rsummas, och att vi d{\"a}rmed {\"a}ven f{\"o}rsummar eventuella genererade magnetf{\"a}lt genom f{\"o}rflyttningen, som de facto definierar en {\it str{\"o}m} i rummet.} i ett elektrostatiskt f{\"a}lt ${\bf E}({\bf x})$, fr{\aa}n en punkt ${\bf x}_a$ till en punkt ${\bf x}_b$ l{\"a}ngs en trajektoria $\Gamma$.
-\bigskip
-\centerline{\epsfbox{figs/potential.1}}
-\medskip
-\noindent
+\epsfig{figs/potential.1}\noindent
 Kraften som verkar p{\aa} laddningen vid en given punkt ${\bf x}$ l{\"a}ngs trajektorian {\"a}r
 $$
   {\bf F}({\bf x})=q{\bf E}({\bf x}),
