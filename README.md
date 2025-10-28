@@ -12,6 +12,11 @@ The directory contains the following subdirectories:
 `lect-02` <i>Elektrostatisk potential och tillämpningar av Gauss lag</i>
          (<i>Electrostatic potential and applications of Gauss' law</i>)
 
+`lect-03` <i>Entydighet för lösningar till potentialproblem, randvillkor
+             och spegelladdningar</i>
+         (<i>The uniqueness theorem, boundary conditions and method of images
+	     for the scalar potential</i>)
+
 `lect-06` <i>Elektriska fält i material</i>
          (<i>Electric fields in materials</i>)
 
