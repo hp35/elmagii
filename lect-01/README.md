@@ -5,6 +5,12 @@ superpositionsprincipen och Gauss lag</i> (English: <i> Electrostatics, the
 superposition principle and Gauss' law</i>), including all TeX code (plain
 TeX, no LaTeX), MetaPost figures and supporting material.
 
+## Primary files of interest
+
+[lecture-01.tex](lecture-01.tex) - Plain TeX source code for the lecture.
+
+[lecture-01.pdf](lecture-01.pdf) - Compiled document containing the Lecture Notes.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
