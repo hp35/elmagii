@@ -35,6 +35,10 @@ The directory contains the following subdirectories:
 [`lect-11`](lect-11) <i>Retarderade potentialer som lösningar till Maxwells ekvationer</i>
          (<i>Retarded potentials as solutions to Maxwell's equations</i>)
 
+## Contributing
+
+Reports on errors, inconsistencies or improvements in general are most welcome!
+
 ## Compiling the TeX code and figures
 
 In each directory, the included `Makefile` can be used to regenerate the
