@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2025 under GPL 3.0, Fredrik Jonsson
 #
-LECTURES = lect-01 lect-02 lect-03 lect-06 lect-07 lect-08 lect-09 lect-10 lect-11
+LECTURES = lect-01 lect-02 lect-03 lect-04 lect-06 lect-07 lect-08 lect-09 lect-10 lect-11
 
 all:
 	for lecture in $(LECTURES) ; do\
