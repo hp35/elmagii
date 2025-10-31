@@ -1,9 +1,9 @@
-# Lecture 1 - Electrostatics, the superposition principle and Gauss' law
+# Lecture 1 - Electrostatics and the superposition principle
 
-This directory contains the Lecture Notes for Lecture 1, <i>Elektrostatik,
-superpositionsprincipen och Gauss lag</i> (English: <i> Electrostatics, the
-superposition principle and Gauss' law</i>), including all TeX code (plain
-TeX, no LaTeX), MetaPost figures and supporting material.
+This directory contains the Lecture Notes for Lecture 1, <i>Elektrostatik och
+superpositionsprincipen</i> (English: <i> Electrostatics and the superposition
+principle</i>), including all TeX code (plain TeX, no LaTeX), MetaPost figures
+and supporting material.
 
 ## Primary files of interest
 
