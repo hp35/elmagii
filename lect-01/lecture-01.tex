@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-01/lecture-01.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-01/
-% Last change: October 6, 2025
+% Last change: October 31, 2025
 %
 % Lecture No 1 in the course ``Elektromagnetism II, 1TE626 (2025)'',
 % held November 3, 2025, at Uppsala University, Sweden.
@@ -65,32 +65,47 @@
 \centerline{Fredrik Jonsson, Uppsala Universitet, 3 november 2025}
 \vskip24pt
 
-\section{Elektrostatik}
+\section{Introduktion till elektrostatik}
 Vi kommer i denna f{\"o}rsta f{\"o}rel{\"a}sning\numberedfootnote{Detta
-  avsnitt har h{\"o}gst sannolikt ett visst {\"o}verlapp med tidigare
-  kurser; anledningen till att vi trots allt v{\"a}ljer att inkludera
-  fundamentan av v{\"a}xelverkan mellan laddningar {\"a}r att notation
-  och beteckningar kommer att {\aa}terkomma frekvent genom kursen, samt
-  att vissa detaljer som superpositionsprincipen kommer att vara essentiella
-  f{\"o}r att kunna tillgodog{\"o}ra sig mer avancerade till{\"a}mpningar
-  fram{\"o}ver i kursen.}
-att behandla  elektrostatik, som {\"a}r l{\"a}ran om hur {\it station{\"a}ra}
-elektriska laddningar v{\"a}xelverkar.
+  avsnitt har sannolikt ett visst {\"o}verlapp med tidigare kurser;
+  anledningen till att vi trots allt v{\"a}ljer att inkludera fundamentan
+  av v{\"a}xelverkan mellan laddningar {\"a}r att notation och beteckningar
+  kommer att {\aa}terkomma frekvent genom kursen, samt att vissa detaljer
+  som superpositionsprincipen {\"a}r basen f{\"o}r senare, mer avancerade
+  till{\"a}mpningar.}
+att behandla  {\it elektrostatik}, som {\"a}r l{\"a}ran om hur
+{\it station{\"a}ra} elektriska laddningar v{\"a}xelverkar.
 Vi kan redan nu passa p{\aa} att sammanfatta begreppen elektrostatik och magnetostatik enligt f{\"o}ljande:
 \medskip
 \item{$\bullet$}{Station{\"a}ra laddningar $\Rightarrow$ Konstanta elektriska f{\"a}lt (elektrostatik)}
 \item{$\bullet$}{Konstanta str{\"o}mmar $\Rightarrow$ Konstanta magnetiska f{\"a}lt (magnetostatik)}
-\medskip
-\noindent
+
+\section{Historik}
+Elektrostatikens historik kan s{\"a}gas ha b{\"o}rjat med ``de gamla grekerna'', som observerade att b{\"a}rnsten som gnuggades med skinn efter{\aa}t attraherade l{\"a}tta objekt som damm eller h{\aa}rstr{\aa}n. Detta fenomen d{\"o}ptes till ``elektricitet'' fr{\aa}n det gammalgrekiska (klassiskt grekiska) ordet f{\"o}r b{\"a}rnsten, ``elektron''.\numberedfootnote{$\eta\lambda\varepsilon\kern-.4pt\kappa\tau\kern-1.4pt\rho o$; fr{\aa}n klassisk grekiska $\eta\lambda\varepsilon\kern-.4pt\kappa\tau\kern-1.4pt\rho o\nu$ (elektron, ``b{\"a}rnsten'').
+%\par{\tt https://en.wiktionary.org/wiki/\%CE\%AE\%CE\%BB\%CE\%B5\%CE\%BA\%CF\%84\%CF\%81\%CE\%BF\#Greek}
+} Under 1600- och 1700-talen gjordes framsteg prim{\"a}rt i och med William Gilberts {\it On Magnetism} (1600), d{\"a}r elektrisk attraktionskraft separerades fr{\aa}n magnetism, samt Fran\c{c}ois de Cisternay du Fays\numberedfootnote{Vilket namn!} (1730) uppt{\"a}ckt av {\it tv{\aa} typer} av laddning, ``vitreous'' (``glasaktig'', associerat med att den uppstod d{\aa} glas gnidits med silke) och ``resinous'' (``k{\aa}daktig'', ``hartsartad'', associerat med att den uppstod d{\aa} harts eller b{\"a}rnsten gnidits med p{\"a}ls).
+
+Benjamin Franklin utf{\"o}rde under {\aa}ren 1747--1749 experiment f{\"o}r att visa p{\aa} ``en-v{\"a}tske\-hypo\-tesen'', d{\"a}r han argumenterade f{\"o}r att du Fays ``vitreous och resinuous'' dubbel-v{\"a}tsketori var felaktig och att det bara fanns en typ av ``elektrisk v{\"a}tska'', och att alla elektrostatiska effekter kunde sp{\aa}ras till ett {\"o}verfl{\"o}d respektive underskott av denna ``v{\"a}tska''. Franklin betecknade dessa som {\it positivt} ({\"o}verfl{\"o}d) respektive {\it negativt} (underskott) av elektrisk v{\"a}tska, termer som fortfarande idag lever kvar f{\"o}r att beteckna laddningens polaritet.
+
+Charles-Augustin de Coulomb f{\"o}rtj{\"a}nar ett eget kapitel i elektrostatikens historia, i och med publiceringen av hans {\it Second M\'emoire sur l'\'Electricit\'e et le Magn\'etisme} [{\it Histoire de l'Acad\'emie Royale des Sciences}, sid.~578--611 (1785)].\numberedfootnote{{\tt https://books.google.se/books?id=by5EAAAAcAAJ\&pg=PA578}} I denna publikation, p{\aa} sidan 579, fastst{\"a}lls det f{\"o}r f{\"o}rsta g{\aa}ngen att den attraktiva kraften mellan tv{\aa} motsatt laddade sf{\"a}rer {\"a}r proportionell mot produkten av laddningarna p{\aa} sf{\"a}rerna, samt inverst proportionellt mot kvadraten p{\aa} avst{\aa}ndet mellan sf{\"a}rerna;\numberedfootnote{Coulombs lag var sj{\"a}lvfallet ej fastslagen i moderna enheter i denna artikel; SI-systemet skulle inte komma att tr{\"a}da i kraft f{\"o}rr{\"a}n 1954!} med andra ord Coulombs lag s{\aa} som vi idag k{\"a}nner den, och som {\"a}r den prim{\"a}ra basen f{\"o}r {\"a}mnet f{\"o}r denna f{\"o}rel{\"a}sning.
+\vfill\eject
+
+\section{Coulombs lag f{\"o}r punktladdningar}
+\epsfig{figs/coulomb.1}\noindent
 Som den mest fundamentala byggstenen i elektrostatiken har vi att tv{\aa} punktladdningar $q$ och $q'$, r{\"a}knade med sina respektive tecken f{\"o}r positiv eller negativ laddning och placerade i respektive {\it observationspunkten} ${\bf x}$ och {\it k{\"a}llpunkten} ${\bf x}'$, attraherar eller repellerar varandra med en kraft ${\bf F}$ genom Coulombs lag\numberedfootnote{Griffiths Ekv.~(2.1), sid.~60; laddningen i observationspunkten betecknas som ``test charge''. Observera ocks{\aa} Griffiths lite udda stil i notationen av ``${\bf x}-{\bf x}'$'' som ``scriptat ${\bf x}$'' (se Griffiths Ekv.~(2.2) p{\aa} sid.~60. Den notation som Griffiths anv{\"a}nder {\"a}r lite olycklig i det att tolkningen av en ortsvektor ${\bf x}$ d{\"a}rmed blir beroende av vilken stil p{\aa} typsnittet som anv{\"a}nts; i denna f{\"o}rel{\"a}sningsserie kommer vi att helt undvika denna f{\"o}rbryllande notation och ist{\"a}llet genomg{\aa}ende att i klartext skriva ut ``${\bf x}-{\bf x}'$''.}
 $$
   {\bf F}={{1}\over{4\pi\varepsilon_0}}\underbrace{
      {{q q'}\over{|{\bf x}-{\bf x}'|^3}}({\bf x}-{\bf x}')
   }_{\sim O(1/|{\bf x}-{\bf x}'|^2)}
 $$
-d{\"a}r $\varepsilon_0\approx8.854\times10^{12}\ {\rm F}/{\rm m}$ {\"a}r konstanten f{\"o}r den {\it elektriska permittiviteten i vakuum}, eller kort och gott {\it vakuumpermittiviteten}.
-\epsfig{figs/coulomb.1}\noindent
-Om vi ist{\"a}llet f{\"o}r en enskild punktladdning vid k{\"a}llpunkten betraktar ett system av $N$ laddningar $q'_k$ vid respektive positioner ${\bf x}'_k$ (med prim f{\"o}r konsekvent notation f{\"o}r k{\"a}llpunkter), {\"a}r den totala kraften som verkar p{\aa} laddningen $q$ vid observationspunkten uppenbarligen
+d{\"a}r
+$$
+  \varepsilon_0\approx8.854\times10^{12}\ {\rm F}/{\rm m}
+$$
+{\"a}r konstanten f{\"o}r den {\it elektriska permittiviteten i vakuum}, eller
+kort och gott {\it vakuumpermittiviteten}.
+
+Om vi ist{\"a}llet f{\"o}r en enskild punktladdning vid k{\"a}llpunkten betraktar ett {\it system} av $N$ ladd\-ningar $q'_k$ vid respektive positioner ${\bf x}'_k$ (med prim f{\"o}r konsekvent notation f{\"o}r k{\"a}llpunkter), {\"a}r den totala kraften som verkar p{\aa} laddningen $q$ vid observationspunkten uppenbarligen
 $$
   \eqalign{
   {\bf F}&=\sum^N_{k=1} {\bf F}_k\cr
@@ -114,7 +129,6 @@ Ett par observationer kring det elektriska f{\"a}ltet:
 \item{$\bullet$}{Denna m{\"o}jlighet att addera individuella del-l{\"o}sningar till en l{\"o}sning f{\"o}r det totala problemet brukar vi beteckna med {\it superpositionsprincipen}, vilken generellt endast {\"a}r giltig f{\"o}r {\it linj{\"a}ra problem}.}
 \item{$\bullet$}{I detta antagande ligger implicit antagandet om att samtliga laddningar i problemet har fixa positioner som inte {\"a}ndras genom n{\"a}rvaro av andra laddningar. Vi kommer senare i kursen att se hur exempelvis ytladdningar p{\aa} ledande material justeras utifr{\aa}n elektrostatiken till att bilda f{\"o}rdelningar beroende p{\aa} externa faktorer (externa laddningar); i dessa fall {\"a}r dock den station{\"a}ra l{\"o}sningen i {\it steady-state} fortfarande giltig under superpositionsprincipen.}
 
-
 \section{Superpositionsprincipen}
 Att separat framtagna elektriska f{\"a}lt kan ses som och adderas som komponenter av ett totalt elektriskt f{\"a}lt {\"a}r basen i vad vi kallar {\it superpositionsprincipen}\numberedfootnote{Generellt g{\"a}ller det under superposition att vi rent matematiskt har att g{\"o}ra med en funktion $F$ som har egenskaperna att $F(x+y)=F(x)+F(y)$ (additivitet) samt att $F(ax)=aF(x)$ (homogenitet). Ordet {\it superposition} h{\"a}rr{\"o}r fr{\aa}n senlatinska {\it superpositionem}, med betydelse {\it att placera {\"o}ver}. Ordet kommer sig av {\it super} (``ovanf{\"o}r'') och {\it ponere} (``att placera'').}.
 Vi kan illustrera detta genom att godtyckligt dela upp det elektriska f{\"a}lt vi nyss tog fram i tv{\aa} delar, med tv{\aa} separata grupper av de $N$ k{\"a}lladdningarna, enligt
@@ -130,7 +144,24 @@ Med andra ord, s{\aa} l{\"a}nge som inte de inb{\"o}rdes positionerna eller ladd
 
 \section{Vad {\"a}r egentligen po{\"a}ngen med att anv{\"a}nda elektriska f{\"a}lt?}
 N{\"a}r vi nu framst{\"a}llt tre olika representationer f{\"o}r att behandla elektrostatiska f{\"a}ltproblem, s{\aa} infinner sig naturligtvis fr{\aa}gan varf{\"o}r vi inte bara kan n{\"o}ja oss med Coulombs lag? Denna ger ju direkt kraften, s{\aa} vad {\"a}r {\"o}verhuvud vitsen med att (till synes) bara komplicera saker och ting genom att inf{\"o}ra elektriska f{\"a}lt och potentialer?
-\vfill\eject
+
+L{\aa}t oss med anledning av denna retoriska fr{\aa}ga sammanfatta ett par anledningar till varf{\"o}r konceptet med f{\"a}lt underl{\"a}ttar f{\"o}r oss.\numberedfootnote{Fundera g{\"a}rna igenom argumenten och kom p{\aa} fler exempel!}
+
+\subsection{F{\"a}ltkonceptet eliminerar ``verkan p{\aa} distans'' ({\it action at a distance}).}
+\item{$\bullet$}{Enbart utifr{\aa}n Coulombs lag s{\aa} som den h{\"a}r fastst{\"a}llts, s{\aa} verkar varje enskild laddning p{\aa} alla andra laddningar momentant (direkt utan n{\aa}gon f{\"o}rdr{\"o}jning) oavsett avst{\aa}nd.}
+\item{$\bullet$}{F{\"a}ltmodellen till{\aa}ter oss att l{\aa}ta en laddnings p{\aa}verkan att propagera genom rummet, med en fix hastighet som normalt {\"a}r ljushastigheten eller denna nedskalad med motsvarande brytningsindex f{\"o}r mediet i rummet.}
+
+\subsection{Lokalitet och kausalitet}
+\item{$\bullet$}{Vi kan med f{\"a}ltkonceptet analysera kraften p{\aa} en laddning {\it lokalt} vid punkten d{\"a}r den {\"a}r placerad, utan att beh{\"o}va bry oss om sj{\"a}lva k{\"a}llan. (Detta n{\"a}r vi v{\"a}l har ber{\"a}knat sj{\"a}lva f{\"a}ltet, sj{\"a}lvfallet!)}
+\item{$\bullet$}{Detta g{\"o}r f{\"a}ltkonceptet kompatibelt med relativitetsteori och modern f{\"a}ltteori.}
+
+\subsection{F{\"o}renkling av m{\aa}ngkropps-problem}
+\item{$\bullet$}{Med $N$ laddningar blir ber{\"a}kningen av alla parvisa krafter som verkar i systemet snabbt mycket omst{\"a}ndigt, med $N(N-1)$ v{\"a}xelverkningar.}
+\item{$\bullet$}{Med f{\"a}ltkonceptet kan vi ber{\"a}kna f{\"a}ltet fr{\aa}n de $N$ laddningarna en g{\aa}ng f{\"o}r alla (med superpositionsprincipen!) och d{\"a}refter ta fram kraften p{\aa} varje laddning $q_k$ som ${\bf F}_k=q_k{\bf E}$.}
+
+\subsection{F{\"a}lt kan existera oberoende av laddning}
+\item{$\bullet$}{F{\"a}lt kan existera och breda ut sig utan (direkt) n{\"a}rvaro av laddning, till exempel elektromagnetiska v{\aa}gor.}
+\item{$\bullet$}{Detta visar p{\aa} att f{\"a}lt {\"a}r inte bara ett bekv{\"a}mt matematiskt verktyg, de har en fysikalisk realitet bortom enbart varandes ett s{\"a}tt att dela upp Coulombs kraftlag i faktorer.}
 
 \section{Gauss lag h{\"a}rledd i fyra steg}
 Vi skulle h{\"a}r i princip bara kunna h{\"a}nvisa till den generella formen av Gauss lag, men skulle d{\aa} riskera att missa n{\aa}gra intressanta po{\"a}nger. L{\aa}t oss d{\"a}rf{\"o}r ta detta fr{\aa}n grunden, med ut\-g{\aa}ngs\-punkt i Coulombs lag, i fyra enkla steg som f{\"o}rhoppningsvis ger oss en djupare fysikalisk f{\"o}rst{\aa}else f{\"o}r vad Gauss lag inneb{\"a}r.
@@ -218,7 +249,7 @@ $$
        =\big\{
           \hbox{ Steg 3: ``${{1}\over{\varepsilon_0}}\sum^N_{k=1} dq'_k$'' }
         \big\}
-       ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x}')\,dV'.
+       ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x}')\,dV'
        =q_{\rm tot}/\varepsilon_0.
   }
 $$
@@ -287,13 +318,46 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
 
 \section{Sammanfattning av F{\"o}rel{\"a}sning~1 -- Elektrostatik och superpositionsprincipen}
 \item{$\bullet$}{I elektrostatiken, och {\"a}ven senare i elektrodynamiken, har vi tre s{\"a}tt att betrakta v{\"a}xelverkan mellan laddningar: Som krafter mellan laddningar, som f{\"a}lt och som potentialer. Mer om potentialer i kommande f{\"o}rel{\"a}sningar.}
+\item{$\bullet$}{Coulombs kraftlag f{\"o}r punktladdningar,
+$$
+  {\bf F}
+    ={{q q'}\over{4\pi\varepsilon_0}}
+      {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
+    ={{q q'}\over{4\pi\varepsilon_0 r^2}}{\bf e}_r
+$$
+d{\"a}r
+$$
+  \varepsilon_0\approx8.854\times10^{12}\ {\rm F}/{\rm m}
+$$
+{\"a}r konstanten f{\"o}r den {\it elektriska permittiviteten i vakuum}, eller
+kort och gott {\it vakuumpermittiviteten}.}
+\item{$\bullet$}{Det elektriska f{\"a}ltet fr{\aa}n ett system av punktladdningar $q'_k$ placerade i k{\"a}llpunkterna ${\bf x}'_k$ {\"a}r
+$$
+  {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
+     q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}}.
+$$
+}
 \item{$\bullet$}{Superpositionsprincipen inneb{\"a}r att vi kan addera separata l{\"o}sningar f{\"o}r elektriska f{\"a}lt och fl{\"o}den fr{\aa}n separata laddningar och laddningsf{\"o}rdelningar till en l{\"o}sning f{\"o}r det totala f{\"a}ltet och fl{\"o}det. Superpositionsprincipen g{\"a}ller enbart f{\"o}r linj{\"a}ra problem, i vilka inga potenser av det elektriska f{\"a}ltet finns i de grundl{\"a}ggande ekvationerna.}
+\item{$\bullet$}{F{\"a}lt kan existera och breda ut sig {\it utan (direkt) n{\"a}rvaro av laddning}, till exempel elektromagnetiska v{\aa}gor. Detta visar p{\aa} att f{\"a}lt {\"a}r inte bara ett bekv{\"a}mt matematiskt verktyg, de har en fysikalisk realitet bortom enbart varandes ett s{\"a}tt att dela upp Coulombs kraftlag i faktorer.}
+\item{$\bullet$}{Punktladdning $q$ (${\rm C}$),
+Linjeladdning $\lambda$ (${\rm C}/{\rm m}$),
+ytladdning $\sigma$ (${\rm C}/{\rm m}^2$),
+volymladdning $\rho$ (${\rm C}/{\rm m}^3$).}
 \item{$\bullet$}{Gauss lag p{\aa} integral- respektive differentialform:
 $$
   \oiint_A {\bf E}\cdot d{\bf A}
      ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV
 \qquad\Leftrightarrow\qquad
-\nabla\cdot{\bf E}={{\rho({\bf x})}\over{\varepsilon_0}}
+\nabla\cdot{\bf E}={{\rho({\bf x})}\over{\varepsilon_0}}.
 $$}
+\item{$\bullet$}{Tolkningen av Gauss lag {\"a}r att {\it det elektriska fl{\"o}det $\Phi_{\rm E}$ ut genom en sluten yta $S$ ges som den av ytan inneslutna laddningen $q_{\rm tot}$ dividerad med vakuumpermittiviteten},
+$$
+  \Phi_{\rm E}
+     \equiv\oiint_A {\bf E}({\bf x})\cdot d{\bf A}
+     ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x}')\,dV'
+     \equiv q_{\rm tot}/\varepsilon_0.
+$$
+}
+
 
 \bye
