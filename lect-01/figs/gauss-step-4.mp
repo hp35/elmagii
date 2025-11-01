@@ -51,7 +51,7 @@ beginfig(1);
     rotated psi shifted (rx/2,ry/2);
   label.lrt(btex \vbox{
       \hbox{$d{\bf E}({\bf x})$ (bidrag vid observationspunkt ${\bf x}$}
-      \hbox{p{\aa} slutna ytan $A$ fr{\aa}n infinitesimal}
+      \hbox{p{\aa} slutna ytan $S$ fr{\aa}n infinitesimal}
       \hbox{laddning $dq'$ vid k{\"a}llposition ${\bf x}'$)}} etex, (rx+2u,ry));
 
   %
@@ -72,7 +72,7 @@ beginfig(1);
   % Some explanatory labels.
   %
   label.llft(btex Labsystem etex,(xo-5u,yo+5u));
-  label.ulft(btex Sluten yta $A$ etex,(-26u,39u));
+  label.ulft(btex Sluten yta $S$ etex,(-26u,39u));
   label.ulft(btex $\rho({\bf x})$ etex,(-12u,20u));
   label.ulft(btex Volym $V$ etex,(-11u,27u));
 

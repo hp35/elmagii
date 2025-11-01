@@ -46,8 +46,8 @@ beginfig(1);
     rotated psi shifted (rx/2,ry/2);
   label.lrt(btex \vbox{
       \hbox{${\bf E}_k({\bf x})$ (bidrag vid observationspunkt ${\bf x}$}
-      \hbox{p{\aa} slutna ytan $A$ fr{\aa}n punktladdning}
-      \hbox{$q'_k$ vid k{\"a}llposition ${\bf x}'_k$)}} etex, (rx+2u,ry));
+      \hbox{p{\aa} slutna ytan $S$ fr{\aa}n punktladdning $q'_k$}
+      \hbox{vid k{\"a}llposition ${\bf x}'_k$)}} etex, (rx+2u,ry));
 
   xc := -19u;
   yc := 30u;
@@ -87,7 +87,7 @@ beginfig(1);
   % Some explanatory labels.
   %
   label.llft(btex Labsystem etex,(xo-5u,yo+5u));
-  label.ulft(btex Sluten yta $A$ etex,(-26u,39u));
+  label.ulft(btex Sluten yta $S$ etex,(-26u,39u));
 
   %
   % Normal vector to the enclosing surface.

@@ -61,7 +61,7 @@ beginfig(1);
   drawarrow (0u,0u)--(rx,ry);
   label.top(btex ${\bf x}-{\bf x}'$ etex, (0u,0u))
     rotated psi shifted (rx/2,ry/2);
-  label.rt(btex ${\bf E}({\bf x})$ (observationspunkt p{\aa} $A$) etex, (rx,ry));
+  label.rt(btex ${\bf E}({\bf x})$ (observationspunkt p{\aa} $S$) etex, (rx,ry));
 
   %
   % Draw coordinate system.
@@ -81,7 +81,7 @@ beginfig(1);
   % Some explanatory labels.
   %
   label.llft(btex Labsystem etex,(xo-5u,yo+5u));
-  label.ulft(btex Sluten yta $A$ etex,(-26u,39u));
+  label.ulft(btex Sluten yta $S$ etex,(-26u,39u));
   label.urt(btex Elektriskt f{\"a}lt etex,(18u,20u));
 
   %

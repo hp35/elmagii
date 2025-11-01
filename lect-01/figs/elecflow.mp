@@ -64,13 +64,13 @@ beginfig(1);
   label.ulft(btex ${\bf n}$ etex,(-18u,4u));
 
   %
-  % Definition of the electric flow.
+  % Definition of the electric flow through the surface S.
   %
   label.top(btex ${\bf E}({\bf x})$ etex, (-9u,22u));
-  label.lft(btex $A$ etex,(-18u,-4u));
+  label.lft(btex $S$ etex,(-18u,-4u));
   label.rt(btex
       \def\iint{\mathop{\int\kern-8pt\int}}
-	$\displaystyle{\bf\Phi}_{\rm E}=\iint_A{\bf E}({\bf x})\cdot d{\bf A}$
+	$\displaystyle{\bf\Phi}_{\rm E}=\iint_S{\bf E}({\bf x})\cdot d{\bf A}$
 	etex,(30u,14u));
     draw (30u,14u){dir 190}..{dir 190}(8u,-1u);
 endfig;
