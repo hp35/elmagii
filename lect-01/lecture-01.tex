@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-01/lecture-01.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-01/
-% Last change: October 31, 2025
+% Last change: November 2, 2025
 %
 % Lecture No 1 in the course ``Elektromagnetism II, 1TE626 (2025)'',
 % held November 3, 2025, at Uppsala University, Sweden.
@@ -83,7 +83,7 @@ magnetostatik enligt f{\"o}ljande:
 \item{$\bullet$}{Station{\"a}ra, tidsoberoende str{\"o}mmar
   $\Rightarrow$ Konstanta magnetiska f{\"a}lt (magneto{\it statik})}
 
-\section{Historik -- Elektrostatik fr{\aa}n de gala grekerna till Coulomb}
+\section{Historik -- Elektrostatik fr{\aa}n de gamla grekerna till Coulomb}
 Elektrostatikens historik kan s{\"a}gas ha b{\"o}rjat med ``de gamla grekerna'',
 som observerade att b{\"a}rnsten som gnuggades med skinn efter{\aa}t attraherade
 l{\"a}tta objekt som damm eller h{\aa}rstr{\aa}n. Detta fenomen d{\"o}ptes till
@@ -308,6 +308,28 @@ komponenterna separat och d{\"a}refter sammanfoga dessa till en total
 l{\"o}sning f{\"o}r det elektriska f{\"a}ltet}. Denna superpositionsprincip
 g{\"a}ller generellt f{\"o}r s{\aa} kallade {\it linj{\"a}ra problem}.
 
+\section{Coulombintegralen}
+S{\aa} l{\aa}ngt har vi endask betraktat system av punktladdningar, men med
+superpositionsprincipen i beaktande {\"a}r naturligtvis steget minimalt att
+{\"o}verf{\"o}ra diskussionen till ett kontinuum av laddning i rummet,
+f{\"o}rdelad enligt en laddningst{\"a}thet $\rho({\bf x})$ (${\rm C}
+/{\rm m}^3$). I detta fall kan vi se det som att varje volymelement
+$\Delta V_k$ i k{\"a}llpunkterna ${\bf x}'_k$ i rummet uppb{\"a}r en laddning
+som vi kan se som en punktladdning, vilket i ett kontinuum {\"o}verg{\aa}r till
+$$
+  q'_k=\rho({\bf x}')\Delta V_k\to\rho({\bf x}')dV'.
+$$
+D{\aa} alla dessa infinitesimala volymelement summeras upp erh{\aa}ller
+vi {\it Coulomb-integralen} f{\"o}r det elektriska f{\"a}ltet i en
+observationspunkt ${\bf x}$ som\numberedfootnote{Notera att Griffiths
+  Ekv.~(2.8), sid.~63, betecknar {\it inte} denna som ``{\it Coulomb
+  integral}'', vilket {\"a}r lite synd d{\aa} denna term p{\aa} pricken
+  beskriver vad det handlar om.}
+$$
+  {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
+    {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'.
+$$
+
 \section{Vad {\"a}r egentligen po{\"a}ngen med att anv{\"a}nda elektriska
   f{\"a}lt?}
 N{\"a}r vi nu framst{\"a}llt tv{\aa} olika representationer f{\"o}r att behandla
@@ -357,6 +379,7 @@ oss.\numberedfootnote{Fundera g{\"a}rna igenom argumenten och kom p{\aa}
 \item{$\bullet$}{Detta visar p{\aa} att f{\"a}lt {\"a}r inte bara ett
   bekv{\"a}mt matematiskt verktyg, de har en fysikalisk realitet bortom
   enbart varandes ett s{\"a}tt att dela upp Coulombs kraftlag i faktorer.}
+\vfill\eject
 
 \section{Gauss lag h{\"a}rledd i fyra steg}
 Vi skulle h{\"a}r i princip bara kunna h{\"a}nvisa till den generella formen
@@ -387,7 +410,7 @@ m{\aa}tt p{\aa} ``hur m{\aa}nga elektriska f{\"a}ltlinjer som passerar ut
 genom ytan'', r{\"a}knat med tecken utifr{\aa}n ytans normalvektor~${\bf n}$.
 \vfill\eject
 
-\subsection{Steg 1: Sf{\"a}risk symmetrisk omslutande yta och punktladdning}
+\subsection{Steg~1: Sf{\"a}risk symmetrisk omslutande yta och punktladdning}
 Antag att vi har en punktladdning $q'$ placerad i position vid ortsvektorn
 ${\bf x}'$. D{\aa} vi ber{\"a}knar det elektriska fl{\"o}det ut fr{\aa}n denna
 laddning, s{\aa} kan vi se det som att fl{\"o}det h{\"a}rr{\"o}r fr{\aa}n en
@@ -433,8 +456,8 @@ laddningen} (som kan vara positivt eller negativt) samt vakuumpermittiviteten
 $\varepsilon_0$. Vi kommer att utnyttja detta faktum i n{\"a}sta steg.
 \vfill\eject
 
-\subsection{Steg 2: Godtycklig omslutande yta och punktladdning}
-L{\aa}t oss nu generalisera Steg 1 genom att ers{\"a}tta den sf{\"a}riska
+\subsection{Steg~2: Godtycklig omslutande yta och punktladdning}
+L{\aa}t oss nu generalisera Steg~1 genom att ers{\"a}tta den sf{\"a}riska
 referensytan mot en yta av godtycklig form, med det enda kravet att vi
 fortfarande omsluter punktladdningen $q'$. Denna nya yta beh{\"o}ver inte
 vara, s{\"a}g, {\"o}verallt konvex, och vi till{\aa}ter {\"a}ven att ytan
@@ -444,7 +467,7 @@ Om vi nu betraktar det elektriska fl{\"o}det som m{\aa}ttet p{\aa} ``hur
 m{\aa}nga fl{\"o}deslinjer som passerar ytan, r{\"a}knat gentemot ytans
 normalvektor'', s{\aa} ser vi att oavsett hur den omslutande ytan {\"a}r
 formad s{\aa} kommer exakt lika m{\aa}nga sk{\"a}rningspunkter att erh{\aa}llas
-som i Steg 1 under sf{\"a}risk symmetri. I de fall d{\"a}r en f{\"a}ltlinje
+som i Steg~1 under sf{\"a}risk symmetri. I de fall d{\"a}r en f{\"a}ltlinje
 sk{\"a}r en del av den omslutande ytan som {\"a}r vikt omlott, s{\aa} kommer
 varje sk{\"a}rning in i volymen att exakt motsvaras av en sk{\"a}rning ut
 ifr{\aa}n ytan, med f{\"o}ljd att samtliga f{\"a}ltlinjer kommer att ha ett
@@ -479,7 +502,7 @@ ytan enbart best{\"a}ms av v{\"a}rdet p{\aa} den inneslutna punktladdningen}.
 Vi kommer nu att anv{\"a}nda detta resultat i Steg~3.
 \vfill\eject
 
-\subsection{Steg 3: Godtycklig omslutande yta och system av punktladdningar}
+\subsection{Steg~3: Godtycklig omslutande yta och system av punktladdningar}
 Vi kommer nu att ytterligare generalisera f{\"o}reg{\aa}ende resultat genom att
 betrakta ett system av $N$ statiska punktladdningar, fixerade i rummet och
 liksom tidigare inneslutna av en hypotetisk godtyckig yta $S$ med samma
@@ -506,12 +529,14 @@ $$
   }
 $$
 Slutsatsen av detta resultat {\"a}r att {\it det totala elektriska fl{\"o}det
-$\Phi_{\rm E}$ ut genom den slutna ytan fortfarande enbart beror av den inneslutna
-laddningen $q'_{\rm tot}$.} I det sista steget kommer vi nu att gene\-ra\-li\-sera
-detta till godtyckliga kontinuerliga laddningsf{\"o}rdelningar.
+$\Phi_{\rm E}$ ut genom den slutna ytan fortfarande enbart beror av den
+inneslutna laddningen $q'_{\rm tot}$.} I det sista steget kommer vi nu att
+gene\-ra\-li\-sera detta till godtyckliga kontinuerliga
+laddningsf{\"o}rdelningar.
 \vfill\eject
 
-\subsection{Steg 4: Godtycklig omslutande yta och kontinuerlig laddningsf{\"o}rdelning}
+\subsection{Steg~4: Godtycklig omslutande yta och kontinuerlig
+  laddningsf{\"o}rdelning}
 Antag att vi nu ist{\"a}llet f{\"o}r diskreta punktladdningar $q'_k$ har en
 laddningsf{\"o}rdelning $\rho({\bf x})$ (enhet ${\rm C}/{\rm m}^3$) i en sluten
 (i rummet begr{\"a}nsad) volym $V$. Denna laddningsf{\"o}rdelning kan variera
@@ -550,8 +575,8 @@ $$
   \oiint_S {\bf E}({\bf x})\cdot d{\bf A}
      ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x}')\,dV'.
 $$
-Vi rekapitulerar att Gauss lag har h{\"a}rletts enbart utifr{\aa}n Coulombs
-klassiska lag f{\"o}r punktladdningar samt superpositionsprincipen.
+Vi rekapitulerar att {\it Gauss lag har h{\"a}rletts enbart utifr{\aa}n
+Coulombs klassiska lag f{\"o}r punktladd\-ningar samt superpositionsprincipen}.
 
 D{\aa} Coulombs lag bygger p{\aa} ett (f{\"o}r v{\aa}r del) mer eller mindre
 heuristiskt $1/r^2$-beroende f{\"o}r det elektriska f{\"a}ltets avtagande
@@ -576,7 +601,8 @@ punktladdningen.
 \section{Fr{\aa}n Gauss lag till Coulombs lag}
 En enkel exercis f{\"o}r att f{\aa} en k{\"a}nsla f{\"o}r Gauss lag och vad det
 inneb{\"a}r {\"a}r att g{\aa} andra v{\"a}gen, och fr{\aa}n v{\aa}rt sista
-resultat h{\"a}rleda Coulombs lag f{\"o}r v{\"a}xelverkan mellan punktladdningar.
+resultat h{\"a}rleda Coulombs lag f{\"o}r v{\"a}xelverkan mellan
+punktladdningar.
 Antag att vi placerat en ``k{\"a}lla'' i form av en punktladdning $q'$ i
 k{\"a}llpunkten ${\bf x}'$. Sett som en distribution motsvarar detta
 laddningst{\"a}theten\numberedfootnote{Griffiths anv{\"a}nder notationen
@@ -609,6 +635,7 @@ avst{\aa}nd fr{\aa}n punktk{\"a}llan, s{\aa} ger denna h{\"a}rledning ocks{\aa}
 vid hand hur koefficienten ``$4\pi\varepsilon_0$'' dyker upp.
 Vi kommer fram{\"o}ver i kursen att se hur denna koefficient dyker upp praktiskt
 taget {\"o}verallt i elektrostatiken.
+\vfill\eject
 
 \section{Gauss lag p{\aa} differentialform}
 S{\aa} som vi formulerat Gauss lag hittills {\"a}r den p{\aa} {\it integralform}.
@@ -627,8 +654,8 @@ Vi applicerar f{\"o}rst divergensteoremet\numberedfootnote{Se exempelvis
   innerp{\"a}rmen p{\aa} Griffiths, ``{\it Divergence Theorem}''.
   {\AA}terigen, notera att Griffiths anv{\"a}nder den aningen olyckliga
   notationen ``$d\tau$'' f{\"o}r volymelement.}
-p{\aa} det elektriska f{\"a}ltet, som för en godtycklig volym $V$ omsluten av
-en yta $S$ lyder
+p{\aa} det elektriska f{\"a}ltet, som f{\"o}r en godtycklig volym $V$ omsluten
+av en yta $S$ lyder
 $$
   \iiint_V\nabla\cdot{\bf E}\,dV=\oiint_S{\bf E}\cdot d{\bf A}.
 $$
@@ -653,6 +680,7 @@ $$
   \nabla\cdot{\bf E}={{\rho({\bf x})}\over{\varepsilon_0}},
 $$
 vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
+\vfill\eject
 
 \section{Sammanfattning av F{\"o}rel{\"a}sning~1 -- Elektrostatik,
   superpositionsprincipen och Gauss lag}
@@ -689,6 +717,12 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
   Superpositionsprincipen g{\"a}ller {\it enbart f{\"o}r linj{\"a}ra
   problem}, i vilka inga potenser av det elektriska f{\"a}ltet finns
   i de grund\-l{\"a}ggande ekvationerna.}
+\item{$\bullet$}{Coulomb-integralen f{\"o}r ett kontinuum av laddning
+  f{\"o}rdelad enligt en laddningst{\"a}thet $\rho({\bf x})$ lyder
+  $$
+    {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
+      {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'.
+  $$}
 \item{$\bullet$}{F{\"a}lt kan existera och breda ut sig {\it utan
   (direkt) n{\"a}rvaro av laddning}, till exempel elektromagnetiska
   v{\aa}gor. Detta visar p{\aa} att f{\"a}lt {\"a}r inte bara ett
