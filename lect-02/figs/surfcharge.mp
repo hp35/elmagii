@@ -35,7 +35,7 @@ beginfig(1);
   label.top(btex
       \vbox{
         \hbox{``Gaussisk burk''}
-        \hbox{\hskip20pt Area $A$}
+        \hbox{\hskip10pt Lockarea $A$}
       }
       etex, (-15u,30u));
   draw (-15u,30u){dir -70}..{dir -70}(0u,17u);
