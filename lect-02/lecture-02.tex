@@ -186,23 +186,39 @@ fr{\aa}n randeffekter.
 \vfill\eject
 
 \section{Rotationen f{\"o}r det statiska elektriska f{\"a}ltet}
-Som vi har sett kan det statiska elektriska f{\"a}ltet r{\"a}knas fram genom att exempelvis summera upp (eller integrera) bidrag fr{\aa}n punktladdningar~$q$ (${\rm C}$), linjeladdningar~$\lambda$ (${\rm C}/{\rm m}$), ytladdningar~$\sigma$ (${\rm C}/{\rm m}^2$) eller volymladdningar~$\rho$ (${\rm C}/{\rm m}^3$) via Coulomb-integralen, varefter vi genom att applicera superpositionsprincipen kan ta fram det totala f{\"a}ltet. Vi har {\"a}ven konstaterat att divergensen f{\"o}r det elektriska f{\"a}ltet ges av Gauss lag p{\aa} differentialform, som $\nabla\cdot{\bf E}=\rho/\varepsilon_0$. Av ren nyfikenhet, l{\aa}t oss d{\"a}rf{\"o}r se vad {\it rotationen} hos det statiska elektriska f{\"a}ltet kan uttryckas som.\numberedfootnote{Se Griffiths sid.~77--78.}
+Som vi har sett kan det statiska elektriska f{\"a}ltet r{\"a}knas fram genom
+att exempelvis summera upp (eller integrera) bidrag fr{\aa}n punktladdningar~$q$
+(${\rm C}$), linjeladdningar~$\lambda$ (${\rm C}/{\rm m}$),
+ytladdningar~$\sigma$ (${\rm C}/{\rm m}^2$) eller volymladdningar~$\rho$
+(${\rm C}/{\rm m}^3$) via Coulomb-integralen, varefter vi genom att applicera
+superpositionsprincipen kan ta fram det totala f{\"a}ltet.
+Vi har {\"a}ven konstaterat att divergensen f{\"o}r det elektriska f{\"a}ltet
+ges av Gauss lag p{\aa} differentialform, som $\nabla\cdot{\bf E}=
+\rho/\varepsilon_0$. Av ren nyfikenhet, l{\aa}t oss d{\"a}rf{\"o}r se vad
+{\it rotationen} hos det statiska elektriska f{\"a}ltet kan uttryckas
+som.\numberedfootnote{Se Griffiths sid.~77--78.}
 
-Betrakta en punktladdning, som vi f{\"o}r enkelhets skull nu placerar i origo ${\bf x}'={\bf 0}$ f{\"o}r observationssystemet.
-Vi kommer i denna analys att utnytta Stokes teorem applicerat p{\aa} en linjeintegral f{\"o}r en godtycklig trajektoria runt om i det statiska elektriska f{\"a}lt som omger punktladdningen.
-Redan nu kan vi passa p{\aa} att mentalt associera denna situation med en analogi med massa och gravitation.
+Betrakta en punktladdning $q'$, som vi f{\"o}r enkelhets skull nu placerar i
+origo ${\bf x}'={\bf 0}$ f{\"o}r observationssystemet. Vi kommer i denna analys
+att utnytta Stokes teorem applicerat p{\aa} en linjeintegral f{\"o}r en
+godtycklig trajektoria runt om i det statiska elektriska f{\"a}lt som omger
+punktladdningen. Redan nu kan vi passa p{\aa} att mentalt associera denna
+situation med en analogi med massa och gravitation.
 \epsfig{figs/lineintegral.1}\noindent
-Med punktladdningen $q'$ placerad i origo har vi det statiska elektriska f{\"a}ltet uttryckt i sf{\"a}riska koordinater som
+Med punktladdningen $q'$ placerad i origo har vi det statiska elektriska
+f{\"a}ltet uttryckt i sf{\"a}riska koordinater som
 $$
   {\bf E}(r) % ={{q}\over{4\pi\varepsilon_0}}{{{\bf x}}\over{|{\bf x}|^3}}
     =\underbrace{
     {{q'}\over{4\pi\varepsilon_0 r^2}}
     }_{=E_r(r)} {\bf e}_r.
 $$
-Om vi analyserar linjeintegralen f{\"o}r en godtycklig trajektoria $\Gamma$ mellan tv{\aa} godtyckliga punkter ${\bf x}_a$ och ${\bf x}_b$ i rummet, s{\aa} har vi uttryckt i sf{\"a}riska koordinater att
+Om vi analyserar linjeintegralen f{\"o}r en godtycklig trajektoria $\Gamma$
+mellan tv{\aa} godtyckliga punkter ${\bf x}_a$ och ${\bf x}_b$ i rummet, s{\aa}
+har vi uttryckt i sf{\"a}riska koordinater att
 $$
   \eqalign{
-    \int_{\Gamma}{\bf E}\cdot d{\bf l}
+    \int_{\Gamma}{\bf E}({\bf x})\cdot d{\bf l}
     &=\int_{\Gamma}(
         {\bf e}_rE_r+{\bf e}_{\varphi}\underbrace{E_{\varphi}}_{0}
             +{\bf e}_{\vartheta}\underbrace{E_{\vartheta}}_{0}
@@ -212,20 +228,31 @@ $$
       )}_{\hbox{$d{\bf l}$ i sf{\"a}riska koordinater}}\cr
     &=\int^{r_b}_{r_a} {{q'}\over{4\pi\varepsilon_0 r^2}}\,dr\cr
     &={{q'}\over{4\pi\varepsilon_0}}
-      \bigg({{1}\over{r_a}}-{{1}\over{r_b}}\bigg)\cr
+      \bigg({{1}\over{r_a}}-{{1}\over{r_b}}\bigg),\cr
   }
 $$
-d{\"a}r $r_a=|{\bf x}_a|$ och $r_b=|{\bf x}_b|$ {\"a}r avst{\aa}nden fr{\aa}n origo till punkterna ${\bf x}_a$ respektive ${\bf x}_b$. Vi kan redan fr{\aa}n detta uttryck ana oss till att vi strax kommer att tolka detta som en potentialskillnad mellan punkterna, men vi kan f{\"o}rst konstatera att om vi analyserar $\Gamma$ i form av en {\it sluten} trajektoria, s{\aa} kommer start- och slutpunkten att sj{\"a}lvfallet ha samma avst{\aa}nd $r_a=r_b$ till origo, med f{\"o}ljd att
+d{\"a}r $r_a=|{\bf x}_a|$ och $r_b=|{\bf x}_b|$ {\"a}r avst{\aa}nden fr{\aa}n
+origo (k{\"a}llpunkten) till punkterna ${\bf x}_a$ respektive ${\bf x}_b$.
+Vi kan redan fr{\aa}n detta uttryck ana oss till att vi strax kommer att tolka
+detta som en {\it potentialskillnad} mellan punkterna, men vi kan f{\"o}rst
+konstatera att om vi analyserar $\Gamma$ i form av en {\it sluten} trajektoria,
+s{\aa} kommer start- och slutpunkten att sj{\"a}lvfallet ha samma avst{\aa}nd
+$r_a=r_b$ till origo, med f{\"o}ljd att
 $$
   \oint_{\Gamma}{\bf E}\cdot d{\bf l}=0.
 $$
-D{\aa} vi applicerar {\it Stokes teorem} p{\aa} detta resultat,\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa} Griffiths, ``{\it Curl Theorem}''.}
+D{\aa} vi applicerar {\it Stokes teorem} p{\aa} detta
+resultat,\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa} Griffiths,
+  ``{\it Curl Theorem}''.}
 $$
   \iint_S\nabla\times{\bf E}\cdot d{\bf A}=\oint_{\Gamma}{\bf E}\cdot d{\bf l}=0,
 $$
-d{\"a}r $S$ {\"a}r den uta som innesluts av den slutna trajectorian $\Gamma$, s{\aa} ser vi att eftersom $\Gamma$ kan v{\"a}ljas som en {\it godtycklig} sluten trajektoria att rotationen av det {\it statiska} elektriska f{\"a}ltet m{\aa}ste vara identiskt noll,
+d{\"a}r $S$ {\"a}r den yta som innesluts av den slutna trajektorian $\Gamma$,
+s{\aa} ser vi att eftersom $\Gamma$ kan v{\"a}ljas som en {\it godtycklig}
+sluten trajektoria att integranden, det vill s{\"a}ga rotationen av det
+{\it statiska} elektriska f{\"a}ltet, m{\aa}ste vara identiskt noll,
 $$
-  \iint_S\nabla\times{\bf E}={\bf 0}.
+  \nabla\times{\bf E}={\bf 0}.
 $$
 Detta resultat h{\"a}rleddes h{\"a}r f{\"o}r en enskild punktladdning; dock {\"a}r detta resultat direkt m{\"o}jligt att generalisera f{\"o}r en godtycklig distribution av elektrisk laddning, eftersom superpositionsprincipen direkt ger att ett totalt f{\"a}lt som {\"a}r sammansatt av ett antal delbidrag ${\bf E}_k$ uppfyller att
 $$
