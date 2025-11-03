@@ -73,7 +73,7 @@ beginfig(1);
   pickup pencircle scaled 3pt;
   draw subpath (3.28,3.32) of p;
   pickup pencircle scaled 1pt;
-  drawarrow v--(v+7u*(cosd(phi),sind(phi)));
+  drawarrow v--(v+10u*(cosd(phi),sind(phi)));
 
 endfig;
 end

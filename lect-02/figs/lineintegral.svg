@@ -154,7 +154,7 @@
 <use xlink:href="#glyph-2-2" x="217.768" y="55.7044"/>
 </g>
 <path fill="none" stroke-width="29" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 3950.390625 6647.929688 C 3974.023438 6631.71875 3996.328125 6613.242188 4017.265625 6592.890625 " transform="matrix(0.1, 0, 0, -0.1, -188, 720)"/>
-<path fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 3984.84375 6621.953125 L 4134.570312 6491.796875 " transform="matrix(0.1, 0, 0, -0.1, -188, 720)"/>
-<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 221.664062 69.554688 L 225.457031 70.820312 L 223.671875 67.242188 "/>
-<path fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 4096.640625 6504.453125 L 4134.570312 6491.796875 L 4116.71875 6527.578125 Z M 4096.640625 6504.453125 " transform="matrix(0.1, 0, 0, -0.1, -188, 720)"/>
+<path fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 3984.84375 6621.953125 L 4198.75 6435.976562 " transform="matrix(0.1, 0, 0, -0.1, -188, 720)"/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 228.082031 75.132812 L 231.875 76.402344 L 230.089844 72.820312 "/>
+<path fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 4160.820312 6448.671875 L 4198.75 6435.976562 L 4180.898438 6471.796875 Z M 4160.820312 6448.671875 " transform="matrix(0.1, 0, 0, -0.1, -188, 720)"/>
 </svg>
