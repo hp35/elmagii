@@ -23,6 +23,7 @@ all: figures $(pdfs)
 
 figures:
 	@make -C figs
+	@make -C extras
 
 $(pdfs): $(pss)
 	@$(eval BASE = $(shell basename $@ .pdf))
@@ -58,4 +59,5 @@ archive:
 
 clean:
 	@make -ik clean -C figs
+	@make -ik clean -C extras
 	@rm -Rf *~ *.aux *.toc *.log *.dvi *.ps $(ARCHIVE)
