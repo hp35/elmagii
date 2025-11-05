@@ -1,7 +1,7 @@
 #
 # Makefile for compilation of Lecture Notes in Electromagnetic Theory,
 # Uppsala University, 2025. Code for the lectures written in plain TeX.
-# Lectures available at Github: https://github.com/elmagii/
+# Lectures available at Github: https://github.com/hp35/elmagii/
 #
 # Copyright (C) 2025 under GPL 3.0, Fredrik Jonsson
 #
