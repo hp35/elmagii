@@ -14,7 +14,7 @@ beginfig(1);
   path pgamma, pgammap, p, ps;
   pair picshift, pa, pb, pc, pd;
   color gray;
-  gray := .8[black,white];
+  gray := .9[black,white];
   pickup pencircle scaled 1pt;
 
   %
@@ -22,7 +22,7 @@ beginfig(1);
   %
   pgamma := ((0u,0u){dir 0}..(35u,15u)..(35u,30u)..(5u,20u)..(-10u,35u)
       ..(-35u,15u)..{dir 0}(0u,0u)--cycle) shifted (15u,-25u);
-  fill pgamma withcolor .925[black,white];
+  fill pgamma withcolor .950[black,white];
 
   %
   % First fieldline, counting from left.
@@ -33,7 +33,7 @@ beginfig(1);
   draw (subpath (0,gpa) of p) withcolor black;
   draw (subpath (gpa,gpb) of p) withcolor gray;
   drawarrow (subpath (gpb,2) of p) withcolor black;
-  
+
   %
   % Second fieldline, counting from left.
   %
@@ -43,7 +43,7 @@ beginfig(1);
   draw (subpath (0,gpa) of p) withcolor black;
   draw (subpath (gpa,gpb) of p) withcolor gray;
   drawarrow (subpath (gpb,2) of p) withcolor black;
-  
+
   %
   % Third fieldline, counting from left.
   %
@@ -53,7 +53,7 @@ beginfig(1);
   draw (subpath (0,gpa) of p) withcolor black;
   draw (subpath (gpa,gpb) of p) withcolor gray;
   drawarrow (subpath (gpb,2) of p) withcolor black;
-  
+
   %
   % Fourth fieldline, counting from left.
   %
@@ -63,7 +63,7 @@ beginfig(1);
   draw (subpath (0,gpa) of p) withcolor black;
   draw (subpath (gpa,gpb) of p) withcolor gray;
   drawarrow (subpath (gpb,2) of p) withcolor black;
-  
+
   %
   % Fifth fieldline, counting from left.
   %
@@ -73,7 +73,7 @@ beginfig(1);
   draw (subpath (0,gpa) of p) withcolor black;
   draw (subpath (gpa,gpb) of p) withcolor gray;
   drawarrow (subpath (gpb,2) of p) withcolor black;
-  
+
   %
   % Sixth fieldline, counting from left.
   %
@@ -175,23 +175,6 @@ beginfig(1);
         \cdot d{\bf S}$ etex,(50u,-44u));
   draw (50u,-44u){dir 110}..{dir 110}(25u,-10u);
   dotlabel(btex etex,(25u,-10u));
-  
-  %
-  % Normal to the surface.
-  %
-%  drawarrow (-14u,-4u)--(-18u,4u);
-%  draw (-14.5u,-3u)--(-13.5u,-2.5u)--(-13.0u,-3.5u);
-%  label.ulft(btex ${\bf n}$ etex,(-18u,4u));
 
-  %
-  % Definition of the electric flow through the surface S.
-  %
-%  label.top(btex ${\bf B}({\bf x})$ etex, (-9u,22u));
-%  label.lft(btex $S$ etex,(-18u,-4u));
-%  label.rt(btex
-%      \def\iint{\mathop{\int\kern-8pt\int}}
-%	$\displaystyle{\bf\Phi}_{\rm M}=\iint_S{\bf B}({\bf x})\cdot d{\bf A}$
-%	etex,(30u,14u));
-%    draw (30u,14u){dir 190}..{dir 190}(8u,-1u);
 endfig;
 end
