@@ -36,7 +36,8 @@ are any complaints.
     <i>MetaPost drawing of coulomb action for a system of point charges,
     partitioned into two separate groups of source charges.</i>
 
-[`elecflow.mp`](elecflow.mp) ([`elecflow.pdf`](elecflow.pdf))
+[`elecflow.mp`](elecflow.mp)
+    ([`elecflow.pdf`](elecflow.pdf))
     <i>MetaPost drawing of electric flow through a surface, including a
     displayed equation with the definition of electric flow.</i>
 
