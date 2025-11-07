@@ -12,6 +12,7 @@ u := 1mm;
 
 beginfig(1);
   path pgamma, pgammap, p, ps;
+  pair picshift, pa, pb, pc, pd;
   color gray;
   gray := .8[black,white];
   pickup pencircle scaled 1pt;
@@ -21,7 +22,7 @@ beginfig(1);
   %
   pgamma := ((0u,0u){dir 0}..(35u,15u)..(35u,30u)..(5u,20u)..(-10u,35u)
       ..(-35u,15u)..{dir 0}(0u,0u)--cycle) shifted (15u,-25u);
-  fill pgamma withcolor .975[black,white];
+  fill pgamma withcolor .925[black,white];
 
   %
   % First fieldline, counting from left.
@@ -87,45 +88,94 @@ beginfig(1);
   % Redraw the outline of the Gamma path, hiding the intersections of
   % the magnetic field lines.
   %
-  draw pgamma;
+  pickup pencircle scaled 2pt;
+  drawarrow pgamma;
+  pickup pencircle scaled 1pt;
   label.top(btex ${\bf B}({\bf x},t)$ etex,(14u,32u));
 
   %
   % Draw the shifted path Gamma at time t+dt.
   %
   pgammap := pgamma scaled 1.0 shifted (8u,8u);
-  draw pgammap;
-  sa:=0; ds:=0.25; sb:=1-ds;
+  pickup pencircle scaled 2pt;
+  drawarrow pgammap;
+  pickup pencircle scaled 1pt;
+  sa:=0.1; ds:=0.25; sb:=1.1-ds;
   for s = sa step ds until sb:
     drawarrow (point s of pgamma)--(point s of pgammap);
   endfor
-  sa:=1; ds:=0.5; sb:=2-ds;
+  sa:=1.1; ds:=0.5; sb:=2.1-ds;
   for s = sa step ds until sb:
     drawarrow (point s of pgamma)--(point s of pgammap);
   endfor
-  sa:=2; ds:=0.25; sb:=3-ds;
+  sa:=2.1; ds:=0.25; sb:=3.1-ds;
   for s = sa step ds until sb:
     drawarrow (point s of pgamma)--(point s of pgammap);
   endfor
-  sa:=3; ds:=0.5; sb:=4-ds;
+  sa:=3.1; ds:=0.5; sb:=4.1-ds;
   for s = sa step ds until sb:
     drawarrow (point s of pgamma)--(point s of pgammap);
   endfor
-  sa:=4; ds:=0.25; sb:=5-ds;
+  sa:=4.1; ds:=0.25; sb:=5.1-ds;
   for s = sa step ds until sb:
     drawarrow (point s of pgamma)--(point s of pgammap);
   endfor
-  sa:=5; ds:=0.25; sb:=6-ds;
+  sa:=5.1; ds:=0.25; sb:=6.1-ds;
   for s = sa step ds until sb:
     drawarrow (point s of pgamma)--(point s of pgammap);
   endfor
 
-  label.bot(btex $\Gamma(t)$ etex,(point 6.1 of pgamma));
-  label.top(btex $\Gamma(t+dt)$ etex,(point 6.1 of pgammap));
-  label.lft(btex Yta $A$ etex,(-30u,10u));
-  draw (-30u,10u){dir 0}..{dir 0}(-17u,-3u);
+  %
+  % Some convenient labels added for the sake of pedagogy.
+  %
+  label.llft(btex $\Gamma(t)$ etex,(point 2.0 of pgamma));
+  label.urt(btex $\Gamma(t+dt)$ etex,(point 2.0 of pgammap));
+  label.bot(btex $I(t)$ etex,(point 0 of pgamma));
+  label.bot(btex \vbox{
+        \hbox{Yta $S(t)$ innesluten}
+        \hbox{av trajektoria $\Gamma(t)$}} etex,(-10u,-44u));
+  draw (-20u,-44u){dir 70}..{dir 70}(5u,-7u);
+  dotlabel(btex etex,(5u,-7u));
+
+  %
+  % Extract the area element between the two trajectories as t and t+dt.
+  %
+  p:=fullcircle scaled 20u xscaled 0.6 yscaled 1.1 rotated -45
+    shifted (57u,0u);
+  draw p dashed evenly withcolor black;
+  draw (point 0.7 of p){dir -10}..{dir -10}(80u,-10u);
+
+  picshift:=(80u,-28u);
+  pa := (0u,0u) shifted picshift;
+  pb := pa shifted (30u*(cosd(45),sind(45)));
+  pc := pa shifted (3u,24u);
+  pd := pc shifted (30u*(cosd(45),sind(45)));
+  fill pa--pb--pd--pc--cycle withcolor gray;
+  drawarrow pa--pb;
+  label.lrt(btex ${\bf v}dt$ etex,.5[pa,pb]);
+  drawarrow pc--pd;
+  label.ulft(btex ${\bf v}dt$ etex,.5[pc,pd]);
+  drawarrow pa--pc;
+  label.lft(btex $d{\bf l}$ etex,.5[pa,pc]);
+  drawarrow pb--pd;
+  label.rt(btex $d{\bf l}$ etex,.5[pb,pd]);
+  p := (pa+4u*(pb-pa)/abs(pb-pa)){dir 135}..{dir 180}(pa+4u*(pc-pa)/abs(pc-pa));
+  draw p;
+  label.urt(btex $\vartheta$ etex,point .75 of p);
+  label.top(btex $d{\bf A}=({\bf v}dt)\times(d{\bf l})=
+      {\bf v}\times d{\bf l}\,dt
+      $ etex,(88u,34u));
+  draw (88u,34u){dir 280}..{dir 280}(100u,10u);
+
+  %
+  % The magnetic flow through the surface enclosed by Gamma.
+  %
+  label.bot(btex \def\iint{\mathop{\int\kern-8pt\int}}
+      $\displaystyle \Phi_{\rm M}(t)=\iint_{S(t)}{\bf B}({\bf x},t)
+        \cdot d{\bf S}$ etex,(50u,-44u));
+  draw (50u,-44u){dir 110}..{dir 110}(25u,-10u);
+  dotlabel(btex etex,(25u,-10u));
   
-
   %
   % Normal to the surface.
   %
