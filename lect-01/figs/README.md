@@ -11,52 +11,65 @@ are any complaints.
 
 ## List of figures
 
-[`chargetypes.mp`](chargetypes.mp) <i>MetaPost drawing of three types
-    of charge distributions: Line charges, surface charges and volume
-    charges.</i>
+[`chargetypes.mp`](chargetypes.mp)
+    (PDF: [`chargetypes.pdf`](chargetypes.pdf))
+    <i>MetaPost drawing of three types of charge distributions: Line charges,
+    surface charges and volume charges.</i>
 
-[`coulombdist.mp`](coulombdist.mp) <i>MetaPost drawing of the classical
-    electric charge distribution used when analyzing Coulombs law, with
-    application to the derivation of Gauss' law.</i>
-
-[`coulomb.mp`](coulomb.mp) <i>MetaPost drawing of coulomb attraction or
-    repulsion between two point charges.</i>
-
-[`coulombsys.mp`](coulombsys.mp) <i>MetaPost drawing of coulomb action
-    for a system of point charges.</i>
-
-[`coulombsyspart.mp`](coulombsyspart.mp) <i>MetaPost drawing of coulomb
-    action for a system of point charges, partitioned into two separate
-    groups of source charges.</i>
-
-[`elecflow.mp`](elecflow.mp) <i>MetaPost drawing of electric flow through
-    a surface, including a displayed equation with the definition of
-    electric flow.
-</i>
-
-[`gauss-step-1.mp`](gauss-step-1.mp) <i>MetaPost drawing of Step 1 (point
-    charge, closed surface with spherical symmetry) in the derivation of
-    Gauss' law from the basic point-charge form of Coulomb's law.</i>
-
-[`gauss-step-2.mp`](gauss-step-2.mp) <i>MetaPost drawing of Step 2 (point
-    charge, non-spherical closed surface of arbitrary shape) in the
-    derivation of Gauss' law from the basic point-charge form of Coulomb's
+[`coulombdist.mp`](coulombdist.mp)
+    (PDF: [`coulombdist.pdf`](coulombdist.pdf))
+    <i>MetaPost drawing of the classical electric charge distribution used
+    when analyzing Coulombs law, with application to the derivation of Gauss'
     law.</i>
 
-[`gauss-step-3.mp`](gauss-step-3.mp) <i>MetaPost drawing of Step 3 (system
-    of point charges, enclosed by a closed surface of arbitrary shape) in
-    the derivation of Gauss' law from the basic point-charge form of
-    Coulomb's law.</i>
+[`coulomb.mp`](coulomb.mp)
+    (PDF: [`coulomb.pdf`](coulomb.pdf))
+    <i>MetaPost drawing of coulomb attraction or repulsion between two
+    point charges.</i>
 
-[`gauss-step-4.mp`](gauss-step-4.mp) <i>MetaPost drawing of Step 4 (continuous
-    charge distribution, enclosed by a closed surface of arbitrary shape) in
-    the derivation of Gauss' law from the basic point-charge form of Coulomb's
-    law.</i>
+[`coulombsys.mp`](coulombsys.mp)
+    (PDF: [`coulombsys.pdf`](coulombsys.pdf))
+    <i>MetaPost drawing of coulomb action for a system of point charges.</i>
 
-[`worldmap.mp`](worldmap.mp) <i>MetaPost drawing of our World Map of
-    electrodynamics, and how Coulomb's law together with Biot-Savart's
-    law interlinked with constitutive relations result in Maxwell's
-    equations, finally producing the electromagnetic wave equation.</i>
+[`coulombsyspart.mp`](coulombsyspart.mp)
+    (PDF: [`coulombsyspart.pdf`](coulombsyspart.pdf))
+    <i>MetaPost drawing of coulomb action for a system of point charges,
+    partitioned into two separate groups of source charges.</i>
+
+[`elecflow.mp`](elecflow.mp) (PDF: [`elecflow.pdf`](elecflow.pdf))
+    <i>MetaPost drawing of electric flow through a surface, including a
+    displayed equation with the definition of electric flow.</i>
+
+[`gauss-step-1.mp`](gauss-step-1.mp)
+    (PDF: [`gauss-step-1.pdf`](gauss-step-1.pdf))
+    <i>MetaPost drawing of Step 1 (point charge, closed surface with
+    spherical symmetry) in the derivation of Gauss' law from the basic
+    point-charge form of Coulomb's law.</i>
+
+[`gauss-step-2.mp`](gauss-step-2.mp)
+    (PDF: [`gauss-step-2.pdf`](gauss-step-2.pdf))
+    <i>MetaPost drawing of Step 2 (point charge, non-spherical closed
+    surface of arbitrary shape) in the derivation of Gauss' law from the
+    basic point-charge form of Coulomb's law.</i>
+
+[`gauss-step-3.mp`](gauss-step-3.mp)
+    (PDF: [`gauss-step-3.pdf`](gauss-step-3.pdf))
+    <i>MetaPost drawing of Step 3 (system of point charges, enclosed by
+    a closed surface of arbitrary shape) in the derivation of Gauss' law
+    from the basic point-charge form of Coulomb's law.</i>
+
+[`gauss-step-4.mp`](gauss-step-4.mp)
+    (PDF: [`gauss-step-4.pdf`](gauss-step-4.pdf))
+    <i>MetaPost drawing of Step 4 (continuous charge distribution, enclosed
+    by a closed surface of arbitrary shape) in the derivation of Gauss' law
+    from the basic point-charge form of Coulomb's law.</i>
+
+[`worldmap.mp`](worldmap.mp)
+    (PDF: [`worldmap.pdf`](worldmap.pdf))
+    <i>MetaPost drawing of our World Map of electrodynamics, and how
+    Coulomb's law together with Biot-Savart's law interlinked with
+    constitutive relations result in Maxwell's equations, finally
+    producing the electromagnetic wave equation.</i>
 
 ## Copyright
 Copyright (C) 2025, Fredrik Jonsson, under GPL 3.0.
