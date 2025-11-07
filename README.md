@@ -20,6 +20,9 @@ The directory contains the following subdirectories:
 [`lect-04`](lect-04) <i>Magnetostatik</i>
          (<i>Magnetostatics</i>)
 
+[`lect-05`](lect-05) <i>Elektromagnetisk induktion</i>
+         (<i>Electromagnetic induction</i>)
+
 [`lect-06`](lect-06) <i>Elektriska fält i material</i>
          (<i>Electric fields in materials</i>)
 
