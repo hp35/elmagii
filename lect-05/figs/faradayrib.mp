@@ -14,7 +14,7 @@ beginfig(1);
   path pgamma, pgammap, p, ps;
   pair picshift, pa, pb, pc, pd;
   color gray;
-  gray := .9[black,white];
+  gray := .8[black,white];
   pickup pencircle scaled 1pt;
 
   %
@@ -156,15 +156,17 @@ beginfig(1);
   drawarrow pc--pd;
   label.ulft(btex ${\bf v}dt$ etex,.5[pc,pd]);
   drawarrow pa--pc;
-  label.lft(btex $d{\bf l}$ etex,.5[pa,pc]);
+  label.lft(btex $d{\bf l}(t)$ etex,.5[pa,pc]);
   drawarrow pb--pd;
-  label.rt(btex $d{\bf l}$ etex,.5[pb,pd]);
+  label.rt(btex $d{\bf l}(t+dt)$ etex,.5[pb,pd]);
   p := (pa+4u*(pb-pa)/abs(pb-pa)){dir 135}..{dir 180}(pa+4u*(pc-pa)/abs(pc-pa));
   draw p;
   label.urt(btex $\vartheta$ etex,point .75 of p);
   label.top(btex $d{\bf A}=({\bf v}dt)\times(d{\bf l})=
       {\bf v}\times d{\bf l}\,dt
       $ etex,(88u,34u));
+  label.top(btex $\big(dA=|{\bf v}||d{\bf l}|\,dt\sin(\vartheta)\big)$ etex,
+      (88u,40u));
   draw (88u,34u){dir 280}..{dir 280}(100u,10u);
 
   %
@@ -175,6 +177,10 @@ beginfig(1);
         \cdot d{\bf S}$ etex,(50u,-44u));
   draw (50u,-44u){dir 110}..{dir 110}(25u,-10u);
   dotlabel(btex etex,(25u,-10u));
+  label.rt(btex \vbox{
+      \hbox{Observera tidsberoende}
+      \hbox{slinga $\Gamma(t)\to S(t)$}} etex, (76u,-60u));
+  drawarrow (76u,-60u){dir 175}..{dir 175}(53u,-55u);
 
 endfig;
 end
