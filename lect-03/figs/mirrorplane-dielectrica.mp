@@ -1,7 +1,9 @@
 %
-% MetaPost drawing of a charge q placed at $z=h$ and a mirror charge placed at
-% $z=-h$, constuting the "gedankenexperiment" of mirror charges and perfectly
-% conducting planes.
+% MetaPost drawing of a charge q placed at z=h inside a dielectricum with
+% relative electric permittivity epsilon_r and a virtual mirror charge q'
+% placed at z=-h inside a dielectricum with relative electric permittivity
+% epsilon'_r, constuting the "gedankenexperiment" of mirror charges and
+% planar interfaces between dielectrica.
 %
 % Copyright (C) 2025 under GPL 3.0, Fredrik Jonsson
 %
