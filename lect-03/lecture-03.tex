@@ -59,6 +59,9 @@
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\bigskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\bigskip}
+\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+  \noindent{\it Sammanfattning}\smallskip\noindent{\it #1}\par
+  \leftskip=0pt\rightskip=0pt\bigskip}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{3}
@@ -67,19 +70,83 @@
 \centerline{Fredrik Jonsson, Uppsala Universitet, 10 november 2025}
 \vskip24pt
 
+\plan{Genom att visa p{\aa} att Laplaces ekvation $\nabla^2\phi=0$ saknar lokala
+  extrempunkter, och har samtliga extrempunkter i randv{\"a}rden till
+  dom{\"a}nen d{\"a}r vi l{\"o}ser ekvationen, s{\aa} kan vi dra slutsatsen att
+  en l{\"o}sning $\phi$ till Laplaces ekvation ocks{\aa} {\"a}r entydig, det
+  vill s{\"a}ga att om vi finner en l{\"o}sning $\phi$ s{\aa} {\"a}r det
+  ocks{\aa} den enda existerande l{\"o}sningen.
+  Med utg{\aa}ngspunkt i detta finner vi d{\"a}refter att {\"a}ven Poissons
+  ekvation $\nabla^2\phi=\rho/\varepsilon_0$ i direkt n{\"a}rvaro av en
+  laddningst{\"a}thet $\rho$ {\"a}ven den ger entydighet f{\"o}r l{\"o}sningar
+  $\phi$. Vi kan med detta visa att en dom{\"a}n som {\"a}r omgiven av ett skal
+  som h{\aa}lls vid konstant potential $\phi_0$ direkt ger att det elektriska
+  f{\"a}ltet innanf{\"o}r skalet {\"a}r identiskt noll, vilket {\"a}r principen
+  f{\"o}r ``Faradays bur''.
+  Utifr{\aa}n entydighetsteoremet f{\"o}r Laplace och Poissons ekvation kan vi
+  visa p{\aa} hur vi kan konstruera s{\aa} kallade ``virtuella spegelladdningar''
+  f{\"o}r att l{\"o}sa elektrostatiska problem i n{\"a}rvaro av fria laddningar
+  i elektriskt ledande dom{\"a}ner eller ytor, specifikt f{\"o}r plana ytor
+  mellan ledare eller dieletrika samt cylinderytor och sf{\"a}rer.}
+
 \section{Laplaces ekvation f{\"o}r den elektrostatiska potentialen}
-Det kan tyckas aningen {\"o}verdrivet att ge sig in p{\aa} mer matematiskt betingade sp{\"o}rsm{\aa}l kring huruvida l{\"o}sningar till problem inom elektrostatiken {\"a}r unika eller ej. Trots allt, s{\aa} {\"a}r vi ju inte speciellt oroliga f{\"o}r att vi i det ``verkliga livet'' som ingenj{\"o}rer skall kunna r{\aa}ka ut f{\"o}r tv{\aa} olika f{\"a}lt som uppfyller samma ekvation och randvillkor, right?
+Det kan tyckas aningen {\"o}verdrivet att ge sig in p{\aa} mer matematiskt
+betingade sp{\"o}rsm{\aa}l kring huruvida l{\"o}sningar till problem inom
+elektrostatiken {\"a}r unika eller ej, det vill s{\"a}ga om det finns fler
+{\"a}n en entydig l{\"o}sning till ett givet problem. Trots allt, s{\aa}
+{\"a}r vi ju inte speciellt oroliga f{\"o}r att vi i det ``verkliga livet''
+som ingenj{\"o}rer skall kunna r{\aa}ka ut f{\"o}r tv{\aa} olika f{\"a}lt
+som uppfyller samma ekvation och randvillkor, right?
 
-Fr{\aa}gan {\"a}r dock befogad rent generellt, och n{\"a}rhelst ickelinj{\"a}ra fenomen inkluderas, s{\aa} finns det gott om bistabila l{\"o}sningar med olika f{\"a}ltf{\"o}rdelningar som kan uppfylla samma ekvationer och randvillkor. Inom ramen f{\"o}r elektrostatiken i denna f{\"o}rel{\"a}sningsserie behandlar vi dock uteslutande linj{\"a}ra problem i det elektriska f{\"a}ltet, men som vi skall se finns det icke desto mindre mycket att h{\"a}mta i praktiskt probleml{\"o}sande med bas i entydighet f{\"o}r l{\"o}sningar till den elektrostatiska potentialen.
+Fr{\aa}gan {\"a}r dock befogad rent generellt, och s{\aa} snart som vi
+inkluderar ickelinj{\"a}ra fenomen i v{\aa}ra statiska eller dynamiska modeller,
+exempelvis ett brytningsindex vars v{\"a}rde i sig beror p{\aa} elektrisk
+f{\"a}ltstyrkan ${\bf E}$ eller en magnetisering som beror ickelinj{\"a}rt
+p{\aa} den magnetiska fl{\"o}dest{\"a}theten ${\bf B}$, s{\aa} finns det gott
+om bistabila l{\"o}sningar med olika f{\"a}ltf{\"o}rdelningar som kan uppfylla
+samma ekvationer och randvillkor. Inom ramen f{\"o}r elektrostatiken i denna
+f{\"o}rel{\"a}sningsserie behandlar vi dock uteslutande linj{\"a}ra problem i
+det elektriska f{\"a}ltet, men som vi skall se finns det icke desto mindre
+mycket att h{\"a}mta i praktiskt probleml{\"o}sande med bas i entydighet
+f{\"o}r l{\"o}sningar till den elektrostatiska potentialen.
 
-Vi kan b{\"o}rja med att konstatera att vi i elektrostatiska problem alltsom oftast s{\"o}ker en l{\"o}sning till det elektriska f{\"a}ltet, vilket vi fr{\aa}n den f{\"o}rsta f{\"o}rel{\"a}sningen vet kan ber{\"a}knas genom Coulombs generaliserade lag,\numberedfootnote{Vi f{\"o}ljer h{\"a}r Griffiths sid.~113--124.}
+Vi kan b{\"o}rja med att konstatera att vi i elektrostatiska problem alltsom
+oftast s{\"o}ker en l{\"o}sning till det elektriska f{\"a}ltet, vilket vi
+fr{\aa}n den f{\"o}rsta f{\"o}rel{\"a}sningen vet kan ber{\"a}knas genom
+Coulombs generaliserade lag, eller {\it Coulombintegralen}\numberedfootnote{Vi
+  f{\"o}ljer h{\"a}r i huvudsak Griffiths sid.~113--124.}
 $$
   {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
     {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'.
 $$
-Oturligt nog f{\"o}r oss {\"a}r denna explicita form inte s{\"a}rskilt v{\"a}l l{\"a}mpad vare sig f{\"o}r ber{\"a}kning med papper och penna eller med numeriska metoder. En del av detta problem ligger i redundansen hos det elektriska f{\"a}ltet\numberedfootnote{Vi visade f{\"o}rra f{\"o}rel{\"a}sningen p{\aa} kopplingen mellan komponenterna hos det elektriska f{\"a}ltet via $\nabla\times{\bf E}={\bf 0}$, resulterande i att ${{\partial E_x}/{\partial y}}={{\partial E_y}/{\partial x}}$, etc.}, och vi kan d{\"a}rf{\"o}r redan i detta f{\"o}rsta stadie konstatera att det nog {\"a}r l{\"a}mpligare att ist{\"a}llet ``g{\aa} till pudelns k{\"a}rna'' och ist{\"a}llet s{\"o}ka ber{\"a}kna den skal{\"a}ra potentialen.
+Oturligt nog f{\"o}r oss {\"a}r denna explicita form inte s{\"a}rskilt v{\"a}l
+l{\"a}mpad vare sig f{\"o}r ber{\"a}kning med papper och penna eller med
+numeriska metoder. En del av detta problem ligger i redundansen hos det
+elektriska f{\"a}ltet\numberedfootnote{Vi visade f{\"o}rra
+  f{\"o}rel{\"a}sningen p{\aa} kopplingen mellan komponenterna hos det
+  elektriska f{\"a}ltet via $\nabla\times{\bf E}={\bf 0}$, resulterande
+  i kopplingen ${{\partial E_x}/{\partial y}}={{\partial E_y}/{\partial x}}$,
+  etc.},
+d{\"a}r vi alltid har en implicit koppling mellan komponenterna hos det
+elektriska f{\"a}ltet, och vi kan d{\"a}rf{\"o}r redan i detta f{\"o}rsta
+stadie konstatera att det nog {\"a}r l{\"a}mpligare att ist{\"a}llet ``g{\aa}
+till pudelns k{\"a}rna'' och ist{\"a}llet s{\"o}ka ber{\"a}kna den skal{\"a}ra
+potentialen $\phi$.
 
-Under f{\"o}rra f{\"o}rel{\"a}sningen fann vi att det elektriska f{\"a}ltet kunde tolkas som en (negativ) gradient ${\bf E}=-\nabla\phi$, d{\"a}r $\phi$ l{\"a}gligt nog {\"a}r explicit definierad som integralen
+Under f{\"o}rra f{\"o}rel{\"a}sningen fann vi att det elektriska f{\"a}ltet
+kunde tolkas som en (negativ) gradient\numberedfootnote{Vi erinrar oss fr{\aa}n F{\"o}rel{\"a}sning~2 att tolkningen av det elektriska f{\"a}ltet som en negativ gradient av en skal{\"a}r potential kommer sig fr{\aa}n observationen att Coulomb-integralen ju kunde skrivas just som en gradient
+$$
+  {\bf E}({\bf x})
+    ={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
+      {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'
+    =-{{1}\over{4\pi\varepsilon_0}}\nabla\iiint_V
+      {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
+    =-\nabla\phi({\bf x}),
+$$}
+$$
+  {\bf E}=-\nabla\phi,
+$$
+d{\"a}r vi definierade den {\it skal{\"a}ra potentialen} $\phi$ explicit som integralen
 $$
   \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V
     {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
