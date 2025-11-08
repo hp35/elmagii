@@ -9,13 +9,14 @@ The directory contains the following subdirectories:
 [`lect-01`](lect-01) <i>Elektrostatik, superpositionsprincipen och Gauss lag</i>
          (<i>Electrostatics, the superposition principle and Gauss law</i>)
 
-[`lect-02`](lect-02) <i>Elektrostatisk potential och tillämpningar av Gauss lag</i>
+[`lect-02`](lect-02) <i>Elektrostatisk potential och tillämpningar av Gauss
+         lag</i>
          (<i>Electrostatic potential and applications of Gauss' law</i>)
 
-[`lect-03`](lect-03) <i>Entydighet för lösningar till potentialproblem, randvillkor
-             och spegelladdningar</i>
-         (<i>The uniqueness theorem, boundary conditions and method of images
-	     for the scalar potential</i>)
+[`lect-03`](lect-03) <i>Spegelladdningar, randvillkor och entydighet för
+         lösningar till potentialproblem</i>
+         (<i>Method of images for charges, boundary conditions and the
+	 uniqueness theorem, for the scalar potential</i>)
 
 [`lect-04`](lect-04) <i>Magnetostatik</i>
          (<i>Magnetostatics</i>)

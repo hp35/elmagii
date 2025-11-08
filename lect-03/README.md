@@ -1,9 +1,10 @@
-# Lecture 3 - The uniqueness theorem, boundary conditions and method of images for the scalar potential
+# Lecture 3 - Method of images for charges, boundary conditions and the uniqueness theorem, for the scalar potential
 
-This directory contains the Lecture Notes for Lecture 2, <i>Entydighet för lösningar
-till potentialproblem, randvillkor och spegelladdningar}</i> (English: <i>Uniqueness
-theorem, boundary conditions and method of images for the scalar potential</i>),
-including all TeX code (plain TeX, no LaTeX), MetaPost figures and supporting material.
+This directory contains the Lecture Notes for Lecture 3, <i>Spegelladdningar,
+randvillkor och entydighet för lösningar till potentialproblem</i>
+(English: <i>Method of images for charges, boundary conditions and the
+uniqueness theorem, for the scalar potential</i>), including all TeX code
+(plain TeX, no LaTeX), MetaPost figures and supporting material.
 
 ## Primary files of interest
 

@@ -62,8 +62,8 @@
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{3}
-\centerline{\twelvesc Entydighet f{\"o}r l{\"o}sningar till potentialproblem,}
-\centerline{\twelvesc randvillkor och spegelladdningar}
+\centerline{\twelvesc Spegelladdningar, randvillkor och entydighet}
+\centerline{\twelvesc f{\"o}r l{\"o}sningar till potentialproblem}
 \centerline{Fredrik Jonsson, Uppsala Universitet, 10 november 2025}
 \vskip24pt
 
@@ -106,19 +106,32 @@ L{\"o}sningar till Laplaces ekvation saknar lokala extrempunkter.}
 \noindent
 Vi kommer nu att bevisa detta p{\aa}st{\aa}ende p{\aa} ett lite annorlunda s{\"a}tt {\"a}n i Griffiths, d{\"a}r man ist{\"a}llet fokuserar p{\aa} medelv{\"a}rde hos potentialen i en omgivning till en laddning (``k{\"a}lla'') via Coulombs lag. H{\"a}r kommer vi ist{\"a}llet att anta en mer matematisk approach.
 
-\quote{{\bf Matematiskt bevis.} [Motbevis] Antag att $\phi$ uppfyller Laplaces ekvation $\nabla\phi^2=0$ och har ett lokalt {\it maximum} i punkten ${\bf x}'$. I denna punkt har vi d{\"a}rmed att: (1)~Alla f{\"o}rstaderivator f{\"o}rsvinner, det vill s{\"a}ga att
-$$
-\nabla\phi({\bf x}')={\bf 0},$$
-samt (2) att alla andraderivator {\"a}r negativa i en omgivning till ${\bf x}'$,
-$$
-{{\partial^2\phi}\over{\partial x^2_k}}<0,\quad k=1,2,3,
-$$
-eftersom vi har att g{\"o}ra med ett {\it maximum} och att funktionen $\phi$ d{\"a}rmed m{\aa}ste ``halka ned{\aa}t'' i alla riktningar runt ${\bf x}'$.
-Genom att summera upp alla andraderivator erh{\aa}ller vi
-$$
-\sum^3_{k=1}{{\partial^2\phi}\over{\partial x^2_k}}=\nabla^2\phi<0.
-$$
-Laplace ekvation s{\"a}ger dock att $\nabla^2\phi=0$, vilket endast kan vara uppfyllt om {\it samtliga} andraderivator {\"a}r noll, vilket ger en mots{\"a}gelse. Enda m{\"o}jligheten {\"a}r d{\"a}rmed att $\phi$ inte kan ha ett lokalt maximum i en dom{\"a}n d{\"a}r $\nabla^2\phi=0$. Mot\-svar\-ande bevis f{\"o}r minima f{\"o}ljer analogt ur detta.}
+\quote{{\bf Matematiskt bevis.} [Motbevis] Antag att den skal{\"a}ra
+  potentialen $\phi$ uppfyller Laplaces ekvation $\nabla\phi^2=0$ och
+  att den har ett lokalt {\it maximum} i punkten ${\bf x}'$.
+  I denna punkt har vi d{\"a}rmed att:
+  (1)~Alla f{\"o}rstaderivator f{\"o}rsvinner, det vill s{\"a}ga att
+  $$
+    \nabla\phi({\bf x}')={\bf 0},
+  $$
+  samt (2) att alla andraderivator {\"a}r negativa i en omgivning
+  till ${\bf x}'$,
+  $$
+    {{\partial^2\phi}\over{\partial x^2_k}}<0,\quad k=1,2,3,
+  $$
+  detta eftersom vi har att g{\"o}ra med ett {\it maximum} och att
+  funktionen $\phi$ d{\"a}rmed m{\aa}ste ``halka ned{\aa}t'' i alla
+  riktningar runt ${\bf x}'$.
+  Genom att summera upp alla andraderivator erh{\aa}ller vi
+  $$
+    \sum^3_{k=1}{{\partial^2\phi}\over{\partial x^2_k}}=\nabla^2\phi<0.
+  $$
+  Laplace ekvation s{\"a}ger dock att $\nabla^2\phi=0$, vilket endast
+  kan vara uppfyllt om {\it samtliga} andraderivator {\"a}r noll,
+  vilket ger en mots{\"a}gelse. Enda m{\"o}jligheten {\"a}r d{\"a}rmed
+  att $\phi$ inte kan ha ett lokalt maximum i en dom{\"a}n d{\"a}r
+  $\nabla^2\phi=0$. Mot\-svar\-ande bevis f{\"o}r minima f{\"o}ljer
+  analogt ur detta.}
 \noindent
 L{\aa}t oss {\"a}ven g{\aa} igenom ett alternativt, aningen mer fysikaliskt fokuserat bevis.
 \quote{{\bf ``Fysikaliskt'' bevis.} Vi har att $\phi$ {\"a}r en l{\"o}sning till Laplaces ekvation f{\"o}r den elektrostatiska potentialen i vilket vi rekapitulerar {\"a}r en laddningsfri region, med $\rho({\bf v})=0$ f{\"o}r alla punkter ${\bf x}$ i volymen $V$.
@@ -370,8 +383,8 @@ ett v{\"a}rde som vi nog egentligen faktiskt kunde ha gissat oss till p{\aa} gru
 \section{Spegelladdningar i plana gr{\"a}nsytor mellan dielektrika}
 Spegling av laddning i gr{\"a}nsytor mellan tv{\aa} dielektrika\numberedfootnote{Vi g{\aa}r h{\"a}r h{\"a}ndelserna i f{\"o}rv{\"a}g en aning; dielektrika behandlas egentligen f{\"o}rst l{\"a}ngre fram i kursen i F{\"o}rel{\"a}sning~6.} f{\"o}ljer p{\aa} liknande s{\"a}tt som f{\"o}r spegling i perfekt ledande plan; om laddningen $q$ placeras i ett dielektrikum med den relativa elektriska permittiviteten $\varepsilon_{\rm r}$ och med ett avst{\aa}nd $z=h$ fr{\aa}n ytan $z=0$ som avgr{\"a}nsar fr{\aa}n den relativa permittiviteten $\varepsilon'_{\rm r}$, s{\aa} kommer {\it bundna} laddningar (till skillnad fr{\aa}n de fria laddningarna i fallet med ett perfekt ledande plan) att fortfarande motsvara en spegelladdning $q'$ symmetriskt placerad vid $z=-h$ men ist{\"a}llet ha v{\"a}rdet
 $$
-  q'={{\varepsilon_{\rm r}-\varepsilon'_{\rm r}}
-       \over{\varepsilon_{\rm r}+\varepsilon'_{\rm r}}}q.
+  q'=\bigg({{\varepsilon_{\rm r}-\varepsilon'_{\rm r}}
+       \over{\varepsilon_{\rm r}+\varepsilon'_{\rm r}}}\bigg) q.
 $$
 
 \section{Spegelladdningar i cylindriska perfekt ledande gr{\"a}nsytor}
