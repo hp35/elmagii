@@ -54,12 +54,17 @@ beginfig(1);
   %
   % Boundary condition phi=0 at z=0.
   %
-  label.top(btex $\phi=0$ p{\aa} $z=0$ etex, (-26u,0u));
+  label.top(btex \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+      $\phi\eqq 0$ p{\aa} $z=0$ etex, (-26u,0u));
 
   %
   % Mission statement.
   %
-  label.urt(btex S{\"o}kt: $\phi({\bf x})$, f{\"o}r $z\ge0$ etex,(18u,30u));
+  label.urt(btex \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+      \vbox{
+        \hbox{S{\"o}kt: $\phi({\bf x})$, f{\"o}r $z\ge0$}
+        % \hbox{(H{\"a}r: $\phi(x,y)\eqq 0$, p{\aa} $z=0$)}
+      } etex,(18u,30u));
 
   %
   % Geometry of mirrored charges, starting with the top charge q, ...
