@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-03/lecture-03.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-03/
-% Last change: October 24, 2025
+% Last change: November 8, 2025
 %
 % Lecture No 3 in the course ``Elektromagnetism II, 1TE626 (2025)'',
 % held November 10, 2025, at Uppsala University, Sweden.
@@ -769,18 +769,53 @@ $$
 \vfill\eject
 
 \section{Spegelladdningar i cylindriska perfekt ledande gr{\"a}nsytor}
-L{\aa}t oss nu betrakta fallet med en rak och o{\"a}ndlig linjeladdning $\lambda$ (${\rm C}/{\rm m}$) som l{\"o}per utanf{\"o}r en likaledes o{\"a}ndlig och perfekt ledande cylinder med radien $R$ och med utstr{\"a}ckning l{\"a}ngs $z$-axeln samt jordad till potentialen $\phi_0=0$. Linjeladdningen {\"a}r placerad ett avst{\aa}nd $h$ utanf{\"o}r cylinderytan, vid en position $(R+h){\bf e}_x$ l{\"a}ngs $x$-axeln enligt figur.
+L{\aa}t oss nu betrakta fallet\numberedfootnote{Oturligt nog tar inte Griffiths
+  upp fallet med just spegling av en linjeladdning i en ledande cylinder,
+  vilket {\"a}r lite synd d{\aa} detta tv{\aa}dimensionella problem illustrerar
+  ett antal intressanta aspekter av arbetsg{\aa}ngen med att konstruera
+  l{\"o}sningar till Laplaces ekvation f{\"o}r potentialen $\phi$.
+  M{\aa}h{\"a}nda {\"a}r detta exempel exkluderat d{\aa} en del algebra
+  onekligen m{\aa}ste g{\aa}s igenom i och med argumenterandet f{\"o}r
+  hur vi skapar en l{\"o}sning som uppfyller randvillkoret runt om p{\aa}
+  cylinderns mantelyta. Det b{\"o}r noteras att {\"a}ven J~D.~Jacksons
+  standardverk {\it Classical Electrodynamics} saknar denna spegling av
+  linjeladdningar i cylinderytor.}
+med en rak och o{\"a}ndlig linjeladdning $\lambda$ (${\rm C}/{\rm m}$) som
+l{\"o}per utanf{\"o}r en likaledes o{\"a}ndlig och perfekt ledande cylinder
+med radien $R$ och med utstr{\"a}ckning l{\"a}ngs $z$-axeln samt jordad till
+potentialen $\phi_0=0$. Linjeladdningen {\"a}r placerad ett avst{\aa}nd $h$
+utanf{\"o}r cylinderytan, vid en position $(R+h){\bf e}_x$ l{\"a}ngs $x$-axeln
+enligt figur.
 \epsfig{figs/mirrorcharge-cylinder.1}\noindent
-Vi s{\"o}ker {\"a}ven i detta problem potentialen $\phi({\bf x})$ i rummet utanf{\"o}r ledaren, och utifr{\aa}n det tidigare resonemanget kring virtuell spegelladdning mot ett o{\"a}ndligt och perfekt ledande plan kan vi redan nu gissa oss till att uppgiften kommer att g{\aa} ut p{\aa} att formulera var en {virtuell speglad linjeladdning} b{\"o}r placeras s{\aa} att vi i detta problem uppfyller randvillkoret $\phi=\phi_0=0$ p{\aa} cylinderytan vid radien $r=R$.
+Vi s{\"o}ker {\"a}ven i detta problem potentialen $\phi({\bf x})$ i rummet
+utanf{\"o}r ledaren, och utifr{\aa}n det tidigare resonemanget kring virtuell
+spegelladdning mot ett o{\"a}ndligt och perfekt ledande plan kan vi redan nu
+gissa oss till att uppgiften kommer att g{\aa} ut p{\aa} att formulera var en
+{virtuell speglad linjeladdning} b{\"o}r placeras s{\aa} att vi i detta problem
+uppfyller randvillkoret $\phi=\phi_0=0$ p{\aa} cylinderytan vid radien $r=R$.
+
+Vi kan f{\"o}r {\"o}vrigt konstatera att vi effektivt har att g{\"o}ra med ett
+tv{\aa}dimensionellt problem, s{\aa} utan att tulla p{\aa} generalitet kan vi
+s{\"a}tta att ${\bf x}=x{\bf e}_x+y{\bf e}_y$, med cylinderytan definierad av
+$|{\bf x}|=R$ f{\"o}r alla v{\"a}rden p{\aa} den longitudinella koordinaten $z$.
 
 \subsection{Potential fr{\aa}n en linjeladdning}
-I detta fall {\"a}r uppgiften att best{\"a}mma den skal{\"a}ra potentialen $\phi({\bf x})$ i rummet givet en linjeladdning $\lambda$ och ({\aa}tminstone gissar vi s{\aa}) en virtuell linjeladdning $\lambda'$. D{\"a}rmed infinner sig fr{\aa}gan, hur f{\aa}r vi fram denna potential? Vi har ju s{\aa} l{\aa}ngt trots allt bara diskuterat potentialen fr{\aa}n system rent generellt.
+I detta fall {\"a}r uppgiften att best{\"a}mma den skal{\"a}ra potentialen
+$\phi({\bf x})$ i rummet givet en linjeladdning $\lambda$ och ({\aa}tminstone
+gissar vi s{\aa}) en virtuell linjeladdning $\lambda'$. D{\"a}rmed infinner sig
+fr{\aa}gan, hur f{\aa}r vi fram denna potential? Vi har ju s{\aa} l{\aa}ngt
+trots allt bara diskuterat potentialen fr{\aa}n system rent generellt.
 
-Som tur {\"a}r gick vi i F{\"o}rel{\"a}sning~2 igenom hur vi i fall med symmetrier kan anv{\"a}nda ``Gaussiska ytor'' omslutande laddning, och att vi p{\aa} detta s{\"a}tt fick ut det elektriska f{\"a}ltet. Specifikt fick vi fram att det radiella elektriska f{\"a}ltet fr{\aa}n en linjeladdning $\lambda$, utan att ens beh{\"o}va l{\"o}sa n{\aa}gon integral, var
+Som tur {\"a}r gick vi i F{\"o}rel{\"a}sning~2 igenom hur vi i fall med
+symmetrier kan anv{\"a}nda ``Gaussiska ytor'' omslutande laddning, och att vi
+p{\aa} detta s{\"a}tt fick ut det elektriska f{\"a}ltet. Specifikt fick vi fram
+att det radiella elektriska f{\"a}ltet fr{\aa}n en linjeladdning $\lambda$,
+utan att ens beh{\"o}va l{\"o}sa n{\aa}gon integral, var
 $$
   E_r(r) = {{\lambda}\over{2\pi \varepsilon_0 r}}.
 $$
-Detta f{\"a}lt kommer ju i sin tur fr{\aa}n en skal{\"a}r potential genom ${\bf E}=-\nabla\phi$, eller p{\aa} skal{\"a}r och radiell form
+Detta f{\"a}lt kommer ju i sin tur fr{\aa}n en skal{\"a}r potential genom
+${\bf E}=-\nabla\phi$, eller p{\aa} skal{\"a}r och radiell form
 $$
   E_r(r)=-{{\partial\phi(r)}\over{\partial r}}
     \quad\Leftrightarrow\quad
@@ -788,17 +823,48 @@ $$
     =-{{\lambda}\over{2\pi \varepsilon_0}}\int^r_{r_0}{{1}\over{r}}\,dr
     ={{\lambda}\over{2\pi \varepsilon_0}}\ln\Big({{r_0}\over{r}}\Big)
 $$
-f{\"o}r n{\aa}gon l{\"a}mpligt vald referens $r_0$ som vi utg{\aa}r ifr{\aa}n n{\"a}r vi integrerar upp potentialen till godtycklig radie $r$ ortogonalt ut fr{\aa}n linjeladdningen $\lambda$. Notera att denna referensradie l{\"a}mpligen ej kan v{\"a}ljas som varken $r_0=0$ eller $r_0=\infty$, eftersom vi d{\aa} l{\"a}mnar potentialen vid avst{\aa}ndet $r$ fr{\aa}n linjeladdningen odefinierad. Vi kan bara konstatera att referensradien $r_0$ {\"a}r {\it n{\aa}got} finit avst{\aa}nd, som i det slutliga resultatet inte b{\"o}r ha n{\aa}gon inverkan p{\aa} det slutliga svaret.
+f{\"o}r n{\aa}gon l{\"a}mpligt vald referens $r_0$ som vi utg{\aa}r ifr{\aa}n
+n{\"a}r vi integrerar upp potentialen till godtycklig radie $r$ ortogonalt ut
+fr{\aa}n linjeladdningen $\lambda$. Notera att denna referensradie l{\"a}mpligen
+ej kan v{\"a}ljas som varken $r_0=0$ eller $r_0=\infty$, eftersom vi d{\aa}
+l{\"a}mnar potentialen vid avst{\aa}ndet $r$ fr{\aa}n linjeladdningen
+odefinierad. Vi kan bara konstatera att referensradien $r_0$ {\"a}r
+{\it n{\aa}got} finit avst{\aa}nd, som i det slutliga resultatet inte
+b{\"o}r ha n{\aa}gon inverkan p{\aa} det slutliga svaret.
 
 \subsection{Att l{\"a}gga till virtuell laddning s{\aa} att vi n{\aa}r
   randvillkoret $\phi=0$ p{\aa} cylinderns yta $|{\bf x}|=R$}
-Helt i analogi med vad vi gjorde f{\"o}r speglingen i ett perfekt ledande plan med en punktladdning, kommer vi nu att s{\"o}ka belopp och position f{\"o}r en {\it virtuell} linjeladdning lagd n{\aa}gonstans i $(x,y)$-planet s{\aa} att vi (om m{\"o}jligt) n{\aa}r randvillkoret att $\phi=0$ p{\aa} cylinderns yta $|{\bf x}|=R$.
+Helt i analogi med vad vi gjorde f{\"o}r speglingen i ett perfekt ledande plan
+med en punktladdning, kommer vi nu att s{\"o}ka belopp och position f{\"o}r en
+{\it virtuell} linjeladdning lagd n{\aa}gonstans i $(x,y)$-planet s{\aa} att vi
+(om m{\"o}jligt) n{\aa}r randvillkoret att $\phi=0$ p{\aa} cylinderns yta
+$|{\bf x}|=R$.
 
-Det f{\"o}rsta vi kan notera {\"a}r att vi har en symmetri speglad i $x$-axeln, eftersom vi lagt denna s{\aa} att linjeladdningen $\lambda$ ligger l{\"a}ngs denna.\numberedfootnote{Notera hur vi genom att l{\"a}gga ut ett l{\"a}mpligt valt koordinatsystem markant kan underl{\"a}tta f{\"o}r oss sj{\"a}lva redan innan vi ens b{\"o}rjar skissa p{\aa} algebran i problemet!}
-Linjeladdningen m{\aa}ste av symmetrisk{\"a}l trivialt sj{\"a}lvfallet ocks{\aa} f{\"o}lja cylinderns ytstr{\"a}ckning, och d{\"a}rmed {\"a}ven den ligga l{\"a}ngs $z$-axeln, liksom den ``reella'' linjeladdningen $\lambda$.
-Vi antar att vi har en virtuell linjeladdning om $\lambda'$ (${\rm C}/{\rm m}$, och vi antar att denna {\"a}r lokaliserad vid n{\aa}gon position $d{\bf e}_x$ l{\"a}ngs $x$-axeln.
+Det f{\"o}rsta vi kan notera {\"a}r att vi har en symmetri speglad i $x$-axeln,
+eftersom vi lagt denna s{\aa} att linjeladdningen $\lambda$ ligger l{\"a}ngs
+denna.\numberedfootnote{Notera hur vi genom att l{\"a}gga ut ett l{\"a}mpligt
+  valt koordinatsystem markant kan underl{\"a}tta f{\"o}r oss sj{\"a}lva
+  redan innan vi ens b{\"o}rjar skissa p{\aa} algebran i problemet!}
+Linjeladdningen m{\aa}ste av symmetrisk{\"a}l trivialt sj{\"a}lvfallet ocks{\aa}
+f{\"o}lja cylinderns ytstr{\"a}ckning, och d{\"a}rmed {\"a}ven den ligga
+l{\"a}ngs $z$-axeln, liksom den ``reella'' linjeladdningen $\lambda$.
+Vi antar att vi har en virtuell linjeladdning om $\lambda'$ (${\rm C}/{\rm m}$,
+och vi antar att denna {\"a}r lokaliserad vid n{\aa}gon position $d{\bf e}_x$
+l{\"a}ngs $x$-axeln.
 
-Givet denna initiala {\it gissning}, som vi erinrar oss alltid {\"a}r till{\aa}ten i och med att entydikhetsteoremet ger oss en ``licens'' att jaga efter l{\"o}sningar till Poissons och Laplaces ekvation (av vilka vi f{\"o}r tillf{\"a}llet analyserar en dom{\"a}n f{\"o}r den senare) utan att beh{\"o}va bekymra oss om exakt {\it hur} vi kommer fram till en l{\"o}sning, s{\aa} l{\"a}nge som den uppfyller randvillkoren, s{\aa} {\"a}r vi redo att s{\"a}tta ig{\aa}ng med att s{\"a}tta samman ett l{\"o}sningsf{\"o}rslag med spegelladdningar. I en ekvivalent frirymdsmodell av potentialen, d{\"a}r vi givetvis beh{\aa}ller den reella linjeladdningen $\lambda$ vid positionen $(R+h){\bf e}_x$ man nu tar bort den ledande cylindern och ers{\"a}tter den med en {\it virtuell} linjeladdning $\lambda'$ vid $d{\bf e}_x$, s{\aa} f{\aa}r vi i rummet den sammanlagda potentialen\numberedfootnote{Notera {\aa}terigen hur kraftfullt superpositionsprincipen kommer till v{\aa}r assistans!}
+Givet denna initiala {\it gissning}, som vi erinrar oss alltid {\"a}r
+till{\aa}ten i och med att entydikhetsteoremet ger oss en ``licens'' att jaga
+efter l{\"o}sningar till Poissons och Laplaces ekvation (av vilka vi f{\"o}r
+tillf{\"a}llet analyserar en dom{\"a}n f{\"o}r den senare) utan att beh{\"o}va
+bekymra oss om exakt {\it hur} vi kommer fram till en l{\"o}sning, s{\aa}
+l{\"a}nge som den uppfyller randvillkoren, s{\aa} {\"a}r vi redo att s{\"a}tta
+ig{\aa}ng med att s{\"a}tta samman ett l{\"o}sningsf{\"o}rslag med
+spegelladdningar. I en ekvivalent frirymdsmodell av potentialen, d{\"a}r vi
+givetvis beh{\aa}ller den reella linjeladdningen $\lambda$ vid positionen
+$(R+h){\bf e}_x$ man nu tar bort den ledande cylindern och ers{\"a}tter den med
+en {\it virtuell} linjeladdning $\lambda'$ vid $d{\bf e}_x$, s{\aa} f{\aa}r vi
+i rummet den sammanlagda potentialen\numberedfootnote{Notera {\aa}terigen hur
+kraftfullt superpositionsprincipen kommer till v{\aa}r assistans!}
 $$
   \phi({\bf x})
     =\underbrace{
@@ -810,8 +876,18 @@ $$
           \ln\bigg({{r_0}\over{|{\bf x}-d{\bf e}_x|}}\bigg)
      }_{\hbox{potential fr{\aa}n $\lambda'$}}
 $$
-d{\"a}r vi {\aa}terigen erinrar oss att $r_0$ {\"a}r en godtyckligt vald referensradie som i det slutliga svaret inte f{\aa}r p{\aa}verka l{\"o}sningen.\numberedfootnote{Den observante ser h{\"a}r att vi egentligen har full frihet att v{\"a}lja $r_0$ {\it individuellt} f{\"o}r linjeladdningarna $\lambda$ och $\lambda'$. Naturligtvis kan vi g{\"o}ra detta, men i den f{\"o}ljande elimineringen har detta ingen annan betydelse {\"a}n att st{\"o}ka till det f{\"o}r oss rent algebraiskt. Vi v{\"a}ljer h{\"a}r samma referens-radie $r_0$ f{\"o}r b{\aa}de den reella och virtuella linjeladdningen.}
-Genom att anv{\"a}nda logaritmlagen $\ln(a/b)=\ln(a)-\ln(b)$ kan vi vidareutveckla potentialen till en gemensam term involverande referens-radien $r_0$ som
+d{\"a}r vi {\aa}terigen erinrar oss att $r_0$ {\"a}r en godtyckligt vald
+referensradie som i det slutliga svaret inte f{\aa}r p{\aa}verka
+l{\"o}sningen.\numberedfootnote{Den observante ser h{\"a}r att vi egentligen
+  har full frihet att v{\"a}lja $r_0$ {\it individuellt} f{\"o}r
+  linjeladdningarna $\lambda$ och $\lambda'$. Naturligtvis kan vi g{\"o}ra
+  detta, men i den f{\"o}ljande elimineringen har detta ingen annan betydelse
+  {\"a}n att st{\"o}ka till det f{\"o}r oss rent algebraiskt. Vi v{\"a}ljer
+  h{\"a}r samma referens-radie $r_0$ f{\"o}r b{\aa}de den reella och virtuella
+  linjeladdningen.}
+Genom att anv{\"a}nda logaritmlagen $\ln(a/b)=\ln(a)-\ln(b)$ kan vi
+vidareutveckla potentialen till en gemensam term involverande referens-radien
+$r_0$ som
 $$
   \phi({\bf x})
     ={{(\lambda+\lambda')}\over{2\pi\varepsilon_0}}\ln(r_0)
@@ -820,11 +896,17 @@ $$
     -{{\lambda'}\over{2\pi\varepsilon_0}}
           \ln\big(|{\bf x}-d{\bf e}_x|\big).
 $$
-F{\"o}r att uppfylla kravet om att $r_0$ inte skall p{\aa}verka slutresultatet, s{\aa} ser vi direkt att en m{\"o}jlighet {\"a}r att den speglade, virtuella linjeladdningen, helt i analogi med fallet med punktladdning $q$, skall l{\aa}sas till den reella linjeladdningen med omv{\"a}nt tecken som
+F{\"o}r att uppfylla kravet om att $r_0$ inte skall p{\aa}verka slutresultatet,
+s{\aa} ser vi direkt att en m{\"o}jlighet {\"a}r att den speglade, virtuella
+linjeladdningen, helt i analogi med fallet med punktladdning $q$, skall
+l{\aa}sas till den reella linjeladdningen med omv{\"a}nt tecken som
 $$
   \lambda'=-\lambda.
 $$
-Med detta konstaterande reduceras d{\"a}rmed potentialen $\phi$ i cylindriska koordinater ${\bf x}=(x,y,z)=(r\cos\varphi,r\sin\varphi,z)$ till att p{\aa} cylinderytan\numberedfootnote{Vi s{\"o}ker ju konstruera en potential $\phi({\bf x})$ s{\aa} att $\phi=0$ p{\aa} denna yta!} $r=R$ lyda
+Med detta konstaterande reduceras d{\"a}rmed potentialen $\phi$ i cylindriska
+koordinater ${\bf x}=(x,y,z)=(r\cos\varphi,r\sin\varphi,z)$ till att p{\aa}
+cylinderytan\numberedfootnote{Vi s{\"o}ker ju konstruera en potential
+$\phi({\bf x})$ s{\aa} att $\phi=0$ p{\aa} denna yta!} $r=R$ lyda
 $$
   \eqalign{
     \phi({\bf x})\Big|_{|{\bf x}|=R}
@@ -840,12 +922,162 @@ $$
             \ln\bigg({{(R\cos\varphi-d)^2+R^2\sin^2\varphi}
              \over{{(R\cos\varphi-(R+h))^2+R^2\sin^2\varphi}}}
             \bigg)\cr
+      &=\big\{\hbox{ Utveckla }\big\}\cr
+      &={{\lambda}\over{2\pi\varepsilon_0}}
+            \ln\bigg({{R^2\cos^2\varphi-2Rd\cos\varphi+d^2+R^2\sin^2\varphi}
+            \over{{R^2\cos^2\varphi-2R(R+h)\cos\varphi+(R+h)^2+R^2\sin^2\varphi}}}
+            \bigg)\cr
+      &=\big\{\hbox{ Anv{\"a}nd $\cos^2\varphi+\sin^2\varphi=1$ }\big\}\cr
+      &={{\lambda}\over{2\pi\varepsilon_0}}
+            \ln\bigg({{R^2-2Rd\cos\varphi+d^2}
+            \over{{R^2-2R(R+h)\cos\varphi+(R+h)^2}}}
+            \bigg).\cr
   }
 $$
+Det {\"a}r h{\"a}r mycket frestande att direkt konstatera att f{\"o}r att detta
+uttryck skall vara noll p{\aa} ytan $|(x,y)|=R$ s{\aa} kr{\"a}ver vi att
+argumentet till logaritmen m{\aa}ste vara ett, eftersom $\ln(1)=0$.
+Vi skall dock v{\"a}nta lite med detta och f{\"o}rst konstatera att om detta
+uttryck skall vara {\it oberoende av vinkeln $\varphi$}, s{\aa} kr{\"a}ver vi
+{\aa}tminstone att argumentet {\"a}r konstant, s{\"a}g
+$$
+  {{R^2-2Rd\cos\varphi+d^2}\over{{R^2-2R(R+h)\cos\varphi+(R+h)^2}}}
+    =C=\hbox{konst.}
+$$
+I och med detta f{\"o}r vi in ytterligare en frihetsgrad i v{\aa}rt problem, i
+och med att $C$ d{\"a}rmed f{\"o}rr eller senare kommer att beh{\"o}va
+best{\"a}mmas. Samtidigt har vi en viss paradox n{\"a}rvarande, i och med att
+vi har att g{\"o}ra med ett {\it underbest{\"a}mt} ``system'' med en ekvation
+och tv{\aa} obest{\"a}mda parametrar $d$ och nu {\"a}ven $C$. Minns dock att
+vi {\"a}ven har kravet $\phi=0$, vilket tillf{\"o}r den andra ekvation som
+beh{\"o}vs f{\"o}r att ha fullst{\"a}ndig information f{\"o}r l{\"o}sande av
+uppgiften.
 
+S{\aa} vad kan vi d{\aa} kr{\"a}va av $d$ och $C$ f{\"o}r att g{\"o}ra uttrycket
+ovan konstant och oberoende av vinkeln $\varphi$? Genom att samla ihop termerna
+f{\"o}r $\cos\varphi$ i uttrycket ovan, s{\aa} erh{\aa}ller vi att
+$$
+  2R(C(R+h)-d)\cos\varphi=C(R^2+(R+h)^2)-(R^2+d^2),
+$$
+vilket vi direkt kan konstatera kan g{\"o}ras oberoende av vinkeln $\varphi$
+genom att i v{\"a}nsterledet se till att v{\"a}lja\numberedfootnote{Ja,
+  {\it v{\"a}lja}! Kom ih{\aa}g att entydighetsteoremet ger oss ``licens
+  att skjuta fr{\aa}n h{\"o}ften'', s{\aa} l{\"a}nge som vi i slutet har
+  en l{\"o}sning som uppfyller Laplaces ekvation samt randvillkoret
+  $\phi({\bf x})=0$ p{\aa} ytan $|(x,y)|=R$.}
+$C$ s{\aa} att koefficienten f{\"o}r $\cos\varphi$ blir noll, som
+$$
+  2R(C(R+h)-d)=0 \qquad\Leftrightarrow\qquad C={{d}\over{R+h}}.
+$$
+L{\aa}t oss se vad detta kan ge f{\"o}r l{\"o}sning f{\"o}r placeringen $d$
+f{\"o}r den speglade virtuella linjeladdningen! Med $C$ enligt detta
+konstaterande har vi enligt ovan att v{\"a}nsterledet blir noll (dessutom
+oberoende av $\cos\varphi$, som f{\"o}rv{\"a}ntat), och att h{\"o}gerledet
+samtidigt tar formen
+$$
+  0={{d}\over{(R+h)}}(R^2+(R+h)^2)-(R^2+d^2)
+  \qquad\Leftrightarrow\qquad
+  (R^2+d^2)(R+h)=d(R^2+(R+h)^2).
+$$
+Detta definierar en andragradsekvation f{\"o}r den s{\"o}kta variabeln $d$, vilken enkelt kan l{\"o}sas till att ge tv{\aa} separata l{\"o}sningar
+$$
+  d=\cases{
+    R^2/(R+h) & (L{\"o}sning 1) \cr
+    R+h       & (L{\"o}sning 2) \cr
+  }
+$$
+{\it Stopp och bel{\"a}gg nu!} Betyder detta inte att vi just visat p{\aa}
+{\it tv{\aa} olika l{\"o}sningar} f{\"o}r potentialen $\phi({\bf x})$ som
+satisfierar exakt samma problem?
+Vi har ju just visat att det finns {\it tv{\aa}} olika positioner f{\"o}r
+spegelladdningen som ju b{\aa}da ger en l{\"o}sning till problemet.
+Sade inte entydighetsteoremet oss alldeles nyss att {\it endast en unik
+l{\"o}sning existerar till Laplaces ekvation?}
 
+Denna observation, att vi har tv{\aa} l{\"o}sningar f{\"o}r positionen $d$
+som ploppar fram ur andragradsekvationen f{\"o}r denna, {\"a}r helt korrekt;
+l{\aa}t oss d{\"a}rf{\"o}r studera dessa tv{\aa} l{\"o}sningar i detalj.
+
+Vi b{\"o}rjar med L{\"o}sning~2, som ju talar om f{\"o}r oss att en l{\"o}sning
+till problemet med att uppn{\aa} en fix potential ($\phi=0$) som randvillkor
+p{\aa} cylinderytan {\"a}r att helt enkelt l{\"a}gga den virtuella, speglade
+linjeladdningen $\lambda'=-\lambda$ direkt ovanp{\aa} den reella linjeladdningen
+$\lambda$, vid punkten $(R+h){\bf e}_x$.
+Detta ger direkt att den resulterande linjeladdningen ({\aa}terigen, via
+superpositionsprincipen!) {\"a}r noll, och all potential runt om i problemet
+blir trivialt noll. Specifikt s{\aa} uppfyller denna triviala noll-l{\"o}sning
+sj{\"a}lvfallet randvillkoret $\phi=0$ p{\aa} cylinderytan, men den f{\"o}r oss
+inte fram{\aa}t i problemets l{\"o}sning och {\"a}r uppenbart inte den
+l{\"o}sning vi s{\"o}ker. Med andra ord f{\"o}rkastar vi p{\aa} st{\aa}ende
+for L{\"o}sning~2.
+
+Om vi ist{\"a}llet betraktar L{\"o}sning~1, s{\aa} ger den {\aa} andra sidan vid
+hand att den virtuella, speglade linjeladdningen skall placeras vid en punkt
+$d=R^2/(R+h)$ som ligger n{\aa}gonstans mellan $x=0$ och $x=R/2$, vilket
+l{\aa}ter rimligt.\numberedfootnote{Att den virtuella, speglade
+  linjeladdningens position $d$ ligger n{\aa}gonstans mellan $x=0$
+  och $x=R/2$ f{\"o}r L{\"o}sning~1 f{\"o}ljer av att $h>R$, vilket
+  i sin tur betyder att
+  $$
+    d={{R^2}\over{R+h}}
+     =\underbrace{\bigg({{R}\over{R+h}}\bigg)}_{\in[0,1/2[}R
+     \in[0,R/2[.
+  $$}
+Trots allt s{\aa} {\"a}r ett implicit villkor i allt vi g{\"o}r i denna metod
+med speglade laddningar att ingen virtuell laddning f{\aa}r placeras i
+dom{\"a}nen d{\"a}r vi analyserar potentialen, d{\aa} detta vore ett brott mot
+sj{\"a}lva grundantagandet om att vi har Laplace ekvation {\"o}verallt med
+undantag f{\"o}r sj{\"a}lva k{\"a}lladdningen som vi speglar, oavsett om det
+{\"a}r en punktladdning eller linjeladdning eller n{\aa}gon annan konfiguration
+som {\"a}r sj{\"a}lva k{\"a}llan i problemet.
+
+\subsection{Sammanfattning av virtuell speglad linjeladdning i cylindrisk yta}
+Vi kan sammanfatta denna exercis i konstruktion av en l{\"o}sning till problemet
+med spegling av en linjeladdning i en cylindrisk yta till ett perfekt ledande
+medium att:
+\quote{L{\"o}sningen till Poissons ekvation f{\"o}r en linjeladdning $\lambda$
+  placerad p{\aa} ett avst{\aa}nd $R+h$ fr{\aa}n centrum av en perfekt ledande
+  cylinder med radie $R$ ges som fri\-rymds\-l{\"o}s\-ningen med en virtuell
+  linjeladdning $\lambda'=-\lambda$ placerad p{\aa}
+  avst{\aa}ndet\numberedfootnote{Vi kallar emellan{\aa}t punkten f{\"o}r
+    den speglade linjeladdningen f{\"o}r {\it inverspunkten till
+    k{\"a}llpunkten med avseende till en cirkel med radien $R$.}
+    Se {\tt https://sv.wikipedia.org/wiki/Inversion}}
+  $$
+    d={{R^2}\over{R+h}},
+  $$
+  fr{\aa}n cylinderns centrum i riktning mot den externa linjeladdningen.}
+\noindent
+\vfill\eject
 
 \section{Spegelladdningar i sf{\"a}riska perfekt ledande gr{\"a}nsytor}
+F{\"o}r spegling av punktladdningar i sf{\"a}riska ytor f{\"o}ljer resonemanget
+likt det f{\"o}r punktladdningar ovan, med observationen att ekvipotentialytorna
+f{\"o}r en elektrisk dipol ges av sf{\"a}rer som {\"a}r f{\"o}r\-skjutna mellan
+laddningarna.\numberedfootnote{Se till exempel grafen f{\"o}r
+  f{\"a}ltf{\"o}rdelningen f{\"o}r den elektriska dipolen som
+  diskuterats tidigare i denna f{\"o}rel{\"a}sning.}
+Vi sammanfattar h{\"a}r helt enkelt bara l{\"o}sningen\numberedfootnote{Vilken
+  f{\"o}r {\"o}vrigt {\"a}r en lysande {\"o}vningsuppgift! Se Griffiths
+  sid.~128 f{\"o}r detaljer.} med f{\"o}ljande.
+\quote{L{\"o}sningen till Poissons ekvation f{\"o}r en punktladdning $q$
+  placerad p{\aa} ett avst{\aa}nd $R+h$ fr{\aa}n centrum av en perfekt ledande
+  sf{\"a}r med radie $R$ ges som fri\-rymds\-l{\"o}s\-ningen med en virtuell
+  punktladdning
+  $$
+    q'=-{{R}\over{R+h}}q,
+  $$
+  placerad p{\aa} avst{\aa}ndet
+  $$
+    d={{R^2}\over{R+h}},
+  $$
+  fr{\aa}n sf{\"a}rens centrum i riktning mot den externa punktladdningen.}
+\noindent
+Notera att placeringen f{\"o}r den virtuella punktladdningen st{\"a}mmer
+{\"o}verens till punkt och pricka med avst{\aa}ndet som vi nyss r{\"a}knade
+ut f{\"o}r en cylinder av samma radie $R$; f{\"o}r spegling av punktladdningen
+$q$ i en sf{\"a}r skalas dock den virtuella, speglade laddningen med faktorn
+$R/(R+h)$.
 
 \section{Kan jord ers{\"a}ttas med godtycklig konstant potential?}
 I samtliga uppgifter ovan har vi antagit att de perfekta ledarna kopplats till
@@ -878,17 +1110,41 @@ $\phi_0=\hbox{konstant}$?
   Det spelar ingen roll {\it hur} du finner din l{\"o}sning; om den
   (a) uppfyller Laplaces (eller Poissons!) ekvation och (b) har korrekt
   v{\"a}rde p{\aa} randen, s{\aa} {\"a}r den {\it korrekt}.''}
-\item{$\bullet$}{[Spegling av laddning i perfekt ledande plan] L{\"o}sningen
-  $\phi({\bf x})$ till Poissons ekvation f{\"o}r en punktladdning $q$ placerad
-  ett avst{\aa}nd $z=h$ ovanf{\"o}r ett perfekt ledande plan $z=0$ ges som
-  frirymdl{\"o}sningen med en virtuell spegelladdning $-q$ placerad p{\aa}
-  samma avst{\aa}nd bakom planet, vid $z=-h$.}
-\item{$\bullet$}{[Spegling av laddning i plan mellan dielektrika] Spegelladdningen placeras p{\aa} samma s{\"a}tt som i fallet med perfekt ledande plan, men ist{\"a}llet med v{\"a}rdet
-$$
-  q'={{\varepsilon_{\rm r}-\varepsilon'_{\rm r}}
-       \over{\varepsilon_{\rm r}+\varepsilon'_{\rm r}}}q,
-$$
-d{\"a}r $\varepsilon_{\rm r}$ och $\varepsilon'_{\rm r}$ {\"a}r de relativa elektriska permittiviteterna f{\"o}r respektive $z>0$ och $z<0$.
-}
+\item{$\bullet$}{[Spegling av punktladdning i perfekt ledande plan]
+  L{\"o}sningen $\phi({\bf x})$ till Poissons ekvation f{\"o}r en punktladdning
+  $q$ placerad ett avst{\aa}nd $z=h$ ovanf{\"o}r ett perfekt ledande plan $z=0$
+  ges som frirymdl{\"o}sningen med en virtuell spegelladdning $-q$ placerad
+  p{\aa} samma avst{\aa}nd bakom planet, vid $z=-h$.}
+\item{$\bullet$}{[Spegling av punktladdning i plan mellan dielektrika]
+  Spegelladdningen placeras p{\aa} samma s{\"a}tt som i fallet med perfekt
+  ledande plan, men ist{\"a}llet med v{\"a}rdet
+  $$
+    q'={{\varepsilon_{\rm r}-\varepsilon'_{\rm r}}
+         \over{\varepsilon_{\rm r}+\varepsilon'_{\rm r}}}q,
+  $$
+  d{\"a}r $\varepsilon_{\rm r}$ och $\varepsilon'_{\rm r}$ {\"a}r de relativa
+  elektriska permittiviteterna f{\"o}r respektive $z>0$ och $z<0$.}
+\item{$\bullet$}{[Spegling av linjeladdning i perfekt ledande cylinder]
+  L{\"o}sningen till Poissons ekvation f{\"o}r en linjeladdning $\lambda$
+  placerad p{\aa} ett avst{\aa}nd $R+h$ fr{\aa}n centrum av en perfekt ledande
+  cylinder med radie $R$ ges som fri\-rymds\-l{\"o}s\-ningen med en virtuell
+  linjeladdning $\lambda'=-\lambda$ placerad p{\aa} avst{\aa}ndet
+  $$
+    d={{R^2}\over{R+h}},
+  $$
+  fr{\aa}n cylinderns centrum i riktning mot den externa linjeladdningen.}
+\item{$\bullet$}{[Spegling av punktladdning i perfekt ledande sf{\"a}r]
+  L{\"o}sningen till Poissons ekvation f{\"o}r en punktladdning $q$ placerad
+  p{\aa} ett avst{\aa}nd $R+h$ fr{\aa}n centrum av en perfekt ledande sf{\"a}r
+  med radie $R$ ges som fri\-rymds\-l{\"o}s\-ningen med en virtuell
+  punktladdning
+  $$
+    q'=-{{R}\over{R+h}}q,
+  $$
+  placerad p{\aa} avst{\aa}ndet
+  $$
+    d={{R^2}\over{R+h}},
+  $$
+  fr{\aa}n sf{\"a}rens centrum i riktning mot den externa punktladdningen.}
 
 \bye

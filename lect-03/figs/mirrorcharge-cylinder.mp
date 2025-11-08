@@ -87,8 +87,9 @@ beginfig(1);
   %
   % Mission statement.
   %
-  label.lft(btex S{\"o}kt: $\phi({\bf x})$, f{\"o}r $|{\bf x}|\ge R$ etex,
-      (-40u,70u));
+  label.top(btex S{\"o}kt: $\phi({\bf x})$, f{\"o}r $|{\bf x}|\ge R$ etex,
+      (-60u,70u));
+  label.top(btex (2D: ${\bf x}=x{\bf e}_x+y{\bf e}_y$) etex, (-60u,64u));
 
   %
   % Boundary condition at the surface of the perfectly conducting cylinder.
