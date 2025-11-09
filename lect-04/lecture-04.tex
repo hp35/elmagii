@@ -59,6 +59,9 @@
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\bigskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\bigskip}
+\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+  \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{4}
@@ -66,31 +69,131 @@
 \centerline{Fredrik Jonsson, Uppsala Universitet, 11 november 2025}
 \vskip24pt
 
+\plan{Med en kort sammanfattning av historiken bakom uppt{\"a}ckandet av
+  magnetiska f{\"a}lt g{\aa}r vi in p{\aa} sj{\"a}lva definitionen av ett
+  magnetiskt f{\"a}lt som den kraft som  via Lorentz kraftlag ut{\"o}vas
+  p{\aa} en laddad partikel i r{\"o}relse. Utifr{\aa}n denna formuleras
+  Amp\`eres kraftlag f{\"o}r str{\"o}mslingor, samt att vi kan dra slutsatsen
+  att kraften p{\aa} fria laddningar aldrig utf{\"o}r n{\aa}got arbete.
+  D{\aa} vi generaliserar str{\"o}mbegreppet till en str{\"o}mt{\"a}thet
+  ${\bf J}$ kan vi under anv{\"a}ndande av Gauss lag ta fram
+  kontinuitets\-ekvationen f{\"o}r laddning, som l{\"a}nkar ihop divergensen
+  $\nabla\cdot{\bf J}$ hos str{\"o}mt{\"a}theten med tidsderivatan av
+  laddningst{\"a}theten $\rho$. Biot--Savarts lag introduceras som ett
+  axiom f{\"o}r det magnetf{\"a}lt som genereras av en str{\"o}m
+  traverserande en str{\"o}mslinga, vilket f{\"o}r {\"o}vrigt {\"a}r
+  f{\"o}rsta momentet d{\"a}r den magnetiska permeabiliteten $\mu_0$
+  introduceras. Utifr{\aa}n formen p{\aa} Biot--Savarts lag f{\"o}r
+  generering av magnetf{\"a}lt visar vi att $\nabla\cdot{\bf B}=0$
+  alltid {\"a}r uppfyllt, vilket p{\aa}visar att magnetiska monopoler
+  (magnetisk laddning) ej existerar, och att magnetism alltid endast
+  yttrar sig i form av magnetiska dipoler eller h{\"o}gre ordningar
+  i multipolutvecklingen. Vi visar att i magnetostatik kan rotationen
+  av magnetf{\"a}ltet erh{\aa}llas som $\nabla\times{\bf B}=\mu_0{\bf J}$,
+  kallad Amp\`eres lag.
+  Slutligen visar vi p{\aa} att icke-existensen av magnetiska monopoler
+  direkt har som f{\"o}ljd att vi kan tolka det magnetiska f{\"a}ltet
+  som h{\"a}rr{\"o}rande fr{\aa}n en vektorpotential ${\bf A}$, i analogi
+  med den skal{\"a}ra potentialen $\phi$ inom elektrostatik, som
+  ${\bf B}=\nabla\times{\bf A}$.
+  Amp\`eres lag kan tolkas i termer av denna vektorpotential som Poissons
+  ekvation $\nabla^2{\bf A}=-\mu_0{\bf J}$ med str{\"o}mt{\"a}theten som
+  k{\"a}llterm.}
+
 \section{Introduktion}
-Vi kommer i denna f{\"o}rel{\"a}sning att behandla konstanta str{\"o}mmar, i vilka laddningar (l{\"a}s: elektroner) r{\"o}r sig l{\"a}ngs givna f{\"a}lt eller trajektorior som i sig {\"a}r konstanta i rum och tid.\numberedfootnote{Vi kommer i denna f{\"o}rel{\"a}sning att i huvudsak f{\"o}lja Griffiths kapitel~5, sid.~210--.}
-Vi kan som en rekapitulation fr{\aa}n F{\"o}rel{\"a}sning~1 sammanfatta begreppen elektrostatik och magnetostatik enligt f{\"o}ljande:
+Vi kommer i denna f{\"o}rel{\"a}sning att behandla konstanta str{\"o}mmar, i
+vilka laddningar (l{\"a}s: elektroner) r{\"o}r sig l{\"a}ngs givna f{\"a}lt
+eller trajektorior som i sig {\"a}r konstanta i rum och tid.\numberedfootnote{Vi
+  kommer i denna f{\"o}rel{\"a}sning att i huvudsak f{\"o}lja Griffiths
+  kapitel~5, sid.~210--.}
+Vi kan som en rekapitulation fr{\aa}n F{\"o}rel{\"a}sning~1 sammanfatta
+begreppen elektrostatik och magnetostatik enligt f{\"o}ljande:
 \medskip
-\item{$\bullet$}{Station{\"a}ra laddningar $\Rightarrow$ Konstanta elektriska f{\"a}lt (elektrostatik)}
-\item{$\bullet$}{Konstanta str{\"o}mmar $\Rightarrow$ Konstanta magnetiska f{\"a}lt (magnetostatik)}
+\item{$\bullet$}{Station{\"a}ra laddningar $\Rightarrow$
+  Konstanta elektriska f{\"a}lt (elektrostatik)}
+\item{$\bullet$}{Konstanta str{\"o}mmar $\Rightarrow$
+  Konstanta magnetiska f{\"a}lt (magnetostatik)}
 \medskip
 \noindent
-Magnetostatik {\"a}r studiet av magnetf{\"a}lt i system d{\"a}r n{\"a}rvarande elektriska str{\"o}mmar {\"a}r konstanta i tid och rum. Detta {\"a}r den magnetiska analogin med elektrostatik, d{\"a}r ist{\"a}llet de elektriska laddningarna {\"a}r station{\"a}ra och fixa i tid och rum. Att vi h{\"a}r har at g{\"o}ra med statiska magnetf{\"a}lt betyder inte att teorin inte g{\aa}r att applicera p{\aa} tidsberoende problem, bara s{\aa} l{\"a}nge som f{\"o}rloppen {\"a}r l{\aa}ngsamma nog att f{\"o}r att den elektromagnetiska v{\aa}gl{\"a}ngden i problemet rej{\"a}lt {\"o}verstiger storleken p{\aa} dom{\"a}nen som analyseras.
-TIll exempel kan vanliga elektriska generatorer och motorer, exempelvis startmotorn i en bil eller generatorn i ett vidkraftverk, behandlas som magnetostatiska problem.
+Magnetostatik {\"a}r studiet av magnetf{\"a}lt i system d{\"a}r n{\"a}rvarande
+elektriska str{\"o}mmar {\"a}r konstanta i tid och rum. Detta {\"a}r den
+magnetiska analogin med elektrostatik, d{\"a}r ist{\"a}llet de elektriska
+laddningarna {\"a}r station{\"a}ra och fixa i tid och rum.
+Att vi h{\"a}r har at g{\"o}ra med statiska magnetf{\"a}lt betyder inte att
+teorin inte g{\aa}r att applicera p{\aa} tidsberoende problem, bara s{\aa}
+l{\"a}nge som f{\"o}rloppen {\"a}r l{\aa}ngsamma nog att f{\"o}r att den
+elektromagnetiska v{\aa}gl{\"a}ngden i problemet rej{\"a}lt {\"o}verstiger
+storleken p{\aa} dom{\"a}nen som analyseras.
+Till exempel kan vanliga elektriska generatorer och motorer, exempelvis
+startmotorn i en bil eller generatorn i ett vindkraftverk, med mycket god
+approximation behandlas som magnetostatiska problem, trots den uppenbara
+r{\"o}relsen och tidsberoendet i dessa problem. Nyckeln {\"a}r att det {\"a}r
+de {\it olika tidsskalorna} mellan den mekaniska r{\"o}relsen och f{\"o}r
+utbredningen av elektromagnetiska v{\aa}gor som avg{\"o}r om vi kan betrakta
+problemet som magnetostatiskt eller ej.
 
 \section{Historik}
-Magnetostatiken kan s{\"a}gas ha uppt{\"a}ckts 1269 av fransmannen Petrus Peregrinus de Maricourt, som unders{\"o}kte det magnetiska f{\"a}ltet p{\aa} ytan av en sf{\"a}risk magnet med n{\aa}lar av j{\"a}rn. Han noterade att de resulterande f{\"a}ltlinjerna som n{\aa}larna beskrev korsades p{\aa} tv{\aa} p{\aa} sf{\"a}ren motsatta punkter, som han betecknade som ``poler'' i analogi med jordens poler.\numberedfootnote{Intressant nog, som en litet sidosp{\aa}r till Maricourts observationer, s{\aa} formulerade grekiska filosofer som  Empedocles och Anaxagoras redan kring 500~BC hypotesen att jorden sannolikt var rund, utifr{\aa}n den runda skugga som jorden gav p{\aa} m{\aa}nen vid en m{\aa}nf{\"o}rm{\"o}rkelse. Kring 350~BC bistod Aristoteles med observationen att d{\aa} skepp som seglar iv{\"a}g f{\"o}rsvinner skrovet f{\"o}rst ur sikte, f{\"o}re masten, och att detta pekar p{\aa} att jorden har en rund form. F{\"o}rst 1522~AD fick vi dock ``h{\aa}rt bevis'' p{\aa} att jorden {\"a}r rund genom Magellan--Elcanos expedition som genomf{\"o}rde den f{\"o}rsta v{\"a}rldsomseglingen och d{\"a}rmed en g{\aa}ng f{\"o}r alla bevisade att vi kan resa hela v{\"a}gen runt jordklotet.}
+Magnetostatiken kan s{\"a}gas ha uppt{\"a}ckts 1269 av fransmannen Petrus
+Peregrinus de Maricourt, som unders{\"o}kte det magnetiska f{\"a}ltet p{\aa}
+ytan av en sf{\"a}risk magnet med n{\aa}lar av j{\"a}rn. Han noterade att de
+resulterande f{\"a}ltlinjerna som n{\aa}larna beskrev korsades p{\aa} tv{\aa}
+p{\aa} sf{\"a}ren motsatta punkter, som han betecknade som ``poler'' i analogi
+med jordens poler.\numberedfootnote{Intressant nog, som en litet sidosp{\aa}r
+  till Maricourts observationer kring detta med poler, s{\aa} formulerade
+  grekiska filosofer som  Empedocles och Anaxagoras redan kring 500~BC
+  hypotesen att jorden sannolikt var rund, utifr{\aa}n den runda skugga
+  som jorden gav p{\aa} m{\aa}nen vid en m{\aa}nf{\"o}rm{\"o}rkelse.
+  Kring 350~BC bistod Aristoteles med observationen att d{\aa} skepp
+  som seglar iv{\"a}g f{\"o}rsvinner skrovet f{\"o}rst ur sikte, f{\"o}re
+  masten, och att detta pekar p{\aa} att jorden har en rund form.
+  F{\"o}rst 1522~AD fick vi dock ``h{\aa}rt bevis'' p{\aa} att jorden
+  {\"a}r rund genom Magellan--Elcanos expedition som genomf{\"o}rde den
+  f{\"o}rsta v{\"a}rldsomseglingen och d{\"a}rmed en g{\aa}ng f{\"o}r
+  alla bevisade att vi kan resa hela v{\"a}gen runt jordklotet.}
 
-Maricourt formulerade ocks{\aa} den synnerligen intressanta observationen att {\it oavsett hur fint vi skivar en magnet, s{\aa} har den alltid en nord- och sydpol}. Som vi skall se h{\"a}nger detta intimt samman med att magnetism alltid manifesterar sig som dipoler (eller h{\"o}gre ordningars multipoler), och {\it aldrig som magnetisk laddning (monopoler)}, detta som en markant skillnad gentemot elektrisk laddning.
+Maricourt formulerade ocks{\aa} den synnerligen intressanta observationen att
+{\it oavsett hur fint vi skivar en magnet, s{\aa} har den alltid en nord- och
+sydpol}. Som vi skall se fram{\"o}ver i denna f{\"o}rel{\"a}sningsserie
+h{\"a}nger detta intimt samman med att magnetism alltid manifesterar sig
+som dipoler (eller h{\"o}gre ordningars multipoler), och {\it aldrig som
+magnetisk laddning (monopoler)}, detta som en markant skillnad gentemot
+elektrisk laddning.
 
-Den som r{\"a}knas som uppt{\"a}ckaren av att elektriska str{\"o}mmar genererat magnetiska f{\"a}lt {\"a}r Hans Christian {\OE}rsted, som 1820 publicerade sin uppt{\"a}ckt att en orienteringen hos en kompassn{\aa}l p{\aa}verkas av en elektrisk str{\"o}m i n{\"a}rheten av n{\aa}len.
-F{\"o}r sin uppt{\"a}ckt bel{\"o}nades {\OE}rsted av {\it The Royal Society} i England med Copley-medaljen, samt att den Franska Akademien bel{\"o}nade honom med $3\,000$ franc. {\OE}rsteds uppt{\"a}ckt kan s{\"a}gas vara startskottet f{\"o}r arbetet med att formulera den moderna elektromagnetismen, speciellt inspirerade detta den franske fysikern Andr\'e-Marie Amp\`ere till att formulera en matematisk formel f{\"o}r att beskriva den magnetiska kraften mellan str{\"o}mslingor.
+Den som r{\"a}knas som uppt{\"a}ckaren av att elektriska str{\"o}mmar genererat
+magnetiska f{\"a}lt {\"a}r Hans Christian {\OE}rsted, som 1820 publicerade sin
+uppt{\"a}ckt att en orienteringen hos en kompassn{\aa}l p{\aa}verkas av en
+elektrisk str{\"o}m i n{\"a}rheten av n{\aa}len.
+F{\"o}r sin uppt{\"a}ckt bel{\"o}nades {\OE}rsted av {\it The Royal Society} i
+England med Copley-medaljen, samt att den Franska Akademien bel{\"o}nade honom
+med $3\,000$ franc.
+{\OE}rsteds uppt{\"a}ckt kan s{\"a}gas vara startskottet f{\"o}r arbetet med
+att formulera den moderna elektromagnetismen, speciellt inspirerade detta den
+franske fysikern Andr\'e-Marie Amp\`ere till att formulera en matematisk formel
+f{\"o}r att beskriva den magnetiska kraften mellan str{\"o}mslingor.
+\vfill\eject
 
 \section{Vad {\"a}r ett magnetf{\"a}lt?}
-\quote{{\bf Definition.} Vi definierar ett magnetf{\"a}lt\numberedfootnote{I denna kurs betecknar vi magnetf{\"a}ltet ocks{\aa} som $B$-f{\"a}lt, men i andra sammanhang betecknas f{\"a}ltet {\"a}ven som $H$-f{\"a}lt, beroende vilken ing{\aa}ng och historisk konvention man r{\aa}kar ha.} som ett {\it fysiskt f{\"a}lt som beskriver magnetisk p{\aa}verkan p{\aa} r{\"o}rliga elektriska laddningar, elektriska str{\"o}mmar och magnetiska material.}}
+\quote{{\bf Definition.} Vi definierar ett magnetf{\"a}lt\numberedfootnote{I
+  denna kurs betecknar vi magnetf{\"a}ltet ocks{\aa} som $B$-f{\"a}lt,
+  men i andra sammanhang betecknas f{\"a}ltet {\"a}ven som $H$-f{\"a}lt,
+  beroende vilken ing{\aa}ng och historisk konvention man r{\aa}kar ha.
+  Den korrekta svenska termen f{\"o}r $B$-f{\"a}ltet {\"a}r egentligen
+  {\it magnetisk fl{\"o}dest{\"a}thet}.}
+som ett {\it fysiskt f{\"a}lt som beskriver magnetisk p{\aa}verkan p{\aa}
+r{\"o}rliga elektriska laddningar, elektriska str{\"o}mmar och magnetiska
+material.}}
 \noindent
-I n{\aa}gon m{\aa}n kan vi s{\"a}ga att dessa tre m{\"o}jligheter egentligen kokar ner till en enda sak, n{\"a}mligen p{\aa}verkan av r{\"o}rliga elektriska laddningar, eftersom elektrisk str{\"o}m utg{\"o}rs av r{\"o}rliga laddningar samt att magnetiska material handlar om hur materialet p{\aa} en mikroskopisk niv{\aa}, eller snarare kvantmekanisk niv{\aa}, beter sig i linjering av spinn och magnetiska moment som kan ses som mikroskopiska str{\"o}mslingor. Den kvantmekaniska behandlingen av spinn och magnetiska moment ligger dock utanf{\"o}r omfattningen av denna kurs.
+I n{\aa}gon m{\aa}n kan vi s{\"a}ga att dessa tre m{\"o}jligheter egentligen
+kokar ner till en enda sak, n{\"a}mligen p{\aa}verkan av r{\"o}rliga elektriska
+laddningar, eftersom elektrisk str{\"o}m utg{\"o}rs av r{\"o}rliga laddningar
+samt att magnetiska material handlar om hur materialet p{\aa} en mikroskopisk
+niv{\aa}, eller snarare kvantmekanisk niv{\aa}, beter sig i linjering av spinn
+och magnetiska moment som kan ses som mikroskopiska str{\"o}mslingor.
+Den kvantmekaniska behandlingen av spinn och magnetiska moment ligger dock
+utanf{\"o}r omfattningen av denna kurs.
 
-\section{Lorentz-kraften - Kraften p{\aa} r{\"o}rliga laddningar i statiska kombinerade elektriska och magnetiska f{\"a}lt}
+\section{Lorentz-kraften - Kraften p{\aa} r{\"o}rliga laddningar i statiska
+  kombinerade elektriska och magnetiska f{\"a}lt}
 \epsfig{figs/lorentz.1}\noindent
 Problemet med magnetiska f{\"a}lt {\"a}r att det fr{\aa}n ett klassiskt angreppss{\"a}tt {\"a}r om{\"o}jligt att strikt h{\"a}rleda dem {\it a priori} fr{\aa}n klassiska elektromagnetiska modeller. Vi kommer h{\"a}r att rent axiomatiskt konstatera att ett magnetf{\"a}lt ${\bf B}$ {\"a}r det f{\"a}lt som ger kraften p{\aa} en r{\"o}rlig och elektriskt laddad partikel med laddningen $q$ och hastigheten ${\bf v}$ som
 $$
@@ -116,7 +219,10 @@ f{\"a}lt, s{\aa} erh{\aa}ller vi {\it Lorentz-kraften}\numberedfootnote{Som,
 $$
   {\bf F}=q\big({\bf E}+({\bf v}\times{\bf B})\big).
 $$
-{\AA}terigen, vi h{\"a}vdar h{\"a}r inte att vi i denna kurs p{\aa} n{\aa}got vis kommer att h{\"a}rleda denna relation; vi kommer h{\"a}r ist{\"a}llet att helt luta oss mot att denna form {\"a}r experimentellt verifierad efter alla konstens regler och d{\"a}rmed n{\"o}ja oss med det.
+{\AA}terigen, vi h{\"a}vdar h{\"a}r inte att vi i denna kurs p{\aa} n{\aa}got
+vis kommer att h{\"a}rleda denna relation; vi kommer h{\"a}r ist{\"a}llet att
+helt luta oss mot att denna form {\"a}r experimentellt verifierad efter alla
+konstens regler och d{\"a}rmed n{\"o}ja oss med det.
 
 \subsection{Magnetisk kraft utf{\"o}r inget arbete}
 Utifr{\aa}n formen p{\aa} Lorentz-kraften kan vi dra en viktig och generell
