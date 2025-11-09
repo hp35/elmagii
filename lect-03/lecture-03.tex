@@ -245,7 +245,7 @@ Med andra ord:\numberedfootnote{Vi hoppar h{\"a}r direkt in i fallet
   i internationell litteratur ofta som {\it Maximum (or minimum)
   principle for harmonic functions}.}
 \quote{{\bf Teorem~I.}
-L{\"o}sningar till Laplaces ekvation saknar lokala extrempunkter.}
+  L{\"o}sningar till Laplaces ekvation saknar lokala extrempunkter.}
 \noindent
 Vi kommer nu att bevisa detta p{\aa}st{\aa}ende p{\aa} ett lite annorlunda
 s{\"a}tt {\"a}n i Griffiths, d{\"a}r man ist{\"a}llet fokuserar p{\aa}
@@ -660,12 +660,15 @@ har vi d{\"a}rmed {\"a}ven tagit fram den vektoriella beskrivningen av det
 elektriska f{\"a}ltet fr{\aa}n en elektrisk dipol, n{\aa}got som vi kommer att
 {\aa}terv{\"a}nda till och vidareutveckla i F{\"o}rel{\"a}sning~8 senare i denna
 kurs.
-\par\centerline{\epsfxsize=144mm\epsfbox{extras/lindipole-str.eps}}
+\par\centerline{\epsfxsize=144mm\epsfbox{potentials/planarmirror-efield.eps}}
 \noindent
-{\captionwide Skal{\"a}r potential $\phi(x,y)$ f{\"o}r en elektrisk dipol i
-  planet med en punktladdning $+q$ placerad i $(x,y)=(0,h)$ och en negativ
-  laddning $-q$ placerad i $(x,y)=(0,-h)$, med resulterande elektriska
-  f{\"a}ltlinjer ${\bf E}(x,y)=-\nabla\phi(x,y)$.}
+{\captionwide Skal{\"a}r potential $\phi(x,y)$ f{\"o}r en punktladdning
+  $+q$ placerad i $(x,y)=(0,h)$ och en virtuell, speglad punktladdning
+  $-q$ placerad i $(x,y)=(0,-h)$, med resulterande elektriska f{\"a}ltlinjer
+  erh{\aa}llna fr{\aa}n potentialen som ${\bf E}(x,y)=-\nabla\phi(x,y)$.
+  Det perfekt ledande, speglande planet vid $z=0$ {\"a}r i f{\"a}ltet
+  inritad som en streckad r{\"o}d linje. Samtliga f{\"a}ltlinjer sk{\"a}r
+  det perfekt ledande planet ortogonalt mot denna.}
 \vfill\eject
 
 \subsection{Laddningsf{\"o}rdelningen i det perfekt ledande planet $z=0$}
@@ -1030,6 +1033,7 @@ sj{\"a}lva grundantagandet om att vi har Laplace ekvation {\"o}verallt med
 undantag f{\"o}r sj{\"a}lva k{\"a}lladdningen som vi speglar, oavsett om det
 {\"a}r en punktladdning eller linjeladdning eller n{\aa}gon annan konfiguration
 som {\"a}r sj{\"a}lva k{\"a}llan i problemet.
+\vfill\eject
 
 \subsection{Sammanfattning av virtuell speglad linjeladdning i cylindrisk yta}
 Vi kan sammanfatta denna exercis i konstruktion av en l{\"o}sning till problemet
@@ -1048,6 +1052,24 @@ medium att:
   $$
   fr{\aa}n cylinderns centrum i riktning mot den externa linjeladdningen.}
 \noindent
+Vi b{\"o}r f{\"o}r sakens skull {\"a}ven passa p{\aa} att sammanfatta detta
+som en explicit form involverande den s{\"o}kta potentialen, som med
+ovanst{\aa}ende form p{\aa} $d$ lyder
+$$
+  \phi({\bf x})
+    ={{\lambda}\over{2\pi\varepsilon_0}}
+       \ln\bigg({{|{\bf x}-d{\bf e}_x|}\over{|{\bf x}-(R+h){\bf e}_x|}}\bigg),
+$$
+med principellt utseende enligt nedan.
+\par\centerline{\epsfxsize=144mm\epsfbox{potentials/cylindricmirror-efield.eps}}
+\noindent
+{\captionwide Skal{\"a}r potential $\phi(x,y)$ f{\"o}r en linjeladdning
+  $\lambda$ placerad vid $x=R+h$ (med $R=0.7$, $h=1.5$) utanf{\"o}r en
+  perfekt ledande cylinder med radien $R$, med resulterande elektriska
+  f{\"a}ltlinjer fr{\aa}n potentialen som ${\bf E}(x,y)=-\nabla\phi(x,y)$.
+  Cylindern {\"a}r i f{\"a}ltet inritad som en streckad r{\"o}d cirkel.
+  Samtliga f{\"a}ltlinjer sk{\"a}r den perfekt ledande cylindern ortogonalt
+  mot denna.}
 \vfill\eject
 
 \section{Spegelladdningar i sf{\"a}riska perfekt ledande gr{\"a}nsytor}
