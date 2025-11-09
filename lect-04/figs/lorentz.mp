@@ -33,7 +33,8 @@ beginfig(1);
   phi:=90;
   pb:=pa+14u*(cosd(phi),sind(phi));
   drawarrow pa--pb;
-  label.urt(btex ${\bf F}$ etex, pb);
+  label.urt(btex ${\bf F}=q({\bf v}\times{\bf B})
+      \quad\Rightarrow\quad{\bf F}\perp{\bf v},\ {\bf F}\perp{\bf B}$ etex, pb);
 
   phi:=-16;
   pb:=pa+14u*(cosd(phi),sind(phi));
