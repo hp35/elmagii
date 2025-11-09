@@ -61,7 +61,8 @@ beginfig(1);
   label.lrt(btex ${\bf x}$ etex, point .5 of (pa--pb));
   
   drawarrow pl--pb;
-  label.lrt(btex ${\bf x}-{\bf x}'$ etex, point .5 of (pl--pb));
+  label.top(btex ${\bf x}-{\bf x}'$ etex, (0u,0u))
+    rotated (angle(pl-pb)+180) shifted (point .5 of (pl--pb));
   dotlabel.urt(btex \vbox{\hbox{Observationspunkt}
       \hbox{f{\"o}r magnetf{\"a}lt ${\bf B}({\bf x})$}} etex, pb);
 
