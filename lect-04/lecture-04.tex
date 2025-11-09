@@ -882,7 +882,8 @@ kan vi motivera att bidraget till rotationen av det magnetiska f{\"a}ltet
 fr{\aa}n ``Term~2'' {\"a}r noll.
 
 \subsection{Slutligt resultat f{\"o}r rotationen av magnetf{\"a}ltet}
-L{\aa}t oss nu s{\"a}tta samman dessa delresultat f{\"o}r ``Term~1'' och ``Term~2'' till ett uttyck f{\"o}r rotationen f{\"o}r magnetf{\"a}ltet,
+L{\aa}t oss nu s{\"a}tta samman dessa delresultat f{\"o}r ``Term~1'' och
+``Term~2'' till ett uttyck f{\"o}r rotationen f{\"o}r magnetf{\"a}ltet,
 $$
   \eqalign{
   \nabla\times{\bf B}({\bf x})
@@ -917,118 +918,160 @@ $$
 $$
 
 \section{Amp\`eres lag}
-V{\aa}rt slutliga resultat f{\"o}r rotationen f{\"o}r det magnetiska f{\"a}ltet p{\aa} differentiell form,
+V{\aa}rt slutliga resultat f{\"o}r rotationen f{\"o}r det magnetiska f{\"a}ltet
+p{\aa} differentiell form,
 $$
   \nabla\times{\bf B}=\mu_0{\bf J},
 $$
-kallas f{\"o}r {\it Amp\`eres lag}, och kommer fram{\"o}ver i kursen att ha en stor betydelse inte bara f{\"o}r hur vi kan ber{\"a}kna kopplingen mellan str{\"o}mmar och magnetf{\"a}lt, utan {\"a}ven (som det kommer att visa sig i F{\"o}rel{\"a}sning~9) f{\"o}r hur vi kan formulera elektromagnetisk v{\aa}gutbredning med Maxwell's ekvationer (med assistans av en till{\"a}ggsterm till Amp\`eres magnetostatiska lag, som vi d{\aa} kommer att g{\aa} igenom). Notera hur vi fortfarande kan sp{\aa}ra f{\"o}rekomsten av $\mu_0$ till Biot--Savarts lag.
+kallas f{\"o}r {\it Amp\`eres lag}, och kommer fram{\"o}ver i kursen att ha en
+stor betydelse inte bara f{\"o}r hur vi kan ber{\"a}kna kopplingen mellan
+str{\"o}mmar och magnetf{\"a}lt, utan {\"a}ven (som det kommer att visa sig
+i F{\"o}rel{\"a}sning~9) f{\"o}r hur vi kan formulera elektromagnetisk
+v{\aa}gutbredning med Maxwell's ekvationer (med assistans av en till{\"a}ggsterm
+till Amp\`eres magnetostatiska lag, som vi d{\aa} kommer att g{\aa} igenom).
+{\it Notera h{\"a}r hur vi genomg{\aa}ende kan sp{\aa}ra f{\"o}rekomsten av
+$\mu_0$ till Biot--Savarts lag.}
 
-Amp\`eres lag kan enkelt omformuleras p{\aa} integralform genom anv{\"a}ndandet av Stokes teorem f{\"o}r en sluten slinga $\Gamma$ inneslutande en yta $S$ i magnetf{\"a}ltet och str{\"o}mt{\"a}theten, som\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa} Griffiths, {\it Curl theorem}.}
+Amp\`eres lag kan enkelt omformuleras p{\aa} integralform genom anv{\"a}ndandet
+av Stokes teorem, f{\"o}r en sluten slinga $\Gamma$ inneslutande en yta $S$ i
+magnetf{\"a}ltet och str{\"o}mt{\"a}theten, som\numberedfootnote{Se exempelvis
+  innerp{\"a}rmen p{\aa} Griffiths, {\it Curl theorem}.}
 $$
-  \iint_{S}(\nabla\times{\bf B})\cdot d{\bf S}=
+  \iint_{S}(\nabla\times{\bf B})\cdot d{\bf A}=
   \oint_{\Gamma}{\bf B}\cdot d{\bf l}=
-  \mu_0\iint_{S}{\bf J}\cdot d{\bf S},
+  \mu_0\iint_{S}{\bf J}\cdot d{\bf A},
 $$
-d{\"a}r nu $\iint_{S}{\bf J}\,d{\bf S}=I_{\rm enc}$ {\"a}r den av $\Gamma$ inneslutna str{\"o}mmen (med andra ord den totala str{\"o}m som passerar genom integrationsytan $S$). Med andra ord har vi integralformen av Amp\`eres lag som
+d{\"a}r nu $\iint_{S}{\bf J}\cdot d{\bf A}=I_{\rm enc}$ {\"a}r den av $\Gamma$
+inneslutna str{\"o}mmen (med andra ord den totala str{\"o}m som passerar genom
+integrationsytan $S$). Med andra ord har vi integralformen av Amp\`eres lag som
 $$
   \oint_{\Gamma}{\bf B}\,d{\bf l}=\mu_0I_{\rm enc}.
 $$
-Denna form {\"a}r ofta att f{\"o}redra i situationer d{\aa} vi kan utnyttja rent geometriskt--symmetriskt gynn\-samma situationer. Exempel: Ber{\"a}kning av magnetf{\"a}lt genererade runt str{\"o}mslingor, i samma geometri som i Biot--Savarts ursprungliga experiment.\numberedfootnote{Oneliner f{\"o}r magnetf{\"a}lt runt o{\"a}ndlig rak ledare b{\"a}rande str{\"o}mmen $I$:
-$$
-  \oint_{\Gamma}{\bf B}\,d{\bf l}
-    =\int^{2\pi}_{0}B_{\varphi}(r)\,rd\varphi
-    =2\pi rB_{\varphi}(r)
-    =\mu_0 I_{\rm enc}
-    =\mu_0 I\quad\Rightarrow\quad
-  B_{\varphi}(r)={{\mu_0 I}\over{2\pi r}}.
-$$}
+Denna form {\"a}r ofta att f{\"o}redra i situationer d{\aa} vi kan utnyttja rent
+geometriskt--symmetriskt gynn\-samma situationer, p{\aa} precis samma s{\"a}tt
+som vi kunnat konstatera med Gauss lag och hur den markant kan f{\"o}renkla
+probleml{\"o}sande i elektrostatiska problem med symmetrier n{\"a}rvarande.
+
+Exempel: Ber{\"a}kning av magnetf{\"a}lt genererade runt str{\"o}mslingor,
+i samma geometri som i Biot--Savarts ursprungliga
+experiment.\numberedfootnote{Oneliner f{\"o}r magnetf{\"a}lt runt
+  o{\"a}ndlig rak ledare b{\"a}rande str{\"o}mmen $I$:
+  $$
+    \oint_{\Gamma}{\bf B}\,d{\bf l}
+      =\int^{2\pi}_{0}B_{\varphi}(r)\,rd\varphi
+      =2\pi rB_{\varphi}(r)
+      =\mu_0 I_{\rm enc}
+      =\mu_0 I\quad\Rightarrow\quad
+    B_{\varphi}(r)={{\mu_0 I}\over{2\pi r}}.
+  $$}
 
 \section{Vektorpotentialen}
-Vi erinrar oss att ekvationen $\nabla\times{\bf E}={\bf 0}$ i elektrostatiken ledde oss till att dra slutsatsen att det existerar en skal{\"a}r potential definierad genom ${\bf E}=-\nabla\phi$. P{\aa} samma s{\"a}tt inbjuder $\nabla\cdot{\bf B}=0$ (det vill s{\"a}ga att inga magnetiska monopoler existerar) oss till att via {\it vektoridentieteten}\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa} Griffiths, {\it Second derivatives (9)}.}
+Vi erinrar oss att ekvationen $\nabla\times{\bf E}={\bf 0}$ i elektrostatiken
+ledde oss till att dra slutsatsen att det existerar en skal{\"a}r potential
+definierad genom ${\bf E}=-\nabla\phi$. P{\aa} samma s{\"a}tt inbjuder
+$\nabla\cdot{\bf B}=0$ (det vill s{\"a}ga att {\it inga magnetiska monopoler
+existerar}) oss till att via {\it vektoridentieteten}\numberedfootnote{Se
+  exempelvis innerp{\"a}rmen p{\aa} Griffiths, {\it Second derivatives (9)}.}
 $$
   \nabla\cdot(\nabla\times{\bf A})=0
 $$
-tolka magnetf{\"a}ltet ${\bf B}$ som sprunget ur en {\it vektorpotential} ${\bf A}$ enligt
+tolka magnetf{\"a}ltet ${\bf B}$ som sprunget ur en {\it vektorpotential}
+${\bf A}$ enligt
 $$
   {\bf B}=\nabla\times{\bf A}.
 $$
-Om vi substituerar denna potential f{\"o}r magnetf{\"a}ltet ${\bf B}$ i Amp\`eres lag p{\aa} differentialform, s{\aa} erh{\aa}ller vi f{\"o}r v{\"a}nsterledet\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa} Griffiths, {\it Second derivatives (11)}.}
+Om vi substituerar denna potential f{\"o}r magnetf{\"a}ltet ${\bf B}$ i
+Amp\`eres lag p{\aa} differentialform, s{\aa} erh{\aa}ller vi f{\"o}r
+v{\"a}nsterledet\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa}
+  Griffiths, {\it Second derivatives (11)}.}
 $$
   \nabla\times{\bf B}=\nabla\times(\nabla\times{\bf A})
     =\nabla\underbrace{(\nabla\cdot{\bf A})}_{=0}-\nabla^2{\bf A}
     =-\nabla^2{\bf A}
 $$
-Detta g{\"o}r att vi kan formulera Amp\`eres lag i termer av vektorpotentialen som\numberedfootnote{Griffiths Ekv.~(5.64), sid.~244. Notera att liksom i fallet med Poissons ekvation $\nabla^2\phi=-\rho/\varepsilon_0$ f{\"o}r den elektrostatiska skal{\"a}ra potentialen fr{\aa}n F{\"o}rel{\"a}sning~3, s{\aa} betraktar Griffiths denna form som s{\aa} fundamental att den {\"a}r den andra som visas p{\aa} omslaget till {\it Introduction to Electrodynamics}.}
+Detta g{\"o}r att vi kan formulera Amp\`eres lag i termer av vektorpotentialen
+som\numberedfootnote{Griffiths Ekv.~(5.64), sid.~244. Notera att liksom i
+  fallet med Poissons ekvation $\nabla^2\phi=-\rho/\varepsilon_0$ f{\"o}r
+  den elektrostatiska skal{\"a}ra potentialen fr{\aa}n F{\"o}rel{\"a}sning~3,
+  s{\aa} betraktar Griffiths denna form som s{\aa} fundamental att den
+  {\"a}r den andra som visas p{\aa} omslaget till {\it Introduction to
+  Electrodynamics}.}
 $$
   \nabla^2{\bf A}=-\mu_0{\bf J}.
 $$
 \vfill\eject
 
 \section{Sammanfattning av F{\"o}rel{\"a}sning~4 -- Magnetostatik}
-\item{$\bullet$}{Lorentz-kraften p{\aa} fri laddning $q$ med hastighet ${\bf v}$ {\"a}r
-$$
-  {\bf F}=q\big({\bf E}+({\bf v}\times{\bf B})\big).
-$$
-}
-\item{$\bullet$}{Magnetiska krafter (p{\aa} fria laddningar) utf{\"o}r inget arbete!}
-\item{$\bullet$}{Amp\`eres kraftlag p{\aa} str{\"o}mslinga b{\"a}rande str{\"o}mmen $I$,
-$$
-  {\bf F}_{\rm mag}=\int^{{\bf x}_b}_{{\bf x}_a} ({\bf I}\times{\bf B})\,dl.
-$$
-}
-\item{$\bullet$}{Str{\"o}mmen $I$ genom en yta $S$ ges av str{\"o}mt{\"a}theten ${\bf J}$ som
-$$
-  I=\iint_S {\bf J}\cdot d{\bf A}.
-$$
-}
-\item{$\bullet$}{Lagen om att elektrisk laddning inte kan f{\"o}rsvinna beskrivs av sambandet mellan str{\"o}mt{\"a}thet ${\bf J}$ och laddningst{\"a}thet $\rho$ som
-$$
-  \nabla\cdot{\bf J}=-{{d\rho}\over{dt}}.
-$$
-}
+\item{$\bullet$}{Lorentz-kraften p{\aa} fri laddning $q$ med hastighet
+  ${\bf v}$ {\"a}r
+  $$
+    {\bf F}=q\big({\bf E}+({\bf v}\times{\bf B})\big).
+  $$}
+\item{$\bullet$}{Magnetiska krafter (p{\aa} fria laddningar) utf{\"o}r
+  inget arbete!}
+\item{$\bullet$}{Amp\`eres kraftlag p{\aa} str{\"o}mslinga b{\"a}rande
+  str{\"o}mmen $I$,
+  $$
+    {\bf F}_{\rm mag}=\int^{{\bf x}_b}_{{\bf x}_a} ({\bf I}\times{\bf B})\,dl.
+  $$}
+\item{$\bullet$}{Str{\"o}mmen $I$ genom en yta $S$ ges av str{\"o}mt{\"a}theten
+  ${\bf J}$ som
+  $$
+    I=\iint_S {\bf J}\cdot d{\bf A}.
+  $$}
+\item{$\bullet$}{Lagen om att elektrisk laddning inte kan f{\"o}rsvinna
+  beskrivs av sambandet mellan str{\"o}mt{\"a}thet ${\bf J}$ och
+  laddningst{\"a}thet $\rho$ som
+  $$
+    \nabla\cdot{\bf J}=-{{d\rho}\over{dt}}.
+  $$}
 \item{$\bullet$}{Statiska problem definieras av att
-$$
-  {{d\rho}\over{dt}}=0\quad\underline{\hbox{och}}\quad{{d{\bf J}}\over{dt}}=0.
-$$
-}
-\item{$\bullet$}{Divergensen av str{\"o}mt{\"a}theten {\"a}r noll i {\it statiska problem}, vilket {\"a}r en direkt f{\"o}ljd av att laddnings\-t{\"a}t\-heten {\"a}r tidsoberoende,
-$$
-  {{d\rho}\over{dt}}=0\quad\Rightarrow\quad\nabla\cdot{\bf J}=0.
-$$
-}
-\item{$\bullet$}{Biot--Savarts generella lag f{\"o}r samband mellan magnetf{\"a}ltet ${\bf B}$ och str{\"o}mt{\"a}theten ${\bf J}$ ges som
-$$
-  {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
-  {{{\bf J}({\bf x}')\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV',
-$$
-d{\"a}r $\mu_0=4\pi\times10^{-7}\ {\rm H}/{\rm m}$ (exakt, per definition) {\"a}r den magnetiska permeabiliteten i vakuum. Biot--Savarts motsvarande lag f{\"o}r str{\"o}mslingor med str{\"o}m $I$ ges som
-$$
-  {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\int^{{\bf x}_b}_{{\bf x}_a}
-  {{{\bf I}({\bf x}')\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dl'.
-$$
-}
+  $$
+    {{d\rho}\over{dt}}=0\quad\underline{\hbox{och}}\quad{{d{\bf J}}\over{dt}}=0.
+  $$}
+\item{$\bullet$}{Divergensen av str{\"o}mt{\"a}theten {\"a}r noll i
+  {\it statiska problem}, vilket {\"a}r en direkt f{\"o}ljd av att
+  laddnings\-t{\"a}t\-heten {\"a}r tidsoberoende,
+  $$
+    {{d\rho}\over{dt}}=0\quad\Rightarrow\quad\nabla\cdot{\bf J}=0.
+  $$}
+\item{$\bullet$}{Biot--Savarts generella lag f{\"o}r samband mellan
+  magnetf{\"a}ltet ${\bf B}$ och str{\"o}mt{\"a}theten ${\bf J}$ ges som
+  $$
+    {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
+        {{{\bf J}({\bf x}')\times({\bf x}-{\bf x}')}
+          \over{|{\bf x}-{\bf x}'|^3}}\,dV',
+  $$
+  d{\"a}r $\mu_0=4\pi\times10^{-7}\ {\rm H}/{\rm m}$ (exakt, per definition)
+  {\"a}r den magnetiska permeabiliteten i vakuum. Biot--Savarts motsvarande
+  lag f{\"o}r str{\"o}mslingor med str{\"o}m $I$ ges som
+  $$
+    {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\int^{{\bf x}_b}_{{\bf x}_a}
+        {{{\bf I}({\bf x}')\times({\bf x}-{\bf x}')}
+          \over{|{\bf x}-{\bf x}'|^3}}\,dl'.
+  $$}
 \item{$\bullet$}{Det g{\"a}ller {\it alltid} att
-$$
-  \nabla\cdot{\bf B}=0.
-$$
-Nollan i h{\"o}gerledet har som direkt f{\"o}ljd, via tolkning genom Gauss lag,  att ``magnetisk laddning'' inte existerar! (``Magnetisk laddning'' {\"a}r h{\"a}r ekvivalent med ``magnetiska monopoler''.)
-}
+  $$
+    \nabla\cdot{\bf B}=0.
+  $$
+  Nollan i h{\"o}gerledet har som direkt f{\"o}ljd, via tolkning genom
+  Gauss lag,  att ``magnetisk laddning'' inte existerar! (``Magnetisk
+  laddning'' {\"a}r h{\"a}r ekvivalent med ``magnetiska monopoler''.)}
 \item{$\bullet$}{Amp\`eres lag p{\aa} integral- respektive differentialform,
-$$
-  \oint_{\Gamma}{\bf B}\,d{\bf l}=\mu_0I_{\rm enc}
-  \quad\Leftrightarrow\quad
-  \nabla\times{\bf B}=\mu_0{\bf J}.
-$$
-}
-\item{$\bullet$}{Ur ``lagen om att inga magnetiska monopoler existerar'' kan vi direkt formulera vektorpotentialen ${\bf A}$ som
-$$
-  \nabla\cdot{\bf B}=0\quad\Leftrightarrow\quad{\bf B}=\nabla\times{\bf A}.
-$$
-}
-\item{$\bullet$}{Amp\`eres lag f{\"o}r vektorpotentialen ${\bf A}$ (andra ekvationen p{\aa} omslaget p{\aa} Griffiths!),
-$$
-  \nabla^2{\bf A}=-\mu_0{\bf J}.
-$$
-}
+  $$
+    \oint_{\Gamma}{\bf B}\,d{\bf l}=\mu_0I_{\rm enc}
+    \quad\Leftrightarrow\quad
+    \nabla\times{\bf B}=\mu_0{\bf J}.
+  $$}
+\item{$\bullet$}{Ur ``lagen om att inga magnetiska monopoler existerar''
+  kan vi direkt formulera vektorpotentialen ${\bf A}$ som
+  $$
+    \nabla\cdot{\bf B}=0\quad\Leftrightarrow\quad{\bf B}=\nabla\times{\bf A}.
+  $$}
+\item{$\bullet$}{Amp\`eres lag f{\"o}r vektorpotentialen ${\bf A}$ (andra
+  ekvationen p{\aa} omslaget p{\aa} Griffiths!),
+  $$
+    \nabla^2{\bf A}=-\mu_0{\bf J}.
+  $$}
 
 \bye
