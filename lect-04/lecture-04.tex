@@ -656,7 +656,7 @@ I det magnetostatiska fall som vi h{\"a}r g{\aa}tt igenom har vi med andra ord
 att det magnetiska fl{\"o}det ut genom en sluten yta alltid {\"a}r identiskt
 noll, och vi har d{\"a}rmed ingen m{\"o}jlighet att innesluta n{\aa}gon
 ``magnetisk laddning''. V{\aa}r slutsats blir d{\"a}rmed:
-\quote{{\it $\nabla\cdot{\bf B}=0$ betyder att det inte existerar
+\quote{{\it Att $\nabla\cdot{\bf B}=0$ betyder att det inte existerar
   n{\aa}gon magnetisk laddning!}}
 \noindent
 Med konstaterandet att ``magnetisk laddning inte existerar'' menar vi h{\"a}r
@@ -669,7 +669,15 @@ handlar om {\it elektriska monopoler} (som ju faktiskt existerar) som kan
 s{\"a}ttas samman till elektriska dipoler.
 
 \section{Rotationen f{\"o}r magnetf{\"a}ltet}
-Med den intressanta observationen att magnetiska monopoler inte existerar i bagaget, l{\aa}t oss nu g{\aa} vidare med rotationen av magnetf{\"a}ltet. Vi anv{\"a}nder {\"a}ven h{\"a}r den generella formen av Biot--Savarts lag\numberedfootnote{Notera hur vi {\"a}ven nu tar avstamp i Biot--Savarts lag som den bas fr{\aa}n vilket allt inom elektrostatiken tar sin b{\"o}rjan, samt hur permeabiliteten $\mu_0$ hakar p{\aa} i allt som h{\"a}rleds fr{\aa}n denna.}, vilken d{\aa} vi applicerar rotationen ({\aa}terigen med observationen att $\nabla$ opererar p{\aa} oprimmade koordinater ${\bf x}$) ger oss att
+Med den intressanta observationen att {\it magnetiska monopoler inte existerar}
+i bagaget, l{\aa}t oss nu g{\aa} vidare med rotationen av magnetf{\"a}ltet.
+Vi anv{\"a}nder {\"a}ven h{\"a}r den generella formen av Biot--Savarts
+lag,\numberedfootnote{Notera hur vi {\"a}ven nu tar avstamp i Biot--Savarts
+  lag som den bas fr{\aa}n vilket allt inom elektrostatiken tar sin
+  b{\"o}rjan, samt hur permeabiliteten $\mu_0$ hakar p{\aa} i allt
+  som h{\"a}rleds fr{\aa}n denna.}
+vilken d{\aa} vi applicerar rotationen ({\aa}terigen med observationen att
+$\nabla$ opererar p{\aa} {\it oprimmade} koordinater ${\bf x}$) ger oss att
 $$
   \eqalign{
   \nabla\times{\bf B}({\bf x})
@@ -679,7 +687,12 @@ $$
       \bigg)\,dV'\cr
   }
 $$
-Liksom i fallet med divergensen kommer vi nu att anv{\"a}nda en produktregel fr{\aa}n innerp{\"a}rmen p{\aa} Griffiths, i detta fall {\it Product Rule \#8}, som med sina fyra termer {\"a}r aningen st{\"o}kigare, dock liksom tidigare med ${\bf A}={\bf J}({\bf x}')$ (vilken {\"a}r oberoende av ${\bf x}'$ och d{\"a}rmed ger noll vid differentiering) och ${\bf B}=({\bf x}-{\bf x}')/|{\bf x}-{\bf x}'|^3$,
+Liksom i fallet med divergensen kommer vi nu att anv{\"a}nda en produktregel
+fr{\aa}n innerp{\"a}rmen p{\aa} Griffiths, i detta fall {\it Product Rule \#8},
+som med sina fyra termer {\"a}r aningen st{\"o}kigare, dock liksom tidigare
+med ${\bf A}={\bf J}({\bf x}')$ (vilken {\"a}r oberoende av ${\bf x}'$ och
+d{\"a}rmed ger noll vid differentiering) och med
+${\bf B}=({\bf x}-{\bf x}')/|{\bf x}-{\bf x}'|^3$,
 $$
   \nabla\times({\bf A}\times{\bf B})
     =\underbrace{{\bf A}(\nabla\cdot{\bf B})}_{\hbox{``Term 1''}}
@@ -689,7 +702,12 @@ $$
       -\underbrace{{\bf B}(\nabla\cdot{\bf A})}_{
          =0,\ {\bf J}(\underline{\underline{\underline{{\bf x}'}}})},
 $$
-vilket {\"o}versatt till integranden ovan resulterar i att\numberedfootnote{Just i denna h{\"a}rledning {\"a}r Griffiths lite spretig och bygger mycket p{\aa} h{\"a}rledningar som gjorts tidigare i hans {\it Introduction to Electrodynamics}. Vi kommer h{\"a}r att f{\"o}rs{\"o}ka h{\aa}lla samman den stundvis aningen komplexa h{\"a}rledningen i ett stycke, med hopp om att det blir l{\"a}ttare att f{\"o}lja resonemanget.}
+vilket {\"o}versatt till integranden ovan resulterar i att\numberedfootnote{Just
+  i denna h{\"a}rledning {\"a}r Griffiths lite spretig och bygger mycket
+  p{\aa} h{\"a}rledningar som gjorts tidigare i hans {\it Introduction to
+  Electrodynamics}. Vi kommer h{\"a}r att f{\"o}rs{\"o}ka h{\aa}lla samman
+  den stundvis aningen komplexa h{\"a}rledningen i ett stycke, med hopp om
+  att det blir l{\"a}ttare att f{\"o}lja resonemanget.}
 $$
   \eqalign{
     \nabla\times
@@ -756,12 +774,25 @@ $$
     &=0,\cr
   }
 $$
-f{\"o}r alla observationspunkter ${\bf x}$ i rummet, under f{\"o}ruts{\"a}ttningen att ${\bf x}\ne{\bf x}'$ (det vill s{\"a}ga att n{\"a}mnaren $[(x-x')^2+\ldots]^{3/2}\ne0$). Notera att detta resultat g{\"a}ller {\it oberoende} av v{\"a}rdet p{\aa} radien $R=|{\bf x}-{\bf x}'|>0$, som vi kan v{\"a}lja godtyckligt liten runt k{\"a}llpunkten ${\bf x}'$. Utifr{\aa}n detta argument kan vi dra slutsatsen att divergensen h{\"a}r kan tolkas som en delta-puls placerad i ${\bf x}'$, det vill s{\"a}ga att den {\"a}r noll {\"o}verallt i rummet utom just i k{\"a}llpunkten ${\bf x}'$, som
+f{\"o}r alla observationspunkter ${\bf x}$ i rummet, under
+f{\"o}ruts{\"a}ttningen att ${\bf x}\ne{\bf x}'$ (det vill s{\"a}ga att
+n{\"a}mnaren $[(x-x')^2+\ldots]^{3/2}\ne0$).
+Notera att detta resultat g{\"a}ller {\it oberoende} av v{\"a}rdet p{\aa} radien
+$R=|{\bf x}-{\bf x}'|>0$, som vi kan v{\"a}lja godtyckligt liten runt
+k{\"a}llpunkten ${\bf x}'$.
+Utifr{\aa}n detta argument kan vi dra slutsatsen att {\it divergensen h{\"a}r
+kan tolkas som en delta-puls} placerad i ${\bf x}'$, det vill s{\"a}ga {\it att
+den {\"a}r noll {\"o}verallt i rummet utom just i k{\"a}llpunkten} ${\bf x}'$,
+som
 $$
   \nabla\cdot{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
     =4\pi\delta({\bf x}-{\bf x}').
 $$
-Med andra ord kan vi {\"o}vers{\"a}tta ``Term~1'' ovan som\numberedfootnote{Vid en anblick p{\aa} detta {\"a}r det paradoxalt att divergensen av en funktion som bevisligen {\"o}verallt {\"a}r riktad ut{\aa}t fr{\aa}n k{\"a}llpunkten ${\bf x}'$ har v{\"a}rdet noll {\"o}verallt f{\"o}rutom just vid k{\"a}llpunkten i sig.}
+Med andra ord kan vi {\"o}vers{\"a}tta ``Term~1'' ovan som\numberedfootnote{Vid
+  en anblick p{\aa} detta {\"a}r det paradoxalt att divergensen av en funktion
+  som bevisligen {\"o}verallt {\"a}r riktad ut{\aa}t fr{\aa}n k{\"a}llpunkten
+  ${\bf x}'$ har v{\"a}rdet noll {\"o}verallt f{\"o}rutom just vid
+  k{\"a}llpunkten i sig.}
 $$
   \eqalign{
   \iiint_V
@@ -773,26 +804,82 @@ $$
     \bigg)
     }_{\hbox{``Term 1''}}\,dV'
     &=4\pi\iiint_V{\bf J}({\bf x}')\delta({\bf x}-{\bf x}')\,dV'\cr
-    &=4\pi{\bf J}({\bf x})\cr
+    &=4\pi{\bf J}({\bf x}).\cr
   }
 $$
+\vfill\eject
 
 \subsection{Term~2 i rotationen}
-Den andra termen som upptr{\"a}der i integranden som upptr{\"a}der i uttrycket f{\"o}r $\nabla\times{\bf B}$ kan {\"a}ven den utvecklas vidare,\numberedfootnote{Griffiths Ekv.~(5.54), sid.~232.} som
+Den andra termen som upptr{\"a}der i integranden som upptr{\"a}der i uttrycket
+f{\"o}r $\nabla\times{\bf B}$ kan {\"a}ven den utvecklas
+vidare,\numberedfootnote{Griffiths Ekv.~(5.54), sid.~232.} som
 $$
   \eqalign{
     \iiint_V
-    \underbrace{
-      \big({\bf J}({\bf x}')\cdot\nabla\big)
-      \bigg({{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\bigg)
-    }_{\hbox{``Term 2''}}
-    \,dV'
-    &=\big\{\hbox{ Notera att $\nabla$ }\big\}
-    \cr
-    &=
+      \underbrace{
+        \big({\bf J}({\bf x}')\cdot\nabla\big)
+        \bigg({{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\bigg)
+      }_{\hbox{``Term 2''}}\,dV'
+    &=\big\{\hbox{ Notera att $\nabla$ opererar p{\aa} ${\bf x}$ }\big\}\cr
+    &=\big\{\hbox{ $\nabla\to\nabla'\quad\Rightarrow\quad$ teckenbyte }\big\}\cr
+    &=-\iiint_V
+        \big({\bf J}({\bf x}')\cdot\nabla'\big)
+        \bigg({{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\bigg)\,dV'
     \cr
   }
 $$
+Om vi f{\"o}r enkelhets skull tittar p{\aa} detta uttryck komponentvis, med
+$x_k=x,y,z$, s{\aa} har vi att med  Griffiths {\it Product Rule (5)} och
+``${\bf A}={\bf J}$'',
+$$
+ \nabla'(f{\bf A})=f(\nabla'\cdot{\bf a})+{\bf A}\cdot(\nabla'f)
+ \quad\Leftrightarrow\quad
+ ({\bf J}\cdot\nabla')f=\nabla'(f{\bf J})-f(\nabla'\cdot{\bf J})
+$$
+att d{\aa} vi dessutom observerar att vi f{\"o}r station{\"a}ra str{\"o}mmar
+enligt tidigare har att $\nabla'\cdot{\bf J}=0$, so erh{\aa}ller vi
+$$
+  \eqalign{
+        \big({\bf J}({\bf x}')\cdot\nabla'\big)
+        \bigg(\underbrace{
+          {{x_k-x'_k}\over{|{\bf x}-{\bf x}'|^3}}
+        }_{\hbox{=``$f$''}}\bigg)
+    &=\nabla'\cdot\bigg(
+    \underbrace{
+      {{x_k-x'_k}\over{|{\bf x}-{\bf x}'|^3}}
+    }_{\hbox{=``$f$''}}{\bf J}({\bf x}')
+    \bigg)\cr
+  }
+$$
+D{\aa} vi applicerar Gauss lag p{\aa} detta resultat, under det att vi l{\aa}ter
+integrera {\"o}ver en omslutande yta stor nog att innesluta alla
+str{\"o}mb{\"a}rande k{\"a}llor till Biot--Savarts lag och att vi d{\"a}rmed
+inte har n{\aa}gra in- eller utg{\aa}ende str{\"o}mmar genom denna yta, blir
+bidraget fr{\aa}n ``Term~2'' kort och gott f{\"o}r var och en av komponenterna
+$x_k=x,y,z$ att
+$$
+  \eqalign{
+    \iiint_V
+      \underbrace{
+        \big({\bf J}({\bf x}')\cdot\nabla\big)
+        \bigg({{(x_k-x'_k)}\over{|{\bf x}-{\bf x}'|^3}}\bigg)
+      }_{\hbox{``Term 2''}}\,dV'
+    &=-\iiint_V\nabla'\cdot\bigg(
+      {{x_k-x'_k}\over{|{\bf x}-{\bf x}'|^3}}{\bf J}({\bf x}')
+      \bigg)
+      \,dV'\cr
+    &=\big\{\hbox{ Gauss lag }\big\}\cr
+    &=-\oiint_S\bigg(
+      {{x_k-x'_k}\over{|{\bf x}-{\bf x}'|^3}}{\bf J}({\bf x}')
+      \bigg)\cdot d{\bf A}\cr
+    &=0.
+  }
+$$
+Med andra ord, genom att utnyttja v{\aa}r frihet att definiera v{\aa}r
+integrationsdom{\"a}n till att helt innesluta str{\"o}mmarna som utg{\"o}r
+k{\"a}llor i Biot--Savarts lag, n{\aa}got som faller sig helt naturligt, s{\aa}
+kan vi motivera att bidraget till rotationen av det magnetiska f{\"a}ltet
+fr{\aa}n ``Term~2'' {\"a}r noll.
 
 \subsection{Slutligt resultat f{\"o}r rotationen av magnetf{\"a}ltet}
 L{\aa}t oss nu s{\"a}tta samman dessa delresultat f{\"o}r ``Term~1'' och ``Term~2'' till ett uttyck f{\"o}r rotationen f{\"o}r magnetf{\"a}ltet,
@@ -825,14 +912,14 @@ $$
           }_{\hbox{``Term 2''}}
           \,dV'
         }_{\displaystyle=0,\hbox{ enligt ovan}}\cr
-    &=\mu_0{\bf J}.
+    &=\mu_0{\bf J}({\bf x}).
   }
 $$
 
 \section{Amp\`eres lag}
 V{\aa}rt slutliga resultat f{\"o}r rotationen f{\"o}r det magnetiska f{\"a}ltet p{\aa} differentiell form,
 $$
-  \nabla\times{\bf B}=\mu_0{\bf J}.
+  \nabla\times{\bf B}=\mu_0{\bf J},
 $$
 kallas f{\"o}r {\it Amp\`eres lag}, och kommer fram{\"o}ver i kursen att ha en stor betydelse inte bara f{\"o}r hur vi kan ber{\"a}kna kopplingen mellan str{\"o}mmar och magnetf{\"a}lt, utan {\"a}ven (som det kommer att visa sig i F{\"o}rel{\"a}sning~9) f{\"o}r hur vi kan formulera elektromagnetisk v{\aa}gutbredning med Maxwell's ekvationer (med assistans av en till{\"a}ggsterm till Amp\`eres magnetostatiska lag, som vi d{\aa} kommer att g{\aa} igenom). Notera hur vi fortfarande kan sp{\aa}ra f{\"o}rekomsten av $\mu_0$ till Biot--Savarts lag.
 
