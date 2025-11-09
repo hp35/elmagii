@@ -38,5 +38,62 @@ In this directory, the included `Makefile` can be used to regenerate the
 documents, figures and graphs. Just run `make` and ensure to install any
 missing components in case there are any complaints.
 
+## List of figures
+
+[`figs/condsurf.mp`](figs/condsurf.mp)
+    ([`figs/condsurf.pdf`](figs/condsurf.pdf))
+    <i>MetaPost drawing of the normal vector and electric field from
+    an arbitrary surface S.</i>
+
+[`figs/extrema.mp`](figs/extrema.mp)
+    ([`figs/extrema.pdf`](figs/extrema.pdf))
+    <i>MetaPost drawing of the sphere used in proving that no local extremum
+    points exist for solutions to Laplace's equation, in particular for the
+    scalar electrostatic potential.</i>
+
+[`figs/faradaycage.mp`](figs/faradaycage.mp)
+    ([`figs/faradaycage.pdf`](figs/faradaycage.pdf))
+    <i>MetaPost drawing of Faraday's cage, being a special case of the
+    uniqueness configuration.</i>
+
+[`figs/mirrorcharge-cylinder.mp`](figs/mirrorcharge-cylinder.mp)
+    ([`figs/mirrorcharge-cylinder.pdf`](figs/mirrorcharge-cylinder.pdf))
+    <i>MetaPost drawing of a linecharge lambda placed along and outside of
+    a cylindrical perfect conductor, constuting the "gedankenexperiment"
+    of mirrored line charges and perfectly conducting cylindrical surfaces.</i>
+
+[`figs/mirrorplane-dielectrica.mp`](figs/mirrorplane-dielectrica.mp)
+    ([`figs/mirrorplane-dielectrica.pdf`](figs/mirrorplane-dielectrica.pdf))
+    <i>MetaPost drawing of a charge <i>q</i> placed at <i>z</i>=<i>h</i>
+    inside a dielectricum with relative electric permittivity
+    &epsilon;<sub>r</sub> and a virtual mirror charge <i>q</i>' placed at
+    <i>z</i>=&minus;<i>h</i> inside a dielectricum with relative electric
+    permittivity &epsilon;'<sub>r</sub>, constuting the "gedankenexperiment"
+    of mirror charges and planar interfaces between dielectrica.</i>
+
+[`figs/mirrorplane-gedanken-general.mp`](figs/mirrorplane-gedanken-general.mp)
+    ([`figs/mirrorplane-gedanken-general.pdf`](figs/mirrorplane-gedanken-general.pdf))
+    <i>MetaPost drawing of a charge <i>q</i> placed at <i>z</i>=<i>h</i> and
+    a mirror charge placed at <i>z</i>=&minus;<i>h</i>, constuting the
+    "gedankenexperiment" of mirror charges and perfectly conducting planes.</i>
+
+[`figs/mirrorplane-gedanken.mp`](figs/mirrorplane-gedanken.mp)
+    ([`figs/mirrorplane-gedanken.pdf`](figs/mirrorplane-gedanken.pdf))
+    <i>MetaPost drawing of a charge <i>q</i> placed at <i>z</i>=<i>h</i> and
+    a mirror charge placed at <i>z</i>=&minus;<i>h</i>, constuting the
+    "gedankenexperiment" of mirror charges and perfectly conducting planes.</i>
+
+[`figs/mirrorplane.mp`](figs/mirrorplane.mp)
+    ([`figs/mirrorplane.pdf`](figs/mirrorplane.pdf))
+    <i>MetaPost drawing of a charge <i>q</i> placed a distance <i>d</i> above
+    an infinite and perfectly conducting plane <i>z</i>=0, providing the first
+    example of application of the method of images.</i>
+
+[`figs/unique.mp`](figs/unique.mp)
+    ([`figs/unique.pdf`](figs/unique.pdf))
+    <i>MetaPost drawing of the volume and surface geometry used in the proof
+    of uniqueness for the electrostatic potential as solution to Laplace's
+    equation. (Also applied to Poisson's equation.)</i>
+
 ## Copyright
 Copyright (C) 2025, Fredrik Jonsson, under GPL 3.0.
