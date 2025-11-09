@@ -17,24 +17,25 @@ fält går vi in på själva definitionen av ett magnetiskt fält som den kraft
 som via Lorentz kraftlag utövas på en laddad partikel i rörelse. Utifrån
 denna formuleras Ampères kraftlag för strömslingor, samt att vi kan dra
 slutsatsen att kraften på fria laddningar aldrig utför något arbete.
-Då vi generaliserar strömbegreppet till en strömtäthet J kan vi under
-användande av Gauss lag ta fram kontinuitetsekvationen för laddning,
-som länkar ihop divergensen ∇ · J hos strömtätheten med tidsderivatan av
-laddningstätheten ρ. Biot–Savarts lag introduceras som ett axiom för det
+Då vi generaliserar strömbegreppet till en strömtäthet <b>J</b> kan vi
+under användande av Gauss lag ta fram kontinuitetsekvationen för laddning,
+som länkar ihop divergensen ∇ · <b>J</b> hos strömtätheten med tidsderivatan
+av laddningstätheten ρ. Biot–Savarts lag introduceras som ett axiom för det
 magnetfält som genereras av en ström traverserande en strömslinga, vilket
 för övrigt är första momentet där den magnetiska permeabiliteten µ<sub>0</sub>
 introduceras. Utifrån formen på Biot–Savarts lag för generering av magnetfält
-visar vi att ∇ · B = 0 alltid är uppfyllt, vilket påvisar att magnetiska
+visar vi att ∇ · <b>B</b> = 0 alltid är uppfyllt, vilket påvisar att magnetiska
 monopoler (magnetisk laddning) ej existerar, och att magnetism alltid endast
 yttrar sig i form av magnetiska dipoler eller högre ordningar i
 multipolutvecklingen.
 Vi visar att i magnetostatik kan rotationen av magnetfältet erhållas som
-∇ × B = µ0 J, kallad Ampères lag. Slutligen visar vi på att icke-existensen
-av magnetiska monopoler direkt har som följd att vi kan tolka det magnetiska
-fältet som härrörande från en vektorpotential A, i analogi med den skalära
-potentialen φ inom elektrostatik, som B = ∇ × A. Ampères lag kan tolkas i
-termer av denna vektorpotential som Poissons ekvation ∇2 A = −µ0 J med
-strömtätheten som källterm.
+∇ × <b>B</b> = µ<sub>0</sub> <b>J</b>, kallad Ampères lag. Slutligen visar
+vi på att icke-existensen av magnetiska monopoler direkt har som följd att
+vi kan tolka det magnetiska fältet som härrörande från en vektorpotential
+<b>A</b>, i analogi med den skalära potentialen φ inom elektrostatik, som
+<b>B</b> = ∇ × <b>A</b>.
+Ampères lag kan tolkas i termer av denna vektorpotential som Poissons ekvation
+∇<sup>2</sup> <b>A</b> = −µ<sub>0</sub> <b>J</b> med strömtätheten som källterm.
 
 ## Compiling the TeX code and figures
 
