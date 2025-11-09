@@ -45,19 +45,19 @@ missing components in case there are any complaints.
 
 ## List of figures
 
-[`ampereforce.mp`](ampereforce.mp)
-    ([`ampereforce.pdf`](ampereforce.pdf))
+[`figs/ampereforce.mp`](figs/ampereforce.mp)
+    ([`figs/ampereforce.pdf`](figs/ampereforce.pdf))
     <i>MetaPost drawing of the force acting upon the charge transport
     (current) in a fixed trajectory, illustrating the Ampere force law
     on current loops.</i>
 
-[`biotsavart.mp`](biotsavart.mp)
-    ([`biotsavart.pdf`](biotsavart.pdf))
+[`figs/biotsavart.mp`](figs/biotsavart.mp)
+    ([`figs/biotsavart.pdf`](figs/biotsavart.pdf))
     <i>MetaPost drawing of the setup used in Biot--Savart's law, describing
     the generation of a magnetic field by a steady-state current.</i>
 
-[`lorentz.mp`](lorentz.mp)
-    ([`lorentz.pdf`](lorentz.pdf))
+[`figs/lorentz.mp`](figs/lorentz.mp)
+    ([`figs/lorentz.pdf`](figs/lorentz.pdf))
     <i>MetaPost drawing of a point charge moving with velocity <b>v</b>
     in a magnetic field <b>B</b>, illustrating the resulting Lorentz
     force <b>F</b> acting of the charge.</i>
