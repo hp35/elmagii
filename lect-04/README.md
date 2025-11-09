@@ -1,6 +1,6 @@
 # Lecture 4 - Magnetostatics
 
-This directory contains the Lecture Notes for Lecture 4, <i>Magnetostatik}</i>
+This directory contains the Lecture Notes for Lecture 4, <i>Magnetostatik</i>
 (English: <i>Magnetostatics</i>), including all TeX code (plain TeX, no LaTeX),
 MetaPost figures and supporting material.
 
@@ -9,6 +9,32 @@ MetaPost figures and supporting material.
 [lecture-04.tex](lecture-04.tex) - Plain TeX source code for the lecture.
 
 [lecture-04.pdf](lecture-04.pdf) - Compiled document containing the Lecture Notes.
+
+## Summary of the lecture (Swedish)
+
+Med en kort sammanfattning av historiken bakom upptäckandet av magnetiska
+fält går vi in på själva definitionen av ett magnetiskt fält som den kraft
+som via Lorentz kraftlag utövas på en laddad partikel i rörelse. Utifrån
+denna formuleras Ampères kraftlag för strömslingor, samt att vi kan dra
+slutsatsen att kraften på fria laddningar aldrig utför något arbete.
+Då vi generaliserar strömbegreppet till en strömtäthet J kan vi under
+användande av Gauss lag ta fram kontinuitetsekvationen för laddning,
+som länkar ihop divergensen ∇ · J hos strömtätheten med tidsderivatan av
+laddningstätheten ρ. Biot–Savarts lag introduceras som ett axiom för det
+magnetfält som genereras av en ström traverserande en strömslinga, vilket
+för övrigt är första momentet där den magnetiska permeabiliteten µ<sub>0</sub>
+introduceras. Utifrån formen på Biot–Savarts lag för generering av magnetfält
+visar vi att ∇ · B = 0 alltid är uppfyllt, vilket påvisar att magnetiska
+monopoler (magnetisk laddning) ej existerar, och att magnetism alltid endast
+yttrar sig i form av magnetiska dipoler eller högre ordningar i
+multipolutvecklingen.
+Vi visar att i magnetostatik kan rotationen av magnetfältet erhållas som
+∇ × B = µ0 J, kallad Ampères lag. Slutligen visar vi på att icke-existensen
+av magnetiska monopoler direkt har som följd att vi kan tolka det magnetiska
+fältet som härrörande från en vektorpotential A, i analogi med den skalära
+potentialen φ inom elektrostatik, som B = ∇ × A. Ampères lag kan tolkas i
+termer av denna vektorpotential som Poissons ekvation ∇2 A = −µ0 J med
+strömtätheten som källterm.
 
 ## Compiling the TeX code and figures
 
