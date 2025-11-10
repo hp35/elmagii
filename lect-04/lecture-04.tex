@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-04/lecture-04.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-04/
-% Last change: October 31, 2025
+% Last change: November 10, 2025
 %
 % Lecture No 4 in the course ``Elektromagnetism II, 1TE626 (2025)'',
 % held November 11, 2025, at Uppsala University, Sweden.
@@ -77,12 +77,12 @@
   att kraften p{\aa} fria laddningar aldrig utf{\"o}r n{\aa}got arbete.
   D{\aa} vi generaliserar str{\"o}mbegreppet till en str{\"o}mt{\"a}thet
   ${\bf J}$ kan vi under anv{\"a}ndande av Gauss lag ta fram
-  kontinuitets\-ekvationen f{\"o}r laddning, som l{\"a}nkar ihop divergensen
-  $\nabla\cdot{\bf J}$ hos str{\"o}mt{\"a}theten med tidsderivatan av
-  laddningst{\"a}theten $\rho$. Biot--Savarts lag introduceras som ett
-  axiom f{\"o}r det magnetf{\"a}lt som genereras av en str{\"o}m
+  kontinuitets\-ekvationen f{\"o}r laddning, $\nabla\cdot{\bf J}=-d\rho/dt$,
+  som l{\"a}nkar ihop divergensen hos str{\"o}m\-t{\"a}theten med
+  tidsderivatan av laddningst{\"a}theten. Biot--Savarts lag introduceras
+  som ett axiom f{\"o}r det magnetf{\"a}lt som genereras av en str{\"o}m
   traverserande en str{\"o}mslinga, vilket f{\"o}r {\"o}vrigt {\"a}r
-  f{\"o}rsta momentet d{\"a}r den magnetiska permeabiliteten $\mu_0$
+  f{\"o}rsta momentet d{\"a}r den magnetiska permea\-bili\-teten $\mu_0$
   introduceras. Utifr{\aa}n formen p{\aa} Biot--Savarts lag f{\"o}r
   generering av magnetf{\"a}lt visar vi att $\nabla\cdot{\bf B}=0$
   alltid {\"a}r uppfyllt, vilket p{\aa}visar att magnetiska monopoler
@@ -120,10 +120,11 @@ elektriska str{\"o}mmar {\"a}r konstanta. Detta {\"a}r den magnetiska analogin
 med elektrostatik, d{\"a}r ist{\"a}llet de elektriska laddningarna {\"a}r
 station{\"a}ra och fixa i tid och rum.
 Att vi h{\"a}r har att g{\"o}ra med statiska magnetf{\"a}lt betyder inte att
-teorin inte g{\aa}r att applicera p{\aa} tidsberoende problem, bara under
-f{\"o}ruts{\"a}ttningen att f{\"o}rloppen {\"a}r l{\aa}ngsamma nog att f{\"o}r
-att den elektromagnetiska v{\aa}gl{\"a}ngden i problemet rej{\"a}lt
-{\"o}verstiger storleken p{\aa} dom{\"a}nen som analyseras.
+teorin inte g{\aa}r att applicera p{\aa} tidsberoende problem, bara att det
+m{\aa}ste g{\"o}ras under f{\"o}ruts{\"a}ttningen att f{\"o}rloppen {\"a}r
+l{\aa}ngsamma nog att f{\"o}r att den elektromagnetiska v{\aa}gl{\"a}ngden
+i problemet rej{\"a}lt {\"o}verstiger storleken p{\aa} dom{\"a}nen som
+analyseras.
 Till exempel kan vanliga elektriska generatorer och motorer, exempelvis
 startmotorn i en bil eller generatorn i ett vindkraftverk, med mycket god
 approximation behandlas som just magnetostatiska problem, trots den uppenbara
@@ -576,7 +577,8 @@ $$
   {{{\bf J}({\bf x}')\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'.
 $$
 
-\section{Divergens f{\"o}r magnetf{\"a}ltet}
+\section{Divergens f{\"o}r magnetf{\"a}ltet - ``Magnetiska monopoler
+  existerar inte''}
 Notera att integralen som f{\"o}rekommer i Biot--Savarts lag sker {\"o}ver
 {\it primmade} koordinater ${\bf x}'$, i vilket vi betraktar observationspunkten
 ${\bf x}$ som fix. Vi kommer nu att s{\"o}ka uttryck f{\"o}r divergensen och
@@ -593,8 +595,9 @@ ${\bf B}$ vilket vi rekapitulerar {\"a}r {\it operationer som sker i det
 icke-primmade} observations-koordinatsystemet ${\bf x}$.
 
 Om vi f{\"o}rst analyserar divergensen f{\"o}r den magnetiska f{\"a}ltet,
-utifr{\aa}n den generella beskrivningen av det i termer av str{\"o}mt{\"a}theten
-${\bf J}$, s{\aa} har vi att\numberedfootnote{Griffiths Ekv.~(5.50), sid.~232.}
+s{\aa} som Biot--Savarts lag uttrycker det utifr{\aa}n den generella
+beskrivningen av det i termer av str{\"o}mt{\"a}theten ${\bf J}$, s{\aa}
+har vi att\numberedfootnote{Griffiths Ekv.~(5.50), sid.~232.}
 $$
   \eqalign{
   \nabla\cdot{\bf B}({\bf x})
@@ -608,10 +611,11 @@ $$
         {\bf J}({\bf x}')\times
           {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
         \bigg)\,dV'\cr
-    &=\big\{\hbox{ Griffiths {\it Product Rule \#6} }\big\}\cr
-    &=\big\{\hbox{ $\nabla\cdot({\bf A}\times{\bf B})
-                     ={\bf B}\cdot(\nabla\times{\bf A})
-                       -{\bf A}\cdot(\nabla\times{\bf B})$ }\big\}\cr
+    &=\big\{\hbox{ Griffiths {\it Product Rule \#6}
+                   med ``${\bf a}={\bf J}({\bf x}')$'' }\big\}\cr
+    &=\big\{\hbox{ $\nabla\cdot({\bf a}\times{\bf b})
+                     ={\bf b}\cdot(\nabla\times{\bf a})
+                       -{\bf a}\cdot(\nabla\times{\bf b})$ }\big\}\cr
     &=\big\{
         \hbox{ Notera att ${\bf J}({\bf x}')$ oberoende av ${\bf x}$ }
       \big\}\cr
@@ -640,10 +644,12 @@ $$
 $$
 och eftersom\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa} Griffiths,
   {\it Second derivatives (10)}.}
-$\nabla\times(\nabla f)=0$ f{\"o}r godtycklig skal{\"a}r funktion $f$, s{\aa}
-f{\"o}ljer det direkt att rotationen ovan {\"a}r identiskt noll, och
-f{\"o}ljdaktligen ocks{\aa} att divergensen f{\"o}r magnetf{\"a}ltet {\"a}r
-identiskt noll.
+$$
+  \nabla\times(\nabla f)=0
+$$
+f{\"o}r godtycklig skal{\"a}r funktion $f$, s{\aa} f{\"o}ljer det direkt att
+rotationen ovan {\"a}r identiskt noll, och f{\"o}ljdaktligen ocks{\aa} att
+divergensen f{\"o}r magnetf{\"a}ltet {\"a}r identiskt noll.
 
 Vad s{\"a}ger oss resultatet att divergensen $\nabla\cdot{\bf B}=0$?
 Mer {\"a}n man kan tro, faktiskt. Vi kan direkt j{\"a}mf{\"o}ra detta resultat
@@ -656,7 +662,7 @@ I det magnetostatiska fall som vi h{\"a}r g{\aa}tt igenom har vi med andra ord
 att det magnetiska fl{\"o}det ut genom en sluten yta alltid {\"a}r identiskt
 noll, och vi har d{\"a}rmed ingen m{\"o}jlighet att innesluta n{\aa}gon
 ``magnetisk laddning''. V{\aa}r slutsats blir d{\"a}rmed:
-\quote{{\it Att $\nabla\cdot{\bf B}=0$ betyder att det inte existerar
+\quote{{\it $\nabla\cdot{\bf B}=0$ betyder att det inte existerar
   n{\aa}gon magnetisk laddning!}}
 \noindent
 Med konstaterandet att ``magnetisk laddning inte existerar'' menar vi h{\"a}r
@@ -677,7 +683,14 @@ lag,\numberedfootnote{Notera hur vi {\"a}ven nu tar avstamp i Biot--Savarts
   b{\"o}rjan, samt hur permeabiliteten $\mu_0$ hakar p{\aa} i allt
   som h{\"a}rleds fr{\aa}n denna.}
 vilken d{\aa} vi applicerar rotationen ({\aa}terigen med observationen att
-$\nabla$ opererar p{\aa} {\it oprimmade} koordinater ${\bf x}$) ger oss att
+$\nabla$ opererar p{\aa} {\it oprimmade} koordinater ${\bf x}$) ger oss
+att\numberedfootnote{F{\"o}r den som endast {\"a}r ute efter resultatet,
+  s{\aa} kan man med f{\"o}rdel skippa h{\"a}rledningen nedan och g{\aa}
+  vidare direkt till slutresultatet i form av Amp\`eres lag p{\aa} sid.~13.
+  H{\"a}rledningen {\"a}r h{\"a}r genomg{\aa}ngen i detalj f{\"o}r att den
+  som {\"a}r skeptiskt lagd skall f{\aa} en chans att verifiera just hur
+  vi g{\aa}r fr{\aa}n Biot--Savarts lag till Amp\`eres lag p{\aa}
+  differentialform.}
 $$
   \eqalign{
   \nabla\times{\bf B}({\bf x})
@@ -690,16 +703,16 @@ $$
 Liksom i fallet med divergensen kommer vi nu att anv{\"a}nda en produktregel
 fr{\aa}n innerp{\"a}rmen p{\aa} Griffiths, i detta fall {\it Product Rule \#8},
 som med sina fyra termer {\"a}r aningen st{\"o}kigare, dock liksom tidigare
-med ${\bf A}={\bf J}({\bf x}')$ (vilken {\"a}r oberoende av ${\bf x}'$ och
+med ${\bf a}={\bf J}({\bf x}')$ (vilken {\"a}r oberoende av ${\bf x}'$ och
 d{\"a}rmed ger noll vid differentiering) och med
-${\bf B}=({\bf x}-{\bf x}')/|{\bf x}-{\bf x}'|^3$,
+${\bf b}=({\bf x}-{\bf x}')/|{\bf x}-{\bf x}'|^3$,
 $$
-  \nabla\times({\bf A}\times{\bf B})
-    =\underbrace{{\bf A}(\nabla\cdot{\bf B})}_{\hbox{``Term 1''}}
-      -\underbrace{({\bf A}\cdot\nabla){\bf B}}_{\hbox{``Term 2''}}
-      +\underbrace{({\bf B}\cdot\nabla){\bf A}}_{
+  \nabla\times({\bf a}\times{\bf b})
+    =\underbrace{{\bf a}(\nabla\cdot{\bf b})}_{\hbox{``Term 1''}}
+      -\underbrace{({\bf a}\cdot\nabla){\bf b}}_{\hbox{``Term 2''}}
+      +\underbrace{({\bf b}\cdot\nabla){\bf a}}_{
          =0,\ {\bf J}(\underline{\underline{\underline{{\bf x}'}}})},
-      -\underbrace{{\bf B}(\nabla\cdot{\bf A})}_{
+      -\underbrace{{\bf b}(\nabla\cdot{\bf a})}_{
          =0,\ {\bf J}(\underline{\underline{\underline{{\bf x}'}}})},
 $$
 vilket {\"o}versatt till integranden ovan resulterar i att\numberedfootnote{Just
@@ -830,9 +843,12 @@ $$
 $$
 Om vi f{\"o}r enkelhets skull tittar p{\aa} detta uttryck komponentvis, med
 $x_k=x,y,z$, s{\aa} har vi att med  Griffiths {\it Product Rule (5)} och
-``${\bf A}={\bf J}$'',
+``${\bf a}={\bf J}$'',
 $$
- \nabla'(f{\bf A})=f(\nabla'\cdot{\bf a})+{\bf A}\cdot(\nabla'f)
+ \nabla'(f{\bf a})=f(\nabla'\cdot{\bf a})
+     +\underbrace{
+         {\bf a}\cdot(\nabla'f)
+      }_{=({\bf a}\cdot\nabla')f}
  \quad\Leftrightarrow\quad
  ({\bf J}\cdot\nabla')f=\nabla'(f{\bf J})-f(\nabla'\cdot{\bf J})
 $$
@@ -939,7 +955,7 @@ magnetf{\"a}ltet och str{\"o}mt{\"a}theten, som\numberedfootnote{Se exempelvis
 $$
   \iint_{S}(\nabla\times{\bf B})\cdot d{\bf A}=
   \oint_{\Gamma}{\bf B}\cdot d{\bf l}=
-  \mu_0\iint_{S}{\bf J}\cdot d{\bf A},
+  \mu_0\underbrace{\iint_{S}{\bf J}\cdot d{\bf A}}_{\displaystyle =I_{\rm enc}},
 $$
 d{\"a}r nu $\iint_{S}{\bf J}\cdot d{\bf A}=I_{\rm enc}$ {\"a}r den av $\Gamma$
 inneslutna str{\"o}mmen (med andra ord den totala str{\"o}m som passerar genom
