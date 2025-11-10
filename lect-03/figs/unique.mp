@@ -13,7 +13,7 @@ beginfig(1);
   gray := .975[black,white];
   pickup pencircle scaled 1pt;
 
-  p:= (0u,0u){dir 0}..{dir 90}(35u,6u)..{dir 180}(10u,10u)
+  p:= (0u,0u){dir 0}..{dir 90}(50u,6u)..{dir 180}(20u,20u)
     ..{dir 180}(-12u,36u)..(-35u,6u)..{dir 0}(0u,0u)--cycle;
   fill p withcolor gray;
   draw p;
@@ -26,7 +26,19 @@ beginfig(1);
       \hbox{$\phi$ f{\"o}reskriven}}
       etex, (-38u,36u));
   draw (-38u,36u){dir -20}..{dir -20}(point 3.4 of p shifted (-1u,0u));
-  label(btex S{\"o}kt: $\phi({\bf x})$, ${\bf x}\in V$ etex, (-14u,8u));
+  label(btex Typiskt s{\"o}kt: $\phi({\bf x})$, ${\bf x}\in V$ etex, (-14u,12u));
+  label(btex {\it Men $\ldots$ {\"a}r $\phi({\bf x})$ unik?} etex, (-14u,6u));
+
+  p:=((0u,0u){dir -30}..(10u,-2u)..(8u,1u)..(-3u,4u)..{dir -30}(0u,0u)--cycle)
+    rotated 10 shifted (20u,10);
+  fill p withcolor white;
+  draw p;
+  label.top(btex
+      \vbox{
+      \hbox{Eventuell inre randyta $S'$ med}
+      \hbox{skal{\"a}r potential $\phi'$ f{\"o}reskriven}}
+      etex, (32u,30u));
+  draw (32u,30u){dir 260}..{dir 260}(point 2.2 of p shifted (0u,.8u));
 
 endfig;
 end
