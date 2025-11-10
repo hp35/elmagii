@@ -29,7 +29,7 @@ beginfig(1);
   label(btex Typiskt s{\"o}kt: $\phi({\bf x})$, ${\bf x}\in V$ etex, (-14u,12u));
   label(btex {\it Men $\ldots$ {\"a}r $\phi({\bf x})$ unik?} etex, (-14u,6u));
 
-  p:=((0u,0u){dir -30}..(10u,-2u)..(8u,1u)..(-3u,4u)..{dir -30}(0u,0u)--cycle)
+  p:=((0u,0u){dir -30}..(18u,-4u)..(12u,2u)..(-3u,12u)..{dir -30}(0u,0u)--cycle)
     rotated 10 shifted (20u,10);
   fill p withcolor white;
   draw p;
