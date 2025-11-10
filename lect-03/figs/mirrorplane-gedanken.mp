@@ -56,6 +56,7 @@ beginfig(1);
   %
   label.top(btex \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
       $\phi\eqq 0$ p{\aa} $z=0$ etex, (-26u,0u));
+  label.bot(btex (ledande planet borttaget) etex, (-26u,0u));
 
   %
   % Mission statement.

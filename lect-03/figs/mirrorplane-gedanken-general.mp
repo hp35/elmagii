@@ -55,6 +55,7 @@ beginfig(1);
   % Boundary condition phi=0 at z=0.
   %
   label.top(btex $\phi=0$ p{\aa} $z=0$ etex, (-26u,0u));
+  label.bot(btex (ledande planet borttaget) etex, (-26u,0u));
 
   %
   % Mission statement.
