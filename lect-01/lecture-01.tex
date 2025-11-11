@@ -58,12 +58,34 @@
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
+\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+  \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{1}
 \centerline{\twelvesc Elektrostatik, superpositionsprincipen och Gauss lag}
 \centerline{Fredrik Jonsson, Uppsala Universitet, 3 november 2025}
 \vskip24pt
+
+\plan{Med en kort sammanfattning av historiken bakom elektrostatik och
+  uppt{\"a}ckten av elektronen som elementarladdning g{\aa}r vi direkt in
+  p{\aa} Coulombs lag f{\"o}r v{\"a}xelverkan mellan laddade partiklar.
+  Coulombs lag, som i grund och botten kan h{\"a}rledas fr{\aa}n utbyte av
+  virtuella fotoner mellan laddade elementarpartiklar, tas h{\"a}r som ett
+  axiom, fr{\aa}n vilket vi h{\"a}rleder fram motsvarande kraft p{\aa} en
+  testladdning fr{\aa}n ett system av laddningar, ur vilken det elektriska
+  f{\"a}ltet definieras.
+  En genomg{\aa}ng av superpositionsprincipen f{\"o}r elektriska f{\"a}lt
+  f{\"o}ljs av en h{\"a}rledning av Coulomb-v{\"a}xelverkan f{\"o}r en
+  kontinuerlig distribution av laddningst{\"a}thet, den s{\aa} kallade
+  Coulombs generaliserade lag, eller kort och gott ``Coulombintegralen''.
+  Vi intro\-ducerar det elektriska fl{\"o}det som integralen av det elektriska
+  f{\"a}ltet {\"o}ver en godtycklig yta, utifr{\aa}n vilket vi h{\"a}rleder
+  Gauss lag f{\"o}r elektriska f{\"a}lt, till{\"a}mpbar p{\aa} godtyckliga
+  laddningsf{\"o}rdelningar i form av punkt- linje- yt- eller volymladdningar.
+  Slutligen avslutar vi med en h{\"a}rledning av Gauss lag p{\aa}
+  differentialform.}
 
 \section{Introduktion till elektrostatik}
 Vi kommer i denna f{\"o}rsta f{\"o}rel{\"a}sning\numberedfootnote{Detta
@@ -102,17 +124,17 @@ glas gnidits med silke) och ``resinous'' (``k{\aa}daktig'', ``hartsartad'',
 associerat med att den uppstod d{\aa} harts eller b{\"a}rnsten gnidits med
 p{\"a}ls).
 
-Benjamin Franklin utf{\"o}rde under {\aa}ren 1747--1749 experiment f{\"o}r att
-bevisa sin teori kring ``en-v{\"a}tske\-hypo\-tesen'', d{\"a}r han argumenterade
-f{\"o}r att du Fays ``vitreous och resinuous'' dubbel-v{\"a}tsketori var
-felaktig och att det bara fanns en typ av ``elektrisk v{\"a}tska'', och att alla
-elektrostatiska effekter kunde sp{\aa}ras till ett {\"o}verfl{\"o}d respektive
-underskott av denna ``v{\"a}tska''. Franklin betecknade dessa som {\it positivt}
-({\"o}verfl{\"o}d) respektive {\it negativt} (underskott) av elektrisk
-v{\"a}tska, termer som fortfarande idag lever kvar f{\"o}r att beteckna
-laddningens polaritet.
+Benjamin Franklin (1706--1790) utf{\"o}rde under {\aa}ren 1747--1749 experiment
+f{\"o}r att bevisa sin teori kring ``en-v{\"a}tske\-hypo\-tesen'', d{\"a}r han
+argumenterade f{\"o}r att du Fays ``vitreous och resinuous''
+dubbel-v{\"a}tsketori var felaktig och att det bara fanns en typ av ``elektrisk
+v{\"a}tska'', och att alla elektrostatiska effekter kunde sp{\aa}ras till ett
+{\"o}verfl{\"o}d respektive underskott av denna ``v{\"a}tska''.
+Franklin betecknade dessa som {\it positivt} ({\"o}verfl{\"o}d) respektive
+{\it negativt} (underskott) av elektrisk v{\"a}tska, termer som fortfarande
+idag lever kvar f{\"o}r att beteckna laddningens polaritet.
 
-Charles-Augustin de Coulomb f{\"o}rtj{\"a}nar ett eget kapitel i
+Charles-Augustin de Coulomb (1736--1806) f{\"o}rtj{\"a}nar ett eget kapitel i
 elektrostatikens historia, i och med publiceringen av hans {\it Second
 M\'emoire sur l'\'Electricit\'e et le Magn\'etisme} [{\it Histoire de
 l'Acad\'emie Royale des Sciences}, sid.~578--611 (1785)].\numberedfootnote{%
@@ -127,6 +149,26 @@ sf{\"a}rerna;\numberedfootnote{Coulombs lag var sj{\"a}lvfallet ej uttryckt
   att tr{\"a}da i kraft f{\"o}rr{\"a}n 1954.}
 med andra ord Coulombs lag s{\aa} som vi idag k{\"a}nner den, och som dessutom
 {\"a}r den prim{\"a}ra basen f{\"o}r {\"a}mnet f{\"o}r denna f{\"o}rel{\"a}sning.
+
+Rent historiskt {\"a}r det anm{\"a}rkningsv{\"a}rt att det tog mer {\"a}n hundra
+{\aa}r innan den Brittiska fysikern Joseph John ``J.~J.'' Thomson (1856--1940,
+Nobelpris i fysik 1906) visade p{\aa} existensen av elektroner 1897, genom
+experiment med elektroner i katodstr{\aa}ler{\"o}r. Genom att m{\"a}ta hur
+katodstr{\aa}len kunde f{\aa}s att avvika fr{\aa}n en r{\"a}t linje med
+elektriska och magnetiska f{\"a}lt drog han slutsatsen att katodstr{\aa}len
+bestod av vad han fr{\aa}n b{\"o}rjan kallade ``korpuskler'' med negativ
+laddning och en storlek som var v{\"a}sentligt mindre {\"a}n atomer.
+Den vetenskapliga v{\"a}rlden hade dock redan b{\"o}rjat anamma ordet
+``elektron'' f{\"o}r dessa elementarladdningar, och Thomson anpassade sin
+terminologi d{\"a}refter.
+
+J.~J.~Thomsons uppt{\"a}ckt av elektronen hade effekt inte bara p{\aa}
+elektrostatiken i sig, utan p{\aa} vetenskapen i stort d{\aa} han p{\aa}visade
+att atomer inte var de fundamentala partiklar som man tidigare hade trott, i
+form av homogena sf{\"a}rer, utan kan s{\"a}gas vara startskottet f{\"o}r nya
+atommodeller, som till exempel Ernest Rutherfords (1871--1937, Nobelpris i kemi
+1908) uppt{\"a}ckt av atomk{\"a}rnan 1912, och Niels Bohrs (1885--1962,
+Nobelpris i fysik 1922) skalmodell av atomen 1913.
 \vfill\eject
 
 \section{Coulombs lag f{\"o}r punktladdningar}
