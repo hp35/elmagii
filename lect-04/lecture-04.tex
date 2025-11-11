@@ -745,14 +745,21 @@ $$
         }_{\hbox{``Term 2''}}
   }
 $$
-\vfill\eject
 
 \subsection{Term~1 i rotationen}
-H{\"a}r involverar ``Term~1'' en divergens som vi kan {\"o}vers{\"a}tta till en delta-puls placerad i ${\bf x}'$, eftersom Gauss teorem (divergensteoremet) $\int(\nabla\cdot{\bf A})\,dV=\oint{\bf A}\cdot d{\bf S}$ ger att\numberedfootnote{Griffiths har redan gjort f{\"o}rarbetet i kapitlet {\it Vector Analysis}, Ekv.~(1.100), sid.~50; se {\"a}ven Sektion 1.5.1, sid.~45. Vi kommer h{\"a}r f{\"o}r sakens skull dock att g{\aa} igenom denna exercis s{\aa} att vi h{\aa}ller resonemanget kring $\nabla\times{\bf B}$ sammanh{\aa}llet och koncist.}
+H{\"a}r involverar ``Term~1'' en divergens som vi kan {\"o}vers{\"a}tta till
+en delta-puls placerad i ${\bf x}'$, eftersom Gauss teorem (divergensteoremet)
+$\int(\nabla\cdot{\bf A})\,dV=\oint{\bf A}\cdot d{\bf S}$ ger
+att\numberedfootnote{Griffiths har redan gjort f{\"o}rarbetet i kapitlet
+  {\it Vector Analysis}, Ekv.~(1.100), sid.~50; se {\"a}ven Sektion 1.5.1,
+  sid.~45. Vi kommer h{\"a}r f{\"o}r sakens skull dock att g{\aa} igenom
+  denna exercis s{\aa} att vi h{\aa}ller resonemanget kring
+  $\nabla\times{\bf B}$ sammanh{\aa}llet och koncist.}
 $$
   \eqalign{
     \iiint_V\nabla\cdot{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'
-    &=\oiint_S{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\cdot d{\bf S}'\cr
+    &=\oiint_S{{({\bf x}-{\bf x}')}
+         \over{|{\bf x}-{\bf x}'|^3}}\cdot d{\bf S}'\cr
     &=\big\{\hbox{ Integrera {\"o}ver sf{\"a}r $S$ med
                    radie $|{\bf x}-{\bf x}'|=R$ }\big\}\cr
     &=\big\{\hbox{ Yttryck i sf{\"a}riska kordinater med
@@ -792,8 +799,8 @@ $$
 f{\"o}r alla observationspunkter ${\bf x}$ i rummet, under
 f{\"o}ruts{\"a}ttningen att ${\bf x}\ne{\bf x}'$ (det vill s{\"a}ga att
 n{\"a}mnaren $[(x-x')^2+\ldots]^{3/2}\ne0$).
-Notera att detta resultat g{\"a}ller {\it oberoende} av v{\"a}rdet p{\aa} radien
-$R=|{\bf x}-{\bf x}'|>0$, som vi kan v{\"a}lja godtyckligt liten runt
+Notera att detta resultat g{\"a}ller {\it oberoende} av v{\"a}rdet p{\aa}
+radien $R=|{\bf x}-{\bf x}'|>0$, som vi kan v{\"a}lja godtyckligt liten runt
 k{\"a}llpunkten ${\bf x}'$.
 Utifr{\aa}n detta argument kan vi dra slutsatsen att {\it divergensen h{\"a}r
 kan tolkas som en delta-puls} placerad i ${\bf x}'$, det vill s{\"a}ga {\it att
@@ -822,7 +829,6 @@ $$
     &=4\pi{\bf J}({\bf x}).\cr
   }
 $$
-\vfill\eject
 
 \subsection{Term~2 i rotationen}
 Den andra termen som upptr{\"a}der i integranden som upptr{\"a}der i uttrycket
@@ -945,10 +951,10 @@ kallas f{\"o}r {\it Amp\`eres lag}, och kommer fram{\"o}ver i kursen att ha en
 stor betydelse inte bara f{\"o}r hur vi kan ber{\"a}kna kopplingen mellan
 str{\"o}mmar och magnetf{\"a}lt, utan {\"a}ven (som det kommer att visa sig
 i F{\"o}rel{\"a}sning~9) f{\"o}r hur vi kan formulera elektromagnetisk
-v{\aa}gutbredning med Maxwell's ekvationer (med assistans av en till{\"a}ggsterm
-till Amp\`eres magnetostatiska lag, som vi d{\aa} kommer att g{\aa} igenom).
-{\it Notera h{\"a}r hur vi genomg{\aa}ende kan sp{\aa}ra f{\"o}rekomsten av
-$\mu_0$ till Biot--Savarts lag.}
+v{\aa}gutbredning med Maxwell's ekvationer (med assistans av en
+till{\"a}ggsterm till Amp\`eres magnetostatiska lag, som vi d{\aa} kommer att
+g{\aa} igenom). {\it Notera h{\"a}r hur vi genomg{\aa}ende kan sp{\aa}ra
+f{\"o}rekomsten av $\mu_0$ till Biot--Savarts lag.}
 
 Amp\`eres lag kan enkelt omformuleras p{\aa} integralform genom anv{\"a}ndandet
 av Stokes teorem, f{\"o}r en sluten slinga $\Gamma$ inneslutande en yta $S$ i
@@ -965,10 +971,11 @@ integrationsytan $S$). Med andra ord har vi integralformen av Amp\`eres lag som
 $$
   \oint_{\Gamma}{\bf B}\,d{\bf l}=\mu_0I_{\rm enc}.
 $$
-Denna form {\"a}r ofta att f{\"o}redra i situationer d{\aa} vi kan utnyttja rent
-geometriskt--symmetriskt gynn\-samma situationer, p{\aa} precis samma s{\"a}tt
-som vi kunnat konstatera med Gauss lag och hur den markant kan f{\"o}renkla
-probleml{\"o}sande i elektrostatiska problem med symmetrier n{\"a}rvarande.
+Denna form {\"a}r ofta att f{\"o}redra i situationer d{\aa} vi kan utnyttja
+rent geometriskt--symmetriskt gynn\-samma situationer, p{\aa} precis samma
+s{\"a}tt som vi kunnat konstatera med Gauss lag och hur den markant kan
+f{\"o}renkla probleml{\"o}sande i elektrostatiska problem med symmetrier
+n{\"a}rvarande.
 
 Exempel: Ber{\"a}kning av magnetf{\"a}lt genererade runt str{\"o}mslingor,
 i samma geometri som i Biot--Savarts ursprungliga
