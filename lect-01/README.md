@@ -11,6 +11,24 @@ TeX, no LaTeX), MetaPost figures and supporting material.
 
 [lecture-01.pdf](lecture-01.pdf) - Compiled document containing the Lecture Notes.
 
+## Summary of the lecture (Swedish)
+
+Med en kort sammanfattning av historiken bakom elektrostatik och upptäckten
+av elektronen som elementarladdning går vi direkt in på Coulombs lag för
+växelverkan mellan laddade partiklar. Coulombs lag, som i grund och botten
+kan härledas från utbyte av virtuella fotoner mellan laddade elementarpartiklar,
+tas här som ett axiom, från vilket vi härleder fram motsvarande kraft på en
+testladdning från ett system av laddningar, ur vilken det elektriska fältet
+definieras.
+En genomgång av superpositionsprincipen för elektriska fält följs av en
+härledning av Coulomb-växelverkan för en kontinuerlig distribution av
+laddningstäthet, den så kallade Coulombs generaliserade lag, eller kort
+och gott “Coulombintegralen”. Vi introducerar det elektriska flödet som
+integralen av det elektriska fältet över en godtycklig yta, utifrån vilket
+vi härleder Gauss lag för elektriska fält, tillämpbar på godtyckliga
+laddningsfördelningar i form av punkt- linje- yt- eller volymladdningar.
+Slutligen avslutar vi med en härledning av Gauss lag på differentialform.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
