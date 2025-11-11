@@ -35,5 +35,28 @@ In this directory, the included `Makefile` can be used to regenerate the
 documents, figures and graphs. Just run `make` and ensure to install any
 missing components in case there are any complaints.
 
+## List of figures
+
+[`figs/linecharge.mp`](figs/linecharge.mp)
+    ([`figs/linecharge.pdf`](figs/linecharge.pdf))
+    <i>MetaPost drawing of a line charge enclosed by a "gaussian
+    surface" with the purpose of extracting the electric field.</i>
+
+[`figs/lineintegral.mp`](figs/lineintegral.mp)
+    ([`figs/lineintegral.pdf`](figs/lineintegral.pdf))
+    <i>MetaPost drawing of the line integral from which we via Stokes'
+    theorem can deduce that the rotation of the static electric field
+    is identically zero.</i>
+
+[`figs/potential.mp`](figs/potential.mp)
+    ([`figs/potential.pdf`](figs/potential.pdf))
+    <i>MetaPost drawing of the line integral from which we deduce the
+    existence of the (scalar) electrostatic potential.</i>
+
+[`figs/surfcharge.mp`](figs/surfcharge.mp)
+    ([`figs/surfcharge.pdf`](figs/surfcharge.pdf))
+    <i>MetaPost drawing of a surface charge enclosed by a "gaussian
+    surface" with the purpose of extracting the electric field.</i>
+
 ## Copyright
 Copyright (C) 2025, Fredrik Jonsson, under GPL 3.0.
