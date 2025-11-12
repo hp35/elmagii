@@ -32,6 +32,72 @@ samt cylinderytor och sfärer.
 Slutligen så tar vi fram en metod för hur den resulterande laddningstätheten
 på en yta av ledande material kan tas fram med de virtuella spegelladdningarna.
 
+## Contents
+
+1. Laplaces ekvation för den elektrostatiska (skalära) potentialen
+
+    1.1. Angreppssätt~1 för elektrostatiska problem
+         -- Coulombintegralen
+
+    1.2. \subsection{Angreppssätt~2 för elektrostatiska problem
+         -- Skalär potential på integralform}
+
+    1.3. Angreppssätt~3 för elektrostatiska problem
+         -- Laplaces ekvation för skalär potential
+
+2. Entydighet hos lösningar till Laplace ekvation
+
+    2.1. Laplaces ekvation tillåter bara extrempunkter på randen
+         till en domän
+
+    2.2. Första entydighetsteoremet för den elektrostatiska
+         potentialen
+
+    2.3 Elektriska ledare och andra entydighetsteoremet för
+        den elektrostatiska potentialen
+
+3. Faradays bur
+
+4. Det elektriska fältet är identiskt noll i en perfekt ledare,
+   så hur kan vi då skapa strömmar?
+
+5. Sammanfattning av vitsen med entydighetsteoremet
+
+6. Spegelladdningar i perfekt ledande plan
+
+    6.1. Problemformulering för elektrostatik ovanför perfekt
+         ledande plan
+
+    6.2. Att lägga till virtuell laddning så att vi når
+         randvillkoret φ=0 på <i>z</i>=0
+
+    6.3. Den skalära potentialen i rummet med det ledande planet
+         ersatt med virtuell spegelladdning
+
+    6.4. Sammanfattning av virtuell spegelladdning i perfekt ledande plan
+
+    6.5. Det resulterande elektriska fältet med den speglade laddningen
+
+    6.6. Laddningsfördelningen i det perfekt ledande planet $z=0$
+
+7. Spegelladdningar i plana gränsytor mellan dielektrika
+
+8. Spegelladdningar i cylindriska perfekt ledande gränsytor
+
+    8.1. Potential från en linjeladdning
+
+    8.2. Att lägga till virtuell laddning så att vi når
+         randvillkoret φ=0 på cylinderns yta |<b>x</b>|=<i>R</i>
+
+    8.3. Sammanfattning av virtuell speglad linjeladdning i cylindrisk yta
+
+9. Spegelladdningar i sfäriska perfekt ledande gränsytor
+
+10. Kan jord ersättas med godtycklig konstant potential?
+
+11. Sammanfattning av Föreläsning~3 -- Spegelladdningar,
+    randvillkor och entydighet för lösningar till potentialproblem
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
