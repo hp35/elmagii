@@ -37,6 +37,52 @@ vi kan tolka det magnetiska fältet som härrörande från en vektorpotential
 Ampères lag kan tolkas i termer av denna vektorpotential som Poissons ekvation
 ∇<sup>2</sup> <b>A</b> = −µ<sub>0</sub> <b>J</b> med strömtätheten som källterm.
 
+## Contents
+
+1. Introduktion
+
+2. Historik
+
+3. Vad är ett magnetfält?
+
+4. Lorentz-kraften - Kraften på rörliga laddningar i statiska
+   kombinerade elektriska och magnetiska fält
+
+    4.1. Magnetisk kraft utför inget arbete
+
+5. Ampères kraftlag - Kraften på strömslingor i magnetfält
+
+6. Volymströmmar och ``lagen om att laddning inte kan försvinna''
+
+7. Apropå detta med magnetostatik vs elektrostatik
+
+8. Biot-Savarts lag - Magnetfält från strömslingor
+
+    8.1. Historiken för Biot-Savarts lag
+
+    8.2. Svårigheten med att formellt härleda Biot-Savarts lag
+
+    8.3. Biot-Savarts lag för strömslingor
+
+    8.4. Biot-Savarts lag för strömtätheten i volymer
+
+9. Divergens för magnetfältet - ``Magnetiska monopoler
+  existerar inte''
+
+10. Rotationen för magnetfältet
+
+    10.1. Term 1 i rotationen
+
+    10.2. Term 2 i rotationen
+
+    10.3. Slutligt resultat för rotationen av magnetfältet
+
+11. Ampères lag
+
+12. Vektorpotentialen
+
+13. Sammanfattning av Föreläsning 4 - <i>Magnetostatik</i>
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
@@ -53,7 +99,7 @@ missing components in case there are any complaints.
 
 [`figs/biotsavart.mp`](figs/biotsavart.mp)
     ([`figs/biotsavart.pdf`](figs/biotsavart.pdf))
-    <i>MetaPost drawing of the setup used in Biot--Savart's law, describing
+    <i>MetaPost drawing of the setup used in Biot-Savart's law, describing
     the generation of a magnetic field by a steady-state current.</i>
 
 [`figs/lorentz.mp`](figs/lorentz.mp)
