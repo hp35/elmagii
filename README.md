@@ -6,41 +6,48 @@ and supporting material as used in my lectures on Electromagnetic Theory II
 
 The directory contains the following subdirectories:
 
-[`lect-01`](lect-01) <i>Elektrostatik, superpositionsprincipen och Gauss lag</i>
-         (<i>Electrostatics, the superposition principle and Gauss law</i>)
+[`lect-01`](lect-01) <i>Föreläsning 1 - Elektrostatik, superpositionsprincipen
+         och Gauss lag</i>
+         (<i>Lecture 1 - Electrostatics, the superposition principle and
+	 Gauss law</i>)
 
-[`lect-02`](lect-02) <i>Elektrostatisk potential och tillämpningar av Gauss
-         lag</i>
-         (<i>Electrostatic potential and applications of Gauss' law</i>)
+[`lect-02`](lect-02) <i>Föreläsning 2 - Elektrostatisk potential och
+         tillämpningar av Gauss lag</i>
+         (<i>Lecture 2 - Electrostatic potential and applications of Gauss'
+	 law</i>)
 
-[`lect-03`](lect-03) <i>Spegelladdningar, randvillkor och entydighet för
-         lösningar till potentialproblem</i>
-         (<i>Method of images for charges, boundary conditions and the
-	 uniqueness theorem, for the scalar potential</i>)
+[`lect-03`](lect-03) <i>Föreläsning 3 - Spegelladdningar, randvillkor och
+         entydighet för lösningar till potentialproblem</i>
+         (<i>Lecture 3 - Method of images for charges, boundary conditions
+	 and the uniqueness theorem, for the scalar potential</i>)
 
-[`lect-04`](lect-04) <i>Magnetostatik</i>
-         (<i>Magnetostatics</i>)
+[`lect-04`](lect-04) <i>Föreläsning 4 - Magnetostatik</i>
+         (<i>Lecture 4 - Magnetostatics</i>)
 
-[`lect-05`](lect-05) <i>Elektromagnetisk induktion</i>
-         (<i>Electromagnetic induction</i>)
+[`lect-05`](lect-05) <i>Föreläsning 5 - Elektromagnetisk induktion</i>
+         (<i>Lecture 5 - Electromagnetic induction</i>)
 
-[`lect-06`](lect-06) <i>Elektriska fält i material</i>
-         (<i>Electric fields in materials</i>)
+[`lect-06`](lect-06) <i>Föreläsning 6 - Elektriska fält i material</i>
+         (<i>Lecture 6 - Electric fields in materials</i>)
 
-[`lect-07`](lect-07) <i>Magnetiska fält i material</i>
-         (<i>Magnetic fields in materials</i>)
+[`lect-07`](lect-07) <i>Föreläsning 7 - Magnetiska fält i material</i>
+         (<i>Lecture 7 - Magnetic fields in materials</i>)
 
-[`lect-08`](lect-08) <i>Multipolutvecklingen</i>
-         (<i>The multipole expansion</i>)
+[`lect-08`](lect-08) <i>Föreläsning 8 - Multipolutvecklingen</i>
+         (<i>Lecture 8 - The multipole expansion</i>)
 
-[`lect-09`](lect-09) <i>Maxwells ekvationer och vågutbredning</i>
-         (<i>Maxwell's equations and electromagnetic waves</i>)
+[`lect-09`](lect-09) <i>Föreläsning 9 - Maxwells ekvationer och vågutbredning</i>
+         (<i>Lecture 9 - Maxwell's equations and electromagnetic waves</i>)
 
-[`lect-10`](lect-10) <i>Vågutbredning i homogena och isotropa dielektrika</i>
-         (<i>Electromagnetic waves in homogeneous and isotropic dielectrics</i>)
+[`lect-10`](lect-10) <i>Föreläsning 10 - Vågutbredning i homogena och isotropa
+         dielektrika</i>
+         (<i>Lecture 10 - Electromagnetic waves in homogeneous and isotropic
+	 dielectrics</i>)
 
-[`lect-11`](lect-11) <i>Retarderade potentialer som lösningar till Maxwells ekvationer</i>
-         (<i>Retarded potentials as solutions to Maxwell's equations</i>)
+[`lect-11`](lect-11) <i>Föreläsning 11 - Retarderade potentialer som lösningar
+         till Maxwells ekvationer</i>
+         (<i>Lecture 11 - Retarded potentials as solutions to Maxwell's
+	 equations</i>)
 
 ## Contributing
 
