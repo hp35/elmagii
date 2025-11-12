@@ -23,7 +23,7 @@ direkt kan formulera det statiska elektriska fältet i termer av en skalär
 potential φ enligt <b>E</b> = −∇φ, en potential som vi därefter härleder den
 explicita integralformen för, uttryckt i laddningstäthet. Vi härleder uttrycken
 för upplagrad potentiell energi i termer av den elektriska potentialen, och vi
-går igenom paradoxen i att det vektorvärda elektriska fältet <b>E</i> kan
+går igenom paradoxen i att det vektorvärda elektriska fältet <b>E</b> kan
 extraheras ur en enda skalär potential φ. Vi avslutar föreläsningen med att
 utifrån Gauss lag för det elektriska fältet på differentialform omformulera
 denna i termer av den skalära potentialen som Poissons
