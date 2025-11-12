@@ -36,14 +36,14 @@ på en yta av ledande material kan tas fram med de virtuella spegelladdningarna.
 
 1. Laplaces ekvation för den elektrostatiska (skalära) potentialen
 
-    1.1. Angreppssätt~1 för elektrostatiska problem
-         -- Coulombintegralen
+    1.1. Angreppssätt 1 för elektrostatiska problem
+         - Coulombintegralen
 
-    1.2. \subsection{Angreppssätt~2 för elektrostatiska problem
-         -- Skalär potential på integralform}
+    1.2. Angreppssätt 2 för elektrostatiska problem
+         - Skalär potential på integralform
 
-    1.3. Angreppssätt~3 för elektrostatiska problem
-         -- Laplaces ekvation för skalär potential
+    1.3. Angreppssätt 3 för elektrostatiska problem
+         - Laplaces ekvation för skalär potential
 
 2. Entydighet hos lösningar till Laplace ekvation
 
@@ -78,7 +78,7 @@ på en yta av ledande material kan tas fram med de virtuella spegelladdningarna.
 
     6.5. Det resulterande elektriska fältet med den speglade laddningen
 
-    6.6. Laddningsfördelningen i det perfekt ledande planet $z=0$
+    6.6. Laddningsfördelningen i det perfekt ledande planet <i>z</i>=0
 
 7. Spegelladdningar i plana gränsytor mellan dielektrika
 
@@ -95,8 +95,8 @@ på en yta av ledande material kan tas fram med de virtuella spegelladdningarna.
 
 10. Kan jord ersättas med godtycklig konstant potential?
 
-11. Sammanfattning av Föreläsning~3 -- Spegelladdningar,
-    randvillkor och entydighet för lösningar till potentialproblem
+11. Sammanfattning av Föreläsning 3 - <i>Spegelladdningar,
+    randvillkor och entydighet för lösningar till potentialproblem</i>
 
 ## Compiling the TeX code and figures
 
