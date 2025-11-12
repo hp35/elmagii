@@ -1,7 +1,7 @@
 # Lecture 2 - Electrostatic potential and applications of Gauss' law
 
 This directory contains the Lecture Notes for Lecture 2, <i>Elektrostatisk
-potential och till{\"a}mpningar av Gauss lag</i> (English: <i>Electrostatic
+potential och tillämpningar av Gauss lag</i> (English: <i>Electrostatic
 potential and applications of Gauss' law</i>), including all TeX code (plain
 TeX, no LaTeX), MetaPost figures and supporting material.
 
@@ -28,6 +28,30 @@ extraheras ur en enda skalär potential φ. Vi avslutar föreläsningen med att
 utifrån Gauss lag för det elektriska fältet på differentialform omformulera
 denna i termer av den skalära potentialen som Poissons
 ekvation ∇<sup>2</sup> φ = −ρ/ε<sub>0</sub>.
+
+## Contents
+
+1. Tillämpning av Gauss lag - Rak linjeladdning
+
+    1.1. Alternativ analys för rak linjeladdning
+
+2. Tillämpning av Gauss lag - Plan ytladdning
+
+3. Rotationen för det statiska elektriska fältet
+
+4. Elektrostatisk skalär potential
+
+    4.1. Tolkning av −∇φ
+
+5. Arbete och upplagrad energi vid förflyttning av elektriska
+  laddningar
+
+    5.1. En paradox
+
+6. Poissons ekvation för den skalära potentialen
+
+7. Sammanfattning av Föreläsning 2 - <i>Elektrisk potential och
+   tillämpningar av Gauss lag</i>
 
 ## Compiling the TeX code and figures
 
