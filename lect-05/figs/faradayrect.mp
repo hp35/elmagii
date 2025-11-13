@@ -93,14 +93,14 @@ beginfig(1);
   texarrow (point 3.7 of p)--(point 3.6 of p);
   label.urt(btex $I$ etex,(point 3.6 of p) shifted (1u,0u));
 
-  drawarrow (0u,h/2+dz)--(0u,h/2+dz+20u);
-  label.rt(btex ${\bf v}_{\rm coil}=v_0{\bf e}_z=\hbox{konst.}$ etex,
-      (0u,h/2+dz+20u));
+  drawarrow (0u,h/2+dz)--(0u,h/2+dz+30u);
+  label.rt(btex ${\bf v}_0=v_0{\bf e}_z=\hbox{konst.}$ etex,
+      (0u,h/2+dz+30u));
 
   %
   % Draw the coordinate system.
   %
-  ro:=(-70u,-25u);
+  ro:=(-60u,-35u);
   drawarrow ((0u,0u)--(10u,0u)) shifted ro;
   label.lrt(btex $x$ etex,(10u,0u) shifted ro);
   drawarrow ((0u,0u)--(0u,10u)) shifted ro;
@@ -140,13 +140,22 @@ beginfig(1);
   %
   label.rt(btex $\def\iint{\mathop{\int\kern-8pt\int}}\displaystyle
       \Phi_{\rm M}=\iint_S{\bf B}\cdot d{\bf A}
-      =(h-v_0 t)wB_0$ etex,(40u,50u));
-  draw (40u,52u){dir 190}..{dir 190}(0u,20u);
+      = B_0 (h-v_0 t) L$ etex,(24u,54u));
+  draw (24u,56u){dir 200}..{dir 200}(0u,20u);
   dotlabel(btex etex,(0u,20u));
-  label.rt(btex Homogent magnetf{\"a}lt ${\bf B}_0=B_0{\bf e}_y$ etex,
-      (40u,-40u));
-  draw (40u,-40u){dir 170}..{dir 170}(10u,-20u);
+  label.rt(btex \vbox{
+      \hbox{Homogent magnetf{\"a}lt}
+      \hbox{${\bf B}_0=B_0{\bf e}_y$}} etex, (30u,-40u));
+  draw (30u,-40u){dir 170}..{dir 170}(10u,-20u);
   dotlabel(btex etex,(10u,-20u));
+
+  %
+  % Label the generated EMF.
+  %
+  label.lft(btex $\displaystyle
+      {\cal E}=\int_{\Gamma}\bigg({{{\bf F}}\over{q}}\bigg)\cdot d{\bf l}$ etex,
+      (-40u,40u));
+  draw (-40u,40u){dir -10}..{dir -10}(-w/2,h/2+4u);
 
   %
   % Labels of height and width of the trajectory Gamma.
@@ -161,7 +170,7 @@ beginfig(1);
   draw (w/2,-h/2+dz-2u)--(w/2,-h/2-16u-2u);
   drawarrow (-w/2,-h/2-16u)--(w/2,-h/2-16u);
   drawarrow reverse ((-w/2,-h/2-16u)--(w/2,-h/2-16u));
-  label.top(btex $w$ etex,(0u,0u)) rotated 0 shifted (0u,-h/2-16u);
+  label.top(btex $L$ etex,(0u,0u)) rotated 0 shifted (0u,-h/2-16u);
 
   %
   % The part covered by the magnetic field flux.
@@ -178,11 +187,11 @@ beginfig(1);
   %
   rb := (-w/2,h/2+dz) shifted (-3u,3u);
   p := (rb shifted (10u,0u))--(rb shifted (3u,0u)){dir 180}
-          ..{dir 270}(rb shifted (0u,-3u))--(rb shifted (0u,-10u));
+          ..{dir 270}(rb shifted (0u,-3u))--(rb shifted (0u,-8u));
   texarrow p;
-  label.ulft(btex Integrationsv{\"a}g f{\"o}r $\Gamma$ etex,
-      rb shifted (-10u,10u));
-  draw (rb shifted (-10u,10u)){dir -55}..{dir -55}(rb shifted (-1u,1u));
+  label.top(btex \vbox{\hbox{Integrations-}
+      \hbox{v{\"a}g f{\"o}r $\Gamma$}} etex, rb shifted (-10u,20u));
+  draw (rb shifted (-10u,20u)){dir -55}..{dir -55}(rb shifted (-1u,1u));
 
   
 endfig;
