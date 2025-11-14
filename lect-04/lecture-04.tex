@@ -1024,14 +1024,59 @@ som\numberedfootnote{Griffiths Ekv.~(5.64), sid.~244. Notera att liksom i
 $$
   \nabla^2{\bf A}=-\mu_0{\bf J}.
 $$
+
+\section{Explicit l{\"o}sning f{\"o}r vektorpotentialen}
+Eftersom vektorpotentialen beskrivs av Poissons ekvation, vilket i grund och
+botten {\"a}r en {\it skal{\"a}r} partiell differentialekvation, som kan
+projiceras ut komponentvis ${\bf J}=(J_x,J_y,J_z)$ f{\"o}r vektorpotentialen,
+$$
+  \nabla^2 A_k=-\mu_0 J_k,\quad k=x,y,z,
+$$
+s{\aa} kan vi direkt notera likheten mellan denna och motsvarande ekvation
+f{\"o}r den skal{\"a}ra potentialen
+$$
+  \nabla^2\phi=-\rho/\varepsilon_0.
+$$
+Nu r{\aa}kar vi ha s{\aa}dan tur att en explicit l{\"o}sning till Poissons
+ekvation f{\"o}r den skal{\"a}ra potentialen har erh{\aa}llits i
+F{\"o}rel{\"a}sning~3, som\numberedfootnote{Om vi skall vara riktigt petiga
+  h{\"a}r, s{\aa} var det faktiskt s{\aa} att vi i F{\"o}rel{\"a}sning
+  {\it definierade} den skal{\"a}ra potentialen $\phi$ som detta uttryck.
+  Anledningen till denna bekv{\"a}ma definition (som i m{\aa}ngt och mycket
+  handlar om vilket tecken p{\aa} $-\nabla\phi$ v{\"a}ljer att definiera
+  det elektriska f{\"a}ltet efter) var dock just att denna via Coulombs
+  generaliserade ekvation (``Coulombintegralen'') l{\"o}ser ekvationen
+  f{\"o}r det elektriska f{\"a}ltet i n{\"a}rvaro av laddningsf{\"o}rdelning
+  $\rho$, s{\aa} vi har visst fog f{\"o}r att denna definition ocks{\aa}
+  {\"a}r en formell l{\"o}sning till Poissons ekvation f{\"o}r den
+  skal{\"a}ra potentialen.}
+d{\"a}r vi definierade den {\it skal{\"a}ra potentialen} $\phi({\bf x})$
+explicit som integralen
+$$
+  \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V
+    {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
+$$
+Med andra ord kan vi direkt {\"o}verf{\"o}ra detta resultat {\"a}ven f{\"o}r
+vektorpotentialens komponenter, med endast en liten {\"a}ndring i koefficienten
+$1/\varepsilon_0\to\mu_0$, s{\aa} att en explicit l{\"o}sning i termer av
+str{\"o}mf{\"o}rdelningen $J_k$ erh{\aa}lls som
+$$
+  {\bf A}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
+    {{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+  \qquad\Leftrightarrow\qquad
+  A_k({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
+    {{J_k({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',\quad k=x,y,z,
+$$
+och motsvarande f{\"o}r en str{\"o}m ${\bf I}=(I_x,I_y,I_z)$ som linjeintegralen
+$$
+  {\bf A}({\bf x})={{\mu_0}\over{4\pi}}\int_{\Gamma}
+    {{{\bf I}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dl'.
+$$
 \vfill\eject
 
 \section{Sammanfattning av F{\"o}rel{\"a}sning~4 -- Magnetostatik}
 \item{$\bullet$}{Lorentz-kraften p{\aa} fri laddning $q$ med hastighet
-  ${\bf v}$ {\"a}r
-  $$
-    {\bf F}=q\big({\bf E}+({\bf v}\times{\bf B})\big).
-  $$}
+  ${\bf v}$ {\"a}r ${\bf F}=q\big({\bf E}+({\bf v}\times{\bf B})\big).$.}
 \item{$\bullet$}{Magnetiska krafter (p{\aa} fria laddningar) utf{\"o}r
   inget arbete!}
 \item{$\bullet$}{Amp\`eres kraftlag p{\aa} str{\"o}mslinga b{\"a}rande
@@ -1069,7 +1114,7 @@ $$
   $$
   d{\"a}r $\mu_0=4\pi\times10^{-7}\ {\rm H}/{\rm m}$ (exakt, per definition)
   {\"a}r den magnetiska permeabiliteten i vakuum. Biot--Savarts motsvarande
-  lag f{\"o}r str{\"o}mslingor med str{\"o}m $I$ från en punkt ${\bf x}_a$
+  lag f{\"o}r str{\"o}mslingor med str{\"o}m $I$ fr{\aa}n en punkt ${\bf x}_a$
   till ${\bf x}_b$ ges som
   $$
     {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\int^{{\bf x}_b}_{{\bf x}_a}
@@ -1095,9 +1140,18 @@ $$
     \nabla\cdot{\bf B}=0\quad\Leftrightarrow\quad{\bf B}=\nabla\times{\bf A}.
   $$}
 \item{$\bullet$}{Amp\`eres lag f{\"o}r vektorpotentialen ${\bf A}$ (andra
-  ekvationen p{\aa} omslaget p{\aa} Griffiths!),
+  ekvationen p{\aa} omslaget p{\aa} Griffiths!) ges som Poissons ekvation
+  med den fria str{\"o}mt{\"a}theten ${\bf J}$ som k{\"a}llterm,
   $$
-    \nabla^2{\bf A}=-\mu_0{\bf J}.
+    \nabla^2{\bf A}=-\mu_0{\bf J},
+  $$
+  med den explicita l{\"o}sningen
+  $$
+    {\bf A}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
+      {{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+    \qquad\Leftrightarrow\qquad
+    A_k({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
+      {{J_k({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',\quad k=x,y,z.
   $$}
 
 \bye
