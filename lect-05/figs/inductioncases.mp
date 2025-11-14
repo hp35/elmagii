@@ -99,6 +99,7 @@ beginfig(1);
   ps:=pos shifted (-w/2,0u) shifted (dxp,0u);;
   drawarrow ps--(ps shifted (-7u,0u));
   label.ulft(btex ${\bf v}$ etex,(ps shifted (-7u,0u)));
+  label.top(btex $\Gamma$ etex,(point 3.0 of p) shifted pos shifted (dxp,0u));
 
   %
   % Draw the direction of the generated current.
@@ -144,6 +145,7 @@ beginfig(1);
   ps:=pos shifted (-wd/2,0u) shifted (dxp,0u);;
   drawarrow ps--(ps shifted (-7u,0u));
   label.ulft(btex ${\bf v}$ etex,(ps shifted (-7u,0u)));
+  label.top(btex $\Gamma$ etex,(point 2.0 of p) shifted pos shifted (0u,0u));
 
   %
   % Draw the direction of the generated current.
@@ -194,6 +196,7 @@ beginfig(1);
   ps:=pos shifted (-w/2,0u) shifted (0u,0u);;
 %  drawarrow ps--(ps shifted (-10u,0u));
 %  label.ulft(btex ${\bf v}$ etex,(ps shifted (-10u,0u)));
+  label.top(btex $\Gamma$ etex,(point 3.0 of p) shifted pos);
 
   %
   % Draw the direction of the generated current.
