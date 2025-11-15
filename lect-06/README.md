@@ -16,5 +16,35 @@ In this directory, the included `Makefile` can be used to regenerate the
 documents, figures and graphs. Just run `make` and ensure to install any
 missing components in case there are any complaints.
 
+## List of figures
+
+[`figs/dipole.mp`](figs/dipole.mp)
+    ([`figs/dipole.pdf`](figs/dipole.pdf))
+    <i>MetaPost drawing of the classical single and static electric
+    dipole, excited by an externally applied electric field.</i>
+
+[`figs/displace.mp`](figs/displace.mp)
+    ([`figs/displace.pdf`](figs/displace.pdf))
+    <i>MetaPost drawing of the more detailed model of the classical single
+    and static electric dipole, excited by an externally applied electric
+    field.</i>
+
+[`figs/esurfnorm.mp`](figs/esurfnorm.mp)
+    ([`figs/esurfnorm.pdf`](figs/esurfnorm.pdf))
+    <i>MetaPost drawing of the surface with charge density over which we
+    apply Gauss' law in order to extract boundary conditions for the electric
+    field normal to the surface.</i>
+
+[`figs/esurftang.mp`](figs/esurftang.mp)
+    ([`figs/esurftang.pdf`](figs/esurftang.pdf))
+    <i>MetaPost drawing of the surface with charge density over which we
+    apply Gauss' law in order to extract boundary conditions for the electric
+    field tangential to the surface.</i>
+
+[`figs/poldensity.mp`](figs/poldensity.mp)
+    ([`figs/poldensity.pdf`](figs/poldensity.pdf))
+    <i>MetaPost drawing of the molecular polarizability building up the
+    polarization density.</i>
+
 ## Copyright
 Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
