@@ -102,5 +102,61 @@ In this directory, the included `Makefile` can be used to regenerate the
 documents, figures and graphs. Just run `make` and ensure to install any
 missing components in case there are any complaints.
 
+## List of figures
+
+[`figs/faradayelement.mp`](figsfaradayelement.mp)
+    ([`figs/faradayelement.pdf`](figsfaradayelement.pdf))
+    <i>MetaPost drawing of the enlarged area element dA, being part of the
+    "ribbon" between the closed trajectory Gamma(t) and Gamma(t+dt) in the
+    formal and general derivation of Faradays law of induction (the "flux
+    law"). This figure is part of the figure drawn by the MetaPost code in
+    faradayrib.mp.</i>
+
+[`figs/faradayrect.mp`](figsfaradayrect.mp)
+    ([`figs/faradayrect.pdf`](figsfaradayrect.pdf))
+    <i>MetaPost drawing of the setup of a closed, rectangular current-carrying
+    loop dragged over a homogeneous field in such a way that the magnetic flux
+    through the loop is linearly decreasing with time. This is the simplest
+    illustration of the Faraday induction law, based directly on the Lorentz
+    force acting upon the charges in the conducting wire, and serves as an
+    illustration of the general case.</i>
+
+[`figs/faradayrib.mp`](figsfaradayrib.mp)
+    ([`figs/faradayrib.pdf`](figsfaradayrib.pdf))
+    <i>MetaPost drawing of the setup of a closed current-carrying loop and
+    the electro-motoric force (EMF) driving a current through this whenever
+    the magnetic flow enclosed by the loop is altered, either by means of a
+    magnetic field which is changing in time or by means of a change in the
+    orientation or position of the loop itself. This is the basic setup in
+    which we derive Faraday's law of induction.</i>
+
+[`figs/inductance.mp`](figsinductance.mp)
+    ([`figs/inductance.mp.pdf`](figsinductance.mp.pdf))
+    <i>MetaPost drawing of the geometry used in deriving the mutual
+    inductance between two conducting loops Gamma and Gamma'.</i>
+
+[`figs/inductioncases.mp`](figsinductioncases.mp)
+    ([`figs/inductioncases.pdf`](figsinductioncases.pdf))
+    <i>MetaPost drawing of the three principal ways of inducing an
+    electromotoric force (EMF) be the Faraday law of induction
+    (flux law), being
+    (1) a closed circuit moving through a stationary inhomogeneous
+        magnetic field,
+    (2) a stationary closed circuit through which an inhomogeneous
+        magnetic field is moving, and
+    (3) a stationary closed circuit through which a the magnetic
+        flux is varying in time.</i>
+
+[`figs/lenz.mp`](figslenz.mp)
+    ([`figs/lenz.pdf`](figslenz.pdf))
+    <i>MetaPost drawing of a set of eight geometries and thought-experients
+    concerning the interpretation of Lenz law and how to sanity-check results
+    in induction problems.</i>
+
+[`figs/magflow.mp`](figsmagflow.mp)
+    ([`figs/magflow.pdf`](figsmagflow.pdf))
+    <i>MetaPost drawing of electric flow through a surface, including a
+    displayed equation with the definition of electric flow.</i>
+
 ## Copyright
 Copyright (C) 2025, Fredrik Jonsson, under GPL 3.0.
