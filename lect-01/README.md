@@ -20,6 +20,7 @@ kan härledas från utbyte av virtuella fotoner mellan laddade elementarpartikla
 tas här som ett axiom, från vilket vi härleder fram motsvarande kraft på en
 testladdning från ett system av laddningar, ur vilken det elektriska fältet
 definieras.
+
 En genomgång av superpositionsprincipen för elektriska fält följs av en
 härledning av Coulomb-växelverkan för en kontinuerlig distribution av
 laddningstäthet, den så kallade Coulombs generaliserade lag, eller kort
