@@ -55,7 +55,7 @@ Ampères lag kan tolkas i termer av denna vektorpotential som Poissons ekvation
 
 5. Ampères kraftlag - Kraften på strömslingor i magnetfält
 
-6. Volymströmmar och ``lagen om att laddning inte kan försvinna''
+6. Volymströmmar och "lagen om att laddning inte kan försvinna"
 
 7. Apropå detta med magnetostatik vs elektrostatik
 
@@ -69,8 +69,7 @@ Ampères lag kan tolkas i termer av denna vektorpotential som Poissons ekvation
 
     8.4. Biot-Savarts lag för strömtätheten i volymer
 
-9. Divergens för magnetfältet - ``Magnetiska monopoler
-  existerar inte''
+9. Divergens för magnetfältet - "Magnetiska monopoler existerar inte"
 
 10. Rotationen för magnetfältet
 
