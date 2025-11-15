@@ -10,6 +10,30 @@ code (plain TeX, no LaTeX), MetaPost figures and supporting material.
 
 [lecture-06.pdf](lecture-06.pdf) - Compiled document containing the Lecture Notes.
 
+## Summary of the lecture (Swedish)
+
+I och med denna föreläsning lämnar vi vakuumbeskrivningen av fält och gå in på
+växelverkan mellan elektriska eller magnetiska fält och materia. Vi börjar med
+en övergripande bild av hur vi successivt kan gå från en kvantmekanisk
+beskrivning av denna växelverkan till makroskopiska begrepp som
+susceptibiliteter och brytningsindex.
+
+Den klassiska dipolmodellen för elektrisk polarisering av ett materials
+molekyler av elektriska fält introduceras, och ett linjärt samband mellan
+pålagt externt elektriskt fält och det resulterande elektriska dipolmomentet
+hos mediet erhålls. En medelvärdesbildning över molekylernas elektriska
+dipolmoment ger den elektriska polarisationsdensiteten hos det dielektriska
+mediet, och vi formulerar ur denna den elektriska susceptibiliteten
+χ<sub>e</sub> och den relativa elektriska permittiviteten ε<sub>r</sub>.
+Vi härleder generaliseringen för Gauss lag för den elektriska flödestätheten
+<b>D</b> som ∇ · <b>D</b> = ρ<sub>f</sub>, där ρ<sub>f</sub> är den fria
+laddningstätheten.
+
+Randvillkor och övergångar mellan olika dielektrika härleds för den elektriska
+fältstyrkan <b>E</b> och den elektriska flödestätheten <b>D</b>, för deras
+normal- och tangentialkomponenter. Slutligen formulerar vi måttet på upplagrad
+elektrisk energi i ett dielektrikum.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
