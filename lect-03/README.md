@@ -21,14 +21,17 @@ ekvation också är entydig, det vill säga att om vi finner en lösning φ så 
 det också den enda existerande lösningen. Med utgångspunkt i detta finner vi
 därefter att även Poissons ekvation ∇<sup>2</sup> φ = ρ/ε<sub>0</sub> i direkt
 närvaro av en laddningstäthet ρ även den ger entydighet för lösningar φ.
+
 Vi kan med detta visa att en domän som är omgiven av ett skal som hålls vid
 konstant potential φ0 direkt ger att det elektriska fältet innanför skalet är
 identiskt noll, vilket är principen för “Faradays bur”.
+
 Utifrån entydighetsteoremet för Laplace och Poissons ekvation kan vi visa på
 hur vi kan konstruera så kallade “virtuella spegelladdningar” för att lösa
 elektrostatiska problem i närvaro av fria laddningar i elektriskt ledande
 domäner eller ytor, specifikt för plana ytor mellan ledare eller dieletrika
 samt cylinderytor och sfärer.
+
 Slutligen så tar vi fram en metod för hur den resulterande laddningstätheten
 på en yta av ledande material kan tas fram med de virtuella spegelladdningarna.
 
