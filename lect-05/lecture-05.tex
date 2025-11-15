@@ -1,0 +1,1042 @@
+%
+% File: teach/elmagii/lect-05/lecture-05.tex [plain TeX code]
+% Github: https://github.com/elmagii/lect-04/
+% Last change: November 15, 2025
+%
+% Lecture No 5 in the course ``Elektromagnetism II, 1TE626 (2025)'',
+% held November 17, 2025, at Uppsala University, Sweden.
+%
+% Copyright (C) 2022-2025, Fredrik Jonsson, under Gnu General Public
+% License (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
+\input macros/epsf.tex
+\input macros/eplain.tex
+\font\ninerm=cmr9
+\font\twelvesc=cmcsc10 at 12 truept
+\input amssym % to get the {\Bbb E} font (strikethrough E)
+\def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
+    \else\hfill\fi}
+  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
+    \hfil{\it Elektromagnetism II, 1TE626 (2025)}}
+  \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2025)}
+    \hfil{\it F\"orel\"asning #1}}
+  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{macros/UU_logo_color.eps}}
+  \vskip-42pt\hfill\vbox{
+      \hbox{{\it Elektromagnetism II, 1TE626 (2025)}}
+      \hbox{{\it Lecture Notes, Fredrik Jonsson}}
+      \hbox{{\it Document Revision \today}}
+      \hbox{{\it https://github.com/hp35/elmagii/}}}\vskip 36pt
+    \centerline{\twelvesc F\"orel\"asning #1}
+  \vskip 24pt\noindent}
+\def\section #1 {\medskip\goodbreak\noindent{\bf #1}
+  \par\nobreak\smallskip\noindent}
+\def\subsection #1 {\medskip\goodbreak\noindent{\it #1}
+  \par\nobreak\smallskip\noindent}
+\def\iint{\mathop{\int\kern-8pt\int}}
+\def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+\def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
+\def\sgn{\mathop{\rm sgn}\nolimits} % sign
+\def\Re{\mathop{\rm Re}\nolimits}   % real part
+\def\Im{\mathop{\rm Im}\nolimits}   % imaginary part
+\def\Tr{\mathop{\rm Tr}\nolimits}   % quantum mechanical trace
+\def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+\def\encircle#1{\kern3pt#1\kern-7.6pt$\bigcirc$\kern4pt}
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+\def\quote#1{\par\leftskip=36pt\rightskip=36pt\bigskip\noindent#1\par
+  \leftskip=0pt\rightskip=0pt\bigskip}
+\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+  \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt\vfill\eject}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
+
+\lecture{5}
+\centerline{\twelvesc Elektrodynamik -- Elektromagnetisk induktion}
+\centerline{Fredrik Jonsson, Uppsala Universitet, 17 november 2025}
+\vskip24pt
+
+\plan{{\"A}mnet f{\"o}r f{\"o}rel{\"a}sningen beskrivs kort och koncist
+  med Michael Faradays egna ord (1831), fritt tolkade som ``Ett varierande
+  magnetf{\"a}lt inducerar ett elektriskt f{\"a}lt''. Vi g{\aa}r igenom
+  definitionerna av magnetiskt fl{\"o}de och det historiskt betingade
+  begreppet elektromotorisk ``kraft''.
+  Vi h{\"a}rleder Faradays induktionslag i tv{\aa} separata och inb{\"o}rdes
+  sammanh{\aa}llna fall. Det f{\"o}rsta fallet introduceras f{\"o}r sin
+  enkelhet och intuitivt greppbara geometri, d{\"a}r vi studerar en
+  rektangul{\"a}r str{\"o}mslinga som f{\"o}rs genom ett inhomogent magnetiskt
+  f{\"a}lt och kommer fram till formen p{\aa} Faradays induktionslag.
+  Det andra fallet {\"a}r en formell h{\"a}rledning av Faradays induktionslag
+  f{\"o}r en godtycklig r{\"o}rligt geometri i form av en slinga med godtycklig
+  hastighet l{\"a}ngs med sin trajektoria, samt med ett godtyckligt varierande
+  magnetf{\"a}lt. Vi noterar att Faradays induktionslag h{\"a}rleds enbart
+  utifr{\aa}n Lorentz kraftlag och ej involverande vare sig Coulombs eller
+  Biot--Savarts lag eller n{\aa}ot av deras derivat i det elektromagnetiska
+  ``sl{\"a}kttr{\"a}det''; i och med detta har vi i Faradays induktionslag
+  avsaknad av s{\aa}v{\"a}l den elektriska permittiviteten $\varepsilon_0$
+  som den magnetiska permeabiliteten $\mu_0$.
+  Utifr{\aa}n Faradays induktionslag formulerar vi Lenz lag som slutsatsen
+  att en inducerad str{\"o}m alltid har en riktning som motverkar orsaken
+  till att den uppkom, och vi g{\aa}r utifr{\aa}n denna princip igenom en
+  samling med tankeexperiment med b{\"a}ring p{\aa} tolkning av
+  elektromagnetisk induktion.
+  Med utg{\aa}ngspunkt i Faradays induktionslag h{\"a}rleder vi Faradays lag,
+  eller ``Maxwell--Faradays lag'', p{\aa} differential- och integralform.
+  Vi avslutar med att g{\aa} igenom hur tv{\aa} str{\"o}mb{\"a}rande slingor
+  p{\aa}verkar varandra genom {\"o}msesidig induktion, och vi h{\"a}rleder
+  Neumanns formel f{\"o}r den {\"o}msesidiga induktansen. Specifikt g{\aa}r
+  vi igenom tolkningen av Neumanns formel i form av reciprocitet mellan
+  tv{\aa} slingor, d{\"a}r vi har det sm{\aa}tt f{\"o}rbluffande resultatet
+  att det magnetiska fl{\"o}de som uppf{\aa}ngas av en slinga fr{\aa}n en
+  str{\"o}m i den andra slingan exakt motsvaras av det magnetiska fl{\"o}de
+  som den andra slingan skulle uppf{\aa}nga om ist{\"a}llet den f{\"o}rsta
+  slingan drevs med exakt samma str{\"o}m.}
+
+\section{Introduktion - Faradays induktionslag}
+Vi kan i en enda mening sammanfatta {\"a}mnet f{\"o}r dagens
+f{\"o}rel{\"a}sning\numberedfootnote{Vi kommer i denna f{\"o}rel{\"a}sning
+  att i huvudsak f{\"o}lja Griffiths Kapitel~7, med h{\"a}rledningen av
+  Faradays induktionslag p{\aa} Sid.~307--309.}
+med Faradays egen slutsats, som fritt tolkad lyder:
+\quote{\vbox{\hbox{{\it Ett varierande magnetf{\"a}lt inducerar ett
+  elektriskt f{\"a}lt.}}\hbox{\hbox to 116pt{}--- Michael Faraday (1831)}}}
+\noindent
+F{\"o}r {\it elektrostatiska} system g{\"a}ller det som tidigare visats i
+F{\"o}rel{\"a}sning~2 att som en f{\"o}ljd av att rotationen av det elektriska
+f{\"a}ltet alltid {\"a}r noll i elektrostatiska system, s{\aa} {\"a}r via Stokes
+teorem integralen av det elektriska f{\"a}ltet {\"o}ver en godtycklig sluten
+slinga $\Gamma$ alltid {\"a}r noll, det vill s{\"a}ga att\numberedfootnote{Recap
+  fr{\aa}n F{\"o}rel{\"a}sning~3: F{\"o}r {\it statiska} elektriska f{\"a}lt
+  g{\"a}ller alltid att $\nabla\times{\bf E}={\bf 0}$, s{\aa} med Stokes
+  teorem ({\it Curl Theorem}) har vi i elektrostatiken trivialt att
+  $$
+    \oint_{\Gamma}{\bf E}\cdot d{\bf l}
+      =\iint_S\underbrace{\nabla\times{\bf E}}_{={\bf 0}}\cdot d{\bf S}
+      =0.
+  $$}
+$$
+  \oint_{\Gamma}{\bf E}\cdot d{\bf l}=0.
+  \qquad\hbox{(Statiskt!)}
+$$
+Michael Faraday observerade 1831 att i tidsberoende (icke-statiska = dynamiska)
+f{\"a}lt s{\aa} g{\"a}ller inte detta, utan f{\"a}ltet driver en str{\"o}m som
+lyder
+$$
+  \oint_{\Gamma}{\bf E}\cdot d{\bf l}=-{{d\Phi_{\rm M}}\over{dt}}.
+  \qquad\hbox{(Dynamiskt!)}
+$$
+Vi brukar i vardagligt tal kalla denna ekvation {\it Faradays
+induktionslag}\numberedfootnote{Denna beteckning {\"a}r i sig lite olycklig,
+  d{\aa} vi l{\"a}tt kan associera denna med Faradays lag p{\aa}
+  differentialform som vi inom kort kommer att stifta bekantskap med,
+$$
+  \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}}.
+$$
+Dock kommer vi inom kort att visa hur denna kan h{\"a}rmedas ur just Faradays
+induktionslag p{\aa} formen som involverar magnetiska fl{\"o}det $\Phi_{\rm M}$.
+Vissa textb{\"o}cker inom elektromagnetism tar Faradays lag p{\aa} denna
+differentialform som ett {\it axiom} (postulat) utan att visa p{\aa} hur formen
+uppkommer, och g{\aa}r helt enkelt till att visa hur induktionslagen erh{\aa}lls
+fr{\aa}n denna form; detta {\"a}r dock fusk och ett cirkelresonemang som vi
+skall h{\aa}lla oss borta fr{\aa}n i m{\"o}jligaste m{\aa}n.}, eller kort och
+gott bara {\it induktionslagen}.
+
+Vi skall h{\"a}r notera att Faradays induktionslag, fr{\aa}n vilken vi sedan
+h{\"a}rleder Faradays lag (eller ``Maxwell--Faradays lag'', som
+engelsk-spr{\aa}kig litteratur ofta betecknar den) inte {\"a}r m{\"o}jlig att
+h{\"a}rleda enbart fr{\aa}n elektrostatiska eller magnetostatiska teorem som
+Coulombs eller Biot--Savarts lag. Induktion {\"a}r ett strikt {\it dynamiskt}
+fenomen d{\"a}r vi v{\"a}ljer att antingen
+\medskip
+\item{A.}{H{\"a}rleda den fr{\aa}n Lorentz-kraften plus information om
+  hur magnetf{\"a}ltet ${\bf B}({\bf x},t)$ beror i tiden, eller}
+\item{B.}{Helt enkelt godta den empiriskt verifierade ``magnetiska
+  fl{\"o}desregeln'' som ett axiom fr{\aa}n vilket vi kan h{\"a}rleda
+  Faradays lag.}
+\medskip
+\noindent
+Vi kommer h{\"a}r sj{\"a}lvfallet att formellt h{\"a}rleda fram Faradays lag
+fr{\aa}n Lorentz-kraften, d{\aa} det vore n{\"a}stintill moraliskt
+f{\"o}rkastligt i en kurs som denna att inte ta tillf{\"a}llet i akt och en
+g{\aa}ng f{\"o}r alla visa p{\aa} ursprunget f{\"o}r denna oerh{\"o}rt
+fundamentala lag inom elektrodynamiken.\numberedfootnote{Det {\"a}r
+  oerh{\"o}rt vanligt att se ``h{\"a}rledningar'' av Faradays induktionslag
+  (``magnetiska fl{\"o}des\-lagen'') ${\cal E}=-d\Phi_{\rm M}/dt$ utg{\aa}ende
+  ifr{\aa}n Faradays lag $\nabla\times{\bf E}=-\partial{\bf B}/\partial t$
+  som om den senare vore en axiomatisk sanning som inte beh{\"o}ver bevisas.
+  (Faradays lag kommer att h{\"a}rledas fr{\aa}n induktionslagen i denna
+  f{\"o}rel{\"a}sning.) Denna approach ger endast ett cirkelresonemang,
+  d{\"a}r den ena vyn {\"o}msesidigt bevisar den andra, och om man fr{\aa}gar
+  exempelvis ChatGPT, Grok eller n{\aa}gon annan LLM ({\it large language
+  model}) s{\aa} finner man sorgligt nog direkt att svaret man f{\aa}r s{\aa}
+  gott som uteslutande bygger p{\aa} just Faradays lag som ett axiom.}
+
+\section{Grundl{\"a}ggande begrepp inf{\"o}r Faradays induktionslag}
+\subsection{Definition: Magnetiskt fl{\"o}de}
+I likhet med det elektriska fl{\"o}det $\Phi_{\rm E}$ som vi introducerade i
+F{\"o}rel{\"a}sning~1, definierar vi det {\it magnetiska fl{\"o}det}
+$\Phi_{\rm M}$ som integralen av normalkomponenten av det magnetiska f{\"a}ltet
+${\bf B}$ {\"o}ver den yta $S$ som innesluts av den slutna trajektorian
+$\Gamma$, som
+$$
+  \Phi_{\rm M}=\iint_S{\bf B}\cdot d{\bf S}.
+$$
+\epsfig{figs/magflow.1}\noindent
+L{\aa}t oss nu f{\"o}rst se hur detta magnetiska fl{\"o}de kan t{\"a}nkas ha
+ett tidsberoende. Ur definitionen av fl{\"o}det $\Phi_{\rm M}$ ser vi direkt
+att om antingen
+\medskip
+\item{1.}{Det magnetiska f{\"a}ltet som s{\aa}dant {\"a}r tidsberoende,
+  ${\bf B}={\bf B}({\bf x},t)$,}
+\item{2.}{Ytan hos den slutna slingan $\Gamma$ {\"a}ndras, eller}
+\item{3.}{Den slutna slingan $\Gamma$ p{\aa} n{\aa}got s{\"a}tt {\"a}ndras
+  i rummet, exempelvis genom att roteras eller translateras,}
+\medskip
+\noindent
+s{\aa} kommer det magnetiska fl{\"o}det $\Phi_{\rm M}=\Phi_{\rm M}(t)$ att f{\aa}
+ett tidsberoende.
+
+\subsection{Magnetisk fl{\"o}dest{\"a}thet och lite terminologi}
+Den korrekta svenska beteckningen f{\"o}r det som vi lite l{\"o}st kallat
+``magnetf{\"a}lt'' (${\bf B}$-f{\"a}ltet) {\"a}r {\it magnetisk
+fl{\"o}dest{\"a}thet}. Anledningen till denna terminologi st{\aa}r ganska
+klar i och med vad vi diskuterat ovan, d{\aa} det {\it magnetiska fl{\"o}det}
+definieras av integralen
+$$
+  \Phi_{\rm M}=\iint_S{\bf B}\cdot d{\bf S},
+$$
+vilket direkt g{\"o}r att vi b{\"o}r associera ``magnetf{\"a}ltet'' ${\bf B}$
+med en slags densitet av fl{\"o}de per ytenhet, eller kort och gott som just
+en {\it magnetisk fl{\"o}dest{\"a}thet}. Vi kan p{\aa} s{\"a}tt och vis
+s{\"a}ga att den magnetiska fl{\"o}dest{\"a}theten ${\bf B}$ {\"a}r ett
+m{\aa}tt p{\aa} hur m{\aa}nga magnetiska f{\"a}ltlinjer som sk{\"a}r en
+yta per ytenhet.
+En annan beteckning f{\"o}r ${\bf B}$-f{\"a}ltet {\"a}r {\it magnetstyrka},
+vilken dock {\"a}r betydligt mer intets{\"a}gande, {\"a}ven om det ger en
+parallell association till dess elektriska motsvarighet ${\bf E}$-f{\"a}ltet
+i form av {\it elektrisk f{\"a}ltstyrka}.
+
+\subsection{Definition: Elektromotorisk ``kraft'' - EMK}
+Vi rekapitulerar att Lorentzkraften p{\aa} en punktladdning $q$ i r{\"o}relse
+med hastigheten ${\bf v}$ i ett kombinerat elektriskt och magnetiskt f{\"a}lt
+{\"a}r given som
+$$
+  {\bf F}=q\big[{\bf E}+({\bf v}\times{\bf B})\big].
+$$
+Om vi t{\"a}nker oss att vi f{\"o}r en laddad partikel l{\"a}ngs en sluten
+slinga $\Gamma$ och integrerar den kraft som verkar p{\aa} punktladdningen
+och dividerar denna med laddningen i sig, s{\aa} f{\aa}r vi den resulterande
+potentialskillnad som agerar f{\"o}r att skicka laddningen som en str{\"o}m
+genom slingan. Den potentialskillnad som ackumulerats runt slingan {\"a}r d{\aa}
+$$
+  {\cal E}=\oint_{\Gamma}\bigg({{{\bf F}}\over{q}}\bigg)\cdot d{\bf l}
+    =\oint_{\Gamma}[{\bf E}+({\bf v}\times{\bf B})\big]\cdot d{\bf l},
+$$
+vilken brukar betecknas med den olyckligtvis t{\"a}mligen missvisande termen
+``elektromotorisk kraft'', eller kort och gott EMK. Att detta inte {\"a}r en
+``kraft'' i egentlig bem{\"a}rkelse {\"a}r tydligt fr{\aa}n den fysikaliska
+dimensionen hos ${\cal E}$, som {\"a}r~V (volt), men termen har satt sig
+fr{\aa}n dess historiska sammanhang, och {\"a}r idag den allm{\"a}nt
+vedertagna.\numberedfootnote{Som ett uttryck f{\"o}r v{\aa}r allm{\"a}nna
+  irritation {\"o}ver detta spr{\aa}kbruk, som g{\aa}r tv{\"a}rs emot den
+  fysikaliska dimensionen, s{\aa} kommer vi fram{\"o}ver genomg{\aa}ende
+  att anv{\"a}nda citattecken n{\"a}rhelst denna ``kraft'' n{\"a}mns!}
+Likaledes {\"a}r symbolen ${\cal E}$ f{\"o}r den elektromotoriska ``kraften''
+olycklig, d{\aa} den ju ger intryck av att vi har att g{\"o}ra med ett
+elektriskt f{\"a}lt, vilket ju heller ej {\"a}r fallet, men {\aa}terigen
+s{\aa} {\"a}r ``${\cal E}$'' allm{\"a}nt anv{\"a}nt inom litteraturen,
+s{\aa} vi h{\aa}ller kvar vid denna.
+
+En annan lite udda aspekt {\"a}r hur vi skall se p{\aa} denna elektromotoriska
+``kraft'' f{\"o}r en {\it sluten slinga} $\Gamma$, som ju rimligen har
+startpunkten f{\"o}r integralen exakt sammanfallande med slutpunkten.
+Med andra ord:
+\quote{{\it Hur kan vi ha en potentialskillnad i en och samma punkt i rummet?}}
+\noindent
+Svaret p{\aa} denna paradox {\"a}r att den elektromotoriska ``kraften'' {\"a}r
+ett rent konceptuellt begrepp som inf{\"o}rts som ett {\it skal{\"a}rt m{\aa}tt
+p{\aa} hur en noll-skild rotation av ett f{\"a}lt yttrar sig d{\aa} vi
+traverserar en sluten trajektoria genom det}.
+Vi kan se det som den sp{\"a}nning som skulle alstras i en ledare l{\"a}ngs med
+trakektorian $\Gamma$, d{\"a}r vi kan t{\"a}nka oss att vi klippt av slingan
+och kopplat in en voltmeter {\"o}ver de l{\"o}sa {\"a}ndarna som h{\aa}lls
+mycket n{\"a}ra varandra.\numberedfootnote{Vi kan h{\"a}r p{\aa}minna
+  oss om att vi i F{\"o}rel{\"a}sning~2 tog fram att vi f{\"o}r
+  {\it elektrostatiska} f{\"a}lt hade att $\nabla\times{\bf E}={\bf 0}$; detta
+  noll-resultat {\"a}r n{\aa}got som vi nu l{\"a}mnar bakom oss i och med att
+  vi nu kommer att introducera tidsberoende, {\it elektrodynamiska} f{\"a}lt.}
+\vfill\eject
+
+\section{Faradays induktionslag h{\"a}rledd f{\"o}r en rektangul{\"a}r
+  slinga med konstant hastighet}
+Innan vi ger oss in p{\aa} en generell h{\"a}rledning, som riskerar att f{\aa}
+oss att fastna i vektoralgebra och tappa fokus p{\aa} sj{\"a}lva k{\"a}rnan i
+Faradays induktionslag, l{\aa}t oss betrakta ett f{\"o}renklat fall med en
+rektangul{\"a}r slinga $\Gamma$ som med konstant hastighet ${\bf v}_0$ dras
+ut ur ett rektangul{\"a}rt omr{\aa}de med ett homogent magnetf{\"a}lt
+${\bf B}_0$, ortogonalt mot slingans plan och ortogonalt mot den konstanta
+hastigheten ${\bf v}_0$.
+\epsfig{figs/faradayrect.1}\noindent
+L{\aa}t oss se vad detta h{\"o}gst f{\"o}renklade system kan ge i form av
+elektromotorisk ``kraft''. Till att b{\"o}rja med, s{\aa} har vi f{\"o}r
+samtliga fyra segment av $\Gamma$ att Lorentz-kraften, om vi antar att inga
+statiska elektriska f{\"a}lt {\"a}r med i problemet, beskrivs av
+$$
+  \eqalign{
+    {\bf F}&=q({\bf v}\times{\bf B}_0)\cr
+      &=q({\bf e}_z v_0)\times({\bf e}_y B_0))\cr
+      &=-q v_0 B_0 {\bf e}_x.\cr
+  }
+$$
+\vfill\eject
+N{\"a}r vi integrerar denna kraft, normaliserad med laddningen $q$, l{\"a}ngs
+med $\Gamma$, s{\aa} ser vi att segmenten \encircle{2} och \encircle{4} som
+{\"a}r ortogonala mot denna kraft ger noll i bidrag, eftersom
+skal{\"a}rprodukten ${\bf F}\cdot d{\bf l}$ d{\"a}r {\"a}r identiskt noll.
+Med andra ord {\"a}r det bara segmenten \encircle{1} och \encircle{3} som
+kan ge bidrag, och eftersom segment \encircle{3} ligger utanf{\"o}r
+magnetf{\"a}ltet och d{\"a}rmed {\"a}ven det ger noll i bidrag,
+s{\aa} {\"a}r det endast segment 1 som ger ett nettobidrag till v{\aa}r
+elektromotoriska ``kraft'',
+$$
+  \eqalign{
+    {\cal E}&=\oint_{\Gamma}\bigg({{{\bf F}}\over{q}}\bigg)\cdot d{\bf l}
+       =\oint_{\Gamma}({\bf v}\times{\bf B}_0)\cdot d{\bf l}\cr
+      &=\oint_{\hbox{\encircle{1}}}({\bf v}\times{\bf B}_0)\cdot d{\bf l}
+          +\oint_{\hbox{\encircle{2}}}\underbrace{
+              ({\bf v}\times{\bf B}_0)\cdot d{\bf l}
+           }_{=0,\ {\bf v}\parallel d{\bf l}}
+          +\oint_{\hbox{\encircle{3}}}
+              ({\bf v}\times\underbrace{{\bf B}_0}_{=0})\cdot d{\bf l}
+          +\oint_{\hbox{\encircle{4}}}\underbrace{
+              ({\bf v}\times{\bf B}_0)\cdot d{\bf l}
+           }_{=0,\ {\bf v}\parallel d{\bf l}}\cr
+      &=\int_{\hbox{\encircle{1}}}(-v_0 B_0 {\bf e}_x)\cdot({\bf e}_x dx)
+       =-v_0 B_0\int_{\hbox{\encircle{1}}}dx\cr
+      &=-v_0 B_0 L.\cr
+  }
+$$
+Samtidigt har vi att det magnetiska fl{\"o}de $\Phi_{\rm M}$ som t{\"a}cks av
+slingan ges av ytintegralen\numberedfootnote{Vi skall h{\"a}r komma ih{\aa}g
+  att integrationsriktningen som vi valt f{\"o}r den slutna linjeintegralen
+  {\"o}ver slignan $\Gamma$ dessutom best{\"a}mmer vilken riktning v{\aa}ra
+  ytelement $d{\bf S}$ har, med den sedvanliga ``h{\"o}gerhands\-regeln''.
+  I detta fall har vi valt en integration som g{\aa}r {\it moturs} i slingans
+  plan, s{\aa} som vi ser den i figuren, och ytelementen har s{\aa} en
+  {\it normalriktning som pekar ut ur planet}, i negativ ${\bf e}_y$-riktning.}
+{\"o}ver den yta $S$ som innesluts av slingan $\Gamma$. Det magnetiska
+fl{\"o}det har en f{\"o}r{\"a}ndring i tiden som ges av
+$$
+  \eqalign{
+    {{d\Phi_{\rm M}}\over{dt}}&={{d}\over{dt}}\iint_S{\bf B}_0\cdot d{\bf S}
+       ={{d}\over{dt}}\iint_S (B_0{\bf e}_y)\cdot
+         (\underbrace{-{\bf e}_ydA}_{=d{\bf S}})
+       =-B_0{{d}\over{dt}}\big((h-v_0 t)L\big)\cr
+      &=\underbrace{v_0 B_0 L}_{=-{\cal E}}\cr
+  }
+$$
+Ur detta f{\"o}renklade resonemang kan vi d{\"a}rmed dra slutsatsen att den i
+slingan $\Gamma$ genererade elektromotoriska ``kraften'' ges som
+f{\"o}r{\"a}ndringen i tid av det av slingan inneslutna magnetiska fl{\"o}det,
+med omv{\"a}nt tecken, som
+$$
+  {\cal E}=-{{d\Phi_{\rm M}}\over{dt}}.
+$$
+Detta samband sammanfattar {\it Faradays induktionslag}\numberedfootnote{Ibland
+  kallas denna kort och gott f{\"o}r ``Faradays lag'' eller ``magnetiska
+  fl{\"o}deslagen''; vi v{\"a}ljer h{\"a}r dock att beh{\aa}lla den
+  formella beteckningen f{\"o}r att inte blanda ihop denna induktionslag
+  med den lag p{\aa} differentialform som vi inom kort kommer att
+  h{\"a}rleda fr{\aa}n denna.},
+vilken vi erinrar oss h{\"a}r har h{\"a}rletts fram f{\"o}r en specifik
+geometri och med ett konstant magnetf{\"a}lt ${\bf B}_0$, i vilken det
+magnetiska fl{\"o}det endast p{\aa}verkas genom att den slutna slingan
+traverserar magnetf{\"a}ltet s{\aa} att fl{\"o}det successivt minskar.
+
+Om vi hade haft det homogena magnetf{\"a}ltet t{\"a}ckande hela den r{\"o}rliga
+slingans yta, s{\aa} hade segmentet \encircle{3} gett ett till beloppet lika
+stort men motriktat bidrag som segmentet \encircle{1}, och den elektromotoriska
+''netto-kraften'' hade blivit noll.
+\vfill\eject
+
+\subsection{Observation~I kring Faradays induktionslag
+  - Avsaknad av permittivitet och permebilitet}
+Notera att Faradays induktionslag enligt ovan h{\"a}rleddes enbart under
+antagandet om Lorentz-kraften p{\aa} laddade partiklar i r{\"o}relse.
+Vi har i h{\"a}rledningen inte anv{\"a}nt vare sig Coulombs lag eller n{\aa}gon
+av de fr{\aa}n den h{\"a}rledda satserna, och d{\"a}rmed kan vi konstatera att
+den elektriska permittiviteten $\varepsilon_0$ lyser med sin fr{\aa}nvaro.
+Vi har ej heller anv{\"a}nt Biot--Savarts lag eller n{\aa}got av de fr{\aa}n
+denna h{\"a}rledda teoremen l{\"a}ngre ner i det ``elektromagnetiska
+sl{\"a}kttr{\"a}det'', s{\aa} {\"a}ven den magnetiska permeabiliteten $\mu_0$
+lyser med sin fr{\aa}nvaro.
+Det enda som vi i h{\"a}rledningen av Faradays lag har tagit som ett axiom
+{\"a}r just Lorentz kraftlag, vilket ger oss vid hand att vi i och med denna
+{\"a}r n{\aa}got nytt p{\aa} sp{\aa}ret.
+
+\subsection{Observation~II kring Faradays induktionslag
+  - Fysisk vs virtuell slinga}
+Utifr{\aa}n diskussionen ovan kring alstrande av en elektromotorisk ``kraft''
+och integralen av en normaliserad kraft ${\bf F}$ verkande p{\aa} en laddning
+$q$, s{\aa} har vi tyv{\"a}rr letts in i tankarna att detta med Faradays
+induktionslag i grund och botten bara skulle handla om fysiska str{\"o}mslingor
+och hur vi kan generera str{\"o}m induktivt i klassiska generatorer och
+liknande. H{\"a}r skall vi dock komma ih{\aa}g att den elektromotoriska
+``kraften'' ju {\"a}r definierad i termer av en sluten linjeintegral som
+arbetar med {\it f{\"a}lten i sig} som integrand. I grund och botten {\"a}r
+ju den elektromotoriska kraften ingenting annat {\"a}n ett {\it rent
+matematiskt m{\aa}tt p{\aa} rotationen av det elektriska f{\"a}lt som
+{\"a}r inneslutet}, som vi strax skall se.
+Med andra ord finns det ingenting som hindrar oss att evaluera detta m{\aa}tt
+som en integral {\"o}ver en sluten {\it virtuell slinga} $\Gamma$ som
+innesluter n{\aa}got magnetiskt (och f{\"o}r den delen elektriskt) f{\"a}lt.
+
+Samtidigt {\"a}r det magnetiska fl{\"o}det $\Phi_{\rm M}$ {\"a}ven det bara en
+matematisk konstruktion i form av en integral {\"o}ver en yta $S$ innesluten
+av slingan $\Gamma$, och {\"a}ven detta m{\aa}tt kan sj{\"a}lvfallet integreras
+{\"o}ver en yta som inte n{\"o}dv{\"a}ndigtvis m{\aa}ste ringas in av en fysisk
+str{\"o}mslinga.
+
+Med andra ord visar detta p{\aa} att Faradays induktionslag handlar om
+n{\aa}got djupare {\"a}n bara generatorer, med b{\"a}ring p{\aa} en
+{\it koppling mellan elektriska och magnetiska f{\"a}lt i sig}.
+P{\aa} s{\"a}tt och vis kan vi s{\"a}ga att det {\"a}r {\it precis vid denna
+punkt i kursen som vi b{\"o}rjar formulera en sammanh{\aa}llen teori f{\"o}r
+elektrodynamik och i f{\"o}rl{\"a}ngningen elektromagnetisk v{\aa}gutbredning}.
+
+\subsection{Observation~III kring Faradays induktionslag
+  - Negativt tecken och Lenz lag}
+I uttrycket f{\"o}r Faradays induktionslag ser vi {\"a}ven att tidsderivatan av
+det magnetiska fl{\"o}det $\Phi_{\rm M}$ f{\"o}rekommer med ett negativt tecken i
+h{\"o}gerledet. Detta negativa tecken {\"a}r en signatur av att den genererade
+elektromotoriska ``kraften'', eller om vi s{\aa} vill den i slingan genererade
+str{\"o}mmen i det fall att vi har en fysisk ledare som slinga, alltid kommer
+att genereras s{\aa} att den har en riktning som motverkar k{\"a}llan till
+induktionen. Denna princip, som brukar betecknas med {\it Lenz lag}, bist{\aa}r
+med ett synnerligen kraftfullt verktyg n{\"a}r det kommer till punkten att vi
+skall tolka ett resultat eller g{\"o}ra en {\it sanity check} p{\aa} att ett
+resultat verkar rimligt.
+
+Specifikt i och med h{\"a}rledningen av Faradays induktionslag enligt ovan,
+s{\aa} har vi just r{\aa}kat ta fram formen p{\aa} Lenz lag f{\"o}r
+elektromotorisk ``kraft'' genererad i det klassiska problemet f{\"o}r en
+ledande stav som r{\"o}r sig ortogonalt mot sin egen axel och ortogonalt mot
+ett omgivande konstant magnetf{\"a}lt, som\numberedfootnote{Griffiths
+  problem~7.7, sid.~310.}
+$$
+  {\cal E}=-v_0 B_0 L.
+$$
+\vfill\eject
+
+\section{Lenz lag som rimlighetsbed{\"o}mning av l{\"o}sningar till
+  induktionsproblem}
+{\it Lenz lag s{\"a}ger att en inducerad str{\"o}m har en riktning som
+motverkar orsaken till att den uppkom.} Detta inneb{\"a}r att om
+magnetf{\"a}ltet genom en ledande slinga (det magnetiska fl{\"o}det
+$\Phi_{\rm M}$) {\"o}kar, s{\aa} kommer den i slingan inducerade str{\"o}mmen
+att ha en riktning som skapar ett magnetf{\"a}lt som motverkar {\"o}kningen.
+Motsatt g{\"a}ller att om det magnetiska fl{\"o}det minskar, s{\aa} kommer den
+inducerade str{\"o}mmen att skapa ett magnetf{\"a}lt som motverkar minskningen.
+
+Denna princip {\"a}r oerh{\"o}rt kraftfull n{\"a}r det g{\"a}ller att f{\aa}
+en k{\"a}nsla f{\"o}r induktionsproblem i allm{\"a}nhet, och kan med f{\"o}rdel
+anv{\"a}ndas som en rimlighetsbed{\"o}mning av l{\"o}sningar som tagits fram i
+induktionsproblem. Med detta sagt, l{\aa}t oss applicera Lenz lag p{\aa} ett
+antal tankeexperiment enligt f{\"o}ljande.
+\epsfig{figs/lenz.1}\noindent
+\vfill\eject
+
+\section{Generell h{\"a}rledning av Faradays induktionslag}
+Vi har s{\aa} l{\aa}ngt utifr{\aa}n en illustrativ men mycket f{\"o}renklad
+geometri visat p{\aa} en {\it sannolik} form av Faradays induktionslag, men
+det vore n{\"a}stintill skamligt av oss att bara acceptera denna som ett faktum
+utan att g{\aa} in p{\aa} hur vi generellt och formellt kan h{\"a}rleda den,
+om {\"a}n att det nu blir en aning st{\"o}kigt. Vi kommer nu att introducera
+en generell trajektoria $\Gamma(t)$, l{\"a}ngs med vilken varje element
+till{\aa}ts ha en godtycklig hastighet ${\bf v}({\bf x},t)$ som har ett
+godtyckligt beroende i tid och rum. Denna generalitet g{\"o}r sj{\"a}lvfallet
+att {\"a}ven den omslutna arean och riktningen av ytnormalen till{\aa}ts att
+variera fritt. Vi till{\aa}ter vidare att det av trajektorian inneslutna
+magnetf{\"a}ltet ${\bf B}({\bf x},t)$ till{\aa}ts att variera fritt i tid
+och rum.\numberedfootnote{Leibniz integralregel n{\"a}mns tyv{\"a}rr inte
+  i Griffiths, oturligt nog eftersom det {\"a}r ett statement som i m{\aa}ngt
+  och mycket skulle g{\"o}ra att vi bara skulle kunna referera till resultatet
+  h{\"a}r.\goodbreak
+  \noindent{\tt https://en.wikipedia.org/wiki/Leibniz\_integral\_rule}}
+\epsfig{figs/faradayrib.1}\noindent
+L{\aa}t oss nu se vad f{\"o}r{\"a}ndringen i magnetiskt fl{\"o}de
+$d\Phi_{\rm M}$ kan t{\"a}nkas vara f{\"o}r en s{\aa} generell konstruktion.
+D{\aa} trajektorian $\Gamma(t)$ r{\"o}r sig, fr{\aa}n tiden $t$ till tiden
+$t+dt$ strax d{\"a}refter, kommer f{\"o}r{\"a}ndringen i magnetiskt fl{\"o}de
+att ges som alla delbidrag i den ``remsa'' som i rummet beskrivs av zonen
+mellan $\Gamma(t)$ och $\Gamma(t+dt)$,
+$$
+  d\Phi_{\rm M}=\Phi_{\rm M}(t+dt)-\Phi_{\rm M}(t)
+    =\iint_{\hbox{remsa}}{\bf B}({\bf x},t)\cdot d{\bf S},
+$$
+d{\"a}r areaelementen $d{\bf S}$ l{\"a}ngs med remsan ges som vektorprodukten
+mellan den str{\"a}cka som elementet vid ${\bf x}$ av trajektorian
+tillryggal{\"a}gger under tiden $dt$ samt linjeelementet $d{\bf l}$ l{\"a}ngs
+med trajektorian vid tiden $t$,
+$$
+  d{\bf S}=({\bf v}({\bf x},t)dt)\times(d{\bf l})
+    =({\bf v}({\bf x},t)\times d{\bf l})\,dt
+$$
+Utifr{\aa}n detta, med areaelementen uttryckta som en produkt mellan
+linjeelement $d{\bf l}$ och infinitesimala tidssteg $dt$, ser vi direkt att
+vi kan ers{\"a}tta areaintegralen {\"o}ver v{\aa}r remsa med en linjeintegral,
+som
+$$
+  \eqalign{
+    d\Phi_{\rm M}
+      &=\iint_{\hbox{remsa}}{\bf B}({\bf x},t)\cdot d{\bf S}\cr
+      &=\oint_{\Gamma(t)}{\bf B}({\bf x},t)
+             \cdot({\bf v}({\bf x},t)\times d{\bf l})\,dt\cr
+      &=dt\oint_{\Gamma(t)}{\bf B}({\bf x},t)
+             \cdot({\bf v}({\bf x},t)\times d{\bf l}),\cr
+  }
+$$
+med andra ord kan vi formulera f{\"o}r{\"a}ndringen av det magnetiska
+fl{\"o}det genom trajektorian $\Gamma(t)$ som den f{\"o}rv{\"a}ntade
+tidsderivatan
+$$
+  \eqalign{
+    {{d\Phi_{\rm M}}\over{dt}}
+      &=\oint_{\Gamma(t)}{\bf B}({\bf x},t)\cdot
+           ({\bf v}({\bf x},t)\times d{\bf l}).
+  }
+$$
+\epsfig{figs/faradayelement.1}\noindent
+Om vi t{\"a}nker oss att en laddning l{\"a}ngs med trajektorian $\Gamma(t)$
+har hastigheten ${\bf u}({\bf x},t)$, s{\aa} {\"a}r sj{\"a}lvfallet denna
+hastighet parallell med linjeelementet $d{\bf l}$ i samma punkt.
+Trajektorian $\Gamma(t)$ har vid samma tidpunkt en och punkt i rummet
+hastigheten ${\bf v}({\bf x},t)$, s{\aa} den t{\"a}nkta laddningens
+resulterande hastighet ${\bf w}({\bf x},t)$ ges som summan av dessa tv{\aa}
+komposanter som
+$$
+  {\bf w}({\bf x},t)={\bf u}({\bf x},t)+{\bf v}({\bf x},t).
+$$
+\vfill\eject
+Notera h{\"a}r att eftersom ${\bf u}({\bf x},t)$ {\"a}r parallell med
+linjeelementet $d{\bf l}$, s{\aa} kommer samma linjeelements kryssprodukt
+med ${\bf v}({\bf x},t)$ att ge en produkt som {\"a}r ortogonal mot just
+${\bf u}({\bf x},t)$; med andra ord s{\aa} kan vi precis lika g{\"a}rna
+ers{\"a}tta hastigheten i kryssprodukten med den totala resulterande
+hastigheten ${\bf w}({\bf x},t)$ f{\"o}r en hypotetisk laddnings r{\"o}relse,
+d{\aa}
+$$
+  \eqalign{
+    {{d\Phi_{\rm M}}\over{dt}}
+      &=\oint_{\Gamma(t)}{\bf B}({\bf x},t)\cdot
+           \underbrace{
+             \big(
+               (
+                 \underbrace{
+                   {\bf u}({\bf x},t)
+                 }_{\parallel d{\bf l}\to0}+{\bf v}({\bf x},t)
+               )\times d{\bf l}
+             \big)
+           }_{
+              ={\bf v}({\bf x},t)\times d{\bf l}
+           }\cr
+      &=\oint_{\Gamma(t)}{\bf B}({\bf x},t)\cdot
+             \big({\bf w}({\bf x},t)\times d{\bf l}\big)\cr
+      &=\big\{\hbox{ Griffiths {\it Triple Product (1)} }\big\}\cr
+      &=\big\{\hbox{ ${\bf a}\cdot({\bf b}\times{\bf c})
+                       ={\bf c}\cdot({\bf a}\times{\bf b})
+                       =-({\bf b}\times{\bf a})\cdot{\bf c}$ }\big\}\cr
+      &=-\oint_{\Gamma(t)}\underbrace{
+      \big({\bf w}({\bf x},t)\times{\bf B}({\bf x},t)\big)
+      }_{
+        ={\bf F}_{\rm M}/q
+      }
+     \cdot d{\bf l}.\cr
+  }
+$$
+Vi ser nu po{\"a}ngen med att ers{\"a}tta den hypotetiska laddningens hastighet
+${\bf v}({\bf x},t)$ l{\"a}ngs trajektorian med den totala hastigheten
+${\bf w}({\bf x},t)$ i och med att produkten med det magnetiska f{\"a}ltet
+exakt {\"a}r det magnetiska bidraget till Lorentz-kraften,
+$$
+  {\bf F}_{\rm M}=q\big({\bf w}({\bf x},t)\times{\bf B}({\bf x},t)\big),
+$$
+vilket i sin tur g{\"o}r att vi direkt kan tolka den sista integralen som den
+elektromotoriska ``kraft'' som alstras runt trajektorian $\Gamma(t)$,
+$$
+    {{d\Phi_{\rm M}}\over{dt}}
+      =-\oint_{\Gamma(t)}\bigg({{{\bf F}_{\rm M}}\over{q}}\bigg)\cdot d{\bf l}
+      =-{\cal E}
+$$
+L{\aa}t oss sammanfatta detta generella resultat med att vi till slut p{\aa}
+ett strikt s{\"a}tt h{\"a}rlett Faradays induktionslag som
+$$
+  {\cal E}=-{{d\Phi_{\rm M}}\over{dt}}.
+$$
+Vi erinrar oss att denna h{\"a}rletts endast utifr{\aa}n Lorentz-kraften
+agerande p{\aa} en hypotetisk laddning, och att denna d{\"a}rmed dels {\"a}r
+i avsaknad av s{\aa}v{\"a}l den elektriska permittiviteten $\varepsilon_0$
+som den magnetiska permeabiliteten $\mu_0$.
+
+Vi tar ocks{\aa} tillf{\"a}llet i akt att erinra oss om att {\"a}ven om vi
+h{\"a}r f{\"o}r enkelhets skull diskuterat Lorentzkraften s{\aa} som den
+skulle agerat p{\aa} en fysisk laddning $q$ i r{\"o}relse, s{\aa} {\"a}r
+resultatet i form av Faradays lag en {\it relation mellan f{\"a}lt}, specifikt
+visande att i n{\"a}rvaro av tidsberoende magnetiska f{\"a}lt s{\aa} {\"a}r
+rotationen f{\"o}r det elektriska f{\"a}ltet inte l{\"a}ngre noll.
+Detta st{\aa}r i stark kontrast till det statiska fallet vilket vi analyserade
+i F{\"o}rel{\"a}sning~2, d{\"a}r vi konstaterade att
+$\nabla\times{\bf E}={\bf 0}$ f{\"o}r statiska f{\"a}lt.
+
+\section{Faradays induktionslag f{\"o}r station{\"a}ra slingor}
+I fall d{\aa} en str{\"o}mslinga $\Gamma$ {\"a}r {\it station{\"a}r i rummet
+och har en form som inte beror av tiden}, s{\aa} kan vi direkt uttrycka den
+genererade elektromotoriska ``kraften'' utifr{\aa}n definitionen av det
+magnetiska fl{\"o}det som
+$$
+  {\cal E}=-{{d}\over{dt}}\iint_{S}{\bf B}({\bf x},t)\cdot d{\bf S}
+    =-\iint_{S}{{d{\bf B}({\bf x},t)}\over{dt}}\cdot d{\bf S}
+$$
+Som exempel p{\aa} applikationer av Faradays induktionslag f{\"o}r
+station{\"a}ra slingor kan n{\"a}mnas statorn, som {\"a}r den station{\"a}ra,
+icke r{\"o}rliga komponenten i en generator, som typiskt inneh{\aa}ller spolar
+av koppartr{\aa}d (lindningar) som omvandlar det varierande magnetf{\"a}ltet
+fr{\aa}n magneter p{\aa} en rotor till elektrisk sp{\"a}nning via den
+inducerade elektromotoriska ``kraften''.
+Ett annat exempel {\"a}r pickupen p{\aa} en elgitarr, d{\"a}r magneter omgivna
+av en spole via den vibrerande metalliska str{\"a}ngen f{\aa}ngar upp ett
+varierande magnetiskt f{\"a}lt, och p{\aa} liknande s{\"a}tt skapar en signal
+i form av en sp{\"a}nning.
+
+\section{Spolar och utv{\"a}xling p{\aa} det magnetiska fl{\"o}det}
+F{\"o}r en spole med $N$ varv, som vart och ett kan anses som identiska i
+deras t{\"a}ckning av det magnetiska f{\"a}ltet och d{\"a}rmed vart och ett
+upplever ett identiskt magnetiskt fl{\"o}de $\Phi_{\rm M}$ s{\aa} blir den
+resulterande inducerade elektromotoriska kraften utv{\"a}xlad i samma grad,
+som
+$$
+  {\cal E}=-N{{d\Phi_{\rm M}}\over{dt}}.
+$$
+F{\"o}r ett tillr{\"a}ckligt h{\"o}gt antal varv $N$ kan mycket sm{\aa}
+fluktuationer i det magnetiska f{\"a}ltet detekteras, speciellt om vi
+f{\"o}rst{\"a}rker B-f{\"a}ltet genom att introducera en ferrit
+(j{\"a}rnk{\"a}rna) inuti spolen. Detta {\"a}r exempelvis principen som typiskt
+anv{\"a}nds f{\"o}r att passivt generera signalen fr{\aa}n en elgitarrs eller
+elbas pickup. Som exempel kan n{\"a}mnas att en klassisk PAF-style humbucker
+p{\aa} en Gibson Les Paul typiskt har cirka $N=5\,000$ varv per spole.
+
+\section{Faradays lag p{\aa} differentialform}
+Utifr{\aa}n den generella definitionen av den elektromotoriska ``kraften''
+kan vi applicera Stokes teorem\numberedfootnote{Se exempelvis innerp{\"a}rmen
+p{\aa} Griffiths, {\it Curl Theorem},
+  $$
+    \iint_S\nabla\times{\bf A}\,d{\bf S}=\oint{\bf A}\cdot d{\bf l}.
+  $$} p{\aa} den ing{\aa}ende linjeintegralen, som
+$$
+  {\cal E}
+    \equiv\oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
+    =\underline{\underline{
+        \iint_{S}\nabla\times{\bf E}({\bf r},t)\,d{\bf S}
+     }}
+    =-{{d\Phi_{\rm M}({\bf x},t)}\over{dt}}
+    =\underline{\underline{
+        -\iint_S{{d{\bf B}({\bf x},t)}\over{dt}}\,d{\bf S}
+     }}.
+$$
+Eftersom ytintegralen sker {\"o}ver en yta innesluten av en godtycklig
+trajektoria $\Gamma$, s{\aa} inneb{\"a}r det att vi f{\"o}r integranderna
+erh{\aa}ller det vektoriella sambandet
+$$
+  \nabla\times{\bf E}({\bf r},t)=-{{d{\bf B}({\bf x},t)}\over{dt}},
+$$
+vilket vi betecknar som {\it Faradays lag p{\aa} differentialform}.
+Notera att liksom f{\"o}r Faradays induktionslag, s{\aa} {\"a}r denna ekvation
+helt oberoende av den elektriska permittiviteten $\varepsilon_0$ eller
+magnetiska permeabiliteten $\mu_0$, vilket vi rekapitulerar {\"a}r en effekt
+av att denna lag h{\"a}rletts oberoende av Coulombs eller Biot--Savarts lagar
+eller n{\aa}gon av deras derivat l{\"a}ngre ner i det elektromagnetiska
+sl{\"a}kttr{\"a}det.
+
+\section{Faradays lag p{\aa} integralform}
+Vi har i princip redan fastst{\"a}llt Faradays lag p{\aa} integralform i och
+med att vi tog fram att inte\-grand\-erna i ytintegralerna m{\aa}ste vara
+identiska f{\"o}r en generell trajektoria $\Gamma$, men l{\aa}t oss
+{\"a}nd{\aa} f{\"o}r sakens skull ta fram integralformen av Faradays lag
+fr{\aa}n differentialformen.
+Om vi integrerar differentialformen av Faradays lag {\"o}ver en yta $S$
+innesluten av en sluten trajektoria $\Gamma$ och direkt till{\"a}mpar Stokes
+teorem, s{\aa} har vi att
+$$
+  \iint_S\nabla\times{\bf E}({\bf r},t)\,d{\bf S}
+  =\underline{\underline{
+     \oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
+   }}
+  =-\iint_S{{d{\bf B}({\bf x},t)}\over{dt}}\,d{\bf S}
+  =\underline{\underline{
+     -{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\,d{\bf S}
+   }},
+$$
+vilket vi kan sammanfatta med {\it Faradays lag p{\aa} integralform} som
+$$
+  \oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
+  =-{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\,d{\bf S}.
+$$
+
+\section{Tre principiella specialfall f{\"o}r induktion}
+\epsfig{figs/inductioncases.1}\noindent
+Vi kan principiellt s{\"a}rskilja tre grundl{\"a}ggande fall f{\"o}r
+elektromagnetisk induktion med Faradays lag:
+\medskip
+\item{1.}{En r{\"o}rlig slinga $\Gamma$ som traverserar ett inhomogent men
+  i {\"o}vrigt konstant magnetf{\"a}lt ${\bf B}_0$, d{\"a}r det magnetiska
+  fl{\"o}det $\Phi_{\rm M}$ genom slingan f{\"o}r{\"a}ndras genom slingans
+  r{\"o}relse.}
+\item{2.}{En slinga $\Gamma$ som {\"a}r fix i rummet, d{\"a}r ett inhomogent
+  men i {\"o}vrigt konstant magnetf{\"a}lt ${\bf B}_0$ r{\"o}r sig {\"o}ver
+  slingan, d{\"a}r det magnetiska fl{\"o}det $\Phi_{\rm M}$ f{\"o}r{\"a}ndras
+  genom att magnetf{\"a}ltet varierar genom magnetf{\"a}ltets r{\"o}relse.}
+\item{3.}{En slinga $\Gamma$ som {\"a}r fix i rummet med ett tidsvarierande
+  (dynamiskt) magnetf{\"a}lt ${\bf B}(t)$, d{\"a}r det magnetiska fl{\"o}det
+  $\Phi_{\rm M}$ f{\"o}r{\"a}ndras genom magnetf{\"a}ltets variation i tiden.}
+\vfill\eject
+
+\section{{\"O}msesidig induktans}
+Vi har under F{\"o}rel{\"a}sning~4 visat hur Biot--Savarts lag beskriver hur
+magnetf{\"a}lt kan alstras genom str{\"o}m som traverserar en slinga, s{\"a}g
+$\Gamma$, och vi har nu {\"a}ven visat hur Faradays lag kopplar ett
+tidsvarierande magnetiskt f{\"a}lt och kan generera str{\"o}m genom en annan
+slinga, s{\"a}g $\Gamma'$.
+Uppenbarligen kan vi med andra ord genom att skicka str{\"o}m genom en
+prim{\"a}r slinga $\Gamma$ inducera en str{\"o}m i en sekund{\"a}r slinga
+$\Gamma'$ utan att dessa slingor har fysisk kontakt med varandra, och beroende
+p{\aa} riktning och avst{\aa}nd f{\"o}r magnetf{\"a}ltet som alstras fr{\aa}n
+den prim{\"a}ra slingan $\Gamma$ kommer vi att ha en mer eller mindre effektiv
+{\"o}verf{\"o}ring av effekt {\"o}ver till den sekund{\"a}ra slingan $\Gamma'$.
+\epsfig{figs/inductance.1}\noindent
+Fr{\aa}gan blir d{\aa}:\numberedfootnote{Vi f{\"o}ljer h{\"a}r i huvudsak
+  Griffiths sid.~321--323.}
+\quote{{\it Kan vi p{\aa} n{\aa}got s{\"a}tt sy ihop dessa teorier f{\"o}r
+  att extrahera hur stark den induktiva {\"o}msesidiga kopplingen, eller
+  den s{\aa} kallade {\it {\"o}msesidiga induktansen}, mellan slingorna
+  {\"a}r?}}
+\noindent
+L{\aa}t oss f{\"o}rst konstatera att det magnetiska f{\"a}ltet som genereras
+fr{\aa}n den prim{\"a}ra slingan\numberedfootnote{Eftersom vi i detta problem
+  kan betrakta den prim{\"a}ra slingan som en {\it k{\"a}lla}, s{\aa}
+  kommer vi genomg{\aa}ende att primma relevanta storheter fr{\aa}n
+  denna, f{\"o}ljande den konvention vi h{\aa}ller oss till i denna kurs.}
+$\Gamma'$ beskrivs av Biot--Savarts lag, som f{\"o}r detta fall och f{\"o}r
+alla observationspunkter ${\bf x}$ formuleras som
+linjeintegralen\numberedfootnote{Se F{\"o}rel{\"a}sning~4 eller
+  Griffiths Ekv.~(5.34), sid.~224.}
+{\"o}ver den prim{\"a}ra loopen $\Gamma'$,
+$$
+  {\bf B}({\bf x},t)={{\mu_0}\over{4\pi}}\int_{\Gamma'}
+    {{{\bf I}'({\bf x}',t)\times({\bf x}-{\bf x}')}
+      \over{|{\bf x}-{\bf x}'|^3}}\,dl'
+    ={{\mu_0 I'(t)}\over{4\pi}}\int_{\Gamma'}
+      {{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
+$$
+Eftersom detta direkt bist{\aa}r oss med det magnetiska f{\"a}ltet
+${\bf B}({\bf x},t)$ som i s{\aa} fall t{\"a}cks av den sekund{\"a}ra loopen,
+som vi i detta fall r{\"a}knar som uppbyggd av {\it observationspunkter}, och
+eftersom vi vet att ett varierande f{\"a}lt genom sekund{\"a}rloopen kommer
+att ge upphov till en elektromotorisk ``kraft'' {\"o}ver denna, l{\aa}t oss
+d{\"a}rf{\"o}r formulera det magnetiska fl{\"o}det $\Phi_{\rm M}$ genom just
+sekund{\"a}rloopen som ytintegralen av det magnetiska f{\"a}ltet (den
+magnetiska fl{\"o}dest{\"a}theten!) {\"o}ver den av sekund{\"a}rloopen
+inneslutna ytan,
+$$
+  \eqalign{
+    \Phi_{\rm M}&=\iint_{S}{\bf B}({\bf x},t)\,d{\bf S}
+        \qquad\hbox{(Genom sekund{\"a}rloopen $\Gamma$)}\cr
+      &=\iint_{S}\bigg(
+            \underbrace{
+              {{\mu_0 I'(t)}\over{4\pi}}\int_{\Gamma'}
+                {{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
+            }_{={\bf B}({\bf x},t)}
+        \bigg)\,d{\bf S}\cr
+      &=I'(t)\bigg[
+          {{\mu_0}\over{4\pi}}\iint_{S}\bigg(
+            \int_{\Gamma'}
+              {{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
+          \bigg)\,d{\bf S}
+        \bigg]\cr
+      &=M_{\Gamma\Gamma'} I'(t),\cr
+  }
+$$
+d{\"a}r vi definierade den {\it {\"o}msesidiga induktansen} ({\it mutual
+inductance}) mellan slingorna $\Gamma$ och $\Gamma'$ som
+$$
+  M_{\Gamma\Gamma'}=
+    {{\mu_0}\over{4\pi}}\iint_{S}\bigg(
+      \int_{\Gamma'}
+        {{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
+    \bigg)\,d{\bf S}.
+$$
+Vi kan h{\"a}r i princip n{\"o}ja oss med detta resultat, d{\aa} vi f{\aa}tt
+fram ett paketerat uttryck som relaterar str{\"o}mmen $I'(t)$ i
+prim{\"a}rslingan $\Gamma'$ till det magnetiska fl{\"o}det $\Phi_{\rm M}$ i
+sekund{\"a}rslingan $\Gamma$, fr{\aa}n vilket vi direkt kan erh{\aa}lla den
+resulterande elektromotoriska ``kraften''. Det finns dock ett par moment vi
+kan g{\aa} igenom f{\"o}r att f{\"o}ra {\"o}ver den {\"o}msesidiga induktansen
+p{\aa} en form som vi enklare kan extrahera fysikaliska samband fr{\aa}n.
+
+\section{Neumanns formel f{\"o}r den {\"o}msesidiga induktansen}
+Till att b{\"o}rja med backar vi bandet ett steg, och konstaterar att om vi
+formulerar den magnetiska fl{\"o}det $\Phi_{\rm M}$ genom sekund{\"a}rslingan
+i termer av {\it vektorpotentialen} som
+$$
+  \eqalign{
+    \Phi_{\rm M}&=\iint_{S}{\bf B}({\bf x},t)\,d{\bf S}
+        \qquad\hbox{(Genom sekund{\"a}rloopen $\Gamma$)}\cr
+      &=\big\{\hbox{ Vektorpotential ${\bf B}=\nabla\times{\bf A}$ }\big\}\cr
+      &=\iint_{S}\nabla\times{\bf A}({\bf x},t)\,d{\bf S}\cr
+      &=\big\{\hbox{ Stokes teorem (Griffiths {\it Curl Theorem}) }\big\}\cr
+      &=\oint_{\Gamma}{\bf A}({\bf x},t)\cdot d{\bf l}.\cr
+  }
+$$
+Notera nu att vektorpotentialen ${\bf A}({\bf x},t)$ som ing{\aa}r i
+integranden h{\"a}rr{\"o}r fr{\aa}n prim{\"a}rslingan $\Gamma'$, {\"a}ven om
+linjeintegralen i sig sker {\"o}ver sekund{\"a}rslingan $\Gamma$.
+Vi kan nu utnyttja att den explicita l{\"o}sningen\numberedfootnote{Vi erinrar
+  oss att vektorpotentialen ${\bf A}$ lyder Poissons ekvation (se omslaget
+  p{\aa} Griffiths!) och i och med detta har en l{\"o}sning som {\"a}r p{\aa}
+  exakt samma form som l{\"o}sningen f{\"o}r den skal{\"a}ra potentialen
+  $\phi$ fr{\aa}n Coulombs generella ekvation; se F{\"o}rel{\"a}sning~4,
+  alternativt Griffiths Ekv.~(5.66), sid.~245.}
+f{\"o}r vektorpotentialen fr{\aa}n prim{\"a}rslingan lyder
+$$
+  {\bf A}({\bf x},t)={{\mu_0}\over{4\pi}}\oint_{\Gamma'}
+    {{{\bf I}({\bf x}',t)}\over{|{\bf x}-{\bf x}'|}}\,dl',
+$$
+s{\aa} det magnetiska fl{\"o}det genom sekund{\"a}rslingan beskrivs av
+$$
+  \eqalign{
+    \Phi_{\rm M}&=\oint_{\Gamma}
+      \bigg(
+        {{\mu_0}\over{4\pi}}\oint_{\Gamma'}
+        {{{\bf I}({\bf x}',t)}\over{|{\bf x}-{\bf x}'|}}\,dl'
+      \bigg)\cdot d{\bf l}.\cr
+    &=\big\{\hbox{ I linjeintegralen f{\"o}r prim{\"a}rslingan {\"a}r
+                   ${\bf I}'({\bf x})\,dl'=I'(t)\,d{\bf l}'$ }\big\}\cr
+    &=\oint_{\Gamma}
+      \bigg(
+        {{\mu_0}\over{4\pi}}\oint_{\Gamma'}I'(t)
+        {{d{\bf l}'}\over{|{\bf x}-{\bf x}'|}}
+      \bigg)\cdot d{\bf l}.\cr
+    &=\big\{\hbox{ Str{\"o}mmen $I'(t)$ samma {\"o}ver hela
+                   prim{\"a}rslingan $\Gamma'$ }\big\}\cr
+    &=I'(t) {{\mu_0}\over{4\pi}}\oint_{\Gamma}\oint_{\Gamma'}
+        {{d{\bf l}'\cdot d{\bf l}}\over{|{\bf x}-{\bf x}'|}}\cr
+    &=M_{\Gamma\Gamma'} I'(t),\cr
+  }
+$$
+d{\"a}r vi nu har formulerat den {\"o}msesifiga induktansen i form av
+{\it Neumanns formel}\numberedfootnote{Efter Franz Ernst Neumann (1798--1895),
+  tysk fysiker som inom elektromagnetism fr{\"a}mst {\"a}r k{\"a}nd f{\"o}r
+  att ha formulerat vektorpotentialen ${\bf A}$; icke att f{\"o}rv{\"a}xla
+  med Alfred E. Neuman, som stavar sitt namn med bara ett ``n''.
+  {\tt https://en.wikipedia.org/wiki/Alfred\_E.\_Neuman}}
+$$
+  M_{\Gamma\Gamma'}={{\mu_0}\over{4\pi}}\oint_{\Gamma}\oint_{\Gamma'}
+        {{d{\bf l}'\cdot d{\bf l}}\over{|{\bf x}-{\bf x}'|}}.
+$$
+
+\subsection{Ett par observationer kring Neumanns formel}
+Utifr{\aa}n den just h{\"a}rledda formen p{\aa} Neumanns formel kan vi
+observera f{\"o}ljande:
+\medskip
+\item{1.}{Neumanns formel f{\"o}r den {\"o}msesidiga induktansen mellan
+  tv{\aa} slingor $\Gamma'$ och $\Gamma$ {\"a}r en {\it rent geometrisk
+  konstruktion}, skalad med den magnetiska permeabiliteten $\mu_0/4\pi$.}
+\item{2.}{I den {\"o}msesidiga induktansen kan vi fritt byta beteckning
+  mellan prim{\"a}r- och sekund{\"a}rslinga, med f{\"o}ljd att
+  $M_{\Gamma\Gamma'}\equiv M_{\Gamma'\Gamma}$ d{\aa} det enda som p{\aa}verkas i
+  Neumanns formel {\"a}r integrationsordningen,
+  $$
+    M_{\Gamma\Gamma'}
+       ={{\mu_0}\over{4\pi}}\oint_{\Gamma}\oint_{\Gamma'}
+          {{d{\bf l}'\cdot d{\bf l}}\over{|{\bf x}-{\bf x}'|}}
+       ={{\mu_0}\over{4\pi}}\oint_{\Gamma'}\oint_{\Gamma}
+          {{d{\bf l}\cdot d{\bf l}'}\over{|{\bf x}'-{\bf x}|}}
+       \equiv M_{\Gamma'\Gamma}.
+  $$
+  Detta s{\"a}ger oss att det magnetiska fl{\"o}de $\Phi_{\rm M}$ som vi
+  erh{\aa}ller i sekund{\"a}rslingan $\Gamma$ d{\aa} vi driver
+  prim{\"a}rslingan med en str{\"o}m $I'(t)$ {\"a}r {\it exakt lika stort}
+  som det magnetiska fl{\"o}de $\Phi'_{\rm M}$ som vi skulle detektera i
+  prim{\"a}rslingan $\Gamma'$ om vi ist{\"a}llet drev sekund{\"a}rslingan
+  $\Gamma$ med samma str{\"o}m $I'(t)$. Detta g{\"a}ller oavsett form eller
+  inb{\"o}rdes riktning hos slingorna $\Gamma'$ och  $\Gamma$.}
+\item{3.}{P{\aa} ett djupare plan visar denna {\"o}msesidighet mellan
+  slingorna $\Gamma'$ och $\Gamma$ p{\aa} {\it elektromagnetisk
+  reciprocitet}'.\numberedfootnote{Tyv{\"a}rr g{\aa}r inte Griffiths
+    igenom denna synnerligen intressanta aspekt av elektromagnetism;
+    f{\"o}r en djupare behandling av detta {\"a}mne, se exempelvis
+    J.~D.~Jacksons standardverk {\it Classical Electrodynamics}.}}
+\vfill\eject
+
+\section{Kontinuitetsekvationen - Teaser inf{\"o}r Maxwell's ekvationer}
+Vi har nu formellt h{\"a}rlett Faradays lag, och vi kan nu fr{\aa}ga oss vad
+som egentligen kvarst{\aa}r innan vi har en komplett elektrodynamisk
+beskrivning av de elektriska och magnetiska f{\"a}lten. Sanningen {\"a}r att
+det fortfarande finns en hel del att g{\"o}ra vad g{\"a}ller v{\"a}xelverkan
+mellan f{\"a}lt och materia (de s{\aa} kallade {\it konstitutiva relationerna})
+som vi {\"a}nnu inte ens nosat p{\aa} d{\aa} vi helt arbetat i
+vakuumdom{\"a}nen.\numberedfootnote{F{\"o}rvisso kan vi fr{\aa}ga oss om
+  vakuum i n{\"a}rvaro av str{\"o}mmar av elektroner eller andra laddade
+  partiklar verkligen {\"a}r att betrakta som just {\it vakuum} i ordets
+  egentliga bem{\"a}rkelse; h{\"a}r ser vi dock dessa t{\"a}theter av
+  laddade partiklar som s{\aa} pass l{\aa}g att vi fortfarande helt kan
+  f{\"o}rsumma dem i j{\"a}mf{\"o}relse med n{\"a}r vi inom kort kommer
+  att g{\aa} in p{\aa} hur ett medium polariseras i av elektriska och
+  magnetiska f{\"a}lt.}
+Vi har i F{\"o}rel{\"a}sning~4 tagit fram Amp\`eres lag inom magnetostatiken,
+$$
+  \nabla\times{\bf B}=\mu_0{\bf J}.\qquad\hbox{(Statiskt!)}
+$$
+Vi har samtidigt i F{\"o}rel{\"a}sning~4 h{\"a}rlett ``lagen om att laddning
+inte kan f{\"o}rsvinna'', som uttrycker sambandet mellan divergensen f{\"o}r
+str{\"o}mt{\"a}thet ${\bf J}$ och tidsderivatan av laddningst{\"a}theten
+$\rho$ som
+$$
+  \nabla\cdot{\bf J}+{{\partial\rho}\over{\partial t}}=0.
+$$
+Om vi substituerar f{\"o}r str{\"o}mt{\"a}theten i denna lag fr{\aa}n
+Amp\`eres statiska lag, s{\aa} har vi med andra ord att
+$$
+  \nabla\cdot{\bf J}
+    ={{1}\over{\mu_0}}\nabla\cdot(\nabla\times{\bf B})
+    =\big\{\hbox{ Griffiths vektoridentitet }\big\}
+    \equiv 0,
+$$
+detta trots att vi f{\"o}r att uppfylla den fundamentala lagen om laddningens
+bevarande borde ha haft ett ``$-{{\partial\rho}/{\partial t}}$'' i
+h{\"o}gerledet ist{\"a}llet f{\"o}r en nolla.
+
+Tricket som James Clerk Maxwell kom p{\aa} i l{\"o}sandet av detta problem
+var helt enkelt att l{\"a}gga till en term $\varepsilon_0{{\partial{\bf E}}
+/{\partial t}}$ till den fria str{\"o}mt{\"a}theten, en s{\aa} kallad
+{\it f{\"o}rskjutningsstr{\"o}m}, s{\aa} att vi helt enkelt ers{\"a}tter
+den statiska fria str{\"o}mmen ${\bf J}$ i Amp\`eres lag med
+$$
+  {\bf J}\quad\to\quad{\bf J}+\varepsilon_0{{\partial{\bf E}}\over{\partial t}},
+$$
+det vill s{\"a}ga med Amp\`eres lag p{\aa} formen
+$$
+  \nabla\times{\bf B}=\mu_0\bigg(
+    {\bf J}+\varepsilon_0{{\partial{\bf E}}\over{\partial t}}
+  \bigg).\qquad\hbox{(Dynamiskt!)}
+$$
+med f{\"o}ljd att
+$$
+  \eqalign{
+    \nabla\cdot{\bf J}
+      &=\nabla\cdot\bigg(
+           {{1}\over{\mu_0}}\nabla\times{\bf B}
+             -\varepsilon_0{{\partial{\bf E}}\over{\partial t}}
+        \bigg)\cr 
+      &={{1}\over{\mu_0}}\underbrace{\nabla\cdot(\nabla\times{\bf B})}_{\equiv0}
+           -\varepsilon_0{{\partial}\over{\partial t}}
+           \underbrace{\nabla\cdot{\bf E}}_{=\rho/\varepsilon_0}\cr
+      &=-{{\partial\rho}\over{\partial t}},\cr
+ }
+$$
+det vill s{\"a}ga att vi med den extra termen f{\"o}r
+f{\"o}rskjutningsstr{\"o}mmen n{\"a}rvarande direkt l{\"o}ser problemet med
+kontinuitetsekvationen f{\"o}r dynamiska f{\"a}lt.
+Det finns en liten korrektion som fortfarande beh{\"o}ver g{\"o}ras i
+tolkningen av f{\"o}rskjutningsstr{\"o}mmen, som vi kommer att {\aa}terkomma
+till i F{\"o}rel{\"a}sning~9 d{\aa} vi till slut kommer att s{\"a}tta samman
+alla pusselbitar och till slut formulera den slutliga formen av Maxwells
+ekvationer och utifr{\aa}n dem hur elektromagnetiska v{\aa}gor beskrivs
+p{\aa} differentialform.\numberedfootnote{Vilket f{\"o}r {\"o}vrigt
+  r{\aa}kar vara just den {\it Tentamensuppgift~1} som delades ut
+  under F{\"o}rel{\"a}sning~1!}
+\vfill\eject
+
+\section{Sammanfattning av F{\"o}rel{\"a}sning~5 -- Elektromagnetisk induktion}
+\item{$\bullet$}{Faradays lag kan inte h{\"a}rledas fr{\aa}n Coulombs eller
+  Biot--Savarts lag, och inneh{\aa}ller som en f{\"o}ljd av detta ej heller
+  de karakteristiska sp{\aa}ren fr{\aa}n dem i form av den elektriska
+  permittiviteten $\varepsilon_0$ eller den magnetiska permeabiliteten $\mu_0$.}
+\item{$\bullet$}{Magnetiskt fl{\"o}de definieras som
+  $$
+    \Phi_{\rm M}=\iint_S{\bf B}\cdot d{\bf S}.
+  $$}
+\item{$\bullet$}{Den elektromotoriska ``kraften'' (en mycket missvisande term)
+  runt en sluten slinga $\Gamma$ definieras som
+  $$
+    {\cal E}=\oint_{\Gamma}\bigg({{{\bf F}}\over{q}}\bigg)\cdot d{\bf l}
+      =\oint_{\Gamma}[{\bf E}+({\bf v}\times{\bf B})\big]\cdot d{\bf l},
+  $$}
+\item{$\bullet$}{Faradays induktionslag (``{\it the flux law}'') relaterar
+  den genererade elektromotoriska ``kraften'' i en slinga $\Gamma$ till en
+  f{\"o}r{\"a}ndring av det magnetiska fl{\"o}det med omv{\"a}nt tecken som
+  $$
+    {\cal E}=-{{d\Phi_{\rm M}}\over{dt}}.
+  $$
+  Faradays induktionslag h{\"a}rleds endast utifr{\aa}n Lorentz-kraften
+  (agerande p{\aa} en hypotetisk ladd\-ning), och {\"a}r d{\"a}rmed i
+  avsaknad av s{\aa}v{\"a}l den elektriska permittiviteten $\varepsilon_0$
+  som den magnetiska permeabiliteten $\mu_0$ d{\aa} varken Coulombs eller
+  Biot--Savarts lag anv{\"a}nts.}
+\item{$\bullet$}{Lenz lag s{\"a}ger att {\it en inducerad str{\"o}m har en
+  riktning som motverkar orsaken till att den uppkom.} Detta inneb{\"a}r att
+  om magnetf{\"a}ltet genom en ledande slinga {\it {\"o}kar}, s{\aa} kommer
+  den i slingan inducerade str{\"o}mmen att ha en riktning som skapar ett
+  magnetf{\"a}lt som {\it motverkar} {\"o}kningen.}
+\item{$\bullet$}{F{\"o}r en spole med $N$ varv ($N$ slingor) blir den
+  resulterande elektromotoriska ``kraften'' utv{\"a}xlad i motsvarande grad som
+  $$
+    {\cal E}=-N{{d\Phi_{\rm M}}\over{dt}}.
+  $$}
+\item{$\bullet$}{Faradays lag p{\aa} differentialform och integralform lyder
+  $$
+    \nabla\times{\bf E}({\bf r},t)=-{{d{\bf B}({\bf x},t)}\over{dt}}
+    \qquad\Leftrightarrow\qquad
+    \oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
+      =-{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\,d{\bf S}.
+  $$}
+\item{$\bullet$}{{\"O}msesidig induktans beskrivs av det magnetiska fl{\"o}de
+  $\Phi_{\rm M}$ som genereras i en sekund{\"a}rslinga $\Gamma$ fr{\aa}n en
+  str{\"o}m $I'(t)$ som drivs genom en prim{\"a}rslinga $\Gamma'$, som
+  $$
+    \Phi_{\rm M}=M_{\Gamma\Gamma'} I'(t),
+  $$
+  d{\"a}r den {\it {\"o}msesidiga induktansen} enligt Neumanns formel ges som
+  $$
+    M_{\Gamma\Gamma'}={{\mu_0}\over{4\pi}}\oint_{\Gamma}\oint_{\Gamma'}
+          {{d{\bf l}'\cdot d{\bf l}}\over{|{\bf x}-{\bf x}'|}},
+  $$
+  vilket {\"a}r en rent geometrisk konstruktion, skalad med den magnetiska
+  permeabiliteten $\mu_0/4\pi$.}
+\item{$\bullet$}{I den {\"o}msesidiga induktansen kan vi godtyckligt v{\"a}lja
+  vad vi v{\"a}ljer att beteckna som prim{\"a}r- eller sekund{\"a}rslinga,
+  d{\aa}
+  $$
+    M_{\Gamma\Gamma'}=M_{\Gamma'\Gamma},
+  $$
+  vilket i sin tur s{\"a}ger oss att det magnetiska fl{\"o}de $\Phi_{\rm M}$
+  som vi erh{\aa}ller i sekund{\"a}rslingan $\Gamma$ d{\aa} vi driver
+  prim{\"a}rslingan med en str{\"o}m $I'(t)$ {\"a}r exakt lika stort
+  som det maknetiska fl{\"o}de $\Phi'_{\rm M}$ som vi skulle detektera
+  i prim{\"a}rslingan $\Gamma'$ om vi ist{\"a}llet drev sekund{\"a}rslingan
+  $\Gamma$ med samma str{\"o}m $I'(t)$.}
+
+\bye
