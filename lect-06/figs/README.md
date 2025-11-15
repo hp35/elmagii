@@ -12,30 +12,30 @@ are any complaints.
 ## List of figures
 
 [`dipole.mp`](dipole.mp)
-    ([`dipole.mp.pdf`](dipole.mp.pdf))
+    ([`dipole.pdf`](dipole.pdf))
     <i>MetaPost drawing of the classical single and static electric
     dipole, excited by an externally applied electric field.</i>
 
 [`displace.mp`](displace.mp)
-    ([`displace.mp.pdf`](displace.mp.pdf))
+    ([`displace.pdf`](displace.pdf))
     <i>MetaPost drawing of the more detailed model of the classical single
     and static electric dipole, excited by an externally applied electric
     field.</i>
 
 [`esurfnorm.mp`](esurfnorm.mp)
-    ([`esurfnorm.mp.pdf`](esurfnorm.mp.pdf))
+    ([`esurfnorm.pdf`](esurfnorm.pdf))
     <i>MetaPost drawing of the surface with charge density over which we
     apply Gauss' law in order to extract boundary conditions for the electric
     field normal to the surface.</i>
 
 [`esurftang.mp`](esurftang.mp)
-    ([`esurftang.mp.pdf`](esurftang.mp.pdf))
+    ([`esurftang.pdf`](esurftang.pdf))
     <i>MetaPost drawing of the surface with charge density over which we
     apply Gauss' law in order to extract boundary conditions for the electric
     field tangential to the surface.</i>
 
 [`poldensity.mp`](poldensity.mp)
-    ([`poldensity.mp.pdf`](poldensity.mp.pdf))
+    ([`poldensity.pdf`](poldensity.pdf))
     <i>MetaPost drawing of the molecular polarizability building up the
     polarization density.</i>
 
