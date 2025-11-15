@@ -117,13 +117,13 @@ beginfig(1);
   phi:=-55;
   pb:=pal+(dl*(cosd(phi),sind(phi)));
   drawarrow pal--pb;
-  label.urt(btex $d{\bf l}'$ etex, pb);
+  label.urt(btex $d{\bf l}$ etex, pb);
   pickup pencircle scaled 3pt;
   pb:=pal+(2u*(cosd(phi),sind(phi)));
   draw pal--pb;
   pl:= point .5 of (pal--pb);
   pickup pencircle scaled 1pt;
-  label.urt(btex $dl'$ etex, pal);
+  label.urt(btex $dl$ etex, pal);
 
   drawarrow pa--palp withcolor black;
   label.urt(btex ${\bf x}'$ etex, .6[pa,palp]);
