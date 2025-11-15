@@ -17,17 +17,20 @@ fält går vi in på själva definitionen av ett magnetiskt fält som den kraft
 som via Lorentz kraftlag utövas på en laddad partikel i rörelse. Utifrån
 denna formuleras Ampères kraftlag för strömslingor, samt att vi kan dra
 slutsatsen att kraften på fria laddningar aldrig utför något arbete.
+
 Då vi generaliserar strömbegreppet till en strömtäthet <b>J</b> kan vi
 under användande av Gauss lag ta fram kontinuitetsekvationen för laddning,
 som länkar ihop divergensen ∇ · <b>J</b> hos strömtätheten med tidsderivatan
 av laddningstätheten ρ. Biot–Savarts lag introduceras som ett axiom för det
 magnetfält som genereras av en ström traverserande en strömslinga, vilket
 för övrigt är första momentet där den magnetiska permeabiliteten µ<sub>0</sub>
-introduceras. Utifrån formen på Biot–Savarts lag för generering av magnetfält
-visar vi att ∇ · <b>B</b> = 0 alltid är uppfyllt, vilket påvisar att magnetiska
-monopoler (magnetisk laddning) ej existerar, och att magnetism alltid endast
-yttrar sig i form av magnetiska dipoler eller högre ordningar i
-multipolutvecklingen.
+introduceras.
+
+Utifrån formen på Biot–Savarts lag för generering av magnetfält visar vi att
+∇ · <b>B</b> = 0 alltid är uppfyllt, vilket påvisar att magnetiska monopoler
+(magnetisk laddning) ej existerar, och att magnetism alltid endast yttrar sig
+i form av magnetiska dipoler eller högre ordningar i multipolutvecklingen.
+
 Vi visar att i magnetostatik kan rotationen av magnetfältet erhållas som
 ∇ × <b>B</b> = µ<sub>0</sub> <b>J</b>, kallad Ampères lag. Slutligen visar
 vi på att icke-existensen av magnetiska monopoler direkt har som följd att
