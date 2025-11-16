@@ -30,7 +30,7 @@ vardef drawmagnet(expr posm)=
 enddef;
 
 beginfig(1);
-  path wire, loop;
+  path wire, loop, endwave;
   pair pos;
   color gray;
   gray := .8[black,white];
@@ -38,7 +38,7 @@ beginfig(1);
 
   % Loop and wire parameters.
   %
-  r:=7u; dr:=4u; ll:=30u;
+  r:=7u; dr:=4u; ll:=40u;
 
   %
   % First gedanken experiment.
@@ -48,6 +48,9 @@ beginfig(1);
   wire:=((-ll/2,0u)--(ll/2,0u)) shifted pos;
   loop := fullcircle scaled (2r) shifted (0u,r+dr) shifted pos;
   draw wire withcolor black;
+  endwave := (0u,-2u){dir 50}..{dir 50}(0u,2u);
+  draw endwave shifted (ll/2,0u) shifted pos;
+  draw endwave shifted (-ll/2,0u) shifted pos;
   drawtexarrow subpath (0.3,0.4) of wire;
   label.lrt(btex $I_0=\hbox{konst.}$ etex, point 0.4 of wire);
   draw loop withcolor black;
@@ -71,6 +74,9 @@ beginfig(1);
   wire:=((-ll/2,0u)--(ll/2,0u)) shifted pos;
   loop := fullcircle scaled (2r) shifted (0u,r+dr) shifted pos;
   draw wire withcolor black;
+  endwave := (0u,-2u){dir 50}..{dir 50}(0u,2u);
+  draw endwave shifted (ll/2,0u) shifted pos;
+  draw endwave shifted (-ll/2,0u) shifted pos;
   drawtexarrow subpath (0.3,0.4) of wire;
   label.lrt(btex $I_0=\hbox{konst.}$ etex, point 0.4 of wire);
   draw loop withcolor black;
@@ -89,10 +95,13 @@ beginfig(1);
   pos:=(50u,0u);
   label.top(btex {\bf Tankeexperiment~3} etex, pos shifted (0u,34u));
   wire:=((-ll/2,0u)--(ll/2,0u)) shifted pos;
+  endwave := (0u,-2u){dir 50}..{dir 50}(0u,2u);
+  draw endwave shifted (ll/2,0u) shifted pos;
+  draw endwave shifted (-ll/2,0u) shifted pos;
   loop := fullcircle scaled (2r) shifted (0u,r+dr) shifted pos;
   draw wire withcolor black;
-  drawtexarrow subpath (0.3,0.4) of wire;
-  label.lrt(btex $I(t)\hbox{ (increasing)}$ etex, point 0.4 of wire);
+  drawtexarrow subpath (0.2,0.3) of wire;
+  label.lrt(btex $I(t)\hbox{ (increasing)}$ etex, point 0.3 of wire);
   draw loop withcolor black;
   drawtexarrow subpath (0.9,1.0) of loop withcolor black;
   label.urt(btex $I_{\rm loop}=$? etex, point 1.0 of loop);
@@ -107,6 +116,9 @@ beginfig(1);
   pos:=(-50u,-60u);
   label.top(btex {\bf Tankeexperiment~4} etex, pos shifted (0u,34u));
   wire:=((-ll/2,0u)--(ll/2,0u)) shifted pos;
+  endwave := (0u,-2u){dir 50}..{dir 50}(0u,2u);
+  draw endwave shifted (ll/2,0u) shifted pos;
+  draw endwave shifted (-ll/2,0u) shifted pos;
   loop := ((0u,0u){dir 60}..(r,r)..(2r,0u)..(r,-r)..(0u,0u)
       ..(-r,r)..(-2r,0u)..(-r,-r)..{dir 60}(0u,0u))
     shifted (0u,r+dr) shifted pos;
@@ -118,8 +130,8 @@ beginfig(1);
   drawarrow ((0u,1u)--(0u,9u)) shifted (pos+(0,r+dr+2u)) withcolor black;
   label.ulft(btex ${\bf v}_{\rm loop}$ etex,(0u,5u) shifted (pos+(0u,r+dr+2u)));
   draw wire withcolor black;
-  drawtexarrow subpath (0.3,0.4) of wire;
-  label.lrt(btex $I(t)\hbox{ (increasing)}$ etex, point 0.4 of wire);
+  drawtexarrow subpath (0.2,0.3) of wire;
+  label.lrt(btex $I(t)\hbox{ (increasing)}$ etex, point 0.3 of wire);
   drawtexarrow subpath (6.0,6.7) of reverse loop withcolor black;
   label.urt(btex $I_{\rm loop}=$? etex, point 6.7 of reverse loop);
   label.top(btex \vbox{
@@ -133,6 +145,9 @@ beginfig(1);
   pos:=(0u,-60u);
   label.top(btex {\bf Tankeexperiment~5} etex, pos shifted (0u,34u));
   wire:=((-ll/2,0u)--(ll/2,0u)) shifted pos;
+  endwave := (0u,-2u){dir 50}..{dir 50}(0u,2u);
+  draw endwave shifted (ll/2,0u) shifted pos;
+  draw endwave shifted (-ll/2,0u) shifted pos;
   loop := ((0u,0u){dir 60}..(r,r)..(2r,0u)..(r,-r)..(0u,0u)
       ..(-r,r)..(-2r,0u)..(-r,-r)..{dir 60}(0u,0u))
     shifted (0u,r+dr) shifted pos;
@@ -144,8 +159,8 @@ beginfig(1);
   drawarrow ((1u,0u)--(8u,0u)) shifted (pos+(2r,r+dr)) withcolor black;
   label.urt(btex ${\bf v}_{\rm loop}$ etex,(8u,0u) shifted (pos+(r,r+dr)));
   draw wire withcolor black;
-  drawtexarrow subpath (0.3,0.4) of wire;
-  label.lrt(btex $I(t)\hbox{ (increasing)}$ etex, point 0.4 of wire);
+  drawtexarrow subpath (0.2,0.3) of wire;
+  label.lrt(btex $I(t)\hbox{ (increasing)}$ etex, point 0.3 of wire);
   drawtexarrow subpath (6.0,6.7) of reverse loop withcolor black;
   label.urt(btex $I_{\rm loop}=$? etex, point 6.7 of reverse loop);
   label.top(btex \vbox{
@@ -159,6 +174,9 @@ beginfig(1);
   pos:=(50u,-60u);
   label.top(btex {\bf Tankeexperiment~6} etex, pos shifted (0u,34u));
   wire:=((-ll/2,0u)--(ll/2,0u)) shifted pos;
+  endwave := (0u,-2u){dir 50}..{dir 50}(0u,2u);
+  draw endwave shifted (ll/2,0u) shifted pos;
+  draw endwave shifted (-ll/2,0u) shifted pos;
   loop := ((0u,0u){dir 60}..(r/2,r/2)..(r,0u)..(r/2,-r/2)..(0u,0u)
       ..(-r,r)..(-2r,0u)..(-r,-r)..{dir 60}(0u,0u))
     shifted (0u,r+dr) shifted pos;
@@ -170,8 +188,8 @@ beginfig(1);
   drawarrow ((0u,1u)--(0u,9u)) shifted (pos+(0,r+dr+2u)) withcolor black;
   label.ulft(btex ${\bf v}_{\rm loop}$ etex,(0u,5u) shifted (pos+(0u,r+dr+2u)));
   draw wire withcolor black;
-  drawtexarrow subpath (0.3,0.4) of wire;
-  label.lrt(btex $I(t)\hbox{ (increasing)}$ etex, point 0.4 of wire);
+  drawtexarrow subpath (0.2,0.3) of wire;
+  label.lrt(btex $I(t)\hbox{ (increasing)}$ etex, point 0.3 of wire);
   drawtexarrow subpath (6.0,6.7) of reverse loop withcolor black;
   label.urt(btex $I_{\rm loop}=$? etex, point 6.7 of reverse loop);
   label.top(btex \vbox{
