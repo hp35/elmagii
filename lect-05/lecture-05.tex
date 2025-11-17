@@ -813,19 +813,19 @@ magnetiska fl{\"o}dest{\"a}theten!) {\"o}ver den av sekund{\"a}rloopen
 inneslutna ytan,
 $$
   \eqalign{
-    \Phi_{\rm M}&=\iint_{S}{\bf B}({\bf x},t)\,d{\bf S}
+    \Phi_{\rm M}&=\iint_{S}{\bf B}({\bf x},t)\cdot d{\bf S}
         \qquad\hbox{(Genom sekund{\"a}rloopen $\Gamma$)}\cr
       &=\iint_{S}\bigg(
             \underbrace{
               {{\mu_0 I'(t)}\over{4\pi}}\int_{\Gamma'}
                 {{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
             }_{={\bf B}({\bf x},t)}
-        \bigg)\,d{\bf S}\cr
+        \bigg)\cdot d{\bf S}\cr
       &=I'(t)\bigg[
           {{\mu_0}\over{4\pi}}\iint_{S}\bigg(
             \int_{\Gamma'}
               {{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
-          \bigg)\,d{\bf S}
+          \bigg)\cdot d{\bf S}
         \bigg]\cr
       &=M_{\Gamma\Gamma'} I'(t),\cr
   }
@@ -837,7 +837,7 @@ $$
     {{\mu_0}\over{4\pi}}\iint_{S}\bigg(
       \int_{\Gamma'}
         {{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
-    \bigg)\,d{\bf S}.
+    \bigg)\cdot d{\bf S}.
 $$
 Vi kan h{\"a}r i princip n{\"o}ja oss med detta resultat, d{\aa} vi f{\aa}tt
 fram ett paketerat uttryck som relaterar str{\"o}mmen $I'(t)$ i
@@ -853,10 +853,11 @@ formulerar den magnetiska fl{\"o}det $\Phi_{\rm M}$ genom sekund{\"a}rslingan
 i termer av {\it vektorpotentialen} som
 $$
   \eqalign{
-    \Phi_{\rm M}&=\iint_{S}{\bf B}({\bf x},t)\,d{\bf S}
+    \Phi_{\rm M}&=\iint_{S}{\bf B}({\bf x},t)\cdot d{\bf S}
         \qquad\hbox{(Genom sekund{\"a}rloopen $\Gamma$)}\cr
-      &=\big\{\hbox{ Vektorpotential ${\bf B}=\nabla\times{\bf A}$ }\big\}\cr
-      &=\iint_{S}\nabla\times{\bf A}({\bf x},t)\,d{\bf S}\cr
+      &=\big\{\hbox{ Vektorpotential
+                     ${\bf B}\equiv\nabla\times{\bf A}$ }\big\}\cr
+      &=\iint_{S}(\nabla\times{\bf A}({\bf x},t))\cdot d{\bf S}\cr
       &=\big\{\hbox{ Stokes teorem (Griffiths {\it Curl Theorem}) }\big\}\cr
       &=\oint_{\Gamma}{\bf A}({\bf x},t)\cdot d{\bf l}.\cr
   }
