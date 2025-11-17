@@ -718,20 +718,25 @@ Om vi integrerar differentialformen av Faradays lag {\"o}ver en yta $S$
 innesluten av en sluten trajektoria $\Gamma$ och direkt till{\"a}mpar Stokes
 teorem, s{\aa} har vi att
 $$
-  \iint_S\nabla\times{\bf E}({\bf r},t)\,d{\bf S}
+  \iint_S(\nabla\times{\bf E}({\bf r},t))\cdot d{\bf S}
   =\underline{\underline{
      \oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
    }}
-  =-\iint_S{{\partial{\bf B}({\bf x},t)}\over{\partial t}}\,d{\bf S}
+  =-\iint_S{{\partial{\bf B}({\bf x},t)}\over{\partial t}}\cdot d{\bf S}
   =\underline{\underline{
-     -{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\,d{\bf S}
+     -{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\cdot d{\bf S}
    }},
 $$
 vilket vi kan sammanfatta med {\it Faradays lag p{\aa} integralform} som
 $$
-  \oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
-  =-{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\,d{\bf S}.
+  \underbrace{
+    \oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
+  }_{\displaystyle ={\cal E}}
+    =\underbrace{
+       -{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\cdot d{\bf S}
+     }_{\displaystyle =-{{d\Phi_{\rm M}}\over{dt}}}.
 $$
+Vi kan i integralformen av Faradays lag direkt identifiera v{\"a}nsterledet som den elektromotoriska ``kraft'' ${\cal E}$ som alstras i en station{\"a}r slinga, och h{\"o}gerledet som den negativa tidsderivatan av det magnetiska fl{\"o}det, $-d\Phi_{\rm M}/dt$; med andra ord {\"a}r denna form i grunden bara {\it en manifestering av Faradays induktionslag}.
 
 \section{Tre principiella specialfall f{\"o}r induktion}
 I Faradays ursprungliga experiment 1831, som vi kan se som tidpunkten d{\"a}r
@@ -1054,10 +1059,11 @@ p{\aa} differentialform.\numberedfootnote{Vilket f{\"o}r {\"o}vrigt
   $$}
 \item{$\bullet$}{Faradays lag p{\aa} differentialform och integralform lyder
   $$
-    \nabla\times{\bf E}({\bf r},t)=-{{d{\bf B}({\bf x},t)}\over{dt}}
+    \nabla\times{\bf E}({\bf r},t)
+      =-{{\partial{\bf B}({\bf x},t)}\over{\partial t}}
     \qquad\Leftrightarrow\qquad
     \oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
-      =-{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\,d{\bf S}.
+      =-{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\cdot d{\bf S}.
   $$}
 \item{$\bullet$}{{\"O}msesidig induktans beskrivs av det magnetiska fl{\"o}de
   $\Phi_{\rm M}$ som genereras i en sekund{\"a}rslinga $\Gamma$ fr{\aa}n en
