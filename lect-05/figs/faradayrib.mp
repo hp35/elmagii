@@ -128,8 +128,10 @@ beginfig(1);
   %
   % Some convenient labels added for the sake of pedagogy.
   %
-  label.llft(btex $\Gamma(t)$ etex,(point 2.0 of pgamma));
-  label.urt(btex $\Gamma(t+dt)$ etex,(point 2.0 of pgammap));
+  label.urt(btex $\Gamma(t)$ etex, (-22u,42u));
+  draw (-22u,42u){dir 220}..{dir 290}((point 4.7 of pgamma) shifted (-1u,0u));
+  label.urt(btex $\Gamma(t+dt)$ etex, (-8u,42u));
+  draw (-8u,42u){dir 220}..{dir 290}((point 4.5 of pgammap) shifted (-1u,0u));
   label.bot(btex $I(t)$ etex,(point 0 of pgamma));
   label.bot(btex \vbox{
         \hbox{Yta $S(t)$ innesluten}
@@ -152,20 +154,17 @@ beginfig(1);
   pd := pc shifted (30u*(cosd(45),sind(45)));
   fill pa--pb--pd--pc--cycle withcolor gray;
   drawarrow pa--pb;
-  label.lrt(btex ${\bf v}dt$ etex,.5[pa,pb]);
+  label.lrt(btex ${\bf v}({\bf x},t)dt$ etex,.5[pa,pb]);
   drawarrow pc--pd;
-  label.ulft(btex ${\bf v}dt$ etex,.5[pc,pd]);
   drawarrow pa--pc;
   label.lft(btex $d{\bf l}(t)$ etex,.5[pa,pc]);
   drawarrow pb--pd;
-  label.rt(btex $d{\bf l}(t+dt)$ etex,.5[pb,pd]);
   p := (pa+4u*(pb-pa)/abs(pb-pa)){dir 135}..{dir 180}(pa+4u*(pc-pa)/abs(pc-pa));
   draw p;
   label.urt(btex $\vartheta$ etex,point .75 of p);
-  label.top(btex $d{\bf A}=({\bf v}dt)\times(d{\bf l})=
-      {\bf v}\times d{\bf l}\,dt
-      $ etex,(88u,34u));
-  label.top(btex $\big(dA=|{\bf v}||d{\bf l}|\,dt\sin(\vartheta)\big)$ etex,
+  label.top(btex $d{\bf S}=({\bf v}dt)\times(d{\bf l})
+                          =({\bf v}\times d{\bf l})\,dt$ etex,(88u,34u));
+  label.top(btex $\big(dS=|{\bf v}||d{\bf l}|\,dt\sin(\vartheta)\big)$ etex,
       (88u,40u));
   draw (88u,34u){dir 280}..{dir 280}(100u,10u);
 
@@ -179,7 +178,7 @@ beginfig(1);
   dotlabel(btex etex,(25u,-10u));
   label.rt(btex \vbox{
       \hbox{Observera tidsberoende}
-      \hbox{slinga $\Gamma(t)\to S(t)$}} etex, (76u,-60u));
+      \hbox{slinga $\Gamma(t)\to S(t)$!}} etex, (76u,-60u));
   drawarrow (76u,-60u){dir 175}..{dir 175}(53u,-55u);
 
 endfig;
