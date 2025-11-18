@@ -57,18 +57,30 @@ beginfig(1);
   label.rt(btex ${\bf F}_{\rm ext}$ etex,(0u,-25u));
   label.ulft(btex $\Omega$ etex,(-5u,15u));
 
-  drawarrow ((0u,0u)--((64u/2)*(.8660,.5000)));
-  label.rt(btex $a$ etex,((64u/2)*(.8660,.5000)) shifted (1u,0u));
-  drawarrow ((0u,0u)--((30u/2)*(.8660,.5000)));
-  label.rt(btex $r$ etex,((30u/2)*(.8660,.5000)) shifted (1u,0u));
-
+  phi:=55;
+  drawarrow ((0u,0u)--((64u/2)*(cosd(phi),sind(phi))));
+  label.top(btex $a$ etex,((64u/2)*(cosd(phi),sind(phi))) shifted (0u,1u));
+  drawarrow ((0u,0u)--((30u/2)*(cosd(phi),sind(phi))));
+  label.ulft(btex $r$ etex,((30u/2)*(cosd(phi),sind(phi))) shifted (0u,2u));
 
   label.urt(btex \vbox{
       \hbox{Elektronmolnets}
       \hbox{laddningst{\"a}thet {\"a}r}
       \hbox{$\displaystyle\rho={{(-q)}\over{4\pi a^3/3}}$}
       } etex, (50u,16u));
-  draw (48u,20u){dir 200}..{dir 200}(22u,-10u);
+  draw (48u,20u){dir 200}..{dir 200}(22u,10u);
+  
+  label.urt(btex \vbox{
+      \hbox{Kraft ${\bf F}_{\rm e}$ p{\aa} k{\"a}rnan}
+      \hbox{fr{\aa}n elektronmolnet}
+      } etex, (50u,-4u));
+  draw (48u,0u){dir 180}..{dir 180}(1u,-10u);
+  
+  label.urt(btex \vbox{
+      \hbox{Kraft ${\bf F}_{\rm ext}$ p{\aa} k{\"a}rnan}
+      \hbox{fr{\aa}n externt fält ${\bf E}_{\rm ext}$}
+      } etex, (50u,-20u));
+  draw (48u,-16u){dir 180}..{dir 180}(1u,-21u);
   
 endfig;
 end
