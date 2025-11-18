@@ -65,8 +65,10 @@ beginfig(1);
 
   draw ((12u,10u){dir 60}..{dir 60}(30u,20u)) shifted (70u,0u);
   dotlabel("",(12u,10u) shifted (70u,0u));
-  label.urt("Latt elektronmoln,", (24u,24u) shifted (70u,0u));
-  label.urt("flyttas mot `+'", (24u,20u) shifted (70u,0u));
-  
+  label.urt(btex \vbox{
+        \hbox{L{\"a}tt elektronmoln,}
+        \hbox{flyttas mot ``$+$'' f{\"o}r}
+        \hbox{elektriska f{\"a}ltet}
+      } etex, (24u,20u) shifted (70u,0u));
 endfig;
 end
