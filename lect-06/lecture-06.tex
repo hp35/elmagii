@@ -54,6 +54,7 @@
 \def\Im{\mathop{\rm Im}\nolimits} % imaginary part
 \def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+\def\encircle#1{\kern3pt#1\kern-9.0pt$\bigcirc$\kern1pt}
 \def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\bigskip\noindent#1\par
@@ -69,7 +70,7 @@
 \vskip24pt
 
 \plan{I och med denna f{\"o}rel{\"a}sning l{\"a}mnar vi vakuumbeskrivningen av
-  f{\"a}lt och g{\aa} in p{\aa} v{\"a}xelverkan mellan elektriska eller
+  f{\"a}lt och g{\aa}r in p{\aa} v{\"a}xelverkan mellan elektriska eller
   magnetiska f{\"a}lt och materia. Vi b{\"o}rjar med en {\"o}vergripande bild
   av hur vi successivt kan g{\aa} fr{\aa}n en kvantmekanisk beskrivning av
   denna v{\"a}xelverkan till makroskopiska begrepp som susceptibiliteter och
@@ -132,7 +133,8 @@ $$
         beroende av ${\bf E}$)\hfill}\cr
   \downarrow&\cr
   \hat\rho=\sum_j p_j|\psi_j\rangle\langle\psi_j|
-        &\hskip40pt\hbox to 220pt{Densitetsmatris/operator\hfill}\cr
+        &\hskip40pt\hbox to 220pt{Densitetsmatris/operator
+                                  (sannolikheter)\hfill}\cr
   \downarrow&\cr
   {\bf p}=\langle\hat{\bf p}\rangle={\rm Tr}(\hat\rho\hat{\bf p})
         &\hskip40pt\hbox to 220pt{Elektrisk polarisation (dipol,
@@ -177,6 +179,7 @@ potentialer, vilket {\"a}r lite olyckligt, d{\aa} $V$ normalt anv{\"a}nds
 f{\"o}r att beteckna s{\aa}v{\"a}l volym som elektrisk sp{\"a}nning (elektrisk
 potentialskillnad). Vi kommer h{\"a}r d{\"a}rf{\"o}r att ist{\"a}llet
 genomg{\aa}ende anv{\"a}nda $\phi$ f{\"o}r att beteckna en potential.
+\vfill\eject
 
 \section{Klassisk modell f{\"o}r dipoler}
 Den enklast m{\"o}jliga modell vi kan f{\"o}rest{\"a}lla oss f{\"o}r hur ett
@@ -214,8 +217,10 @@ dipol.
 \epsfig{figs/displace.1}\noindent
 F{\"o}r att ta fram relationen mellan det resulterande dipolmomentet ${\bf p}$
 och det externa elektriska f{\"a}ltet ${\bf E}_{\rm ext}$, s{\aa} kan vi
-exempelvis betrakta krafterna som verkar p{\aa} k{\"a}rnan. F{\"o}rst av
-allt ges kraften p{\aa} k{\"a}rnan fr{\aa}n det externa f{\"a}ltet som
+exempelvis betrakta de mekaniska krafterna som verkar p{\aa} k{\"a}rnan
+\encircle{+}.
+F{\"o}rst av allt ges kraften p{\aa} k{\"a}rnan fr{\aa}n det externa f{\"a}ltet
+som
 $$
   {\bf F}_{\rm ext}=(+q){\bf E}_{\rm ext}.
 $$
@@ -296,7 +301,7 @@ intressanta saker:
                  storlek\numberedfootnote{``Atomens'' med citat-tecken,
                  d{\aa} vi ju alla vet att atomer inte {\"a}r isolerade
                  sf{\"a}rer som l{\aa}ter sig beskrivas med klassisk
-                 mekanik.} i sig.}
+                 mekanik.} $a$ i sig.}
 \item{$\bullet$}{Polarisabiliteten beror d{\"a}remot {\it inte} p{\aa} den
                  totala laddning som k{\"a}rnan uppb{\"a}r (d.v.s. atomnummer).}
 \medskip
@@ -319,7 +324,7 @@ $r\to 0$, eftersom vi med Gauss lag s{\aa} att s{\"a}ga ``skalar av'' den
 inneslutna laddningen lager f{\"o}r lager d{\aa} radien $r$, det vill s{\"a}ga
 avst{\aa}ndet mellan punktladdningen $+q$ f{\"o}r k{\"a}rnan och centrum
 f{\"o}r elektronmolnet, successivt minskas.
-
+\vfill\eject
 
 \section{Terminologi}
 F{\"o}r att beskriva grundl{\"a}ggande egenskaper hos ett material, och d{\aa}
@@ -379,6 +384,7 @@ $$
 Denna form svarar f{\"o}r effekter som exempelvis dubbelbrytning och optisk
 aktivitet, samt {\"a}ven Faraday-rotation (i vilken ett statiskt p{\aa}lagt
 magnetf{\"a}lt skapar en anisotropi).
+\vfill\eject
 
 \section{Elektrisk polarisationsdensitet}
 I ett dielektrikum {\"a}r laddningarna bundna till molekylerna i ett effektivt
@@ -395,7 +401,18 @@ Vi m{\"a}ter denna inducerade (``p{\aa}tvingade'') polarisering som en
 {\it elektrisk polarisationsdensitet} ${\bf P}$, beskrivande det elektriska
 dipolmomentet per volymenhet (d{\"a}rav ``densitet''). Som en f{\"o}renklad
 modell kan vi se detta inducerade dipolmoment som linj{\"a}rt beroende av det
-p{\aa}lagda elektriska f{\"a}ltet,
+p{\aa}lagda elektriska f{\"a}ltet,\numberedfootnote{Uttryckt i den nyligen
+  n{\"a}mnda {\it atom{\"a}ra polarisabiliteten} som vi tog fram f{\"o}r
+  en rent elektrostatisk/mekanisk modell motsvarar detta f{\"o}r en densitet
+  med $N$ ``atomer'' per volym $V$ att
+  $$
+    {\bf P}=(N/V)\alpha{\bf E}=\varepsilon_0\chi_{\rm e}{\bf E},
+  $$
+  det vill s{\"a}ga att susceptibiliteten ges i termer av detta oerh{\"o}rt
+  f{\"o}renklade m{\aa}tt p{\aa} polarisabiliteten $\alpha$ som
+  $$
+    \chi_{\rm e}=(N/V)\alpha/\varepsilon_0.
+  $$}
 $$
   {\bf P} \equiv \Big\langle{{d{\bf p}}\over{dV}}\Big\rangle
     = \varepsilon_0\chi_{\rm e}{\bf E},
@@ -426,6 +443,7 @@ i kommande f{\"o}rel{\"a}sning om den elektromagnetiska v{\aa}gekvationen).
 I kommande analys av Maxwells ekvationer och de fr{\aa}n dessa f{\"o}ljande
 elektromagnetiska v{\aa}gekvationerna kommer vi genomg{\aa}ende att anv{\"a}nda
 $\varepsilon_{\rm r}$ f{\"o}r att beskriva materialegenskaperna.
+\vfill\eject
 
 \section{Gauss teorem f{\"o}r elektriska fl{\"o}dest{\"a}theten {\bf D}}
 Att den eletriska fl{\"o}dest{\"a}theten ${\bf D}$ {\"a}r konstruerad som den
@@ -566,8 +584,29 @@ $$
   D^{\parallel}_2-D^{\parallel}_1 = P^{\parallel}_2-P^{\parallel}_1\cr
   }
 $$
-Om vi har tv{\aa} medier av olika relativ permittivitet $\varepsilon_1$ och
-$\varepsilon_2$, s{\aa} kan vi 
+Om vi har tv{\aa} medier av olika relativ permittivitet
+$\varepsilon^{(1)}_{\rm r}=1+\chi^{(1)}_{\rm e}$ och
+$\varepsilon^{(2)}_{\rm r}=1+\chi^{(2)}_{\rm e}$,
+s{\aa} kan vi sammanfatta detta med att
+$$
+  \underbrace{
+    \varepsilon_0(1+\chi^{(2)}_{\rm e})E^{\parallel}_2
+      -\varepsilon_0(1+\chi^{(2)}_{\rm e})E^{\parallel}_2
+  }_{=D^{\parallel}_2-D^{\parallel}_1}
+  =
+  \underbrace{
+    \varepsilon_0\chi^{(2)}_{\rm e} E^{\parallel}_2
+      -\varepsilon_0\chi^{(2)}_{\rm e} E^{\parallel}_2
+  }_{=P^{\parallel}_2-P^{\parallel}_1}
+  \qquad\Leftrightarrow\qquad
+  E^{\parallel}_2=E^{\parallel}_1,
+$$
+alternativt uttryckt i ${\bf D}$-fältet och de relativa permittiviteterna som 
+$$
+  {{D^{\parallel}_2}\over{\varepsilon^{(2)}_{\rm r}}}
+    ={{D^{\parallel}_1}\over{\varepsilon^{(1)}_{\rm r}}}
+$$
+\vfill\eject
 
 \section{Upplagrad elektrisk energi}
 D{\aa} vi applicerar ett elektriskt f{\"a}lt {\"o}ver ett dielektrikun, s{\aa}
@@ -676,8 +715,14 @@ $$
   $$
     D^{\parallel}_2-D^{\parallel}_1 = P^{\parallel}_2-P^{\parallel}_1.
   $$
-  Om vi har tv{\aa} medier av olika relativ permittivitet $\varepsilon_1$ och
-  $\varepsilon_2$, s{\aa} kan vi ...}
+  Om vi har tv{\aa} medier av olika relativ permittivitet
+  $\varepsilon^{(1)}_{\rm r}$ och $\varepsilon^{(2)}_{\rm r}$, s{\aa} har vi
+  $$
+    E^{\parallel}_2=E^{\parallel}_1
+    \qquad\Leftrightarrow\qquad
+    {{D^{\parallel}_2}/{\varepsilon^{(2)}_{\rm r}}}
+      ={{D^{\parallel}_1}/{\varepsilon^{(1)}_{\rm r}}}.
+  $$}
 \item{$\bullet$}{Den upplagrade energin (Joule) hos ett dielektrikun under ett
   externt p{\aa}lagt elektriskt f{\"a}lt ${\bf E}$ ges av
   $$
