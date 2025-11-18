@@ -62,5 +62,13 @@ beginfig(1);
   drawarrow ((0u,0u)--((30u/2)*(.8660,.5000)));
   label.rt(btex $r$ etex,((30u/2)*(.8660,.5000)) shifted (1u,0u));
 
+
+  label.urt(btex \vbox{
+      \hbox{Elektronmolnets}
+      \hbox{laddningst{\"a}thet {\"a}r}
+      \hbox{$\displaystyle\rho={{(-q)}\over{4\pi a^3/3}}$}
+      } etex, (50u,16u));
+  draw (48u,20u){dir 200}..{dir 200}(22u,-10u);
+  
 endfig;
 end
