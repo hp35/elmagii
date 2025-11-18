@@ -75,7 +75,10 @@ beginfig(1);
   draw (21u,-10u)--(21u,7u);
   drawarrow (21u,-10u)--(21u,-1u);
   drawarrow (21u,7u)--(21u,3u);
-  label.lrt(btex $h\to0$ etex,(21u,-8u))
+  label.lrt(btex $h\to0$ etex,(21u,-8u));
+
+  label.top(btex Area $A$ etex,(70u,20u));
+  draw (70u,20u){dir 230}..{dir 230}(41u,4u);
 
 endfig;
 end
