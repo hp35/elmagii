@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-07/lecture-07.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-07/
-% Last change: November 18, 2024
+% Last change: November 18, 2025
 %
 % Lecture No 7 in the course ``Elektromagnetism II, 1TE626 (2025)'',
 % held November 19, 2025, at Uppsala University, Sweden.
@@ -31,17 +31,17 @@
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
   \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
     \else\hfill\fi}
-  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
+  \def\rightheadline{\tenrm{\it F{\"o}rel{\"a}sning #1}
     \hfil{\it Elektromagnetism II, 1TE626 (2025)}}
   \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2025)}
-    \hfil{\it F\"orel\"asning #1}}
+    \hfil{\it F{\"o}rel{\"a}sning #1}}
   \noindent~\vskip-60pt\hskip-40pt{\epsfbox{macros/UU_logo_color.eps}}
   \vskip-42pt\hfill\vbox{
       \hbox{{\it Elektromagnetism II, 1TE626 (2025)}}
       \hbox{{\it Lecture Notes, Fredrik Jonsson}}
       \hbox{{\it Document Revision \today}}
       \hbox{{\it https://github.com/hp35/elmagii/}}}\vskip 36pt
-    \centerline{\twelvesc F\"orel\"asning #1}
+    \centerline{\twelvesc F{\"o}rel{\"a}sning #1}
   \vskip 24pt\noindent}
 \def\section #1 {\medskip\goodbreak\noindent{\bf #1}
   \par\nobreak\smallskip\noindent}
@@ -58,17 +58,70 @@
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
+\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+  \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{7}
-\centerline{\twelvesc Magnetiska f\"alt i material}
+\centerline{\twelvesc Magnetiska f{\"a}lt i material}
 \centerline{Fredrik Jonsson, Uppsala Universitet, 19 november 2025}
 \vskip24pt
-\noindent
-I denna f{\"o}rel{\"a}sning analyserar vi vad som h{\"a}nder d{\aa} det
-magnetiska spinnet hos material linjeras och magnetiserar materialet, antingen
-genom ett externt p{\aa}lagt magnetiskt f{\"a}lt eller genom att spinnen {\"a}r
-naturligt linjerade i materialet, i s{\aa} kallade permanentmagneter.
+
+\plan{I denna f{\"o}rel{\"a}sning analyserar vi vad som h{\"a}nder d{\aa}
+  det magnetiska spinnet hos material linjeras och magnetiserar materialet,
+  antingen genom ett externt p{\aa}lagt magnetiskt f{\"a}lt eller genom att
+  spinnen {\"a}r naturligt linjerade i materialet, i s{\aa} kallade
+  permanentmagneter. Krafter och moment p{\aa} magnetiska dipoler extraheras
+  fr{\aa}n upplagrade energier f{\"o}r dipoler i elektriska eller magnetiska
+  f{\"a}lt, och vi introducerar magnetisering som en ``magnetisk
+  polarisationsdensitete'', i analogi med den elektriska motsvarigheten.
+  Vi diskuterar {\"o}versiktligt den upplagrade energin i ett magnetiserat
+  medium och effekten av hysteres som effekt av ett varierande externt
+  p{\aa}lagt magnetf{\"a}lt.
+  Slutligen g{\aa}r vi igenom hur vektorpotentialen ${\bf A}({\bf x},t)$
+  uttrycks f{\"o}r ett objekt med godtycklig magnetisering
+  ${\bf M}({\bf x},t)$, och finner att uttrycket f{\"o}r vektorpotentialen
+  {\"a}r ekvivalent med om det magnetiserade objektet ist{\"a}llet hade
+  varit konstruerat som ekvivalenta volyms- och ytstr{\"o}mmar
+  ${\bf J}_{\rm b}$ och ${\bf K}_{\rm b}$ av {\it bundna laddningar}.}
+
+\threepointsummary{%
+  Magnetisering
+  $$
+    {\bf M} \equiv \Big\langle{{d{\bf m}}\over{dV}}\Big\rangle
+      = {{1}\over{\mu_0}}\Big(1-{{1}\over{\mu_{\rm r}}}\Big){\bf B}
+  $$
+  och magnetiseringsstyrkan
+  $$
+    {\bf H}\equiv{{\bf B}\over{\mu_0}}-{\bf M}
+      ={{\bf B}\over{\mu_0\mu_{\rm r}}}.
+  $$
+}{%
+  Vektorpotential ${\bf A}({\bf x})$ fr{\aa}n magnetisk dipol
+  $$
+    {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
+      {{{\bf m}\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
+  $$
+}{%
+  Vektorpotentialen ${\bf A}({\bf x})$, och d{\"a}rmed {\"a}ven det
+  magnetiska f{\"a}ltet ${\bf B}({\bf x})=\nabla\times{\bf A}({\bf x})$,
+  fr{\aa}n ett magnetiserat objekt g{\aa}r ej att s{\"a}rskilja fr{\aa}n
+  fallet d{\"a}r objektet ist{\"a}llet hade uppburit l{\"a}mpligt
+  konstruerade volyms- och en ytstr{\"o}mmar ${\bf J}_{\rm b}$ och
+  ${\bf K}_{\rm b}$. F{\"o}r en observat{\"o}r kan vi alltid beskriva
+  f{\"a}ltet fr{\aa}n ett magnetiserat objekt i termer av ekvivalenta
+  str{\"o}mmar.
+}
 
 \section{Dipolmodellen av magneter}
 L{\aa}t oss anta att det fanns en magnetisk motsvarighet till elektrisk
@@ -97,7 +150,7 @@ riktningen ${\bf e}_n$ normal mot loopens plan. F{\"o}r att sammanfatta, s{\aa}
 f{\"o}ljer magnetism inte av n{\aa}gra magnetiska monopoler, utan kommer
 fr{\aa}n {\it r{\"o}relse av elektrisk laddning}.
 \vfill\eject
-\section{Krafter och moment p\aa\ dipoler}
+\section{Krafter och moment p{\aa}\ dipoler}
 Elektriska och magnetiska dipoler i externt p{\aa}lagda elektriska respektive
 magnetiska f{\"a}lt upplagrar energierna
 $$
@@ -155,7 +208,7 @@ $\theta$).
 Liksom f{\"o}r den elektriska polarisationsdensiteten ${\bf P}$ f{\"o}ljer att
 ett material som regel linjerar sina mikroskopiska magnetiska dipoler
 (molekyl{\"a}ra spinn) efter ett externt p{\aa}lagt magnetiskt f{\"a}lt.
-{\"A}ven om man kan t{\"a}nka sig en bild av detta som en dipol best{\aa}ende
+{\"a}ven om man kan t{\"a}nka sig en bild av detta som en dipol best{\aa}ende
 av en moln av positiva och negativa ``magnetiska laddningar'', s{\aa} {\"a}r
 detta en felaktig bild d{\aa} det inte existerar magnetiska laddningar
 ({\aa}terigen, fr{\aa}n $\nabla\cdot{\bf B}=0$). Ist{\"a}llet kan vi
@@ -222,6 +275,7 @@ s{\aa} gott som alltid anta att mediet {\"a}r ickemagnetiskt, med
 $\mu_{\rm r}=1$, det vill s{\"a}ga att vi ur magnetisk synpunkt kan betrakta
 materialet som om det vore vakuum. (Detta antagande g{\"a}ller dock alltsom
 oftast {\it ej} f{\"o}r den elektriska polarisationsdensiteten.)
+\vfill\eject
 
 \section{Upplagrad energi i magnetf{\"a}lt}
 I likhet med ett dielektrikum kommer ett p{\aa}lagt magnetiskt f{\"a}lt
@@ -246,6 +300,7 @@ materialet t{\"a}cker in en viss ``area'' $B\cdot H$ som har dimensionen
 energi per volymsenhet, och ju st{\"o}rre area vi t{\"a}cker in d{\aa} vi
 g{\aa}r runt med en kurva i hysteresdiagrammet, desto st{\"o}rre
 v{\"a}rmeutveckling.
+\vfill\eject
 
 \section{Vektorpotential fr{\aa}n ett magnetiserat objekt}
 Vi kommer nu att studera ett objekt som har den rumsberoende statiska
@@ -270,27 +325,20 @@ $$
 Det {\"a}r d{\"a}rf{\"o}r av intresse att se om vi utifr{\aa}n en magnetisering
 ${\bf M}({\bf x})$ kan f{\aa} fram vektorpotentialen ${\bf A}({\bf x})$ eftersom
 vi via den kan extrahera {\"o}vriga f{\"a}lt.\numberedfootnote{Vi f{\"o}ljer
-h{\"a}r i huvudsak Griffiths kapitel 6.2.1, sidorna 274--275.}
+  h{\"a}r i huvudsak Griffiths kapitel 6.2.1, sidorna 274--275.}
 
 Som en f{\"o}rsta b{\"o}rjan i den kommande vektoralgebran, s{\aa} kan vi
 konstatera att vektorpotentialen i en {\it observationspunkt} ${\bf x}$
 fr{\aa}n en enda, isolerad magnetisk dipol ${\bf m}$ i {\it k{\"a}llpunkten}
 ${\bf x}'$ ges av\numberedfootnote{Se Griffiths Ekv.~(5.85), sidan 253.}
 $$
-  {\bf A}({\bf x})={{\mu_0}\over{4\pi}}{{{\bf m}\times{\bf e}_r}\over{r^2}},
+  {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
+    {{{\bf m}\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^2}}.
 $$
-d{\"a}r
-$$
-  r=|{\bf x}-{\bf x}'|
-  \qquad\hbox{och}\qquad
-  {\bf e}_r=({\bf x}-{\bf x}')/|{\bf x}-{\bf x}'|
-$$
-{\"a}r respektive avst{\aa}ndet och enhetsvektorn fr{\aa}n k{\"a}llpunkten
-${\bf x}'$ till observationspunkten ${\bf x}$. Med denna enkla relation kan
-vi enkelt g{\aa} vidare med en generalisering om vi ser sm{\aa} volumselement
-$dV$ som en ensemble av k{\"a}llpunkter, var och en uppb{\"a}rande en
-rumsberoende magnetisering (``magnetisk polarisationsdensitet'')
-${\bf M}({\bf x}')$.
+Med denna enkla relation kan vi enkelt g{\aa} vidare med en generalisering om
+vi ser sm{\aa} volumselement $dV$ som en ensemble av k{\"a}llpunkter, var och
+en uppb{\"a}rande en rumsberoende magnetisering (``magnetisk
+polarisationsdensitet'') ${\bf M}({\bf x}')$.
 \epsfig{figs/vectpot.1}\noindent
 Bidraget $d{\bf A}({\bf x})$ till vektorpotentialen vid observationspunkten
 ${\bf x}$ fr{\aa}n ett enskild magnetiskt dipolmoment $d{\bf m}$ vid
@@ -456,7 +504,8 @@ $$
   {\bf A}({\bf x}) = {{\mu_0}\over{4\pi}}\iiint_V
     {{{\bf J}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
   +{{\mu_0}\over{4\pi}}\oiint_V
-    \bigg({{{\bf K}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)\times d{\bf A}'.
+    \bigg({{{\bf K}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)
+    \times d{\bf A}'.
 $$
 Detta betyder att vektorpotentialen ${\bf A}({\bf x})$, och d{\"a}rmed {\"a}ven
 det magnetiska f{\"a}ltet ${\bf B}({\bf x})=\nabla\times{\bf A}({\bf x})$
@@ -464,4 +513,73 @@ fr{\aa}n det magnetiserade objektet ges som om objektet ist{\"a}llet hade
 uppburit en motsvarande volyms-str{\"o}m ${\bf J}_{\rm b}$ och en ytstr{\"o}m
 ${\bf K}_{\rm b}$. Detta illustrerar den t{\"a}ta kopplingen mellan magnetiska
 f{\"a}lt och ekvivalenta str{\"o}mmar.
+
+\section{Sammanfattning av F{\"o}rel{\"a}sning~7
+  -- Magnetiska f{\"a}lt i material}
+\item{$\bullet$}{Att $\nabla\cdot{\bf B}=0$ betyder att det inte existerar
+  n{\aa}gra magnetiska monopoler.}
+\item{$\bullet$}{Magnetiskt moment ${\bf m}$ enligt Gilbert-modellen ges som
+$$
+{\bf m}=I\iint_A\,d{\bf A}=IA{\bf e}_{\bf n}.
+$$}
+\item{$\bullet$}{Upplagrad energi f{\"o}r elektrisk dipol ${\bf p}$ i
+  elektriskt f{\"a}lt ${\bf E}_{\rm ext}$ respektive magnetisk dipol ${\bf m}$
+  i magnetiskt f{\"a}lt ${\bf B}_{\rm ext}$,
+  $$
+    W_{\rm e} = -{\bf p}\cdot{\bf E}_{\rm ext},\qquad\qquad
+    W_{\rm m} = -{\bf m}\cdot{\bf B}_{\rm ext}.
+  $$}
+\item{$\bullet$}{Kraft p{\aa} elektrisk dipol ${\bf p}$ repektive magnetisk
+  dipol ${\bf m}$,
+  $$
+    {\bf F}_{\rm e} = -\nabla W_{\rm e}
+      =\nabla({\bf p}\cdot{\bf E}_{\rm ext}),\qquad\qquad
+    {\bf F}_{\rm m} = -\nabla W_{\rm m}
+      =\nabla({\bf m}\cdot{\bf B}_{\rm ext}).
+  $$}
+\item{$\bullet$}{Vridmoment ${\bf\tau}$ p{\aa} elektrisk dipol ${\bf p}$
+  repektive magnetisk dipol ${\bf m}$,
+  $$
+    {\bf \tau}={\bf p}\times{\bf E}_{\rm ext},\qquad\qquad
+    {\bf \tau}={\bf m}\times{\bf B}_{\rm ext}.
+  $$}
+\item{$\bullet$}{Magnetisering (``magnetisk polarisationsdensitet''),
+  $$
+    {\bf M} \equiv \Big\langle{{d{\bf m}}\over{dV}}\Big\rangle
+      = {{1}\over{\mu_0}}\Big(1-{{1}\over{\mu_{\rm r}}}\Big){\bf B}
+  $$
+  d{\"a}r $\mu_{\rm r}$ {\"a}r den {\it relativa magnetiska permeabiliteten}
+  f{\"o}r materialet.}
+\item{$\bullet$}{Magnetiseringsstyrkan ${\bf H}$ definieras som
+  $$
+    {\bf H}\equiv{{\bf B}\over{\mu_0}}-{\bf M}={{\bf B}\over{\mu_0\mu_{\rm r}}}
+    \qquad\Leftrightarrow\qquad
+    {\bf B}=\mu_0\mu_{\rm r}{\bf H}.
+  $$}
+\item{$\bullet$}{Upplagrad energi i magnetf{\"a}lt,
+  $$
+    W = {{1}\over{2}}\iiint{\bf B}\cdot{\bf H}\,dV.
+  $$}
+\item{$\bullet$}{Vektorpotentialen i en {\it observationspunkt} ${\bf x}$
+  fr{\aa}n en isolerad magnetisk dipol ${\bf m}$ i {\it k{\"a}llpunkten}
+  ${\bf x}'$ ges av
+  $$
+    {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
+      {{{\bf m}\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^2}}.
+  $$}
+\item{$\bullet$}{Vektorpotentialen fr{\aa}n ett magnetiserat objekt kan
+  {\it alltid} skrivas i termer av ekvivalenta volyms- och ytstr{\"o}mmar
+  ${\bf J}_{\rm b}$ och ${\bf K}_{\rm b}$ av {\it bundna laddningar} som
+  $$
+    {\bf A}({\bf x}) = {{\mu_0}\over{4\pi}}\iiint_V
+      {{{\bf J}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
+    +{{\mu_0}\over{4\pi}}\oiint_V
+      \bigg({{{\bf K}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)
+      \times d{\bf A}'.
+  $$}
+\item{$\bullet$}{F{\"o}r en observat{\"o}r g{\aa}r ett {\it magnetiserat}
+  objekt ej att s{\"a}rskilja fr{\aa}n fallet d{\"a}r objektet ist{\"a}llet
+  hade uppburit l{\"a}mpligt konstruerade volyms- och en ytstr{\"o}mmar
+  ${\bf J}_{\rm b}$ och ${\bf K}_{\rm b}$.}
+
 \bye
