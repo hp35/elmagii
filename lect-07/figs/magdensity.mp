@@ -1,6 +1,6 @@
 %
-% MetaPost drawing of the molecular magnetic dipoles of the Gilbert and
-% Ampère models.
+% MetaPost drawing of the magnetization, expressed as the density of molecular
+% magnetic dipoles per unit volume.
 %
 % Copyright (C) 2023, Fredrik Jonsson
 %
