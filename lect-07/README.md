@@ -10,6 +10,27 @@ code (plain TeX, no LaTeX), MetaPost figures and supporting material.
 
 [lecture-07.pdf](lecture-07.pdf) - Compiled document containing the Lecture Notes.
 
+## Summary of the lecture (Swedish)
+
+I denna föreläsning analyserar vi vad som händer då det magnetiska spinnet hos
+material linjeras och magnetiserar materialet, antingen genom ett externt
+pålagt magnetiskt fält eller genom att spinnen är naturligt linjerade i
+materialet, i så kallade permanentmagneter.
+
+Krafter och moment på magnetiska dipoler extraheras från upplagrade energier
+för dipoler i elektriska eller magnetiska fält, och vi introducerar
+magnetisering som en “magnetisk polarisationsdensitet”, i analogi med den
+elektriska motsvarigheten. Vi diskuterar översiktligt den upplagrade energin
+i ett magnetiserat medium och effekten av hysteres som effekt av ett varierande
+externt pålagt magnetfält.
+
+Slutligen går vi igenom hur vektorpotentialen <b>A</b>(</b>x</b>, <i>t</i>)
+uttrycks för ett objekt med godtycklig magnetisering <b>M</b>(</b>x</b>,
+<i>t</i>), och finner att uttrycket för vektorpotentialen är ekvivalent med
+om det magnetiserade objektet istället hade varit konstruerat som ekvivalenta
+volyms- och ytströmmar <b>J</b><sub>b</sub> och <b>K</b><sub>b</sub> av bundna
+laddningar.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
