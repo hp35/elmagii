@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-07/lecture-07.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-07/
-% Last change: November 18, 2025
+% Last change: November 19, 2025
 %
 % Lecture No 7 in the course ``Elektromagnetism II, 1TE626 (2025)'',
 % held November 19, 2025, at Uppsala University, Sweden.
@@ -467,7 +467,7 @@ anv{\"a}nda en liknande variant,\numberedfootnote{Denna form finns som ett
    godtycklig vektor, och anv{\"a}nd denna form i Gauss teorem:
    $$
       \iiint_V\nabla\cdot({\bf v}\times{\bf c}) dV
-        =\oiint_S({\bf v}\times{\bf c})\cdot d{\bf A}.
+        =\oiint_S({\bf v}\times{\bf c})\cdot d{\bf S}.
    $$
    Genom anv{\"a}ndande av produktregeln (``product rule \#6'' i p{\"a}rmen i
    Griffiths),
@@ -479,36 +479,36 @@ anv{\"a}nda en liknande variant,\numberedfootnote{Denna form finns som ett
    $$
    samt att vi genom vektoridentiteten (1) i p{\"a}rmen i Griffiths har att
    $$
-     d{\bf A}\cdot({\bf v}\times{\bf c})
-       = {\bf c}\cdot(d{\bf A}\times{\bf v})
-       = -{\bf c}\cdot({\bf v}\times d{\bf A}),
+     d{\bf S}\cdot({\bf v}\times{\bf c})
+       = {\bf c}\cdot(d{\bf S}\times{\bf v})
+       = -{\bf c}\cdot({\bf v}\times d{\bf S}),
    $$
    s{\aa} omformuleras Gauss teorem enligt ovan till
    $$
      \iiint_V {\bf c}\cdot(\nabla\times{\bf v})\,dV
-       =\oiint_S -{\bf c}\cdot({\bf v}\times d{\bf A})
+       =\oiint_S -{\bf c}\cdot({\bf v}\times d{\bf S})
      \qquad\Leftrightarrow\qquad
      \iiint_V (\nabla\times{\bf v})\,dV
-       =-\oiint_S ({\bf v}\times d{\bf A}).
+       =-\oiint_S ({\bf v}\times d{\bf S}).
      \qquad\hbox{(Q.E.D.)}
    $$}
 $$
-  \iiint_V(\nabla\times{\bf v})\,dV = -\oiint_{\Omega} {\bf v}\times d{\bf A}.
+  \iiint_V(\nabla\times{\bf v})\,dV = -\oiint_{S} {\bf v}\times d{\bf S}.
 $$
 Den andra integralen i h{\"o}gerledet kan nu omformuleras med hj{\"a}lp av
 detta ``kvasi-Gauss-teorem'' som
 $$
-  \iiint_V
-  \nabla'\times\bigg({{{\bf M}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)\,dV'
-  = -\oiint_{\Omega}
-  \bigg({{{\bf M}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)\times d{\bf A}'.
+  \iiint_V\nabla'\times\bigg({{{\bf M}({\bf x}')}
+    \over{|{\bf x}-{\bf x}'|}}\bigg)\,dV'
+  = -\oiint_{S}\bigg({{{\bf M}({\bf x}')}
+       \over{|{\bf x}-{\bf x}'|}}\bigg)\times d{\bf S}'.
 $$
 Vektorpotentialen enligt ovan uttrycks d{\"a}rmed (n{\"a}stan) slutligen som
 $$
   {\bf A}({\bf x}) = {{\mu_0}\over{4\pi}}\iiint_V
     {{\big(\nabla'\times{\bf M}({\bf x}')\big)}\over{|{\bf x}-{\bf x}'|}}\,dV'
-  +{{\mu_0}\over{4\pi}}\oiint_V
-     \bigg({{{\bf M}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)\times d{\bf A}'.
+  +{{\mu_0}\over{4\pi}}\oiint_S
+     \bigg({{{\bf M}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\bigg)\times d{\bf S}'.
 $$
 \vfill\eject
 
@@ -526,13 +526,13 @@ $$
 $$
 d{\"a}r ${\bf e}_n$ {\"a}r normalvektorn ut fr{\aa}n den slutna ytan, det
 vill s{\"a}ga samma normalvektor som ing{\aa}r i ytelementets normal som
-$d{\bf A}'={\bf e}_n\,dA'$. Summa summarum kan allts{\aa} vektorpotentialen
+$d{\bf S}'={\bf e}_n\,dS'$. Summa summarum kan allts{\aa} vektorpotentialen
 skrivas i termer av ekvivalenta volyms- och ytstr{\"o}mmar som
 $$
   {\bf A}({\bf x}) = {{\mu_0}\over{4\pi}}\iiint_V
     {{{\bf J}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
-  +{{\mu_0}\over{4\pi}}\oiint_V
-    {{{\bf K}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dA'.
+  +{{\mu_0}\over{4\pi}}\oiint_S
+    {{{\bf K}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dS'.
 $$
 Detta betyder att vektorpotentialen ${\bf A}({\bf x})$, och d{\"a}rmed {\"a}ven
 det magnetiska f{\"a}ltet ${\bf B}({\bf x})=\nabla\times{\bf A}({\bf x})$
@@ -612,12 +612,12 @@ $$}
   $$
     {\bf A}({\bf x}) = {{\mu_0}\over{4\pi}}\iiint_V
       {{{\bf J}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
-    +{{\mu_0}\over{4\pi}}\oiint_V
-      {{{\bf K}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dA'.
+    +{{\mu_0}\over{4\pi}}\oiint_S
+      {{{\bf K}_{\rm b}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dS'.
   $$}
 \item{$\bullet$}{F{\"o}r en observat{\"o}r g{\aa}r ett {\it magnetiserat}
   objekt ej att s{\"a}rskilja fr{\aa}n fallet d{\"a}r objektet ist{\"a}llet
-  hade uppburit l{\"a}mpligt konstruerade volyms- och en ytstr{\"o}mmar
-  ${\bf J}_{\rm b}$ och ${\bf K}_{\rm b}$.}
+  hade uppburit l{\"a}mpligt konstruerade interna och bundna volyms- och
+  ytstr{\"o}mmar ${\bf J}_{\rm b}$ och ${\bf K}_{\rm b}$.}
 
 \bye
