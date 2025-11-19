@@ -18,7 +18,7 @@ dv := image(
 beginfig(1);
   pickup pencircle scaled 1pt;
   label.ulft(btex Volym $V$ etex,(-10u,18u));
-  label.ulft(btex Begr{\"a}nsningsyta $\Omega$ etex,(-26u,4u));
+  label.ulft(btex Begr{\"a}nsningsyta $S$ etex,(-26u,4u));
 
   %
   % Draw the blob of the magnetized object.
