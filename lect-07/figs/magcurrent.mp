@@ -36,10 +36,10 @@ beginfig(1);
   % Bound surface and volume currents.
   %
   label.rt(btex ${\bf J}_{\rm b}=\nabla\times{\bf M}
-      \quad(\hbox{volymstr{\"o}m},\ {\rm C}/{\rm m}^2)$ etex, (50u,20u));
+      \quad(\hbox{volymstr{\"o}m},\ {\rm A}/{\rm m}^2)$ etex, (50u,20u));
   draw (50u,20u){dir 180}..{dir 190}(8u,4u);
   label.rt(btex ${\bf K}_{\rm b}={\bf M}\times{\bf e}_n
-      \quad(\hbox{ytstr{\"o}m},\ {\rm C}/{\rm m})$ etex, (50u,10u));
+      \quad(\hbox{ytstr{\"o}m},\ {\rm A}/{\rm m})$ etex, (50u,10u));
   draw (50u,10u){dir 180}..{dir 190}(31u,0u);
 
   %
