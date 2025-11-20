@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-08/lecture-08.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-08/
-% Last change: November 28, 2024
+% Last change: November 19, 2025
 %
 % Lecture No 8 in the course ``Elektromagnetism II, 1TE626 (2023)'',
 % held November 24, 2025, at Uppsala University, Sweden.
@@ -58,12 +58,84 @@
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
+\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+  \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip\noindent}
+\newdimen\itemindent \itemindent=28pt
+\newdimen\hangitemindent \hangitemindent=46pt
+\def\litem[#1]{\smallbreak\noindent%
+  \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
+  \hangindent\hangitemindent\ignorespaces}
 
 \lecture{8}
 \centerline{\twelvesc Multipolutvecklingen}
 \centerline{Fredrik Jonsson, Uppsala Universitet, 24 november 2025}
 \vskip24pt
+
+\plan{Vi l{\"a}mnar f{\"o}r denna f{\"o}rel{\"a}sning dipolmodellen f{\"o}r ett
+  tag, och visar p{\aa} att andra konstruktioner av laddningsf{\"o}rdelningar,
+  exempelvis kvadrupoler och oktopoler, ger bidrag till f{\"a}lt som avklingar
+  med en annan takt en det klassiska ``$1/r^2$''-upptr{\"a}dandet.
+  Vi utg{\aa}r fr{\aa}n de klassiska integralerna f{\"o}r den skal{\"a}ra
+  potentialen $\phi$ och vektorpotentialen ${\bf A}$ och {\"a}gnar oss {\aa}t
+  en statisk modell f{\"o}r multipolutvecklingen.
+  Vi g{\aa}r igenom begreppen dipol, kvadrupol, oktopol och h{\"o}gre
+  ordningar; specifikt visar vi p{\aa} att {\"a}ven det enklast t{\"a}nkbara
+  fallet av en elektrisk dipol har h{\"o}gre ordningars multipolmoment
+  n{\"a}rvarande, men att dessa oftast f{\"o}rsummas vid betraktelse p{\aa}
+  stora avst{\aa}nd.
+  F{\"o}rel{\"a}sningen avslutas med att demonstrera multipolutvecklingen
+  f{\"o}r generella laddningsf{\"o}rdelningar i termer av skal{\"a}r potential,
+  samt fastst{\"a}llande av dipolapproximationen f{\"o}r elektrostatiska och
+  magnetostatiska f{\"a}lt.
+}
+
+\threepointsummary{%
+  Multipolutvecklingen {\"a}r i grund och botten en serieutveckling av
+  potentialen (skal{\"a}r eller vektor) i inversa potenser av distansen
+  mellan k{\"a}lla och observationspunkt.
+}{%
+  Multipolutvecklingen klassificeras term f{\"o}r term utifr{\aa}n hur
+  beroendet av avst{\aa}ndet $r=|{\bf x}-{\bf x}'|$ mellan k{\"a}llpunkt
+  ${\bf x}'$ och f{\"a}ltpunkt ${\bf x}$ ser ut:
+  \litem[1.]{\hbox to110pt{Monopol (1-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r$}
+  \litem[2.]{\hbox to110pt{Dipol (2-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r^2$}
+  \litem[3.]{\hbox to110pt{Kvadrupol (4-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r^3$}
+  \litem[4.]{\hbox to110pt{Oktopol (8-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r^4$}
+  \litem[5.]{\hbox to110pt{Hexadecapol (16-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r^5$}
+  \litem[6.]{\hbox to110pt{Dotriacontapol (32-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r^6$}
+}{%
+  Dipolapproximationen f{\"o}r elektrostatiska (${\bf E}=-\nabla\Phi$) och
+  magnetostatiska (${\bf B}=\nabla\times{\bf A}$) f{\"a}lt p\aa\ l{\aa}ngt
+  avst{\aa}nd $|{\bf x}|$ fr{\aa}n laddningsf{\"o}rdelningen (k{\"a}llan)
+  $\rho$ lyder
+  $$
+    \Phi({\bf x})\approx{{1}\over{4\pi\varepsilon_0}}\bigg(
+        {{q}\over{|{\bf x}|}} + {{{\bf p}\cdot{\bf x}}\over{|{\bf x}|^3}}
+      \bigg),\qquad\qquad
+    {\bf A}({\bf x})\approx{{\mu_0}\over{4\pi}}
+        {{{\bf m}\times{\bf x}}\over{|{\bf x}|^3}},
+  $$
+  d\"ar $q$ {\"a}r nettoladdningen och ${\bf p}$ dipolmomentet hos en
+  magnetisk dipol samt ${\bf m}$ det magnetiska dipolmomentet.
+}
+
 \section{Multipolutveckling av f\"alt}
 \item{$\bullet$}{Formalism f{\"o}r att projicera ut olika bidrag (``moment'')
    till elektromagnetiska f{\"a}lt.} 
@@ -83,7 +155,8 @@ Vi kommer h{\"a}r att i huvudsak anv{\"a}nda de generella uttrycken f{\"o}r
 elektrisk skal{\"a}r potential och vektorpotentialen,
 som\numberedfootnote{F{\"o}r formulering av skal{\"a}ra potentialen
   $\Phi({\bf x})$ samt vektorpotentialen ${\bf A}({\bf x})$ fr{\aa}n en
-  generell laddningsdistribution, se Griffiths Ekv.~(10.26), s.~445.}
+  generell laddningsdistribution, se Griffiths Ekv.~(10.26), s.~445.
+  Notera h{\"a}r hur vektorpotentialen ${\bf A}({\bf x})$ har en form som {\it exakt matchar det uttryck som vi under f{\"o}rra f{\"o}rel{\"a}sningen tog fram f{\"o}r samma vektorpotential f{\"o}r ett magnetiserat objekt} med magnetiseringen ${\bf M}({\bf x})$, i termer av en {\it bunden volymstr{\"o}m} ${\bf J}_{\rm b}=\nabla\times{\bf M}$ (${\rm A}/{\rm m}^2$) och en {\it bunden ytstr{\"o}m} ${\bf K}_{\rm b}={\bf M}\times{\bf e}_n$ (${\rm A}/{\rm m}$). Detta uttrycker p{\aa} ett mer generellt plan att vi med f{\"o}rra f{\"o}rel{\"a}sningens slutresultat {\it kan applicera den multipolutveckling som vi nu kommer att g{\aa} igenom p{\aa} ett godtyckligt magnetiserat objekt!}}
 $$
   \Phi({\bf x})={{1}\over{4\pi\varepsilon_0}}
     \iiint_{{\Bbb R}^3}{{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
@@ -141,6 +214,7 @@ laddning separerade ett avst{\aa}nd $L$.
 {\it multi}polmoment d\aa\ vi l\"amnar approximationen att den skal\"ara
 elektriska potentialen enbart ges av skal\"arprodukten mellan dipolmomentet
 och ortsvektorn till observationspunkten.
+
 Vi betraktar en klassisk elektrisk dipol med tv\aa\ laddningar $+q$ or $-q$
 separerade avst{\aa}ndet $L=2b$. Dipolen kan beskrivas med en
 laddningsf{\"o}rdelning enligt {\it distributionen}
@@ -149,11 +223,13 @@ $$
      +(-q)\delta({\bf x}+b{\bf e}_z)
 $$
 \epsfig{figs/eldipole.1}\noindent
-{\it Elektrisk skal\"ar potential} fr{\aa}n denna specifika distribution av
-tv\aa\ punktk\"allor (vi utg{\aa}r h{\"a}r ifr{\aa}n den generella
-tre-dimensionella volymintegralen av en laddningsdensitet $\rho({\bf x})$,
-bara f{\"o}r att illustrera hur vi kan till{\"a}mpa denna {\"a}ven f{\"o}r
-lokaliserade punktladdningar):
+\vfill\eject
+Den {\it elektriska skal\"ara potentialen} fr{\aa}n denna specifika
+distribution av tv\aa\ punktk\"allor\numberedfootnote{Vi utg{\aa}r h{\"a}r
+  ifr{\aa}n den generella tre-dimensionella volymintegralen av en
+  laddningsdensitet $\rho({\bf x})$, bara f{\"o}r att illustrera hur vi
+  kan till{\"a}mpa denna {\"a}ven f{\"o}r lokaliserade punktladdningar.}
+blir d{\"a}rmed
 $$
   \eqalign{
     \Phi({\bf x})&={{1}\over{4\pi\varepsilon_0}}
@@ -199,6 +275,7 @@ $$
 \noindent
 {\captionwide Skal{\"a}r potential $\Phi(x,y)$ f{\"o}r en elektrisk dipol med
 f{\"a}ltlinjer f{\"o}r ${\bf E}(x,y)=-\nabla\Phi(x,y)$.}
+\vfill\eject
 
 \section{Exempel p\aa\ multipoler}
 Som en relativt enkel illustration av multipoler kan vi konstruera olika
@@ -279,14 +356,17 @@ kommer att vara den som g{\aa}r som $O(1/r^3)$, svarande mot en elektrisk
 Multipolutvecklingen klassificeras term f{\"o}r term av hur beroendet av
 avst{\aa}ndet $r=|{\bf x}-{\bf x}'|$ mellan k{\"a}llpunkt ${\bf x}'$ och
 f{\"a}ltpunkt ${\bf x}$ ser ut:
-\item{$\bullet$}{Monopol           (1-pol):  $\Phi({\bf x})\sim 1/r$}
-\item{$\bullet$}{Dipol             (2-pol):  $\Phi({\bf x})\sim 1/r^2$}
-\item{$\bullet$}{Kvadrupol         (4-pol):  $\Phi({\bf x})\sim 1/r^3$}
-\item{$\bullet$}{Oktopol           (8-pol):  $\Phi({\bf x})\sim 1/r^4$}
-\item{$\bullet$}{Hexadecapol       (16-pol): $\Phi({\bf x})\sim 1/r^5$}
-\item{$\bullet$}{Dotriacontapol    (32-pol): $\Phi({\bf x})\sim 1/r^6$}
-\item{$\bullet$}{Hexacontatetrapol (64-pol): $\Phi({\bf x})\sim 1/r^7$}
-\item{$\bullet$}{$\ldots$}
+\medskip
+\litem[1.]{\hbox to140pt{Monopol (1-pol):\hfil} $\Phi({\bf x})\sim 1/r$}
+\litem[2.]{\hbox to140pt{Dipol (2-pol):\hfil} $\Phi({\bf x})\sim 1/r^2$}
+\litem[3.]{\hbox to140pt{Kvadrupol (4-pol):\hfil} $\Phi({\bf x})\sim 1/r^3$}
+\litem[4.]{\hbox to140pt{Oktopol (8-pol):\hfil} $\Phi({\bf x})\sim 1/r^4$}
+\litem[5.]{\hbox to140pt{Hexadecapol (16-pol):\hfil} $\Phi({\bf x})\sim 1/r^5$}
+\litem[6.]{\hbox to140pt{Dotriacontapol (32-pol):\hfil}
+  $\Phi({\bf x})\sim 1/r^6$}
+\litem[7.]{\hbox to140pt{Hexacontatetrapol (64-pol):\hfil}
+  $\Phi({\bf x})\sim 1/r^7$}
+\litem[8.]{\hbox to110pt{$\ldots$\hfil} $\ldots$}
 \medskip
 \noindent
 Sammanfattningsvis s\aa\ har en klassisk elektrisk dipol samtliga
@@ -519,4 +599,48 @@ l{\"a}nkad till magnetf{\"a}ltet genom ${\bf B}=\nabla\times{\bf A}$, till
 skillnad fr{\aa}n det elektrostatiska fallet {\it aldrig kan involvera
 magnetiska monopoler}, varf{\"o}r monopoltermer ocks{\aa} saknas f{\"o}r
 just vektorpotentialen.
+
+\section{Sammanfattning av F{\"o}rel{\"a}sning~8 -- Multipolutvecklingen}
+\item{$\bullet$}{Multipolutvecklingen {\"a}r i grund och botten en serieutveckling av potentialen (skal{\"a}r eller vektor) i inversa potenser av distansen mellan k{\"a}lla och observationspunkt.}
+\item{$\bullet$}{
+Vi tar som vanligt fram uttrycken f{\"o}r potentialerna som
+$$
+  \Phi({\bf x})={{1}\over{4\pi\varepsilon_0}}
+    \iiint_{{\Bbb R}^3}{{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+    \qquad\qquad
+  {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
+    \iiint_{{\Bbb R}^3}{{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
+$$
+}
+\item{$\bullet$}{}
+\item{$\bullet$}{}
+\item{$\bullet$}{}
+\item{$\bullet$}{}
+\item{$\bullet$}{Dipolapproximationen f{\"o}r elektrostatiska (${\bf E}=-\nabla\Phi$) och magnetostatiska (${\bf B}=\nabla\times{\bf A}$) f{\"a}lt p\aa\ l{\aa}ngt avst{\aa}nd $|{\bf x}|$ fr{\aa}n laddningsf{\"o}rdelningen (k{\"a}llan) $\rho$ lyder
+$$
+  \Phi({\bf x})\approx{{1}\over{4\pi\varepsilon_0}}\bigg(
+      {{q}\over{|{\bf x}|}} + {{{\bf p}\cdot{\bf x}}\over{|{\bf x}|^3}}
+    \bigg),\qquad\qquad
+  {\bf A}({\bf x})\approx{{\mu_0}\over{4\pi}}
+      {{{\bf m}\times{\bf x}}\over{|{\bf x}|^3}},
+$$
+d\"ar
+$$
+  q=\underbrace{
+      \iiint_{V} \rho({\bf x}')\,dV'
+    }_{{\rm nettoladdning}\ [{\rm C}]},\qquad
+  {\bf p}=\underbrace{
+      \iiint_{V} x'_k \rho({\bf x}')\,dV'
+    }_{{\rm elektriskt\ dipolmoment}\ [{\rm C}{\rm m}]},\qquad
+  {\bf m}=\underbrace{
+      {{1}\over{2}}\iiint_{V} {\bf x}'\times{\bf J}({\bf x}')\,dV'
+    }_{{\rm magnetiskt\ dipolmoment}\ [{\rm A}{\rm m}^2]}.
+$$
+}
+
+
+
+
+
+
 \bye
