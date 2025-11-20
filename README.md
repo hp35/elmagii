@@ -4,7 +4,7 @@ This repository contains all TeX code (plain TeX, no LaTeX), MetaPost figures
 and supporting material as used in my lectures on Electromagnetic Theory II
 (1TE626) for Engineering Physics (master level) at Uppsala University.
 
-The directory contains the following subdirectories:
+The repository contains the following subdirectories, one for each lecture:
 
 [`lect-01`](lect-01) <i>Föreläsning 1 - Elektrostatik, superpositionsprincipen
          och Gauss lag</i>
@@ -62,6 +62,57 @@ missing components in case there are any complaints.
 In order to generate all documents and figures in all lectures, just run
 `make` in the `elmagii` root directory. In order to clean up all directories,
 just run `make clean` in the `elmagii` root directory.
+
+## Summaries of the lectures (Swedish)
+
+[<i>Föreläsning 1 - Elektrostatik, superpositionsprincipen
+         och Gauss lag</i>](lect-01)
+
+Med en kort sammanfattning av historiken bakom elektrostatik och upptäckten
+av elektronen som elementarladdning går vi direkt in på Coulombs lag för
+växelverkan mellan laddade partiklar. Coulombs lag, som i grund och botten
+kan härledas från utbyte av virtuella fotoner mellan laddade elementarpartiklar,
+tas här som ett axiom, från vilket vi härleder fram motsvarande kraft på en
+testladdning från ett system av laddningar, ur vilken det elektriska fältet
+definieras.
+
+En genomgång av superpositionsprincipen för elektriska fält följs av en
+härledning av Coulomb-växelverkan för en kontinuerlig distribution av
+laddningstäthet, den så kallade Coulombs generaliserade lag, eller kort
+och gott “Coulombintegralen”. Vi introducerar det elektriska flödet som
+integralen av det elektriska fältet över en godtycklig yta, utifrån vilket
+vi härleder Gauss lag för elektriska fält, tillämpbar på godtyckliga
+laddningsfördelningar i form av punkt- linje- yt- eller volymladdningar.
+Slutligen avslutar vi med en härledning av Gauss lag på differentialform.
+
+[`lect-02`](lect-02) <i>Föreläsning 2 - Elektrostatisk potential och
+         tillämpningar av Gauss lag</i>
+         (<i>Lecture 2 - Electrostatic potential and applications of Gauss'
+	 law</i>)
+
+[`lect-03`](lect-03) <i>Föreläsning 3 - Spegelladdningar, randvillkor och
+         entydighet för lösningar till potentialproblem</i>
+         (<i>Lecture 3 - Method of images for charges, boundary conditions
+	 and the uniqueness theorem, for the scalar potential</i>)
+
+[`lect-04`](lect-04) <i>Föreläsning 4 - Magnetostatik</i>
+         (<i>Lecture 4 - Magnetostatics</i>)
+
+[`lect-05`](lect-05) <i>Föreläsning 5 - Elektromagnetisk induktion</i>
+         (<i>Lecture 5 - Electromagnetic induction</i>)
+
+[`lect-06`](lect-06) <i>Föreläsning 6 - Elektriska fält i material</i>
+         (<i>Lecture 6 - Electric fields in materials</i>)
+
+[`lect-07`](lect-07) <i>Föreläsning 7 - Magnetiska fält i material</i>
+         (<i>Lecture 7 - Magnetic fields in materials</i>)
+
+[`lect-08`](lect-08) <i>Föreläsning 8 - Multipolutvecklingen</i>
+         (<i>Lecture 8 - The multipole expansion</i>)
+
+
+
+
 
 ## Gallery of sample illustrations used in the course
 
