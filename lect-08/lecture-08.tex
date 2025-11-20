@@ -156,7 +156,18 @@ elektrisk skal{\"a}r potential och vektorpotentialen,
 som\numberedfootnote{F{\"o}r formulering av skal{\"a}ra potentialen
   $\Phi({\bf x})$ samt vektorpotentialen ${\bf A}({\bf x})$ fr{\aa}n en
   generell laddningsdistribution, se Griffiths Ekv.~(10.26), s.~445.
-  Notera h{\"a}r hur vektorpotentialen ${\bf A}({\bf x})$ har en form som {\it exakt matchar det uttryck som vi under f{\"o}rra f{\"o}rel{\"a}sningen tog fram f{\"o}r samma vektorpotential f{\"o}r ett magnetiserat objekt} med magnetiseringen ${\bf M}({\bf x})$, i termer av en {\it bunden volymstr{\"o}m} ${\bf J}_{\rm b}=\nabla\times{\bf M}$ (${\rm A}/{\rm m}^2$) och en {\it bunden ytstr{\"o}m} ${\bf K}_{\rm b}={\bf M}\times{\bf e}_n$ (${\rm A}/{\rm m}$). Detta uttrycker p{\aa} ett mer generellt plan att vi med f{\"o}rra f{\"o}rel{\"a}sningens slutresultat {\it kan applicera den multipolutveckling som vi nu kommer att g{\aa} igenom p{\aa} ett godtyckligt magnetiserat objekt!}}
+  Notera h{\"a}r hur vektorpotentialen ${\bf A}({\bf x})$ har en form
+  som {\it exakt matchar det uttryck som vi under f{\"o}rra
+  f{\"o}rel{\"a}sningen tog fram f{\"o}r samma vektorpotential f{\"o}r
+  ett magnetiserat objekt} med magnetiseringen ${\bf M}({\bf x})$, i
+  termer av en {\it bunden volymstr{\"o}m}
+  ${\bf J}_{\rm b}=\nabla\times{\bf M}$ (${\rm A}/{\rm m}^2$) och en
+  {\it bunden ytstr{\"o}m} ${\bf K}_{\rm b}={\bf M}\times{\bf e}_n$
+  (${\rm A}/{\rm m}$).
+  Detta uttrycker p{\aa} ett mer generellt plan att vi med f{\"o}rra
+  f{\"o}rel{\"a}sningens slutresultat {\it kan applicera den
+  multipolutveckling som vi nu kommer att g{\aa} igenom p{\aa} ett
+  godtyckligt magnetiserat objekt!}}
 $$
   \Phi({\bf x})={{1}\over{4\pi\varepsilon_0}}
     \iiint_{{\Bbb R}^3}{{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
@@ -599,48 +610,80 @@ l{\"a}nkad till magnetf{\"a}ltet genom ${\bf B}=\nabla\times{\bf A}$, till
 skillnad fr{\aa}n det elektrostatiska fallet {\it aldrig kan involvera
 magnetiska monopoler}, varf{\"o}r monopoltermer ocks{\aa} saknas f{\"o}r
 just vektorpotentialen.
+\vfill\eject
 
 \section{Sammanfattning av F{\"o}rel{\"a}sning~8 -- Multipolutvecklingen}
-\item{$\bullet$}{Multipolutvecklingen {\"a}r i grund och botten en serieutveckling av potentialen (skal{\"a}r eller vektor) i inversa potenser av distansen mellan k{\"a}lla och observationspunkt.}
+\item{$\bullet$}{Multipolutvecklingen {\"a}r i grund och botten bara en
+  serieutveckling av potentialen (skal{\"a}r eller vektor) i inversa
+  potenser av distansen mellan k{\"a}lla och observationspunkt.}
 \item{$\bullet$}{
-Vi tar som vanligt fram uttrycken f{\"o}r potentialerna som
-$$
-  \Phi({\bf x})={{1}\over{4\pi\varepsilon_0}}
-    \iiint_{{\Bbb R}^3}{{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
-    \qquad\qquad
-  {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
-    \iiint_{{\Bbb R}^3}{{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
-$$
-}
-\item{$\bullet$}{}
-\item{$\bullet$}{}
-\item{$\bullet$}{}
-\item{$\bullet$}{}
-\item{$\bullet$}{Dipolapproximationen f{\"o}r elektrostatiska (${\bf E}=-\nabla\Phi$) och magnetostatiska (${\bf B}=\nabla\times{\bf A}$) f{\"a}lt p\aa\ l{\aa}ngt avst{\aa}nd $|{\bf x}|$ fr{\aa}n laddningsf{\"o}rdelningen (k{\"a}llan) $\rho$ lyder
-$$
-  \Phi({\bf x})\approx{{1}\over{4\pi\varepsilon_0}}\bigg(
-      {{q}\over{|{\bf x}|}} + {{{\bf p}\cdot{\bf x}}\over{|{\bf x}|^3}}
-    \bigg),\qquad\qquad
-  {\bf A}({\bf x})\approx{{\mu_0}\over{4\pi}}
-      {{{\bf m}\times{\bf x}}\over{|{\bf x}|^3}},
-$$
-d\"ar
-$$
-  q=\underbrace{
-      \iiint_{V} \rho({\bf x}')\,dV'
-    }_{{\rm nettoladdning}\ [{\rm C}]},\qquad
-  {\bf p}=\underbrace{
-      \iiint_{V} x'_k \rho({\bf x}')\,dV'
-    }_{{\rm elektriskt\ dipolmoment}\ [{\rm C}{\rm m}]},\qquad
-  {\bf m}=\underbrace{
-      {{1}\over{2}}\iiint_{V} {\bf x}'\times{\bf J}({\bf x}')\,dV'
-    }_{{\rm magnetiskt\ dipolmoment}\ [{\rm A}{\rm m}^2]}.
-$$
-}
-
-
-
-
-
+  Vi tar som vanligt fram uttrycken f{\"o}r potentialerna som
+  $$
+    \Phi({\bf x})={{1}\over{4\pi\varepsilon_0}}
+      \iiint_{{\Bbb R}^3}{{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+      \qquad\qquad
+    {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
+      \iiint_{{\Bbb R}^3}{{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
+  $$}
+\item{$\bullet$}{Multipolutvecklingen klassificeras term f{\"o}r term
+  utifr{\aa}n hur beroendet av avst{\aa}ndet $r=|{\bf x}-{\bf x}'|$ mellan
+  k{\"a}llpunkt ${\bf x}'$ och f{\"a}ltpunkt ${\bf x}$ ser ut:
+  \litem[1.]{\hbox to110pt{Monopol (1-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r$}
+  \litem[2.]{\hbox to110pt{Dipol (2-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r^2$}
+  \litem[3.]{\hbox to110pt{Kvadrupol (4-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r^3$}
+  \litem[4.]{\hbox to110pt{Oktopol (8-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r^4$}
+  \litem[5.]{\hbox to110pt{Hexadecapol (16-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r^5$}
+  \litem[6.]{\hbox to110pt{Dotriacontapol (32-pol):\hfil}
+    $\Phi({\bf x})\sim 1/r^6$}}
+\item{$\bullet$}{Multipolutvecklingen f\"or den skal{\"a}ra potentialen f\"or
+  en linj{\"a}r elektrisk kvadrupol ges som
+  $$
+    \Phi({\bf x})
+       ={{q}\over{2\pi\varepsilon_0}}\Bigg(
+         \underbrace{{{b\cos\theta}\over{r^2}}}_{\rm dipol}
+         +\underbrace{{{(b\cos\theta)^3}\over{r^4}}}_{\rm oktopol}
+         +\underbrace{{{(b\cos\theta)^5}\over{r^6}}}_{\rm dotriacontapol}
+         +\ldots
+        \Bigg).
+  $$}
+\item{$\bullet$}{Multipolutvecklingen f\"or den skal{\"a}ra potentialen f\"or
+  en linj{\"a}r elektrisk kvadrupol ges som
+  $$
+    \Phi({\bf x})
+      ={{q}\over{2\pi\varepsilon_0}}\Bigg(
+         \underbrace{{{(b\cos\theta)^2}\over{r^3}}}_{\rm kvadrupol}
+         +\underbrace{{{(b\cos\theta)^4}\over{r^5}}}_{\rm hexadecapol}
+         +\underbrace{{{(b\cos\theta)^6}\over{r^7}}}_{\rm hexacontatetrapol}
+         +\ldots
+        \Bigg).
+  $$}
+\item{$\bullet$}{Dipolapproximationen f{\"o}r elektrostatiska
+  (${\bf E}=-\nabla\Phi$) och magnetostatiska (${\bf B}=\nabla\times{\bf A}$)
+  f{\"a}lt p\aa\ l{\aa}ngt avst{\aa}nd $|{\bf x}|$ fr{\aa}n
+  laddningsf{\"o}rdelningen (k{\"a}llan) $\rho$ lyder
+  $$
+    \Phi({\bf x})\approx{{1}\over{4\pi\varepsilon_0}}\bigg(
+        {{q}\over{|{\bf x}|}} + {{{\bf p}\cdot{\bf x}}\over{|{\bf x}|^3}}
+      \bigg),\qquad\qquad
+    {\bf A}({\bf x})\approx{{\mu_0}\over{4\pi}}
+        {{{\bf m}\times{\bf x}}\over{|{\bf x}|^3}},
+  $$
+  d\"ar
+  $$
+    q=\underbrace{
+        \iiint_{V} \rho({\bf x}')\,dV'
+      }_{{\rm nettoladdning}\ [{\rm C}]},\qquad
+    {\bf p}=\underbrace{
+        \iiint_{V} x'_k \rho({\bf x}')\,dV'
+      }_{{\rm elektriskt\ dipolmoment}\ [{\rm C}{\rm m}]},\qquad
+    {\bf m}=\underbrace{
+        {{1}\over{2}}\iiint_{V} {\bf x}'\times{\bf J}({\bf x}')\,dV'
+      }_{{\rm magnetiskt\ dipolmoment}\ [{\rm A}{\rm m}^2]}.
+  $$}
 
 \bye
