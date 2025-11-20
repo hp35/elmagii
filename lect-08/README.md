@@ -11,6 +11,24 @@ material.
 
 [lecture-08.pdf](lecture-08.pdf) - Compiled document containing the Lecture Notes.
 
+## Summary of the lecture (Swedish)
+
+Vi lämnar för denna föreläsning dipolmodellen för ett tag, och visar på att
+andra konstruktioner av laddningsfördelningar, exempelvis kvadrupoler och
+oktopoler, ger bidrag till fält som avklingar med en annan takt en det
+klassiska “1/<i>r</i><sup>2</sup>”-uppträdandet. Vi utgår från de klassiska
+integralerna för den skalära potentialen φ och vektorpotentialen <b>A</b> och
+ägnar oss åt en statisk modell för multipolutvecklingen.
+
+Vi går igenom begreppen dipol, kvadrupol, oktopol och högre ordningar;
+specifikt visar vi på att även det enklast tänkbara fallet av en elektrisk
+dipol har högre ordningars multipolmoment närvarande, men att dessa oftast
+försummas vid betraktelse på stora avstånd.
+
+Föreläsningen avslutas med att demonstrera multipolutvecklingen för generella
+laddningsfördelningar i termer av skalär potential, samt fastställande av
+dipolapproximationen för elektrostatiska och magnetostatiska fält.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
