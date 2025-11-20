@@ -65,8 +65,8 @@ just run `make clean` in the `elmagii` root directory.
 
 ## Summaries of the lectures (Swedish)
 
-[<i>Föreläsning 1 - Elektrostatik, superpositionsprincipen
-         och Gauss lag</i>](lect-01)
+[<i>Föreläsning 1 - Elektrostatik, superpositionsprincipen och
+    Gauss lag</i>](lect-01)
 
 Med en kort sammanfattning av historiken bakom elektrostatik och upptäckten
 av elektronen som elementarladdning går vi direkt in på Coulombs lag för
@@ -85,34 +85,196 @@ vi härleder Gauss lag för elektriska fält, tillämpbar på godtyckliga
 laddningsfördelningar i form av punkt- linje- yt- eller volymladdningar.
 Slutligen avslutar vi med en härledning av Gauss lag på differentialform.
 
-[`lect-02`](lect-02) <i>Föreläsning 2 - Elektrostatisk potential och
-         tillämpningar av Gauss lag</i>
-         (<i>Lecture 2 - Electrostatic potential and applications of Gauss'
-	 law</i>)
+[<i>Föreläsning 2 - Elektrostatisk potential och tillämpningar av Gauss
+    lag</i>](lect-02)
 
-[`lect-03`](lect-03) <i>Föreläsning 3 - Spegelladdningar, randvillkor och
-         entydighet för lösningar till potentialproblem</i>
-         (<i>Lecture 3 - Method of images for charges, boundary conditions
-	 and the uniqueness theorem, for the scalar potential</i>)
+Ett par enkla exempel på utnyttjande av symmetrier inom elektrostatik med Gauss
+lag gås igenom. Vi bevisar att i elektrostatiska problem är alltid
+∇ × <b>E</b> = <b>0</b>, vilket följer direkt av Stokes teorem applicerat
+på en sluten slinga i ett statiskt elektriskt fält från en punktladdning.
+Detta resultat generaliseras därefter med superpositionsprincipen för en
+godtycklig laddningsfördelning.
 
-[`lect-04`](lect-04) <i>Föreläsning 4 - Magnetostatik</i>
-         (<i>Lecture 4 - Magnetostatics</i>)
+Att ∇ × <b>E</b> = <b>0</b> gör att vi direkt kan formulera det statiska
+elektriska fältet i termer av en skalär potential φ enligt <b>E</b> = −∇φ,
+en potential som vi därefter härleder den explicita integralformen för,
+uttryckt i laddningstäthet.
+Vi härleder uttrycken för upplagrad potentiell energi i termer av den
+elektriska potentialen, och vi går igenom paradoxen i att det vektorvärda
+elektriska fältet <b>E</b> kan extraheras ur en enda skalär potential φ.
 
-[`lect-05`](lect-05) <i>Föreläsning 5 - Elektromagnetisk induktion</i>
-         (<i>Lecture 5 - Electromagnetic induction</i>)
+Vi avslutar föreläsningen med att utifrån Gauss lag för det elektriska fältet
+på differentialform omformulera denna i termer av den skalära potentialen som
+Poissons ekvation ∇<sup>2</sup> φ = −ρ/ε<sub>0</sub>.
 
-[`lect-06`](lect-06) <i>Föreläsning 6 - Elektriska fält i material</i>
-         (<i>Lecture 6 - Electric fields in materials</i>)
+[<i>Föreläsning 3 - Spegelladdningar, randvillkor och
+    entydighet för lösningar till potentialproblem</i>](lect-03)
 
-[`lect-07`](lect-07) <i>Föreläsning 7 - Magnetiska fält i material</i>
-         (<i>Lecture 7 - Magnetic fields in materials</i>)
+Genom att visa på att Laplaces ekvation ∇<sup>2</sup> φ = 0 saknar lokala
+extrempunkter, och har samtliga extrempunkter i randvärden till domänen där
+vi löser ekvationen, så kan vi dra slutsatsen att en lösning φ till Laplaces
+ekvation också är entydig, det vill säga att om vi finner en lösning φ så är
+det också den enda existerande lösningen. Med utgångspunkt i detta finner vi
+därefter att även Poissons ekvation ∇<sup>2</sup> φ = ρ/ε<sub>0</sub> i direkt
+närvaro av en laddningstäthet ρ även den ger entydighet för lösningar φ.
 
-[`lect-08`](lect-08) <i>Föreläsning 8 - Multipolutvecklingen</i>
-         (<i>Lecture 8 - The multipole expansion</i>)
+Vi kan med detta visa att en domän som är omgiven av ett skal som hålls vid
+konstant potential φ0 direkt ger att det elektriska fältet innanför skalet är
+identiskt noll, vilket är principen för “Faradays bur”.
 
+Utifrån entydighetsteoremet för Laplace och Poissons ekvation kan vi visa på
+hur vi kan konstruera så kallade “virtuella spegelladdningar” för att lösa
+elektrostatiska problem i närvaro av fria laddningar i elektriskt ledande
+domäner eller ytor, specifikt för plana ytor mellan ledare eller dieletrika
+samt cylinderytor och sfärer.
 
+Slutligen så tar vi fram en metod för hur den resulterande laddningstätheten
+på en yta av ledande material kan tas fram med de virtuella spegelladdningarna.
 
+[<i>Föreläsning 4 - Magnetostatik</i>](lect-04)
 
+Med en kort sammanfattning av historiken bakom upptäckandet av magnetiska
+fält går vi in på själva definitionen av ett magnetiskt fält som den kraft
+som via Lorentz kraftlag utövas på en laddad partikel i rörelse. Utifrån
+denna formuleras Ampères kraftlag för strömslingor, samt att vi kan dra
+slutsatsen att kraften på fria laddningar aldrig utför något arbete.
+
+Då vi generaliserar strömbegreppet till en strömtäthet <b>J</b> kan vi
+under användande av Gauss lag ta fram kontinuitetsekvationen för laddning,
+som länkar ihop divergensen ∇ · <b>J</b> hos strömtätheten med tidsderivatan
+av laddningstätheten ρ. Biot–Savarts lag introduceras som ett axiom för det
+magnetfält som genereras av en ström traverserande en strömslinga, vilket
+för övrigt är första momentet där den magnetiska permeabiliteten µ<sub>0</sub>
+introduceras.
+
+Utifrån formen på Biot–Savarts lag för generering av magnetfält visar vi att
+∇ · <b>B</b> = 0 alltid är uppfyllt, vilket påvisar att magnetiska monopoler
+(magnetisk laddning) ej existerar, och att magnetism alltid endast yttrar sig
+i form av magnetiska dipoler eller högre ordningar i multipolutvecklingen.
+
+Vi visar att i magnetostatik kan rotationen av magnetfältet erhållas som
+∇ × <b>B</b> = µ<sub>0</sub> <b>J</b>, kallad Ampères lag. Slutligen visar
+vi på att icke-existensen av magnetiska monopoler direkt har som följd att
+vi kan tolka det magnetiska fältet som härrörande från en vektorpotential
+<b>A</b>, i analogi med den skalära potentialen φ inom elektrostatik, som
+<b>B</b> = ∇ × <b>A</b>.
+Ampères lag kan tolkas i termer av denna vektorpotential som Poissons ekvation
+∇<sup>2</sup> <b>A</b> = −µ<sub>0</sub> <b>J</b> med strömtätheten som källterm.
+
+[<i>Föreläsning 5 - Elektromagnetisk induktion</i>](lect-05)
+
+Ämnet för föreläsningen beskrivs kort och koncist med Michael Faradays egna
+ord (1831), fritt tolkade som “Ett varierande magnetfält inducerar ett
+elektriskt fält”. Vi går igenom definitionerna av magnetiskt flöde Φ<sub>M</sub>
+och det historiskt betingade begreppet elektromotorisk “kraft”.
+
+Vi härleder Faradays induktionslag <i>E</i> = −dΦ<sub>M</sub>/dt i två separata
+och inbördes sammanhållna fall. Det första fallet introduceras för sin enkelhet
+och intuitivt greppbara geometri, där vi studerar en rektangulär strömslinga
+som förs genom ett inhomogent magnetiskt fält och kommer fram till formen på
+Faradays induktionslag. Det andra fallet är en formell härledning av Faradays
+induktionslag för en godtycklig rörligt geometri i form av en slinga med
+godtycklig hastighet längs med sin trajektoria, samt med ett godtyckligt
+varierande magnetfält.
+
+Vi noterar att Faradays induktionslag härleds enbart utifrån Lorentz kraftlag
+och ej involverande vare sig Coulombs eller Biot–Savarts lag eller nåot av
+deras derivat i det elektromagnetiska “släktträdet”; i och med detta har vi i
+Faradays induktionslag avsaknad av såväl den elektriska permittiviteten
+ε<sub>0</sub> som den magnetiska permeabiliteten µ<sub>0</sub>.
+Utifrån Faradays induktionslag formulerar vi Lenz lag som slutsatsen att en
+inducerad ström alltid har en riktning som motverkar orsaken till att den
+uppkom, och vi går utifrån denna princip igenom en samling med tankeexperiment
+med bäring på tolkning av elektromagnetisk induktion.
+
+Med utgångspunkt i Faradays induktionslag härleder vi Faradays lag
+∇×<b>E</b> = −∂<b>B</b>/∂t, eller “Maxwell–Faradays lag”, på differential-
+och integralform.
+
+Vi avslutar med att gå igenom hur två strömbärande slingor påverkar varandra
+genom ömsesidig induktion, och vi härleder Neumanns formel för den ömsesidiga
+induktansen. Specifikt går vi igenom tolkningen av Neumanns formel i form av
+reciprocitet mellan två slingor, där vi har det smått förbluffande resultatet
+att det magnetiska flöde som uppfångas av en slinga från en ström i den andra
+slingan exakt motsvaras av det magnetiska flöde som den andra slingan skulle
+uppfånga om istället den första slingan drevs med exakt samma ström.
+
+[<i>Föreläsning 6 - Elektriska fält i material</i>](lect-06)
+
+I och med denna föreläsning lämnar vi vakuumbeskrivningen av fält och gå in på
+växelverkan mellan elektriska eller magnetiska fält och materia. Vi börjar med
+en övergripande bild av hur vi successivt kan gå från en kvantmekanisk
+beskrivning av denna växelverkan till makroskopiska begrepp som
+susceptibiliteter och brytningsindex.
+
+Den klassiska dipolmodellen för elektrisk polarisering av ett materials
+molekyler av elektriska fält introduceras, och ett linjärt samband mellan
+pålagt externt elektriskt fält och det resulterande elektriska dipolmomentet
+hos mediet erhålls. En medelvärdesbildning över molekylernas elektriska
+dipolmoment ger den elektriska polarisationsdensiteten hos det dielektriska
+mediet, och vi formulerar ur denna den elektriska susceptibiliteten
+χ<sub>e</sub> och den relativa elektriska permittiviteten ε<sub>r</sub>.
+Vi härleder generaliseringen för Gauss lag för den elektriska flödestätheten
+<b>D</b> som ∇ · <b>D</b> = ρ<sub>f</sub>, där ρ<sub>f</sub> är den fria
+laddningstätheten.
+
+Randvillkor och övergångar mellan olika dielektrika härleds för den elektriska
+fältstyrkan <b>E</b> och den elektriska flödestätheten <b>D</b>, för deras
+normal- och tangentialkomponenter. Slutligen formulerar vi måttet på upplagrad
+elektrisk energi i ett dielektrikum.
+
+[<i>Föreläsning 7 - Magnetiska fält i material</i>](lect-07)
+
+I denna föreläsning analyserar vi vad som händer då det magnetiska spinnet hos
+material linjeras och magnetiserar materialet, antingen genom ett externt
+pålagt magnetiskt fält eller genom att spinnen är naturligt linjerade i
+materialet, i så kallade permanentmagneter.
+
+Krafter och moment på magnetiska dipoler extraheras från upplagrade energier
+för dipoler i elektriska eller magnetiska fält, och vi introducerar
+magnetisering som en “magnetisk polarisationsdensitet”, i analogi med den
+elektriska motsvarigheten. Vi diskuterar översiktligt den upplagrade energin
+i ett magnetiserat medium och effekten av hysteres som effekt av ett varierande
+externt pålagt magnetfält.
+
+Slutligen går vi igenom hur vektorpotentialen <b>A</b>(</b>x</b>, <i>t</i>)
+uttrycks för ett objekt med godtycklig magnetisering <b>M</b>(</b>x</b>,
+<i>t</i>), och finner att uttrycket för vektorpotentialen är ekvivalent med
+om det magnetiserade objektet istället hade varit konstruerat som ekvivalenta
+volyms- och ytströmmar <b>J</b><sub>b</sub> och <b>K</b><sub>b</sub> av bundna
+laddningar.
+
+[<i>Föreläsning 8 - Multipolutvecklingen</i>](lect-08)
+
+Vi lämnar för denna föreläsning dipolmodellen för ett tag, och visar på att
+andra konstruktioner av laddningsfördelningar, exempelvis kvadrupoler och
+oktopoler, ger bidrag till fält som avklingar med en annan takt en det
+klassiska “1/<i>r</i><sup>2</sup>”-uppträdandet. Vi utgår från de klassiska
+integralerna för den skalära potentialen φ och vektorpotentialen <b>A</b> och
+ägnar oss åt en statisk modell för multipolutvecklingen.
+
+Vi går igenom begreppen dipol, kvadrupol, oktopol och högre ordningar;
+specifikt visar vi på att även det enklast tänkbara fallet av en elektrisk
+dipol har högre ordningars multipolmoment närvarande, men att dessa oftast
+försummas vid betraktelse på stora avstånd.
+
+Föreläsningen avslutas med att demonstrera multipolutvecklingen för generella
+laddningsfördelningar i termer av skalär potential, samt fastställande av
+dipolapproximationen för elektrostatiska och magnetostatiska fält.
+
+[<i>Föreläsning 9 - Maxwells ekvationer och vågutbredning</i>](lect-09)
+
+<i>[TO BE ADDED]</i>
+
+[<i>Föreläsning 10 - Vågutbredning i homogena och isotropa
+    dielektrika</i>](lect-10)
+
+<i>[TO BE ADDED]</i>
+
+[<i>Föreläsning 11 - Retarderade potentialer som lösningar
+    till Maxwells ekvationer</i>](lect-11)
+
+<i>[TO BE ADDED]</i>
 
 ## Gallery of sample illustrations used in the course
 
