@@ -11,6 +11,21 @@ and supporting material.
 
 [lecture-09.pdf](lecture-09.pdf) - Compiled document containing the Lecture Notes.
 
+## Summary of the lecture (Swedish)
+
+Faradays och Ampères lagar sys tillsammans med Gauss lag för det elektriska
+och magnetiska fältet slutligen ihop till Maxwells ekvationer. Nyckeln till
+dessa kommer ifrån Maxwells generalisering av Ampères lag, där Maxwell kom
+på att lösningen till problemet med att kontinuitetsekvationen för elektrisk
+laddning inte uppfylldes för tidsberoende fält var att lägga till en term i
+den fria strömtätheten <b>J</b><sub>f</sub>, motsvarande förskjutningsströmmen
+∂<b>D</b>/∂<i>t</i>. Med denna förskjutningsström närvarande i Ampères lag
+∇ × <b>H</b> = <b>J</b><sub>f</sub> + ∂<b>D</b>/∂<i>t</i> satisfieras även
+kontinuitetsekvationen ∇ · <b>J</b> = −∂ρ/∂<i>t</i>.
+
+Vi sammanfattar Maxwells ekvationer en gång för alla, och visar hur dessa kan
+omformuleras till två vågekvationer för de elektriska och magnetiska fälten.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
