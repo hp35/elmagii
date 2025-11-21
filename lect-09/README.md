@@ -17,5 +17,16 @@ In this directory, the included `Makefile` can be used to regenerate the
 documents, figures and graphs. Just run `make` and ensure to install any
 missing components in case there are any complaints.
 
+## List of figures
+
+[`figs/chargeconsv.mp`](figs/chargeconsv.mp)
+    ([`figs/chargeconsv.pdf`](figs/chargeconsv.pdf))
+    <i>MetaPost drawing of the charge conservation law.</i>
+
+[`figs/poldensity.mp`](figs/poldensity.mp)
+    ([`figs/poldensity.pdf`](figs/poldensity.pdf))
+    <i>MetaPost drawing of the molecular polarizability building up the
+    polarization density.</i>
+
 ## Copyright
 Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
