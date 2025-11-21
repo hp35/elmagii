@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-09/lecture-09.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-09/
-% Last change: December 2, 2024
+% Last change: November 21, 2024
 %
 % Lecture No 9 in the course ``Elektromagnetism II, 1TE626 (2023)'',
 % held November 25, 2025, at Uppsala University, Sweden.
@@ -58,12 +58,98 @@
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
+\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+  \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{9}
 \centerline{\twelvesc Maxwells ekvationer och v{\aa}gutbredning}
 \centerline{Fredrik Jonsson, Uppsala Universitet, 25 november 2025}
 \vskip24pt
+
+\plan{Faradays och Amp\`eres lagar sys tillsammans med Gauss lag f{\"o}r det
+  elektriska och magnetiska f{\"a}ltet slutligen ihop till Maxwells ekvationer.
+  Nyckeln till dessa kommer ifr{\aa}n Maxwells generalisering av Amp\`eres lag,
+  d{\"a}r Maxwell kom p{\aa} att l{\"o}sningen till problemet med att
+  kontinuitetsekvationen f{\"o}r elektrisk laddning inte uppfylldes f{\"o}r
+  tidsberoende f{\"a}lt var att l{\"a}gga till en term i den fria
+  str{\"o}mt{\"a}theten ${\bf J}_{\rm f}$, motsvarande
+  f{\"o}rskjutningsstr{\"o}mmen $\partial{\bf D}/\partial t$.
+  Med denna f{\"o}rskjutningsstr{\"o}m n{\"a}rvarande i Amp\`eres lag
+  $\nabla\times{\bf H}={\bf J}_{\rm f}+\partial{\bf D}/\partial t$ satisfieras
+  {\"a}ven kontinuitetsekvationen
+  $\nabla\cdot{\bf J}=-\partial\rho/\partial t$.
+  Vi sammanfattar Maxwells ekvationer en g{\aa}ng f{\"o}r alla, och visar hur
+  dessa kan omformuleras till tv{\aa} v{\aa}gekvationer f{\"o}r de elektriska
+  och magnetiska f{\"a}lten.}
+
+\threepointsummary{%
+  Maxwells ekvationer lyder
+  $$\hbox{~\hskip33pt}
+    \matrix{
+    &
+      \displaystyle\oiint{\bf D}\cdot d{\bf S}=\iiint\rho\,dV\hfill&
+      \quad\Leftrightarrow\quad&
+      \displaystyle\nabla\cdot{\bf D}=\rho\hfill&
+      &\cr
+    &
+      \displaystyle\oiint{\bf B}\cdot d{\bf S}=0\hfill&
+      \quad\Leftrightarrow\quad&
+      \displaystyle\nabla\cdot{\bf B}=0\hfill&
+      &\cr
+    &
+      \displaystyle\oint{\bf E}\cdot d{\bf l}
+         =-{{\partial}\over{\partial t}}\iint{\bf B}\cdot d{\bf S}\hfill&
+      \quad\Leftrightarrow\quad&
+      \displaystyle\nabla\times{\bf E}
+         =-{{\partial{\bf B}}\over{\partial t}}\hfill&
+      &\cr
+    &
+      \displaystyle\oint{\bf H}\cdot d{\bf l}=\iint{\bf J}_{\rm f}\cdot d{\bf S}
+         +{{\partial}\over{\partial t}}\iint{\bf D}\cdot d{\bf S}\hfill&
+      \quad\Leftrightarrow\quad&
+      \displaystyle\nabla\times{\bf H}={\bf J}_{\rm f}
+         +{{\partial{\bf D}}\over{\partial t}}\hfill&
+      &\cr
+  }
+$$
+}{%
+  De elektromagnetiska v{\aa}gekvationerna f{\"o}r de elektriska och
+  magnetiska f{\"a}lten lyder
+  $$
+    \eqalign{
+      \nabla\times\nabla\times{\bf E}
+        +\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}&=
+           -\mu_0{{\partial}\over{\partial t}}
+            \underbrace{
+               \bigg({\bf J}_{\rm f}
+                  +{{\partial{\bf P}}\over{\partial t}}
+                  +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}},\cr
+      \nabla\times\nabla\times{\bf B}
+        +\mu_0\varepsilon_0{{\partial^2{\bf B}}\over{\partial t^2}}&=
+            \mu_0\nabla\times
+            \underbrace{
+               \bigg({\bf J}_{\rm f}
+                  +{{\partial{\bf P}}\over{\partial t}}
+                  +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}}.\cr
+  }
+$$
+}{%
+  Fr{\aa}n de elektromagnetiska v{\aa}gekvationerna kan samtliga fall som
+  hittills behandlas i kursen h{\"a}rledas, beroende p{\aa} vilka termer
+  som kan s{\"a}ttas till noll och p{\aa} s{\aa} s{\"a}tt reducera systemet
+  till den statiska eller dynamiska situation man {\"o}nskar analysera.
+}
 
 \section{Maxwells generalisering av Amp\`eres lag}
 S{\aa} l{\aa}ngt i kursen\numberedfootnote{Den f{\"o}ljande behandlingen i
@@ -426,6 +512,7 @@ Dessa ekvationer har i sig ingen inneboende best{\"a}md frekvens eller liknande
 f{\"o}r f{\"a}lten, utan detta best{\"a}ms av randv{\"a}rden (exempelvis en
 drivande antenn eller laser) samt materialegenskaperna som modelleras via
 ${\bf J}_{\rm f}$, ${\bf P}$ och ${\bf M}$.
+\vfill\eject
 
 \section{Aprop{\aa} s{\"a}rskiljning av polarisationsdensitet och magnetisering}
 En intressant f{\"o}ljd av den gemensamma formen p{\aa} k{\"a}lltermerna i
@@ -558,4 +645,72 @@ $$
 det vill s{\"a}ga svarandes mot frirymdsformen av Amp\'eres lag, precis som
 f{\"o}rv{\"a}ntat utifr{\aa}n premisserna f{\"o}r reduktionen fr{\aa}n de
 generella v{\aa}gekvationerna ovan.
+\vfill\eject
+
+\section{Sammanfattning av F{\"o}rel{\"a}sning~8
+  -- Maxwells ekvationer och v{\aa}gutbredning}
+\item{$\bullet$}{Maxwells genidrag f{\"o}r att f{\aa} kontinuitetsekvationen
+  f{\"o}r elektrisk laddning att g{\aa} ihop var att i uttrycket f{\"o}r den
+  totala str{\"o}mt{\"a}theten l{\"a}gga till en
+  {\it f{\"o}rskjutningsstr{\"o}m} ${{\partial{\bf D}}/{\partial t}}$ till
+  den fria str{\"o}mt{\"a}theten ${\bf J}_{\rm f}$, som
+  $$
+    {\bf J}_{\rm tot} = {\bf J}_{\rm f}+{{\partial{\bf D}}\over{\partial t}}.
+  $$}
+\item{$\bullet$}{
+  Maxwells ekvationer lyder
+  $$\hbox{~\hskip33pt}
+    \matrix{
+    &
+      \displaystyle\oiint{\bf D}\cdot d{\bf S}=\iiint\rho\,dV\hfill&
+      \quad\Leftrightarrow\quad&
+      \displaystyle\nabla\cdot{\bf D}=\rho\hfill&
+      &\cr
+    &
+      \displaystyle\oiint{\bf B}\cdot d{\bf S}=0\hfill&
+      \quad\Leftrightarrow\quad&
+      \displaystyle\nabla\cdot{\bf B}=0\hfill&
+      &\cr
+    &
+      \displaystyle\oint{\bf E}\cdot d{\bf l}
+         =-{{\partial}\over{\partial t}}\iint{\bf B}\cdot d{\bf S}\hfill&
+      \quad\Leftrightarrow\quad&
+      \displaystyle\nabla\times{\bf E}
+         =-{{\partial{\bf B}}\over{\partial t}}\hfill&
+      &\cr
+    &
+      \displaystyle\oint{\bf H}\cdot d{\bf l}=\iint{\bf J}_{\rm f}\cdot d{\bf S}
+         +{{\partial}\over{\partial t}}\iint{\bf D}\cdot d{\bf S}\hfill&
+      \quad\Leftrightarrow\quad&
+      \displaystyle\nabla\times{\bf H}={\bf J}_{\rm f}
+         +{{\partial{\bf D}}\over{\partial t}}\hfill&
+      &\cr
+    }
+  $$}
+\item{$\bullet$}{De elektromagnetiska v{\aa}gekvationerna f{\"o}r de
+  elektriska och magnetiska f{\"a}lten lyder
+  $$
+    \eqalign{
+      \nabla\times\nabla\times{\bf E}
+        +\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}&=
+           -\mu_0{{\partial}\over{\partial t}}
+            \underbrace{
+               \bigg({\bf J}_{\rm f}
+                  +{{\partial{\bf P}}\over{\partial t}}
+                  +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}},\cr
+      \nabla\times\nabla\times{\bf B}
+        +\mu_0\varepsilon_0{{\partial^2{\bf B}}\over{\partial t^2}}&=
+            \mu_0\nabla\times
+            \underbrace{
+               \bigg({\bf J}_{\rm f}
+                  +{{\partial{\bf P}}\over{\partial t}}
+                  +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}}.\cr
+  }
+  $$}
+\item{$\bullet$}{Fr{\aa}n de elektromagnetiska v{\aa}gekvationerna kan
+  samtliga fall som hittills behandlas i kursen h{\"a}rledas, beroende
+  p{\aa} vilka termer som kan s{\"a}ttas till noll och p{\aa} s{\aa} s{\"a}tt
+  reducera systemet till den statiska eller dynamiska situation man {\"o}nskar
+  analysera.}
+
 \bye
