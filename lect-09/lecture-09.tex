@@ -25,6 +25,7 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 \font\ninerm=cmr9
+\font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
 \input amssym % to get the {\Bbb E} font (strikethrough E)
 \def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
@@ -43,7 +44,7 @@
       \hbox{{\it https://github.com/hp35/elmagii/}}}\vskip 36pt
     \centerline{\twelvesc F\"orel\"asning #1}
   \vskip 24pt\noindent}
-\def\section #1 {\medskip\goodbreak\noindent{\bf #1}
+\def\section #1 {\medskip\goodbreak\noindent{\tenssbx #1}
   \par\nobreak\smallskip\noindent}
 \def\subsection #1 {\medskip\goodbreak\noindent{\it #1}
   \par\nobreak\smallskip\noindent}
@@ -590,10 +591,8 @@ vill, s{\aa} kan man s{\"a}ga att grunden f{\"o}r samtliga elektrodynamiska
 problem {\"a}r tv{\aa} v{\aa}gekvationer, f{\"o}r ${\bf E}$- och ${\bf B}$-%
 f{\"a}lten, och att statiska problem helt enkelt reducerar v{\aa}gekvationerna
 till enbart spatial dom{\"a}n genom att tidsderivator f{\"o}rsvinner.
-\bigskip
-\noindent{\it Exempel I: Elektrostatik}
-\smallskip
-\noindent
+
+\subsection{Exempel I: Elektrostatik}
 Om vi till exempel behandlar fallet elektrostatik i n{\"a}rvaro av konstanta
 str{\"o}mmar, s{\aa} reducerar ekvationen ovan for det (statiska) elektriska
 f{\"a}ltet till
@@ -629,10 +628,8 @@ $$
       {{1}\over{\varepsilon_{\rm r}}}{\bf E}\cdot\nabla\varepsilon_{\rm r}
     \bigg).
 $$
-\bigskip
-\noindent{\it Exempel II: Magnetostatik}
-\smallskip
-\noindent
+
+\subsection{Exempel II: Magnetostatik}
 P{\aa} samma s{\"a}tt har vi f{\"o}r det magnetiska f{\"a}ltet ${\bf B}$ i
 n{\"a}rvaro av en konstant str{\"o}mt{\"a}thet ${\bf J}_{\rm f}$, men i
 fr{\aa}nvaro av magnetisering ${\bf M}$, att ekvationen ovan for det (statiska)
