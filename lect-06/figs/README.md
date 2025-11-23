@@ -34,6 +34,14 @@ are any complaints.
     apply Gauss' law in order to extract boundary conditions for the electric
     field tangential to the surface.</i>
 
+[`gravity.mp`](gravity.mp)
+    ([`gravity.pdf`](gravity.pdf))
+    <i>MetaPost drawing of the electric field produced by a spherical-symmetric
+    charge, acting on a test charge q at a radius r form the centre of the
+    distribution. The produced electric field acts exactly in the same way as
+    a spherical-symmetrical mass distribution and the gravity acting upon an
+    observer of mass m.</i>
+
 [`poldensity.mp`](poldensity.mp)
     ([`poldensity.pdf`](poldensity.pdf))
     <i>MetaPost drawing of the molecular polarizability building up the
