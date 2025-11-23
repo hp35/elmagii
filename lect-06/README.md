@@ -44,7 +44,7 @@ elektrisk energi i ett dielektrikum.
 
 4. Varför inte en modell med punktladdningar istället?
 
-5. En intressant följd av Gauss lag för sfäriska laddningsfördelningar
+5. En intressant följd av Gauss lag för sfärisk-symmetriska laddningsfördelningar
 
 6. Terminologi
 

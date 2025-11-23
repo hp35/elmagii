@@ -327,6 +327,60 @@ avst{\aa}ndet mellan punktladdningen $+q$ f{\"o}r k{\"a}rnan och centrum
 f{\"o}r elektronmolnet, successivt minskas.
 \vfill\eject
 
+\section{En intressant f{\"o}ljd av Gauss lag f{\"o}r sf{\"a}risk-symmetriska
+  laddningsf{\"o}rdelningar}
+I f{\"o}reg{\aa}ende analys av den {\aa}terst{\"a}llande kraften f{\"o}r
+elektronmolnet, s{\aa} anv{\"a}nde vi Gauss lag f{\"o}r att genom den extrahera
+kraften ${\bf F}_{\rm e}$. Vi kan notera att vi {\it generellt har att en
+sf{\"a}risk laddningsf{\"o}rdelning agerar s{\aa} som om vi hade att g{\"o}ra
+med en punktladdning placerad i den sf{\"a}riska f{\"o}rdelningens centrum, med
+det elektriska f{\"a}ltet motsvarande den laddning som innesluts med den radie
+fr{\aa}n centrum som n{\aa}r observat{\"o}ren}.
+\epsfig{figs/gravity.1}\noindent
+F{\"o}r ett sf{\"a}riskt-symmetriskt ``moln'' av laddning, centrerat i origo,
+har vi helt klart att vi vid varje position runtomkring inuti s{\aa}v{\"a}l
+som utanf{\"o}r molnet har att det elektriska f{\"a}ltet endast har en radiell
+komponent, med tecken beroende p{\aa} om den totala inneslutna laddningen
+{\"a}r positiv eller negativ. Formulerat med Gauss lag har vi d{\"a}rmed att
+$$
+  \oiint_{\Omega:|{\bf x}|=r}{\bf E}\cdot d{\bf A}
+    =4\pi r^2 E_r(r)
+    ={{1}\over{\varepsilon_0}}\iiint_{V:|{\bf x}|\le r}\rho(r')\,dV'
+    ={{1}\over{\varepsilon_0}}\int^r_0\rho(r')
+      \underbrace{
+        \underbrace{4\pi r'^2}_{=A'}\,dr'
+      }_{=dV'},
+$$
+vilket vi direkt kan l{\"o}sa f{\"o}r det radiella elektriska f{\"a}ltet som
+$$
+  E_r(r)={{1}\over{4\pi\varepsilon_0 r^2}}
+           \underbrace{\int^r_0\rho(r') 4\pi r'^2\,dr'}_{\equiv q_{\rm enc}}
+        ={{q_{\rm enc}}\over{4\pi\varepsilon_0 r^2}},
+$$
+d{\"a}r $q_{\rm enc}$ {\"a}r den laddning som innesluts av sf{\"a}ren med samma
+radie $r$ som avst{\aa}ndet till en observat{\"o}r. {\it Notera att denna form
+{\"a}r identisk med den som skuller erh{\aa}llas f{\"o}r situationen d{\aa}
+all innesluten laddning $q_{\rm enc}$ ist{\"a}llet skulle placerats som en
+punktladdning i origo.}
+
+Detta resultat f{\"o}r det elektriska f{\"a}ltet {\"a}r helt och h{\aa}llet i
+analogi med exempelvis den gravitation (gravitationskraft dividerat med massa)
+som vi skulle uppleva om vi t{\"a}nker oss ett experiment d{\"a}r vi gr{\"a}ver
+ett mycket djupt h{\aa}l i jordskorpan och kl{\"a}ttrar nedf{\"o}r detta
+h{\aa}l mot centrum av jordklotet.\numberedfootnote{Vi ignorerar det faktum
+  att det skulle bli mycket varmt efter ett par kilometer ner, och att vi
+  ganska snart skulle brinna upp! Endast 5~km ner i jordskorpan har vi
+  typiskt en temperatur{\"o}kning p{\aa} cirka $125$--$150^{\circ}\,{\rm C}$
+  relativt yttemperaturen.}
+Vi skulle i detta tanke-experiment uppleva en successivt mindre och mindre
+tyngdkraft, motsvarande attraktionskraften fr{\aa}n den massa $m_{\rm enc}$ som
+omsluts av den radie $r$ vid vilken vi r{\aa}kar befinna oss
+p{\aa}.\numberedfootnote{Ironiskt nog med exakt samma notation i den
+  ing{\aa}ende integralen f{\"o}r $m_{\rm enc}$ (${\rm kg}$), men med
+  $\rho(r)$ ist{\"a}llet betecknande {\it densiteten} (${\rm kg}/{\rm m}^3$)
+  f{\"o}r jorden.}
+\vfill\eject
+
 \section{Terminologi}
 F{\"o}r att beskriva grundl{\"a}ggande egenskaper hos ett material, och d{\aa}
 inte bara ur elektromagnetisk synvinkel, s{\aa} finns n{\aa}gra
@@ -336,7 +390,8 @@ grundl{\"a}ggande begrepp som kan vara bra att ha i bakhuvudet:
 \item{}{{\it ``Mediet beter sig lokalt likadant oavsett i vilket riktning man
       tittar.''}}
 \smallskip
-\item{}{$\displaystyle \qquad\qquad\to P_i=\varepsilon_0\chi_{\rm e}E_i$\hskip20pt (med $\chi_{ij}$ diagonal).}
+\item{}{$\displaystyle \qquad\qquad
+    \to P_i=\varepsilon_0\chi_{\rm e}E_i$\hskip20pt (med $\chi_{ij}$ diagonal).}
 \smallskip
 \item{$\bullet$}{{\it Anisotropt:} Egenskaperna hos mediet i ett fixt
       koordinatsystem (``labbsystem'') {\it {\"a}ndras} under rotation.}
