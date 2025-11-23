@@ -34,6 +34,34 @@ fältstyrkan <b>E</b> och den elektriska flödestätheten <b>D</b>, för deras
 normal- och tangentialkomponenter. Slutligen formulerar vi måttet på upplagrad
 elektrisk energi i ett dielektrikum.
 
+## Contents
+
+1. Introduktion
+
+2. Världskarta
+
+3. Klassisk modell för dipoler
+
+4. Varför inte en modell med punktladdningar istället?
+
+5. En intressant följd av Gauss lag för sfäriska laddningsfördelningar
+
+6. Terminologi
+
+7. Anisotropi
+
+8. Elektrisk polarisationsdensitet
+
+9. Gauss teorem för elektriska flödestätheten <b>D</b>
+
+10. Randvillkor och övergångar mellan olika media
+
+11. Upplagrad elektrisk energi
+
+12. Dielektrisk sfär i elektriskt fält
+
+13. Sammanfattning av Föreläsning~6 - <i>Elektriska fält i material</i>
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
@@ -65,10 +93,18 @@ missing components in case there are any complaints.
     apply Gauss' law in order to extract boundary conditions for the electric
     field tangential to the surface.</i>
 
+[`figs/gravity.mp`](figs/gravity.mp)
+    ([`figs/gravity.pdf`](figs/gravity.pdf))
+    <i>MetaPost drawing of the electric field produced by a spherical-symmetric
+    charge, acting on a test charge q at a radius r form the centre of the
+    distribution. The produced electric field acts exactly in the same way as
+    a spherical-symmetrical mass distribution and the gravity acting upon an
+    observer of mass m.</i>
+
 [`figs/poldensity.mp`](figs/poldensity.mp)
     ([`figs/poldensity.pdf`](figs/poldensity.pdf))
     <i>MetaPost drawing of the molecular polarizability building up the
     polarization density.</i>
 
 ## Copyright
-Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
+Copyright (C) 2025, Fredrik Jonsson, under GPL 3.0.
