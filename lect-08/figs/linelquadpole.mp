@@ -28,7 +28,7 @@ beginfig(1);
     shifted (.7[(0u,0u),(45u,25u)]);
   drawarrow (0u,-16u)--(90u,50u);
   label.lrt(btex ${\bf x}+b{\bf e}_z$ etex,(45u,17u));
-  dotlabel.urt(btex $\Phi({\bf x})$, ${\bf A}({\bf x})$ etex,(90u,50u));
+  dotlabel.top(btex S{\"o}kt: $\phi({\bf x})$ etex,(90u,50u));
 
   draw (5.2u*(0,1)){dir 0}..{dir -60.94}(5.2u*(0.8742,0.4856));
   label.urt(btex $\theta$ etex,(1u,5u));
