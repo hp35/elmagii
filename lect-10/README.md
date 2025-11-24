@@ -15,11 +15,16 @@ no LaTeX), MetaPost figures and supporting material.
 
 Maxwells ekvationer och den elektromagnetiska vågekvationen sammanfattas och
 vi introducerar fyra tämligen allmänt giltiga approximationer:
-    (i)   <b>J</b><sub>f</sub> = 0 (inga fria strömmar),
-    (ii)  ρ = 0 (inga fria laddningar),
-    (iii) <b>P</b> = ε<sub>0</sub> (ε<sub>r</sub> − 1)<b>E</b>
+
+1. <b>J</b><sub>f</sub> = 0 (inga fria strömmar),
+
+2. ρ = 0 (inga fria laddningar),
+
+3. <b>P</b> = ε<sub>0</sub> (ε<sub>r</sub> − 1)<b>E</b>
          (linjärt medium med homogent ε<sub>r</sub>(<b>x</b>) = konstant), samt
-    (iv) <b>M</b> = 0 (försumbar magnetisering, µ<sub>r</sub> ≈ 1).
+
+4. <b>M</b> = 0 (försumbar magnetisering, µ<sub>r</sub> ≈ 1).
+
 Med dessa approximationer omformulerar vi vågekvationerna för det
 elektromagnetiska fältet i form av två identiska ekvationer, för det elektriska
 fältet <b>E</b> och det magnetiska fältet <b>B</b> respektive, vilka vidare
@@ -44,6 +49,20 @@ exp(<i>i</i><b>k</b> · <b>x</b> − <i>i</i>ω(<b>k</b>)<i>t</i>)], med samma
 form för det magnetiska fältet, och visar på hur denna planvågsuppdelning
 leder till en ortogonal koppling mellan det elektriska och magnetiska fältet
 som <b>B</b><sub><i>k</i></sub> = <b>k</b> × <b>E</b><sub><i>k</i></sub>/ω.
+
+## Contents
+
+1. Elektromagnetiska vågekvationen i homogena dielektrika
+
+2. Plana elektromagnetiska fält och d'Alemberts generella lösning
+   till vågekvationen
+
+3. Tidsharmoniska fält och planvågsuppdelning
+
+4. Poynting-vektorn
+
+5. Sammanfattning av Föreläsning~10
+  - <i>Vågutbredning i homogena och isotropa dielektrika</i>
 
 ## Compiling the TeX code and figures
 
