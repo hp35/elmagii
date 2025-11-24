@@ -26,6 +26,25 @@ kontinuitetsekvationen ∇ · <b>J</b> = −∂ρ/∂<i>t</i>.
 Vi sammanfattar Maxwells ekvationer en gång för alla, och visar hur dessa kan
 omformuleras till två vågekvationer för de elektriska och magnetiska fälten.
 
+## Contents
+
+1. Maxwells generalisering av Ampères lag
+
+2. Maxwells ekvationer
+
+3. Från Maxwells ekvationer till elektromagnetisk vågekvation
+
+4. Apropå särskiljning av polarisationsdensitet och magnetisering
+
+5. Vågekvation, induktion, elektrostatik, elektrodynamik, vad gäller detta
+   egentligen?
+
+    5.1 Exempel I: Elektrostatik
+
+    5.2 Exempel II: Magnetostatik
+
+6. Sammanfattning av Föreläsning 8 - <i>Maxwells ekvationer och vågutbredning</i>
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
