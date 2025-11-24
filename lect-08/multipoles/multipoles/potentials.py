@@ -107,7 +107,7 @@ def mapPotentialForDipole(xg, yg, cntrlevels):
     """
     Electric dipole with E-field mapped (streamlines of potential).
     """
-    text = r'Equipotential levels and ${\bf E}(x,y)=-\nabla\Phi(x,y)$ of '\
+    text = r'Equipotential levels and ${\bf E}(x,y)=-\nabla\phi(x,y)$ of '\
             'electric dipole'
     thetaseeds0 = np.linspace(0.0,2*pi-pi/8.0,16)
     thetaseeds1 = np.linspace(pi+pi/8,2*pi-pi/8.0,8)
@@ -124,7 +124,7 @@ def mapPotentialForDipole(xg, yg, cntrlevels):
     """
     Electric dipole with only potential (no streamlines).
     """
-    text = r'Equipotential levels of $\Phi(x,y)$ from electric dipole'
+    text = r'Equipotential levels of $\phi(x,y)$ from electric dipole'
     p = plotPotential(xg, yg, q, xs, ys, cntrlevels, text, streamline=False)
     p.savefig("lindipole.eps", format='eps')
     p.savefig("lindipole.png", format='png')
@@ -146,7 +146,7 @@ def mapPotentialForLinearQuadrupole(xg, yg, cntrlevels):
     """
     Linear electric quadrupole with E-field mapped (streamlines of potential).
     """
-    text = r'Equipotential levels and ${\bf E}(x,y)=-\nabla\Phi(x,y)$ of '\
+    text = r'Equipotential levels and ${\bf E}(x,y)=-\nabla\phi(x,y)$ of '\
             'linear electric quadrupole'
     thetaseeds = np.linspace(0.0,2*pi-pi/8.0,16)
     xseeds = np.concatenate([xs[0]+0.2*np.cos(thetaseeds),
@@ -164,7 +164,7 @@ def mapPotentialForLinearQuadrupole(xg, yg, cntrlevels):
     """
     Linear electric quadrupole with only potential (no streamlines).
     """
-    text = r'Equipotential levels of $\Phi(x,y)$ from linear electric quadrupole'
+    text = r'Equipotential levels of $\phi(x,y)$ from linear electric quadrupole'
     p = plotPotential(xg, yg, q, xs, ys, cntrlevels, text, streamline=False)
     p.savefig("linquadrupole.eps", format='eps')
     p.savefig("linquadrupole.png", format='png')
@@ -187,7 +187,7 @@ def mapPotentialForQuadraticQuadrupole(xg, yg, cntrlevels):
     """
     Quadratic electric quadrupole with E-field mapped (streamlines of potential).
     """
-    text = r'Equipotential levels and ${\bf E}(x,y)=-\nabla\Phi(x,y)$ of '\
+    text = r'Equipotential levels and ${\bf E}(x,y)=-\nabla\phi(x,y)$ of '\
             'quadratic electric quadrupole'
     thetaseeds0 = np.linspace(0.0,2*pi-pi/8.0,16)
     thetaseeds1 = np.linspace(pi+3.0*pi/8.0,3.0*pi-2.0*pi/8.0,12)
@@ -210,7 +210,7 @@ def mapPotentialForQuadraticQuadrupole(xg, yg, cntrlevels):
     """
     Quadratic electric quadrupole with only potential (no streamlines).
     """
-    text = r'Equipotential levels of $\Phi(x,y)$ from quadratic electric quadrupole'
+    text = r'Equipotential levels of $\phi(x,y)$ from quadratic electric quadrupole'
     p = plotPotential(xg, yg, q, xs, ys, cntrlevels, text, streamline=False)
     p.savefig("quadquadrupole.eps", format='eps')
     p.savefig("quadquadrupole.png", format='png')
