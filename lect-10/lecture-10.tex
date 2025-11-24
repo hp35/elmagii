@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-10/lecture-10.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-10/
-% Last change: November 30, 2023
+% Last change: November 24, 2025
 %
 % Lecture No 10 in the course ``Elektromagnetism II, 1TE626 (2023)'',
 % held November 26, 2025, at Uppsala University, Sweden.
@@ -59,12 +59,89 @@
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
+\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+  \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
+\newdimen\itemindent \itemindent=28pt
+\newdimen\hangitemindent \hangitemindent=46pt
+\def\litem[#1]{\smallbreak\noindent%
+  \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
+  \hangindent\hangitemindent\ignorespaces}
 
 \lecture{10}
 \centerline{\twelvesc V{\aa}gutbredning i homogena och isotropa dielektrika}
 \centerline{Fredrik Jonsson, Uppsala Universitet, 26 november 2025}
 \vskip24pt
+
+\plan{Maxwells ekvationer och den elektromagnetiska v{\aa}gekvationen
+  sammanfattas och vi introducerar fyra t{\"a}mligen allm{\"a}nt giltiga
+  approximationer:
+    (i)   ${\bf J}_{\rm f}={\bf 0}$ (inga fria str{\"o}mmar),
+    (ii)  $\rho={\bf 0}$ (inga fria laddningar),
+    (iii) ${\bf P}=\varepsilon_0(\varepsilon_{\rm r}-1){\bf E}$
+              (linj{\"a}rt medium med homogent $\varepsilon_{\rm r}({\bf x})
+               =\hbox{konstant}$), samt
+    (iv)  ${\bf M}={\bf 0}$ (f{\"o}rsumbar magnetisering, $\mu_{\rm r}\approx1$).
+  Med dessa approximationer omformulerar vi v{\aa}gekvationerna f{\"o}r det
+  elektromagnetiska f{\"a}ltet i form av tv{\aa} identiska ekvationer, f{\"o}r
+  det elektriska f{\"a}ltet ${\bf E}$ och det magnetiska f{\"a}ltet ${\bf B}$
+  respektive, vilka vidare direkt kan reduceras till en skal{\"a}r
+  v{\aa}gekvation som $(\partial^2/\partial z^2
+  -\mu_0\varepsilon_0\varepsilon_{\rm r}\partial^2/\partial t^2) E(z,t)=0$.
+  Utifr{\aa}n denna form identifierar vi att ljushastigheten i vakuum $c_0$
+  ges av $c^{-2}_0=\mu_0\varepsilon_0$ samt brytningsindex
+  $n=\varepsilon^{1/2}_{\rm r}$, skalandes utbredningshastigheten f{\"o}r de
+  elektromagnetiska v{\aa}gorna som $c=c_0/n$.
+  Med hj{\"a}lp av d'Alemberts metod tar vi fram den generella l{\"o}sningen
+  f{\"o}r v{\aa}gekvationen och visar p{\aa} hur denna i en dimension har
+  motpropagerande komponenter som alltid alltid uppfyller
+  $E(z,t)=f(z-ct)+g(z+ct)$.
+  F{\"o}r tidsharmoniska f{\"a}lt ans{\"a}tter vi komplexv{\"a}rda envelopper
+  som ${\bf E}({\bf x},t)=\sum_{\bf k}\Re[{\bf E}_{\bf k}\exp(i{\bf k}
+  \cdot{\bf x}-i\omega({\bf k}) t)]$, med samma form f{\"o}r det magnetiska
+  f{\"a}ltet, och visar p{\aa} hur denna planv{\aa}gsuppdelning leder till
+  en ortogonal koppling mellan det elektriska och magnetiska f{\"a}ltet som
+  ${\bf B}_{\bf k}={\bf k}\times{\bf E}_{\bf k}/\omega$.}
+
+\threepointsummary{%
+  Den elektromagnetiska v{\aa}gekvationen i homogena dielektrika utan
+  n{\"a}rvaro av fria laddningar, str{\"o}mmar eller magnetisering {\"a}r
+  identisk f{\"o}r det elektriska och magnetiska f{\"a}ltet,
+  $$
+    \nabla^2{\bf E}-{{1}\over{c^2}}{{\partial^2{\bf E}}\over{\partial t^2}}=0,
+    \qquad\quad
+    \nabla^2{\bf B}-{{1}\over{c^2}}{{\partial^2{\bf B}}\over{\partial t^2}}=0,
+  $$
+  d{\"a}r $c=c_0/n$ {\"a}r den hastighet som v{\aa}gen har i mediet, med
+  ljus\-hastigheten i vakuum $c_0=(\mu_0\varepsilon_0)^{-1/2}$ och
+  brytnings\-index $n=\varepsilon^{1/2}_{\rm r}$.
+}{%
+  Med d'Alemberts l{\"o}sningsmetod ges generella l{\"o}sningar till
+  v{\aa}gekvationen i en dimension som
+  $$
+    E(z,t) = f(z-ct) + g(z+ct).
+  $$
+}{%
+  Planv{\aa}gsuppdelning av den elektromagnetiska v{\aa}gen med
+  komplex-v{\"a}rda envelopper,
+  $$
+    \eqalign{
+      {\bf E}({\bf x},t)&=\sum_{\bf k}
+         \Re[{\bf E}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega({\bf k}) t)],\cr
+      {\bf B}({\bf x},t)&=\sum_{\bf k}
+         \Re[{\bf B}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega({\bf k}) t)].\cr
+    }
+  $$}
 
 \section{Elektromagnetiska v{\aa}gekvationen i homogena dielektrika}
 Under den f{\"o}rra f{\"o}rel{\"a}sningen tog vi ur Maxwells ekvationer fram
@@ -510,4 +587,73 @@ $$
   {\bf S}={\bf E}\times{\bf H},
 $$
 med enheten ${\rm W}/{\rm m}^2$.
+\vfill\eject
+
+\section{Sammanfattning av F{\"o}rel{\"a}sning~10
+  -- V{\aa}gutbredning i homogena och isotropa dielektrika}
+\item{$\bullet$}{Den generella elektromagnetiska v{\aa}gekvationen,
+  $$
+    \eqalign{
+      \nabla\times\nabla\times{\bf E}
+        +\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}&=
+           -\mu_0{{\partial}\over{\partial t}}
+            \underbrace{
+               \bigg({\bf J}_{\rm f}
+  	        +{{\partial{\bf P}}\over{\partial t}}
+  	        +\nabla\times{\bf M}\bigg)
+                  }_{\hbox{gemensam k{\"a}llterm}},\cr
+      \nabla\times\nabla\times{\bf B}
+        +\mu_0\varepsilon_0{{\partial^2{\bf B}}\over{\partial t^2}}&=
+            \mu_0\nabla\times
+            \underbrace{
+  	     \bigg({\bf J}_{\rm f}
+  	        +{{\partial{\bf P}}\over{\partial t}}
+  	        +\nabla\times{\bf M}\bigg)
+                  }_{\hbox{gemensam k{\"a}llterm}}.\cr
+    }
+  $$}
+\item{$\bullet$}{Fyra allm{\"a}nna f{\"o}renklingar,
+  \litem[1.]{${\bf J}_{\rm f}={\bf 0}$ (inga fria str{\"o}mmar)}
+  \litem[2.]{$\rho={\bf 0}$ (inga fria laddningar)}
+  \litem[3.]{${\bf P}=\varepsilon_0(\varepsilon_{\rm r}-1){\bf E}$
+             ({\it linj{\"a}rt} medium, och vi antar {\"a}ven homogent
+             $\varepsilon_{\rm r}({\bf x})=\hbox{konstant}$)}
+  \litem[4.]{${\bf M}={\bf 0}$ (f{\"o}rsumbar magnetisering,
+             $\mu_{\rm r}\approx1$)}
+  \smallskip
+  leder till att v{\aa}gekvationerna antar formen
+  $$
+    \nabla^2{\bf E}-{{1}\over{c^2}}{{\partial^2{\bf E}}\over{\partial t^2}}=0,
+    \qquad\quad
+    \nabla^2{\bf B}-{{1}\over{c^2}}{{\partial^2{\bf B}}\over{\partial t^2}}=0,
+  $$
+  d{\"a}r $c=c_0/n$ {\"a}r den hastighet som v{\aa}gen har i mediet, med
+  ljus\-hastigheten i vakuum som $c_0=1/\sqrt{\mu_0\varepsilon_0}$ och
+  brytnings\-index $n=\sqrt{\varepsilon_{\rm r}}$.}
+\item{$\bullet$}{Med d'Alemberts l{\"o}sningsmetod ges generella l{\"o}sningar
+  till v{\aa}gekvationen i en dimension som
+  $$
+    E(z,t) = f(z-ct) + g(z+ct).
+  $$}
+\item{$\bullet$}{Vi utf{\"o}r en planv{\aa}gsuppdelning av den elektromagnetiska
+  v{\aa}gen med assistans av komplex-v{\"a}rda envelopper ${\bf E}_{\bf k}$ och
+  ${\bf B}_{\bf k}$ som
+  $$
+    \eqalign{
+      {\bf E}({\bf x},t)&=\sum_{\bf k}
+         \Re[{\bf E}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega({\bf k}) t)],\cr
+      {\bf B}({\bf x},t)&=\sum_{\bf k}
+         \Re[{\bf B}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega({\bf k}) t)].\cr
+    }
+  $$}
+\item{$\bullet$}{
+  De komplexv{\"a}rda envelopperna i planv{\aa}gsuppdelningen {\"a}r ortogonala
+  enligt
+  $$
+    {\bf B}_{\bf k}={\bf k}\times{\bf E}_{\bf k}/\omega,\qquad
+    {\bf E}_{\bf k}\cdot{\bf B}_{\bf k}=0,\qquad
+    {\bf k}\cdot{\bf B}_{\bf k}=0,\qquad
+    {\bf k}\cdot{\bf E}_{\bf k}=0.
+  $$}
+
 \bye
