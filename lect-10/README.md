@@ -15,11 +15,11 @@ no LaTeX), MetaPost figures and supporting material.
 
 Maxwells ekvationer och den elektromagnetiska vågekvationen sammanfattas och
 vi introducerar fyra tämligen allmänt giltiga approximationer:
-    1. <b>J</b><sub>f</sub> = 0 (inga fria strömmar),
-    2. ρ = 0 (inga fria laddningar),
-    3. <b>P</b> = ε<sub>0</sub> (ε<sub>r</sub> − 1)<b>E</b>
-       (linjärt medium med homogent ε<sub>r</sub>(<b>x</b>) = konstant), samt
-    4. <b>M</b> = 0 (försumbar magnetisering, µ<sub>r</sub> ≈ 1).
+    (i)   <b>J</b><sub>f</sub> = 0 (inga fria strömmar),
+    (ii)  ρ = 0 (inga fria laddningar),
+    (iii) <b>P</b> = ε<sub>0</sub> (ε<sub>r</sub> − 1)<b>E</b>
+         (linjärt medium med homogent ε<sub>r</sub>(<b>x</b>) = konstant), samt
+    (iv) <b>M</b> = 0 (försumbar magnetisering, µ<sub>r</sub> ≈ 1).
 Med dessa approximationer omformulerar vi vågekvationerna för det
 elektromagnetiska fältet i form av två identiska ekvationer, för det elektriska
 fältet <b>E</b> och det magnetiska fältet <b>B</b> respektive, vilka vidare
@@ -37,6 +37,7 @@ Med hjälp av d’Alemberts metod tar vi fram den generella lösningen för
 vågekvationen och visar på hur denna i en dimension har motpropagerande
 komponenter som alltid alltid uppfyller <i>E</i>(<i>z</i>, <i>t</i>)
 = <i>f</i>(<i>z</i>−<i>c</i><i>t</i>) + <i>g</i>(<i>z</i>+<i>c</i><i>t</i>).
+
 För tidsharmoniska fält ansätter vi komplexvärda envelopper som
 <b>E</b>(<i>x</i>, <i>t</i>) = <b>k</b> Re[<b>E</b><sub><i>k</i></sub>
 exp(<i>i</i><b>k</b> · <b>x</b> − <i>i</i>ω(<b>k</b>)<i>t</i>)], med samma
