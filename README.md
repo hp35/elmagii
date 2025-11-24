@@ -280,7 +280,37 @@ omformuleras till två vågekvationer för de elektriska och magnetiska fälten.
 [<i>Föreläsning 10 - Vågutbredning i homogena och isotropa
     dielektrika</i>](lect-10)
 
-<i>[TO BE ADDED]</i>
+Maxwells ekvationer och den elektromagnetiska vågekvationen sammanfattas och
+vi introducerar fyra tämligen allmänt giltiga approximationer:
+    (i)   <b>J</b><sub>f</sub> = 0 (inga fria strömmar),
+    (ii)  ρ = 0 (inga fria laddningar),
+    (iii) <b>P</b> = ε<sub>0</sub> (ε<sub>r</sub> − 1)<b>E</b>
+         (linjärt medium med homogent ε<sub>r</sub>(<b>x</b>) = konstant), samt
+    (iv) <b>M</b> = 0 (försumbar magnetisering, µ<sub>r</sub> ≈ 1).
+Med dessa approximationer omformulerar vi vågekvationerna för det
+elektromagnetiska fältet i form av två identiska ekvationer, för det elektriska
+fältet <b>E</b> och det magnetiska fältet <b>B</b> respektive, vilka vidare
+direkt kan reduceras till en skalär vågekvation som
+(∂<sup>2</sup>/∂z<sup>2</sup> − µ<sub>0</sub>ε<sub>0</sub>ε<sub>r</sub>
+∂<sup>2</sup>/∂t<sup>2</sup>)<b>E</b>(<i>z</i>, <i>t</i>) = <b>0</b>.
+Utifrån denna form identifierar vi att ljushastigheten i vakuum
+<i>c</i><sub>0</sub> ges av
+<i>c</i><sub>0</sub><sup>−2</sup> = µ<sub>0</sub>ε<sub>0</sub>
+samt brytningsindex <i>n</i> = ε<sub>r</sub><sup>1/2</sup>, skalandes
+utbredningshastigheten för de elektromagnetiska vågorna som
+<i>c</i> = <i>c</i><sub>0</sub>/<i>n</i>.
+
+Med hjälp av d’Alemberts metod tar vi fram den generella lösningen för
+vågekvationen och visar på hur denna i en dimension har motpropagerande
+komponenter som alltid alltid uppfyller <i>E</i>(<i>z</i>, <i>t</i>)
+= <i>f</i>(<i>z</i>−<i>c</i><i>t</i>) + <i>g</i>(<i>z</i>+<i>c</i><i>t</i>).
+
+För tidsharmoniska fält ansätter vi komplexvärda envelopper som
+<b>E</b>(<i>x</i>, <i>t</i>) = <b>k</b> Re[<b>E</b><sub><i>k</i></sub>
+exp(<i>i</i><b>k</b> · <b>x</b> − <i>i</i>ω(<b>k</b>)<i>t</i>)], med samma
+form för det magnetiska fältet, och visar på hur denna planvågsuppdelning
+leder till en ortogonal koppling mellan det elektriska och magnetiska fältet
+som <b>B</b><sub><i>k</i></sub> = <b>k</b> × <b>E</b><sub><i>k</i></sub>/ω.
 
 [<i>Föreläsning 11 - Retarderade potentialer som lösningar
     till Maxwells ekvationer</i>](lect-11)
