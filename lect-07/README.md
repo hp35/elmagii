@@ -33,9 +33,9 @@ laddningar.
 
 ## Contents
 
-1. Dipolmodellen av magneter}
+1. Dipolmodellen av magneter
 
-2. Krafter och moment på dipoler}
+2. Krafter och moment på dipoler
 
 3. Magnetisering - "magnetisk polarisationsdensitet"
 
