@@ -17,5 +17,11 @@ In this directory, the included `Makefile` can be used to regenerate the
 documents, figures and graphs. Just run `make` and ensure to install any
 missing components in case there are any complaints.
 
+## List of figures
+
+[`figs/ebk.mp`](figs/ebk.mp)
+    ([`figs/ebk.pdf`](figs/ebk.pdf))
+    <i>MetaPost drawing of the right-hand system formed by (E,B,k).</i>
+
 ## Copyright
 Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.

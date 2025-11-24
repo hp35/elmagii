@@ -9,5 +9,11 @@ Physics (master level) at Uppsala University.
 Just run `make` and ensure to install any missing components in case there
 are any complaints.
 
+## List of figures
+
+[`ebk.mp`](ebk.mp)
+    ([`ebk.pdf`](ebk.pdf))
+    <i>MetaPost drawing of the right-hand system formed by (E,B,k).</i>
+
 ## Copyright
 Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
