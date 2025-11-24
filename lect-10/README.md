@@ -15,11 +15,13 @@ no LaTeX), MetaPost figures and supporting material.
 
 Maxwells ekvationer och den elektromagnetiska vågekvationen sammanfattas och
 vi introducerar fyra tämligen allmänt giltiga approximationer:
-(i) <b>J</b><sub>f</sub> = 0 (inga fria strömmar),
-(ii) ρ = 0 (inga fria laddningar),
-(iii) <b>P</b> = ε<sub>0</sub> (ε<sub>r</sub> − 1)<b>E</b>
-      (linjärt medium med homogent ε<sub>r</sub>(<b>x</b>) = konstant), samt
-(iv) <b>M</b> = 0 (försumbar magnetisering, µ<sub>r</sub> ≈ 1).
+
+    1. <b>J</b><sub>f</sub> = 0 (inga fria strömmar),
+    2. ρ = 0 (inga fria laddningar),
+    3. <b>P</b> = ε<sub>0</sub> (ε<sub>r</sub> − 1)<b>E</b>
+       (linjärt medium med homogent ε<sub>r</sub>(<b>x</b>) = konstant), samt
+    4. <b>M</b> = 0 (försumbar magnetisering, µ<sub>r</sub> ≈ 1).
+
 Med dessa approximationer omformulerar vi vågekvationerna för det
 elektromagnetiska fältet i form av två identiska ekvationer, för det elektriska
 fältet <b>E</b> och det magnetiska fältet <b>B</b> respektive, vilka vidare
@@ -32,6 +34,7 @@ Utifrån denna form identifierar vi att ljushastigheten i vakuum
 samt brytningsindex <i>n</i> = ε<sub>r</sub><sup>1/2</sup>, skalandes
 utbredningshastigheten för de elektromagnetiska vågorna som
 <i>c</i> = <i>c</i><sub>0</sub>/<i>n</i>.
+
 Med hjälp av d’Alemberts metod tar vi fram den generella lösningen för
 vågekvationen och visar på hur denna i en dimension har motpropagerande
 komponenter som alltid alltid uppfyller <i>E</i>(<i>z</i>, <i>t</i>)
