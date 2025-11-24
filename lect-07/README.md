@@ -31,6 +31,22 @@ om det magnetiserade objektet istället hade varit konstruerat som ekvivalenta
 volyms- och ytströmmar <b>J</b><sub>b</sub> och <b>K</b><sub>b</sub> av bundna
 laddningar.
 
+## Contents
+
+1. Dipolmodellen av magneter}
+
+2. Krafter och moment på dipoler}
+
+3. Magnetisering - "magnetisk polarisationsdensitet"
+
+4. Magnetisering sedd som bundna yt- och volymströmmar
+
+5. Upplagrad energi i magnetfält
+
+6. Vektorpotential från ett magnetiserat objekt
+
+7. Sammanfattning av Föreläsning 7 - <i>Magnetiska fält i material</i>
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
