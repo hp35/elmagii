@@ -282,11 +282,16 @@ omformuleras till två vågekvationer för de elektriska och magnetiska fälten.
 
 Maxwells ekvationer och den elektromagnetiska vågekvationen sammanfattas och
 vi introducerar fyra tämligen allmänt giltiga approximationer:
-    (i)   <b>J</b><sub>f</sub> = 0 (inga fria strömmar),
-    (ii)  ρ = 0 (inga fria laddningar),
-    (iii) <b>P</b> = ε<sub>0</sub> (ε<sub>r</sub> − 1)<b>E</b>
+
+1. <b>J</b><sub>f</sub> = 0 (inga fria strömmar),
+
+2. ρ = 0 (inga fria laddningar),
+
+3. <b>P</b> = ε<sub>0</sub> (ε<sub>r</sub> − 1)<b>E</b>
          (linjärt medium med homogent ε<sub>r</sub>(<b>x</b>) = konstant), samt
-    (iv) <b>M</b> = 0 (försumbar magnetisering, µ<sub>r</sub> ≈ 1).
+
+4. <b>M</b> = 0 (försumbar magnetisering, µ<sub>r</sub> ≈ 1).
+
 Med dessa approximationer omformulerar vi vågekvationerna för det
 elektromagnetiska fältet i form av två identiska ekvationer, för det elektriska
 fältet <b>E</b> och det magnetiska fältet <b>B</b> respektive, vilka vidare
