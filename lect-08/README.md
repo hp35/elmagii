@@ -29,6 +29,29 @@ Föreläsningen avslutas med att demonstrera multipolutvecklingen för generella
 laddningsfördelningar i termer av skalär potential, samt fastställande av
 dipolapproximationen för elektrostatiska och magnetostatiska fält.
 
+## Contents
+
+1. Multipolutveckling av fält
+
+2. Multipolutveckling för skalär potential för en elektrisk dipol
+
+3. Exempel på multipoler
+
+4. Multipolutveckling för skalär potential för en linjär elektrisk kvadrupol
+
+5. Klassificering av multipolmoment
+
+6. Skalär potential och elektriskt fält för en linjär elektrisk kvadrupol
+
+7. Skalär potential och elektriskt fält för en kvadratisk elektrisk kvadrupol
+
+8. Multipolutveckling för generella laddningsfördelningar (i termer av
+   skalär potential)
+
+9. Dipolapproximationen för stationära laddningsfördelningar och strömmar
+
+10. Sammanfattning av Föreläsning 8 - <i>Multipolutvecklingen</i>
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
