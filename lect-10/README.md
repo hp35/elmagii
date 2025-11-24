@@ -61,8 +61,8 @@ som <b>B</b><sub><i>k</i></sub> = <b>k</b> × <b>E</b><sub><i>k</i></sub>/ω.
 
 4. Poynting-vektorn
 
-5. Sammanfattning av Föreläsning~10
-  - <i>Vågutbredning i homogena och isotropa dielektrika</i>
+5. Sammanfattning av Föreläsning 10 - <i>Vågutbredning i homogena och
+   isotropa dielektrika</i>
 
 ## Compiling the TeX code and figures
 
