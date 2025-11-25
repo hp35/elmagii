@@ -1,5 +1,5 @@
 %
-% MetaPost drawing of the charge conservation law.
+% MetaPost drawing of the interpretation of the charge conservation law.
 %
 % Copyright (C) 2024, Fredrik Jonsson
 %
@@ -23,23 +23,30 @@ beginfig(1);
   label.rt(btex
     $\displaystyle\nabla\cdot{\bf J}
       =-{{\partial\rho}\over{\partial t}}
-    $ etex,(40u,18u));
+    $ etex,(30u,20u));
   label.rt(btex
-             \def\iint{\mathop{\int\kern-8pt\int}}
-             \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
-             \def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
-    $\displaystyle
-      \Bigg(\hbox{Gauss}
-        \Rightarrow
-        \iiint\nabla\cdot{\bf J}\,dV
-          \equiv\underbrace{\oiint{\bf J}\cdot d{\bf S}}_{\hbox{C/s}}
-          =-\iiint{{\partial\rho}\over{\partial t}}\,dV
-          =-{{\partial}\over{\partial t}}
-              \underbrace{\iiint\rho\,dV}_{\hbox{``$q$'', C}}
-      \Bigg)
-    $ etex,(30u,0u));
+      \vbox{
+        \hbox{Exempel med fl{\"o}de av elektroner}
+        \hbox{ut fr{\aa}n en dom{\"a}n:}
+      }
+      etex, (30u,8u));
   label.rt(btex $\displaystyle{{\partial\rho({\bf x},t)}\over{\partial t}}>0
-     \qquad\Leftrightarrow\qquad\nabla\cdot{\bf J}({\bf x},t)<0$ etex,(40u,-18u));
+     \quad\Leftrightarrow\quad\nabla\cdot{\bf J}({\bf x},t)<0$ etex,(40u,-4u));
+
+%  label.rt(btex
+%             \def\iint{\mathop{\int\kern-8pt\int}}
+%             \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+%             \def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
+%    $\displaystyle
+%      \Bigg(\hbox{Gauss}
+%        \Rightarrow
+%        \iiint\nabla\cdot{\bf J}\,dV
+%          \equiv\underbrace{\oiint{\bf J}\cdot d{\bf S}}_{\hbox{C/s}}
+%          =-\iiint{{\partial\rho}\over{\partial t}}\,dV
+%          =-{{\partial}\over{\partial t}}
+%              \underbrace{\iiint\rho\,dV}_{\hbox{``$q$'', C}}
+%      \Bigg)
+%    $ etex,(30u,0u));
 
 endfig;
 end
