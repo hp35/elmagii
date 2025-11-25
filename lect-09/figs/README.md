@@ -13,7 +13,7 @@ are any complaints.
 
 [`chargeconsv.mp`](chargeconsv.mp)
     ([`chargeconsv.pdf`](chargeconsv.pdf))
-    <i>MetaPost drawing of the charge conservation law.</i>
+    <i>MetaPost drawing of the interpretation of the charge conservation law.</i>
 
 [`poldensity.mp`](poldensity.mp)
     ([`poldensity.pdf`](poldensity.pdf))

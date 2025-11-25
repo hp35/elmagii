@@ -55,7 +55,7 @@ missing components in case there are any complaints.
 
 [`figs/chargeconsv.mp`](figs/chargeconsv.mp)
     ([`figs/chargeconsv.pdf`](figs/chargeconsv.pdf))
-    <i>MetaPost drawing of the charge conservation law.</i>
+    <i>MetaPost drawing of the interpretation of the charge conservation law.</i>
 
 [`figs/poldensity.mp`](figs/poldensity.mp)
     ([`figs/poldensity.pdf`](figs/poldensity.pdf))
