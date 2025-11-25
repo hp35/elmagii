@@ -175,28 +175,49 @@ $$
   \hskip70pt\nabla\times{\bf B}=\mu_0{\bf J}.\hskip30pt(\hbox{Statisk!})
 $$
 Utifr{\aa}n en {\it elektrostatisk} betraktelse, s{\aa} ser vi direkt att det
-elektriska f{\"a}lt har sin k{\"a}lla i statiska elektriska laddningar, via
-Gauss lag f{\"o}r det elektriska f{\"a}ltet, medan magnetf{\"a}ltet i sin tur
-har sin k{\"a}lla i motsvarande {\it r{\"o}relse} av de elektriska laddningarna
-(det vill s{\"a}ga {\it str{\"o}m}). Redan i Faradays lag ovan har vi dock en
-f{\"o}rsta koppling till en {\it elektrodynamisk} koppling i och med att
-tidsvariationen hos det magnetiska f{\"a}ltet kopplar till rotationen hos det
-elektriska f{\"a}ltet. Denna koppling sker dessutom via ett omv{\"a}nt tecken,
-vilket i grund och botten fastst{\"a}ller {\it Lenz lag} (som s{\"a}ger att en
-inducerad elektromotorisk kraft alltid riktas s{\aa} att den motverkar
-k{\"a}llan som inducerade den).
+elektriska f{\"a}ltet har sin k{\"a}lla i statiska elektriska laddningar, via
+Gauss lag f{\"o}r det elektriska f{\"a}ltet, medan det {\it statiska}
+magnetf{\"a}ltet i sin tur har sin k{\"a}lla i motsvarande {\it r{\"o}relse}
+av de elektriska laddningarna (det vill s{\"a}ga {\it str{\"o}m}).
+Redan i Faradays lag ovan har vi dock en f{\"o}rsta koppling till en
+{\it elektrodynamisk} koppling i och med att tidsvariationen hos det magnetiska
+f{\"a}ltet kopplar till rotationen hos det elektriska f{\"a}ltet.
+Denna koppling sker dessutom via ett omv{\"a}nt tecken, vilket i grund och
+botten fastst{\"a}ller {\it Lenz lag} (som s{\"a}ger att en inducerad
+elektromotorisk kraft alltid riktas s{\aa} att den motverkar k{\"a}llan som
+inducerade den).
 
 Som ett grundl{\"a}ggande krav f{\"o}r att dessa tre ekvationer skall vara
-fysikaliskt korrekta m{\aa}ste dessutom lagen om {\it konservering av elektrisk
-laddning}\numberedfootnote{Notera att man talade om elektrisk laddning
-  l{\aa}ngt innan elektronen 1897 uppt{\"a}cktes experimentellt av brittiske
-  fysikern och nobelpristagaren Joseph John Thomson. Elektronens existens
-  framf{\"o}rdes dock som hypotes 1838 av den brittiske naturfilosofen
+fysikaliskt korrekta m{\aa}ste dessutom {\it lagen om att elektrisk laddning
+inte kan f{\"o}rsvinna}\numberedfootnote{Notera att man talade om elektrisk
+  laddning l{\aa}ngt innan elektronen 1897 uppt{\"a}cktes experimentellt av
+  brittiske fysikern och nobelpristagaren Joseph John Thomson. Elektronens
+  existens framf{\"o}rdes dock som hypotes 1838 av den brittiske naturfilosofen
   Richard Laming, d.v.s. mindre {\"a}n 20 {\aa}r innan Maxwell konsoliderade
-  ``sina'' ekvationer.
-} vara uppfylld,\numberedfootnote{Notera att tecknet f{\"o}r
-  $-\partial\rho/\partial t$ i lagen f{\"o}r konservering av elektrisk
-  laddning h{\"a}nger ihop med att str{\"o}mmen ${\bf J}$ r{\"a}knas som
+  ``sina'' ekvationer.}
+vara uppfylld,\numberedfootnote{Vi kan rekapitulera att denna h{\"a}rleddes i
+  F{\"o}rel{\"a}sning~4, utifr{\aa}n Gauss lag applicerad p{\aa} den totala
+  str{\"o}m som passerar ut genom en {\it sluten} yta $S$ omslutande en
+  volym $V$,
+  $$
+    I=\Big[\hbox{str{\"o}mmen ut genom ytan $S$}\Big]
+     =\oiint_S {\bf J}\cdot d{\bf A}
+     =\iiint_V (\nabla\cdot{\bf J})\,dV.
+  $$
+  Eftersom ingen laddning kan skapas eller f{\"o}rintas internt i volymen (vi
+  erinrar oss att all laddnings\-transport in eller ut fr{\aa}n volymen sker
+  genom den slutna ytan $S$, s{\aa} m{\aa}ste den laddning som fl{\"o}dar
+  {\it ut genom ytan} g{\"o}ra att den i volymen $V$ {\it inneslutna laddningen
+  minskar} i motsvarande grad, det vill s{\"a}ga
+  $$
+    \iiint_V (\nabla\cdot{\bf J})\,dV
+      =-{{d}\over{dt}}\Big[\hbox{Innesluten laddning}\Big]
+      =-{{d}\over{dt}}\iiint_V \rho\,dV
+      =-\iiint_V {{d\rho}\over{dt}}\,dV
+  $$
+  Notera att tecknet f{\"o}r $-\partial\rho/\partial t$ i
+  ``lagen om att elektrisk laddning inte kan f{\"o}rsvinna''
+  h{\"a}nger ihop med att str{\"o}mmen ${\bf J}$ r{\"a}knas som
   positiv {\it ut} fr{\aa}n punkten f{\"o}r {\it positiv} laddningstransport.
   Med $\nabla\cdot{\bf J}({\bf x})>0$ m{\aa}ste vi d{\"a}rf{\"o}r ha en
   {\it ackumulering av negativ laddning} i punkten ${\bf x}$, och d{\"a}rmed
@@ -206,11 +227,11 @@ $$
 $$
 \epsfig{figs/chargeconsv.1}\noindent
 L{\aa}t oss d{\"a}rf{\"o}r en g{\aa}ng f{\"o}r alla kontrollera att den
-elektriska laddningen {\"a}r konserverad utifr{\aa}n ekvationerna ovan!
+elektriska laddningen {\"a}r bevarad utifr{\aa}n ekvationerna ovan!
 Fr{\aa}n den {\it statiska} formen av Amp\`eres lag har vi dessv{\"a}rre att
 $$
   \nabla\cdot{\bf J}
-    = {{1}\over{\mu_0}}\nabla\cdot(\nabla\times{\bf B})
+    = {{1}\over{\mu_0}}\nabla\cdot\underbrace{(\nabla\times{\bf B})}_{=\mu_0{\bf J}}
     \equiv \{\ \hbox{vektoridentitet}\ \}
     \equiv 0,
 $$
@@ -221,11 +242,11 @@ generella tidsberoende problem.
 
 Ett av James Clerk Maxwells viktigare bidrag till elektromagnetisk f{\"a}ltteori
 var n{\"a}r han 1856 ins{\aa}g hur Amp\`eres lag b{\"o}r modifieras f{\"o}r att
-dessutom uppfylla kravet p{\aa} konservering av elektrisk laddning. Argumentet
-lyder i stort som f{\"o}ljer: Om vi fr{\aa}n kravet p{\aa} konservering av
+dessutom uppfylla kravet p{\aa} bevaring av elektrisk laddning. Argumentet
+lyder i stort som f{\"o}ljer: Om vi fr{\aa}n kravet p{\aa} bevaring av
 laddning har att ``$-\partial\rho/\partial t$'' saknas i h{\"o}gerledet ovan,
-kan vi d{\aa} inte helt enkelt l{\"a}gga till en s{\aa}dan term och se vad som
-h{\"a}nder?
+{\it kan vi d{\aa} inte helt enkelt l{\"a}gga till en s{\aa}dan term och se
+vad som h{\"a}nder?}
 $$
     \nabla\cdot{\bf J}
        = {{1}\over{\mu_0}}\nabla\cdot(\nabla\times{\bf B})
@@ -239,9 +260,9 @@ den (fria) str{\"o}mt{\"a}theten ersatt med
 $$
   {\bf J}\to{\bf J}+\varepsilon_0{{\partial{\bf E}}\over{\partial t}}
 $$
-direkt l{\"o}sa problemet med konservering av laddning f{\"o}r tidsberoende
-problem, och detta {\"a}r ocks{\aa} sj{\"a}lva k{\"a}rnan i den modifiering
-som Maxwell introducerade.
+direkt l{\"o}sa problemet med bevaring av laddning f{\"o}r tidsberoende problem,
+och detta {\"a}r ocks{\aa} sj{\"a}lva k{\"a}rnan i den modifiering som Maxwell
+introducerade.
 
 I n{\"a}rvaron av fria str{\"o}mmar (men utan att befinna sig i ett medium som
 kan polariseras elektriskt) {\"a}r d{\"a}rf{\"o}r den generella (tidsberoende)
@@ -298,6 +319,7 @@ driven antenn p{\aa} mikroskopisk niv{\aa}, d{\"a}r en medelv{\"a}rdesbildning
 som omfattar antennen ger vid hand att ingen netto-str{\"o}m genom volymen sker
 trots att ``antennen'' lokalt uppb{\"a}r en periodiskt oscillerande effektiv
 (och h{\"o}gst lokal) str{\"o}m.
+\vfill\eject
 
 \section{Maxwells ekvationer}
 Maxwells fyra ekvationer\numberedfootnote{Det var faktiskt inte
@@ -395,6 +417,7 @@ $$
                \ ({\rm A}/{\rm m})\cr
   }
 $$
+\vfill\eject
 
 \section{Fr{\aa}n Maxwells ekvationer till elektromagnetisk v{\aa}gekvation}
 {\"O}verg{\aa}ngen fr{\aa}n Maxwells ekvationer till de tv{\aa} vektoriella
@@ -578,9 +601,9 @@ $$
 I h{\"a}rledandet av formen p{\aa} v{\aa}gekvationerna f{\"o}r f{\"a}lten
 ${\bf E}$ och ${\bf B}$ ovan, s{\aa} har vi varken lagt till eller tagit bort
 n{\aa}got. Allt utg{\aa}r ifr{\aa}n Faradays och Amp\`eres lagar, inklusive
-Maxwells korrektion f{\"o}r att uppfylla villkoret f{\"o}r laddnings\-%
-konservering, och ekvationerna beskriver i en form eller annan d{\"a}rmed
-{\it samtliga} omr{\aa}den som vi hittills behandlat i kursen.
+Maxwells korrektion f{\"o}r att uppfylla villkoret f{\"o}r den elektriska
+laddningens bevarande, och ekvationerna beskriver i en form eller annan
+d{\"a}rmed {\it samtliga} omr{\aa}den som vi hittills behandlat i kursen.
 
 Allt handlar om att reducera v{\aa}gekvationerna till relevant situation,
 exempelvis om vi har att g{\"o}ra med ett statiskt problem, om vi har avsaknad
