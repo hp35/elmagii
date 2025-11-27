@@ -311,7 +311,9 @@ $$
 $$
 {\"a}ven om vi s{\aa} l{\"a}nge kommer att h{\aa}lla sj{\"a}lva tolkningen av
 $c$ {\"o}ppen fram till dess att vi explicit visat hur l{\"o}sningen ser ut.
+\vfill\eject
 
+\subsection{d'Alemberts variabelsubstitution}
 Homogena partiella differentialekvationer med termer d{\"a}r derivatorna med
 avseende p{\aa} olika variabler {\"a}r separerade {\"a}r skolexempel p{\aa}
 fall d{\"a}r vi kan till{\"a}mpa {\it variabelseparation}. Vi kommer dock
@@ -392,8 +394,6 @@ $$
   \qquad\Leftrightarrow\qquad
   {{\partial^2 E}\over{\partial\xi\partial\eta}} = 0.
 $$
-\vfill\eject
-\noindent
 Denna partiella differentialekvation (PDE) {\"a}r {\it linj{\"a}r}, s{\aa}
 superpositionsprincipen -- som s{\"a}ger att l{\"o}sningar som individuellt
 satisfierar ekvationen kan adderas till varandra och fortfarande (som summa
@@ -403,25 +403,52 @@ en l{\"o}sning s{\aa} kan den {\it enbart} vara en funktion av {\it antingen}
 $\xi$ {\it eller} $\eta$, eftersom andraderivatan i den andra, parvisa,
 variabeln garanterar att endast l{\"o}sningar av denna form kommer att
 satisfiera ekvationen.
+\vfill\eject
+
+\subsection{Integration of d'Alemberts transformerade v{\aa}gekvation}
+Vi v{\"a}ljer att f{\"o}rst integrera d'Alemberts ekvation i de transformerade
+variablerna med avseende p{\aa} $\xi$, vilket resulterar i ett h{\"o}gerled med
+en ``integrationskonstant'' i form av en funktion $h$ som {\it endast kan bero
+p{\aa} variabeln $\eta$} (eftersom partialderivatan $\partial/\partial\xi$ av
+denna ``konstant'' m{\aa}ste bli identiskt noll), som
 $$
-  \hbox{Alternativ I: Integrera f{\"o}rst m.a.p.}\ \xi:
-  \hbox{\hphantom{II}\hphantom{$\eta$}}
-  \qquad{{\partial E_1(\xi)}\over{\partial\eta}}=0
-  \quad\Leftrightarrow\quad E_1=f(\xi)
+  (\hbox{``$\int d\xi$`` }\to)\qquad
+  {{\partial E}\over{\partial\eta}}=h(\eta).
 $$
+Om vi nu integrerar denna med avseende p{\aa} den kvarvarande variabeln $\eta$,
+s{\aa} kommer det ing{\aa}ende h{\"o}gerledet $h(\eta)$ ist{\"a}llet att bli
+den primitiva funktionen, s{\"a}g $g(\eta)=\int h(\eta)\,d\eta=H(\eta)$, samt
+att en till ``integrationskonstant'' som endast beror av $\xi$ m{\aa}ste
+l{\"a}ggas till, s{\"a}g en funktion $f(\xi)$, med f{\"o}ljd att
 $$
-  \hbox{Alternativ II: Integrera f{\"o}rst m.a.p.}\ \eta:
-  \hbox{\hphantom{I}\hphantom{$\xi$}}
-  \qquad{{\partial E_2(\eta)}\over{\partial\xi}}=0
-  \quad\Leftrightarrow\quad E_2=g(\eta)
+  (\hbox{``$\int d\eta$`` }\to)\qquad
+  E=f(\xi)+\underbrace{g(\eta)}_{=H(\eta)}.
 $$
-Med andra ord m{\aa}ste l{\"o}sningen best{\aa} av en funktion, s{\"a}g,
-$f(\xi)=f(z-ct)$ samt en annan funktion, s{\"a}g, $g(\eta)=g(z+ct)$ (b{\aa}da
-med sina respektive amplituder, som givetvis {\"a}ven kan vara noll).
-Sammantaget med superpositionsprincipen f{\"o}r linj{\"a}ra (ordin{\"a}ra
-s{\aa} v{\"a}l som partiella) differentialekvationer ger d{\aa} att
+Om vi ers{\"a}tter de transformerade variablerna med de ursprungliga,
+$\xi=z-ct$ och $\eta=z+ct$, s{\aa} erh{\aa}ller vi allts{\aa} den generella
+l{\"o}sningen som
+%
+% $$
+%   \hbox{Alternativ I: Integrera f{\"o}rst m.a.p.}\ \xi:
+%   \hbox{\hphantom{II}\hphantom{$\eta$}}
+%   \qquad{{\partial E_1(\xi)}\over{\partial\eta}}=0
+%   \quad\Leftrightarrow\quad E_1=f(\xi)
+% $$
+% $$
+%   \hbox{Alternativ II: Integrera f{\"o}rst m.a.p.}\ \eta:
+%   \hbox{\hphantom{I}\hphantom{$\xi$}}
+%   \qquad{{\partial E_2(\eta)}\over{\partial\xi}}=0
+%   \quad\Leftrightarrow\quad E_2=g(\eta)
+% $$
+% Med andra ord m{\aa}ste l{\"o}sningen best{\aa} av en funktion, s{\"a}g,
+% $f(\xi)=f(z-ct)$ samt en annan funktion, s{\"a}g, $g(\eta)=g(z+ct)$
+% (b{\aa}da med sina respektive amplituder, som givetvis {\"a}ven kan vara
+% noll). Sammantaget med superpositionsprincipen f{\"o}r linj{\"a}ra
+% (ordin{\"a}ra s{\aa} v{\"a}l som partiella) differentialekvationer ger
+% d{\aa} att
+%
 $$
-  E = f(z-ct) + g(z+ct).
+  E = f(\underbrace{z-ct}_{=\xi}) + g(\underbrace{z+ct}_{=\eta}).
 $$
 Denna generella l{\"o}sning beskriver dels en v{\aa}g $f(z-ct)$ som r{\"o}r sig
 i {\it positiv} $z$-led med hastigheten $c$, dels en v{\aa}g $g(z+ct)$ som
@@ -430,6 +457,7 @@ v{\aa}gor {\"a}r generella till sin form, och beh{\"o}ver ej vara ``klassiska
 harmoniska sinusv{\aa}gor''. V{\aa}gorna beh{\"o}ver ej heller vara repetitiva,
 utan kan lika v{\"a}l beskriva solit{\"a}ra pulser.
 
+\subsection{Tolkning av reducerad fashastighet och brytningsindex}
 Det intressanta h{\"a}r {\"a}r att vi nu har en tolkning av
 $$
   c \equiv {{1}\over{(\mu_0\varepsilon_0\varepsilon_{\rm r})^{1/2}}}
@@ -451,6 +479,7 @@ $$
 $$
 {\"a}r {\it brytningsindex} f{\"o}r mediet.
 
+\subsection{Initialvillkor}
 F{\"o}r den formella l{\"o}sningen f{\"o}r $E(x,t)$ {\"o}ver en dom{\"a}n,
 s{\"a}g, $0\le z\le L$, beh{\"o}ver vi dessutom dels initialv{\"a}rdet
 $$
