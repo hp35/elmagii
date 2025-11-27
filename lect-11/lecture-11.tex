@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-11/lecture-11.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-11/
-% Last change: December 10, 2024
+% Last change: November 27, 2025
 %
 % Lecture No 11 in the course ``Elektromagnetism II, 1TE626 (2023)'',
 % held December 1, 2025, at Uppsala University, Sweden.
@@ -59,13 +59,93 @@
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
+\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+  \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
+\newdimen\itemindent \itemindent=28pt
+\newdimen\hangitemindent \hangitemindent=46pt
+\def\litem[#1]{\smallbreak\noindent%
+  \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
+  \hangindent\hangitemindent\ignorespaces}
 
 \lecture{11}
 \centerline{\twelvesc Retarderade potentialer som l{\"o}sningar till Maxwells
   ekvationer}
 \centerline{Fredrik Jonsson, Uppsala Universitet, 1 december 2025}
 \vskip24pt
+
+\plan{Vi inleder med en rekapitulation av den generella formen p{\aa} den
+  elektromagnetiska v{\aa}gekvationen f{\"o}r elektriska och magnetiska
+  f{\"a}lt, f{\"o}ljt av en analogi mellan potentialerna och mekaniska system.
+  Utifr{\aa}n definitionen av vektorpotentialen ${\bf A}$ som
+  ${\bf B}=\nabla\times{\bf A}$ fr{\aa}n identiteten $\nabla\cdot{\bf B}=0$,
+  s{\aa} erh{\aa}ller vi via Faradays lag att det elektriska f{\"a}ltet i
+  elektrodynamiska problem m{\aa}ste inneh{\aa}lla {\"a}ven vektorpotentialen
+  som ${\bf E}=-\nabla\phi-{{\partial{\bf A}}/{\partial t}}$.
+  V{\aa}gekvationen f{\"o}r de elektrodynamiska potentialerna formuleras,
+  f{\"o}ljt av en genomg{\aa}ng av en viss form av godtycke som existerar
+  i valet av potentialerna, under den s{\aa} kallade gauge-transformen.
+  Vi finner under antagande om Lorenz-villkoret (Lorenz gauge) att
+  ekvationerna f{\"o}r potentialermna frikopplas fr{\aa}n varandra.
+  Formen f{\"o}r de retarderade potentialerna, d{\"a}r ett objekts verkan
+  p{\aa} avst{\aa}nd analyseras, formuleras p{\aa} integralform f{\"o}r
+  den skal{\"a}ra potentialen och vektorpotentialen, och exemplifieras
+  slutligen f{\"o}r en tunn dipolantenn.}
+
+\threepointsummary{%
+  Den elektrodynamiska formen f{\"o}r den skal{\"a}ra potentialen $\phi$ och
+  vektorpotentialen ${\bf A}$ lyder
+  $$
+    {\bf E}({\bf x},t)
+      =-\nabla\phi({\bf x},t)-{{\partial{\bf A}({\bf x},t)}\over{\partial t}},
+      \qquad
+    {\bf B}({\bf x},t)
+      =\nabla\times{\bf A}({\bf x},t).
+  $$
+}{%
+  Den s{\aa} kallade gauge-transformationen av potentialerna,
+  $$
+    \eqalign{
+      {\bf A}'({\bf x},t)
+        &={\bf A}({\bf x},t)+\nabla\psi({\bf x},t),\cr
+      \phi'({\bf x},t)
+        &=\phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}},\cr
+    }
+  $$
+  l{\"a}mnar de elektromagnetiska f{\"a}lten of{\"o}r{\"a}ndrade, och vi kan
+  med dessa till viss del v{\"a}lja vilken form av v{\aa}gekvation vi
+  {\"o}nskar f{\"o}r potentialerna.
+}{%
+  Specifikt erh{\aa}ller vi under Lorenz-villkoret, eller ``Lorenz gauge'',
+  d{\"a}r
+  $$
+    \nabla\cdot{\bf A}'({\bf x},t)+
+      {{1}\over{c^2}}
+      {{\partial\phi'({\bf x},t)}\over{\partial t}} = 0.
+  $$
+  att v{\aa}gekvationerna f{\"o}r potentialerna frikopplas fr{\aa}n varandra,
+  till att lyda
+  $$
+    \eqalign{
+      \nabla^2\phi({\bf x},t)-{{1}\over{c^2}}
+        {{\partial^2\phi({\bf x},t)}\over{\partial t^2}}
+        &={{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}},\cr
+      \nabla^2{\bf A}({\bf x},t)-{{1}\over{c^2}}
+        {{\partial^2{\bf A}({\bf x},t)}\over{\partial t^2}}
+        &=-\mu_0{\bf J}_{\rm r}({\bf x},t).\cr
+    }
+  $$
+}
 
 \section{Elektrodynamiska f{\"a}lt och retarderade potentialer}
 Vi har i tidigare f{\"o}rel{\"a}sningar kommit in p{\aa} hur Maxwells
@@ -91,7 +171,7 @@ $$
 	        +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}}.\cr
   }
 $$
-Tidigare har vi anv{\"a}nt den skal{\"a}ra potentialen $\Phi({\bf x})$ och
+Tidigare har vi anv{\"a}nt den skal{\"a}ra potentialen $\phi({\bf x})$ och
 vektorpotentialen ${\bf A}({\bf x})$ i en {\it elektrostatisk} respektive
 {\it magnetostatisk} analys. Specifikt har vi visat hur det statiska elektriska
 f{\"a}ltet ${\bf E}$ och statiska magnetiska fl{\"o}dest{\"a}theten ${\bf B}$
@@ -127,14 +207,15 @@ att ist{\"a}llet konstatera att partikeln tappar i {\it potential}. Denna
 f{\"o}rlust i potential kan via partikelns massa $m$ enkelt {\"o}vers{\"a}ttas
 till en f{\"o}rlust i {\it potentiell energi}, vilken ist{\"a}llet adderas till
 den {\it kinetiska energin}.
+\vfill\eject
 
 Ett annat syns{\"a}tt {\"a}r att se partikeln som att den befinner sig i en
-skal{\"a}r mekanisk potential $\Phi(z)=gz$, resulterande i ett
+skal{\"a}r mekanisk potential $\phi(z)=gz$, resulterande i ett
 {\it gravitationsf{\"a}lt}
 $$
-  {\bf G}=-\nabla\Phi(z)=-{\bf e}_z g,
+  {\bf G}=-\nabla\phi(z)=-{\bf e}_z g,
   \qquad\Bigg(\quad\Leftrightarrow\qquad
-  {\bf E}=-\nabla\Phi(z)
+  {\bf E}=-\nabla\phi(z)
   \quad\Bigg)
 $$
 i analogi med ett statiskt elektriskt f{\"a}lt ${\bf E}$. Kraften (N) p{\aa}
@@ -158,9 +239,9 @@ $$
 $$
 Denna aningen naivistiska analogi illustrerar hur vi rent elektrostatiskt,
 f{\"o}r {\it statiska} elektriska laddningar, kan se p{\aa} den skal{\"a}ra
-potentialen $\Phi$ och hur vi kan anv{\"a}nda den i elektrostatiska problem
+potentialen $\phi$ och hur vi kan anv{\"a}nda den i elektrostatiska problem
 genom att vi kan extrahera det elektriska f{\"a}ltet genom
-${\bf E}=-\nabla\Phi$. Inom magnetism, som i grund och botten handlar om
+${\bf E}=-\nabla\phi$. Inom magnetism, som i grund och botten handlar om
 laddningars {\it dynamik} (r{\"o}relse), har vi ist{\"a}llet vektorpotentialen
 ${\bf A}$, fr{\aa}n vilken vi ist{\"a}llet f{\aa}r den magnetiska
 fl{\"o}dest{\"a}theten som ${\bf B}=\nabla\times{\bf A}$.
@@ -184,7 +265,7 @@ $$
       \bigg({\bf E}({\bf x},t)
         +{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
       \bigg)
-    }_{=-\nabla\Phi({\bf x},t)}=0.
+    }_{=-\nabla\phi({\bf x},t)}=0.
 $$
 Eftersom rotationen av argumentet {\"a}r noll,\numberedfootnote{Se Griffiths
   sammanfattade vektoridentiteter p{\aa} insidan av p{\"a}rmen,
@@ -194,10 +275,10 @@ potential, s{\"a}g som
 $$
   {\bf E}({\bf x},t)
     +{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
-  =-\nabla\Phi({\bf x},t)
+  =-\nabla\phi({\bf x},t)
   \qquad\Leftrightarrow\qquad
   {\bf E}({\bf x},t)
-    =-\nabla\Phi({\bf x},t)-{{\partial{\bf A}({\bf x},t)}\over{\partial t}}.
+    =-\nabla\phi({\bf x},t)-{{\partial{\bf A}({\bf x},t)}\over{\partial t}}.
 $$
 Valet av negativt tecken f{\"o}r gradienten i potentialen kommer fr{\aa}n
 v{\aa}r konvention f{\"o}r krafter p{\aa} laddningar i elektriska f{\"a}lt,
@@ -206,7 +287,7 @@ F{\"o}r att f{\"o}rtydliga vad vi h{\"a}r gjort, s{\aa} har vi {\it endast}
 anv{\"a}nt Gauss lag f{\"o}r magnetiska f{\"a}lt samt Faradays induktionslag,
 f{\"o}r vilka paret $({\bf E}({\bf x},t),{\bf B}({\bf x},t))$ {\"a}r oberoende
 av materialegenskaperna. Med andra ord {\"a}r existensen av den skal{\"a}ra
-potentialen $\Phi({\bf x},t)$ och vektorpotentialen ${\bf A}({\bf x},t)$
+potentialen $\phi({\bf x},t)$ och vektorpotentialen ${\bf A}({\bf x},t)$
 {\it oberoende av det medium i vilket de analyseras}, {\"a}ven i det
 elektrodynamiska (tidsberoende) fallet.
 
@@ -216,7 +297,8 @@ punkt spatialt som vi uttrycker potentialerna i, med andra ord s{\aa} har vi
 i ekvationerna. Detta kommer dock att inkluderas h{\"a}rn{\"a}st.
 
 \section{V{\aa}gekvationen f{\"o}r retarderade potentialer}
-Om vi substituerar f{\"o}r den skal{\"a}ra potentialen $\Phi({\bf x},t)$ och
+\subsection{Den generella formen av v{\aa}gekvationen f{\"o}r potentialer}
+Om vi substituerar f{\"o}r den skal{\"a}ra potentialen $\phi({\bf x},t)$ och
 vektorpotentialen ${\bf A}({\bf x},t)$ i Gauss och Amp\`eres
 lagar\numberedfootnote{Notera att Gauss och Amp\`eres lagar som involverar
     mediets egenskaper (eftersom vi h{\"a}r betraktar ${\bf E}$ och ${\bf B}$
@@ -233,11 +315,11 @@ elektriska fl{\"o}dest{\"a}theten att
 $$
   \nabla\cdot{\bf E}({\bf x},t)
     =-\nabla\cdot\bigg(
-        \nabla\Phi({\bf x},t)+{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
+        \nabla\phi({\bf x},t)+{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
       \bigg)
     ={{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}
   \qquad\Leftrightarrow\qquad
-    \nabla^2\Phi({\bf x},t)
+    \nabla^2\phi({\bf x},t)
       +{{\partial}\over{\partial t}}\nabla\cdot{\bf A}({\bf x},t)
     =-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}
 $$
@@ -265,12 +347,12 @@ $$
       +\mu_0\varepsilon_0\varepsilon_{\bf r}
       {{\partial{\bf E}({\bf x},t)}\over{\partial t}}\cr
      &=\{\ \hbox{Uttryck i vektorpotentialer,}
-         \ {\bf E}=-\nabla\Phi-{{\partial{\bf A}}\over{\partial t}}\ \}\cr
+         \ {\bf E}=-\nabla\phi-{{\partial{\bf A}}\over{\partial t}}\ \}\cr
      &=\mu_0{\bf J}_{\rm f}({\bf x},t)
       -\mu_0\underbrace{\varepsilon_0\varepsilon_{\bf r}
         {{\partial}\over{\partial t}}
         \bigg(
-          \nabla\Phi({\bf x},t)+{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
+          \nabla\phi({\bf x},t)+{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
         \bigg)
       }_{\displaystyle={{\partial{\bf D}({\bf x},t)}\over{\partial t}}
          =\varepsilon_0\varepsilon_{\rm r}
@@ -291,10 +373,12 @@ $$
     \nabla\bigg(
     \nabla\cdot{\bf A}({\bf x},t)+
     \underbrace{\mu_0\varepsilon_0\varepsilon_{\bf r}}_{=1/c^2}
-    {{\partial\Phi({\bf x},t)}\over{\partial t}}
+    {{\partial\phi({\bf x},t)}\over{\partial t}}
   \bigg)}_{\hbox{Fr{\aa}ga: ``Hur bli av med denna?''}}
     =-\mu_0{\bf J}_{\rm f}({\bf x},t)
 $$
+
+\subsection{Gauge-transformation}
 Om vi skall sammanfatta detta halvv{\"a}gs, s{\aa} har vi i och med detta
 reducerat Maxwells fyra ekvationer till tv{\aa}, vilka dock fortfarande {\"a}r
 kopplade. Att de fortfarande {\"a}r kopplade g{\"o}r det sv{\aa}rt f{\"o}r oss
@@ -324,31 +408,32 @@ det {\it elektriska f{\"a}ltet skall vara of{\"o}r{\"a}ndrat av denna
 transformation,} det vill s{\"a}ga att
 $$
   {\bf E}({\bf x},t)
-    =-\nabla\Phi({\bf x},t)-{{\partial}\over{\partial t}}
+    =-\nabla\phi({\bf x},t)-{{\partial}\over{\partial t}}
         \big[{\bf A}({\bf x},t)+\nabla\psi({\bf x},t)\big]
-    =-\nabla\bigg(\Phi({\bf x},t)
+    =-\nabla\bigg(\phi({\bf x},t)
          +{{\partial\psi({\bf x},t)}\over{\partial t}}\bigg)
     -{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
 $$
 skall f{\"o}rbli of{\"o}r{\"a}ndrad, s{\aa} {\"a}r kravet att den skal{\"a}ra
 potentialen {\it samtidigt} transformeras som
 $$
-  \Phi({\bf x},t)
+  \phi({\bf x},t)
   \quad\to\quad
-  \Phi'({\bf x},t)=\Phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}}.
+  \phi'({\bf x},t)=\phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}}.
 $$
 Den parvisa transformationen
 $$
   \eqalign{
     {\bf A}'({\bf x},t)
       &={\bf A}({\bf x},t)+\nabla\psi({\bf x},t),\cr
-    \Phi'({\bf x},t)
-      &=\Phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}},\cr
+    \phi'({\bf x},t)
+      &=\phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}},\cr
   }
 $$
 kallas f{\"o}r {\it gauge-transformation}, och anv{\"a}nds inte bara inom
 klassisk elektrodynamik, utan {\"a}ven ofta inom kvantmekanik.
 
+\subsection{Lorenz-villkoret (``Lorenz gauge'')}
 Om vi nu {\aa}terv{\"a}nder till grundproblemet med ekvationen f{\"o}r
 vektorpotentialen ovan, s{\aa} kan vi se att vi med de
 {\it gauge-transformerade} potentialerna har att
@@ -356,16 +441,16 @@ $$
   \eqalign{
       \underbrace{
       \nabla\cdot{\bf A}'({\bf x},t)+
-      {{1}\over{c^2}}{{\partial\Phi'({\bf x},t)}\over{\partial t}}
+      {{1}\over{c^2}}{{\partial\phi'({\bf x},t)}\over{\partial t}}
       }_{\hbox{``Det vi f{\"o}rs{\"o}ker bli av med''}}
     &=\nabla\cdot\big({\bf A}({\bf x},t)+\nabla\psi({\bf x},t)\big)+
       {{1}\over{c^2}}{{\partial}\over{\partial t}}
       \bigg(
-        \Phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}}
+        \phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}}
       \bigg)\cr
     &=\{\ \hbox{Stuva om termer}\ \}\cr
     &=\nabla\cdot{\bf A}({\bf x},t)
-        +{{1}\over{c^2}}{{\partial\Phi({\bf x},t)}\over{\partial t}}
+        +{{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}}
       +\underbrace{
          \bigg(
            \nabla^2\psi({\bf x},t)
@@ -384,47 +469,43 @@ inneb{\"a}r detta att vi kan v{\"a}lja den s{\aa} att
 $$
   \nabla\cdot{\bf A}'({\bf x},t)+
     {{1}\over{c^2}}
-    {{\partial\Phi'({\bf x},t)}\over{\partial t}} = 0.
+    {{\partial\phi'({\bf x},t)}\over{\partial t}} = 0.
 $$
 Denna relation mellan vektorpotential och skal{\"a}r potential kallas
 allm{\"a}nt {\it Lorenz-villkoret}.
 Den frihet som gauge-transformen av den skal{\"a}ra potentialen och
 vektorpotentialen bist{\aa}r med inneb{\"a}r allts{\aa} att vi har friheten
-att v{\"a}lja potentialer $\Phi({\bf x},t)$ och ${\bf A}({\bf x},t)$ s{\aa}
+att v{\"a}lja potentialer $\phi({\bf x},t)$ och ${\bf A}({\bf x},t)$ s{\aa}
 att ekvationerna f{\"o}r dem frikopplas, resulterande i tv{\aa} inhomogena
 partiella differentialekvationer
 $$
   \eqalign{
-    \nabla^2\Phi({\bf x},t)-{{1}\over{c^2}}
-      {{\partial^2\Phi({\bf x},t)}\over{\partial t^2}}
+    \nabla^2\phi({\bf x},t)-{{1}\over{c^2}}
+      {{\partial^2\phi({\bf x},t)}\over{\partial t^2}}
       &={{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}},\cr
     \nabla^2{\bf A}({\bf x},t)-{{1}\over{c^2}}
       {{\partial^2{\bf A}({\bf x},t)}\over{\partial t^2}}
       &=-\mu_0{\bf J}_{\rm r}({\bf x},t).\cr
   }
 $$
+
+\subsection{N{\aa}gra observationer}
 Fr{\aa}n dessa tv{\aa} {\it v{\aa}gekvationer} ser vi direkt tv{\aa} saker:
 \medskip
-\item{$\bullet$}{Potentialerna propagerar med ljusets hastighet $c$ (notera
+\litem[1.]{Potentialerna propagerar med ljusets hastighet $c$ (notera
     att $c=c_0/n$ h{\"a}r fortfarande inkluderar brytningsindex
     $n=\sqrt{\varepsilon_{\rm r}}$), s{\aa} teorin bakom gauge-transformationen
     {\"a}r till{\"a}mplig {\"a}ven f{\"o}r elektromagnetisk v{\aa}gpropagation
     i ett dielektrikum.}
-\item{$\bullet$}{L{\"o}sningarna till v{\aa}gekvationerna f{\"o}r potentialerna
+\litem[2.]{L{\"o}sningarna till v{\aa}gekvationerna f{\"o}r potentialerna
     kan f{\aa}s fram exakt p{\aa} analogt s{\"a}tt som f{\"o}r det
     elektrostatiska fallet, s{\aa} l{\"a}nge som vi {\"a}r noga med att ta
     i beaktande {\it tidsf{\"o}rdr{\"o}jningen fr{\aa}n k{\"a}lla till
     observationspunkt}, resulterande i s{\aa} kallade {\it retarderade
     potentialer}.}
-\medskip
-\vfill\eject
 
 \section{[{\"O}verkurs] Gauge-transformen: Lorenz och Coulomb gauge}
-\medskip
-\noindent
-{\it Lorenz gauge}
-\medskip
-\noindent
+\subsection{Lorenz gauge}
 Gauge-transformationen ovan, vilken s{\"a}gs fixera potentialerna i den s{\aa}
 kallade {\it Lorenz gauge},\numberedfootnote{Om Lorenz gauge (Wikipedia):
     ``It is unique among the constraint gauges in retaining manifest Lorentz
@@ -440,10 +521,10 @@ $$
     -{{1}\over{c^2}}{{\partial^2\psi({\bf x},t)}\over{\partial t^2}}
   =-\bigg(
       \nabla\cdot{\bf A}({\bf x},t)
-        +{{1}\over{c^2}}{{\partial\Phi({\bf x},t)}\over{\partial t}}
+        +{{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}}
      \bigg),
 $$
-s{\aa} kommer ekvationerna f{\"o}r $\Phi({\bf x},t)$ och ${\bf A}({\bf x},t)$
+s{\aa} kommer ekvationerna f{\"o}r $\phi({\bf x},t)$ och ${\bf A}({\bf x},t)$
 att frikopplas till tv{\aa} (i allm{\"a}nhet inhomogena) v{\aa}gekvationer.
 Lorenz-villkoret {\"a}r vanligast f{\"o}rekommande n{\"a}r man arbetar med
 retarderade potentialer, eftersom vi d{\aa} f{\aa}r frikopplade ekvationer
@@ -454,11 +535,8 @@ vektorpotentialen.\numberedfootnote{F{\"o}r
     {\it Historical roots of gauge invariance}, Rev. Mod. Phys. {\bf 73},
     663 (2001);
     {\tt https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.73.663}.}
-\medskip
-\noindent
-{\it Coulomb gauge}
-\medskip
-\noindent
+
+\subsection{Coulomb gauge}
 Den andra ofta f{\"o}rekommande varianten {\"a}r {\it Coulomb-villkoret}
 f{\"o}r gauge-transformen, i vilket vi fixerar potentialerna i det s{\aa}
 kallade {\it Coulomb gauge}. I detta fall v{\"a}ljer vi $\psi({\bf x},t)$
@@ -476,22 +554,22 @@ ist{\"a}llet uppfyller
 $$
   \nabla^2\psi({\bf x},t)
     -{{1}\over{c^2}}{{\partial^2\psi({\bf x},t)}\over{\partial t^2}}
-  =-{{1}\over{c^2}}{{\partial\Phi({\bf x},t)}\over{\partial t}},
+  =-{{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}},
 $$
 och vi ser att de partiella differentialekvationerna f{\"o}r potentialerna
 ist{\"a}llet antar formen
 $$
   \eqalign{
-    \nabla^2\Phi({\bf x},t)
+    \nabla^2\phi({\bf x},t)
     &=-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}},\cr
     \bigg(
       \nabla^2-{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}
     \bigg){\bf A}({\bf x},t)
     &=-\mu_0{\bf J}_{\rm f}({\bf x},t)
-      +{{1}\over{c^2}}\nabla{{\partial\Phi({\bf x},t)}\over{\partial t}},\cr
+      +{{1}\over{c^2}}\nabla{{\partial\phi({\bf x},t)}\over{\partial t}},\cr
   }
 $$
-det vill s{\"a}ga att den skal{\"a}ra potentialen $\Phi({\bf x},t)$ nu
+det vill s{\"a}ga att den skal{\"a}ra potentialen $\phi({\bf x},t)$ nu
 (t{\"a}mligen ov{\"a}ntat) uppfyller den vanliga {\it statiska}
 Poisson-ekvationen (notera att vi i denna ekvation saknar tidsderivata, och
 att h{\"o}ger- och v{\"a}nsterled {\"a}r direkt kopplade utan n{\aa}gon
@@ -499,7 +577,7 @@ tidsf{\"o}rdr{\"o}jning mellan k{\"a}lla och observationspunkt), med
 {\it omedelbar} verkan fr{\aa}n en laddningsf{\"o}rdelning $\rho({\bf x},t)$,
 med l{\"o}sningen
 $$
-  \Phi({\bf x},t)={{1}\over{4\pi\varepsilon_0\varepsilon_{\rm r}}}
+  \phi({\bf x},t)={{1}\over{4\pi\varepsilon_0\varepsilon_{\rm r}}}
       \iiint_{{\Bbb R}^3}{{\rho({\bf x},t)}\over{|{\bf x}-{\bf x}'|}}\,dV'.
 $$
 Ett annat s{\"a}tt att se p{\aa} detta {\"a}r att vi i denna gauge har den
@@ -508,13 +586,13 @@ fr{\aa}n laddningst{\"a}theten $\rho({\bf x},t)$, d{\"a}rav att detta betecknas
 som {\it Coulomb gauge}. I denna gauge l{\"o}ser vi principiellt f{\"o}rst
 f{\"o}r den skal{\"a}ra potentialen (och ignorerar det faktum att potentialer
 likt de elektromagnetiska f{\"a}lten i verkligheten sj{\"a}lvfallet propagerar
-med ljusets hastighet), varvid vi anv{\"a}nder l{\"o}sningen $\Phi({\bf x},t)$
+med ljusets hastighet), varvid vi anv{\"a}nder l{\"o}sningen $\phi({\bf x},t)$
 som en k{\"a}llterm i den inhomogena v{\aa}gekvationen f{\"o}r
 vektorpotentialen ${\bf A}({\bf x},t)$.
 
 Coulomb-villkoret (Coulomb gauge) anv{\"a}nds ofta f{\"o}r f{\"a}ltproblem
 d{\aa} vi har avsaknad av fria laddningar eller str{\"o}mmar. I detta fall
-{\"a}r den skal{\"a}ra potentialen $\Phi({\bf x},t)=0$, och vektorpotentialen
+{\"a}r den skal{\"a}ra potentialen $\phi({\bf x},t)=0$, och vektorpotentialen
 uppfyller d{\aa} den homogena v{\aa}gekvationen
 $$
   \bigg(
@@ -563,9 +641,9 @@ ${\bf B}({\bf x},t)$ l{\"o}sas genom att precis som i det elektrostatiska
 fallet f{\"o}rst ber{\"a}kna integralerna f{\"o}r (den genom Lorenz-villkoret
 frikopplade) skal{\"a}ra potentialen och vektorpotentialen. Dessa potentialer
 {\"a}r dock f{\"o}r det elektrodynamiska fallet tidsberoende, oavsett att de i
-{\it Lorenz gauge} {\"a}r frikopplade, och deras v{\"a}rden $\Phi({\bf x},t)$
+{\it Lorenz gauge} {\"a}r frikopplade, och deras v{\"a}rden $\phi({\bf x},t)$
 respektive ${\bf A}({\bf x},t)$ vid tidpunkten $t$ kommer att bero p{\aa}
-summan av deras infinitesimala bidrag $d\Phi({\bf x},t')$ och
+summan av deras infinitesimala bidrag $d\phi({\bf x},t')$ och
 $d{\bf A}({\bf x},t')$ fr{\aa}n en {\it tidigare} tidpunkt $t'$.
 
 \epsfig{figs/chargedist.1}\noindent
@@ -581,7 +659,7 @@ den skal{\"a}ra potentialen och vektorpotentialen f{\"o}r {\it retarderade
 potentialer} (eller ``f{\"o}rdr{\"o}jda'' potentialer, om man s{\aa} vill).
 Dessa potentialer formuleras som volymintegralerna
 $$
-  \Phi({\bf x},t)={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
+  \phi({\bf x},t)={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
     {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\qquad\qquad
   {\bf A}({\bf x},t)={{\mu_0}\over{4\pi}}\iiint_{{\Bbb R}^3}
     {{{\bf J}({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',
@@ -597,7 +675,7 @@ ${\bf B}({\bf x},t)$ direkt fr{\aa}n relationerna
 $$
   {\bf B}({\bf x},t)=\nabla\times{\bf A}({\bf x},t),\qquad\qquad
   {\bf E}({\bf x},t)
-    =-\nabla\Phi({\bf x},t)-{{\partial{\bf A}({\bf x},t)}\over{\partial t}}.
+    =-\nabla\phi({\bf x},t)-{{\partial{\bf A}({\bf x},t)}\over{\partial t}}.
 $$
 Notera att denna evaluering av potentialerna sj{\"a}lvfallet sker vid den
 {\it aktuella} tiden $t$ (vid vilken vid evaluerar f{\"a}lten); all tidigare
@@ -607,7 +685,7 @@ potentialerna har ju inkluderats genom sj{\"a}lva integrationen.
 
 \section{Exempel: Halvv{\aa}gsantenn och emitterade elektromagnetiska f{\"a}lt}
 Som ett handfast exempel p{\aa} den praktiska till{\"a}mpningen av de
-retarderade potentialerna $\Phi({\bf x},t)$ och ${\bf A}({\bf x},t)$ skall vi
+retarderade potentialerna $\phi({\bf x},t)$ och ${\bf A}({\bf x},t)$ skall vi
 nu genom dessa potentialer ber{\"a}kna de emitterade elektriska och magnetiska
 f{\"a}lten ${\bf E}({\bf x},t)$ och ${\bf B}({\bf x},t)$ fr{\aa}n en
 halvv{\aa}gsantenn (s{\aa} kallad ``dipolantenn''), riktad l{\"a}ngs
@@ -635,13 +713,13 @@ Evaluera f{\"a}lten vid en punkt ${\bf x}=x{\bf e}_x$ d{\"a}r $x\gg\lambda$.
     att fr{\aa}n str{\"o}mmen s{\"o}ka potentialerna och ur dessa f{\"a}lten,
     $$
       I(z,t)\quad\to\quad
-      \underbrace{\Phi({\bf x},t),{\bf A}({\bf x},t)}_{\hbox{retarderade
+      \underbrace{\phi({\bf x},t),{\bf A}({\bf x},t)}_{\hbox{retarderade
           potentialer}}
       \quad\to\qquad
       \underbrace{
         \vbox{
           \hbox{$\displaystyle
-	    {\bf E}({\bf x},t)=-\nabla\Phi({\bf x},t)
+	    {\bf E}({\bf x},t)=-\nabla\phi({\bf x},t)
 	        -{{\partial{\bf A}({\bf x},t)}\over{\partial t}}$}
           \hbox{$\displaystyle
 	    {\bf B}({\bf x},t)=\nabla\times{\bf A}({\bf x},t)$}
@@ -699,7 +777,7 @@ Ur detta f{\aa}r vi d{\"a}refter direkt den retarderade skal{\"a}ra potentialen
 som
 $$
   \eqalign{
-    \Phi({\bf x},t)
+    \phi({\bf x},t)
       &={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
         {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV'\cr
       &=\{\ \hbox{linjeladdning}\ \to\ \hbox{en-dimensionell integral}\ \}\cr
@@ -724,10 +802,10 @@ $$
 Detta n{\aa}got sn{\"o}pliga resultat {\"a}r n{\aa}got vi faktiskt borde ha
 anat redan utifr{\aa}n den symmetriska integralen l{\"a}ngs $z$ och den
 {\it anti-symmetriska} formen p{\aa} integranden $\sin(2\pi z/\lambda)$.
-Att den skal{\"a}ra potentialen $\Phi({\bf x},t)$ {\"a}r identiskt noll betyder
+Att den skal{\"a}ra potentialen $\phi({\bf x},t)$ {\"a}r identiskt noll betyder
 dock {\it inte} att det elektriska f{\"a}ltet {\"a}r noll, vilket vi l{\"a}tt
 kan f{\"o}rledas att tro ifr{\aa}n det {\it elektrostatiska} sambandet
-${\bf E}=-\nabla\Phi$, vilket inte {\"a}r applicerbart r{\"a}tt av f{\"o}r
+${\bf E}=-\nabla\phi$, vilket inte {\"a}r applicerbart r{\"a}tt av f{\"o}r
 {\it elektrodynamiska} (tidsberoende) problem som detta. Ist{\"a}llet {\"a}r
 det tidsderivatan av vektorpotentialen som kommer att bist{\aa} med detta.
 
@@ -791,7 +869,7 @@ observationspunkten ${\bf x}$ som
 $$
   \eqalign{
     {\bf E}({\bf x},t)
-      &=-\underbrace{\nabla\Phi({\bf x},t)}_{=0}
+      &=-\underbrace{\nabla\phi({\bf x},t)}_{=0}
           -{{\partial {\bf A}({\bf x},t)}\over{\partial t}}\cr
       &=-{\bf e}_z{{\partial}\over{\partial t}}\bigg(
            {{\mu_0 I_0 \lambda \sin(\omega(t-x/c))}\over{4\pi^2 x}}
