@@ -35,5 +35,21 @@ In this directory, the included `Makefile` can be used to regenerate the
 documents, figures and graphs. Just run `make` and ensure to install any
 missing components in case there are any complaints.
 
+## List of figures
+
+[`figs/analogi.mp`](figs/analogi.mp)
+    ([`figs/analogi.pdf`](figs/analogi.pdf))
+    <i>MetaPost drawing of the analogy between potential energy and
+    electrostatic potential.</i>
+
+[`figs/chargedist.mp`](figs/chargedist.mp)
+    ([`figs/chargedist.pdf`](figs/chargedist.pdf))
+    <i>MetaPost drawing of the classical electric charge distribution
+    used when analyzing multipole expansion of the potential.</i>
+
+[`figs/example.mp`](figs/example.mp)
+    ([`figs/example.pdf`](figs/example.pdf))
+    <i>MetaPost drawing of the geometry of the half-wave antenna.</i>
+
 ## Copyright
 Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
