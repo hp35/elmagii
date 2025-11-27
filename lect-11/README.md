@@ -29,6 +29,34 @@ från varandra. Formen för de retarderade potentialerna, där ett objekts verka
 på avstånd analyseras, formuleras på integralform för den skalära potentialen
 och vektorpotentialen, och exemplifieras slutligen för en tunn dipolantenn.
 
+## Contents
+
+1. Elektrodynamiska fält och retarderade potentialer
+
+2. Recap på vad skalära potentialen och vektorpotentialen är bra för
+
+3. Retarderade potentialer och kopplingen till elektromagnetiska fält
+
+4. Vågekvationen för retarderade potentialer
+
+    4.1. Den generella formen av vågekvationen för potentialer
+
+    4.2. Gauge-transformation
+
+    4.3. Lorenz-villkoret ("Lorenz gauge")
+
+    4.4. Några observationer
+
+5. Gauge-transformen: Lorenz och Coulomb gauge
+
+    5.1. Lorenz gauge
+
+    5.2. Coulomb gauge
+
+6. Retarderade potentialer på integralform
+
+7. Exempel: Halvvågsantenn och emitterade elektromagnetiska fält
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
