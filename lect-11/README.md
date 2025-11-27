@@ -11,6 +11,24 @@ potentials as solutions to Maxwell's equations</i>), including all TeX code
 
 [lecture-11.pdf](lecture-11.pdf) - Compiled document containing the Lecture Notes.
 
+## Summary of the lecture (Swedish)
+
+Vi inleder med en rekapitulation av den generella formen på den
+elektromagnetiska vågekvationen för elektriska och magnetiska fält, följt
+av en analogi mellan potentialerna och mekaniska system.
+Utifrån definitionen av vektorpotentialen <b>A</b> som <b>B</b> = ∇ × <b>A</b>
+från identiteten ∇ · <b>B</b> = 0, så erhåller vi via Faradays lag att det
+elektriska fältet i elektrodynamiska problem måste innehålla även
+vektorpotentialen som <b>E</b> = −∇φ−∂<b>A</b>/∂<i>t</i>.
+
+Vågekvationen för de elektrodynamiska potentialerna formuleras, följt av en
+genomgång av en viss form av godtycke som existerar i valet av potentialerna,
+under den så kallade gauge-transformen. Vi finner under antagande om
+Lorenz-villkoret (Lorenz gauge) att ekvationerna för potentialermna frikopplas
+från varandra. Formen för de retarderade potentialerna, där ett objekts verkan
+på avstånd analyseras, formuleras på integralform för den skalära potentialen
+och vektorpotentialen, och exemplifieras slutligen för en tunn dipolantenn.
+
 ## Compiling the TeX code and figures
 
 In this directory, the included `Makefile` can be used to regenerate the
