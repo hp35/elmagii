@@ -57,6 +57,14 @@ som <b>B</b><sub><i>k</i></sub> = <b>k</b> × <b>E</b><sub><i>k</i></sub>/ω.
 2. Plana elektromagnetiska fält och d'Alemberts generella lösning
    till vågekvationen
 
+    2.1. d'Alemberts variabelsubstitution
+
+    2.2. Integration of d'Alemberts transformerade vågekvation
+
+    2.3. Tolkning av reducerad fashastighet och brytningsindex
+
+    2.4. Initialvillkor
+
 3. Tidsharmoniska fält och planvågsuppdelning
 
 4. Poynting-vektorn
