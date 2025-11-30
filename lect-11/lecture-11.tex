@@ -412,7 +412,7 @@ $$
 $$
 vilket vi {\aa}tminstone fr{\aa}n f{\"o}rekomsten av ``$\nabla^2$'' kan b{\"o}rja gissa oss till kommer att handla om en v{\aa}gekvation. Det som saknas h{\"a}r {\"a}r hur vi skall tolka tidsderivatan av $\nabla\cdot{\bf A}({\bf x},t)$.
 
-Fr{\aa}n Amp\`eres lag i dess grundform (notera att detta {\"a}r punkten d{\aa} vi f{\"o}r in de magnetiska materialegenskaperna i problemet via de konstitutiva relationerna f{\"o}r ${\bf H}$ och ${\bf D}$),
+Fr{\aa}n Amp\`eres lag i dess grundform (notera att detta {\"a}r punkten d{\aa} vi i princip f{\"o}r in kopplingen med magnetiska egenskaper i problemet via de konstitutiva relationerna f{\"o}r ${\bf H}$ och ${\bf D}$),
 $$
   \nabla\times{\bf H}={\bf J}_{\rm f}+{{\partial{\bf D}}\over{\partial t}},
 $$
@@ -421,22 +421,25 @@ ${\bf B}({\bf x},t)=\mu_0{\bf H}({\bf x},t)$, har vi samtidigt att
 $$
   \eqalign{
     \nabla\times{\bf B}({\bf x},t)
-      &=\underbrace{
+      &=%\underbrace{
          \nabla\times
            \underbrace{
              \nabla\times{\bf A}({\bf x},t)
            }_{={\bf B}({\bf x},t)}
-        }_{=\nabla(\nabla\cdot{\bf A})-\nabla^2{\bf A}}\cr
-     &=\{\ \hbox{Amp\`eres lag}\ \}\cr
+        %}_{=\nabla(\nabla\cdot{\bf A})-\nabla^2{\bf A}}
+        \cr
+     &=\nabla(\nabla\cdot{\bf A})-\nabla^2{\bf A}\cr
+     &=\big\{\hbox{ Amp\`eres lag,
+                    $\nabla\times{\bf B}=\mu_0\nabla\times{\bf H}$ }\big\}\cr
      &=\mu_0{\bf J}_{\rm f}({\bf x},t)
       +\mu_0{{\partial{\bf D}({\bf x},t)}\over{\partial t}}\cr
      &=\mu_0{\bf J}_{\rm f}({\bf x},t)
-      +\mu_0\varepsilon_0\varepsilon_{\bf r}
+      +\mu_0\varepsilon_0\varepsilon_{\rm r}
       {{\partial{\bf E}({\bf x},t)}\over{\partial t}}\cr
      &=\{\ \hbox{Uttryck i vektorpotentialer,}
          \ {\bf E}=-\nabla\phi-{{\partial{\bf A}}\over{\partial t}}\ \}\cr
      &=\mu_0{\bf J}_{\rm f}({\bf x},t)
-      -\mu_0\underbrace{\varepsilon_0\varepsilon_{\bf r}
+      -\mu_0\underbrace{\varepsilon_0\varepsilon_{\rm r}
         {{\partial}\over{\partial t}}
         \bigg(
           \nabla\phi({\bf x},t)+{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
@@ -451,7 +454,7 @@ Om vi stuvar om termerna lite, s{\aa} har vi under utnyttjandet av $\nabla
 $$
   \underbrace{
   \bigg(
-    \nabla^2-\underbrace{\mu_0\varepsilon_0\varepsilon_{\bf r}}_{=1/c^2}
+    \nabla^2-\underbrace{\mu_0\varepsilon_0\varepsilon_{\rm r}}_{=1/c^2}
       {{\partial^2}\over{\partial t^2}}
   \bigg)
   {\bf A}({\bf x},t)
@@ -459,14 +462,14 @@ $$
   -\underbrace{
     \nabla\bigg(
     \nabla\cdot{\bf A}({\bf x},t)+
-    \underbrace{\mu_0\varepsilon_0\varepsilon_{\bf r}}_{=1/c^2}
+    \underbrace{\mu_0\varepsilon_0\varepsilon_{\rm r}}_{=1/c^2}
     {{\partial\phi({\bf x},t)}\over{\partial t}}
   \bigg)}_{\hbox{Fr{\aa}ga: ``Hur bli av med denna?''}}
     =-\mu_0{\bf J}_{\rm f}({\bf x},t)
 $$
 \vfill\eject
 
-\subsection{Gauge-transformation}
+\subsection{Gauge-transformen}
 Om vi skall sammanfatta detta halvv{\"a}gs, s{\aa} har vi i och med detta
 reducerat Maxwells fyra ekvationer till tv{\aa}, vilka dock fortfarande {\"a}r
 kopplade. Att de fortfarande {\"a}r kopplade g{\"o}r det sv{\aa}rt f{\"o}r oss
