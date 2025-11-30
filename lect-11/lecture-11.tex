@@ -72,8 +72,8 @@
   \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
   \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
-\newdimen\itemindent \itemindent=28pt
-\newdimen\hangitemindent \hangitemindent=46pt
+\newdimen\itemindent \itemindent=18pt
+\newdimen\hangitemindent \hangitemindent=38pt
 \def\litem[#1]{\smallbreak\noindent%
   \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
   \hangindent\hangitemindent\ignorespaces}
@@ -135,7 +135,7 @@
      \Big(
        \nabla^2-{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}
      \Big)\phi({\bf x},t)
-        ={{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}},\quad
+        =-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}},\quad
      \Big(
        \nabla^2-{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}
      \Big){\bf A}({\bf x},t)
@@ -636,23 +636,36 @@ $$
         \phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}}
       \bigg)\cr
     &=\{\ \hbox{Stuva om termer}\ \}\cr
-    &=\nabla\cdot{\bf A}({\bf x},t)
+    &=\underbrace{
+      \nabla\cdot{\bf A}({\bf x},t)
         +{{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}}
       +\underbrace{
          \bigg(
            \nabla^2\psi({\bf x},t)
              -{{1}\over{c^2}}{{\partial^2\psi({\bf x},t)}\over{\partial t^2}}
          \bigg)
-       }_{\vbox{
-          \hbox{Vi har frihet att v{\"a}lja $\psi$}
-          \hbox{s{\aa} att denna blir noll!}
-         }}.\cr
+       }_{\hbox{Frihet att v{\"a}lja $\psi$}}
+      }_{\vbox{
+          \hbox{Vi har frihet att v{\"a}lja $\psi$ s{\aa}}
+          \hbox{att h{\"o}gerledet blir noll!}
+          }}.\cr
   }
 $$
 Eftersom funktionen $\psi({\bf x},t)$ {\"a}r {\it godtycklig} (och vi ser nu
 dessutom i formen ovan varf{\"o}r vi kr{\"a}ver att funktionen {\"a}r just
 {\it tv{\aa}} g{\aa}nger differentierbar b{\aa}de i rum och tid), s{\aa}
-inneb{\"a}r detta att vi kan v{\"a}lja den s{\aa} att
+inneb{\"a}r detta specifikt att vi kan v{\"a}lja den s{\aa} att
+$$
+      \nabla\cdot{\bf A}({\bf x},t)
+        +{{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}}
+      +
+         \bigg(
+           \nabla^2\psi({\bf x},t)
+             -{{1}\over{c^2}}{{\partial^2\psi({\bf x},t)}\over{\partial t^2}}
+         \bigg)
+=0
+$$
+vilket i sin tur betyder att ``det vi försöker bli av med'' blir noll,
 $$
   \nabla\cdot{\bf A}'({\bf x},t)+
     {{1}\over{c^2}}
@@ -669,7 +682,7 @@ $$
   \eqalign{
     \nabla^2\phi({\bf x},t)-{{1}\over{c^2}}
       {{\partial^2\phi({\bf x},t)}\over{\partial t^2}}
-      &={{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}},\cr
+      &=-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}},\cr
     \nabla^2{\bf A}({\bf x},t)-{{1}\over{c^2}}
       {{\partial^2{\bf A}({\bf x},t)}\over{\partial t^2}}
       &=-\mu_0{\bf J}_{\rm f}({\bf x},t).\cr
@@ -687,7 +700,7 @@ Fr{\aa}n dessa tv{\aa} {\it v{\aa}gekvationer} ser vi direkt tv{\aa} saker:
 \litem[2.]{L{\"o}sningarna till v{\aa}gekvationerna f{\"o}r potentialerna
     kan f{\aa}s fram exakt p{\aa} analogt s{\"a}tt som f{\"o}r det
     elektrostatiska fallet, s{\aa} l{\"a}nge som vi {\"a}r noga med att ta
-    i beaktande {\it tidsf{\"o}rdr{\"o}jningen fr{\aa}n k{\"a}lla till
+    i beaktande {\it tidsf{\"o}r\-dr{\"o}j\-ningen fr{\aa}n k{\"a}lla till
     observationspunkt}, resulterande i s{\aa} kallade {\it retarderade
     potentialer}.}
 
@@ -716,12 +729,13 @@ att frikopplas till tv{\aa} (i allm{\"a}nhet inhomogena) v{\aa}gekvationer.
 Lorenz-villkoret {\"a}r vanligast f{\"o}rekommande n{\"a}r man arbetar med
 retarderade potentialer, eftersom vi d{\aa} f{\aa}r frikopplade ekvationer
 f{\"o}r den skal{\"a}ra potentialen och
-vektorpotentialen.\numberedfootnote{F{\"o}r
-    en intressant utl{\"a}ggning kring historiken och utvecklingen av teorin
-    bakom gauge-trans\-forma\-tionen, se till exempel J.~D. Jackson,
-    {\it Historical roots of gauge invariance}, Rev. Mod. Phys. {\bf 73},
-    663 (2001);
-    {\tt https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.73.663}.}
+vektorpotentialen.\numberedfootnote{F{\"o}r en intressant utl{\"a}ggning kring
+  historiken och utvecklingen av teorin bakom gauge-trans\-forma\-tionen,
+  inklusive den felaktiga termen {\it Lorentz gauge} (ist{\"a}llet f{\"o}r
+  det korrekta {\it Lorenz gauge}), se till exempel J.~D. Jackson,
+  {\it Historical roots of gauge invariance}, Rev. Mod. Phys. {\bf 73},
+  663 (2001);
+  {\tt https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.73.663}.}
 
 \subsection{Coulomb gauge}
 Den andra ofta f{\"o}rekommande varianten {\"a}r {\it Coulomb-villkoret}
