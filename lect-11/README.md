@@ -39,15 +39,19 @@ och vektorpotentialen, och exemplifieras slutligen för en tunn dipolantenn.
 
 4. Vågekvationen för retarderade potentialer
 
-    4.1. Den generella formen av vågekvationen för potentialer
+    4.1. Plan för hur vi angriper problemet med tidsfördröjning hos potentialer
 
-    4.2. Gauge-transformation
+    4.2. Den generella formen av vågekvationen för vektorpotentialen
 
-    4.3. Lorenz-villkoret ("Lorenz gauge")
+    4.3. Den generella formen av vågekvationen för skalära potentialen
 
-    4.4. Några observationer
+    4.4. Gauge-transformen
 
-5. Gauge-transformen: Lorenz och Coulomb gauge
+    4.5. Lorenz-villkoret ("Lorenz gauge")
+
+    4.6. Några observationer
+
+5. [Överkurs] Gauge-transformen: Lorenz och Coulomb gauge
 
     5.1. Lorenz gauge
 
@@ -56,6 +60,9 @@ och vektorpotentialen, och exemplifieras slutligen för en tunn dipolantenn.
 6. Retarderade potentialer på integralform
 
 7. Exempel: Halvvågsantenn och emitterade elektromagnetiska fält
+
+8. Sammanfattning av Föreläsning 11 - Retarderade potentialer som lösningar
+   till Maxwells ekvationer
 
 ## Compiling the TeX code and figures
 
