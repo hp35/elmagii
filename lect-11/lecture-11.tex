@@ -194,6 +194,7 @@ via dessa potentialer och ur dessa extrahera de tidsvarierande elektriska och
 magnetiska f{\"a}lten. Svaret {\"a}r att det finns s{\aa}dana potentialer, s{\aa}
 kallade {\it retarderade potentialer}, vilkas existens kan h{\"a}rledas fram
 (n{\"a}stan) analogt med det elektrostatiska fallet.
+\vfill\eject
 
 \section{Recap p{\aa} vad skal{\"a}ra potentialen och vektorpotentialen
          {\"a}r bra f{\"o}r}
@@ -215,7 +216,6 @@ att ist{\"a}llet konstatera att partikeln tappar i {\it potential}. Denna
 f{\"o}rlust i potential kan via partikelns massa $m$ enkelt {\"o}vers{\"a}ttas
 till en f{\"o}rlust i {\it potentiell energi}, vilken ist{\"a}llet adderas till
 den {\it kinetiska energin}.
-\vfill\eject
 
 Ett annat syns{\"a}tt {\"a}r att se partikeln som att den befinner sig i en
 skal{\"a}r mekanisk potential $\phi(z)=gz$, resulterande i ett
@@ -253,6 +253,7 @@ ${\bf E}=-\nabla\phi$. Inom magnetism, som i grund och botten handlar om
 laddningars {\it dynamik} (r{\"o}relse), har vi ist{\"a}llet vektorpotentialen
 ${\bf A}$, fr{\aa}n vilken vi ist{\"a}llet f{\aa}r den magnetiska
 fl{\"o}dest{\"a}theten som ${\bf B}=\nabla\times{\bf A}$.
+\vfill\eject
 
 \section{Retarderade potentialer och kopplingen till elektromagnetiska f{\"a}lt}
 Gauss lag f{\"o}r magnetiska fl{\"o}dest{\"a}theten ${\bf B}({\bf x},t)$
@@ -341,11 +342,46 @@ Vi kan h{\"a}r ocks{\aa} notera att f{\"a}lten evalueras p{\aa} exakt samma
 punkt spatialt som vi uttrycker potentialerna i, med andra ord s{\aa} har vi
 {\"a}nnu inte inf{\"o}rt n{\aa}got ``retarderat'' eller ``f{\"o}rdr{\"o}jt''
 i ekvationerna. Detta kommer dock att inkluderas h{\"a}rn{\"a}st.
+\vfill\eject
 
 \section{V{\aa}gekvationen f{\"o}r retarderade potentialer}
-Vi kommer nu att analysera hur vågekvationen 
+\subsection{Plan f{\"o}r hur vi angriper problemet med tidsf{\"o}rdr{\"o}jning hos potentialer}
+S{\aa} l{\aa}ngt i kursen har vi analyserat f{\"a}lt och deras kopplingar till varandra och externa k{\"a}llor som laddningsf{\"o}rdelningar och str{\"o}mt{\"a}theter som fenomen som sker {\it instantant utan n{\aa}gon f{\"o}rdr{\"o}jning i tid}. I m{\aa}nga situationer kan vi dock inte f{\"o}rsumma den f{\"o}rdr{\"o}jning som sker, exempelvis om vi r{\aa}kar ha en tidsvarierande laddningsf{\"o}rdelning, s{\"a}g p{\aa} en antenn, d{\"a}r de olika delarna f{\"o}rdelningen har ett s{\aa} pass varierande avst{\aa}nd som inte kan r{\"a}knas som litet i f{\"o}rh{\aa}llande till observationspunkten.
+Vi har i F{\"o}rel{\"a}sningarna~2 och~ sett hur de {\it statiska} potentialerna, som lyder Poissons ekvation
+$$
+  \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0,\qquad
+  \nabla^2{\bf A}=-\mu_0{\bf J}_{\rm f},
+$$
+direkt leder till explicita l{\"o}sningar p{\aa} integralform som
+$$
+  \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V
+    {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',\qquad
+  {\bf A}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
+    {{{\bf J}_{\rm f}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+$$
+vilket vi erinrar oss {\"a}r en direkt f{\"o}ljd fr{\aa}n formen p{\aa} det elektriska f{\"a}ltet fr{\aa}n den generaliserade formen av Gauss lag f{\"o}r statisk laddning, samt formen p{\aa} magnetf{\"a}ltet enligt Amp\`eres lag (vilken i sin tur {\"a}r h{\"a}rledd fr{\aa}n Biot--Savarts lag). Vi kan med t{\"a}mligen stor s{\"a}kerhet konstatera att potentialerna f{\"a}rdas med ljusets hastighet $c=c_0$ (eller $c=c_0/n$, skalat med brytningsindex $n$ om vi betraktar icke-vakuum), och det {\"a}r rimligt att anta att varje delbidrag i integralformerna ovan d{\"a}rmed kommer att detekteras en viss tid $|{\bf x}-{\bf x}'|/c$ efter den tid $t$ d{\aa} k{\"a}llan hade det tillst{\aa}nd (laddning eller str{\"o}m) som en observat{\"o}r observerar en str{\"a}cka $|{\bf x}-{\bf x}'|$ bort.
 
-\subsection{Den generella formen av v{\aa}gekvationen f{\"o}r potentialer}
+Med andra ord s{\aa} faller det sig helt naturligt att {\it gissa} att en generaliserad form av dessa integralformer, som tar h{\"a}nsyn till den tid $|{\bf x}-{\bf x}'|/c$ som potentialerna vid k{\"a}llpunkterna ${\bf x}'$ tar p{\aa} sig f{\"o}r att n{\aa} fram till en observat{\"o}r vid punkten ${\bf x}$ skulle ges som
+
+$$
+  \phi({\bf x},t)={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
+    {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\qquad
+  {\bf A}({\bf x},t)={{\mu_0}\over{4\pi}}\iiint_{{\Bbb R}^3}
+    {{{\bf J}({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+$$
+d{\"a}r
+$$
+  t' = t - |{\bf x}-{\bf x}'|/c
+$$
+{\"a}r den {\it retarderade tiden} som beror av avst{\aa}ndet mellan k{\"a}lla
+${\bf x}'$ och observationspunkt ${\bf x}$.
+
+Detta argument {\"a}r dock {\"a}n s{\aa} l{\"a}nge av t{\"a}mligen handviftande karakt{\"a}r, och vi har i strikt mening inte {\"a}nnu formulerat hur de {\it dynamiska} potentialerna propagerar. Vi kan f{\"o}rvisso ha en kvalificerad gissning att potentialerna, ur vilka de elektriska och magnetiska f{\"a}lten direkt kan erh{\aa}llas, m{\aa}ste f{\"o}lja exakt samma hastighet som det elektromagnetiska f{\"a}ltet i sig (det vill s{\"a}ga ljushastigheten i mediet), men det finns n{\aa}gra viktiga po{\"a}nger som {\"a}r knutna till potentialerna i sig som vi i sin tur kan utnyttja.
+
+Kort och gott, vi kommer nu att f{\"o}rst analysera hur v{\aa}gekvationen f{\"o}r potentialerna i sig ser ut, och d{\"a}refter f{\"o}lja upp resultatet med att formulera integralformen f{\"o}r de retarderade potentialerna.\numberedfootnote{Spoiler: Den form som alldeles nyss presenterades {\"a}r korrekt!}
+\vfill\eject
+
+\subsection{Den generella formen av v{\aa}gekvationen f{\"o}r dynamiska potentialer}
 Om vi substituerar f{\"o}r den skal{\"a}ra potentialen $\phi({\bf x},t)$ och
 vektorpotentialen ${\bf A}({\bf x},t)$ i Gauss och Amp\`eres
 lagar\numberedfootnote{Notera att Gauss och Amp\`eres lagar som involverar
@@ -357,9 +393,6 @@ s{\aa} f{\aa}r vi, under antagandet om en linj{\"a}r elektrisk
 fl{\"o}dest{\"a}thet i homogent medium,
 $$
   {\bf D}({\bf x},t)=\varepsilon_0\varepsilon_{\rm r}{\bf E}({\bf x},t),
-%  \qquad\Leftrightarrow\qquad
-%  {\bf E}({\bf x},t)={{{\bf D}({\bf x},t)}
-%    \over{\varepsilon_0\varepsilon_{\rm r}}},
 $$
 fr{\aa}n Gauss lag $\nabla\cdot{\bf D}({\bf x},t)=\rho({\bf x},t)$ f{\"o}r den
 elektriska fl{\"o}dest{\"a}theten att
@@ -376,15 +409,6 @@ $$
     \nabla^2\phi({\bf x},t)
       +{{\partial}\over{\partial t}}\nabla\cdot{\bf A}({\bf x},t)
     =-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}
-%  \nabla\cdot{\bf E}({\bf x},t)
-%    =-\nabla\cdot\bigg(
-%        \nabla\phi({\bf x},t)+{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
-%      \bigg)
-%    ={{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}
-%  \qquad\Leftrightarrow\qquad
-%    \nabla^2\phi({\bf x},t)
-%      +{{\partial}\over{\partial t}}\nabla\cdot{\bf A}({\bf x},t)
-%    =-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}
 $$
 vilket vi {\aa}tminstone fr{\aa}n f{\"o}rekomsten av ``$\nabla^2$'' kan b{\"o}rja gissa oss till kommer att handla om en v{\aa}gekvation. Det som saknas h{\"a}r {\"a}r hur vi skall tolka tidsderivatan av $\nabla\cdot{\bf A}({\bf x},t)$.
 
@@ -440,6 +464,7 @@ $$
   \bigg)}_{\hbox{Fr{\aa}ga: ``Hur bli av med denna?''}}
     =-\mu_0{\bf J}_{\rm f}({\bf x},t)
 $$
+\vfill\eject
 
 \subsection{Gauge-transformation}
 Om vi skall sammanfatta detta halvv{\"a}gs, s{\aa} har vi i och med detta
