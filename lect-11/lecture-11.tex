@@ -112,7 +112,7 @@
     {\bf B}({\bf x},t)
       =\nabla\times{\bf A}({\bf x},t).
   $$
-  för vilka de s{\aa} kallade gauge-transformationen av potentialerna,
+  f{\"o}r vilka de s{\aa} kallade gauge-transformationen av potentialerna,
   $$
     {\bf A}'({\bf x},t)={\bf A}({\bf x},t)+\nabla\psi({\bf x},t),\qquad
     \phi'({\bf x},t)=\phi({\bf x},t)
@@ -142,6 +142,14 @@
         =-\mu_0{\bf J}_{\rm f}({\bf x},t).
   $$
 }{%
+  Retarderade potentialer i den retarderade tiden $t'=t-|{\bf x}-{\bf x}'|/c$
+  ges som volymintegralerna
+  $$
+    \phi({\bf x},t)={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
+      {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\qquad
+    {\bf A}({\bf x},t)={{\mu_0}\over{4\pi}}\iiint_{{\Bbb R}^3}
+      {{{\bf J}({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
+  $$
 }
 
 \section{Elektrodynamiska f{\"a}lt och retarderade potentialer}
@@ -165,23 +173,26 @@ $$
           \underbrace{
 	     \bigg({\bf J}_{\rm f}
 	        +{{\partial{\bf P}}\over{\partial t}}
-	        +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}}.\cr
+	        +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}},\cr
   }
 $$
+d{\"a}r ${\bf J}_{\rm f}$ {\"a}r den fria str{\"o}mt{\"a}theten, ${\bf P}$ den
+elektriska polarisationsdensiteten och ${\bf M}$ magnetiseringen hos mediet.
 Tidigare har vi anv{\"a}nt den skal{\"a}ra potentialen $\phi({\bf x})$ och
 vektorpotentialen ${\bf A}({\bf x})$ i en {\it elektrostatisk} respektive
 {\it magnetostatisk} analys. Specifikt har vi visat hur det statiska elektriska
 f{\"a}ltet ${\bf E}$ och statiska magnetiska fl{\"o}dest{\"a}theten ${\bf B}$
-direkt kan f{\aa}s fram ur dessa potentialer, och hur vi p{\aa} ett strukturerat
-s{\"a}tt kan f{\aa} fram potentialerna genom relativt enkla integraler
-({\"o}ver volymer, ytor eller linjer).
+direkt kan f{\aa}s fram ur dessa {\it statiska} potentialer som
+${\bf E}=-\nabla\phi$ och ${\bf B}=\nabla\times{\bf A}$, och hur vi p{\aa}
+ett strukturerat s{\"a}tt kan f{\aa} fram de {\it statiska} potentialerna genom
+relativt enkla integraler ({\"o}ver volymer, ytor eller linjer).
 
 Fr{\aa}gan infinner sig d{\aa} naturligtvis om det finns tidsberoende
-motsvarigheter till dessa potentialer som kan appliceras p{\aa} tidsberoende
-elektromagnetiska f{\"a}lt? I s{\aa} fall skulle vi kunna g{\aa} via dessa
-potentialer och ur dessa extrahera de tidsvarierande elektriska och magnetiska
-f{\"a}lten. Svaret {\"a}r att det finns s{\aa}dana potentialer, s{\aa} kallade
-{\it retarderade potentialer}, vilkas existens kan h{\"a}rledas fram
+motsvarigheter till dessa potentialer som kan appliceras p{\aa} {\it dynamiska}
+(tidsberoende) elektromagnetiska f{\"a}lt? I s{\aa} fall skulle vi kunna g{\aa}
+via dessa potentialer och ur dessa extrahera de tidsvarierande elektriska och
+magnetiska f{\"a}lten. Svaret {\"a}r att det finns s{\aa}dana potentialer, s{\aa}
+kallade {\it retarderade potentialer}, vilkas existens kan h{\"a}rledas fram
 (n{\"a}stan) analogt med det elektrostatiska fallet.
 
 \section{Recap p{\aa} vad skal{\"a}ra potentialen och vektorpotentialen
