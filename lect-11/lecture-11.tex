@@ -345,9 +345,18 @@ i ekvationerna. Detta kommer dock att inkluderas h{\"a}rn{\"a}st.
 \vfill\eject
 
 \section{V{\aa}gekvationen f{\"o}r retarderade potentialer}
-\subsection{Plan f{\"o}r hur vi angriper problemet med tidsf{\"o}rdr{\"o}jning hos potentialer}
-S{\aa} l{\aa}ngt i kursen har vi analyserat f{\"a}lt och deras kopplingar till varandra och externa k{\"a}llor som laddningsf{\"o}rdelningar och str{\"o}mt{\"a}theter som fenomen som sker {\it instantant utan n{\aa}gon f{\"o}rdr{\"o}jning i tid}. I m{\aa}nga situationer kan vi dock inte f{\"o}rsumma den f{\"o}rdr{\"o}jning som sker, exempelvis om vi r{\aa}kar ha en tidsvarierande laddningsf{\"o}rdelning, s{\"a}g p{\aa} en antenn, d{\"a}r de olika delarna f{\"o}rdelningen har ett s{\aa} pass varierande avst{\aa}nd som inte kan r{\"a}knas som litet i f{\"o}rh{\aa}llande till observationspunkten.
-Vi har i F{\"o}rel{\"a}sningarna~2 och~ sett hur de {\it statiska} potentialerna, som lyder Poissons ekvation
+\subsection{Plan f{\"o}r hur vi angriper problemet med tidsf{\"o}rdr{\"o}jning
+  hos potentialer}
+S{\aa} l{\aa}ngt i kursen har vi analyserat f{\"a}lt och deras kopplingar till
+varandra och externa k{\"a}llor som laddningsf{\"o}rdelningar och
+str{\"o}mt{\"a}theter som fenomen som sker {\it instantant utan n{\aa}gon
+f{\"o}rdr{\"o}jning i tid}. I m{\aa}nga situationer kan vi dock inte
+f{\"o}rsumma den f{\"o}rdr{\"o}jning som sker, exempelvis om vi r{\aa}kar ha
+en tidsvarierande laddningsf{\"o}rdelning, s{\"a}g p{\aa} en antenn, d{\"a}r
+de olika delarna f{\"o}rdelningen har ett s{\aa} pass varierande avst{\aa}nd
+som inte kan r{\"a}knas som litet i f{\"o}rh{\aa}llande till observationspunkten.
+Vi har i F{\"o}rel{\"a}sningarna~2 och~ sett hur de {\it statiska} potentialerna,
+som lyder Poissons ekvation
 $$
   \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0,\qquad
   \nabla^2{\bf A}=-\mu_0{\bf J}_{\rm f},
@@ -359,10 +368,23 @@ $$
   {\bf A}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
     {{{\bf J}_{\rm f}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
 $$
-vilket vi erinrar oss {\"a}r en direkt f{\"o}ljd fr{\aa}n formen p{\aa} det elektriska f{\"a}ltet fr{\aa}n den generaliserade formen av Gauss lag f{\"o}r statisk laddning, samt formen p{\aa} magnetf{\"a}ltet enligt Amp\`eres lag (vilken i sin tur {\"a}r h{\"a}rledd fr{\aa}n Biot--Savarts lag). Vi kan med t{\"a}mligen stor s{\"a}kerhet konstatera att potentialerna f{\"a}rdas med ljusets hastighet $c=c_0$ (eller $c=c_0/n$, skalat med brytningsindex $n$ om vi betraktar icke-vakuum), och det {\"a}r rimligt att anta att varje delbidrag i integralformerna ovan d{\"a}rmed kommer att detekteras en viss tid $|{\bf x}-{\bf x}'|/c$ efter den tid $t$ d{\aa} k{\"a}llan hade det tillst{\aa}nd (laddning eller str{\"o}m) som en observat{\"o}r observerar en str{\"a}cka $|{\bf x}-{\bf x}'|$ bort.
+vilket vi erinrar oss {\"a}r en direkt f{\"o}ljd fr{\aa}n formen p{\aa} det
+elektriska f{\"a}ltet fr{\aa}n den generaliserade formen av Gauss lag f{\"o}r
+statisk laddning, samt formen p{\aa} magnetf{\"a}ltet enligt Amp\`eres lag
+(vilken i sin tur {\"a}r h{\"a}rledd fr{\aa}n Biot--Savarts lag).
+Vi kan med t{\"a}mligen stor sannolikhet konstatera att potentialerna, liksom den
+elektromagnetiska v{\aa}g de beskriver, f{\"a}rdas med ljusets hastighet $c=c_0$
+(eller $c=c_0/n$, skalat med brytningsindex $n$ om vi betraktar icke-vakuum),
+och det {\"a}r rimligt att anta att varje delbidrag i integralformerna ovan
+d{\"a}rmed kommer att detekteras en viss tid $|{\bf x}-{\bf x}'|/c$ efter den
+tid $t$ d{\aa} k{\"a}llan hade det tillst{\aa}nd (laddning eller str{\"o}m) som
+en observat{\"o}r observerar en str{\"a}cka $|{\bf x}-{\bf x}'|$ bort.
 
-Med andra ord s{\aa} faller det sig helt naturligt att {\it gissa} att en generaliserad form av dessa integralformer, som tar h{\"a}nsyn till den tid $|{\bf x}-{\bf x}'|/c$ som potentialerna vid k{\"a}llpunkterna ${\bf x}'$ tar p{\aa} sig f{\"o}r att n{\aa} fram till en observat{\"o}r vid punkten ${\bf x}$ skulle ges som
-
+Med andra ord s{\aa} faller det sig helt naturligt att {\it gissa} att en
+generaliserad form av dessa integralformer, som tar h{\"a}nsyn till den tid
+$|{\bf x}-{\bf x}'|/c$ som potentialerna vid k{\"a}llpunkterna ${\bf x}'$ tar
+p{\aa} sig f{\"o}r att n{\aa} fram till en observat{\"o}r vid punkten ${\bf x}$
+skulle ges som
 $$
   \phi({\bf x},t)={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
     {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\qquad
@@ -373,15 +395,29 @@ d{\"a}r
 $$
   t' = t - |{\bf x}-{\bf x}'|/c
 $$
-{\"a}r den {\it retarderade tiden} som beror av avst{\aa}ndet mellan k{\"a}lla
-${\bf x}'$ och observationspunkt ${\bf x}$.
+{\"a}r den {\it retarderade tiden}, eller {\it f{\"o}rdr{\"o}jda tiden}, som
+beror av avst{\aa}ndet $|{\bf x}-{\bf x}'|$ mellan k{\"a}llpunkt ${\bf x}'$ och
+observationspunkt ${\bf x}$.
 
-Detta argument {\"a}r dock {\"a}n s{\aa} l{\"a}nge av t{\"a}mligen handviftande karakt{\"a}r, och vi har i strikt mening inte {\"a}nnu formulerat hur de {\it dynamiska} potentialerna propagerar. Vi kan f{\"o}rvisso ha en kvalificerad gissning att potentialerna, ur vilka de elektriska och magnetiska f{\"a}lten direkt kan erh{\aa}llas, m{\aa}ste f{\"o}lja exakt samma hastighet som det elektromagnetiska f{\"a}ltet i sig (det vill s{\"a}ga ljushastigheten i mediet), men det finns n{\aa}gra viktiga po{\"a}nger som {\"a}r knutna till potentialerna i sig som vi i sin tur kan utnyttja.
+Detta argument {\"a}r dock {\"a}n s{\aa} l{\"a}nge av t{\"a}mligen handviftande
+karakt{\"a}r, och vi har i strikt mening inte {\"a}nnu formulerat hur de
+{\it dynamiska} potentialerna propagerar. Vi kan f{\"o}rvisso ha en kvalificerad
+gissning att potentialerna, ur vilka de elektriska och magnetiska f{\"a}lten
+direkt kan erh{\aa}llas, m{\aa}ste f{\"o}lja exakt samma hastighet som det
+elektromagnetiska f{\"a}ltet i sig (det vill s{\"a}ga ljushastigheten i mediet),
+men det finns n{\aa}gra viktiga po{\"a}nger som {\"a}r knutna till potentialerna
+i sig som vi i sin tur kan utnyttja.
 
-Kort och gott, vi kommer nu att f{\"o}rst analysera hur v{\aa}gekvationen f{\"o}r potentialerna i sig ser ut, och d{\"a}refter f{\"o}lja upp resultatet med att formulera integralformen f{\"o}r de retarderade potentialerna.\numberedfootnote{Spoiler: Den form som alldeles nyss presenterades {\"a}r korrekt!}
+Kort och gott, vi kommer nu att f{\"o}rst analysera hur v{\aa}gekvationen
+f{\"o}r potentialerna i sig ser ut, och d{\"a}refter f{\"o}lja upp resultatet
+med att formulera integralformen f{\"o}r de retarderade
+potentialerna.\numberedfootnote{Spoiler: Den alldeles nyss presenterade
+  gissningen f{\"o}r de retarderade potentialernas integralform {\"a}r
+  helt korrekt!}
 \vfill\eject
 
-\subsection{Den generella formen av v{\aa}gekvationen f{\"o}r dynamiska potentialer}
+\subsection{Den generella formen av v{\aa}gekvationen f{\"o}r dynamiska
+  potentialer}
 Om vi substituerar f{\"o}r den skal{\"a}ra potentialen $\phi({\bf x},t)$ och
 vektorpotentialen ${\bf A}({\bf x},t)$ i Gauss och Amp\`eres
 lagar\numberedfootnote{Notera att Gauss och Amp\`eres lagar som involverar
@@ -410,9 +446,14 @@ $$
       +{{\partial}\over{\partial t}}\nabla\cdot{\bf A}({\bf x},t)
     =-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}
 $$
-vilket vi {\aa}tminstone fr{\aa}n f{\"o}rekomsten av ``$\nabla^2$'' kan b{\"o}rja gissa oss till kommer att handla om en v{\aa}gekvation. Det som saknas h{\"a}r {\"a}r hur vi skall tolka tidsderivatan av $\nabla\cdot{\bf A}({\bf x},t)$.
+vilket vi {\aa}tminstone fr{\aa}n f{\"o}rekomsten av ``$\nabla^2$'' kan
+b{\"o}rja gissa oss till kommer att handla om en v{\aa}gekvation.
+Det som saknas h{\"a}r {\"a}r hur vi skall tolka tidsderivatan av
+$\nabla\cdot{\bf A}({\bf x},t)$.
 
-Fr{\aa}n Amp\`eres lag i dess grundform (notera att detta {\"a}r punkten d{\aa} vi i princip f{\"o}r in kopplingen med magnetiska egenskaper i problemet via de konstitutiva relationerna f{\"o}r ${\bf H}$ och ${\bf D}$),
+Fr{\aa}n Amp\`eres lag i dess grundform (notera att detta {\"a}r punkten d{\aa}
+vi i princip f{\"o}r in kopplingen med magnetiska egenskaper i problemet via de
+konstitutiva relationerna f{\"o}r ${\bf H}$ och ${\bf D}$),
 $$
   \nabla\times{\bf H}={\bf J}_{\rm f}+{{\partial{\bf D}}\over{\partial t}},
 $$
@@ -434,27 +475,31 @@ $$
      &=\mu_0{\bf J}_{\rm f}({\bf x},t)
       +\mu_0{{\partial{\bf D}({\bf x},t)}\over{\partial t}}\cr
      &=\mu_0{\bf J}_{\rm f}({\bf x},t)
-      +\mu_0\varepsilon_0\varepsilon_{\rm r}
+      +\underbrace{\mu_0\varepsilon_0\varepsilon_{\rm r}}_{\equiv 1/c^2}
       {{\partial{\bf E}({\bf x},t)}\over{\partial t}}\cr
      &=\{\ \hbox{Uttryck i vektorpotentialer,}
          \ {\bf E}=-\nabla\phi-{{\partial{\bf A}}\over{\partial t}}\ \}\cr
      &=\mu_0{\bf J}_{\rm f}({\bf x},t)
-      -\mu_0\underbrace{\varepsilon_0\varepsilon_{\rm r}
+      -{{1}\over{c^2}}
         {{\partial}\over{\partial t}}
         \bigg(
           \nabla\phi({\bf x},t)+{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
-        \bigg)
-      }_{\displaystyle={{\partial{\bf D}({\bf x},t)}\over{\partial t}}
-         =\varepsilon_0\varepsilon_{\rm r}
-            {{\partial{\bf E}({\bf x},t)}\over{\partial t}}}.\cr
+        \bigg).\cr
   }
 $$
 Om vi stuvar om termerna lite, s{\aa} har vi under utnyttjandet av $\nabla
-\times\nabla\times{\bf A}\equiv\nabla(\nabla\cdot{\bf A})-\nabla^2{\bf A}$ att
+\times\nabla\times{\bf A}\equiv\nabla(\nabla\cdot{\bf A})-\nabla^2{\bf A}$
+att\numberedfootnote{Recap fr{\aa}n F{\"o}rel{\"a}sning~10, d{\"a}r den
+  homogena v{\aa}gekvationen i tre dimensioner (``d'Alemberts v{\aa}gekvation'')
+  skrevs p{\aa} formen
+  $$
+    \Big(\nabla^2-{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}\Big)
+      f({\bf x},t)=0.
+  $$}
 $$
   \underbrace{
   \bigg(
-    \nabla^2-\underbrace{\mu_0\varepsilon_0\varepsilon_{\rm r}}_{=1/c^2}
+    \nabla^2-{{1}\over{c^2}}
       {{\partial^2}\over{\partial t^2}}
   \bigg)
   {\bf A}({\bf x},t)
@@ -462,8 +507,7 @@ $$
   -\underbrace{
     \nabla\bigg(
     \nabla\cdot{\bf A}({\bf x},t)+
-    \underbrace{\mu_0\varepsilon_0\varepsilon_{\rm r}}_{=1/c^2}
-    {{\partial\phi({\bf x},t)}\over{\partial t}}
+    {{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}}
   \bigg)}_{\hbox{Fr{\aa}ga: ``Hur bli av med denna?''}}
     =-\mu_0{\bf J}_{\rm f}({\bf x},t)
 $$
@@ -471,39 +515,65 @@ $$
 
 \subsection{Gauge-transformen}
 Om vi skall sammanfatta detta halvv{\"a}gs, s{\aa} har vi i och med detta
-reducerat Maxwells fyra ekvationer till tv{\aa}, vilka dock fortfarande {\"a}r
-kopplade. Att de fortfarande {\"a}r kopplade g{\"o}r det sv{\aa}rt f{\"o}r oss
-att formulera hur dessa potentialer skall extraheras fr{\aa}n k{\"a}nda
-variabler s{\aa} som laddningsf{\"o}rdelningar och str{\"o}mt{\"a}theter.
-Is{\"a}rkopplingen av dessa tv{\aa} ekvationer kan dock g{\"o}ras genom att
-utnyttja en viss grad av godtycklighet som fortfarande finns inneboende i
-ekvationerna.
+reducerat Maxwells fyra ekvationer till tv{\aa}, en f{\"o}r den skal{\"a}ra
+potentialen $\phi$ och en f{\"o}r vektorpotentialen ${\bf A}$, vilka dock
+fortfarande {\"a}r kopplade. Att de fortfarande {\"a}r kopplade g{\"o}r det
+sv{\aa}rt f{\"o}r oss att formulera hur dessa potentialer skall extraheras
+fr{\aa}n k{\"a}nda variabler s{\aa} som laddningsf{\"o}rdelningar och
+str{\"o}mt{\"a}theter.
+Is{\"a}rkopplingen av dessa tv{\aa} ekvationer f{\"o}r potentialerna kan dock
+utf{\"o}ras genom att utnyttja en viss grad av godtycklighet som fortfarande
+finns inneboende i ekvationerna, som vi nu skall visa.
 
 Vi noterar att eftersom vektorpotentialen ${\bf B}({\bf x},t)$ definieras
-utifr{\aa}n rotationen
+utifr{\aa}n rotationen av vektorpotentialen som
 $$
-  {\bf B}({\bf x},t)=\nabla\times{\bf A}({\bf x},t)
+  {\bf B}({\bf x},t)=\nabla\times{\bf A}({\bf x},t),
 $$
-av vektorpotentialen (och eftersom vi alltid har att $\nabla\times\nabla f
-\equiv 0$), s{\aa} {\"a}r den senare godtycklig i den bem{\"a}rkelsen att
-magnetf{\"a}ltet l{\"a}mnas invariant d{\aa} vi adderar en gradient av
-n{\aa}gon funktion, s{\"a}g $\psi({\bf x},t)$, till den,
+och eftersom vi alltid har vektoridentiteten $\nabla\times\nabla f\equiv 0$,
+s{\aa} {\"a}r den senare godtycklig i den bem{\"a}rkelsen att magnetf{\"a}ltet
+l{\"a}mnas invariant d{\aa} vi adderar en gradient av n{\aa}gon funktion,
+s{\"a}g $\psi({\bf x},t)$, till den,
 $$
   {\bf A}({\bf x},t)
   \quad\to\quad
   {\bf A}'({\bf x},t)={\bf A}({\bf x},t)+\nabla\psi({\bf x},t),
 $$
 d{\"a}r $\psi({\bf x},t)$ {\"a}r en {\it godtycklig tv{\aa} g{\aa}nger
-differentierbar funktion}, beroende av rums-koordinater och tid. F{\"o}r att
-det {\it elektriska f{\"a}ltet skall vara of{\"o}r{\"a}ndrat av denna
-transformation,} det vill s{\"a}ga att
+kontinuerligt differentierbar funktion},\numberedfootnote{En funktion {\"a}r
+  tv{\aa} g{\aa}nger kontinuerligt differentierbar om den uppfyller att dess
+  f{\"o}rsta- och andraderivator existerar, samt att b{\aa}de f{\"o}rsta- och
+  andraderivatorna {\"a}r kontinuerliga.
+  Fr{\aa}gan {\"a}r d{\aa} naturligtvis: Varf{\"o}r st{\"a}ller vi detta
+  specifika krav p{\aa} {\it gauge-funktionen} $\psi$?
+  Jo, d{\"a}rf{\"o}r att vi st{\"a}ller kravet p{\aa} att det elektromagnetiska
+  f{\"a}ltet {\"a}r {\"o}verallt kontinuerligt d{\"a}r potentiall{\"o}sningarna
+  tas fram, och utg{\"o}rs av f{\"o}rstaderivator av potentialerna, som om vi
+  dessutom i fallet med vektorpotentialen ${\bf A}$ adderar en gradient
+  $\nabla\psi$ dessutom kommer att st{\"a}lla kravet p{\aa} $\psi$ att den
+  {\"a}r just en tv{\aa} g{\aa}nger kontinuerligt differentierbar funktion.}
+beroende av rums-koordinater och tid. Med andra ord har vi full frihet att
+addera en gradient av en l{\"a}mpligt vald skal{\"a}r funktion $\psi$ till
+vektorpotentialen och {\it fortfarande ha exakt samma magnetf{\"a}lt kopplat
+till denna}.
+
+F{\"o}r att det {\it elektriska f{\"a}ltet} skall vara of{\"o}r{\"a}ndrat av
+denna transformation, det vill s{\"a}ga att
 $$
   {\bf E}({\bf x},t)
     =-\nabla\phi({\bf x},t)-{{\partial}\over{\partial t}}
-        \big[{\bf A}({\bf x},t)+\nabla\psi({\bf x},t)\big]
-    =-\nabla\bigg(\phi({\bf x},t)
-         +{{\partial\psi({\bf x},t)}\over{\partial t}}\bigg)
-    -{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
+        \big[
+          \underbrace{
+            {\bf A}({\bf x},t)+\nabla\psi({\bf x},t)
+          }_{={\bf A}'({\bf x},t)}
+        \big]
+    =-\nabla\bigg(
+          \underbrace{
+            \phi({\bf x},t)
+              +{{\partial\psi({\bf x},t)}\over{\partial t}}
+          }_{=\phi'({\bf x},t)}
+         \bigg)
+    -{{\partial{\bf A}'({\bf x},t)}\over{\partial t}}
 $$
 skall f{\"o}rbli of{\"o}r{\"a}ndrad, s{\aa} {\"a}r kravet att den skal{\"a}ra
 potentialen {\it samtidigt} transformeras som
@@ -512,7 +582,7 @@ $$
   \quad\to\quad
   \phi'({\bf x},t)=\phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}}.
 $$
-Den parvisa transformationen
+Sammanfattningsvis, s{\aa} har vi resultatet att den parvisa transformationen
 $$
   \eqalign{
     {\bf A}'({\bf x},t)
@@ -521,13 +591,39 @@ $$
       &=\phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}},\cr
   }
 $$
-kallas f{\"o}r {\it gauge-transformation}, och anv{\"a}nds inte bara inom
-klassisk elektrodynamik, utan {\"a}ven ofta inom kvantmekanik.
+som kallas f{\"o}r {\it gauge-transformation} och anv{\"a}nds inte bara inom
+klassisk elektrodynamik, utan {\"a}ven ofta inom kvantmekanik, l{\"a}mnar de
+elektriska och magnetiska f{\"a}lten\numberedfootnote{Om man skall vara petig,
+  den {\it elektriska f{\"a}ltstyrkan} respektive den {\it magnetiska
+  fl{\"o}dest{\"a}theten}.}
+of{\"o}r{\"a}ndrade,\numberedfootnote{Som en liten illustrativ verifiering av
+  detta grundl{\"a}ggande resultat, s{\aa} {\"a}r allts{\aa}
+  $$
+    {\bf E}=-\nabla\phi'-{{\partial{\bf A}'}\over{\partial t}}
+      =-\nabla\Big(\phi-{{\partial\psi}\over{\partial t}}\Big)
+         -{{\partial}\over{\partial t}}\Big({\bf A}+\nabla\psi\Big)
+      =-\nabla\phi-{{\partial{\bf A}}\over{\partial t}}.
+$$}
+$$
+  \eqalign{
+    {\bf E}({\bf x},t)
+      &\equiv-\nabla\phi'({\bf x},t)
+          -{{\partial{\bf A}'({\bf x},t)}\over{\partial t}},\qquad
+          \bigg(\ =-\nabla\phi({\bf x},t)
+             -{{\partial{\bf A}({\bf x},t)}\over{\partial t}}\ \bigg)\cr
+    {\bf B}({\bf x},t)
+      &\equiv\nabla\times{\bf A}'({\bf x},t).\hskip68.5pt
+      \bigg(\ =\nabla\times{\bf A}({\bf x},t)\ \bigg)\cr
+  }
+$$
+Vi kommer nu att utnyttja denna m{\"o}jlighet till val av gaugefunktionen $\psi$
+f{\"o}r att g{\"o}ra oss av med det som s{\aa} att s{\"a}ga ``inte passar in'' i
+v{\aa}gekvationen f{\"o}r vektorpotentialen.
 
 \subsection{Lorenz-villkoret (``Lorenz gauge'')}
 Om vi nu {\aa}terv{\"a}nder till grundproblemet med ekvationen f{\"o}r
-vektorpotentialen ovan, s{\aa} kan vi se att vi med de
-{\it gauge-transformerade} potentialerna har att
+vektorpotentialen ovan, s{\aa} kan vi se att vi med de {\it gauge-transformerade}
+potentialerna $\phi'({\bf x},t)$ och ${\bf A}'({\bf x},t)$ har att
 $$
   \eqalign{
       \underbrace{
