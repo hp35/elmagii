@@ -338,26 +338,6 @@ och vektorpotentialen, och exemplifieras slutligen för en tunn dipolantenn.
 
 ## Gallery of sample illustrations used in the course
 
-[<i>Lecture 6 - Electric fields in materials</i>](lect-06):
-Boundary conditions for the normal and tangential components of electric field
-across a surface with non-zero charge density.
-![Boundary conditions for normal component of electric field across a surface
-with non-zero charge density.](lect-06/figs/esurfnorm.svg)
-![Boundary conditions for the tangential component of electric field across
-a surface with non-zero charge density.](lect-06/figs/esurftang.svg)
-
-[<i>Lecture 7 - Magnetic fields in materials</i>](lect-07): The orientation of spin to
-form a magnetic polarization density.
-![The orientation of spin to form a magnetic polarization
-density.](lect-07/figs/magdensity.svg)
-
-[<i>Lecture 7 - Magnetic fields in materials</i>](lect-07):
-The geometry used in calculating the equivalent volume and surface currents
-matching the (possibly inhomogeneous) general magnetization of a body.
-![The geometry used in calculating the equivalent volume and surface
-currents matching the (possibly inhomogeneous) general magnetization
-of a body.](lect-07/figs/vectpot.svg)
-
 [<i>Lecture 8 - The multipole expansion</i>](lect-08):
 The scalar potential and static electric field from a linear electric
 quadrupole, being the simplest construction with a quadrupole moment as
