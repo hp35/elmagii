@@ -256,7 +256,41 @@ fl{\"o}dest{\"a}theten som ${\bf B}=\nabla\times{\bf A}$.
 
 \section{Retarderade potentialer och kopplingen till elektromagnetiska f{\"a}lt}
 Gauss lag f{\"o}r magnetiska fl{\"o}dest{\"a}theten ${\bf B}({\bf x},t)$
-g{\"a}ller alltid generellt, och ger direkt vid hand att {\"a}ven en {\it tidsberoende} vektorpotential ${\bf A}({\bf x},t)$ har exakt samma l{\"a}nk till ${\bf B}({\bf x},t)$ som tidigare, eftersom vi vid godtycklig observationspunkt ${\bf x}$ och godtycklig tid $t$ har att
+g{\"a}ller alltid generellt, och ger direkt vid hand att {\"a}ven en
+{\it tidsberoende} vektorpotential ${\bf A}({\bf x},t)$ har exakt samma l{\"a}nk
+till ${\bf B}({\bf x},t)$ som tidigare, eftersom vi vid godtycklig
+observationspunkt ${\bf x}$ och godtycklig tid $t$ har
+att\numberedfootnote{V{\"a}n av ordning kan h{\"a}r fr{\aa}ga sig hur vi
+  verkligen kan s{\"a}ga att $\nabla\cdot{\bf B}=0$ {\"a}ven f{\"o}r
+  {\it dynamiska} f{\"a}lt. Trots allt s{\aa} h{\"a}rledde vi ju detta
+  i F{\"o}rel{\"a}sning~4 utifr{\aa}n en {\it statisk} form av Biot--Savarts
+  lag, och att bara s{\"a}ga att detta {\"a}ven g{\"a}ller {\it dynamiskt}
+  {\"a}r ju lite fusk, eller hur? Det enklaste s{\"a}ttet att visa p{\aa}
+  att $\nabla\cdot{\bf B}=0$ {\"a}ven i ett dynamiskt fall {\"a}r att
+  konstatera att Faradays lag (som ju {\"a}r dynamisk och generellt giltig)
+  ger vid hand att
+  $$
+    \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}}
+    \quad\Rightarrow\quad
+    \underbrace{
+      \nabla\cdot(\nabla\times{\bf E})
+    }_{\nabla\cdot(\nabla\times{\bf a})\equiv0}
+    =-\nabla\cdot\Big({{\partial{\bf B}}\over{\partial t}}\Big)
+    =-{{\partial}\over{\partial t}}\nabla\cdot{\bf B}
+    =0.
+  $$
+  Om vi integrerar den sista likheten med avseende p{\aa} tid, s{\aa} betyder
+  detta kort och gott att $\nabla\cdot{\bf B}=\hbox{konstant}$ i tiden.
+  Oberoende av vilken tid vid vilken vi startar denna identitet, s{\aa}
+  m{\aa}ste $\nabla\cdot{\bf B}$ evaluera till samma konstant, specifikt
+  {\"a}ven d{\aa} vi passerar eller startar fr{\aa}n n{\aa}gon tid d{\aa}
+  vi r{\aa}kar ha en {\it statisk} situation d{\aa} uppenbarligen
+  $\nabla\cdot{\bf B}=0$. Med andra ord {\"a}r enda m{\"o}jligheten att
+  integrationskonstanten i fr{\aa}ga {\"a}r noll, och att det {\"a}ven
+  {\it dynamiskt} g{\"a}ller att $\nabla\cdot{\bf B}=0$.
+  (Ut{\"o}ver att det vore synnerligen m{\"a}rklig fysik om magnetiska
+  monopoler, om de skulle existera, skulle b{\"o}rja upptr{\"a}da enbart
+  i dynamiska experiment.)}
 $$
   \nabla\cdot{\bf B}({\bf x},t)=0
   \qquad\Leftrightarrow\qquad
