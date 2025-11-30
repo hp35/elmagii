@@ -52,13 +52,14 @@ replace-figure-paths:
 	done
 
 compile-booksrc:
-	cp src/book.tex $(PROJECT).tex
+	cp src/frontmatter.tex $(PROJECT).tex
 	@for n in $(LECTNUMS); do \
 		cat lecture-$$n-strip.tex >> $(PROJECT).tex; \
 	done
 	@echo '\\bye' >> $(PROJECT).tex
 
 compile-book:
+	$(TEX) $(PROJECT).tex
 	$(TEX) $(PROJECT).tex
 	@echo "DVI file for $(PROJECT).tex written to $(PROJECT).dvi."
 	$(DVIPS) -D1200 -ta4 $(PROJECT).dvi -o $(PROJECT).ps
@@ -77,4 +78,4 @@ book:
 	done
 
 clean:
-	rm -Rf *~ *.tex *.log *.dvi *.ps
+	rm -Rf *~ lect*.tex *.log *.toc *.dvi *.ps

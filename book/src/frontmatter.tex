@@ -88,6 +88,7 @@
 \def\litem[#1]{\smallbreak\noindent%
   \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
   \hangindent\hangitemindent\ignorespaces}
-\def\cleardoublepage{\ifodd\pageno\vfill\eject\fi ~\vfill\eject}
+\def\cleardoublepage{\ifodd\pageno\vfill\eject\fi~\vskip260pt
+  \centerline{[Page intentionally left blank]} ~\vfill\eject}
 
 \tableofcontents
