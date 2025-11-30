@@ -282,9 +282,9 @@ att\numberedfootnote{V{\"a}n av ordning kan h{\"a}r fr{\aa}ga sig hur vi
   Om vi integrerar den sista likheten med avseende p{\aa} tid, s{\aa} betyder
   detta kort och gott att $\nabla\cdot{\bf B}=\hbox{konstant}$ i tiden.
   Oberoende av vilken tid vid vilken vi startar denna identitet, s{\aa}
-  m{\aa}ste $\nabla\cdot{\bf B}$ evaluera till samma konstant, specifikt
-  {\"a}ven d{\aa} vi passerar eller startar fr{\aa}n n{\aa}gon tid d{\aa}
-  vi r{\aa}kar ha en {\it statisk} situation d{\aa} uppenbarligen
+  m{\aa}ste d{\"a}rmed $\nabla\cdot{\bf B}$ evaluera till samma konstant,
+  specifikt {\"a}ven d{\aa} vi passerar eller startar fr{\aa}n n{\aa}gon
+  tid d{\aa} vi r{\aa}kar ha en {\it statisk} situation d{\aa} uppenbarligen
   $\nabla\cdot{\bf B}=0$. Med andra ord {\"a}r enda m{\"o}jligheten att
   integrationskonstanten i fr{\aa}ga {\"a}r noll, och att det {\"a}ven
   {\it dynamiskt} g{\"a}ller att $\nabla\cdot{\bf B}=0$.
@@ -297,7 +297,11 @@ $$
   {\bf B}({\bf x},t)=\nabla\times{\bf A}({\bf x},t).
 $$
 Om vi s{\"a}tter in vektorpotentialen ${\bf A}({\bf x},t)$ i Faradays
-induktionslag, s{\aa} erh{\aa}ller vi
+induktionslag,\numberedfootnote{Notera hur Faradays lag, som vi erinrar
+  oss h{\"a}rleddes ``rent'' i F{\"o}rel{\"a}sning~5 {\it enbart
+  utifr{\aa}n antagandet om Lorentz-kraften}, {\aa}terigen kommer
+  till assistans!}
+s{\aa} erh{\aa}ller vi
 $$
   \nabla\times{\bf E}({\bf x},t)=
     -{{\partial}\over{\partial t}}
@@ -339,6 +343,8 @@ punkt spatialt som vi uttrycker potentialerna i, med andra ord s{\aa} har vi
 i ekvationerna. Detta kommer dock att inkluderas h{\"a}rn{\"a}st.
 
 \section{V{\aa}gekvationen f{\"o}r retarderade potentialer}
+Vi kommer nu att analysera hur vågekvationen 
+
 \subsection{Den generella formen av v{\aa}gekvationen f{\"o}r potentialer}
 Om vi substituerar f{\"o}r den skal{\"a}ra potentialen $\phi({\bf x},t)$ och
 vektorpotentialen ${\bf A}({\bf x},t)$ i Gauss och Amp\`eres
@@ -351,19 +357,34 @@ s{\aa} f{\aa}r vi, under antagandet om en linj{\"a}r elektrisk
 fl{\"o}dest{\"a}thet i homogent medium,
 $$
   {\bf D}({\bf x},t)=\varepsilon_0\varepsilon_{\rm r}{\bf E}({\bf x},t),
+%  \qquad\Leftrightarrow\qquad
+%  {\bf E}({\bf x},t)={{{\bf D}({\bf x},t)}
+%    \over{\varepsilon_0\varepsilon_{\rm r}}},
 $$
 fr{\aa}n Gauss lag $\nabla\cdot{\bf D}({\bf x},t)=\rho({\bf x},t)$ f{\"o}r den
 elektriska fl{\"o}dest{\"a}theten att
 $$
-  \nabla\cdot{\bf E}({\bf x},t)
-    =-\nabla\cdot\bigg(
-        \nabla\phi({\bf x},t)+{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
-      \bigg)
-    ={{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}
-  \qquad\Leftrightarrow\qquad
+  \nabla\cdot{\bf D}({\bf x},t)
+    =-\varepsilon_0\varepsilon_{\rm r}\nabla\cdot
+      \underbrace{
+        \bigg(
+          \nabla\phi({\bf x},t)+{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
+        \bigg)
+      }_{\equiv-{\bf E}({\bf x},t)}
+    =\rho({\bf x},t)
+  \quad\Leftrightarrow\quad
     \nabla^2\phi({\bf x},t)
       +{{\partial}\over{\partial t}}\nabla\cdot{\bf A}({\bf x},t)
     =-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}
+%  \nabla\cdot{\bf E}({\bf x},t)
+%    =-\nabla\cdot\bigg(
+%        \nabla\phi({\bf x},t)+{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
+%      \bigg)
+%    ={{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}
+%  \qquad\Leftrightarrow\qquad
+%    \nabla^2\phi({\bf x},t)
+%      +{{\partial}\over{\partial t}}\nabla\cdot{\bf A}({\bf x},t)
+%    =-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}
 $$
 vilket vi {\aa}tminstone fr{\aa}n f{\"o}rekomsten av ``$\nabla^2$'' kan b{\"o}rja gissa oss till kommer att handla om en v{\aa}gekvation. Det som saknas h{\"a}r {\"a}r hur vi skall tolka tidsderivatan av $\nabla\cdot{\bf A}({\bf x},t)$.
 
