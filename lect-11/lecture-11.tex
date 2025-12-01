@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-11/lecture-11.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-11/
-% Last change: November 27, 2025
+% Last change: November 30, 2025
 %
 % Lecture No 11 in the course ``Elektromagnetism II, 1TE626 (2023)'',
 % held December 1, 2025, at Uppsala University, Sweden.
@@ -484,8 +484,8 @@ $$
      &=\mu_0{\bf J}_{\rm f}({\bf x},t)
       +\underbrace{\mu_0\varepsilon_0\varepsilon_{\rm r}}_{\equiv 1/c^2}
       {{\partial{\bf E}({\bf x},t)}\over{\partial t}}\cr
-     &=\{\ \hbox{Uttryck i vektorpotentialer,}
-         \ {\bf E}=-\nabla\phi-{{\partial{\bf A}}\over{\partial t}}\ \}\cr
+     &=\Big\{\ \hbox{Uttryck i vektorpotentialer,}
+         \ {\bf E}=-\nabla\phi-{{\partial{\bf A}}\over{\partial t}}\ \Big\}\cr
      &=\mu_0{\bf J}_{\rm f}({\bf x},t)
       -{{1}\over{c^2}}
         {{\partial}\over{\partial t}}
@@ -566,31 +566,41 @@ $$
   {\bf B}({\bf x},t)=\nabla\times{\bf A}({\bf x},t),
 $$
 och eftersom vi alltid har vektoridentiteten $\nabla\times\nabla f\equiv 0$,
-s{\aa} {\"a}r den senare godtycklig i den bem{\"a}rkelsen att magnetf{\"a}ltet
-l{\"a}mnas invariant d{\aa} vi adderar en gradient av n{\aa}gon funktion,
-s{\"a}g $\psi({\bf x},t)$, till den,
+s{\aa} {\"a}r vektorpotentialen godtycklig i den bem{\"a}rkelsen att det
+magnetiska f{\"a}ltet alltid l{\"a}mnas invariant d{\aa} vi adderar en
+gradient av n{\aa}gon skal{\"a}r funktion, s{\"a}g $\psi({\bf x},t)$, till den,
 $$
   {\bf A}({\bf x},t)
   \quad\to\quad
   {\bf A}'({\bf x},t)={\bf A}({\bf x},t)+\nabla\psi({\bf x},t),
 $$
 d{\"a}r $\psi({\bf x},t)$ {\"a}r en {\it godtycklig tv{\aa} g{\aa}nger
-kontinuerligt differentierbar funktion},\numberedfootnote{En funktion {\"a}r
-  tv{\aa} g{\aa}nger kontinuerligt differentierbar om den uppfyller att dess
-  f{\"o}rsta- och andraderivator existerar, samt att b{\aa}de f{\"o}rsta- och
-  andraderivatorna {\"a}r kontinuerliga.
+kontinuerligt differentierbar funktion i rum och tid},\numberedfootnote{En
+  funktion {\"a}r tv{\aa} g{\aa}nger kontinuerligt differentierbar om den
+  uppfyller att dess f{\"o}rsta- och andraderivator existerar, samt att
+  b{\aa}de f{\"o}rsta- och andraderivatorna {\"a}r kontinuerliga.
   Fr{\aa}gan {\"a}r d{\aa} naturligtvis: Varf{\"o}r st{\"a}ller vi detta
   specifika krav p{\aa} {\it gauge-funktionen} $\psi$?
-  Jo, d{\"a}rf{\"o}r att vi st{\"a}ller kravet p{\aa} att det elektromagnetiska
-  f{\"a}ltet {\"a}r {\"o}verallt kontinuerligt d{\"a}r potentiall{\"o}sningarna
-  tas fram, och utg{\"o}rs av f{\"o}rstaderivator av potentialerna, som om vi
-  dessutom i fallet med vektorpotentialen ${\bf A}$ adderar en gradient
-  $\nabla\psi$ dessutom kommer att st{\"a}lla kravet p{\aa} $\psi$ att den
-  {\"a}r just en tv{\aa} g{\aa}nger kontinuerligt differentierbar funktion.}
+  Det enkla svaret p{\aa} denna fr{\aa}ga {\"a}r att vi st{\"a}ller kravet
+  att det elektromagnetiska f{\"a}ltet {\"a}r {\"o}verallt kontinuerligt
+  d{\"a}r potentiall{\"o}sningarna tas fram, i omgivningar fria fr{\aa}n
+  diskontinuiteter, och att detta f{\"a}lt utg{\"o}rs av f{\"o}rstaderivator
+  av potentialerna.
+  Om vi dessutom i fallet med vektorpotentialen ${\bf A}$ {\it adderar en
+  gradient} $\nabla\psi$ dessutom kommer att st{\"a}lla kravet p{\aa} $\psi$
+  att den {\"a}r just en tv{\aa} g{\aa}nger kontinuerligt differentierbar
+  funktion.
+  Detta enkla svar haltar dock en aning, speciellt d{\aa} detta inte
+  f{\"o}rklarar varf{\"o}r $\psi$ dessutom m{\aa}ste vara tv{\aa} g{\aa}nger
+  kontinuerligt differentierbar {\"a}ven i tid. Vi kommer strax att se ett
+  b{\"a}ttre sk{\"a}l till varf{\"o}r vi kr{\"a}ver av $\psi$ att den {\"a}r
+  tv{\aa} g{\aa}nger kontinuerligt differentierbar s{\aa}v{\"a}l i rum som
+  i tid.}
 beroende av rums-koordinater och tid. Med andra ord har vi full frihet att
 addera en gradient av en l{\"a}mpligt vald skal{\"a}r funktion $\psi$ till
-vektorpotentialen och {\it fortfarande ha exakt samma magnetf{\"a}lt kopplat
-till denna}.
+vektorpotentialen och {\it fortfarande ha exakt samma magnetiska f{\"a}lt
+kopplat till denna}.
+\vfill\eject
 
 F{\"o}r att det {\it elektriska f{\"a}ltet} skall vara of{\"o}r{\"a}ndrat av
 denna transformation, det vill s{\"a}ga att
@@ -599,13 +609,13 @@ $$
     =-\nabla\phi({\bf x},t)-{{\partial}\over{\partial t}}
         \big[
           \underbrace{
-            {\bf A}({\bf x},t)+\nabla\psi({\bf x},t)
-          }_{={\bf A}'({\bf x},t)}
+            {\bf A}'({\bf x},t)-\nabla\psi({\bf x},t)
+          }_{={\bf A}({\bf x},t)}
         \big]
     =-\nabla\bigg(
           \underbrace{
             \phi({\bf x},t)
-              +{{\partial\psi({\bf x},t)}\over{\partial t}}
+              -{{\partial\psi({\bf x},t)}\over{\partial t}}
           }_{=\phi'({\bf x},t)}
          \bigg)
     -{{\partial{\bf A}'({\bf x},t)}\over{\partial t}}
@@ -654,6 +664,7 @@ $$
 Vi kommer nu att utnyttja denna m{\"o}jlighet till val av gaugefunktionen $\psi$
 f{\"o}r att g{\"o}ra oss av med det som s{\aa} att s{\"a}ga ``inte passar in'' i
 v{\aa}gekvationen f{\"o}r vektorpotentialen.
+\vfill\eject
 
 \subsection{Lorenz-villkoret (``Lorenz gauge'')}
 Om vi nu {\aa}terv{\"a}nder till grundproblemet med ekvationen f{\"o}r
