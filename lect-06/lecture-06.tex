@@ -62,7 +62,16 @@
   \leftskip=0pt\rightskip=0pt\bigskip}
 \def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
   \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
-  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt\vfill\eject}
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{6}
@@ -85,14 +94,40 @@
   och vi formulerar ur denna den elektriska susceptibiliteten $\chi_{\rm e}$
   och den relativa elektriska permittiviteten $\varepsilon_{\rm r}$.
   Vi h{\"a}rleder generaliseringen f{\"o}r Gauss lag f{\"o}r den elektriska
-  fl{\"o}dest{\"a}theten ${\bf D}$ som $\nabla\cdot{\bf D}={\rho}_{\bf f}$,
-  d{\"a}r ${\rho}_{\bf f}$ {\"a}r den fria laddningst{\"a}theten.
+  fl{\"o}dest{\"a}theten ${\bf D}$ som $\nabla\cdot{\bf D}={\rho}_{\rm f}$,
+  d{\"a}r ${\rho}_{\rm f}$ {\"a}r den fria laddningst{\"a}theten.
   Randvillkor och {\"o}verg{\aa}ngar mellan olika dielektrika h{\"a}rleds
   f{\"o}r den elektriska f{\"a}ltstyrkan ${\bf E}$ och den elektriska
   fl{\"o}dest{\"a}theten ${\bf D}$, f{\"o}r deras normal- och
   tangentialkomponenter.
   Slutligen formulerar vi m{\aa}ttet p{\aa} upplagrad elektrisk energi i
   ett dielektrikum.}
+
+\threepointsummary{%
+  Den elektriska polarisationsdensiteten ${\bf P}$ beskriver
+  det elektriska dipolmomentet per volymenhet,
+  $$
+    {\bf P} \equiv \Big\langle{{d{\bf p}}\over{dV}}\Big\rangle
+      = \varepsilon_0\chi_{\rm e}{\bf E},
+  $$
+  d{\"a}r $\chi_{\rm e}$ {\"a}r den {\it elektriska susceptibiliteten}.
+}{%
+  Den elektriska fl{\"o}dest{\"a}theten,
+  $$
+    {\bf D}
+        \equiv\varepsilon_0{\bf E}+{\bf P}
+        =\varepsilon_0(1+\chi_{\rm e}){\bf E}
+        \equiv\varepsilon_0\varepsilon_{\rm r}{\bf E},
+  $$
+  lyder Gauss lag $\nabla\cdot{\bf D}=\rho_{\rm f}$, d{\"a}r $\rho_{\rm f}$
+  {\"a}r den fria laddningst{\"a}theten.
+}{%
+  Den upplagrade energin hos ett dielektrikum i ett externt p{\aa}lagt
+  elektriskt f{\"a}lt ${\bf E}$ ges av
+  $$
+    W = {{1}\over{2}}\iiint{\bf D}\cdot{\bf E}\,dV.
+  $$
+}
 
 \section{Introduktion}
 Vi kommer i denna f{\"o}rel{\"a}sning att behandla hur ett elektriskt icke
@@ -779,7 +814,7 @@ $$
     {{D^{\parallel}_2}/{\varepsilon^{(2)}_{\rm r}}}
       ={{D^{\parallel}_1}/{\varepsilon^{(1)}_{\rm r}}}.
   $$}
-\item{$\bullet$}{Den upplagrade energin (Joule) hos ett dielektrikun under ett
+\item{$\bullet$}{Den upplagrade energin (Joule) hos ett dielektrikum i ett
   externt p{\aa}lagt elektriskt f{\"a}lt ${\bf E}$ ges av
   $$
     W = {{1}\over{2}}\iiint{\bf D}\cdot{\bf E}\,dV.
