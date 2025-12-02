@@ -62,7 +62,16 @@
   \leftskip=0pt\rightskip=0pt\bigskip}
 \def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
   \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
-  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt\vfill\eject}
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{4}
@@ -100,6 +109,30 @@
   Amp\`eres lag kan tolkas i termer av denna vektorpotential som Poissons
   ekvation $\nabla^2{\bf A}=-\mu_0{\bf J}$ med str{\"o}mt{\"a}theten som
   k{\"a}llterm.}
+
+\threepointsummary{%
+  Lagen om att elektrisk laddning inte kan f{\"o}rsvinna beskrivs av sambandet
+  mellan str{\"o}mt{\"a}thet ${\bf J}$ och laddningst{\"a}thet $\rho$ som
+  $$
+    \nabla\cdot{\bf J}=-{{d\rho}\over{dt}}.
+  $$
+}{%
+  Ur ``lagen om att inga magnetiska monopoler existerar''
+  kan vi direkt formulera vektorpotentialen ${\bf A}$ som
+  $\nabla\cdot{\bf B}=0\ \Leftrightarrow\ {\bf B}=\nabla\times{\bf A}$.
+}{%
+  Amp\`eres lag f{\"o}r den magnetostatiska vektorpotentialen ${\bf A}$ ges
+  som Poissons ekvation med den fria str{\"o}mt{\"a}theten ${\bf J}$ som
+  k{\"a}llterm,
+  $$
+    \nabla^2{\bf A}=-\mu_0{\bf J},
+  $$
+  med den explicita l{\"o}sningen
+  $$
+    {\bf A}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
+      {{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
+  $$
+}
 
 \section{Introduktion}
 Vi kommer i denna f{\"o}rel{\"a}sning att behandla konstanta str{\"o}mmar, i
@@ -1081,7 +1114,7 @@ $$
 
 \section{Sammanfattning av F{\"o}rel{\"a}sning~4 -- Magnetostatik}
 \item{$\bullet$}{Lorentz-kraften p{\aa} fri laddning $q$ med hastighet
-  ${\bf v}$ {\"a}r ${\bf F}=q\big({\bf E}+({\bf v}\times{\bf B})\big).$.}
+  ${\bf v}$ {\"a}r ${\bf F}=q\big({\bf E}+({\bf v}\times{\bf B})\big)$.}
 \item{$\bullet$}{Magnetiska krafter (p{\aa} fria laddningar) utf{\"o}r
   inget arbete!}
 \item{$\bullet$}{Amp\`eres kraftlag p{\aa} str{\"o}mslinga b{\"a}rande
