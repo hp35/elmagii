@@ -185,7 +185,7 @@
 %    \hbox to 30pt{\hfil}}
 %  \footline={\ifnum\pageno>\chapstartpage\hfil\else\hfil\thepageno\hfil\fi}
   \nobreak\vskip 48pt\noindent\ignorespaces
-  \readtocfile\cleardoublepage}
+  \readtocfile\vfill\eject}
 
 \def\lecture #1 {\advance\chapno by 1
   \secno=0
@@ -210,11 +210,13 @@
 \def\section #1 {\advance\secno by 1
   \subsecno=0
   \writenumberedtocentry{section}{#1}{\thechapno.\the\secno}
-  \medskip\goodbreak\noindent{\tenssbx \hbox to20pt{\the\secno.\hfill} #1}
+  \medskip\goodbreak\noindent{\tenssbx \hbox to20pt%
+    {\thechapno.\the\secno.\hfill} #1}
   \par\nobreak\smallskip\noindent}
 \def\subsection #1 {\advance\subsecno by 1
   \writenumberedtocentry{subsection}{#1}{\thechapno.\the\secno.\the\subsecno}
-  \medskip\goodbreak\noindent{\it #1}
+  \medskip\goodbreak\noindent{\it \hbox to30pt%
+    {\thechapno.\the\secno.\the\subsecno.} #1}
   \par\nobreak\smallskip\noindent}
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
