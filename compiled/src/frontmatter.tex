@@ -24,13 +24,172 @@
 %
 \input ../lect-01/macros/epsf.tex
 \input ../lect-01/macros/eplain.tex
-\input macros/bookmacros.tex
+% \input macros/bookmacros.tex
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
 \input amssym % to get the {\Bbb E} font (strikethrough E)
+
+%
+% Various font definitions
+%
+\font\fivecmr=cmr7 at 5 truept
+\font\sevencmr=cmr7
+\font\eightcmr=cmr8
+\font\eightcmssq=cmssq8
+\font\eightcmssqi=cmssqi8
+\font\ninecmti=cmti9
+\font\tencmti=cmti10
+\font\tencmss=cmss10
+\font\tencmcsc=cmcsc10
+\font\tencmssi=cmssi10
+\font\twelvecmbx=cmbx12
+\font\sixteencmbx=cmbx12 at 16 truept
+\font\sixteencmsc=cmcsc10 at 16 truept
+\font\fourteencmssbx=cmssbx10 at 14 truept
+\font\twentyeightcmssbx=cmssbx10 at 28 truept
+
+%
+% Make sure that the METAPOST logo can be loaded even in plain TeX.
+%
+\ifx\MP\undefined
+    \ifx\manfnt\undefined
+            \font\manfnt=logo10
+    \fi
+    \ifx\manfntsl\undefined
+            \font\manfntsl=logosl10
+    \fi
+    \def\MP{{\ifdim\fontdimen1\font>0pt \let\manfnt = \manfntsl \fi
+      {\manfnt META}\-{\manfnt POST}}\spacefactor1000 }%
+\fi
+\ifx\METAPOST\undefined \let\METAPOST=\MP \fi
+
+\countdef\chapno=28         % register to keep track of chapter numbers
+\countdef\secno=29          % register to keep track of section numbers
+\countdef\subsecno=30       % register to keep track of subsection numbers
+\countdef\chapstartpage=31  % register to keep track of start page of chapter
+\countdef\appno=32          % register to keep track of appendix numbers
+\countdef\figno=32          % register to keep track of figure numbers
+\chapno=0
+\appno=0
+\figno=0
+\pageno=-1                  % start with roman page numbering
+
+%
+% Define a convenient macro for the expansion of the chapter numbers.
+% This macro is introduced in order to provide for an easy change of
+% the chapter labeling (from numbers to capital letters) whenever the
+% appendices appear, via a redefinition of '\thechapno' in the '\appendix'
+% macro definition.
+%
+\def\thechapno{\the\chapno}
+
+%
+% Define a macro for the expansion of page numbers, in similar to the
+% '\thechapno' macro for expansion of chapter numbering. In this case
+% we are in particular interested in typsetting the pages preceding the
+% first chapter with roman numerals; this is done by associating them
+% with negative page numbers.
+%
+\def\thepageno{\ifnum\pageno<0\romannumeral-\pageno \else\number\pageno\fi}
+\def\abs#1{\ifnum#1<0 \number-#1\else\number#1\fi}
+
+%
+% The following redefinitions of the default eplain TeX table-of-contents
+% line styles causes the generated table of contents to be of the form:
+%
+%        Preface . . . . . . . . . . . . . . . . . . . . . . .  v
+%     1  Introduction                                           1
+%     2  The classical picture                                  9
+%        2.1  The mechanical spring oscillator . . . . . . . . 10
+%        2.2  Damped motion  . . . . . . . . . . . . . . . . . 12
+%             2.2.1 Longitudinal relaxation  . . . . . . . . . 14
+%             2.2.2 Transverse relaxation  . . . . . . . . . . 15
+%     3  Lagrangian formulation                                17
+%     Bibliography                                             27
+%     Index                                                    35
+%
+\newdimen\tocchapindent \tocchapindent=20pt
+\newdimen\tocsecindent \tocsecindent=20pt
+\newdimen\tocsubsecindent \tocsubsecindent=27pt
+\def\tocpreentry#1#2#3{\line{
+  \hbox to\tocchapindent{\hfil}
+  \hbox{#1}\dotfill{#3}}}%
+\def\tocchapterentry#1#2#3{\bigskip\goodbreak\line{
+  \hbox to\tocchapindent{\bf #2\hfil}
+  \hbox{\bf #1}\hfill{\bf #3}}}%
+\def\tocsectionentry#1#2#3{\line{
+  \hbox to\tocchapindent{\hfil}
+  \hbox to\tocsecindent{#2\hfil}
+  \hbox{#1}\dotfill\ {#3}}}%
+\def\tocsubsectionentry#1#2#3{\line{
+  \hbox to\tocchapindent{\hfil}
+  \hbox to\tocsecindent{\hfil}
+  \hbox to\tocsubsecindent{#2\hfil}
+  \hbox{#1}\dotfill\ {#3}}}%
+\def\tocappendixentry#1#2#3{\bigskip\line{
+  \hbox to\tocchapindent{\bf #2\hfil}
+  \hbox{\bf #1}\hfill{\bf #3}}}%
+\def\tocbibentry#1#2#3{\bigskip\line{
+  \hbox{\bf #1}\hfill{\bf #3}}}%
+\def\tocindexentry#1#2#3{\tocbibentry{#1}{#2}{#3}}% identical to '\tocbibentry'
+
+%
+% The following redefinition of the '\writenumberedcontentsentry' macro of
+% the eplain macro package has been done in order to avoid the '\sanitize'
+% operation on the secondary number. If '\sanitized', any multiple appearance
+% of chapter number, section number, etc. would otherwise be destroyed in the
+% secondary number.
+%
+\def\writecontentsentry#1#2#3{\writenumberedcontentsentry{#1}{#2}{#3}{}}%
+\def\writenumberedcontentsentry#1#2#3#4{%
+  \csname ifrewrite#1file\endcsname
+    \csname open#1file\endcsname
+    \toks0 = {\expandafter\noexpand \csname #1#2entry\endcsname}%
+    \def\temp{#3}%
+    \toks2 = \expandafter{#4}%
+    \edef\cs{\the\toks2}%
+    \edef\@wr{%
+      \write\csname #1file\endcsname{%
+        \the\toks0 % the \toc...entry control sequence
+        {\sanitize\temp}% the text
+        \ifx\empty\cs\else {\cs}\fi % A secondary number, or nothing
+        {\noexpand\folio}% the page number
+      }%
+    }%
+    \@wr
+  \fi
+  \ignorespaces
+}%
+
+%
+% The '\tableofcontents' macro typesets the table of contents, based on
+% the entries written to the .toc file by the '\writenumberedtocentry'
+% blocks in the '\chapter', '\section', and '\subsection' macros. The
+% page layout and placement of the `Contents' label is identical to the
+% preface.
+%
+\def\tableofcontents{
+  \chapstartpage=\pageno
+  \message{Contents}
+%  ~\vskip 5pc\goodbreak\noindent{\twelvecmbx Contents}\par
+  ~\vskip 5pc\goodbreak\noindent{\twelvecmbx Inneh{\aa}ll}\par
+%  \headline={\ifnum\abs\pageno>\abs\chapstartpage
+%    \voffset=2\baselineskip\ifodd\pageno\rightheadline\else\leftheadline\fi
+%    \else\voffset=0pt\hfill\fi}
+%  \def\rightheadline{\hbox to 30pt{\hfil}
+%    \hfil{\uppercase{\eightcmr Contents}}\hfil
+%    \hbox to 30pt{\hfil\thepageno}}
+%  \def\leftheadline{\hbox to 30pt{\thepageno\hfil}
+%    \hfil{\uppercase{\eightcmr\bbooktitle}}\hfil
+%    \hbox to 30pt{\hfil}}
+%  \footline={\ifnum\pageno>\chapstartpage\hfil\else\hfil\thepageno\hfil\fi}
+  \nobreak\vskip 48pt\noindent\ignorespaces
+  \readtocfile\cleardoublepage}
+
 \def\lecture #1 {\advance\chapno by 1
-  \writenumberedtocentry{chapter}{#1}{\thechapno}
+  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning #1}{\thechapno}
+  \message{==================== Lecture #1 ====================}
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
   \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
@@ -49,7 +208,7 @@
   \vskip 24pt\noindent}
 \def\section #1 {\advance\secno by 1
   \writenumberedtocentry{section}{#1}{\thechapno.\the\secno}
-  \medskip\goodbreak\noindent{\tenssbx #1}
+  \medskip\goodbreak\noindent{\tenssbx \hbox to20pt{\the\secno.\hfill} #1}
   \par\nobreak\smallskip\noindent}
 \def\subsection #1 {\advance\subsecno by 1
   \writenumberedtocentry{subsection}{#1}{\thechapno.\the\secno.\the\subsecno}
@@ -92,3 +251,4 @@
   \centerline{[Page intentionally left blank]} ~\vfill\eject}
 
 \tableofcontents
+\pageno=1
