@@ -619,7 +619,10 @@ $$
   E^{\perp}_2-E^{\perp}_1={{\sigma}\over{\varepsilon_0}}
 $$
 \epsfig{figs/esurftang.1}\noindent
-P{\aa} liknande s{\"a}tt kan vi analysera tangentiella komposanter ($\parallel$), parallella med ytan, genom att ist{\"a}llet anv{\"a}nda Stokes teorem i en sluten rektangul{\"a}r slinga $\Sigma$ av h{\"o}jd $h\to0$ och som innefattar gr{\"a}nsytan:
+P{\aa} liknande s{\"a}tt kan vi analysera tangentiella komposanter
+($\parallel$), parallella med ytan, genom att ist{\"a}llet anv{\"a}nda Stokes
+teorem i en sluten rektangul{\"a}r slinga $\Sigma$ av h{\"o}jd $h\to0$ och
+som innefattar gr{\"a}nsytan:
 $$
   \hbox{Stokes:}\qquad
   \iint_{\Sigma}\underbrace{(\nabla\times{\bf E})}_{=-\partial{\bf B}/\partial t=0}
@@ -635,8 +638,16 @@ $$
 \noindent{\it Hoppvillkor f{\"o}r elektriska f{\"a}lt mellan olika media}
 \smallskip
 \noindent
-Vi kan nu anv{\"a}nda en analogi till ovanst{\aa}ende f{\"o}r att analysera vad som h{\"a}nder d{\aa} materialen under och ovanf{\"o}r gr{\"a}nsytan har olika relativ elektrisk permittivitet.
-F{\"o}r den elektriska fl{\"o}dest{\"a}theten har Gauss lag (utifr{\aa}n $\nabla\cdot{\bf D}=\rho_{\rm f}$) samma form som f{\"o}r det elektriska f{\"a}ltet, med skillnaden att vi nu har den {\it fria} elektriska laddningst{\"a}theten $\rho_{\rm f}$ som en k{\"a}llterm i h{\"o}gerledet. Med exakt samma geometri som tidigare f{\"o}ljer d{\"a}rmed att vi f{\aa}r\numberedfootnote{{\AA}terigen, sj{\"a}lvfallet med den {\it fria} ytladdningsdensiteten som $\sigma_{\rm f}=Q_{\rm f}/A$ (C/A).}
+Vi kan nu anv{\"a}nda en analogi till ovanst{\aa}ende f{\"o}r att analysera vad
+som h{\"a}nder d{\aa} materialen under och ovanf{\"o}r gr{\"a}nsytan har olika
+relativ elektrisk permittivitet.
+F{\"o}r den elektriska fl{\"o}dest{\"a}theten har Gauss lag (utifr{\aa}n
+$\nabla\cdot{\bf D}=\rho_{\rm f}$) samma form som f{\"o}r det elektriska
+f{\"a}ltet, med skillnaden att vi nu har den {\it fria} elektriska
+laddningst{\"a}theten $\rho_{\rm f}$ som en k{\"a}llterm i h{\"o}gerledet.
+Med exakt samma geometri som tidigare f{\"o}ljer d{\"a}rmed att vi
+f{\aa}r\numberedfootnote{{\AA}terigen, sj{\"a}lvfallet med den {\it fria}
+ytladdningsdensiteten som $\sigma_{\rm f}=Q_{\rm f}/A$ (C/A).}
 $$
   \hbox{Gauss:}\qquad
   \displaystyle
@@ -647,21 +658,32 @@ $$
   \quad\Leftrightarrow\quad
   D^{\perp}_{2}-D^{\perp}_{1} = \sigma_{\rm f},
 $$
-d{\"a}r $\sigma_{\rm f}$ {\"a}r den {\it fria} elektriska ytladdningst{\"a}theten. Med andra ord, s{\aa} tar den normalkomposanten av den elektriska fl{\"o}dest{\"a}theten ${\bf D}$ ett hopp motsvarande den fria ytladdningst{\"a}theten $\sigma_{\rm f}$ d{\aa} vi passerar gr{\"a}nsytan.
+d{\"a}r $\sigma_{\rm f}$ {\"a}r den {\it fria} elektriska
+ytladdningst{\"a}theten. Med andra ord, s{\aa} tar den normalkomposanten av
+den elektriska fl{\"o}dest{\"a}theten ${\bf D}$ ett hopp motsvarande den fria
+ytladdningst{\"a}theten $\sigma_{\rm f}$ d{\aa} vi passerar gr{\"a}nsytan.
 
-Utifr{\aa}n detta resultat {\"a}r det mycket l{\"a}tt att f{\"o}rledas att tro att ett ``universalrecept'' f{\"o}r att behandla elektrostatik i ett medium:
+Utifr{\aa}n detta resultat {\"a}r det mycket l{\"a}tt att f{\"o}rledas att tro
+att ett ``universalrecept'' f{\"o}r att behandla elektrostatik i ett medium:
 \medskip
-\hbox{\hskip60pt ``Vi beh{\"o}ver ju bara byta ut ${\bf E}$ mot ${\bf D}$ och ist{\"a}llet anv{\"a}nda de {\it fria}}
-\hbox{\hskip60pt laddningarna, s{\aa} har vi ju precis samma resultat. Busenkelt!''}
+\hbox{\hskip60pt ``Vi beh{\"o}ver ju bara byta ut ${\bf E}$ mot ${\bf D}$ och
+  ist{\"a}llet anv{\"a}nda de {\it fria}}
+\hbox{\hskip60pt laddningarna, s{\aa} har vi ju precis samma resultat.
+  Busenkelt!''}
 \medskip
 \noindent
-Detta antagande {\"a}r dock falskt, vilket vi kan se genom att exempelvis betrakta rotationen av den elektriska fl{\"o}dest{\"a}theten,
+Detta antagande {\"a}r dock falskt, vilket vi kan se genom att exempelvis
+betrakta rotationen av den elektriska fl{\"o}dest{\"a}theten,
 $$
   \nabla\times{\bf D}
     =\varepsilon_0\underbrace{\nabla\times{\bf E}}_{=0}+\nabla\times{\bf P}
     =\nabla\times{\bf P},
 $$
-vilken generellt {\it inte} alltid {\"a}r identiskt noll.\numberedfootnote{Griffiths har en bra genombelysning av detta i kapitel 4.3.2, sidan~184.} Om vi anv{\"a}nder Stokes teorem p{\aa} $\nabla\times{\bf P}$ s{\aa} erh{\aa}ller vi ist{\"a}llet
+vilken generellt {\it inte} alltid {\"a}r identiskt
+noll.\numberedfootnote{Griffiths har en bra genombelysning av detta i
+  kapitel 4.3.2, sidan~184.}
+Om vi anv{\"a}nder Stokes teorem p{\aa} $\nabla\times{\bf P}$ s{\aa}
+erh{\aa}ller vi ist{\"a}llet
 $$
   \eqalign{
   \hbox{Stokes:}\qquad
