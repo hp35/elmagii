@@ -62,7 +62,16 @@
   \leftskip=0pt\rightskip=0pt\smallskip}
 \def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
   \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
-  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt\vfill\eject}
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{2}
@@ -87,6 +96,38 @@
   utifr{\aa}n Gauss lag f{\"o}r det elektriska f{\"a}ltet p{\aa}
   differentialform omformulera denna i termer av den skal{\"a}ra potentialen
   som Poissons ekvation $\nabla^2\phi=-\rho/\varepsilon_0$.}
+
+\threepointsummary{%
+  Den skal{\"a}ra (elektrostatiska) potentialen $\phi$ f{\"o}ljer direkt av
+  att Coulombs generaliserade lag kan tolkas som en gradient av en skal{\"a}r
+  funktion, som
+  $$
+    {\bf E}({\bf x})
+      ={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
+        {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'
+      =-{{1}\over{4\pi\varepsilon_0}}\nabla\iiint_V
+        {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
+      =-\nabla\phi({\bf x}),
+  $$
+  d{\"a}r den skal{\"a}ra potentialen kort och gott {\it definieras} som
+  $$
+    \phi({\bf x})\equiv{{1}\over{4\pi\varepsilon_0}}\iiint_V
+        {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
+  $$
+}{%
+  Arbete $W$ f{\"o}r att f{\"o}rflytta en punktladdning $q$ fr{\aa}n
+  ${\bf x}_a$ till ${\bf x}_b$ ges i termer av den elektrostatiska potentialen
+  $\phi({\bf x})$ som
+  $$
+    W=q\big(\phi({{\bf x}_b})-\phi({{\bf x}_a})\big)=W_b-W_a,
+  $$
+  d{\"a}r skillnaden $W_b-W_a$ {\"a}r skillnaden i potentiell energi.
+}{%
+  Den skal{\"a}ra potentialen $\phi$ lyder {\it Poissons ekvation},
+  $$
+    \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0.
+  $$
+}
 
 \section{Till{\"a}mpning av Gauss lag - Rak linjeladdning}
 Antag att vi vill ber{\"a}kna den elektriska f{\"a}ltstyrkan (``det elektriska
@@ -560,7 +601,8 @@ Electrodynamics}.
         {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
       =-\nabla\phi({\bf x}),
   $$
-  d{\"a}r den skal{\"a}ra potentialen kort och gott {\it definieras} som
+  d{\"a}r den skal{\"a}ra potentialen utifr{\aa}n detta resultat kort och
+  gott {\it definieras} som
   $$
     \phi({\bf x})\equiv{{1}\over{4\pi\varepsilon_0}}\iiint_V
         {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.

@@ -61,8 +61,22 @@
   \leftskip=0pt\rightskip=0pt\smallskip}
 \def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
   \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
-  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt\vfill\eject}
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
+\newdimen\itemindent \itemindent=18pt
+\newdimen\hangitemindent \hangitemindent=38pt
+\def\litem[#1]{\smallbreak\noindent%
+  \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
+  \hangindent\hangitemindent\ignorespaces}
 
 \lecture{1}
 \centerline{\twelvesc Elektrostatik, superpositionsprincipen och Gauss lag}
@@ -87,6 +101,37 @@
   laddningsf{\"o}rdelningar i form av punkt- linje- yt- eller volymladdningar.
   Slutligen avslutar vi med en h{\"a}rledning av Gauss lag p{\aa}
   differentialform.}
+
+\threepointsummary{%
+  Superpositionsprincipen, som {\"a}r central i hela f{\"o}rel{\"a}sningsserien,
+  inneb{\"a}r att vi kan addera separata l{\"o}sningar f{\"o}r elektriska
+  f{\"a}lt fr{\aa}n separata ladd\-nin\-gar och laddningsf{\"o}rdelningar
+  till en l{\"o}sning f{\"o}r det totala f{\"a}ltet.
+}{%
+  Det elektriska f{\"a}ltet fr{\aa}n ett system av punktladdningar $q'_k$,
+  placerade i k{\"a}llpunkter ${\bf x}'_k$, kan f{\"o}r en kontinuerlig
+  laddningsf{\"o}rdelning (laddnings\-t{\"a}thet) $\rho({\bf x})$ formuleras
+  som Coulombs generaliserade lag (``Coulombintegralen''),
+  $$
+    {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
+       q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}},
+       \quad\Leftrightarrow\quad
+    {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
+      {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'.
+  $$
+  d{\"a}r laddningst{\"a}theten i sin tur kan beskriva punktladdningar som
+  $$
+    \rho({\bf x})=\sum_k q_k \delta({\bf x}-{\bf x}_k)
+  $$
+}{%
+  Gauss lag p{\aa} integral- respektive differentialform:
+  $$
+    \oiint_S {\bf E}\cdot d{\bf A}
+       ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV
+    \qquad\Leftrightarrow\qquad
+    \nabla\cdot{\bf E}={{\rho({\bf x})}\over{\varepsilon_0}}.
+  $$
+}
 
 \section{Introduktion till elektrostatik}
 Vi kommer i denna f{\"o}rsta f{\"o}rel{\"a}sning\numberedfootnote{Detta
@@ -748,12 +793,6 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
   eller kort och gott {\it vakuumpermittiviteten}. Denna permittivitet
   kommer genom kursen att h{\"a}nga med som en signatur p{\aa} allt som
   h{\"a}danefter kommer att h{\"a}rledas fr{\aa}n Coulombs lag.}
-\item{$\bullet$}{Det elektriska f{\"a}ltet fr{\aa}n ett system av
-  punktladdningar $q'_k$ placerade i k{\"a}llpunkter ${\bf x}'_k$ {\"a}r
-  $$
-    {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
-       q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}}.
-  $$}
 \item{$\bullet$}{Superpositionsprincipen inneb{\"a}r att vi kan
   {\it addera separata l{\"o}sningar} f{\"o}r elektriska f{\"a}lt
   och fl{\"o}den fr{\aa}n separata laddningar och laddningsf{\"o}rdelningar
@@ -761,6 +800,17 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
   Superpositionsprincipen g{\"a}ller {\it enbart f{\"o}r linj{\"a}ra
   problem}, i vilka inga potenser av det elektriska f{\"a}ltet finns
   i de grund\-l{\"a}ggande ekvationerna.}
+\item{$\bullet$}{Det elektriska f{\"a}ltet fr{\aa}n ett system av
+  punktladdningar $q'_k$ placerade i k{\"a}llpunkter ${\bf x}'_k$ {\"a}r
+  $$
+    {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
+       q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}},
+  $$
+  med kraften p{\aa} en testladdning (punktladdning) $q$ placerad i
+  observationspunkten ${\bf x}$ given som
+  $$
+    {\bf F}=q{\bf E}({\bf x}).
+  $$}
 \item{$\bullet$}{Coulomb-integralen f{\"o}r ett kontinuum av laddning
   f{\"o}rdelad enligt en laddningst{\"a}thet $\rho({\bf x})$ lyder
   $$
