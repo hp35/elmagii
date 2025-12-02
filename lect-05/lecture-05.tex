@@ -63,7 +63,16 @@
   \leftskip=0pt\rightskip=0pt\bigskip}
 \def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
   \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
-  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt\vfill\eject}
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 
 \lecture{5}
@@ -109,6 +118,25 @@
   av en slinga fr{\aa}n en str{\"o}m i den andra slingan exakt motsvaras av
   det magnetiska fl{\"o}de som den andra slingan skulle uppf{\aa}nga om
   ist{\"a}llet den f{\"o}rsta slingan drevs med exakt samma str{\"o}m.}
+
+\threepointsummary{%
+  Faradays induktionslag,
+  $
+    {\cal E}=-{{d\Phi_{\rm M}}/{dt}}.
+  $
+}{%
+  Faradays lag,
+  $$
+    \nabla\times{\bf E}({\bf r},t)
+      =-{{\partial{\bf B}({\bf x},t)}\over{\partial t}}
+    \quad\Leftrightarrow\quad
+    \oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
+      =-{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\cdot d{\bf S}.
+  $$
+}{%
+  {\"O}msesidig induktans enligt Neumanns formel,
+  $M_{\Gamma\Gamma'}=M_{\Gamma'\Gamma}$.
+}
 
 \section{Introduktion - Faradays induktionslag}
 Vi kan i en enda mening sammanfatta {\"a}mnet f{\"o}r dagens
