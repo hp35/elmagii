@@ -188,6 +188,7 @@
   \readtocfile\cleardoublepage}
 
 \def\lecture #1 {\advance\chapno by 1
+  \secno=0
   \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning #1}{\thechapno}
   \message{==================== Lecture #1 ====================}
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
@@ -207,6 +208,7 @@
     \centerline{\twelvesc F\"orel\"asning #1}
   \vskip 24pt\noindent}
 \def\section #1 {\advance\secno by 1
+  \subsecno=0
   \writenumberedtocentry{section}{#1}{\thechapno.\the\secno}
   \medskip\goodbreak\noindent{\tenssbx \hbox to20pt{\the\secno.\hfill} #1}
   \par\nobreak\smallskip\noindent}
