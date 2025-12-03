@@ -35,6 +35,7 @@
 %-------------------- BEGIN OF LOCAL MACROS --------------------
 \input macros/epsf.tex
 \input macros/eplain.tex
+\input amssym % to get the {\Bbb E} font (strikethrough E)
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
@@ -46,12 +47,12 @@
   \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
     \else\hfill\fi}
   \def\rightheadline{\tenrm{\it F\"orel\"asning \lecturenumber}
-    \hfil{\it \coursename, \coursecode (\courseyear)}}
-  \def\leftheadline{\tenrm{\it \coursename, \coursecode (\courseyear)}
+    \hfil{\it \coursename, \coursecode\ (\courseyear)}}
+  \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
     \hfil{\it F\"orel\"asning \lecturenumber}}
   \noindent~\vskip-60pt\hskip-40pt{\epsfbox{macros/UU_logo_color.eps}}
   \vskip-42pt\hfill\vbox{
-      \hbox{{\it \coursename, \coursecode (\courseyear)}}
+      \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
       \hbox{{\it Lecture Notes, \lectureauthor}}
       \hbox{{\it Document Revision \today}}
       \hbox{{\it \courserepo}}}\vskip 36pt
