@@ -187,27 +187,30 @@
   \nobreak\vskip 48pt\noindent\ignorespaces
   \readtocfile\vfill\eject}
 
-\def\lecture #1 {\advance\chapno by 1
-  \secno=0
-  \footnotenumber=0
-  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning #1}{\thechapno}
-  \message{==================== Lecture #1 ====================}
-  \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
-  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
-  \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
-    \else\hfill\fi}
-  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
-    \hfil{\it Elektromagnetism II, 1TE626 (2025)}}
-  \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2025)}
-    \hfil{\it F\"orel\"asning #1}}
-  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
-  \vskip-42pt\hfill\vbox{
-      \hbox{{\it Elektromagnetism II, 1TE626 (2025)}}
-      \hbox{{\it Lecture Notes, Fredrik Jonsson}}
-      \hbox{{\it Document Revision \today}}
-      \hbox{{\it https://github.com/hp35/elmagii/}}}\vskip 36pt
-    \centerline{\twelvesc F\"orel\"asning #1}
-  \vskip 24pt\noindent}
+%\def\lecture #1 {
+%   \advance\chapno by 1
+%  \secno=0
+%  \footnotenumber=0
+%  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning #1}{\thechapno}
+%  \message{==================== Lecture #1 ====================}
+%  \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+%  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+%  \headline={\ifnum\secno>0\ifodd\pageno\rightheadline\else\leftheadline\fi
+%    \else\hfill\fi}
+%  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
+%    \hfil{\it Elektromagnetism II, 1TE626 (2025)}}
+%  \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2025)}
+%    \hfil{\it F\"orel\"asning #1}}
+%  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+%  \vskip-42pt\hfill\vbox{
+%      \hbox{{\it Elektromagnetism II, 1TE626 (2025)}}
+%      \hbox{{\it Lecture Notes, Fredrik Jonsson}}
+%      \hbox{{\it Document Revision \today}}
+%      \hbox{{\it https://github.com/hp35/elmagii/}}}\vskip 36pt
+%    \centerline{\twelvesc F\"orel\"asning #1}
+%  \vskip 24pt\noindent}
+
+
 \def\section #1 {\advance\secno by 1
   \subsecno=0
   \writenumberedtocentry{section}{#1}{\thechapno.\the\secno}
@@ -255,3 +258,7 @@
 
 \tableofcontents
 \pageno=1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% The rest of this document is autoloaded and formatted externally %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

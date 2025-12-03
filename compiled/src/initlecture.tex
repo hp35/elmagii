@@ -1,0 +1,34 @@
+\edef\expandedlecturenumber{\lecturenumber}
+\def\ifempty#1{\ifx\relax#1\relax}
+\def\initlecture{
+  \advance\chapno by 1
+  \secno=0
+  \footnotenumber=0
+%  \show\expandedlecturenumber
+  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \expandedlecturenumber}{\thechapno}
+%  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \the\lecturenumber}{\thechapno}
+%  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \lecturetitle}{\thechapno}
+%  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \lecturenumber}{\thechapno}
+  \message{==================== Lecture \lecturenumber ====================}
+  \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \headline={\ifnum\secno>0\ifodd\pageno\rightheadline\else\leftheadline\fi
+    \else\hfill\fi}
+  \def\rightheadline{\tenrm{\it F\"orel\"asning \lecturenumber}
+    \hfil{\it \coursename, \coursecode\ (\courseyear)}}
+  \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
+    \hfil{\it F\"orel\"asning \lecturenumber}}
+  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+  \vskip-42pt\hfill\vbox{
+      \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
+      \hbox{{\it Lecture Notes, \lectureauthor}}
+      \hbox{{\it Document Revision \today}}
+      \hbox{{\it \courserepo}}}\vskip 36pt
+  \centerline{\twelvesc F\"orel\"asning \lecturenumber}
+  \vskip 24pt\noindent
+  \centerline{\twelvesc\lecturetitle}
+  \expandafter\ifempty\expandafter{\lecturetitlesub}%
+    \else\centerline{\twelvesc\lecturetitlesub}\fi
+  \bigskip
+  \centerline{\lectureauthor, \lectureplace, \lecturedate}
+  \vskip24pt}
