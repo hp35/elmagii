@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2025 under GPL 3.0, Fredrik Jonsson
 #
-PROJECT = elmagiibook
+PROJECT = complete
 TEX    = tex
 DVIPS  = dvips
 PS2PDF = ps2pdf
@@ -21,34 +21,48 @@ all:
 	make compile-booksrc
 	make compile-book
 
+#extract-raw-src:
+#	@for file in $(LECTURES); do \
+#		base=$$(basename $$file .tex); \
+#		strip=$${base}-strip.tex; \
+#		echo "Processing $$file → $$strip"; \
+#		( \
+#			echo "%%% Begin of auto-extracted text from $$file %%%";\
+#			sed -n '/\\lecture{[0-9][0-9]*}/,/\\bye/ { /\\bye/!p }'\
+#				$$file; \
+#			echo '\\cleardoublepage';\
+#			echo "%%% End of auto-extracted text from $$file %%%";\
+#		) > $$strip; \
+#	done
+
 extract-raw-src:
 	@for file in $(LECTURES); do \
-		base=$$(basename $$file .tex); \
-		strip=$${base}-strip.tex; \
-		echo "Processing $$file → $$strip"; \
-		( \
-			echo "%%% Begin of auto-extracted text from $$file %%%";\
-			sed -n '/\\lecture{[0-9][0-9]*}/,/\\bye/ { /\\bye/!p }'\
-				$$file; \
-			echo '\\cleardoublepage';\
-			echo "%%% End of auto-extracted text from $$file %%%";\
-		) > $$strip; \
+	   base=$$(basename $$file .tex); \
+	   strip=$${base}-strip.tex; \
+	   echo "Processing $$file → $$strip"; \
+	   ( \
+	      echo "%%% Begin of auto-extracted text from $$file %%%";\
+	      sed '/BEGIN OF LOCAL/,/END OF LOCAL/d' $$file \
+	         | sed 's/\\bye//'; \
+	      echo '\\cleardoublepage';\
+	      echo "%%% End of auto-extracted text from $$file %%%";\
+	   ) > $$strip; \
 	done
 
 replace-figure-paths:
 	@for n in $(LECTNUMS); do \
-		input=lecture-$$n-strip.tex; \
-		output=lecture-$$n-tmp.tex; \
-		echo "Replacing figure paths in $$input → $$output"; \
-		sed 's|\\epsfig{|\\epsfig{../lect-'$$n'/|g'\
-			$$input > $$output ;\
-		mv $$output $$input; \
-		sed 's|\\epsfbox{potentials/|\\epsfbox{../lect-'$$n'/potentials/|g'\
-			$$input > $$output ;\
-		mv $$output $$input; \
-		sed 's|\\epsfbox{multipoles/|\\epsfbox{../lect-'$$n'/multipoles/|g'\
-			$$input > $$output ;\
-		mv $$output $$input; \
+	   input=lecture-$$n-strip.tex; \
+	   output=lecture-$$n-tmp.tex; \
+	   echo "Replacing figure paths in $$input → $$output"; \
+	   sed 's|\\epsfig{|\\epsfig{../lect-'$$n'/|g'\
+	      $$input > $$output ;\
+	   mv $$output $$input; \
+	   sed 's|\\epsfbox{potentials/|\\epsfbox{../lect-'$$n'/potentials/|g'\
+	      $$input > $$output ;\
+	   mv $$output $$input; \
+	   sed 's|\\epsfbox{multipoles/|\\epsfbox{../lect-'$$n'/multipoles/|g'\
+	         $$input > $$output ;\
+	   mv $$output $$input; \
 	done
 
 compile-booksrc:
@@ -78,4 +92,4 @@ book:
 	done
 
 clean:
-	rm -Rf *~ lect*.tex *.log *.toc *.dvi *.ps
+	rm -Rf *~ lect*.tex *.log *.dvi *.ps
