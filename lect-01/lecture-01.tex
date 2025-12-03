@@ -22,28 +22,47 @@
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <https://www.gnu.org/licenses/>.
 %
+\def\coursename{Elektromagnetism II}
+\def\coursecode{1TE626}
+\def\courseyear{2025}
+\def\courserepo{https://github.com/hp35/elmagii/}
+\def\lecturenumber{1}
+\def\lecturetitle{Elektrostatik, superpositionsprincipen och Gauss lag}
+\def\lecturetitlesub{}
+\def\lectureauthor{Fredrik Jonsson}
+\def\lectureplace{Uppsala Universitet}
+\def\lecturedate{3 november 2025}
+%-------------------- BEGIN OF LOCAL MACROS --------------------
 \input macros/epsf.tex
 \input macros/eplain.tex
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
-\input amssym % to get the {\Bbb E} font (strikethrough E)
-\def\lecture #1 {\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+
+\def\ifempty#1{\ifx\relax#1\relax}
+\def\initlecture{
+  \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
   \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
     \else\hfill\fi}
-  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
-    \hfil{\it Elektromagnetism II, 1TE626 (2025)}}
-  \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2025)}
-    \hfil{\it F\"orel\"asning #1}}
+  \def\rightheadline{\tenrm{\it F\"orel\"asning \lecturenumber}
+    \hfil{\it \coursename, \coursecode (\courseyear)}}
+  \def\leftheadline{\tenrm{\it \coursename, \coursecode (\courseyear)}
+    \hfil{\it F\"orel\"asning \lecturenumber}}
   \noindent~\vskip-60pt\hskip-40pt{\epsfbox{macros/UU_logo_color.eps}}
   \vskip-42pt\hfill\vbox{
-      \hbox{{\it Elektromagnetism II, 1TE626 (2025)}}
-      \hbox{{\it Lecture Notes, Fredrik Jonsson}}
+      \hbox{{\it \coursename, \coursecode (\courseyear)}}
+      \hbox{{\it Lecture Notes, \lectureauthor}}
       \hbox{{\it Document Revision \today}}
-      \hbox{{\it https://github.com/hp35/elmagii/}}}\vskip 36pt
-    \centerline{\twelvesc F\"orel\"asning #1}
-  \vskip 24pt\noindent}
+      \hbox{{\it \courserepo}}}\vskip 36pt
+  \centerline{\twelvesc F\"orel\"asning \lecturenumber}
+  \vskip 24pt\noindent
+  \centerline{\twelvesc\lecturetitle}
+  \expandafter\ifempty\expandafter{\lecturetitlesub}%
+    \else\centerline{\twelvesc\lecturetitlesub}\fi
+  \bigskip
+  \centerline{\lectureauthor, \lectureplace, \lecturedate}
+  \vskip24pt}
 \def\section #1 {\medskip\goodbreak\noindent{\tenssbx #1}
   \par\nobreak\smallskip\noindent}
 \def\subsection #1 {\medskip\goodbreak\noindent{\it #1}
@@ -51,37 +70,31 @@
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
 \def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
-\def\Re{\mathop{\rm Re}\nolimits} % real part
-\def\Im{\mathop{\rm Im}\nolimits} % imaginary part
-\def\Tr{\mathop{\rm Tr}\nolimits} % quantum mechanical trace
+\def\sgn{\mathop{\rm sgn}\nolimits} % sign
+\def\Re{\mathop{\rm Re}\nolimits}   % real part
+\def\Im{\mathop{\rm Im}\nolimits}   % imaginary part
+\def\Tr{\mathop{\rm Tr}\nolimits}   % quantum mechanical trace
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
-\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
-  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
-  \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
-  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning}\smallskip
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
-  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \noindent{\it Tre h{\aa}llpunkter i f{\"o}rel{\"a}sningen}\smallskip
   \leftskip=48pt\rightskip=36pt\hangindent=20pt
   \noindent{\it\hbox to 20pt{1. }#1}\smallskip
   \leftskip=48pt\rightskip=36pt\hangindent=20pt
   \noindent{\it\hbox to 20pt{2. }#2}\smallskip
   \leftskip=48pt\rightskip=36pt\hangindent=20pt
-  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \noindent{\it\hbox to 20pt{3. }#3}\par
   \leftskip=0pt\rightskip=0pt\vfill\eject}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
-\newdimen\itemindent \itemindent=18pt
-\newdimen\hangitemindent \hangitemindent=38pt
-\def\litem[#1]{\smallbreak\noindent%
-  \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
-  \hangindent\hangitemindent\ignorespaces}
+\def\captionwide{\advance\leftskip by 60pt
+  \advance\rightskip by 60pt}
+%--------------------- END OF LOCAL MACROS ---------------------
 
-\lecture{1}
-\centerline{\twelvesc Elektrostatik, superpositionsprincipen och Gauss lag}
-\centerline{Fredrik Jonsson, Uppsala Universitet, 3 november 2025}
-\vskip24pt
+\initlecture
 
 \plan{Med en kort sammanfattning av historiken bakom elektrostatik och
   uppt{\"a}ckten av elektronen som elementarladdning g{\aa}r vi direkt in
