@@ -17,25 +17,46 @@ STRIPPED := $(notdir $(LECTURES:.tex=-strip.tex))
 all:
 	make clean
 	make extract-raw-src
+	make replace-initlecture-calls
 	make replace-figure-paths
 	make compile-booksrc
 	make compile-book
 
+
+#
+# Don't split the one-liner sed command below, as sed goes absolutely
+# havoc with shell commands interpreted within Makefile blocks.
+#
+extract-raw-src:
+	@for file in $(LECTURES); do \
+	    base=$$(basename $$file .tex); \
+	    strip=$${base}-strip.tex; \
+	    echo "Processing $$file → $$strip"; \
+	    ( \
+	        echo "%%% Begin of auto-extracted text from $$file %%%"; \
+	        sed '/BEGIN OF LOCAL/,/END OF LOCAL/ d' $$file | sed 's/\\bye//'; \
+	        echo '\\cleardoublepage'; \
+	        echo "%%% End of auto-extracted text from $$file %%%"; \
+	    ) > "$$strip"; \
+	done
+
+
 #extract-raw-src:
 #	@for file in $(LECTURES); do \
-#		base=$$(basename $$file .tex); \
-#		strip=$${base}-strip.tex; \
-#		echo "Processing $$file → $$strip"; \
-#		( \
-#			echo "%%% Begin of auto-extracted text from $$file %%%";\
-#			sed -n '/\\lecture{[0-9][0-9]*}/,/\\bye/ { /\\bye/!p }'\
-#				$$file; \
-#			echo '\\cleardoublepage';\
-#			echo "%%% End of auto-extracted text from $$file %%%";\
-#		) > $$strip; \
+#	   base=$$(basename $$file .tex); \
+#	   strip=$${base}-strip.tex; \
+#	   echo "Processing $$file → $$strip"; \
+#	   ( \
+#	      echo "%%% Begin of auto-extracted text from $$file %%%";\
+#		sed '/BEGIN OF LOCAL/,/END OF LOCAL/{ \
+#		/BEGIN OF LOCAL/{ r src/initlecture.tex \
+#		}; d; }'  $$file | sed 's/\\bye//'; \
+#	      echo '\\cleardoublepage';\
+#	      echo "%%% End of auto-extracted text from $$file %%%";\
+#	   ) > $$strip; \
 #	done
 
-extract-raw-src:
+extract-raw-srcccc:
 	@for file in $(LECTURES); do \
 	   base=$$(basename $$file .tex); \
 	   strip=$${base}-strip.tex; \
@@ -48,6 +69,38 @@ extract-raw-src:
 	      echo "%%% End of auto-extracted text from $$file %%%";\
 	   ) > $$strip; \
 	done
+
+extract-raw-srcsss:
+	@for file in $(LECTURES); do \
+	   base=$$(basename $$file .tex); \
+	   strip=$${base}-strip.tex; \
+	   echo "Processing $$file → $$strip"; \
+	   ( \
+	      echo "%%% Begin of auto-extracted text from $$file %%%";\
+	      sed '/BEGIN OF LOCAL/,/END OF LOCAL/{\
+	         /BEGIN OF LOCAL/{\
+	            r src/initlecture.tex\
+	         } d \
+	      }' $$file \
+	         | sed 's/\\bye//'; \
+	      echo '\\cleardoublepage';\
+	      echo "%%% End of auto-extracted text from $$file %%%";\
+	   ) > $$strip; \
+	done
+
+replace-initlecture-calls:
+	@for n in $(LECTNUMS); do \
+	   input=lecture-$$n-strip.tex; \
+	   output=lecture-$$n-tmp.tex; \
+	   echo "Replacing \\initlecture calls in $$input → $$output"; \
+	   sed 's|\\initlecture|\\initlecture{\\coursename}{\\coursecode}{\\courseyear}{\\courserepo}{\\lecturenumber}{\\lecturetitle}{\\lecturetitlesub}{\\lectureauthor}{\\lectureplace}|g' \
+	      $$input > $$output ;\
+	   mv $$output $$input; \
+	done
+
+
+
+
 
 replace-figure-paths:
 	@for n in $(LECTNUMS); do \
@@ -92,4 +145,4 @@ book:
 	done
 
 clean:
-	rm -Rf *~ lect*.tex *.log *.dvi *.ps
+	rm -Rf *~ lect*.tex *.log *.dvi *.ps complete.*

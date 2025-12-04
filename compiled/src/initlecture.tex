@@ -1,11 +1,21 @@
-\edef\expandedlecturenumber{\lecturenumber}
+%\edef\expandedlecturenumber{\lecturenumber}
 \def\ifempty#1{\ifx\relax#1\relax}
-\def\initlecture{
+\def\initlecture#1#2#3#4#5#6#7#8#9#10{
   \advance\chapno by 1
   \secno=0
   \footnotenumber=0
+  \def\coursename{#1}
+  \def\coursecode{#2}
+  \def\courseyear{#3}
+  \def\courserepo{#4}
+  \def\lecturenumber{#5}
+  \def\lecturetitle{#6}
+  \def\lecturetitlesub{#7}
+  \def\lectureauthor{#8}
+  \def\lectureplace{#9}
+  \def\lecturedate{#10}
 %  \show\expandedlecturenumber
-  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \expandedlecturenumber}{\thechapno}
+  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \lecturenumber}{\thechapno}
 %  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \the\lecturenumber}{\thechapno}
 %  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \lecturetitle}{\thechapno}
 %  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \lecturenumber}{\thechapno}
