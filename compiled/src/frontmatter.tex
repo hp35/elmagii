@@ -172,92 +172,9 @@
 \def\tableofcontents{
   \chapstartpage=\pageno
   \message{Contents}
-%  ~\vskip 5pc\goodbreak\noindent{\twelvecmbx Contents}\par
   ~\vskip 5pc\goodbreak\noindent{\twelvecmbx Inneh{\aa}ll}\par
-%  \headline={\ifnum\abs\pageno>\abs\chapstartpage
-%    \voffset=2\baselineskip\ifodd\pageno\rightheadline\else\leftheadline\fi
-%    \else\voffset=0pt\hfill\fi}
-%  \def\rightheadline{\hbox to 30pt{\hfil}
-%    \hfil{\uppercase{\eightcmr Contents}}\hfil
-%    \hbox to 30pt{\hfil\thepageno}}
-%  \def\leftheadline{\hbox to 30pt{\thepageno\hfil}
-%    \hfil{\uppercase{\eightcmr\bbooktitle}}\hfil
-%    \hbox to 30pt{\hfil}}
-%  \footline={\ifnum\pageno>\chapstartpage\hfil\else\hfil\thepageno\hfil\fi}
   \nobreak\vskip 48pt\noindent\ignorespaces
   \readtocfile\vfill\eject}
-
-%\def\lecture #1 {
-%   \advance\chapno by 1
-%  \secno=0
-%  \footnotenumber=0
-%  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning #1}{\thechapno}
-%  \message{==================== Lecture #1 ====================}
-%  \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
-%  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
-%  \headline={\ifnum\secno>0\ifodd\pageno\rightheadline\else\leftheadline\fi
-%    \else\hfill\fi}
-%  \def\rightheadline{\tenrm{\it F\"orel\"asning #1}
-%    \hfil{\it Elektromagnetism II, 1TE626 (2025)}}
-%  \def\leftheadline{\tenrm{\it Elektromagnetism II, 1TE626 (2025)}
-%    \hfil{\it F\"orel\"asning #1}}
-%  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
-%  \vskip-42pt\hfill\vbox{
-%      \hbox{{\it Elektromagnetism II, 1TE626 (2025)}}
-%      \hbox{{\it Lecture Notes, Fredrik Jonsson}}
-%      \hbox{{\it Document Revision \today}}
-%      \hbox{{\it https://github.com/hp35/elmagii/}}}\vskip 36pt
-%    \centerline{\twelvesc F\"orel\"asning #1}
-%  \vskip 24pt\noindent}
-
-
-\def\ifempty#1{\ifx\relax#1\relax}
-\def\initlecture#1#2#3#4#5#6#7#8#9{
-  \advance\chapno by 1
-  \secno=0
-  \footnotenumber=0
-  \def\coursename{#1}
-  \def\coursecode{#2}
-  \def\courseyear{#3}
-  \def\courserepo{#4}
-  \edef\lecturenumber{#5}
-  \edef\lecturetitle{#6}
-  \edef\lecturetitlesub{#7}
-  \edef\lectureauthor{#8}
-  \edef\lectureplace{#9}
-%  \def\lecturedate{#10}
-%  \show\expandedlecturenumber
-%  \edef\expandedlecturenumber{\lecturenumber}
-%  \show\expandedlecturenumber
-  \message{==================== Lecture #5 ====================}
-%  \message{==================== Lecture \lecturenumber ====================}
-  \message{writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning #5}{#5}}
-%  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning #5}{#5}
-%  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \the\lecturenumber}{\thechapno}
-%  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \lecturetitle}{\thechapno}
-%  \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \lecturenumber}{\thechapno}
-  \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
-  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
-  \headline={\ifnum\secno>0\ifodd\pageno\rightheadline\else\leftheadline\fi
-    \else\hfill\fi}
-  \def\rightheadline{\tenrm{\it F\"orel\"asning \lecturenumber}
-    \hfil{\it \coursename, \coursecode\ (\courseyear)}}
-  \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
-    \hfil{\it F\"orel\"asning \lecturenumber}}
-  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
-  \vskip-42pt\hfill\vbox{
-      \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
-      \hbox{{\it Lecture Notes, \lectureauthor}}
-      \hbox{{\it Document Revision \today}}
-      \hbox{{\it \courserepo}}}\vskip 36pt
-  \centerline{\twelvesc F\"orel\"asning \lecturenumber}
-  \vskip 24pt\noindent
-  \centerline{\twelvesc\lecturetitle}
-  \expandafter\ifempty\expandafter{\lecturetitlesub}%
-    \else\centerline{\twelvesc\lecturetitlesub}\fi
-  \bigskip
-  \centerline{\lectureauthor, \lectureplace, \lecturedate}
-  \vskip24pt}
 
 
 \def\section #1 {\advance\secno by 1
