@@ -19,44 +19,18 @@ all:
 	make extract-raw-src
 	make replace-initlecture-calls
 	make replace-lecturenumbers
+	make replace-lecturesubtitles
+	make replace-lecturetitles
 	make replace-figure-paths
 	make compile-booksrc
 	make compile-book
 
-#	make replace-lecturetitles
 
 
 #
 # Don't split the one-liner sed command below, as sed goes absolutely
 # havoc with shell commands interpreted within Makefile blocks.
 #
-extract-raw-srcddd:
-	@for file in $(LECTURES); do \
-	    base=$$(basename $$file .tex); \
-	    strip=$${base}-strip.tex; \
-	    echo "Processing $$file → $$strip"; \
-	    ( \
-	        echo "%%% Begin of auto-extracted text from $$file %%%"; \
-	        sed '/BEGIN OF LOCAL/,/END OF LOCAL/ d' $$file | sed 's/\\bye//'; \
-	        echo '\\cleardoublepage'; \
-	        echo "%%% End of auto-extracted text from $$file %%%"; \
-	    ) > "$$strip"; \
-	done
-
-
-extract-raw-srcddfffd:
-	@for file in $(LECTURES); do \
-	   base=$$(basename $$file .tex); \
-	   strip=$${base}-strip.tex; \
-	   echo "Processing $$file → $$strip"; \
-	   ( \
-	      echo "%%% Begin of auto-extracted text from $$file %%%";\
-	      sed '/BEGIN OF LOCAL/,/END OF LOCAL/{ /BEGIN OF LOCAL/{ r src/initlecture.tex }; d; }'  $$file | sed 's/\\bye//'; \
-	      echo '\\cleardoublepage';\
-	      echo "%%% End of auto-extracted text from $$file %%%";\
-	   ) > $$strip; \
-	done
-
 extract-raw-src:
 	@for file in $(LECTURES); do \
 	   base=$$(basename $$file .tex); \
@@ -65,24 +39,6 @@ extract-raw-src:
 	   ( \
 	      echo "%%% Begin of auto-extracted text from $$file %%%";\
 	      sed -e '/BEGIN OF LOCAL MACROS/,/END OF LOCAL MACROS/{/BEGIN OF LOCAL MACROS/b;/END OF LOCAL MACROS/b;d}' "$$file" | sed 's/\\bye//' ; \
-	      echo '\\cleardoublepage';\
-	      echo "%%% End of auto-extracted text from $$file %%%";\
-	   ) > $$strip; \
-	done
-
-extract-raw-srcsss:
-	@for file in $(LECTURES); do \
-	   base=$$(basename $$file .tex); \
-	   strip=$${base}-strip.tex; \
-	   echo "Processing $$file → $$strip"; \
-	   ( \
-	      echo "%%% Begin of auto-extracted text from $$file %%%";\
-	      sed '/BEGIN OF LOCAL/,/END OF LOCAL/{\
-	         /BEGIN OF LOCAL/{\
-	            r src/initlecture.tex\
-	         } d \
-	      }' $$file \
-	         | sed 's/\\bye//'; \
 	      echo '\\cleardoublepage';\
 	      echo "%%% End of auto-extracted text from $$file %%%";\
 	   ) > $$strip; \
@@ -109,30 +65,53 @@ replace-initlecture-calls:
 #
 replace-lecturenumbers:
 	@for n in $(LECTNUMS); do \
-	    input=lecture-$$n-strip.tex; \
-	    output=lecture-$$n-tmp.tex; \
-	    lecnum=$$(sed -n 's/^\\def\\lecturenumber{\([^}]*\)}/\1/p' "$$input"); \
-	    echo "Replacing \lecturenumber with $$lecnum in $$input"; \
-	    sed -n -e '1,/^\\def\\lecturenumber{[^}]*}/ { p; b }; s/\\lecturenumber/'"$$lecnum"'/g; p' "$$input" > "$$output"; \
-	    mv "$$output" "$$input"; \
+	   input=lecture-$$n-strip.tex; \
+	   output=lecture-$$n-tmp.tex; \
+	   lecnum=$$(sed -n 's/^\\def\\lecturenumber{\([^}]*\)}/\1/p' "$$input"); \
+	   echo "Replacing \lecturenumber with $$lecnum in $$input"; \
+	   sed -n -e '1,/^\\def\\lecturenumber{[^}]*}/ { p; b }; s/\\lecturenumber/'"$$lecnum"'/g; p' "$$input" > "$$output"; \
+	   mv "$$output" "$$input"; \
 	done
 
-# 	    sed -n -e '1,/^\\def\\lecturenumber{[^}]*}/ { p; b }; s/\\lecturenumber/'"$$lecnum"'/g' "$$input" > "$$output"; \
-
+replace-lecturesubtitles:
+	@for n in $(LECTNUMS); do \
+	   input=lecture-$$n-strip.tex; \
+	   output=lecture-$$n-tmp.tex; \
+	   echo "Replacing \\lecturetitlesub with \\lecturesubtitle in $$input → $$output"; \
+	   sed 's/\\lecturetitlesub/\\lecturesubtitle/g' $$input > $$output; \
+	   mv $$output $$input; \
+	done
 
 #
 # Extract the values kept by the "\def\lecturetitle{<string>}" definitions, read the <string> into a shell variable and replace all subsequent occurrences by this <string> explicitly in the TeX source. This rather cumbersome approach is needed in order to avoid TeX:s refusal to expand any macro definition supplied as a parameter to the "\writenumberedtocentry{}{}{}" call, to the generation of entries to the Table of Contents (ToC).
 #
+replace-lecturetitlesffd:
+	@for n in $(LECTNUMS); do \
+	   input=lecture-$$n-strip.tex; \
+	   output=lecture-$$n-tmp.tex; \
+	   lectit=$$(sed -n 's/^\\def\\lecturetitle{\([^}]*\)}/\1/p' "$$input"); \
+	   echo "Replacing \lecturetitle with $$lectit in $$input"; \
+	   sed -n -e '1,/^\\def\\lecturetitle{[^}]*}/ { p; b }; s/\\lecturetitle/'"$$lectit"'/g; p' $$input > $$output; \
+	    mv "$$output" "$$input"; \
+	done
+
+
+# extract lecturetitle \
+# escape backslashes, &, and slashes for sed replacement \
+# enclose in braces for replacement \
+# sed: print lines up to the definition, then replace subsequent \lecturetitle occurrences \
+
 replace-lecturetitles:
 	@for n in $(LECTNUMS); do \
 	    input=lecture-$$n-strip.tex; \
 	    output=lecture-$$n-tmp.tex; \
 	    lectit=$$(sed -n 's/^\\def\\lecturetitle{\([^}]*\)}/\1/p' "$$input"); \
-	    echo "Replacing \lecturetitle with $$lectit in $$input"; \
-	    sed -e '1,/^\\def\\lecturetitle{[^}]*}/ { p; b }; s/\\lecturetitle/'"$$lectit"'/g' "$$input" > "$$output"; \
+	    safe_lectit=$$(printf '%s\n' "$$lectit" | sed -e 's/[&\\/]/\\&/g'); \
+	    safe_lectit_braced="{$$safe_lectit}"; \
+	    echo "Replacing \\lecturetitle with $$safe_lectit_braced in $$input"; \
+	    sed -n -e '1,/^\\def\\lecturetitle{[^}]*}/ { p; b }; s/\\lecturetitle/'"$$safe_lectit_braced"'/g; p' "$$input" > "$$output"; \
 	    mv "$$output" "$$input"; \
 	done
-
 
 replace-figure-paths:
 	@for n in $(LECTNUMS); do \
