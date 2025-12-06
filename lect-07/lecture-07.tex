@@ -78,7 +78,7 @@
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
   \noindent{\it Sammanfattning}\smallskip
   \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
@@ -101,13 +101,16 @@
   det magnetiska spinnet hos material linjeras och magnetiserar materialet,
   antingen genom ett externt p{\aa}lagt magnetiskt f{\"a}lt eller genom att
   spinnen {\"a}r naturligt linjerade i materialet, i s{\aa} kallade
-  permanentmagneter. Krafter och moment p{\aa} magnetiska dipoler extraheras
-  fr{\aa}n upplagrade energier f{\"o}r dipoler i elektriska eller magnetiska
-  f{\"a}lt, och vi introducerar magnetisering som en ``magnetisk
-  polarisationsdensitet'', i analogi med den elektriska motsvarigheten.
+  permanentmagneter.
+
+  Krafter och moment p{\aa} magnetiska dipoler extraheras fr{\aa}n upplagrade
+  energier f{\"o}r dipoler i elektriska eller magnetiska f{\"a}lt, och vi
+  introducerar magnetisering som en ``magnetisk polarisationsdensitet'', i
+  analogi med den elektriska motsvarigheten.
   Vi diskuterar {\"o}versiktligt den upplagrade energin i ett magnetiserat
   medium och effekten av hysteres som effekt av ett varierande externt
   p{\aa}lagt magnetf{\"a}lt.
+
   Slutligen g{\aa}r vi igenom hur vektorpotentialen ${\bf A}({\bf x},t)$
   uttrycks f{\"o}r ett objekt med godtycklig magnetisering
   ${\bf M}({\bf x},t)$, och finner att uttrycket f{\"o}r vektorpotentialen

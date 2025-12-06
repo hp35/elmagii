@@ -78,7 +78,7 @@
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
   \noindent{\it Sammanfattning}\smallskip
   \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
@@ -103,22 +103,25 @@
   p{\aa} en laddad partikel i r{\"o}relse. Utifr{\aa}n denna formuleras
   Amp\`eres kraftlag f{\"o}r str{\"o}mslingor, samt att vi kan dra slutsatsen
   att kraften p{\aa} fria laddningar aldrig utf{\"o}r n{\aa}got arbete.
+
   D{\aa} vi generaliserar str{\"o}mbegreppet till en str{\"o}mt{\"a}thet
-  ${\bf J}$ kan vi under anv{\"a}ndande av Gauss lag ta fram
+  ${\bf J}$ kan vi under anv{\"a}n\-dande av Gauss lag ta fram
   kontinuitets\-ekvationen f{\"o}r laddning, $\nabla\cdot{\bf J}=-d\rho/dt$,
   som l{\"a}nkar ihop divergensen hos str{\"o}m\-t{\"a}theten med
-  tidsderivatan av laddningst{\"a}theten. Biot--Savarts lag introduceras
+  tidsderivatan av laddnings\-t{\"a}t\-heten. Biot--Savarts lag introduceras
   som ett axiom f{\"o}r det magnetf{\"a}lt som genereras av en str{\"o}m
   traverserande en str{\"o}mslinga, vilket f{\"o}r {\"o}vrigt {\"a}r
   f{\"o}rsta momentet d{\"a}r den magnetiska permea\-bili\-teten $\mu_0$
-  introduceras. Utifr{\aa}n formen p{\aa} Biot--Savarts lag f{\"o}r
-  generering av magnetf{\"a}lt visar vi att $\nabla\cdot{\bf B}=0$
-  alltid {\"a}r uppfyllt, vilket p{\aa}visar att magnetiska monopoler
-  (magnetisk laddning) ej existerar, och att magnetism alltid endast
-  yttrar sig i form av magnetiska dipoler eller h{\"o}gre ordningar
-  i multipolutvecklingen. Vi visar att i magnetostatik kan rotationen
-  av magnetf{\"a}ltet erh{\aa}llas som $\nabla\times{\bf B}=\mu_0{\bf J}$,
-  kallad Amp\`eres lag.
+  introduceras.
+
+  Utifr{\aa}n formen p{\aa} Biot--Savarts lag f{\"o}r generering av
+  magnetf{\"a}lt visar vi att $\nabla\cdot{\bf B}=0$ alltid {\"a}r uppfyllt,
+  vilket p{\aa}visar att magnetiska monopoler (magnetisk laddning) ej existerar,
+  och att magnetism alltid endast yttrar sig i form av magnetiska dipoler eller
+  h{\"o}gre ordningar i multipolutvecklingen.
+  Vi visar att i magnetostatik kan rotationen av magnetf{\"a}ltet erh{\aa}llas
+  som $\nabla\times{\bf B}=\mu_0{\bf J}$, kallad Amp\`eres lag.
+
   Slutligen visar vi p{\aa} att icke-existensen av magnetiska monopoler
   direkt har som f{\"o}ljd att vi kan tolka det magnetiska f{\"a}ltet
   som h{\"a}rr{\"o}rande fr{\aa}n en vektorpotential ${\bf A}$, i analogi

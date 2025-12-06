@@ -78,7 +78,7 @@
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
   \noindent{\it Sammanfattning}\smallskip
   \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
@@ -109,6 +109,7 @@
   $\nabla\times{\bf H}={\bf J}_{\rm f}+\partial{\bf D}/\partial t$ satisfieras
   {\"a}ven kontinuitetsekvationen
   $\nabla\cdot{\bf J}=-\partial\rho/\partial t$.
+
   Vi sammanfattar Maxwells ekvationer en g{\aa}ng f{\"o}r alla, och visar hur
   dessa kan omformuleras till tv{\aa} v{\aa}gekvationer f{\"o}r de elektriska
   och magnetiska f{\"a}lten.}

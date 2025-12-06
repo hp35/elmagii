@@ -78,7 +78,7 @@
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
   \noindent{\it Sammanfattning}\smallskip
   \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
@@ -122,9 +122,10 @@
   $n=\varepsilon^{1/2}_{\rm r}$, skalandes utbredningshastigheten f{\"o}r de
   elektromagnetiska v{\aa}gorna som $c=c_0/n$.
   Med hj{\"a}lp av d'Alemberts metod tar vi fram den generella l{\"o}sningen
-  f{\"o}r v{\aa}gekvationen och visar p{\aa} hur denna i en dimension har
+  f{\"o}r v{\aa}g\-ekva\-tionen och visar p{\aa} hur denna i en dimension har
   motpropagerande komponenter som alltid alltid uppfyller
   $E(z,t)=f(z-ct)+g(z+ct)$.
+
   F{\"o}r tidsharmoniska f{\"a}lt ans{\"a}tter vi komplexv{\"a}rda envelopper
   som ${\bf E}({\bf x},t)=\sum_{\bf k}\Re[{\bf E}_{\bf k}\exp(i{\bf k}
   \cdot{\bf x}-i\omega({\bf k}) t)]$, med samma form f{\"o}r det magnetiska

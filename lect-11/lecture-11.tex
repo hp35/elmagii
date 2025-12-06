@@ -78,7 +78,7 @@
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
   \noindent{\it Sammanfattning}\smallskip
   \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
@@ -110,6 +110,7 @@
   s{\aa} erh{\aa}ller vi via Faradays lag att det elektriska f{\"a}ltet i
   elektrodynamiska problem m{\aa}ste inneh{\aa}lla {\"a}ven vektorpotentialen
   som ${\bf E}=-\nabla\phi-{{\partial{\bf A}}/{\partial t}}$.
+
   V{\aa}gekvationen f{\"o}r de elektrodynamiska potentialerna formuleras,
   f{\"o}ljt av en genomg{\aa}ng av en viss form av godtycke som existerar
   i valet av potentialerna, under den s{\aa} kallade gauge-transformen.

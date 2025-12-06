@@ -78,7 +78,7 @@
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
   \noindent{\it Sammanfattning}\smallskip
   \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
@@ -109,11 +109,13 @@
   Vi utg{\aa}r fr{\aa}n de klassiska integralerna f{\"o}r den skal{\"a}ra
   potentialen $\phi$ och vektorpotentialen ${\bf A}$ och {\"a}gnar oss {\aa}t
   en statisk modell f{\"o}r multipolutvecklingen.
+
   Vi g{\aa}r igenom begreppen dipol, kvadrupol, oktopol och h{\"o}gre
   ordningar; specifikt visar vi p{\aa} att {\"a}ven det enklast t{\"a}nkbara
   fallet av en elektrisk dipol har h{\"o}gre ordningars multipolmoment
   n{\"a}rvarande, men att dessa oftast f{\"o}rsummas vid betraktelse p{\aa}
   stora avst{\aa}nd.
+
   F{\"o}rel{\"a}sningen avslutas med att demonstrera multipolutvecklingen
   f{\"o}r generella laddningsf{\"o}rdelningar i termer av skal{\"a}r potential,
   samt fastst{\"a}llande av dipolapproximationen f{\"o}r elektrostatiska och

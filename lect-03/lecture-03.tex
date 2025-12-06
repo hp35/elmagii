@@ -78,7 +78,7 @@
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
   \noindent{\it Sammanfattning}\smallskip
   \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
@@ -106,15 +106,19 @@
   Med utg{\aa}ngspunkt i detta finner vi d{\"a}refter att {\"a}ven Poissons
   ekvation $\nabla^2\phi=-\rho/\varepsilon_0$ i direkt n{\"a}rvaro av en
   laddningst{\"a}thet $\rho$ {\"a}ven den ger entydighet f{\"o}r l{\"o}sningar
-  $\phi$. Vi kan med detta visa att en dom{\"a}n som {\"a}r omgiven av ett skal
+  $\phi$.
+  
+  Vi kan med detta visa att en dom{\"a}n som {\"a}r omgiven av ett skal
   som h{\aa}lls vid konstant potential $\phi_0$ direkt ger att det elektriska
   f{\"a}ltet innanf{\"o}r skalet {\"a}r identiskt noll, vilket {\"a}r principen
   f{\"o}r ``Faradays bur''.
+  
   Utifr{\aa}n entydighetsteoremet f{\"o}r Laplaces och Poissons ekvationer kan
   vi visa hur s{\aa} kallade ``virtuella spegelladdningar'' kan konstrueras
   f{\"o}r att l{\"o}sa elektrostatiska problem i n{\"a}rvaro av fria laddningar
   i elektriskt ledande volymer eller ytor, specifikt f{\"o}r plana ytor
   mellan ledare eller dielektrika samt ledande cylindrar och sf{\"a}rer.
+  
   Slutligen s{\aa} tar vi fram en metod f{\"o}r hur den resulterande
   laddningst{\"a}theten $\sigma$ p{\aa} en yta av ledande material kan tas
   fram med de virtuella spegelladdningarna.}

@@ -79,7 +79,7 @@
 \def\encircle#1{\kern3pt#1\kern-7.6pt$\bigcirc$\kern4pt}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
   \noindent{\it Sammanfattning}\smallskip
   \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
@@ -103,6 +103,7 @@
   magnetf{\"a}lt inducerar ett elektriskt f{\"a}lt''. Vi g{\aa}r igenom
   definitionerna av magnetiskt fl{\"o}de $\Phi_{\rm M}$ och det historiskt
   betingade begreppet elektromotorisk ``kraft'' ${\cal E}$.
+
   Vi h{\"a}rleder Faradays induk\-tions\-lag ${\cal E}=-d\Phi_{\rm M}/dt$ i
   tv{\aa} separata och inb{\"o}rdes sammanh{\aa}llna fall.
   Det f{\"o}rsta fallet introduceras f{\"o}r sin enkelhet och intuitivt
@@ -113,10 +114,11 @@
   Det andra fallet {\"a}r en formell h{\"a}rledning av Faradays induktionslag
   f{\"o}r en godtycklig r{\"o}rlig geometri i form av en slinga med godtycklig
   hastighet utefter sin trajektoria, samt med ett godtyckligt varierande
-  inneslutet magnetf{\"a}lt. Vi noterar att Faradays induktionslag h{\"a}rleds
-  enbart utifr{\aa}n Lorentz kraftlag och ej involverande vare sig Coulombs
-  eller Biot--Savarts lag, eller n{\aa}got av deras derivat i det
-  elektromagnetiska ``sl{\"a}kttr{\"a}det''.
+  inneslutet magnetf{\"a}lt.
+
+  Vi noterar att Faradays induktionslag h{\"a}rleds enbart utifr{\aa}n Lorentz
+  kraftlag och ej involverande vare sig Coulombs eller Biot--Savarts lag, eller
+  n{\aa}got av deras derivat i det elektromagnetiska ``sl{\"a}kttr{\"a}det''.
   Utifr{\aa}n Faradays induktionslag formulerar vi Lenz lag som slutsatsen
   att en inducerad str{\"o}m alltid har en riktning som motverkar orsaken
   till att den uppkom. Vi g{\aa}r utifr{\aa}n denna princip igenom en
@@ -125,6 +127,7 @@
   Med utg{\aa}ngspunkt i Faradays induktionslag h{\"a}rleder vi Faradays lag
   $\nabla\times{\bf E}=-\partial{\bf B}/\partial t$, ofta betecknad
   ``Maxwell--Faradays lag'', p{\aa} differential- och integralform.
+
   Vi avslutar med att g{\aa} igenom hur tv{\aa} str{\"o}mb{\"a}rande slingor
   p{\aa}verkar varandra genom {\"o}msesidig induktion, och vi h{\"a}rleder
   Neumanns formel f{\"o}r den {\"o}msesidiga induktansen. Specifikt g{\aa}r
