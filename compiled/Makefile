@@ -22,6 +22,7 @@ all:
 	make replace-lecturesubtitles
 	make replace-lecturetitles
 	make replace-figure-paths
+	make insert-copyright-pages
 	make compile-booksrc
 	make compile-book
 
@@ -149,6 +150,20 @@ replace-figure-paths:
 	         $$input > $$output ;\
 	   mv $$output $$input; \
 	done
+
+#
+# Insert copyright pages after the preamble page of every single lecture.
+#
+insert-copyright-pages:
+	@for n in $(LECTNUMS); do \
+	   input=lecture-$$n-strip.tex; \
+	   output=lecture-$$n-tmp.tex; \
+	   echo "Inserting copyright pages in $$input → $$output"; \
+	   sed '/END OF PREAMBLE/{a \\$$\\\\copyrightpage;q}' $$input > $$output ;\
+	   mv $$output $$input; \
+	done
+
+
 
 #
 # Initialize the project by copying the frontmatter, index definitions etc.,
