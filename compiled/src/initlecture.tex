@@ -1,13 +1,10 @@
 \edef\expandedlecturenumber{\lecturenumber}
 \def\ifempty#1{\ifx\relax#1\relax}
-
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-
-% \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning L}{\thechapno}
-\writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \lecturenumber}{\thechapno}
 \message{==================== Lecture \lecturenumber ====================}
+\writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \lecturenumber -- \lecturetitle}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
 \headline={\ifnum\secno>0\ifodd\pageno\rightheadline\else\leftheadline\fi

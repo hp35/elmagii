@@ -22,6 +22,8 @@
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <https://www.gnu.org/licenses/>.
 %
+\ifx\zmanmacannounce\undefined \def\zmanmacannounce{\immediate\write16}\fi
+ \zmanmacannounce{This is `complete.tex' v.0.1 <7 July 2025>}
 \input ../lect-01/macros/epsf.tex
 \input ../lect-01/macros/eplain.tex
 % \input macros/bookmacros.tex
@@ -48,6 +50,7 @@
 \font\sixteencmsc=cmcsc10 at 16 truept
 \font\fourteencmssbx=cmssbx10 at 14 truept
 \font\twentyeightcmssbx=cmssbx10 at 28 truept
+\def\thinspace{\kern .16667em }
 
 %
 % Make sure that the METAPOST logo can be loaded even in plain TeX.
@@ -175,8 +178,6 @@
   ~\vskip 5pc\goodbreak\noindent{\twelvecmbx Inneh{\aa}ll}\par
   \nobreak\vskip 48pt\noindent\ignorespaces
   \readtocfile\vfill\eject}
-
-
 \def\section #1 {\advance\secno by 1
   \subsecno=0
   \writenumberedtocentry{section}{#1}{\thechapno.\the\secno}
@@ -222,6 +223,62 @@
 \def\cleardoublepage{\ifodd\pageno\vfill\eject\fi~\vskip260pt
   \centerline{[Page intentionally left blank]} ~\vfill\eject}
 
+\def\copyrights{
+  \line{\bf F{\"o}rel{\"a}sningar i Teoretisk Elektroteknik\hfil}
+  \line{Elektromagnetism II (1TE626, 5hp) f{\"o}r Teknisk Fysik\hfil}
+  \line{F{\"o}rel{\"a}sningar givna 2022--2025 vid Uppsala Universitet,\hfil}
+  \line{{\AA}ngstr{\"o}mlaboratoriet, Institutionen f{\"o}r Elektroteknik\hfil}
+  \line{SE--752\thinspace37, Uppsala, Sverige\hfil}
+  \bigskip
+  \noindent
+  This document is electronically available Digitala Vetenskapliga Arikivet
+  (DiVA), at {\tt https://www.diva-portal.org/smash/record.jsf?pid=diva2:25333},
+  or as an archive containing the complete source code in plain TeX at
+  {\tt https://github.com/hp35/elmagii/}.
+  \bigskip
+  \noindent
+  The texts and figures in this lecture series was typeset by the author
+  in 10/12/16 pt Computer Modern typeface using plain \TeX\ and \MP.
+  \vfill
+  \line{Copyright \copyright\ 2022--\the\year, Fredrik Jonsson under Gnu
+        General Public License (GPL) v3.\hfil}
+  \line{See {\tt LICENSE} at {\tt https://github.com/hp35/elmagii/} for
+        details.\hfil}
+  \medskip
+  \line{ISBN 91-XXXX-XXX-X\hfil}
+  \line{ISSN XXXX-XXXX\hfil}
+  \line{Printed on \fullmonthname\ \the\day, \the\year\hfil}
+  \medskip
+  \line{\TeX\ is a trademark of the American Mathematical Society\hfil}
+\vfil\eject
+}
+
+\def\frontpage{
+  \font\twelvecmr=cmr12
+  \font\fourteencmr=cmr12 at 14 truept
+  \font\twelvecmbx=cmbx12 at 12 truept
+  \font\twentycmbx=cmbx10 at 20 truept
+  \font\twentyeightcmbx=cmbx10 at 28 truept
+  \nopagenumbers
+  \noindent\epsfxsize 120pt\epsfbox{../lect-01/macros/UU_logo_color.eps}
+  \vskip 8pt
+  \hrule width \hsize
+  \vskip 148pt
+  \centerline{\twelvecmbx F{\"o}rel{\"a}sningar i}
+  \vskip 24pt
+  \centerline{\twentycmbx Teoretisk Elektroteknik}
+  \vskip 60pt
+  \centerline{\twelvecmbx Fredrik Jonsson}
+  \vfill
+  \line{\twelvecmr F{\"o}rel{\"a}sningar vid Uppsala Universitet\hfil}
+  \vskip 2pt
+  \line{\twelvecmr {\AA}ngstr{\"o}mlaboratoriet, Institutionen f{\"o}r Elektroteknik\hfil}
+  \vfil\eject
+}
+
+\frontpage
+\pageno=-2\footline{\hfil\folio\hfil}  % Roman pagenumbering for intro
+\copyrights
 \tableofcontents
 \pageno=1
 
