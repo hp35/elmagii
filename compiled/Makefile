@@ -25,8 +25,6 @@ all:
 	make compile-booksrc
 	make compile-book
 
-
-
 #
 # Don't split the one-liner sed command below, as sed goes absolutely
 # havoc with shell commands interpreted within Makefile blocks.
@@ -83,36 +81,59 @@ replace-lecturesubtitles:
 	done
 
 #
-# Extract the values kept by the "\def\lecturetitle{<string>}" definitions, read the <string> into a shell variable and replace all subsequent occurrences by this <string> explicitly in the TeX source. This rather cumbersome approach is needed in order to avoid TeX:s refusal to expand any macro definition supplied as a parameter to the "\writenumberedtocentry{}{}{}" call, to the generation of entries to the Table of Contents (ToC).
+# Extract the values kept by the "\def\lecturetitle{<string>}" definitions, read
+# the <string> into a shell variable and replace all subsequent occurrences by
+# this <string> explicitly in the TeX source. This rather cumbersome approach is
+# needed in order to avoid TeX:s refusal to expand any macro definition supplied
+# as a parameter to the "\writenumberedtocentry{}{}{}" call, to the generation
+# of entries to the Table of Contents (ToC).
 #
-replace-lecturetitlesffd:
+# Main steps in this title expansion:
+#    1. Replace any occurrence of "{\aa}", "{\"a}" "{\"o}", etc. by the
+#       corresponding characters "å", "ä", "ö", just to avoid capturing
+#       matched braces in titles. (The Perl script alternative turned
+#       out to be a real mess.)
+#    2. Extract the value of \lecturetitle{<string>}
+#    3. Escape backslashes, &, and slashes for sed replacement
+#    4. Enclose in braces for replacement
+#    5. sed: print lines up to the definition, then replace subsequent
+#       \lecturetitle occurrences
+#    6. Replace back any occurrence of "å", "ä", "ö" to their TeX-code
+#    equivalents "{\aa}", "{\"a}" "{\"o}", etc.
+#
+replace-lecturetitles:
 	@for n in $(LECTNUMS); do \
 	   input=lecture-$$n-strip.tex; \
 	   output=lecture-$$n-tmp.tex; \
-	   lectit=$$(sed -n 's/^\\def\\lecturetitle{\([^}]*\)}/\1/p' "$$input"); \
-	   echo "Replacing \lecturetitle with $$lectit in $$input"; \
-	   sed -n -e '1,/^\\def\\lecturetitle{[^}]*}/ { p; b }; s/\\lecturetitle/'"$$lectit"'/g; p' $$input > $$output; \
+	   sed \
+	       -e 's/{\\aa}/å/g' \
+	       -e 's/{\\"a}/ä/g' \
+	       -e 's/{\\"o}/ö/g' \
+	       -e 's/{\\AA}/Å/g' \
+	       -e 's/{\\"A}/Ä/g' \
+	       -e 's/{\\"O}/Ö/g' \
+	    "$$input" > "$$output"; \
 	    mv "$$output" "$$input"; \
-	done
-
-
-# extract lecturetitle \
-# escape backslashes, &, and slashes for sed replacement \
-# enclose in braces for replacement \
-# sed: print lines up to the definition, then replace subsequent \lecturetitle occurrences \
-
-replace-lecturetitles:
-	@for n in $(LECTNUMS); do \
-	    input=lecture-$$n-strip.tex; \
-	    output=lecture-$$n-tmp.tex; \
 	    lectit=$$(sed -n 's/^\\def\\lecturetitle{\([^}]*\)}/\1/p' "$$input"); \
 	    safe_lectit=$$(printf '%s\n' "$$lectit" | sed -e 's/[&\\/]/\\&/g'); \
 	    safe_lectit_braced="{$$safe_lectit}"; \
 	    echo "Replacing \\lecturetitle with $$safe_lectit_braced in $$input"; \
 	    sed -n -e '1,/^\\def\\lecturetitle{[^}]*}/ { p; b }; s/\\lecturetitle/'"$$safe_lectit_braced"'/g; p' "$$input" > "$$output"; \
 	    mv "$$output" "$$input"; \
+	   sed \
+	       -e 's/å/{\\aa}/g' \
+	       -e 's/ä/{\\"a}/g' \
+	       -e 's/ö/{\\"o}/g' \
+	       -e 's/Å/{\\AA}/g' \
+	       -e 's/Ä/{\\"A}/g' \
+	       -e 's/Ö/{\\"O}/g' \
+	       "$$input" > "$$output"; \
+	   mv "$$output" "$$input"; \
 	done
 
+#
+# Correct all paths to illustrations to the respective lecture directory.
+#
 replace-figure-paths:
 	@for n in $(LECTNUMS); do \
 	   input=lecture-$$n-strip.tex; \
@@ -129,6 +150,11 @@ replace-figure-paths:
 	   mv $$output $$input; \
 	done
 
+#
+# Initialize the project by copying the frontmatter, index definitions etc.,
+# to an empty skeleton which we soon will fill and stream-edit to the complete
+# TeX source for all lectures in a single document.
+#
 compile-booksrc:
 	cp src/frontmatter.tex $(PROJECT).tex
 	@for n in $(LECTNUMS); do \
@@ -136,6 +162,9 @@ compile-booksrc:
 	done
 	@echo '\\bye' >> $(PROJECT).tex
 
+#
+# Compile the entire project (plain TeX) as extracted by the steps above.
+#
 compile-book:
 	$(TEX) $(PROJECT).tex
 	$(TEX) $(PROJECT).tex
