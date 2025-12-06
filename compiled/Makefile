@@ -159,11 +159,9 @@ insert-copyright-pages:
 	   input=lecture-$$n-strip.tex; \
 	   output=lecture-$$n-tmp.tex; \
 	   echo "Inserting copyright pages in $$input → $$output"; \
-	   sed '/END OF PREAMBLE/{a \\$$\\\\copyrightpage;q}' $$input > $$output ;\
+	   sed '0,/^%[-]* END OF PREAMBLE [-]*$$/s#^%[-]* END OF PREAMBLE [-]*$$#\\vfill\\eject\\copyrights#' $$input > $$output; \
 	   mv $$output $$input; \
 	done
-
-
 
 #
 # Initialize the project by copying the frontmatter, index definitions etc.,
@@ -189,15 +187,14 @@ compile-book:
 	@$(PS2PDF) $(PROJECT).ps $(PROJECT).pdf
 	@echo "PDF file for $(PROJECT).ps written to $(PROJECT).pdf."
 
-recompile:
-	for lecture in $(LECTURES) ; do\
-	   make -C ../$$lecture ;\
+recompile-all-from-scratch:
+	make clean
+	@for n in $(LECTNUMS); do \
+	   targetdir=../lect-$$n; \
+	   make clean -C $$targetdir ;\
+	   make -C $$targetdir ;\
 	done
-
-book:
-	for lecture in $(LECTURES) ; do\
-	   make -C ../$$lecture ;\
-	done
+	make
 
 clean:
 	rm -Rf *~ lect*.tex *.log *.dvi *.ps complete.*
