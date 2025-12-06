@@ -78,7 +78,7 @@
 \def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip
   \noindent{\it Sammanfattning}\smallskip
   \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
@@ -103,6 +103,7 @@
   teorem applicerat p{\aa} en sluten slinga i ett statiskt elektriskt f{\"a}lt
   fr{\aa}n en punktladdning. Detta resultat generaliseras d{\"a}refter med
   superpositionsprincipen f{\"o}r en godtycklig laddningsf{\"o}rdelning.
+
   Att $\nabla\times{\bf E}={\bf 0}$ g{\"o}r att vi direkt kan formulera det
   statiska elektriska f{\"a}ltet i termer av en skal{\"a}r potential $\phi$
   enligt ${\bf E}=-\nabla\phi$, en potential som vi d{\"a}refter h{\"a}rleder
@@ -110,10 +111,12 @@
   Vi h{\"a}rleder uttrycken f{\"o}r upplagrad potentiell energi i termer
   av den elektriska potentialen, och vi g{\aa}r igenom paradoxen i att det
   vektorv{\"a}rda elektriska f{\"a}ltet ${\bf E}$ kan extraheras ur en enda
-  skal{\"a}r potential $\phi$. Vi avslutar f{\"o}rel{\"a}sningen med att
-  utifr{\aa}n Gauss lag f{\"o}r det elektriska f{\"a}ltet p{\aa}
-  differentialform omformulera denna i termer av den skal{\"a}ra potentialen
-  som Poissons ekvation $\nabla^2\phi=-\rho/\varepsilon_0$.}
+  skal{\"a}r potential $\phi$.
+
+  Vi avslutar f{\"o}rel{\"a}sningen med att utifr{\aa}n Gauss lag f{\"o}r det
+  elektriska f{\"a}ltet p{\aa} differentialform omformulera denna i termer av
+  den skal{\"a}ra potentialen som Poissons ekvation $\nabla^2\phi=-\rho/
+  \varepsilon_0$.}
 
 \threepointsummary{%
   Den skal{\"a}ra (elektrostatiska) potentialen $\phi$ f{\"o}ljer direkt av
