@@ -39,7 +39,6 @@
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
-
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
@@ -95,6 +94,7 @@
   \advance\rightskip by 60pt}
 \newif\ifshowindex
 \showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject\section{Index} \readindexfile{i}\fi}
 %--------------------- END OF LOCAL MACROS ---------------------
 
 \initlecture
@@ -181,80 +181,85 @@ b{\"a}rnsten, ``elektron''.\numberedfootnote{%
   fr{\aa}n klassisk grekiska
   $\eta\lambda\varepsilon\kern-.4pt\kappa\tau\kern-1.4pt\rho o\nu$
   (elektron, ``b{\"a}rnsten'').}
-Under 1600- och 1700-talen gjordes framsteg prim{\"a}rt i och med \idx{William
-Gilbert}s {\it On Magnetism} (1600), d{\"a}r elektrisk attraktionskraft
-\sidx{attraktionskraft}[elektrisk]
-separerades fr{\aa}n magnetism, samt \idx{Fran\c{c}ois de Cisternay du
-Fays}\numberedfootnote{Vilket namn!} (1730) uppt{\"a}ckt av {\it tv{\aa} typer}
-av laddning, ``vitreous'' (``glasaktig'', associerat med att den uppstod d{\aa}
-glas gnidits med silke) och ``resinous'' (``k{\aa}daktig'', ``hartsartad'',
-associerat med att den uppstod d{\aa} harts eller b{\"a}rnsten gnidits med
-p{\"a}ls).
+Under 1600- och 1700-talen gjordes framsteg prim{\"a}rt i och med William
+Gilberts\sidx{Gilbert, William (1544--1603)} (1544--1603)
+{\it On Magnetism}\sidx{Gilbert, William (1544--1603)}[{\it On Magnetism}]
+(1600), d{\"a}r elektrisk attraktionskraft\sidx{Attraktionskraft}[Elektrisk]
+separerades fr{\aa}n magnetism, samt
+Fran\c{c}ois de Cisternay du Fays (1698--1739)\sidx{de Cisternay du Fays,
+Fran\c{c}ois (1698--1739)}\numberedfootnote{Vilket namn!} uppt{\"a}ckt (1730)
+av {\it tv{\aa} typer} av laddning, ``vitreous'' (``glasaktig'', associerat
+med att den uppstod d{\aa} glas gnidits med silke) och ``resinous''
+(``k{\aa}daktig'', ``hartsartad'', associerat med att den uppstod d{\aa} harts
+eller b{\"a}rnsten gnidits med p{\"a}ls).
 
-Benjamin Franklin
-\sidx{Franklin, Benjamin (1706--1790)} (1706--1790) utf{\"o}rde under {\aa}ren 1747--1749 experiment
-f{\"o}r att bevisa sin teori kring ``en-v{\"a}tske\-hypo\-tesen'', d{\"a}r han
-argumenterade f{\"o}r att du Fays ``vitreous och resinuous''
-dubbel-v{\"a}tsketori var felaktig och att det bara fanns en typ av ``elektrisk
-v{\"a}tska'', och att alla elektrostatiska effekter kunde sp{\aa}ras till ett
-{\"o}verfl{\"o}d respektive underskott av denna ``v{\"a}tska''.
+Benjamin Franklin\sidx{Franklin, Benjamin (1706--1790)} (1706--1790) utf{\"o}rde
+under {\aa}ren 1747--1749 experiment f{\"o}r att bevisa sin teori kring
+``en-v{\"a}tske\-hypo\-tesen'', d{\"a}r han argumenterade f{\"o}r att du Fays
+``vitreous och resinuous'' dubbel-v{\"a}tsketori var felaktig och att det bara
+fanns en typ av ``elektrisk v{\"a}tska'', och att alla elektrostatiska effekter
+kunde sp{\aa}ras till ett {\"o}verfl{\"o}d respektive underskott av denna
+``v{\"a}tska''.
 Franklin betecknade dessa som {\it positivt} ({\"o}verfl{\"o}d) respektive
 {\it negativt} (underskott) av elektrisk v{\"a}tska, termer som fortfarande
 idag lever kvar f{\"o}r att beteckna laddningens polaritet.
+\sidx{Elektrisk laddning}[Polaritet]
 
 Charles-Augustin de Coulomb\idx{de Coulomb, Charles-Augustin (1736--1806)}
-(1736--1806) f{\"o}rtj{\"a}nar ett eget kapitel i
-elektrostatikens historia, i och med publiceringen av hans {\it Second
-M\'emoire sur l'\'Electricit\'e et le Magn\'etisme}
-\sidx{Charles-Augustin de Coulomb}[{{\it Second M\'emoire sur l'\'Electricit\'e\break et le Magn\'etisme}}] [{\it Histoire de
+(1736--1806) f{\"o}rtj{\"a}nar ett eget kapitel i elektrostatikens historia, i
+och med publiceringen av hans {\it Second M\'emoire sur l'\'Electricit\'e et le
+Magn\'etisme}\sidx{de Coulomb, Charles-Augustin (1736--1806)}[{{\it Second
+M\'emoire sur l'\'Electricit\'e\break et le Magn\'etisme}}] [{\it Histoire de
 l'Acad\'emie Royale des Sciences}, sid.~578--611 (1785)].\numberedfootnote{%
   V{\"a}l v{\"a}rd att ta en titt p{\aa}:
   {\tt https://books.google.se/books?id=by5EAAAAcAAJ\&pg=PA578}}
 I denna publikation, p{\aa} sidan 579, fastst{\"a}lls det f{\"o}r f{\"o}rsta
-g{\aa}ngen att den attraktiva kraften mellan tv{\aa} motsatt laddade sf{\"a}rer
-{\"a}r proportionell mot produkten av laddningarna p{\aa} sf{\"a}rerna, samt
-inverst proportionell mot kvadraten p{\aa} avst{\aa}ndet mellan
-sf{\"a}rerna;\numberedfootnote{Coulombs lag var sj{\"a}lvfallet ej uttryckt
-  i moderna enheter i denna tidiga artikel; SI-systemet skulle inte komma
-  att tr{\"a}da i kraft f{\"o}rr{\"a}n 1954.}
-med andra ord Coulombs lag\sidx{Coulombs kraftlag} s{\aa} som vi idag k{\"a}nner den, och som dessutom
-{\"a}r den prim{\"a}ra basen f{\"o}r {\"a}mnet f{\"o}r denna f{\"o}rel{\"a}sning.
+g{\aa}ngen att den attraktiva kraften\sidx{Attraktionskraft}[Elektrisk]
+mellan tv{\aa} motsatt laddade sf{\"a}rer {\"a}r proportionell mot produkten av
+laddningarna p{\aa} sf{\"a}rerna, samt inverst proportionell mot kvadraten p{\aa}
+avst{\aa}ndet mellan sf{\"a}rerna;\numberedfootnote{Coulombs lag var
+  sj{\"a}lvfallet ej uttryckt i moderna enheter i denna tidiga artikel;
+  SI-systemet skulle inte komma att tr{\"a}da i kraft f{\"o}rr{\"a}n 1954.}
+med andra ord Coulombs lag\sidx{Coulombs kraftlag} s{\aa} som vi idag k{\"a}nner
+den, och som dessutom {\"a}r den prim{\"a}ra basen f{\"o}r {\"a}mnet f{\"o}r
+denna f{\"o}rel{\"a}sning.
 
 Rent historiskt {\"a}r det anm{\"a}rkningsv{\"a}rt att det tog mer {\"a}n hundra
-{\aa}r innan den Brittiska fysikern Joseph John ``J.~J.'' Thomson
-\sidx{Thomson, Joseph John (1856--1940)} (1856--1940, Nobelpris i fysik 1906)
-visade p{\aa} existensen av elektroner\sidx{elektron} 1897, genom
-experiment med elektroner i katodstr{\aa}ler{\"o}r. Genom att m{\"a}ta hur
-katodstr{\aa}len kunde f{\aa}s att avvika fr{\aa}n en r{\"a}t linje med
-elektriska och magnetiska f{\"a}lt drog han slutsatsen att katodstr{\aa}len
-bestod av vad han fr{\aa}n b{\"o}rjan kallade ``korpuskler'' \sidx{korpuskler} med negativ
-laddning och en storlek som var v{\"a}sentligt mindre {\"a}n atomer.
+{\aa}r innan den Brittiska fysikern Joseph John ``J.~J.'' Thomson\sidx{Thomson,
+Joseph John (1856--1940)} (1856--1940, Nobelpris i fysik 1906) visade p{\aa}
+existensen av elektroner\sidx{Elektron} 1897, genom experiment med elektroner i
+katodstr{\aa}ler{\"o}r. Genom att m{\"a}ta hur katodstr{\aa}len kunde f{\aa}s
+att avvika fr{\aa}n en r{\"a}t linje med elektriska och magnetiska f{\"a}lt drog
+han slutsatsen att katodstr{\aa}len bestod av vad han fr{\aa}n b{\"o}rjan
+kallade ``korpuskler'' \sidx{Korpuskler} med negativ laddning och en storlek
+som var v{\"a}sentligt mindre {\"a}n atomer.
 Den vetenskapliga v{\"a}rlden hade dock redan b{\"o}rjat anamma ordet
-``elektron'' f{\"o}r dessa elementarladdningar, och Thomson anpassade sin
-terminologi d{\"a}refter.
+``elektron'' f{\"o}r dessa elementarladdningar,\sidx{Elementarladdning $e$} och
+Thomson anpassade sin terminologi d{\"a}refter.
 
 J.~J.~Thomsons uppt{\"a}ckt av elektronen hade effekt inte bara p{\aa}
 elektrostatiken i sig, utan p{\aa} vetenskapen i stort d{\aa} han p{\aa}visade
 att atomer inte var de fundamentala partiklar som man tidigare hade trott, i
 form av homogena sf{\"a}rer, utan kan s{\"a}gas vara startskottet f{\"o}r nya
-atommodeller, som till exempel Ernest Rutherfords
-\sidx{Rutherford, Ernest (1871--1937)} (1871--1937, Nobelpris i kemi
-1908) uppt{\"a}ckt av atomk{\"a}rnan 1912, och Niels Bohrs
-\sidx{Bohr, Niels (1885--1962)} (1885--1962,
-Nobelpris i fysik 1922) skalmodell av atomen 1913.
+atommodeller, som till exempel Ernest Rutherfords\sidx{Rutherford, Ernest
+(1871--1937)} (1871--1937, Nobelpris i kemi 1908) uppt{\"a}ckt av atomk{\"a}rnan
+1912, och Niels Bohrs\sidx{Bohr, Niels (1885--1962)} (1885--1962, Nobelpris i
+fysik 1922) skalmodell av atomen 1913.
 \vfill\eject
 
 \section{Coulombs lag f{\"o}r punktladdningar}
 \sidx{Coulombs kraftlag}
 \epsfig{figs/coulomb.1}\noindent
 Som den mest fundamentala byggstenen i elektrostatiken har vi att tv{\aa}
-\idx{punktladdning}ar $q$ och $q'$, r{\"a}knade med sina respektive tecken f{\"o}r
-positiv eller negativ laddning och placerade i respektive
-{\it \idx{observationspunkt}en} ${\bf x}$ och {\it \idx{k{\"a}llpunkt}en} ${\bf x}'$,
-attraherar eller repellerar varandra med en kraft ${\bf F}$ genom Coulombs
-lag\numberedfootnote{Griffiths Ekv.~(2.1), sid.~60; laddningen i
-  observationspunkten betecknas som ``test charge''. Observera
-  ocks{\aa} Griffiths lite udda stil i notationen av
+punktladdningar\sidx{Punktladdning}\sidx{Elektrisk laddning}
+\sidx{Elektrisk laddning}[Polaritet] $q$ och $q'$, r{\"a}knade med sina
+respektive tecken f{\"o}r positiv eller negativ laddning och placerade i
+respektive {\it observationspunkten}\idx{Observationspunkt} ${\bf x}$ och
+{\it k{\"a}llpunkten}\idx{K{\"a}llpunkt} ${\bf x}'$,
+attraherar\sidx{Attraktionskraft}[Elektrisk] eller repellerar varandra med en
+kraft ${\bf F}$ genom Coulombs lag\numberedfootnote{Griffiths Ekv.~(2.1),
+  sid.~60; laddningen i observationspunkten betecknas som ``test charge''.
+  Observera ocks{\aa} Griffiths lite udda stil i notationen av
   ``$({\bf x}-{\bf x}')$'' som ``scriptat ${\bf x}$''
   (se Griffiths Ekv.~(2.2) p{\aa} sid.~60). Den notation som
   Griffiths anv{\"a}nder {\"a}r lite olycklig i det att tolkningen
@@ -274,9 +279,10 @@ $$
   \varepsilon_0\approx8.854\times10^{12}\ {\rm F}/{\rm m}
 $$
 {\"a}r konstanten f{\"o}r den {\it elektriska permittiviteten i vakuum}, eller
-kort och gott {\it vakuumpermittiviteten}.\sidx{Elektrisk permittivitet}[Vakuumpermittivitet]
-Sj{\"a}lvfallet agerar denna kraft reciprokt p{\aa} \idx{k{\"a}lladdning}en $q'$, och
-vi kan i uttrycket f{\"o}r Coulombs kraftlag ovan helt sonika v{\"a}xla primmet
+kort och gott {\it vakuumpermittiviteten}.\sidx{Elektrisk
+permittivitet}[Vakuumpermittivitet $\varepsilon_0$] Sj{\"a}lvfallet agerar denna
+kraft reciprokt p{\aa} k{\"a}lladdningen\sidx{K{\"a}lladdning} $q'$, och vi kan
+i uttrycket f{\"o}r \idx{Coulombs kraftlag} ovan helt sonika v{\"a}xla primmet
 {\"o}ver till den andra positionen och direkt erh{\aa}lla
 $$
   {\bf F}'={{q'q}\over{4\pi\varepsilon_0}}
@@ -285,11 +291,12 @@ $$
 \vfill\eject
 
 \epsfig{figs/coulombsys.1}\noindent
-Om vi ist{\"a}llet f{\"o}r en enskild punktladdning vid \idx{k{\"a}llpunkt}en
-betraktar ett {\it system}\sidx{punktladdning}[System av] av $N$ ladd\-ningar $q'_k$ vid respektive
-k{\"a}llpositioner ${\bf x}'_k$ (med prim f{\"o}r konsekvent notation f{\"o}r
-k{\"a}llpunkter), {\"a}r den totala kraften som verkar p{\aa} laddningen $q$
-vid observationspunkten uppenbarligen
+Om vi ist{\"a}llet f{\"o}r en enskild punktladdning vid
+k{\"a}llpunkten\sidx{K{\"a}llpunkt} betraktar ett
+{\it system}\sidx{Punktladdning}[System av punktladdningar] av $N$ ladd\-ningar
+$q'_k$ vid respektive k{\"a}llpositioner ${\bf x}'_k$ (med prim f{\"o}r
+konsekvent notation f{\"o}r k{\"a}llpunkter), {\"a}r den totala kraften som
+verkar p{\aa} laddningen $q$ vid observationspunkten uppenbarligen
 $$
   \eqalign{
   {\bf F}&=\sum^N_{k=1} {\bf F}_k\cr
@@ -300,9 +307,9 @@ $$
      &=q{\bf E}({\bf x}),
   }
 $$
-d{\"a}r vi {\it definierade} det elektriska f{\"a}ltet\sidx{Elektrisk f{\"a}ltstyrka} ${\bf E}({\bf x})$
-fr{\aa}n de $N$ punktladdningarna som\numberedfootnote{Griffiths Ekv.~(2.4),
-sid.~61.}
+d{\"a}r vi {\it definierade} det elektriska f{\"a}ltet\sidx{Elektrisk
+f{\"a}ltstyrka} ${\bf E}({\bf x})$ fr{\aa}n de $N$ punktladdningarna
+som\numberedfootnote{Griffiths Ekv.~(2.4), sid.~61.}
 $$
   {\bf E}({\bf x})\equiv{{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
      q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}}.
@@ -310,7 +317,8 @@ $$
 Ett par observationer kring det elektriska f{\"a}ltet:
 \medskip
 \item{$\bullet$}{Formuleringen av uttrycket f{\"o}r det elektriska f{\"a}ltet
-  {\"a}r {\it helt oberoende av \idx{testladdning}en} $q$. Detta kan tyckas
+  {\"a}r {\it helt oberoende av testladdningen}\sidx{Testladdning} $q$. Detta
+  kan tyckas
   sj{\"a}lvklart, men har en fundamental betydelse n{\"a}r vi alldeles strax
   kommer att generalisera f{\"a}ltbeskrivningen som Gauss lag. Specifikt, s{\aa}
   kan vi till ett elektriskt f{\"a}lt associerat med en viss grupp av laddningar
@@ -324,8 +332,8 @@ Ett par observationer kring det elektriska f{\"a}ltet:
   problem. Mer om detta strax.}
 \item{$\bullet$}{Denna m{\"o}jlighet att addera individuella del-l{\"o}sningar
   till en l{\"o}sning f{\"o}r det totala problemet brukar vi beteckna med
-  {\it \idx{superpositionsprincipen}}, vilken {\"a}r generellt giltig enbart
-  f{\"o}r {\it linj{\"a}ra problem}.}
+  {\it superpositionsprincipen},\idx{Superpositionsprincipen} vilken {\"a}r
+  generellt giltig enbart f{\"o}r {\it linj{\"a}ra problem}.}
 \item{$\bullet$}{I detta antagande ligger implicit antagandet om att
   samtliga laddningar i problemet har fixa positioner som inte {\"a}ndras
   genom n{\"a}rvaro av andra laddningar. Vi kommer senare i kursen att se
@@ -337,15 +345,15 @@ Ett par observationer kring det elektriska f{\"a}ltet:
 
 \section{Vad {\"a}r ursprunget f{\"o}r denna v{\"a}xelverkan?
   Kan vi h{\"a}rleda Coulombs lag?}
-Vi kan alla alltsedan sedan skoltiden i gymnasiet formen p{\aa} Coulombs lag,\idx{Coulombs kraftlag}
-och till slut s{\"a}tter sig denna k{\"a}nsla f{\"o}r ``proportionalitet mot
-produkten av laddningarnas v{\"a}rde och inversen av deras avst{\aa}nd i
-kvadrat'' i ryggm{\"a}rgen som en given, praktiskt taget
-axiomatisk\numberedfootnote{{\it Axiomatisk}: ``sj{\"a}lvklart sann''
-  eller baserad p{\aa} ett eller flera axiom. Ett axiom {\"a}r en
-  grund\-l{\"a}ggande sats eller ett p{\aa}st{\aa}ende som antas
-  vara sant {\it utan bevis} och som anv{\"a}nds f{\"o}r att h{\"a}rleda
-  andra sanningar i ett system.}
+Vi kan alla alltsedan sedan skoltiden i gymnasiet formen p{\aa} Coulombs
+lag,\idx{Coulombs kraftlag} och till slut s{\"a}tter sig denna k{\"a}nsla
+f{\"o}r ``proportionalitet mot produkten av laddningarnas v{\"a}rde och
+inversen av deras avst{\aa}nd i kvadrat'' i ryggm{\"a}rgen som en given,
+praktiskt taget axiomatisk\numberedfootnote{{\it Axiomatisk}:
+  ``sj{\"a}lvklart sann'' eller baserad p{\aa} ett eller flera axiom.
+  Ett axiom {\"a}r en grund\-l{\"a}ggande sats eller ett p{\aa}st{\aa}ende
+  som antas vara sant {\it utan bevis} och som anv{\"a}nds f{\"o}r att
+  h{\"a}rleda andra sanningar i ett system.}
 naturlag. Om man b{\"o}rjar fundera lite p{\aa} det och l{\"a}mnar den
 intuition som vi erh{\aa}llit kring Coulombs lag, s{\aa} blir det dock
 aningen konstigt.
@@ -366,15 +374,18 @@ laddade elementarpartiklar i ett par punkter, s{\aa} bygger denna p{\aa}
 f{\"o}ljande.
 \medskip
 \item{$\bullet$}{V{\"a}xelverkan mellan elementarpartiklar som b{\"a}r laddning
-  sker via s{\aa} kallade {\it \idx{virtuella fotoner}}, vilka skiljer sig fr{\aa}n
-  v{\aa}ra ``vardagliga'' fotoner som {\"a}r synliga kvanta av ljus.
+  sker via s{\aa} kallade {\it virtuella fotoner}\idx{Virtuella fotoner}, vilka
+  skiljer sig fr{\aa}n v{\aa}ra ``vardagliga'' fotoner som {\"a}r synliga kvanta
+  av ljus.
   Virtuella fotoner {\"a}r tempor{\"a}ra och existerar endast under det att
   v{\"a}xelverkan sker, och {\"a}r ``b{\"a}rarna av kraft'' f{\"o}r
   elektromagnetiska krafter.}
-\item{$\bullet$}{Laddade partiklar som \idx{elektron}er och \idx{proton}er utbyter virtuella
-  fotoner mellan sig hela tiden, men med starkare intensitet n{\"a}r de kommer
-  n{\"a}ra varandra. Detta konstanta utbyte till{\aa}ter partiklarna att
-  ut{\"o}va krafter p{\aa} varandra, s{\aa} som \idx{attraktion} eller \idx{repulsion}.}
+\item{$\bullet$}{Laddade partiklar som elektroner\sidx{Elektron} och
+  protoner\sidx{Proton} utbyter virtuella fotoner mellan sig hela tiden,
+  men med starkare intensitet n{\"a}r de kommer n{\"a}ra varandra.
+  Detta konstanta utbyte till{\aa}ter partiklarna att ut{\"o}va krafter p{\aa}
+  varandra, s{\aa} som attraktion\sidx{Attraktionskraft}[Elektrisk] eller
+  repulsion.}
 \item{$\bullet$}{Viktig po{\"a}ng: {\it Virtuella fotoner kan inte observeras
   direkt, till skillnad fr{\aa}n vanliga fotoner.}}
 \item{$\bullet$}{Virtuella fotoner existerar och kan p{\aa}visas inom ramverket
@@ -390,10 +401,10 @@ betrakta Coulombs lag\sidx{Coulombs kraftlag} som en axiomatiskt given naturlag.
 \vfill\eject
 
 \section{Superpositionsprincipen}
-\sidx{superpositionsprincipen}
+\sidx{Superpositionsprincipen}
 Att separat framtagna elektriska f{\"a}lt kan ses som och adderas som
 komponenter av ett totalt elektriskt f{\"a}lt {\"a}r basen i vad vi kallar
-{\it \idx{superpositionsprincipen}}.\numberedfootnote{Generellt g{\"a}ller det
+{\it superpositionsprincipen}.\numberedfootnote{Generellt g{\"a}ller det
   under {\it superposition} att vi rent matematiskt har att g{\"o}ra med
   en funktion $F$ som har egenskaperna att $F(x+y)=F(x)+F(y)$ (additivitet)
   samt att $F(ax)=aF(x)$ (homogenitet). Ordet {\it superposition}
@@ -402,7 +413,7 @@ komponenter av ett totalt elektriskt f{\"a}lt {\"a}r basen i vad vi kallar
   (``ovanf{\"o}r'') och {\it ponere} (``att placera'').}
 Vi kan illustrera detta genom att godtyckligt dela upp det elektriska f{\"a}lt
 vi nyss tog fram i tv{\aa} delar, med tv{\aa} separata grupper av de $N$
-\idx{k{\"a}lladdning}arna, enligt
+k{\"a}lladdningarna\sidx{K{\"a}lladdning}, enligt
 $$
   {\bf E}({\bf x})\equiv
   \underbrace{
@@ -429,21 +440,22 @@ g{\"a}ller generellt f{\"o}r s{\aa} kallade {\it linj{\"a}ra problem}.
 \sidx{Coulombs generaliserade lag}[Coulombintegralen]
 S{\aa} l{\aa}ngt har vi endast betraktat system av {\it punktladdningar}, men
 med superpositionsprincipen i beaktande {\"a}r naturligtvis steget minimalt att
-att {\"o}verf{\"o}ra diskussionen till ett {\it kontinuum av laddning i
-rummet}, f{\"o}rdelad enligt en \idx{laddningst{\"a}thet} $\rho({\bf x})$ (${\rm C}
-/{\rm m}^3$). I detta fall kan vi se det som att varje volymelement
-$\Delta V_k$ i k{\"a}llpunkterna ${\bf x}'_k$ i rummet uppb{\"a}r en laddning
-som vi kan se som en punktladdning, vilket i ett kontinuum {\"o}verg{\aa}r till
+att {\"o}verf{\"o}ra diskussionen till ett {\it kontinuum av laddning i rummet},
+f{\"o}rdelad enligt en laddningst{\"a}thet\idx{Elektrisk laddningst{\"a}thet}
+$\rho({\bf x})$ (${\rm C}/{\rm m}^3$). I detta fall kan vi se det som att varje
+volymelement $\Delta V_k$ i k{\"a}llpunkterna ${\bf x}'_k$ i rummet uppb{\"a}r
+en laddning som vi kan se som en punktladdning, vilket i ett kontinuum
+{\"o}verg{\aa}r till
 $$
   q'_k=\rho({\bf x}')\Delta V_k\to\rho({\bf x}')dV'.
 $$
 D{\aa} alla dessa infinitesimala volymelement summeras upp erh{\aa}ller
-vi {\it Coulombintegralen}\sidx{Coulombs generaliserade lag}[Coulombintegralen]
-f{\"o}r det elektriska f{\"a}ltet i en
-\idx{observationspunkt} ${\bf x}$ som\numberedfootnote{Notera att Griffiths
-  Ekv.~(2.8), sid.~63, betecknar {\it inte} denna som ``{\it Coulomb
-  integral}'', vilket {\"a}r lite synd d{\aa} denna term p{\aa} pricken
-  beskriver vad det handlar om.}
+vi {\it Coulombintegralen}\sidx{Integral}[Volymintegral]\sidx{Coulombs
+generaliserade lag}[Coulombintegralen] f{\"o}r det elektriska f{\"a}ltet i en
+observationspunkt\sidx{Observationspunkt} ${\bf x}$ som\numberedfootnote{Notera
+  att Griffiths Ekv.~(2.8), sid.~63, betecknar {\it inte} denna som
+  ``{\it Coulomb integral}'', vilket {\"a}r lite synd d{\aa} denna term
+  p{\aa} pricken beskriver vad det handlar om.}
 $$
   {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
     {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'.
@@ -455,9 +467,9 @@ N{\"a}r vi nu framst{\"a}llt tv{\aa} olika representationer f{\"o}r att behandla
 elektrostatiska f{\"a}ltproblem (och vi kommer alldeles strax att dessutom
 introducera en {\it tredje} variant i och med potentialer), s{\aa} infinner
 sig naturligtvis fr{\aa}gan varf{\"o}r vi inte bara kan n{\"o}ja oss med
-Coulombs lag?\sidx{Coulombs kraftlag} Denna ger ju direkt kraften, s{\aa} vad {\"a}r {\"o}verhuvud
-vitsen med att (till synes) bara komplicera saker och ting genom att inf{\"o}ra
-elektriska f{\"a}lt och potentialer?
+Coulombs lag?\sidx{Coulombs kraftlag} Denna ger ju direkt kraften, s{\aa} vad
+{\"a}r {\"o}verhuvud vitsen med att (till synes) bara komplicera saker och ting
+genom att inf{\"o}ra elektriska f{\"a}lt och potentialer?
 
 L{\aa}t oss med anledning av denna retoriska fr{\aa}ga sammanfatta ett par
 anledningar till varf{\"o}r konceptet med f{\"a}lt underl{\"a}ttar f{\"o}r
@@ -472,8 +484,8 @@ oss.\numberedfootnote{Fundera g{\"a}rna igenom argumenten och kom p{\aa}
   avst{\aa}nd.}
 \item{$\bullet$}{F{\"a}ltmodellen till{\aa}ter oss att l{\aa}ta en laddnings
   p{\aa}verkan att propagera genom rummet, med en fix hastighet som normalt
-  {\"a}r \idx{ljushastigheten} eller denna nedskalad med motsvarande \idx{brytningsindex}
-  f{\"o}r mediet i rummet.}
+  {\"a}r ljushastigheten\sidx{Ljushastighet} eller denna nedskalad med
+  motsvarande brytningsindex\sidx{Brytningsindex} f{\"o}r mediet i rummet.}
 
 \subsection{Lokalitet och kausalitet}
 \item{$\bullet$}{Vi kan med f{\"a}ltkonceptet analysera kraften p{\aa} en
@@ -481,7 +493,8 @@ oss.\numberedfootnote{Fundera g{\"a}rna igenom argumenten och kom p{\aa}
   beh{\"o}va bry oss om sj{\"a}lva k{\"a}llan. (Detta n{\"a}r vi v{\"a}l
   har ber{\"a}knat sj{\"a}lva f{\"a}ltet, sj{\"a}lvfallet!)}
 \item{$\bullet$}{Detta g{\"o}r f{\"a}ltkonceptet kompatibelt med
-  \idx{relativitetsteori} och modern f{\"a}ltteori.}
+  relativitetsteori\sidx{Relativitetsteori} och modern
+  f{\"a}ltteori\sidx{F{\"a}ltteori}.}
 
 \subsection{F{\"o}renkling av m{\aa}ngkropps-problem}
 \item{$\bullet$}{Med $N$ laddningar blir ber{\"a}kningen av alla parvisa
@@ -502,11 +515,11 @@ oss.\numberedfootnote{Fundera g{\"a}rna igenom argumenten och kom p{\aa}
 
 \section{Gauss lag h{\"a}rledd i fyra steg}
 Vi skulle h{\"a}r i princip bara kunna h{\"a}nvisa till den generella formen
-av Gauss lag,\sidx{Gauss lag}[f{\"o}r elektrisk f{\"a}ltstyrka] men skulle d{\aa} riskera att missa n{\aa}gra intressanta
-po{\"a}nger. L{\aa}t oss d{\"a}rf{\"o}r ta detta fr{\aa}n grunden, med
-ut\-g{\aa}ngs\-punkt i Coulombs lag, i fyra enkla steg som f{\"o}rhoppningsvis
-ger oss en djupare fysikalisk f{\"o}rst{\aa}else f{\"o}r vad Gauss lag
-inneb{\"a}r.
+av Gauss lag,\sidx{Gauss lag}[F{\"o}r elektrisk f{\"a}ltstyrka] men skulle
+d{\aa} riskera att missa n{\aa}gra intressanta po{\"a}nger.
+L{\aa}t oss d{\"a}rf{\"o}r ta detta fr{\aa}n grunden, med ut\-g{\aa}ngs\-punkt
+i Coulombs lag, i fyra enkla steg som f{\"o}rhoppningsvis ger oss en djupare
+fysikalisk f{\"o}rst{\aa}else f{\"o}r vad Gauss lag inneb{\"a}r.
 
 \subsection{Definition: Elektriskt fl{\"o}de}
 \sidx{Elektriskt fl{\"o}de}
@@ -527,31 +540,36 @@ ett elektriskt f{\"a}lt}, men att vi i analogi med andra vektorf{\"a}lt inom
   av en str{\"o}m associerad med det elektriska fl{\"o}det.}
 Vi kan lite handviftande s{\"a}ga att det elektriska fl{\"o}det {\"a}r ett
 m{\aa}tt p{\aa} ``hur m{\aa}nga elektriska f{\"a}ltlinjer som passerar ut
-genom ytan'', r{\"a}knat med tecken utifr{\aa}n ytans \idx{normalvektor}~${\bf n}$.
+genom ytan'', r{\"a}knat med tecken utifr{\aa}n ytans
+normalvektor\idx{Normalvektor}~${\bf n}$.
 \vfill\eject
 
 \subsection{Steg~1: Sf{\"a}risk symmetrisk omslutande yta och punktladdning}
-Antag att vi har en \idx{punktladdning} $q'$ placerad i position vid ortsvektorn
-${\bf x}'$. D{\aa} vi ber{\"a}knar det elektriska fl{\"o}det ut fr{\aa}n denna
-laddning, s{\aa} kan vi se det som att fl{\"o}det h{\"a}rr{\"o}r fr{\aa}n en
-{\it k{\"a}lla}, och vi kommer fram{\"o}ver i kursen ofta att relatera till
-``k{\"a}lladdningar'' som ger upphov till elektriska f{\"a}lt och
+\sidx{Gauss lag}[H{\"a}rledning fr{\aa}n Coulombs lag]
+Antag att vi har en punktladdning\sidx{Punktladdning} $q'$ placerad i position
+vid ortsvektorn ${\bf x}'$. D{\aa} vi ber{\"a}knar det elektriska
+fl{\"o}det\sidx{Elektriskt fl{\"o}de} ut fr{\aa}n denna laddning, s{\aa} kan vi
+se det som att fl{\"o}det h{\"a}rr{\"o}r fr{\aa}n en {\it k{\"a}lla}, och vi
+kommer fram{\"o}ver i kursen ofta att relatera till ``k{\"a}lladdningar'' som
+ger upphov till elektriska f{\"a}lt och
 fl{\"o}den.\numberedfootnote{Genomg{\aa}ende kommer vi i kursen att
   s{\"a}tta ett prim ($'$) p{\aa} de objekt som vi betraktar som
-  k{\"a}llor, som ${\bf x}'$, $dA'$ eller $dV'$, och l{\aa}ta
-  observationspunkt och m{\"a}tetal vid denna vara oprimmade.
+  k{\"a}llor,\sidx{K{\"a}lladdning} som ${\bf x}'$, $dA'$ eller $dV'$,
+  och l{\aa}ta observationspunkt och m{\"a}tetal vid denna vara oprimmade.
   Vi kommer {\"a}ven att genomg{\aa}ende explicit anv{\"a}nda
-  Leibniz notation (${{\partial}\over{\partial x}}$, ${{d}\over{dx}}$)
-  f{\"o}r derivator, f{\"o}r att inte r{\aa}ka in i situationer d{\"a}r
-  ett prim kan misstas f{\"o}r en derivata.}
+  Leibniz\sidx{Leibniz, Gottfried Wilhelm (1646--1716)} notation
+  (${{\partial}\over{\partial x}}$, ${{d}\over{dx}}$) f{\"o}r derivator,
+  f{\"o}r att inte r{\aa}ka in i situationer d{\"a}r ett prim kan misstas
+  f{\"o}r en derivata.}
 
-Vi l{\"a}gger en hypotetisk sf{\"a}r $S$ med radien $|{\bf x}-{\bf x}'|=r=
-\hbox{konstant}$ runt punktladdningen, med syfte att f{\"o}rs{\"o}ka ber{\"a}kna
-det totala elektriska fl{\"o}det ut genom ytan.
+Vi l{\"a}gger en hypotetisk sf{\"a}r, eller ``virtuell sf{\"a}r'',\sidx{Virtuell
+sf{\"a}r} $S$ med radien $|{\bf x}-{\bf x}'|=r=\hbox{konstant}$ runt
+punktladdningen, med syfte att f{\"o}rs{\"o}ka ber{\"a}kna det totala elektriska
+fl{\"o}det\sidx{Elektriskt fl{\"o}de} ut genom ytan.
 \epsfig{figs/gauss-step-1.1}\noindent
 Det elektriska fl{\"o}det ut genom den slutna sf{\"a}ren $S$, r{\"a}knat
 gentemot ytans normalvektor ${\bf n}$, ges med utnyttjandet av den sf{\"a}riska
-symmetrin som
+symmetrin som\sidx{Integral}[Ytintegral]
 $$
   \eqalign{
     \Phi_{\rm E}&=\oiint_S {\bf E}({\bf x})\cdot d{\bf A}\cr
@@ -571,10 +589,12 @@ $$
   }
 $$
 Notera att det elektriska fl{\"o}det $\Phi_{\rm E}$ tolkat som ``hur m{\aa}nga
-f{\"a}ltlinjer som passerar ytan'' {\"a}r obe\-ro\-ende av radien p{\aa} den
-omslutande sf{\"a}ren, och {\it enbart beror p{\aa} styrkan av den inneslutna
-laddningen} (som kan vara positivt eller negativt) samt vakuumpermittiviteten
-$\varepsilon_0$. Vi kommer att utnyttja detta faktum i n{\"a}sta steg.
+f{\"a}ltlinjer\sidx{Elektrisk f{\"a}ltlinje} som passerar ytan'' {\"a}r
+obe\-ro\-ende av radien p{\aa} den omslutande sf{\"a}ren, och {\it enbart
+beror p{\aa} styrkan av den inneslutna laddningen} (som kan vara positivt
+eller negativt) samt vakuumpermittiviteten $\varepsilon_0$.\sidx{Elektrisk
+permittivitet}[Vakuumpermittivitet $\varepsilon_0$]
+Vi kommer att utnyttja detta faktum i n{\"a}sta steg.
 \vfill\eject
 
 \subsection{Steg~2: Godtycklig omslutande yta och punktladdning}
@@ -614,7 +634,7 @@ fl{\"o}det genom den slutna ytan~$S$}.
 Resultatet av detta resonemang {\"a}r att vi {\it fortfarande har exakt samma
 totala elektriska fl{\"o}de} $\Phi_{\rm E}$ ut genom ytan som omsluter
 punktladdningen $q'$. Med andra ord g{\"a}ller det {\"a}ven f{\"o}r en
-{\it godtycklig} omslutande yta $S$ att
+{\it godtycklig} omslutande yta $S$ att\sidx{Integral}[Ytintegral]
 $$
   \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf A}={{q'}\over{\varepsilon_0}},
 $$
@@ -635,7 +655,8 @@ situationen som vi analyserade i Steg~2. Varje enskild innesluten punktladdning
 elektriska fl{\"o}det som $q'_k/\varepsilon_0$.
 
 Rent formellt {\"a}r det totala elektriska fl{\"o}det ut genom den slutna
-generella ytan $S$ enligt superpositionsprincipen given som
+generella ytan $S$ enligt superpositionsprincipen given
+som\sidx{Integral}[Ytintegral]
 $$
   \eqalign{
     \Phi_{\rm E}&=\oiint_S {\bf E}({\bf x})\cdot d{\bf A}
@@ -650,22 +671,23 @@ $$
   }
 $$
 Slutsatsen av detta resultat {\"a}r att {\it det totala elektriska fl{\"o}det
-$\Phi_{\rm E}$ ut genom den slutna ytan fortfarande enbart beror av den
-inneslutna laddningen $q'_{\rm tot}$.} I det sista steget kommer vi nu att
-gene\-ra\-li\-sera detta till godtyckliga kontinuerliga
+$\Phi_{\rm E}$ ut genom den slutna ytan fortfarande enbart beror av den inneslutna
+laddningen $q'_{\rm tot}$.}\sidx{Elektriskt fl{\"o}de} I det sista steget kommer
+vi nu att gene\-ra\-li\-sera detta till godtyckliga kontinuerliga
 laddningsf{\"o}rdelningar.
 \vfill\eject
 
 \subsection{Steg~4: Godtycklig omslutande yta och kontinuerlig
   laddningsf{\"o}rdelning}
 Antag att vi nu ist{\"a}llet f{\"o}r diskreta punktladdningar $q'_k$ har en
-laddningsf{\"o}rdelning $\rho({\bf x})$ (enhet ${\rm C}/{\rm m}^3$) i en sluten
-(i rummet begr{\"a}nsad) volym $V$. Denna laddningsf{\"o}rdelning kan variera
-kontinuerligt (j{\"a}mnt) i rummet s{\aa}v{\"a}l som diskontinuerligt (stegvis),
-och vi l{\"a}mnar {\"a}ven {\"o}ppet f{\"o}r att $\rho({\bf x})$ skall kunna
-tolkas som en f{\"o}rdelning inneh{\aa}llande (Dirac-)delta-funktioner
-$\delta({\bf x}-{\bf x}'_k)$, med betydelsen av diskreta punktladdningar
-placerade vid k{\"a}llpositioner ${\bf x}'_k$.
+laddningsf{\"o}rdelning $\rho({\bf x})$\sidx{Elektrisk laddningst{\"a}thet}
+(enhet ${\rm C}/{\rm m}^3$) i en sluten (i rummet begr{\"a}nsad) volym $V$.
+Denna laddningsf{\"o}rdelning kan variera kontinuerligt (j{\"a}mnt) i rummet
+s{\aa}v{\"a}l som diskontinuerligt (stegvis), och vi l{\"a}mnar {\"a}ven
+{\"o}ppet f{\"o}r att $\rho({\bf x})$ skall kunna tolkas som en f{\"o}rdelning
+inneh{\aa}llande (Dirac-)delta-funktioner\sidx{Diracs delta-distribution
+$\delta$} $\delta({\bf x}-{\bf x}'_k)$, med betydelsen av diskreta
+punktladdningar placerade vid k{\"a}llpositioner ${\bf x}'_k$.
 
 I termer av laddningsf{\"o}rdelningen $\rho({\bf x})$ uppb{\"a}r d{\aa} varje
 infinitesimalt {\it k{\"a}llelement} med volymen $dV'$ vid k{\"a}llpositionen
@@ -676,7 +698,8 @@ Med det tidigare resultatet f{\"o}r framtagandet av det elektriska f{\"a}ltet
 fr{\aa}n diskreta laddningar s{\aa} f{\"o}ljer det kontinuerliga fallet helt
 analogt, och med anv{\"a}ndande av superpositionsprincipen f{\aa}r vi direkt
 att den tidigare summan {\"o}ver diskreta laddningar i rummet ers{\"a}tts av
-volymsintegralen\numberedfootnote{Notera att Griffiths (sid.~70)
+\sidx{Integral}[Volymintegral]\sidx{Integral}[Ytintegral]
+volymintegralen\numberedfootnote{Notera att Griffiths (sid.~70)
   olyckligtvis anv{\"a}nder den udda och vilseledande notationen
   $Q_{\rm enc}=\int_V\rho\,d\tau$ f{\"o}r volymintegralen. Normalt
   anv{\"a}nder vi $\tau$ som integrationsvariabel i {\it tid}.}
@@ -711,6 +734,7 @@ olika grad av avklingande.
 \vfill\eject
 
 \section{Kontinuerliga laddningsf{\"o}rdelningar}
+\sidx{Elektrisk laddningst{\"a}thet}[Volym-, yt-, linje-, punkt-]
 Konceptet kontinuerlig laddningsf{\"o}rdelning kan sj{\"a}lvfallet appliceras
 p{\aa} {\"a}ven trajektorior i rummet (linjeladdningar), ytor (ytladdningar).
 I de fall d{\"a}r man har att g{\"o}ra med punktladdningar p{\aa} linjer, ytor
@@ -720,6 +744,7 @@ punktladdningen.
 \epsfig{figs/chargetypes.1}
 
 \section{Fr{\aa}n Gauss lag till Coulombs lag}
+\sidx{Coulombs kraftlag}[H{\"a}rledd fr{\aa}n Gauss lag]
 En enkel exercis f{\"o}r att f{\aa} en k{\"a}nsla f{\"o}r Gauss lag och vad det
 inneb{\"a}r {\"a}r att g{\aa} andra v{\"a}gen, och fr{\aa}n v{\aa}rt sista
 resultat h{\"a}rleda Coulombs lag f{\"o}r v{\"a}xelverkan mellan
@@ -734,9 +759,11 @@ laddningst{\"a}theten\numberedfootnote{Griffiths anv{\"a}nder notationen
 $$
   \rho({\bf x})=q'\delta({\bf x}-{\bf x}').
 $$
-Antag vidare att vi l{\"a}gger en hypotetisk sf{\"a}r med radien $r$ centrerad
-runt denna punktladdning. Gauss lag f{\"o}r laddningsf{\"o}rdelningar ger oss
-d{\aa} med anv{\"a}ndande av sf{\"a}risk symmetri att
+Antag vidare att vi l{\"a}gger en hypotetisk sf{\"a}r,\sidx{Virtuell sf{\"a}r}
+vilket vi {\"a}ven kan beteckna som en ``virtuell sf{\"a}r''\sidx{Virtuell
+sf{\"a}r} i detta tankeexperiment, med radien $r$ centrerad runt denna
+punktladdning. Gauss lag f{\"o}r laddnings\-f{\"o}rdel\-ningar ger oss d{\aa}
+med anv{\"a}ndande av sf{\"a}risk symmetri att
 $$
   \underbrace{
     \oiint_S {\bf E}({\bf x})\cdot d{\bf A}
@@ -781,9 +808,9 @@ $$
   \iiint_V\nabla\cdot{\bf E}\,dV=\oiint_S{\bf E}\cdot d{\bf A}.
 $$
 Vi har samtidigt visat att detta uttryck enligt Gauss lag uppenbarligen ges
-som\numberedfootnote{Vi tar oss h{\"a}r friheten att skippa primmet p{\aa}
-  k{\"a}llorna; det {\"a}r i sammanhanget uppenbart {\"o}ver vilka
-  dom{\"a}ner integralerna skall tolkas.}
+som\sidx{Integral}[Sluten ytintegral]\numberedfootnote{Vi tar oss h{\"a}r
+  friheten att skippa primmet p{\aa} k{\"a}llorna; det {\"a}r i sammanhanget
+  uppenbart {\"o}ver vilka dom{\"a}ner integralerna skall tolkas.}
 $$
   \oiint_S {\bf E}\cdot d{\bf A}
      ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV,
@@ -821,7 +848,8 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
   $$
     \varepsilon_0\approx8.854\times10^{12}\ {\rm F}/{\rm m}
   $$
-  {\"a}r konstanten f{\"o}r den {\it elektriska permittiviteten i vakuum},
+  {\"a}r konstanten f{\"o}r den {\it elektriska permittiviteten i
+  vakuum},\sidx{Elektrisk permittivitet}[Vakuumpermittivitet $\varepsilon_0$]
   eller kort och gott {\it vakuumpermittiviteten}. Denna permittivitet
   kommer genom kursen att h{\"a}nga med som en signatur p{\aa} allt som
   h{\"a}danefter kommer att h{\"a}rledas fr{\aa}n Coulombs lag.}
@@ -868,16 +896,14 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
   $$}
 \item{$\bullet$}{Tolkningen av Gauss lag {\"a}r att {\it det elektriska
   fl{\"o}det $\Phi_{\rm E}$ ut genom en sluten yta $S$ ges som den av ytan
-  inneslutna laddningen $q_{\rm tot}$ dividerad med vakuumpermittiviteten},
+  inneslutna laddningen $q_{\rm tot}$ dividerad med vakuumpermittiviteten}
+  \sidx{Elektrisk permittivitet}[Vakuumpermittivitet $\varepsilon_0$]
+  $\varepsilon_0$, som
   $$
     \Phi_{\rm E}
        \equiv\oiint_S {\bf E}({\bf x})\cdot d{\bf A}
        ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV
        \equiv q_{\rm tot}/\varepsilon_0.
   $$}
-\ifshowindex
-\vfill\eject
-\section{Index}
-\readindexfile{i}
-\fi
+\index
 \bye

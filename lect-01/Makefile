@@ -42,7 +42,6 @@ $(dvis): $(srcs)
 	@$(eval BASE = $(shell basename $@ .dvi))
 	@echo "Compiling source file $(BASE).tex to DVI (target $(BASE).dvi)."
 	@$(TEX) $(BASE).tex
-	@$(TEX) $(BASE).tex
 	@$(MKIDX) $(BASE).idx
 	@$(TEX) $(BASE).tex
 	@echo "DVI file for $(BASE).tex written to $(BASE).dvi."
