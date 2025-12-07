@@ -93,6 +93,9 @@
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 \def\captionwide{\advance\leftskip by 60pt
   \advance\rightskip by 60pt}
+\newif\ifshowindex
+\showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject\section{Index} \readindexfile{i}\fi}
 %--------------------- END OF LOCAL MACROS ---------------------
 
 \initlecture
@@ -113,7 +116,6 @@
   traverserande en str{\"o}mslinga, vilket f{\"o}r {\"o}vrigt {\"a}r
   f{\"o}rsta momentet d{\"a}r den magnetiska permea\-bili\-teten $\mu_0$
   introduceras.
-
   Utifr{\aa}n formen p{\aa} Biot--Savarts lag f{\"o}r generering av
   magnetf{\"a}lt visar vi att $\nabla\cdot{\bf B}=0$ alltid {\"a}r uppfyllt,
   vilket p{\aa}visar att magnetiska monopoler (magnetisk laddning) ej existerar,
@@ -156,6 +158,7 @@
 %----------------------- END OF PREAMBLE -----------------------
 
 \section{Introduktion}
+\sidx{Elektrostatik}\sidx{Magnetostatik}\sidx{Elektron}\sidx{Str{\"o}m}
 Vi kommer i denna f{\"o}rel{\"a}sning att behandla konstanta str{\"o}mmar, i
 vilka laddningar (l{\"a}s: elektroner) r{\"o}r sig l{\"a}ngs givna f{\"a}lt
 eller trajektorior som i sig {\"a}r konstanta i rum och tid.\numberedfootnote{Vi
@@ -178,8 +181,8 @@ Att vi h{\"a}r har att g{\"o}ra med statiska magnetf{\"a}lt betyder inte att
 teorin inte g{\aa}r att applicera p{\aa} tidsberoende problem, bara att det
 m{\aa}ste g{\"o}ras under f{\"o}ruts{\"a}ttningen att f{\"o}rloppen {\"a}r
 l{\aa}ngsamma nog att f{\"o}r att den elektromagnetiska v{\aa}gl{\"a}ngden
-i problemet rej{\"a}lt {\"o}verstiger storleken p{\aa} dom{\"a}nen som
-analyseras.
+\sidx{Elektromagnetisk v{\aa}gl{\"a}ngd} i problemet rej{\"a}lt {\"o}verstiger
+storleken p{\aa} dom{\"a}nen som analyseras.
 Till exempel kan vanliga elektriska generatorer och motorer, exempelvis
 startmotorn i en bil eller generatorn i ett vindkraftverk, med mycket god
 approximation behandlas som just magnetostatiska problem, trots den uppenbara
@@ -190,18 +193,21 @@ magnetostatiskt eller ej.
 
 \section{Historik}
 Magnetostatiken kan s{\"a}gas ha uppt{\"a}ckts 1269 av fransmannen Petrus
-Peregrinus de Maricourt, som unders{\"o}kte det magnetiska f{\"a}ltet p{\aa}
-ytan av en sf{\"a}risk magnet med n{\aa}lar av j{\"a}rn. Han noterade att de
+Peregrinus de Maricourt,\sidx{de Maricourt, Petrus Peregrinus} som
+unders{\"o}kte det magnetiska f{\"a}ltet p{\aa} ytan av en sf{\"a}risk
+magnet\sidx{Permanentmagnet} med n{\aa}lar av j{\"a}rn. Han noterade att de
 resulterande f{\"a}ltlinjerna som n{\aa}larna beskrev korsades p{\aa} tv{\aa}
-p{\aa} sf{\"a}ren motsatta punkter, som han betecknade som ``poler'' i analogi
+p{\aa} sf{\"a}ren motsatta punkter, som han betecknade som ``poler''
+\sidx{Magnetiska poler} i analogi
 med jordens poler.\numberedfootnote{Intressant nog, som en litet sidosp{\aa}r
   till Maricourts observationer kring detta med poler, s{\aa} formulerade
-  grekiska filosofer som  Empedocles och Anaxagoras redan kring 500~BC
-  hypotesen att jorden sannolikt var rund, utifr{\aa}n den runda skugga
-  som jorden gav p{\aa} m{\aa}nen vid en m{\aa}nf{\"o}rm{\"o}rkelse.
-  Kring 350~BC bistod Aristoteles med observationen att d{\aa} skepp
-  som seglar iv{\"a}g f{\"o}rsvinner skrovet f{\"o}rst ur sikte, f{\"o}re
-  masten, och att detta pekar p{\aa} att jorden har en rund form.
+  grekiska filosofer som \idx{Empedocles (494--434~BC)} och \idx{Anaxagoras
+  (500--428~BC)} redan kring 500~BC hypotesen att jorden sannolikt var rund,
+  utifr{\aa}n den runda skugga som jorden gav p{\aa} m{\aa}nen vid en
+  m{\aa}nf{\"o}rm{\"o}rkelse.
+  Kring 350~BC bistod \idx{Aristoteles (384--322~BC)} med observationen att
+  d{\aa} skepp som seglar iv{\"a}g f{\"o}rsvinner skrovet f{\"o}rst ur sikte,
+  f{\"o}re masten, och att detta pekar p{\aa} att jorden har en rund form.
   F{\"o}rst 1522~AD fick vi dock ``h{\aa}rt bevis'' p{\aa} att jorden
   {\"a}r rund genom Magellan--Elcanos expedition som genomf{\"o}rde den
   f{\"o}rsta v{\"a}rldsomseglingen och d{\"a}rmed en g{\aa}ng f{\"o}r
@@ -212,23 +218,27 @@ Maricourt formulerade ocks{\aa} den synnerligen intressanta observationen att
 sydpol}. Som vi skall se fram{\"o}ver i denna f{\"o}rel{\"a}sningsserie
 h{\"a}nger detta intimt samman med att magnetism alltid manifesterar sig
 som dipoler (eller h{\"o}gre ordningars multipoler), och {\it aldrig som
-magnetisk laddning (monopoler)}, detta som en markant skillnad gentemot
-elektrisk laddning.
+magnetisk laddning (monopoler)},\sidx{Magnetisk monopol} detta som en markant
+skillnad gentemot elektrisk laddning.\sidx{Elektrisk monopol}
 
 Den som r{\"a}knas som uppt{\"a}ckaren av att elektriska str{\"o}mmar genererar
-magnetiska f{\"a}lt {\"a}r Hans Christian {\OE}rsted, som 1820 publicerade sin
-uppt{\"a}ckt att orienteringen hos en kompassn{\aa}l p{\aa}verkas av en
-elektrisk str{\"o}m i n{\"a}rheten av n{\aa}len.
+magnetiska f{\"a}lt {\"a}r Hans Christian {\OE}rsted,\sidx{{\OE}rsted, Hans
+Christian (1777--1851)} som 1820 publicerade sin uppt{\"a}ckt att orienteringen
+hos en kompassn{\aa}l p{\aa}verkas av en elektrisk str{\"o}m i n{\"a}rheten av
+n{\aa}len.
 F{\"o}r sin uppt{\"a}ckt bel{\"o}nades {\OE}rsted av {\it The Royal Society} i
-England med Copley-medaljen, samt att den Franska Akademien bel{\"o}nade honom
-med $3\,000$ franc.
+England med Copley-medaljen, samt att den \idx{Franska Akademien} bel{\"o}nade
+honom med $3\,000$ franc.
 {\OE}rsteds uppt{\"a}ckt kan s{\"a}gas vara startskottet f{\"o}r arbetet med
 att formulera den moderna elektromagnetismen, speciellt inspirerade detta den
-franske fysikern Andr\'e-Marie Amp\`ere till att formulera en matematisk formel
-f{\"o}r att beskriva den magnetiska kraften mellan str{\"o}mslingor.
+franske fysikern Andr\'e-Marie Amp\`ere\sidx{Amp\`ere, Andr\'e-Marie
+(1775--1836)} till att formulera en matematisk formel f{\"o}r att beskriva den
+magnetiska kraften mellan str{\"o}mslingor.
 \vfill\eject
 
 \section{Vad {\"a}r ett magnetf{\"a}lt?}
+\sidx{Magnetf{\"a}lt}\sidx{Magnetisk fl{\"o}dest{\"a}thet}
+\sidx{Elektrisk str{\"o}m}
 \quote{{\bf Definition.} Vi definierar ett magnetf{\"a}lt\numberedfootnote{I
     denna kurs betecknar vi magnetf{\"a}ltet ocks{\aa} som $B$-f{\"a}lt,
     men i andra sammanhang betecknas f{\"a}ltet {\"a}ven som $H$-f{\"a}lt,
@@ -241,15 +251,18 @@ f{\"o}r att beskriva den magnetiska kraften mellan str{\"o}mslingor.
 \noindent
 I n{\aa}gon m{\aa}n kan vi s{\"a}ga att dessa tre m{\"o}jligheter egentligen
 kokar ner till en enda sak, n{\"a}mligen p{\aa}verkan av r{\"o}rliga elektriska
-laddningar, eftersom elektrisk str{\"o}m utg{\"o}rs av r{\"o}rliga laddningar
-samt att magnetiska material handlar om hur materialet p{\aa} en mikroskopisk
-niv{\aa}, eller snarare kvantmekanisk niv{\aa}, beter sig i linjering av spinn
-och magnetiska moment som kan ses som mikroskopiska slutna str{\"o}mslingor.
-Den kvantmekaniska behandlingen av spinn och magnetiska moment ligger dock
-utanf{\"o}r omfattningen av denna kurs.
+laddningar,\sidx{Elektrisk laddning}  eftersom elektrisk str{\"o}m utg{\"o}rs
+av r{\"o}rliga laddningar samt att magnetiska material handlar om hur
+materialet p{\aa} en mikroskopisk niv{\aa}, eller snarare kvantmekanisk
+niv{\aa}, beter sig i linjering av spinn och magnetiska moment som kan ses
+som mikroskopiska slutna str{\"o}mslingor.\sidx{Str{\"o}mslinga}[Sluten]
+Den kvantmekaniska\sidx{Kvantmekanik} behandlingen av spinn och magnetiska
+moment\sidx{Magnetiskt dipolmoment} ligger dock utanf{\"o}r omfattningen av
+denna kurs.
 
 \section{Lorentz-kraften - R{\"o}rliga laddningar i statiska elektriska och
   magnetiska f{\"a}lt}
+\sidx{Lorentz-kraften}
 \epsfig{figs/lorentz.1}\noindent
 Problemet med magnetiska f{\"a}lt {\"a}r att det fr{\aa}n ett klassiskt
 angreppss{\"a}tt {\"a}r om{\"o}jligt att strikt h{\"a}rleda dem {\it a priori}
@@ -268,9 +281,10 @@ och inte bara till dess belopp.
 Om vi l{\"a}gger till kraften p{\aa} laddningen fr{\aa}n ett statiskt elektriskt
 f{\"a}lt, s{\aa} erh{\aa}ller vi {\it Lorentz-kraften}\numberedfootnote{Som,
   liksom Griffiths korrekt p{\aa}pekar, ursprungligen formulerades av
-  Oliver Heaviside, som senare kom att ha en instrumentell del i
-  formulerandet av den moderna formen av {\it Maxwell's ekvationer}
-  s{\aa} som vi idag k{\"a}nner dem. F{\"o}r en intressant sammanfattning
+  Oliver Heaviside,\sidx{Heaviside, Oliver (1850--1925)} som senare kom att
+  ha en instrumentell del i formulerandet av den moderna formen av
+  {\it Maxwell's ekvationer}\sidx{Maxwells ekvationer} s{\aa} som vi idag
+  k{\"a}nner dem. F{\"o}r en intressant sammanfattning
   av Heavisides arbete med att sl{\aa} samman de fr{\aa}n b{\"o}rjan tjugo
   ekvationerna beskrivande elektrodynamik till de fyra som utg{\"o}r den
   moderna formen av Maxwells ekvationer, se exempelvis Damian P. Hampshire,
@@ -286,6 +300,7 @@ helt luta oss mot att denna form {\"a}r experimentellt verifierad efter alla
 konstens regler och d{\"a}rmed n{\"o}ja oss med det.
 
 \subsection{Magnetisk kraft utf{\"o}r inget arbete}
+\sidx{Magnetisk kraft utf{\"o}r inget arbete}
 Utifr{\aa}n formen p{\aa} Lorentz-kraften, som {\"a}r ortogonal mot
 s{\aa}v{\"a}l det magnetiska f{\"a}ltet ${\bf B}$ som hastigheten ${\bf v}$,
 kan vi dra en viktig och generell slutsats:
@@ -329,14 +344,17 @@ Denna kraft p{\aa} r{\"o}relse av laddningar som genom str{\"o}mslingor {\"a}r
 {\it begr{\"a}nsade} i sin r{\"o}relse utf{\"o}r sj{\"a}lvfallet arbete.
 
 \section{Amp\`eres kraftlag - Kraften p{\aa} str{\"o}mslingor i magnetf{\"a}lt}
+\sidx{Amp\`eres kraftlag}
 Vi skall nu g{\aa} in p{\aa} hur krafter verkar p{\aa} laddningar som
 transporteras i f{\"o}rutbest{\"a}mda banor, det vill s{\"a}ga elektrisk
-str{\"o}m i {\it str{\"o}mslingor}.
-\quote{{\bf Definition} Vi definierar str{\"o}m som den laddning, vanligtvis
-  elektroner, som transporteras genom en givet tv{\"a}rsnitt per tidsenhet.}
+str{\"o}m i {\it str{\"o}mslingor}.\sidx{Str{\"o}mslinga}
+\quote{{\bf Definition:} Vi definierar str{\"o}m \sidx{Str{\"o}m} som den
+  laddning, vanligtvis elektroner, som transporteras genom en givet
+  tv{\"a}rsnitt per tidsenhet.}
 \noindent
 Kort och gott kommer vi i praktiken att definiera str{\"o}m som det antal
 Coulomb som passerar en ledares tv{\"a}rsnitt per sekund, som
+\sidx{Amp\`ere, enhet f{\"o}r str{\"o}m}\sidx{Coulomb, enhet f{\"o}r laddning}
 $$
   1~\hbox{A} = 1~\hbox{C}/\hbox{s}.
 $$
@@ -386,10 +404,12 @@ $$
 Vi brukar beteckna detta som {\it Amp\`eres kraftlag} f{\"o}r str{\"o}mslingor,
 vilket inte skall f{\"o}rv{\"a}xlas med {\it Amp\`eres lag} som vi strax skall
 h{\"a}rleda, och som beskriver hur magnetiska f{\"a}ltet i sig kopplar till en
-str{\"o}mt{\"a}thet.
+str{\"o}mt{\"a}thet.\sidx{Amp\`eres kraftlag}\sidx{Str{\"o}mt{\"a}thet}
+\sidx{Str{\"o}mslinga}
 \vfill\eject
 
 \section{Volymstr{\"o}mmar och ``lagen om att laddning inte kan f{\"o}rsvinna''}
+\sidx{Str{\"o}mt{\"a}thet}\sidx{Lagen om att laddning inte kan f{\"o}rsvinna}
 Enligt definitionen som vi h{\"a}r anv{\"a}nder f{\"o}r str{\"o}mmen $I$, s{\aa}
 {\"a}r denna definierad som den laddning som per tidsenhet passerar {\it genom
 ett givet tv{\"a}rsnitt}. Vi kan formulera detta som att vi genom en yta $S$,
@@ -403,7 +423,7 @@ $$
 Vi kan sj{\"a}lvfallet utveckla detta till att g{\"a}lla den totala str{\"o}m
 som passerar genom en {\it sluten} yta $S$ som omsluter en volym $V$, genom att
 anv{\"a}nda Gauss lag\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa}
-  Griffiths, {\it Divergence theorem}:
+  Griffiths, {\it Divergence theorem}:\sidx{Gauss lag}
   $$
     \int(\nabla\cdot{\bf A})\,dV=\oiint{\bf A}\,d{\bf S}.
   $$
@@ -418,6 +438,7 @@ $$
    =\oiint_S {\bf J}\cdot d{\bf A}
    =\iiint_V (\nabla\cdot{\bf J})\,dV.
 $$
+\sidx{Elektrisk laddning}
 Eftersom ingen laddning kan skapas eller f{\"o}rintas internt i volymen (vi
 erinrar oss att all laddnings\-transport in eller ut fr{\aa}n volymen sker
 genom den slutna ytan $S$, s{\aa} m{\aa}ste den laddning som fl{\"o}dar
@@ -429,11 +450,11 @@ $$
     =-{{d}\over{dt}}\iiint_V \rho\,dV
     =-\iiint_V {{d\rho}\over{dt}}\,dV
 $$
-Fl{\"o}det i den slutna ytintegralen definieras som fl{\"o}det {\it ut genom
-ytan}, och vi kan som en liten {\it sanity check} konstatera att minustecknet
-i h{\"o}gerledet d{\"a}rmed betyder att positiv laddning som fl{\"o}dar ut
-genom ytan motsvaras av en motsvarande minskning av positiv laddning i volymen
-$V$, helt enligt f{\"o}rv{\"a}ntan.
+Fl{\"o}det av laddning i den slutna ytintegralen definieras som fl{\"o}det
+{\it ut genom ytan}, och vi kan som en liten {\it sanity check} konstatera att
+minustecknet i h{\"o}gerledet d{\"a}rmed betyder att positiv laddning som
+fl{\"o}dar {\it ut genom ytan} motsvaras av en motsvarande {\it minskning av
+positiv laddning i volymen} $V$, helt enligt f{\"o}rv{\"a}ntan.
 
 Eftersom detta argument kring fl{\"o}de av laddning ut genom en sluten yta
 {\"a}r giltigt f{\"o}r en {\it godtycklig} volym $V$, s{\aa} betyder detta att
@@ -452,6 +473,7 @@ som {\it lagen om att laddning inte kan f{\"o}rsvinna}.\numberedfootnote{{\it
   Griffiths Ekv.~(8.4), sid.~356.}
 
 \section{Aprop{\aa} detta med magnetostatik vs elektrostatik}
+\sidx{Magnetostatik}\sidx{Elektrostatik}
 L{\aa}t oss g{\"o}ra en liten utvikning kring detta med elektrostatik och
 magnetostatik, och konstatera att vi i dessa {\it statiska} problem formellt
 har att laddningst{\"a}theten $\rho$ och str{\"o}mt{\"a}theten ${\bf J}$
@@ -506,14 +528,16 @@ str{\"o}mslingor med ett kontinuum av laddning. Eller?
 
 \section{Biot--Savarts lag - Magnetf{\"a}lt fr{\aa}n str{\"o}mslingor}
 \subsection{Historiken f{\"o}r Biot--Savarts lag}
+\sidx{Biot--Savarts lag}
 Efter att Hans Christian {\OE}rsted {\aa}r 1820 hade gjort sin banbrytande
 uppt{\"a}ckt att en magnetn{\aa}l p{\aa}verkas av elektriska str{\"o}mmar, tog
-de franska fysikerna Jean-Baptiste Biot och F\'elix Savart (b{\aa}da i Paris)
-samma {\aa}r upp f{\"o}rs{\"o}k med att fysikaliskt m{\"a}ta hur stort det
-genererade magnetf{\"a}ltet var och vilka lagar som kunde t{\"a}nkas styra
-det.\numberedfootnote{Herman Erlichson, {\it The experiments of Biot and
-  Savart concerning the force exerted by a current on a magnetic needle},
-  Am.~J.~Phys. {\bf 66} (1998).}
+de franska fysikerna Jean-Baptiste Biot (1774--1862) \sidx{Biot, Jean-Baptiste
+(1774--1862)} och F\'elix Savart (1791--1841) \sidx{Savart, F\'elix
+(1791--1841)} (b{\aa}da i Paris) samma {\aa}r upp f{\"o}rs{\"o}k med att
+fysikaliskt m{\"a}ta hur stort det genererade magnetf{\"a}ltet var och vilka
+lagar som kunde t{\"a}nkas styra det.\numberedfootnote{Herman Erlichson,
+  {\it The experiments of Biot and Savart concerning the force exerted by
+  a current on a magnetic needle}, Am.~J.~Phys. {\bf 66} (1998).}
 I sina experiment sp{\"a}nde Biot och Savart upp en l{\aa}ng ledande tr{\aa}d
 genom vilken de kunde leda en elektrisk str{\"o}m vertikalt och upph{\"a}ngde
 vid sidan av tr{\aa}dens mitt en liten horisontell magnetn{\aa}l, som skyddades
@@ -553,6 +577,7 @@ f{\"a}lt.\numberedfootnote{Griffiths v{\"a}ljer redan i ett tidigt stadium
   str{\"o}mslingan.}
 
 \subsection{Biot--Savarts lag f{\"o}r str{\"o}mslingor}
+\sidx{Biot--Savarts lag}
 \epsfig{figs/biotsavart.1}\noindent
 Om vi betraktar ett linjeelement $d{\bf l}'$ vid k{\"a}llpunkten ${\bf x}'$ med
 beloppet $|d{\bf l}'|=dl'$ l{\"a}ngs en str{\"o}mslinga uppb{\"a}rande
@@ -586,12 +611,16 @@ f{\"o}rekomsten av\numberedfootnote{Detta fixerade v{\"a}rde f{\"o}r den
 $$
   \mu_0=4\pi\times10^{-7}\ {\rm H}/{\rm m}\quad(\hbox{exakt per definition})
 $$
-f{\"o}r den {\it magnetiska permeabiliteten i vakuum}; detta {\"a}r f{\"o}rsta
-g{\aa}ngen som $\mu_0$ dyker upp i denna kurs, p{\aa} exakt samma s{\"a}tt som
-$\varepsilon_0$ d{\"o}k upp f{\"o}r f{\"o}rsta g{\aa}ngen i elektrostatiken i
-och med att vi introducerades till Coulombs lag. I sj{\"a}lva verket kan vi
-h{\"a}danefter generellt identifiera ``sl{\"a}kttr{\"a}det'' f{\"o}r v{\aa}ra
-ekvationer som
+f{\"o}r den {\it magnetiska permeabiliteten i vakuum};
+\sidx{Magnetisk permeabilitet}[Vakuumpermeabilitet $\mu_0$]
+\sidx{Elektrisk permittivitet}[Vakuumpermittivitet $\varepsilon_0$]
+detta {\"a}r f{\"o}rsta g{\aa}ngen som $\mu_0$ dyker upp i denna kurs, p{\aa}
+exakt samma s{\"a}tt som $\varepsilon_0$ d{\"o}k upp f{\"o}r f{\"o}rsta
+g{\aa}ngen i elektrostatiken i och med att vi introducerades till Coulombs lag.
+\sidx{Coulombs kraftlag}
+I sj{\"a}lva verket kan vi h{\"a}danefter generellt identifiera
+``sl{\"a}kttr{\"a}det'' f{\"o}r v{\aa}ra ekvationer som
+\sidx{Elektromagnetiskt sl{\"a}kttr{\"a}d}
 \medskip
 \item{$\bullet$}{F{\"o}rekomst av {\it enbart} elektrisk
   permittivitet $\varepsilon_0$ $\Rightarrow$ Elektrostatik.}
@@ -612,6 +641,7 @@ $$
     {{{\bf I}({\bf x}')\times({\bf x}-{\bf x}')}
       \over{|{\bf x}-{\bf x}'|^3}}\,dl'.
 $$
+\sidx{Biot--Savarts lag}[F{\"o}r str{\"o}mslinga]
 Vi kan redan h{\"a}r se att Biot--Savarts lag kan r{\"a}knas som motsvarigheten
 till Coulombs lag i elektrostatiken, dock h{\"a}r ist{\"a}llet relaterande till
 {\it r{\"o}relse (dynamik) av laddning}. Som alternativ form av Biot--Savarts
@@ -636,9 +666,11 @@ $$
   {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
   {{{\bf J}({\bf x}')\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'.
 $$
+\sidx{Biot--Savarts lag}[F{\"o}r str{\"o}mt{\"a}thet]
 
 \section{Divergens f{\"o}r magnetf{\"a}ltet - ``Magnetiska monopoler
   existerar inte''}
+\sidx{Magnetiska monopoler}[Icke-existens av]
 Notera att integralen som f{\"o}rekommer i Biot--Savarts lag sker {\"o}ver
 {\it primmade} koordinater ${\bf x}'$, i vilket vi betraktar observationspunkten
 ${\bf x}$ som fix. Vi kommer nu att s{\"o}ka uttryck f{\"o}r divergensen och
@@ -689,7 +721,10 @@ $$
     &=0.
   }
 $$
-Att vi har
+Att vi har\sidx{Tricket
+$\displaystyle\nabla{{1}\over{\char124}{\bf x}-{\bf x}'{\char124}}
+=-{{({\bf x}-{\bf x}')}\over{{\char124}{\bf x}-{\bf x}'{\char124}^3}}$}
+\sidx{Magnetisk fl{\"o}dest{\"a}thet}[Divergens f{\"o}r]
 $$
   \nabla\times{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\equiv{\bf 0}
 $$
@@ -721,7 +756,10 @@ elektriska f{\"a}ltet och den lokala elektriska laddningen $\rho$ (eller
 I det magnetostatiska fall som vi h{\"a}r g{\aa}tt igenom har vi med andra ord
 att det magnetiska fl{\"o}det ut genom en sluten yta alltid {\"a}r identiskt
 noll, och vi har d{\"a}rmed ingen m{\"o}jlighet att innesluta n{\aa}gon
-``magnetisk laddning''. V{\aa}r slutsats blir d{\"a}rmed:
+``magnetisk laddning''.
+
+V{\aa}r slutsats blir d{\"a}rmed:
+\sidx{Magnetiska monopoler}[Icke-existens av]
 \quote{{\it $\nabla\cdot{\bf B}=0$ betyder att det inte existerar
   n{\aa}gon magnetisk laddning!}}
 \noindent
@@ -735,6 +773,7 @@ handlar om {\it elektriska monopoler} (som ju faktiskt existerar) som kan
 s{\"a}ttas samman till elektriska dipoler.
 
 \section{Rotationen f{\"o}r magnetf{\"a}ltet}
+\sidx{Magnetisk fl{\"o}dest{\"a}thet}[Rotation f{\"o}r]
 Med den intressanta observationen att {\it magnetiska monopoler inte existerar}
 i bagaget, l{\aa}t oss nu g{\aa} vidare med rotationen av magnetf{\"a}ltet.
 Vi anv{\"a}nder {\"a}ven h{\"a}r den generella formen av Biot--Savarts
@@ -1001,6 +1040,7 @@ $$
 $$
 
 \section{Amp\`eres lag}
+\sidx{Amp\`eres lag}
 V{\aa}rt slutliga resultat f{\"o}r rotationen f{\"o}r det magnetiska f{\"a}ltet
 p{\aa} differentiell form,
 $$
@@ -1050,6 +1090,7 @@ experiment.\numberedfootnote{Oneliner f{\"o}r magnetf{\"a}lt runt
   $$}
 
 \section{Vektorpotentialen}
+\sidx{Vektorpotential}\sidx{Vektorpotential}[Amp\`eres lag]
 Vi erinrar oss att ekvationen $\nabla\times{\bf E}={\bf 0}$ i elektrostatiken
 ledde oss till att dra slutsatsen att det existerar en skal{\"a}r potential
 definierad genom ${\bf E}=-\nabla\phi$. P{\aa} samma s{\"a}tt inbjuder
@@ -1080,11 +1121,13 @@ som\numberedfootnote{Griffiths Ekv.~(5.64), sid.~244. Notera att liksom i
   s{\aa} betraktar Griffiths denna form som s{\aa} fundamental att den
   {\"a}r den andra som visas p{\aa} omslaget till {\it Introduction to
   Electrodynamics}.}
+\sidx{Amp\`eres lag}[Uttryckt i vektorpotentialen]
 $$
   \nabla^2{\bf A}=-\mu_0{\bf J}.
 $$
 
 \section{Explicit l{\"o}sning f{\"o}r vektorpotentialen}
+\sidx{Vektorpotential}[Explicit l{\"o}sning]
 Eftersom vektorpotentialen beskrivs av Poissons ekvation, vilket i grund och
 botten {\"a}r en {\it skal{\"a}r} partiell differentialekvation, som kan
 projiceras ut komponentvis ${\bf J}=(J_x,J_y,J_z)$ f{\"o}r vektorpotentialen,
@@ -1214,5 +1257,5 @@ $$
     A_k({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
       {{J_k({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',\quad k=x,y,z.
   $$}
-
+\index
 \bye
