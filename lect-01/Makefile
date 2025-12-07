@@ -7,6 +7,7 @@
 #
 TEX    = tex
 DVIPS  = dvips
+MKIDX  = makeindex
 PS2PDF = ps2pdf
 TAR    = tar
 
@@ -42,6 +43,8 @@ $(dvis): $(srcs)
 	@echo "Compiling source file $(BASE).tex to DVI (target $(BASE).dvi)."
 	@$(TEX) $(BASE).tex
 	@$(TEX) $(BASE).tex
+	@$(MKIDX) $(BASE).idx
+	@$(TEX) $(BASE).tex
 	@echo "DVI file for $(BASE).tex written to $(BASE).dvi."
 
 texchars:
@@ -60,4 +63,4 @@ archive:
 clean:
 	@make -ik clean -C figs
 	@make -ik clean -C extras
-	@rm -Rf *~ *.aux *.toc *.log *.dvi *.ps $(ARCHIVE)
+	@rm -Rf *~ *.aux *.toc *.idx *.ind *.log *.ilg *.dvi *.ps $(ARCHIVE)
