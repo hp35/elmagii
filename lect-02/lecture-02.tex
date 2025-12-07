@@ -93,6 +93,9 @@
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 \def\captionwide{\advance\leftskip by 60pt
   \advance\rightskip by 60pt}
+\newif\ifshowindex
+\showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject\section{Index} \readindexfile{i}\fi}
 %--------------------- END OF LOCAL MACROS ---------------------
 
 \initlecture
@@ -152,14 +155,13 @@
 %----------------------- END OF PREAMBLE -----------------------
 
 \section{Till{\"a}mpning av Gauss lag - Rak linjeladdning}
-Antag att vi vill ber{\"a}kna den elektriska f{\"a}ltstyrkan (``det elektriska
-f{\"a}ltet'') p{\aa} avst{\aa}ndet $r$ vinkelr{\"a}tt fr{\aa}n fr{\aa}n en
+Antag att vi vill ber{\"a}kna den elektriska f{\"a}ltstyrkan\sidx{Elektrisk f{\"a}ltstyrka} (``det elektriska f{\"a}ltet'') p{\aa} avst{\aa}ndet $r$ vinkelr{\"a}tt fr{\aa}n fr{\aa}n en
 laddning f{\"o}rdelad p{\aa} en o{\"a}ndlig och rak linje, med
-linjeladdningst{\"a}theten $\lambda$ (${\rm C}/{\rm m}$).
+linjeladdningst{\"a}theten\sidx{Elektrisk laddningst{\"a}thet}[Linjeladdning] $\lambda$ (${\rm C}/{\rm m}$).
 
 En taktik att angripa detta problem vore att betrakta varje liten del $dl$
 av linjeladdningen som en punktladdning $dq=\lambda dl$ och d{\"a}refter
-integrera alla delbidrag genom Coulombs lag, f{\"o}rhoppningsvis med konvergens
+integrera alla delbidrag genom Coulombs lag\sidx{Coulombs kraftlag}, f{\"o}rhoppningsvis med konvergens
 trots att vi integrerar {\"o}ver o{\"a}ndligheten.\numberedfootnote{Det {\"a}r
   l{\"a}tt att h{\"a}r falla i f{\"a}llan och tycka att konvergensen av
   integralen ju redan p{\aa} f{\"o}rhand {\"a}r given, med h{\"a}nvisning
@@ -169,10 +171,10 @@ trots att vi integrerar {\"o}ver o{\"a}ndligheten.\numberedfootnote{Det {\"a}r
   {\"a}nnu inte k{\"a}nner till den elektriska f{\"a}ltf{\"o}rdelningen
   f{\"o}r!}
 Att utf{\"o}ra denna integral {\"a}r f{\"o}rvisso m{\"o}jligt, men genom att
-anv{\"a}nda Gauss lag applicerad p{\aa} symmetrin i detta specifika problem
+anv{\"a}nda Gauss lag\sidx{Gauss lag} applicerad p{\aa} symmetrin i detta specifika problem
 kan vi komma fram till l{\"o}sningen v{\"a}sentligt mycket enklare.
 \epsfig{figs/linecharge.1}\noindent
-Vi placerar en ``Gaussisk cylinder'' av radie $r$ och l{\"a}ngd $l$ centrerad
+Vi placerar en ``Gaussisk cylinder''\sidx{Gauss lag}[Cylindrisk geometri] av radie $r$ och l{\"a}ngd $l$ centrerad
 runt linjeladdningen och antar vidare att linjeladdningen inte kommer att ge
 n{\aa}got nettobidrag av f{\"a}ltlinjer genom {\"a}ndytorna av cylindern, med
 andra ord att vi ignorerar randeffekter i problemet.
@@ -199,7 +201,7 @@ L{\aa}t oss d{\"a}rf{\"o}r illustrera en alternativ l{\"o}sningsmetod f{\"o}r
 samma problem. Om vi ist{\"a}llet v{\"a}ljer att summera upp samtliga delbidrag
 till det elektriska f{\"a}ltet i observationspunkten ${\bf x}={\bf e}_r r$
 (vi v{\"a}ljer $z=0$ f{\"o}r observationspunkten ${\bf x}$) fr{\aa}n
-linjeladdningen via Coulomb-integralen, s{\aa} har vi med k{\"a}llpunkter
+linjeladdningen via Coulomb-integralen,\sidx{Coulombs generaliserade lag}[Coulombintegralen] s{\aa} har vi med k{\"a}llpunkter\sidx{K{\"a}lladdning}
 ${\bf x}'={\bf e}_z z'$ att
 $$
   \eqalign{
@@ -224,9 +226,9 @@ $$
 $$
 
 \section{Till{\"a}mpning av Gauss lag - Plan ytladdning}
-N{\"a}sta exempel p{\aa} till{\"a}mpning av Gauss lag g{\"a}ller att
+N{\"a}sta exempel p{\aa} till{\"a}mpning av Gauss lag\sidx{Gauss lag}[Plan geometri] g{\"a}ller att
 best{\"a}mma det elektriska f{\"a}ltet p{\aa} avst{\aa}ndet $a$ fr{\aa}n en
-o{\"a}ndlig plan yta, b{\"a}rande ytladdningst{\"a}theten $\sigma$
+o{\"a}ndlig plan yta, b{\"a}rande ytladdningst{\"a}theten\sidx{Elektrisk laddningst{\"a}thet}[Ytladdning] $\sigma$
 (${\rm C}/{\rm m}^2$). Vi utnyttjar planariteten genom att l{\"a}gga en
 plan-parallell ``Gaussisk burk'' inneslutande en del av ytan.
 Om vi konstruerar burken s{\aa} att de planparallella ytorna omsluter ytan med
@@ -235,7 +237,7 @@ symmetri i $z$-led mellan dessa.
 I figuren {\"a}r denna ``Gaussiska burk'' utritad som en cylinder, men formen
 av burken {\"a}r betydelsel{\"o}s s{\aa} l{\"a}ngs som locket och botten {\"a}r
 planparallella mot ytan.\numberedfootnote{Griffiths anv{\"a}nder i Exempel~2.5,
-sid. 74, en rektangul{\"a}r ``Gaussian pillbox'' f{\"o}r samma uppgift.}
+  sid. 74, en rektangul{\"a}r ``Gaussian pillbox'' f{\"o}r samma uppgift.}
 \epsfig{figs/surfcharge.1}\noindent
 P{\aa} samma s{\"a}tt som f{\"o}r linjeladdningen i f{\"o}reg{\aa}ende exempel
 ger Gauss lag direkt, utan att beh{\"o}va l{\"o}sa n{\aa}gon integral, att
@@ -256,9 +258,9 @@ det vill s{\"a}ga, med h{\"a}nsyn tagen till symmetrin $E_z(-z)=-E_z(z)_z$,
 $$
   E_z(z) = {{\sigma}\over{2\varepsilon_0}}\sgn(z).
 $$
-Vi noterar att det elektriska f{\"a}ltet ut fr{\aa}n den (i detta exempel)
+Vi noterar att det elektriska f{\"a}ltet\sidx{Elektrisk f{\"a}ltstyrka} ut fr{\aa}n den (i detta exempel)
 o{\"a}ndliga ytladdningen {\"a}r {\it oberoende av avst{\aa}ndet fr{\aa}n ytan},
-n{\aa}got som rent fysikaliskt {\"a}r l{\"a}tt att inse d{\aa} f{\"a}ltlinjerna
+n{\aa}got som rent fysikaliskt {\"a}r l{\"a}tt att inse d{\aa} f{\"a}ltlinjerna\sidx{Elektrisk f{\"a}ltlinje}
 rent geometriskt alla m{\aa}ste vara parallella med varandra, med f{\"o}ljd att
 det elektriska fl{\"o}det $\Phi_{\rm E}$ genom en godtycklig testyta ett
 avst{\aa}nd fr{\aa}n ytladdningen m{\aa}ste vara konstant, med lika m{\aa}nga
@@ -274,27 +276,23 @@ fr{\aa}n randeffekter.
 \vfill\eject
 
 \section{Rotationen f{\"o}r det statiska elektriska f{\"a}ltet}
-Som vi har sett kan det statiska elektriska f{\"a}ltet r{\"a}knas fram genom
-att exempelvis summera upp (eller integrera) bidrag fr{\aa}n punktladdningar~$q$
-(${\rm C}$), linjeladdningar~$\lambda$ (${\rm C}/{\rm m}$),
-ytladdningar~$\sigma$ (${\rm C}/{\rm m}^2$) eller volymladdningar~$\rho$
-(${\rm C}/{\rm m}^3$) via Coulomb-integralen, varefter vi genom att applicera
-superpositionsprincipen kan ta fram det totala f{\"a}ltet.
+Som vi har sett kan det statiska elektriska f{\"a}ltet\sidx{Elektrisk f{\"a}ltstyrka} r{\"a}knas fram genom att exempelvis summera upp (eller integrera) bidrag fr{\aa}n punktladdningar~$q$ (${\rm C}$), linjeladdningar~$\lambda$ (${\rm C}/{\rm m}$), ytladdningar~$\sigma$ (${\rm C}/{\rm m}^2$) eller volymladdningar~$\rho$ (${\rm C}/{\rm m}^3$)\sidx{Elektrisk laddningst{\"a}thet}[Volym-, yt-, linje-, punkt-] via Coulomb-integralen, varefter vi genom att applicera
+superpositionsprincipen\sidx{Superpositionsprincipen} kan ta fram det totala f{\"a}ltet.
 Vi har {\"a}ven konstaterat att divergensen f{\"o}r det elektriska f{\"a}ltet
-ges av Gauss lag p{\aa} differentialform, som $\nabla\cdot{\bf E}=
+ges av Gauss lag p{\aa} differentialform,\sidx{Gauss lag}[Differentialform] som $\nabla\cdot{\bf E}=
 \rho/\varepsilon_0$. Av ren nyfikenhet, l{\aa}t oss d{\"a}rf{\"o}r se vad
 {\it rotationen} hos det statiska elektriska f{\"a}ltet kan uttryckas
 som.\numberedfootnote{Se Griffiths sid.~77--78.}
 
 Betrakta en punktladdning $q'$, som vi f{\"o}r enkelhets skull nu placerar i
-origo ${\bf x}'={\bf 0}$ f{\"o}r observationssystemet. Vi kommer i denna analys
-att utnytta Stokes teorem applicerat p{\aa} en linjeintegral f{\"o}r en
+origo ${\bf x}'={\bf 0}$ f{\"o}r observationssystemet.\sidx{Observationspunkt} Vi kommer i denna analys
+att utnytta Stokes teorem\sidx{Stokes teorem} applicerat p{\aa} en linjeintegral\sidx{Integral}[Linjeintegral] f{\"o}r en
 godtycklig trajektoria runt om i det statiska elektriska f{\"a}lt som omger
 punktladdningen. Redan nu kan vi passa p{\aa} att mentalt associera denna
-situation med en analogi med massa och gravitation.
+situation med en analogi med massa och gravitation.\sidx{Gravitation}
 \epsfig{figs/lineintegral.1}\noindent
 Med punktladdningen $q'$ placerad i origo har vi det statiska elektriska
-f{\"a}ltet uttryckt i sf{\"a}riska koordinater som
+f{\"a}ltet uttryckt i sf{\"a}riska koordinater\sidx{Sf{\"a}riska koordinater} som
 $$
   {\bf E}(r) % ={{q}\over{4\pi\varepsilon_0}}{{{\bf x}}\over{|{\bf x}|^3}}
     =\underbrace{
@@ -329,7 +327,7 @@ $r_a=r_b$ till origo, med f{\"o}ljd att
 $$
   \oint_{\Gamma}{\bf E}\cdot d{\bf l}=0.
 $$
-D{\aa} vi applicerar {\it Stokes teorem} p{\aa} detta
+D{\aa} vi applicerar {\it Stokes teorem}\sidx{Stokes teorem} p{\aa} detta
 resultat,\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa} Griffiths,
   ``{\it Curl Theorem}''.}
 $$
@@ -355,26 +353,28 @@ $$
     ={\bf 0}.
 $$
 oavsett vad k{\"a}llorna f{\"o}r dessa delbidrag {\"a}r, s{\aa} l{\"a}nge som
-de {\"a}r statiska (oberoende av tid).
-Vi kan h{\"a}r notera hur kraftfullt {\it superpositionsprincipen} {\aa}terigen
-kommer till v{\aa}r assistans, genom att l{\aa}ta oss f{\"o}rst l{\"o}sa ett
+de {\"a}r statiska (oberoende av tid). Vi kan h{\"a}r notera hur kraftfullt
+{\it superpositionsprincipen}\sidx{Superpositionsprincipen} {\aa}terigen kommer
+till v{\aa}r assistans, genom att l{\aa}ta oss f{\"o}rst l{\"o}sa ett
 f{\"o}rh{\aa}llandevis enkelt problem f{\"o}r punktladdningar och d{\"a}refter
 n{\"a}stintill trivialt l{\aa}ta oss {\it generalisera speciall{\"o}sningen till
 en godtycklig distribution av elektriska laddningar}.
 
 \section{Elektrostatisk skal{\"a}r potential}
+\sidx{Skal{\"a}r potential}\sidx{Skal{\"a}r potential}[Elektrostatisk]
 Utifr{\aa}n resonemanget ovan, kring den slutna linjeintegralen som vi kunde
 anv{\"a}nda f{\"o}r att via Stokes teorem p{\aa}visa att rotationen av det
 statiska elektriska f{\"a}ltet m{\aa}ste vara identiskt noll, s{\aa} {\"a}r
 inte steget l{\aa}ngt till att associera den elektriska laddningen $q'$ med
-analogin av massa och gravitation.\numberedfootnote{I framtagandet av
-  potentialen g{\"o}r vi h{\"a}r ett avsteg fr{\aa}n Griffiths, som
-  ist{\"a}llet valt att visa p{\aa} existensen av en skal{\"a}r potential
+analogin av massa och gravitation.\sidx{Gravitation}\numberedfootnote{I
+  framtagandet av potentialen g{\"o}r vi h{\"a}r ett avsteg fr{\aa}n Griffiths,
+  som ist{\"a}llet valt att visa p{\aa} existensen av en skal{\"a}r potential
   via linjeintegraler i det rotationsfria statiska elektriska f{\"a}ltet.
   Vi kommer h{\"a}r ist{\"a}llet att visa hur potentialen direkt f{\"o}ljer
   av hur den generaliserade formen av Coulombs lag kan tolkas som en gradient.
   Den variant av h{\"a}rledning som h{\"a}r presenteras f{\"o}ljer exempelvis
-  J.~D.~Jackson, {\it Classical Electrodynamics}.}
+  J.~D.~Jackson, {\it Classical Electrodynamics}.\sidx{Jackson, John David
+  (1925--2016)}[{{\it Classical Electrodynamics}}]}
 
 F{\"o}r att rekapitulera s{\aa} har vi funnit att $\nabla\times{\bf E}({\bf x})
 ={\bf 0}$ {\"o}verallt i elektrostatiska problem, och vi kan samtidigt erinra
@@ -393,6 +393,7 @@ elektrostatiska potentialen.
 Vi kan {\"a}ven rekapitulera att vi tog fram $\nabla\times{\bf E}({\bf x})
 ={\bf 0}$ som en direkt f{\"o}ljd av formen av Coulombs generaliserade lag,
 eller {\it Coulombintegralen},
+\sidx{Coulombs generaliserade lag}[Coulombintegralen]
 $$
   {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
     \underbrace{
@@ -410,7 +411,13 @@ p{\aa} k{\"a}llpunkterna ${\bf x}$'.
 ``Tricket'' i hur denna tolkning av Coulombintegralen skall ske ligger i
 observationen att faktorn  ${{({\bf x}-{\bf x}')}/{|{\bf x}-{\bf x}'|^3}}$ i
 integranden, som ju {\"a}r det enda i integralen som beror p{\aa}
-observationspositionen ${\bf x}$, kan omformuleras som gradienten
+observationspositionen ${\bf x}$, kan omformuleras som gradienten\sidx{Tricket
+$\displaystyle\nabla{{1}\over{\char124}{\bf x}-{\bf x}'{\char124}}
+=-{{({\bf x}-{\bf x}')}\over{{\char124}{\bf x}-{\bf x}'{\char124}^3}}$}%
+\numberedfootnote{Vi kommer fram{\"o}ver att anv{\"a}nda detta mycket
+  anv{\"a}ndbara ``trick'' ett flertal g{\aa}nger i denna
+  f{\"o}rel{\"a}sningsserie. En analogi i vektoranalys till
+  ``$(d/dr)(1/r)=-1/r^2$'', om man s{\aa} vill!}
 $$
   \eqalign{
     \nabla{{1}\over{|{\bf x}-{\bf x}'|}}
@@ -427,11 +434,7 @@ $$
   }
 $$
 Eftersom $\nabla$ opererar p{\aa} koordinater ${\bf x}$ i observationssystemet
-d{\"a}r vi ju observerar det elektriska f{\"a}ltet, eller {\it labsystemet} om
-vi s{\aa} vill, och eftersom integralen utf{\"o}rs i det {\it primmade} systemet
-${\bf x}'$ d{\"a}r vi summerar upp alla bidrag fr{\aa}n den elektriska
-laddningen, eller {\it k{\"a}llor}, s{\aa} kan vi bryta ut gradienten
-utanf{\"o}r integralen, med resultatet
+d{\"a}r vi ju observerar det elektriska f{\"a}ltet, eller {\it labbsystemet}\sidx{Labbsystem} om vi s{\aa} vill, och eftersom integralen utf{\"o}rs i det {\it primmade} systemet ${\bf x}'$ d{\"a}r vi summerar upp alla bidrag fr{\aa}n den elektriska laddningen, eller {\it k{\"a}llor},\sidx{K{\"a}lladding} s{\aa} kan vi bryta ut gradienten utanf{\"o}r integralen, med resultatet
 $$
   \eqalign{
     {\bf E}({\bf x})
@@ -447,19 +450,21 @@ $$
   }
 $$
 d{\"a}r vi {\it definierade} den skal{\"a}ra elektrostatiska potentialen
+\sidx{Skal{\"a}r potential}[Elektrostatisk]
 $\phi({\bf x})$ som\numberedfootnote{Vi kommer i denna serie av
   f{\"o}rel{\"a}sningar att genomg{\aa}ende anv{\"a}nda $\phi$ f{\"o}r
-  att beteckna skal{\"a}r potential. Denna notation avviker fr{\aa}n
-  Griffiths, som olyckligtvis anv{\"a}nder $V$ som notation f{\"o}r
-  variabeln f{\"o}r potential, som d{\"a}rmed l{\"a}tt kan r{\aa}ka
-  f{\"o}rv{\"a}xlas med den med potentialen intimt f{\"o}rknippade
-  {\it enheten} Volt.}
+  att beteckna skal{\"a}r potential, f{\"o}r det statiska s{\aa}v{\"a}l
+  som dynamiska fallet. Denna notation avviker fr{\aa}n Griffiths, som
+  olyckligtvis anv{\"a}nder $V$ som notation f{\"o}r variabeln f{\"o}r
+  potential, som d{\"a}rmed l{\"a}tt kan r{\aa}ka f{\"o}rv{\"a}xlas med
+  den med potentialen intimt f{\"o}rknippade {\it enheten} Volt.}
 $$
   \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V
     {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
 $$
-Notera att formen av det elektriska f{\"a}ltet som en gradient av en skal{\"a}r
-funktion g{\"o}r att vi trivialt och helt enligt f{\"o}rv{\"a}ntan erh{\aa}ller
+Notera att formen av det elektriska f{\"a}ltet\sidx{Elektrisk f{\"a}ltstyrka}
+som en gradient\sidx{Gradient} av en skal{\"a}r funktion g{\"o}r att vi trivialt
+och helt enligt f{\"o}rv{\"a}ntan erh{\aa}ller
 $$
   \nabla\times{\bf E}({\bf x})=-\nabla\times(\nabla\phi({\bf x}))={\bf 0}.
 $$
@@ -480,6 +485,7 @@ riktningarna runt den punkt d{\"a}r vi befinner oss.
 
 \section{Arbete och upplagrad energi vid f{\"o}rflyttning av elektriska
   laddningar}
+\sidx{Arbete och upplagrad energi}[Elektrostatisk laddning]
 Med definitionen av den elektrostatiska skal{\"a}ra potentialen i bagaget
 betraktar vi nu en testladdning $q$ som f{\"o}rflyttas\numberedfootnote{Notera
   sj{\"a}lvmots{\"a}gelsen i detta, i och med att vi s{\aa} fort vi
@@ -501,7 +507,8 @@ $$
 $$
 och det arbete $W$ som utf{\"o}rs d{\aa} vi f{\"o}rflyttar testladdningen ges
 d{\"a}rmed som\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa} Griffiths,
-``{\it Gradient Theorem}''.}
+``{\it Gradient Theorem}''.}\sidx{Gradient-teoremet}
+\sidx{Gradient}[Gradient-teoremet]
 $$
   \eqalign{
     W&=-\int^{{\bf x}_b}_{{\bf x}_a}{\bf F}({\bf x})\cdot d{\bf l}\cr
@@ -517,18 +524,19 @@ $$
   }
 $$
 d{\"a}r skillnaden $W_b-W_a$ {\"a}r {\it skillnaden i potentiell energi} f{\"o}r
-testladdningen under det att den f{\"o}rflyttats fr{\aa}n ${\bf x}_a$ till
-${\bf x}_b$. Vi har nu allts{\aa} till slut anl{\"a}nt till punkten d{\"a}r
-vi faktiskt kan tala om just ``potentiell energi''.
+\sidx{Potentiell energi}[Elektrostatisk] testladdningen under det att den
+f{\"o}rflyttats fr{\aa}n ${\bf x}_a$ till ${\bf x}_b$. Vi har nu allts{\aa} till
+slut anl{\"a}nt till punkten d{\"a}r vi faktiskt kan tala om just ``potentiell
+energi''.
 
-Vi b{\"o}r h{\"a}r passa p{\aa} att erinra oss att sj{\"a}lva ordet
-``potential'' medf{\"o}r en stor risk att man per automatik leds in till
-tankebanan att $\phi$ i sig skulle vara en ``potentiell energi'', vilket
-ej {\"a}r fallet. V{\aa}r potential har dock den fysikaliska dimensionen
-av Volt, och en potentialskillnad l{\aa}ter sig sj{\"a}lvfallet uttryckas
-i denna enhet.
+Vi b{\"o}r h{\"a}r passa p{\aa} att erinra oss att sj{\"a}lva ordet ``potential''
+\sidx{Skal{\"a}r potential}[Elektrostatisk] medf{\"o}r en stor risk att man per
+automatik leds in till tankebanan att $\phi$ i sig skulle vara en ``potentiell
+energi'', vilket ej {\"a}r fallet. V{\aa}r potential $\phi$ har dock den
+fysikaliska dimensionen av volt (V), och en potentialskillnad l{\aa}ter sig
+sj{\"a}lvfallet uttryckas i denna enhet.
 
-\subsection{En paradox}
+\section{En paradox f{\"o}r den skal{\"a}ra potentialen}
 En annan m{\"a}rklig egenskap hos den skal{\"a}ra elektrostatiska potentialen
 {\"a}r att denna variabel via gradienten i definitionen av det elektrostatiska
 f{\"a}ltet ${\bf E}=-\nabla\phi$ ger upphov till {\it tre} komponenter
@@ -550,6 +558,7 @@ $$
 $$
 
 \section{Poissons ekvation f{\"o}r den skal{\"a}ra potentialen}
+\sidx{Poissons ekvation}
 Som en avslutning p{\aa} denna f{\"o}rel{\"a}sning vi passar vi p{\aa} att
 konstatera att Gauss lag p{\aa} differentialform, $\nabla\cdot{\bf E}
 =\rho/\varepsilon_0$, sammantaget med sj{\"a}lva definitionen f{\"o}r den
@@ -654,4 +663,5 @@ Electrodynamics}.
   $$
     \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0.
   $$}
+\index
 \bye
