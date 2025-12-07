@@ -93,6 +93,9 @@
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 \def\captionwide{\advance\leftskip by 60pt
   \advance\rightskip by 60pt}
+\newif\ifshowindex
+\showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject\section{Index} \readindexfile{i}\fi}
 %--------------------- END OF LOCAL MACROS ---------------------
 
 \initlecture
@@ -147,7 +150,9 @@
 }
 %----------------------- END OF PREAMBLE -----------------------
 
-\section{Laplaces ekvation f{\"o}r den elektrostatiska (skal{\"a}ra) potentialen}
+\section{Laplaces ekvation f{\"o}r den elektrostatiska (skal{\"a}ra)
+  potentialen}
+\sidx{Laplaces ekvation}\sidx{Skal{\"a}r potential}[Elektrostatisk]
 Det kan tyckas aningen {\"o}verdrivet att ge sig in p{\aa} mer matematiskt
 betingade sp{\"o}rsm{\aa}l kring huruvida l{\"o}sningar till problem inom
 elektrostatiken {\"a}r unika eller ej, det vill s{\"a}ga om det finns fler
@@ -170,11 +175,14 @@ f{\"o}r l{\"o}sningar till den elektrostatiska potentialen.
 
 \subsection{Angreppss{\"a}tt~1 f{\"o}r elektrostatiska problem
   -- Coulombintegralen}
+\sidx{Coulombs generaliserade lag}[Coulombintegralen]
+\sidx{Skal{\"a}r potential}[Elektrostatisk]
 Vi kan b{\"o}rja med att konstatera att vi i elektrostatiska problem alltsom
 oftast s{\"o}ker en l{\"o}sning till det {\it elektriska f{\"a}ltet}, vilket vi
 fr{\aa}n den f{\"o}rsta f{\"o}rel{\"a}sningen vet kan ber{\"a}knas genom
 Coulombs generaliserade lag, eller {\it Coulombintegralen}\numberedfootnote{Vi
-  f{\"o}ljer h{\"a}r i huvudsak Griffiths sid.~113--124.}
+  f{\"o}ljer h{\"a}r i huvudsak Griffiths sid.~113--124.}\sidx{Elektrisk
+f{\"a}ltstyrka}
 $$
   {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
     {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'.
@@ -231,6 +239,7 @@ att r{\"o}ra p{\aa} sig.
 
 \subsection{Angreppss{\"a}tt~3 f{\"o}r elektrostatiska problem
   -- Laplaces ekvation f{\"o}r skal{\"a}r potential}
+\sidx{Poissons ekvation}
 Som en intressant slutkl{\"a}m p{\aa} f{\"o}rra f{\"o}rel{\"a}sningen
 konstaterade vi att Gauss lag p{\aa} differentialform,
 $\nabla\cdot{\bf E}=\rho/\varepsilon_0$, trivialt kunde omformuleras till
@@ -242,10 +251,10 @@ $$
 Evaluerad med l{\"a}mpliga randvillkor {\"a}r denna partiella
 differentialekvation f{\"o}r $\phi$ ekvivalent med integralekvationen ovan.
 Dessutom {\"a}r Poissons ekvation f{\"o}r $\phi$ synnerligen v{\"a}l l{\"a}mpad
-f{\"o}r ber{\"a}kning i dom{\"a}ner d{\"a}r vi inte befinner oss mitt i n{\aa}gon
-laddningst{\"a}thet, eftersom vi d{\aa} har att $\nabla^2\phi({\bf x})=0$ med
-l{\"o}sningar best{\"a}mda av randvillkor, dessutom -- som vi strax skall visa
--- l{\"o}sningar som {\"a}r{\it entydigt} best{\"a}mda.
+f{\"o}r ber{\"a}kning i dom{\"a}ner d{\"a}r vi inte befinner oss mitt i
+n{\aa}gon laddningst{\"a}thet, eftersom vi d{\aa} har att $\nabla^2\phi({\bf x})
+=0$ med l{\"o}sningar best{\"a}mda av randvillkor, dessutom -- som vi strax
+skall visa -- l{\"o}sningar som {\"a}r{\it entydigt} best{\"a}mda.
 Att laddningst{\"a}theten i omr{\aa}det vi tittar p{\aa} {\"a}r fritt fr{\aa}n
 laddningar betyder inte p{\aa} n{\aa}got vis att inga laddningar finns med i
 problemet {\"o}verhuvud taget, bara att de {\it inte r{\aa}kar finnas
@@ -259,25 +268,28 @@ $$
   \nabla^2\phi({\bf x})=0.
 $$
 Griffiths g{\aa}r s{\aa} l{\aa}ngt att beskriva Laplaces ekvation som s{\aa}
-fundamental att l{\"a}ran om elektrostatik praktiskt taget {\it {\"a}r}
-studiet av just Laplaces ekvation, som ut{\"o}ver till{\"a}mpningen i
-elektrostatik {\"a}r av samma form inom magnetism, gravitation och elastisk
+fundamental att l{\"a}ran om elektrostatik\sidx{Elektrostatik} praktiskt taget
+{\it {\"a}r} studiet av just Laplaces ekvation, som ut{\"o}ver till{\"a}mpningen
+i elektrostatik {\"a}r av samma form inom magnetism, gravitation och elastisk
 mekanik.\numberedfootnote{Se
   {\tt https://www.robots.ox.ac.uk/{\char'176}jmb/lectures/pdelecture5.pdf}
   f{\"o}r detta sido\-sp{\aa}r.}
 
 \section{Entydighet hos l{\"o}sningar till Laplace ekvation}
+\sidx{Entydighetsteoremet}
 Vi har s{\aa} l{\"a}ngt reducerat det elektrostatiska problemet till Laplaces
 ekvation, m{\"o}jligen med brasklappen att vi i dom{\"a}ner d{\"a}r laddning
 f{\"o}rekommer direkt i observationspunkten ist{\"a}llet m{\aa}ste anv{\"a}nda
 Poissons ekvation, men enbart denna kompakta ekvation kommer inte att bist{\aa}
 med l{\"o}sningen till potentialen. Det som ytterligare beh{\"o}vs {\"a}r
-l{\"a}mpliga (fysikaliska) randvillkor till den dom{\"a}n d{\"a}r vi {\"o}nskar
-l{\"o}sa ekvationen.\numberedfootnote{Vi f{\"o}ljer h{\"a}r i huvudsak
-  Griffiths sid.~119--124.}
+l{\"a}mpliga (fysikaliska) randvillkor \sidx{Randvillkor}[F{\"o}r Laplaces
+ekvation] till den dom{\"a}n d{\"a}r vi {\"o}nskar l{\"o}sa
+ekvationen.\numberedfootnote{Vi f{\"o}ljer h{\"a}r i huvudsak Griffiths
+  sid.~119--124.}
 
 \subsection{Laplaces ekvation till{\aa}ter bara extrempunkter p{\aa} randen
   till en dom{\"a}n}
+\sidx{Randvillkor}[F{\"o}r Laplaces ekvation]
 V{\aa}r plan fram{\"o}ver {\"a}r att skapa en differens $U=\phi_2-\phi_1$ mellan
 tv{\aa} f{\"o}rmodat oberoende separata l{\"o}sningar $\phi_1$ och $\phi_2$ till
 Laplaces ekvation, {\it uppfyllande exakt samma randv{\"a}rde}, och d{\"a}refter
@@ -299,6 +311,7 @@ Med andra ord:\numberedfootnote{Vi hoppar h{\"a}r direkt in i fallet
   fr{\aa}nvaron av lokala extrempunkter. Teorem~I betecknas
   i internationell litteratur ofta som {\it Maximum (or minimum)
   principle for harmonic functions}.}
+\sidx{Extrempunkter}[F{\"o}r l{\"o}sningar till Laplaces ekvation]
 \quote{{\bf Teorem~I.}
   L{\"o}sningar till Laplaces ekvation saknar lokala extrempunkter.}
 \noindent
@@ -328,6 +341,7 @@ approach.
   funktionen $\phi$ d{\"a}rmed m{\aa}ste ``halka ned{\aa}t'' i alla
   riktningar runt ${\bf x}'$.
   Genom att summera upp alla andraderivator erh{\aa}ller vi
+  \sidx{Extrempunkter}[F{\"o}r l{\"o}sningar till Laplaces ekvation]
   $$
     \hbox{Laplace }\quad\Rightarrow\quad
     \sum^3_{k=1}{{\partial^2\phi}\over{\partial x^2_k}}=\nabla^2\phi<0.
@@ -357,6 +371,7 @@ fokuserat bevis.
   av potentialen i en omgivning av observationspunkten, s{\"a}g i form av
   en ``tillr{\"a}ckligt liten'' sf{\"a}r $S=\{{\bf x}:|{\bf x}-{\bf x}'|=r\}$
   med radien $r$ centrerad i punkten ${\bf x}$ som
+  \sidx{Extrempunkter}[F{\"o}r l{\"o}sningar till Laplaces ekvation]
   $$
     \phi({\bf x})={{1}\over{4\pi r^2}}\oiint_{S}\phi({\bf x}')\,dS'.
   $$
@@ -379,6 +394,7 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
 
 \subsection{F{\"o}rsta entydighetsteoremet f{\"o}r den elektrostatiska
   potentialen}
+\sidx{Entydighetsteoremet}[F{\"o}r Laplaces ekvation]
 \quote{{\bf Teorem~II.} [{\it First uniqueness theorem} enligt Griffiths]
   L{\"o}sningen till {\it Laplaces ekvation} $\nabla^2\phi=0$ i en godtycklig
   volym $V$ {\"a}r entydigt (unikt) best{\"a}md om potentialen $\phi$ {\"a}r
@@ -386,7 +402,9 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
 \epsfig{figs/unique.1}\noindent
 \quote{{\bf Bevis.}\numberedfootnote{Ett alternativt bevis g{\aa}s
     igenom av exempelvis J.~D.~Jackson, {\it Classical Electrodynamics},
-    med anv{\"a}ndandet av Greens f{\"o}rsta teorem, som f{\"o}r godtyckliga
+    \sidx{Jackson, John David (1925--2016)}[{{\it Classical Electrodynamics}}]
+    med anv{\"a}ndandet av Greens f{\"o}rsta teorem,
+    \sidx{Greens f{\"o}rsta teorem} som f{\"o}r godtyckliga
     funktioner $\varphi$ och $\psi$ (d{\"a}r vi allts{\aa} skriver
     ``$\varphi$'' ist{\"a}llet f{\"o}r ``$\phi$'' f{\"o}r att undvika
     f{\"o}rv{\"a}xling) lyder
@@ -413,8 +431,8 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
     kr{\"a}ver samma v{\"a}rden f{\"o}r $\phi_1$ och $\phi_2$ p{\aa} $S$),
     betyder detta att {\"o}verallt i $V$ {\"a}r $\phi_1=\phi_2$, vilket i
     sin tur visar att en l{\"o}sning till Laplaces ekvation i $V$ alltid
-    {\"a}r unik. Greens teorem och Greensfunktioner {\"a}r dock
-    utanf{\"o}r vad denna kurs omfattar.}
+    {\"a}r unik. Greens teorem och Greensfunktioner\sidx{Greensfunktion}
+    {\"a}r dock utanf{\"o}r vad denna kurs omfattar.}
   Antag att vi har {\it tv{\aa}} av varandra oberoende l{\"o}sningar $\phi_1$
   och $\phi_2$ till Laplaces ekvation i en volym $V$, uppfyllande
   $\nabla^2\phi_1=0$ och $\nabla^2\phi_2=0$, och med {\it b{\"a}gge
@@ -455,14 +473,16 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
   $\nabla^2\phi=-\rho/\varepsilon_0$ i en godtycklig volym $V$ {\"a}r unikt
   best{\"a}md om (I) potentialen $\phi$ {\"a}r specificerad p{\aa} randen $S$
   till volymen samt (II) laddningst{\"a}theten $\rho$ i dom{\"a}nen {\"a}r
-  specificerad. [Griffiths, sid.~121]}
+  specificerad. [Griffiths, sid.~121]
+  \sidx{Entydighetsteoremet}[F{\"o}r Poissons ekvation]}
 \quote{{\bf Bevis} Vi har just visat att i en dom{\"a}n d{\"a}r inga laddningar
   finns, s{\aa} {\"a}r en l{\"o}sning till {\it Laplaces} ekvation entydig.
   Vad h{\"a}nder d{\aa} om vi l{\"a}gger till en godtycklig laddningst{\"a}thet
   $\rho({\bf x})$ i volymen, s{\aa} att vi i sj{\"a}lva verket har att g{\"o}ra
   med {\it Poissons} ekvation?
   I detta fall f{\"o}ljer vi samma argument som tidigare, med en differens
-  $U=\phi_2-\phi_1$, men d{\"a}r de tv{\aa} potentialerna ist{\"a}llet f{\"o}ljer
+  $U=\phi_2-\phi_1$, men d{\"a}r de tv{\aa} potentialerna ist{\"a}llet
+  f{\"o}ljer\sidx{Entydighetsteoremet}[F{\"o}r Poissons ekvation]
   $$
     \nabla^2\phi_1=-\rho/\varepsilon_0,\qquad
     \nabla^2\phi_2=-\rho/\varepsilon_0,
@@ -499,6 +519,7 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
 \par\vfill\eject
 
 \section{Faradays bur}
+\sidx{Faradays bur}
 Som en direkt f{\"o}ljd av Teorem~II -- g{\"a}llande att l{\"o}sningen till
 Laplaces ekvation $\nabla^2\phi=0$ i en godtycklig volym $V$ {\"a}r unikt
 best{\"a}md om potentialen $\phi$ {\"a}r specificerad p{\aa} randen $S$ till
@@ -566,10 +587,10 @@ i att betrakta vilken v{\aa}gl{\"a}ngd den elektromagnetiska pulsen har:
 
 \section{Det elektriska f{\"a}ltet {\"a}r identiskt noll i en perfekt ledare,
   s{\aa} hur kan vi d{\aa} skapa str{\"o}mmar?}
-F{\"o}r en perfekt ledare i elektrostatisk j{\"a}mvikt {\"a}r potentialen
-$\phi({\bf x})$ rent definitionsm{\"a}ssigt {\"o}verallt densamma f{\"o}r alla
-punkter ${\bf x}$ inuti ledarens volym. Detta f{\"o}ljer av samma argument som
-f{\"o}r Faradays bur, n{\"a}mligen att om
+F{\"o}r en perfekt ledare\sidx{Perfekt ledare} i elektrostatisk j{\"a}mvikt
+{\"a}r potentialen $\phi({\bf x})$ rent definitionsm{\"a}ssigt {\"o}verallt
+densamma f{\"o}r alla punkter ${\bf x}$ inuti ledarens volym. Detta f{\"o}ljer
+av samma argument som f{\"o}r Faradays bur, n{\"a}mligen att om
 $$
   \phi({\bf x})=\phi_0=\hbox{konst.}
 $$
@@ -630,6 +651,7 @@ problem med hj{\"a}lp av s{\aa} kallade {\it spegelladdningar}.
 \vfill\eject
 
 \section{Spegelladdningar i perfekt ledande plan}
+\sidx{Spegelladdning}\sidx{Spegelladdning}[Perfekt ledande plan]
 S{\aa} l{\aa}ngt har vi haft att g{\"o}ra med givna laddningar och
 laddningsf{\"o}rdelningar, fixt placerade i rummet. Vad h{\"a}nder om
 vi har ledare som till{\aa}ter laddningsf{\"o}rdelningar att relaxera till
@@ -657,6 +679,7 @@ att vi har en tv{\aa}dimensionell ``gas'' av fria elektroner i ytan.
 
 \subsection{Problemformulering f{\"o}r elektrostatik ovanf{\"o}r perfekt
   ledande plan}
+\sidx{Spegelladdning}[Perfekt ledande plan]
 Rent matematiskt formuleras detta problem enligt f{\"o}ljande:
 \smallskip
 \item{1.}{Vi har laddningst{\"a}theten $\rho=q\delta({\bf x}-h{\bf e}_z)$
@@ -734,6 +757,7 @@ uppfyllt.}
 
 \subsection{Skal{\"a}r potential med det ledande planet ersatt med virtuell
   spegelladdning}
+\sidx{Spegelladdning}[Perfekt ledande plan]
 \epsfig{figs/mirrorplane-gedanken-general.1}\noindent
 V{\aa}rt antagande att vi kan {\it konstruera} en l{\"o}sning genom att
 l{\"a}gga en {\it spegelladdning} p{\aa} motsatt sida om den perfekta
@@ -752,6 +776,7 @@ ${\bf x}\to\infty$ trivialt}, s{\aa} slutsatsen blir att potentialen
 enligt ovan faktiskt {\"a}r den korrekta l{\"o}sningen.
 
 \subsection{Sammanfattning av virtuell spegelladdning i perfekt ledande plan}
+\sidx{Spegelladdning}[Perfekt ledande plan]
 L{\aa}t oss sammanfatta denna f{\"o}rsta {\"o}vning i spegelladdningar med att:
 \quote{{\it L{\"o}sningen $\phi({\bf x})$ till Poissons ekvation f{\"o}r en
   punktladdning $q$ placerad ett avst{\aa}nd $z=h$ ovanf{\"o}r ett perfekt
@@ -764,6 +789,8 @@ Laplaces ekvation med $\rho=0$) och dess f{\"o}ljdsats (f{\"o}r Poissons
 ekvation med $\rho\ne0$) {\"a}r f{\"o}r konstruktionen med spegelladdningar.
 
 \subsection{Det resulterande elektriska f{\"a}ltet med den speglade laddningen}
+\sidx{Spegelladdning}[Perfekt ledande plan]
+\sidx{Ekvipotential}\sidx{Dipol}[Elektrisk]
 Vi ser direkt att f{\"o}r det ekvivalenta problemet med en spegelladdning $-q$
 placerad i $-h{\bf e}_z$ s{\aa} {\"a}r den resulterande potentialen $\phi$ och
 elektriska f{\"a}ltet ${\bf E}$ givet som det fr{\aa}n en {\it elektrisk dipol}
@@ -807,6 +834,7 @@ F{\"o}rel{\"a}sning~8.
 \vfill\eject
 
 \subsection{Laddningsf{\"o}rdelningen i det perfekt ledande planet $z=0$}
+\sidx{Laddningst{\"a}thet}[Ytladdning i perfekt ledande plan]
 Vi kommer nu att visa p{\aa} hur vi utifr{\aa}n den skal{\"a}ra elektrostatiska
 potentialen kan ber{\"a}kna laddningst{\"a}theten $\sigma$ p{\aa} ytan.
 \epsfig{figs/condsurf.1}\noindent
@@ -887,6 +915,7 @@ grund av symmetrin i konstruktionen av spegelladdningen f{\"o}r att uppfylla
 potentialen $\phi=0$ p{\aa} ytan $z=0$.
 
 \section{Spegelladdningar i plana gr{\"a}nsytor mellan dielektrika}
+\sidx{Spegelladdning}[Gr{\"a}nsytor mellan dielektrika]
 Spegling av laddning i gr{\"a}nsytor mellan tv{\aa}
 dielektrika\numberedfootnote{Vi g{\aa}r h{\"a}r h{\"a}ndelserna i
   f{\"o}rv{\"a}g en aning; dielektrika behandlas egentligen f{\"o}rst
@@ -907,6 +936,7 @@ $$
 \vfill\eject
 
 \section{Spegelladdningar i cylindriska perfekt ledande gr{\"a}nsytor}
+\sidx{Spegelladdning}[Cylindriska perfekt ledande gr{\"a}nsytor]
 L{\aa}t oss nu betrakta fallet\numberedfootnote{Oturligt nog tar inte Griffiths
   upp fallet med just spegling av en linjeladdning i en ledande cylinder,
   vilket {\"a}r lite synd d{\aa} detta tv{\aa}dimensionella problem illustrerar
@@ -916,14 +946,15 @@ L{\aa}t oss nu betrakta fallet\numberedfootnote{Oturligt nog tar inte Griffiths
   onekligen m{\aa}ste g{\aa}s igenom i och med argumenterandet f{\"o}r
   hur vi skapar en l{\"o}sning som uppfyller randvillkoret runt om p{\aa}
   cylinderns mantelyta. Det b{\"o}r noteras att {\"a}ven J~D.~Jacksons
-  standardverk {\it Classical Electrodynamics} saknar denna spegling av
+  standardverk {\it Classical Electrodynamics}\sidx{Jackson, John David
+  (1925--2016)}[{{\it Classical Electrodynamics}}] saknar denna spegling av
   linjeladdningar i cylinderytor.}
 med en rak och o{\"a}ndlig linjeladdning $\lambda$ (${\rm C}/{\rm m}$) som
 l{\"o}per utanf{\"o}r en likaledes o{\"a}ndlig och perfekt ledande cylinder
-med radien $R$ och med utstr{\"a}ckning l{\"a}ngs $z$-axeln samt jordad till
-potentialen $\phi_0=0$. Linjeladdningen {\"a}r placerad ett avst{\aa}nd $h$
-utanf{\"o}r cylinderytan, vid en position $(R+h){\bf e}_x$ l{\"a}ngs $x$-axeln
-enligt figur.
+med radien $R$ och med utstr{\"a}ckning l{\"a}ngs $z$-axeln samt
+jordad\sidx{Jord} till potentialen $\phi_0=0$. Linjeladdningen {\"a}r placerad
+ett avst{\aa}nd $h$ utanf{\"o}r cylinderytan, vid en position $(R+h){\bf e}_x$
+l{\"a}ngs $x$-axeln enligt figur.
 \epsfig{figs/mirrorcharge-cylinder.1}\noindent
 Vi s{\"o}ker {\"a}ven i detta problem potentialen $\phi({\bf x})$ i rummet
 utanf{\"o}r ledaren, och utifr{\aa}n det tidigare resonemanget kring virtuell
@@ -938,6 +969,8 @@ s{\"a}tta att ${\bf x}=x{\bf e}_x+y{\bf e}_y$, med cylinderytan definierad av
 $|{\bf x}|=R$ f{\"o}r alla v{\"a}rden p{\aa} den longitudinella koordinaten $z$.
 
 \subsection{Potential fr{\aa}n en linjeladdning}
+\sidx{Spegelladdning}[Cylindriska perfekt ledande gr{\"a}nsytor]
+\sidx{Laddningst{\"a}thet}[Linjeladdning]
 I detta fall {\"a}r uppgiften att best{\"a}mma den skal{\"a}ra potentialen
 $\phi({\bf x})$ i rummet givet en linjeladdning $\lambda$ och ({\aa}tminstone
 gissar vi s{\aa}) en virtuell linjeladdning $\lambda'$. D{\"a}rmed infinner sig
@@ -972,6 +1005,7 @@ b{\"o}r ha n{\aa}gon inverkan p{\aa} det slutliga svaret.
 
 \subsection{Att l{\"a}gga till virtuell laddning s{\aa} att vi n{\aa}r
   randvillkoret $\phi=0$ p{\aa} cylinderytan}
+\sidx{Spegelladdning}[Cylindriska perfekt ledande gr{\"a}nsytor]
 Helt i analogi med vad vi gjorde f{\"o}r speglingen i ett perfekt ledande plan
 med en punktladdning, kommer vi nu att s{\"o}ka belopp och position f{\"o}r en
 {\it virtuell} linjeladdning lagd n{\aa}gonstans i $(x,y)$-planet s{\aa} att vi
@@ -1034,6 +1068,7 @@ $$
     -{{\lambda'}\over{2\pi\varepsilon_0}}
           \ln\big(|{\bf x}-d{\bf e}_x|\big).
 $$
+\sidx{Spegelladdning}[Cylindriska perfekt ledande gr{\"a}nsytor]
 F{\"o}r att uppfylla kravet om att $r_0$ inte skall p{\aa}verka slutresultatet,
 s{\aa} ser vi direkt att en m{\"o}jlighet {\"a}r att den speglade, virtuella
 linjeladdningen, helt i analogi med fallet med punktladdning $q$, skall
@@ -1053,8 +1088,8 @@ $$
         -{{(-\lambda)}\over{2\pi\varepsilon_0}}
             \ln\big(|{\bf x}-d{\bf e}_x|\big)\cr
       &={{\lambda}\over{2\pi\varepsilon_0}}
-            \ln\bigg({{|R\cos\varphi{\bf e}_x+R\sin\varphi{\bf e}_y-d{\bf e}_x|}
-             \over{|R\cos\varphi{\bf e}_x+R\sin\varphi{\bf e}_y-(R+h){\bf e}_x|}}
+           \ln\bigg({{|R\cos\varphi{\bf e}_x+R\sin\varphi{\bf e}_y-d{\bf e}_x|}
+            \over{|R\cos\varphi{\bf e}_x+R\sin\varphi{\bf e}_y-(R+h){\bf e}_x|}}
             \bigg)\cr
       &={{\lambda}\over{2\pi\varepsilon_0}}
             \ln\bigg({{(R\cos\varphi-d)^2+R^2\sin^2\varphi}
@@ -1062,8 +1097,8 @@ $$
             \bigg)\cr
       &=\big\{\hbox{ Utveckla }\big\}\cr
       &={{\lambda}\over{2\pi\varepsilon_0}}
-            \ln\bigg({{R^2\cos^2\varphi-2Rd\cos\varphi+d^2+R^2\sin^2\varphi}
-            \over{{R^2\cos^2\varphi-2R(R+h)\cos\varphi+(R+h)^2+R^2\sin^2\varphi}}}
+           \ln\bigg({{R^2\cos^2\varphi-2Rd\cos\varphi+d^2+R^2\sin^2\varphi}
+           \over{{R^2\cos^2\varphi-2R(R+h)\cos\varphi+(R+h)^2+R^2\sin^2\varphi}}}
             \bigg)\cr
       &=\big\{\hbox{ Anv{\"a}nd $\cos^2\varphi+\sin^2\varphi=1$ }\big\}\cr
       &={{\lambda}\over{2\pi\varepsilon_0}}
@@ -1107,6 +1142,7 @@ $C$ s{\aa} att koefficienten f{\"o}r $\cos\varphi$ blir noll, som
 $$
   2R(C(R+h)-d)=0 \qquad\Leftrightarrow\qquad C={{d}\over{R+h}}.
 $$
+\sidx{Spegelladdning}[Cylindriska perfekt ledande gr{\"a}nsytor]
 L{\aa}t oss se vad detta kan ge f{\"o}r l{\"o}sning f{\"o}r placeringen $d$
 f{\"o}r den speglade virtuella linjeladdningen! Med $C$ enligt detta
 konstaterande har vi enligt ovan att v{\"a}nsterledet blir noll (dessutom
@@ -1132,6 +1168,7 @@ Vi har ju just visat att det finns {\it tv{\aa}} olika positioner f{\"o}r
 spegelladdningen som ju b{\aa}da ger en l{\"o}sning till problemet.
 Sade inte entydighetsteoremet oss alldeles nyss att {\it endast en unik
 l{\"o}sning existerar till Laplaces ekvation?}
+\sidx{Spegelladdning}[Cylindriska perfekt ledande gr{\"a}nsytor]
 
 Denna observation, att vi har tv{\aa} l{\"o}sningar f{\"o}r positionen $d$
 som ploppar fram ur andragradsekvationen f{\"o}r denna, {\"a}r helt korrekt;
@@ -1172,6 +1209,7 @@ som {\"a}r sj{\"a}lva k{\"a}llan i problemet.
 \vfill\eject
 
 \subsection{Sammanfattning av virtuell speglad linjeladdning i cylindrisk yta}
+\sidx{Spegelladdning}[Cylindriska perfekt ledande gr{\"a}nsytor]
 Vi kan sammanfatta denna exercis i konstruktion av en l{\"o}sning till problemet
 med spegling av en linjeladdning i en cylindrisk yta till ett perfekt ledande
 medium att:
@@ -1209,6 +1247,7 @@ med principellt utseende enligt nedan.
 \vfill\eject
 
 \section{Spegelladdningar i sf{\"a}riska perfekt ledande gr{\"a}nsytor}
+\sidx{Spegelladdning}[Sf{\"a}riska perfekt ledande gr{\"a}nsytor]
 F{\"o}r spegling av punktladdningar i sf{\"a}riska ytor f{\"o}ljer resonemanget
 likt det f{\"o}r punktladdningar ovan, med observationen att ekvipotentialytorna
 f{\"o}r en elektrisk dipol ges av sf{\"a}rer som {\"a}r f{\"o}r\-skjutna mellan
@@ -1238,6 +1277,7 @@ $q$ i en sf{\"a}r skalas dock den virtuella, speglade laddningen med faktorn
 $R/(R+h)$.
 
 \section{Kan jord ers{\"a}ttas med godtycklig konstant potential?}
+\sidx{Jord}
 I samtliga uppgifter ovan har vi antagit att de perfekta ledarna kopplats till
 en konstant potential, och vi har f{\"o}r enkelhets skull antagit koppling till
 jord, vilket vi h{\"a}r kort och gott s{\"a}tter som $\phi_0=0$.
@@ -1304,5 +1344,5 @@ $\phi_0=\hbox{konstant}$?
     d={{R^2}\over{R+h}},
   $$
   fr{\aa}n sf{\"a}rens centrum i riktning mot den externa punktladdningen.}
-
+\index
 \bye
