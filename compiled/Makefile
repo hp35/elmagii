@@ -7,6 +7,7 @@
 #
 PROJECT = complete
 TEX    = tex
+MKIDX  = makeindex
 DVIPS  = dvips
 PS2PDF = ps2pdf
 
@@ -18,6 +19,7 @@ all:
 	make clean
 	make extract-raw-src
 	make replace-initlecture-calls
+	make remove-index-calls
 	make replace-lecturenumbers
 	make replace-lecturesubtitles
 	make replace-lecturetitles
@@ -51,6 +53,15 @@ replace-initlecture-calls:
 	   sed '/BEGIN OF LOCAL/r src/initlecture.tex' $$input > $$output ;\
 	   mv $$output $$input; \
 	   sed 's/\\initlecture//' $$input > $$output ;\
+	   mv $$output $$input; \
+	done
+
+remove-index-calls:
+	@for n in $(LECTNUMS); do \
+	   input=lecture-$$n-strip.tex; \
+	   output=lecture-$$n-tmp.tex; \
+	   echo "Removing \\index calls in $$input → $$output"; \
+	   sed '/\\index/d' $$input > $$output ;\
 	   mv $$output $$input; \
 	done
 
@@ -173,6 +184,7 @@ compile-booksrc:
 	@for n in $(LECTNUMS); do \
 		cat lecture-$$n-strip.tex >> $(PROJECT).tex; \
 	done
+	@echo '\\index' >> $(PROJECT).tex
 	@echo '\\bye' >> $(PROJECT).tex
 
 #
@@ -180,6 +192,7 @@ compile-booksrc:
 #
 compile-book:
 	$(TEX) $(PROJECT).tex
+	$(MKIDX) $(PROJECT).idx
 	$(TEX) $(PROJECT).tex
 	@echo "DVI file for $(PROJECT).tex written to $(PROJECT).dvi."
 	$(DVIPS) -D1200 -ta4 $(PROJECT).dvi -o $(PROJECT).ps
@@ -197,4 +210,4 @@ recompile-all-from-scratch:
 	make
 
 clean:
-	rm -Rf *~ lect*.tex *.log *.dvi *.ps complete.*
+	rm -Rf *~ lect*.tex *.log *.idx *.ilg *.ind *.dvi *.ps complete.*

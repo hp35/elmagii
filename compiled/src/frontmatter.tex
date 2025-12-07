@@ -200,7 +200,7 @@
   \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
 \def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
   \leftskip=0pt\rightskip=0pt\smallskip}
-\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
   \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
   \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
 \def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
@@ -220,9 +220,15 @@
 \def\litem[#1]{\smallbreak\noindent%
   \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
   \hangindent\hangitemindent\ignorespaces}
-\def\cleardoublepage{\ifodd\pageno\vfill\eject\fi~\vskip260pt
-  \centerline{[Page intentionally left blank]} ~\vfill\eject}
-
+\def\cleardoublepage{\ifodd\pageno\vfill\eject~\vskip260pt%
+  \centerline{[Page intentionally left blank]} ~\vfill\eject%
+  \else\vfill\eject\fi}
+\newif\ifshowindex
+\showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject%
+  ~\vskip 5pc\goodbreak\noindent{\twelvecmbx Index}%
+  \nobreak\vskip 48pt\noindent\ignorespaces%
+  \readindexfile{i}\cleardoublepage\fi}
 \def\copyrights{
   \line{\bf F{\"o}rel{\"a}sningar i Teoretisk Elektroteknik\hfil}
   \line{Elektromagnetism II (1TE626, 5hp) f{\"o}r Teknisk Fysik\hfil}
@@ -252,7 +258,7 @@
   \line{Printed on \fullmonthname\ \the\day, \the\year\hfil}
   \medskip
   \line{\TeX\ is a trademark of the American Mathematical Society\hfil}
-\vfil\eject
+  \vfil\eject
 }
 
 \def\frontpage{
@@ -278,9 +284,30 @@
   \vfil\eject
 }
 
+%\def\preface[#1]#2\endpreface{%
+%\leftskip=46pt\rightskip=46pt
+%\noindent
+%{\bf #1}
+%\medskip\noindent
+%#2%
+%}
+
+
+\long\def\preface[#1]#2{%
+  \leftskip=46pt \rightskip=46pt
+  \noindent{\bf #1}\par
+  \medskip
+  #2%
+  \leftskip=0pt \rightskip=0pt
+}
+
 \frontpage
 \pageno=-2\footline{\hfil\folio\hfil}  % Roman pagenumbering for intro
 \copyrights
+\preface[F{\"o}rord]{
+Detta är den kompletta serien av föreläsningar i kursen Elektromagnetism II (1TE626, 5hp), givna 2022--2025 för teknologer i Teknisk Fysik på Master-nivå.
+
+A second paragraph.}
 \tableofcontents
 \pageno=1
 
