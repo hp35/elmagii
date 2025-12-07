@@ -94,15 +94,19 @@
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 \def\captionwide{\advance\leftskip by 60pt
   \advance\rightskip by 60pt}
+\newif\ifshowindex
+\showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject\section{Index} \readindexfile{i}\fi}
 %--------------------- END OF LOCAL MACROS ---------------------
 
 \initlecture
 
 \plan{{\"A}mnet f{\"o}r f{\"o}rel{\"a}sningen beskrivs kort och koncist
-  med Michael Faradays egna ord (1831), fritt tolkade som ``Ett varierande
-  magnetf{\"a}lt inducerar ett elektriskt f{\"a}lt''. Vi g{\aa}r igenom
-  definitionerna av magnetiskt fl{\"o}de $\Phi_{\rm M}$ och det historiskt
-  betingade begreppet elektromotorisk ``kraft'' ${\cal E}$.
+  med Michael Faradays \sidx{Faraday, Michael (1791--1867)}
+  egna ord (1831), fritt tolkade som ``Ett varierande magnetf{\"a}lt
+  inducerar ett elektriskt f{\"a}lt''. Vi g{\aa}r igenom definitionerna
+  av magnetiskt fl{\"o}de $\Phi_{\rm M}$ och det historiskt betingade
+  begreppet elektromotorisk ``kraft'' ${\cal E}$.
 
   Vi h{\"a}rleder Faradays induk\-tions\-lag ${\cal E}=-d\Phi_{\rm M}/dt$ i
   tv{\aa} separata och inb{\"o}rdes sammanh{\aa}llna fall.
@@ -163,15 +167,18 @@ Vi kan i en enda mening sammanfatta {\"a}mnet f{\"o}r dagens
 f{\"o}rel{\"a}sning\numberedfootnote{Vi kommer i denna f{\"o}rel{\"a}sning
   att i huvudsak f{\"o}lja Griffiths Kapitel~7, med h{\"a}rledningen av
   Faradays induktionslag p{\aa} Sid.~307--309.}
-med Faradays egen slutsats, som fritt tolkad lyder:
+med Michael Faradays (1791--1867) \sidx{Faraday, Michael (1791--1867)} egen
+slutsats, som fritt tolkad lyder:
 \quote{\vbox{\hbox{{\it Ett varierande magnetf{\"a}lt inducerar ett
   elektriskt f{\"a}lt.}}\hbox{\hbox to 116pt{}--- Michael Faraday (1831)}}}
 \noindent
-F{\"o}r {\it elektrostatiska} system g{\"a}ller det, som tidigare visats i
-F{\"o}rel{\"a}sning~2, att som en f{\"o}ljd av att rotationen av det elektriska
-f{\"a}ltet alltid {\"a}r noll i elektrostatiska system, s{\aa} {\"a}r via Stokes
-teorem integralen av det elektriska f{\"a}ltet {\"o}ver en godtycklig sluten
-slinga $\Gamma$ alltid {\"a}r noll, det vill s{\"a}ga att\numberedfootnote{Recap
+F{\"o}r {\it elektrostatiska} \sidx{Elektrostatik} system g{\"a}ller det, som
+tidigare visats i F{\"o}rel{\"a}sning~2, att som en f{\"o}ljd av att rotationen
+av det elektriska f{\"a}ltet alltid {\"a}r noll \sidx{Elektrostatiskt
+f{\"a}lt}[Rotation f{\"o}r]  i elektrostatiska system, s{\aa} {\"a}r via Stokes
+teorem \sidx{Stokes teorem} integralen av det elektriska f{\"a}ltet {\"o}ver en
+godtycklig sluten slinga $\Gamma$ alltid {\"a}r noll, det vill s{\"a}ga
+att\numberedfootnote{Recap
   fr{\aa}n F{\"o}rel{\"a}sning~3: F{\"o}r {\it statiska} elektriska f{\"a}lt
   g{\"a}ller alltid att $\nabla\times{\bf E}={\bf 0}$, s{\aa} med Stokes
   teorem ({\it Curl Theorem}) har vi i elektrostatiken trivialt att
@@ -191,30 +198,33 @@ $$
   \oint_{\Gamma}{\bf E}\cdot d{\bf l}=-{{d\Phi_{\rm M}}\over{dt}},
   \qquad\hbox{(Dynamiskt!)}
 $$
-d{\"a}r $\Phi_{\rm M}$ {\"a}r det {\it magnetiska fl{\"o}det}, som vi strax
-kommer att definiera. Vi brukar i vardagligt tal kalla denna ekvation
-{\it Faradays induktionslag}\numberedfootnote{Denna beteckning {\"a}r
-  i sig lite olycklig, d{\aa} vi l{\"a}tt kan associera denna med
-  Faradays lag p{\aa} differentialform som vi inom kort kommer att
+d{\"a}r $\Phi_{\rm M}$ {\"a}r det {\it magnetiska fl{\"o}det}, \sidx{Magnetiskt
+fl{\"o}de} som vi strax kommer att definiera. Vi brukar i vardagligt tal kalla
+denna ekvation {\it Faradays induktionslag}\numberedfootnote{Denna beteckning
+  {\"a}r i sig lite olycklig, d{\aa} vi l{\"a}tt kan associera denna
+  med Faradays lag p{\aa} differentialform som vi inom kort kommer att
   stifta bekantskap med,
   $$
     \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}}.
   $$
   Dock kommer vi inom kort att visa hur denna kan h{\"a}rmedas ur just
-  Faradays induktionslag p{\aa} formen som involverar magnetiska fl{\"o}det
-  $\Phi_{\rm M}$. Vissa textb{\"o}cker inom elektromagnetism tar Faradays
-  lag p{\aa} denna differentialform som ett {\it axiom} (postulat) utan
-  att visa p{\aa} hur formen uppkommer, och g{\aa}r helt enkelt till att
-  visa hur induktionslagen erh{\aa}lls fr{\aa}n denna form; detta {\"a}r
-  dock fusk och ett cirkelresonemang som vi skall h{\aa}lla oss borta
-  fr{\aa}n i m{\"o}jligaste m{\aa}n.},
-eller kort och gott bara {\it induktionslagen}.
+  \idx{Faradays induktionslag} p{\aa} formen som involverar magnetiska
+  fl{\"o}det $\Phi_{\rm M}$.
+  Vissa textb{\"o}cker inom elektromagnetism tar Faradays lag p{\aa} denna
+  differentialform som ett {\it axiom} (postulat) utan att visa p{\aa} hur
+  formen uppkommer, och g{\aa}r helt enkelt till att visa hur induktionslagen
+  erh{\aa}lls fr{\aa}n denna form; detta {\"a}r dock fusk och ett
+  cirkelresonemang som vi skall h{\aa}lla oss borta fr{\aa}n i m{\"o}jligaste
+  m{\aa}n.},
+eller kort och gott bara {\it induktionslagen}.\sidx{Induktionslagen}[Faradays
+induktionslag]
 
 Vi skall h{\"a}r notera att Faradays induktionslag, fr{\aa}n vilken vi kommer
 att h{\"a}rleda Faradays lag (eller ``Maxwell--Faradays lag'', som
 engelsk-spr{\aa}kig litteratur ofta betecknar den) {\it inte} {\"a}r m{\"o}jlig
 att h{\"a}rleda enbart fr{\aa}n elektrostatiska eller magnetostatiska teorem
-som Coulombs eller Biot--Savarts lag.
+som Coulombs \sidx{Coulombs kraftlag} eller Biot--Savarts
+lag. \sidx{Biot--Savarts lag}
 Induktion {\"a}r ett strikt {\it dynamiskt} fenomen d{\"a}r vi v{\"a}ljer att
 antingen
 \medskip
@@ -226,10 +236,10 @@ antingen
 \medskip
 \noindent
 Vi kommer h{\"a}r sj{\"a}lvfallet att formellt h{\"a}rleda fram Faradays lag
-fr{\aa}n Lorentz-kraften, d{\aa} det vore n{\"a}stintill moraliskt
-f{\"o}rkastligt i en kurs som denna att inte ta tillf{\"a}llet i akt och en
-g{\aa}ng f{\"o}r alla visa p{\aa} ursprunget f{\"o}r denna fundamentala lag
-inom elektrodynamiken.\numberedfootnote{Det {\"a}r mycket vanligt att
+fr{\aa}n Lorentz-kraften, \sidx{Lorentz-kraften} d{\aa} det vore n{\"a}stintill
+moraliskt f{\"o}rkastligt i en kurs som denna att inte ta tillf{\"a}llet i akt
+och en g{\aa}ng f{\"o}r alla visa p{\aa} ursprunget f{\"o}r denna fundamentala
+lag inom elektrodynamiken.\numberedfootnote{Det {\"a}r mycket vanligt att
   se ``h{\"a}rledningar'' av Faradays induktionslag (``magnetiska
   fl{\"o}des\-lagen'') ${\cal E}=-d\Phi_{\rm M}/dt$ utg{\aa}ende
   ifr{\aa}n Faradays lag $\nabla\times{\bf E}=-\partial{\bf B}/\partial t$
@@ -237,13 +247,14 @@ inom elektrodynamiken.\numberedfootnote{Det {\"a}r mycket vanligt att
   (Faradays lag kommer ist{\"a}llet i denna f{\"o}rel{\"a}sning att h{\"a}rledas
   fr{\aa}n induktionslagen.) Denna approach med Faradays lag som ett axiom
   ger endast ett cirkelresonemang, d{\"a}r den ena vyn av induktion
-  {\"o}msesidigt bevisar den andra. Om man fr{\aa}gar exempelvis ChatGPT,
-  Grok eller n{\aa}gon annan LLM ({\it large language model}) s{\aa} finner
+  {\"o}msesidigt bevisar den andra. Om man fr{\aa}gar exempelvis \idx{ChatGPT},
+  \idx{Grok} eller n{\aa}gon annan LLM ({\it large language model}) s{\aa} finner
   man sorgligt nog direkt att svaret man f{\aa}r s{\aa} gott som uteslutande
   bygger p{\aa} just Faradays lag som ett axiom.}
 
 \section{Grundl{\"a}ggande begrepp inf{\"o}r Faradays induktionslag}
 \subsection{Definition: Magnetiskt fl{\"o}de}
+\sidx{Magnetiskt fl{\"o}de}
 I likhet med det elektriska fl{\"o}det $\Phi_{\rm E}$ som vi introducerade i
 F{\"o}rel{\"a}sning~1, definierar vi det {\it magnetiska fl{\"o}det}
 $\Phi_{\rm M}$ som integralen av normalkomponenten av det magnetiska f{\"a}ltet
@@ -265,7 +276,7 @@ att om antingen
 \medskip
 \noindent
 s{\aa} kommer det magnetiska fl{\"o}det $\Phi_{\rm M}=\Phi_{\rm M}(t)$ att f{\aa}
-ett tidsberoende.
+ett tidsberoende.\sidx{Magnetiskt fl{\"o}de}[Tidsberoende]
 
 \subsection{Magnetisk fl{\"o}dest{\"a}thet och lite terminologi}
 Den korrekta svenska beteckningen f{\"o}r det som vi lite l{\"o}st kallat
@@ -1143,5 +1154,5 @@ p{\aa} differentialform.\numberedfootnote{Vilket f{\"o}r {\"o}vrigt
   som det maknetiska fl{\"o}de $\Phi'_{\rm M}$ som vi skulle detektera
   i prim{\"a}rslingan $\Gamma'$ om vi ist{\"a}llet drev sekund{\"a}rslingan
   $\Gamma$ med samma str{\"o}m $I'(t)$.}
-
+\index
 \bye
