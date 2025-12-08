@@ -94,6 +94,9 @@
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 \def\captionwide{\advance\leftskip by 60pt
   \advance\rightskip by 60pt}
+\newif\ifshowindex
+\showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject\section{Index} \readindexfile{i}\fi}
 %--------------------- END OF LOCAL MACROS ---------------------
 
 \initlecture
@@ -153,10 +156,11 @@
 
 \section{Introduktion}
 Vi kommer i denna f{\"o}rel{\"a}sning att behandla hur ett elektriskt icke
-ledande material (dielektrikum) upptr{\"a}der d{\aa} det p{\aa}verkas av ett
-p{\aa}lagt elektriskt f{\"a}lt, specifikt hur vi elektriskt polariserar mediet
-genom att de atom{\"a}ra eller molekyl{\"a}ra elektriska dipolerna linjeras i
-f{\"a}ltet.
+ledande material (dielektrikum\sidx{Dielektrikum}) upptr{\"a}der d{\aa} det
+p{\aa}verkas av ett p{\aa}lagt elektriskt f{\"a}lt, \sidx{Elektrisk
+f{\"a}ltstyrka} specifikt hur vi elektriskt polariserar mediet
+genom att de atom{\"a}ra eller molekyl{\"a}ra elektriska dipolerna
+\sidx{Elektrisk dipol} linjeras i f{\"a}ltet.
 
 Om man skall sammanfatta vad vi rent makroskopiskt kan uppfatta g{\"a}llande
 elektrisk polarisering i material, s{\aa} kan vi konstatera att denna
@@ -188,7 +192,7 @@ $$
   \matrix{
   \psi_j({\bf r},t)
         &\hskip40pt\hbox to 220pt{V{\aa}gfuktion (fr{\aa}n Schr{\"o}dinger;
-        beroende av ${\bf E}$)\hfill}\cr
+        beroende av ${\bf E}$)\sidx{Kvantmekanik}[V{\aa}gfunktion]\hfill}\cr
   \downarrow&\cr
   \hat\rho=\sum_j p_j|\psi_j\rangle\langle\psi_j|
         &\hskip40pt\hbox to 220pt{Densitetsmatris/operator
@@ -196,36 +200,37 @@ $$
   \downarrow&\cr
   {\bf p}=\langle\hat{\bf p}\rangle={\rm Tr}(\hat\rho\hat{\bf p})
         &\hskip40pt\hbox to 220pt{Elektrisk polarisation (dipol,
-           ${\rm C}\cdot{\rm m}$)\hfill}\cr
+           ${\rm C}\cdot{\rm m}$)\sidx{Elektrisk dipol}\hfill}\cr
   \downarrow&\cr
   \displaystyle
   {\bf P}={{\Delta{\bf p}}\over{\Delta V}}
-        &\hskip40pt\hbox to 220pt{Elektrisk polarisationsdensitet
+        &\hskip40pt\hbox to 220pt{\idx{Elektrisk polarisationsdensitet}
             (makrosk., ${\rm C}/{\rm m}^2$)\hfill}\cr
   \downarrow&\cr
   {\bf P}=\varepsilon_0\chi_{\rm e}{\bf E}
          =\varepsilon_0(1-\varepsilon_{\rm r}){\bf E}
-        &\hskip40pt\hbox to 220pt{Elektrisk susceptibilitet $\chi_{\rm e}$
+        &\hskip40pt\hbox to 220pt{\sidx{Elektrisk susceptibilitet $\chi_{\rm e}$}
                          (enhetsl{\"o}s)\hfill}\cr
   \downarrow&\cr
   {\bf D}\equiv\varepsilon_0(1+\chi_{\rm e}){\bf E}
                     =\varepsilon_0\varepsilon_{\rm r}{\bf E}
-        &\hskip40pt\hbox to 220pt{Elektrisk fl{\"o}dest{\"a}thet
+        &\hskip40pt\hbox to 220pt{\idx{Elektrisk fl{\"o}dest{\"a}thet}
                                   {\bf D} (${\rm C}/{\rm m}^2$)\hfill}\cr
   }
 $$
 Fr{\aa}n den elektriska susceptibiliteten $\chi_{\rm e}$ {\"o}ppnar sig
-d{\"a}refter en m{\"a}ngd olika discipliner inom fysik, kemi och till{\"a}mpad
-matematik. N{\aa}gra exempel:
+\sidx{Elektrisk susceptibilitet $\chi_{\rm e}$} d{\"a}refter en m{\"a}ngd olika
+discipliner inom fysik, kemi och till{\"a}mpad matematik. N{\aa}gra exempel:
 \medskip
 \item{$\bullet$}{Brytningsindex $n=\varepsilon^{1/2}_{\rm r}$: Linser, teleskop,
-                 optiska fibrer, speglar, radar. ``Allt vi kan se.''}
+                 optiska fibrer, speglar, radar. ``Allt vi kan se.''
+                 \sidx{Brytningsindex}}
 \item{$\bullet$}{Radar, ekolod, skiktr{\"o}ntgen, radiov{\aa}gspropagation
                  {\"o}ver l{\aa}nga distanser.}
 \item{$\bullet$}{Dispersion med v{\aa}gl{\"a}ngdsberoende brytningsindex,
-                 $n=n(\omega)$.}
+                 $n=n(\omega)$.\sidx{Dispersion}}
 \item{$\bullet$}{Dubbelbrytning med brytningsindex beroende p{\aa} riktning
-                 och polarisation hos ljus..}
+                 och polarisation hos ljus.\sidx{Dubbelbrytning}}
 \item{$\bullet$}{Solitoner och sj{\"a}lvfokuserande ljus, med
                  intensitetsberoende brytningsindex $n=n(I,\omega)$.}
 \item{$\bullet$}{Optisk {\"o}vertonsgenerering med ickelinj{\"a}r optik,
@@ -237,26 +242,29 @@ potentialer, vilket {\"a}r lite olyckligt, d{\aa} $V$ normalt anv{\"a}nds
 f{\"o}r att beteckna s{\aa}v{\"a}l volym som elektrisk sp{\"a}nning (elektrisk
 potentialskillnad). Vi kommer h{\"a}r d{\"a}rf{\"o}r att ist{\"a}llet
 genomg{\aa}ende anv{\"a}nda $\phi$ f{\"o}r att beteckna en potential.
+\sidx{Skal{\"a}r potential $\phi$}
 \vfill\eject
 
 \section{Klassisk modell f{\"o}r dipoler}
+\sidx{Elektrisk dipol}[Klassisk modell f{\"o}r]
 Den enklast m{\"o}jliga modell vi kan f{\"o}rest{\"a}lla oss f{\"o}r hur ett
 medium kan polariseras {\"a}r genom att betrakta var och en av de (neutrala)
 atomerna som utg{\"o}r materialet som best{\aa}ende av en positiv punktladdning
 (atomk{\"a}rnan) och ett sf{\"a}risk-symmetriskt moln av homogen laddning
 (elektronmolnet) omg{\"a}rdande k{\"a}rnan. D{\aa} mediet uts{\"a}tts f{\"o}r
 ett externt p{\aa}lagt elektriskt f{\"a}lt kommer atomernas negativt laddade
-elektronmoln att dras mot ``$+$'', medan den positivt laddade k{\"a}rnan
-ist{\"a}llet dras mot ``$-$''. Detta ger upphov till en elektrisk polarisering
-av atomen, vilket resulterar i att vi har en kollektiv polarisering av mediet
-p{\aa} makroskopisk niv{\aa}.
+elektronmoln \sidx{Elektronmoln} att dras mot ``$+$'', medan den positivt
+laddade k{\"a}rnan \sidx{Atomk{\"a}rna} ist{\"a}llet dras mot ``$-$''.
+Detta ger upphov till en elektrisk polarisering av atomen, vilket resulterar i
+att vi har en kollektiv polarisering av mediet p{\aa} makroskopisk niv{\aa}.
 
 Observera att den f{\"o}ljande modellen {\"a}r extremt f{\"o}renklad och bara
 kan betraktas som en illustrativ modell {\"o}ver v{\"a}xelverkan mellan
 f{\"a}lt och materia. I verkligheten skel v{\"a}xelverkan p{\aa} kvantniv{\aa}
 d{\"a}r vi projicerar atomens eller molekylens v{\aa}gfunktion p{\aa} en
-dipoloperator. Dessutom f{\"o}rsummar denna modell helt och h{\aa}llet
-eventuella multipolmoment hos systemet (mer om detta i kommande
+dipoloperator.\sidx{Kvantmekanik}[Dipoloperator]
+Dessutom f{\"o}rsummar denna modell helt och h{\aa}llet eventuella
+multipolmoment \sidx{Multipolmoment} hos systemet (mer om detta i kommande
 f{\"o}rel{\"a}sningar).
 \epsfig{figs/dipole.1}\noindent
 Eftersom k{\"a}rnan {\"a}r mycket tyngre {\"a}n elektronmolnet s{\aa} kan vi
@@ -269,11 +277,12 @@ resonansfrekvenser i det atom{\"a}ra systemet, s{\aa} komer elektronmolnet att
 f{\"o}rskjutas relativt atomk{\"a}rnan. Den negativa laddningen kommer att
 f{\"o}rskjutas mot positiv elektrisk potential (k{\"a}llan ``$+$'' f{\"o}r
 det elektriska f{\"a}ltet), och vi kommer att f{\aa} en resulterande elektrisk
-dipol.
+dipol.\sidx{Elektrisk dipol}
 \vfill\eject
 
 \epsfig{figs/displace.1}\noindent
 F{\"o}r att ta fram relationen mellan det resulterande dipolmomentet ${\bf p}$
+\sidx{Dipolmoment}[Elektriskt]
 och det externa elektriska f{\"a}ltet ${\bf E}_{\rm ext}$, s{\aa} kan vi
 exempelvis betrakta de mekaniska krafterna som verkar p{\aa} k{\"a}rnan
 \encircle{+}.
@@ -282,34 +291,40 @@ som
 $$
   {\bf F}_{\rm ext}=(+q){\bf E}_{\rm ext}.
 $$
-Den elektrostatiska kraften ${\bf F}_{\rm e}$ p{\aa} k{\"a}rnan fr{\aa}n det
-omgivande elektronmolnet, som str{\"a}var mot att centrera k{\"a}rnan och
-elektronmolnen mot varandra, {\"a}r
+Den elektrostatiska kraften \sidx{Elektrostatisk kraft} ${\bf F}_{\rm e}$ p{\aa}
+k{\"a}rnan fr{\aa}n det omgivande elektronmolnet, \sidx{Elektronmoln} som
+str{\"a}var mot att centrera k{\"a}rnan \sidx{Atomk{\"a}rna} och elektronmolnen
+mot varandra, {\"a}r
 $$
   {\bf F}_{\rm e}=(+q){\bf E}_{\rm e},
 $$
-d{\"a}r ${\bf E}_{\rm e}$ {\"a}r det elektriska f{\"a}lt som k{\"a}rnan upplever
-fr{\aa}n den negativa elektriska laddningen hos elektronmolnet.
+d{\"a}r ${\bf E}_{\rm e}$ {\"a}r det elektriska f{\"a}lt \sidx{Elektrisk
+f{\"a}ltstyrka} som k{\"a}rnan upplever fr{\aa}n den negativa elektriska
+laddningen hos elektronmolnet.
 
 Det elektriska f{\"a}ltet fr{\aa}n elektronmolnet kan tas fram genom att
-utnyttja Gauss lag under sf{\"a}risk symmetri {\"o}ver den sf{\"a}r $\Omega$
+utnyttja Gauss lag \sidx{Gauss lag} under sf{\"a}risk symmetri
+\sidx{Sf{\"a}risk symmetri} {\"o}ver den sf{\"a}r $\Omega$
 som {\"a}r centrerad i elektronmolnet och med k{\"a}rnan p{\aa} ytan,
+\sidx{Integral}[Sluten yt-]\sidx{Integral}[Volym-]
 $$
   \iiint_V\nabla\cdot{\bf E}_{\rm e}\,dV
     =\oiint_{\Omega}{\bf E}_{\rm e}\cdot d{\bf A}
     ={{Q}\over{\varepsilon_0}},
 $$
 d{\"a}r $Q$ {\"a}r den av $\Omega$ inneslutna laddningen.
-Med laddningsdensiteten $\rho$ f{\"o}r elektronmolnet, och med detta moln
-f{\"o}rskjutet str{\"a}ckan $r$, {\"a}r med andra ord den inneslutna laddningen
+Med laddningsdensiteten $\rho$ \sidx{Laddningst{\"a}thet} f{\"o}r elektronmolnet,
+och med detta moln f{\"o}rskjutet str{\"a}ckan $r$, {\"a}r med andra ord den
+inneslutna laddningen
 $$
   Q={{4\pi r^3}\over{3}}\rho
    =\bigg\{\rho={{(-q)}\over{(4\pi a^3/3)}}\bigg\}
    =-{{r^3}\over{a^3}}q.
 $$
-Samtidigt har vi fr{\aa}n sf{\"a}risk symmetri hos elektronmolnet att den
-radiella komponenten av elektriska f{\"a}ltet p{\aa} sf{\"a}ren med radie
-$r$ {\"a}r konstant, och ytintegralen ges d{\"a}rmed som
+Samtidigt har vi fr{\aa}n sf{\"a}risk symmetri \sidx{Sf{\"a}risk symmetri} hos
+elektronmolnet att den radiella komponenten av elektriska f{\"a}ltet p{\aa}
+sf{\"a}ren med radie $r$ {\"a}r konstant, och ytintegralen \sidx{Integral}[Yt-]
+ges d{\"a}rmed som
 $$
   \oiint_{\Omega}{\bf E}_{\rm e}\cdot d{\bf A} =E_{\rm e}4\pi r^2.
 $$
@@ -332,7 +347,7 @@ $$
   \qquad\Leftrightarrow\qquad
   r = {{4\pi\varepsilon_0 a^3}\over{q}} E_{\rm ext}.
 $$
-Det resulterande dipolmomentet {\"a}r d{\"a}rmed
+Det resulterande dipolmomentet \sidx{Dipolmoment}[Elektriskt] {\"a}r d{\"a}rmed
 $$
   p = qr
     = \underbrace{4\pi\varepsilon_0 a^3}_{=\alpha} E_{\rm ext}
@@ -341,27 +356,30 @@ $$
 d{\"a}r $\alpha$ {\"a}r den s{\aa} kallade {\it atom{\"a}ra
 polarisabiliteten}.\numberedfootnote{Exempel p{\aa} v{\"a}rden f{\"o}r denna
     {\aa}terfinns i Griffiths, Tabell 4.1 p{\aa} sidan 168.}
+\sidx{Atom{\"a}r polarisabilitet $\alpha$}
 Utifr{\aa}n denna extremt f{\"o}renklade modell kan vi observera ett par
 intressanta saker:
 \medskip
 \item{$\bullet$}{Dipolmomentet {\"a}r en linj{\"a}r funktion av det
                  p{\aa}lagda elektriska f{\"a}ltet. Detta brukar vi beteckna
-                 med att {\it systemet {\"a}r linj{\"a}rt}.}
+                 med att {\it systemet {\"a}r linj{\"a}rt}.\sidx{Linj{\"a}rt
+                 system}\sidx{Dipolmoment}[Elektriskt]}
 \item{$\bullet$}{Dipolmomentet {\"a}r {\"a}ven riktat {\it l{\"a}ngs med} det
                  p{\aa}lagda (godtyckligt riktade) elektriska f{\"a}ltet.
                  Detta {\"a}r ett beteende vi associerar vi med ett
-                 {\it isotropt} medium.}
+                 {\it isotropt} medium.\sidx{Isotropt medium}}
 \item{$\bullet$}{Dipolmomentet beror endast p{\aa} eventuell frekvens hos
                  det p{\aa}lagda elektriska f{\"a}ltet. Detta {\"a}r ett
                  beteende vi associerar vi med ett medium fritt fr{\aa}n
-                 {\it dispersion} (frekvensoberoende).}
+                 {\it dispersion} (frekvensoberoende).\sidx{Dispersion}}
 \item{$\bullet$}{Polarisabiliteten beror p{\aa} ``atomens''
                  storlek\numberedfootnote{``Atomens'' med citat-tecken,
                  d{\aa} vi ju alla vet att atomer inte {\"a}r isolerade
                  sf{\"a}rer som l{\aa}ter sig beskrivas med klassisk
                  mekanik.} $a$ i sig.}
 \item{$\bullet$}{Polarisabiliteten beror d{\"a}remot {\it inte} p{\aa} den
-                 totala laddning som k{\"a}rnan uppb{\"a}r (d.v.s. atomnummer).}
+                 totala laddning som k{\"a}rnan uppb{\"a}r (d.v.s. atomnummer).
+                 \sidx{Atomnummer}}
 \medskip
 \section{Varf{\"o}r inte en modell med punktladdningar ist{\"a}llet?}
 Retorisk fr{\aa}ga: {\it Varf{\"o}r konstla till det med ett elektronmoln om vi
@@ -373,9 +391,10 @@ med olika tecken?}
 Svaret p{\aa} detta {\"a}r att denna modell direkt kommer att resultera i en
 direkt ofysikalisk situa\-tion redan utan ett p{\aa}lagt elektriskt f{\"a}lt,
 d{\aa} den {\"o}msesidiga attraktionskraften mellan punktladdningarna i s{\aa}
-fall skulle g{\aa} mot o{\"a}ndligheten, d{\aa} Coulombkraften
+fall skulle g{\aa} mot o{\"a}ndligheten, d{\aa} Coulombkraften\idx{Coulombs
+kraftlag}
 $$
-F_{\rm c}={{q^2}\over{4\pi\varepsilon_0 r^2}}\to\infty,\qquad r\to 0.
+  F_{\rm c}={{q^2}\over{4\pi\varepsilon_0 r^2}}\to\infty,\qquad r\to 0.
 $$
 I modellen med elektronmolnet kommer kraften att n{\"a}rma sig noll d{\aa}
 $r\to 0$, eftersom vi med Gauss lag s{\aa} att s{\"a}ga ``skalar av'' den
@@ -386,6 +405,7 @@ f{\"o}r elektronmolnet, successivt minskas.
 
 \section{En intressant f{\"o}ljd av Gauss lag f{\"o}r sf{\"a}risk-symmetriska
   laddningsf{\"o}rdelningar}
+\sidx{Sf{\"a}risk symmetri}
 I f{\"o}reg{\aa}ende analys av den {\aa}terst{\"a}llande kraften f{\"o}r
 elektronmolnet, s{\aa} anv{\"a}nde vi Gauss lag f{\"o}r att genom den extrahera
 kraften ${\bf F}_{\rm e}$. Vi kan notera att vi {\it generellt har att en
@@ -398,7 +418,8 @@ F{\"o}r ett sf{\"a}riskt-symmetriskt ``moln'' av laddning, centrerat i origo,
 har vi helt klart att vi vid varje position runtomkring inuti s{\aa}v{\"a}l
 som utanf{\"o}r molnet har att det elektriska f{\"a}ltet endast har en radiell
 komponent, med tecken beroende p{\aa} om den totala inneslutna laddningen
-{\"a}r positiv eller negativ. Formulerat med Gauss lag har vi d{\"a}rmed att
+{\"a}r positiv eller negativ. Formulerat med \idx{Gauss lag} har vi d{\"a}rmed
+att
 $$
   \oiint_{\Omega:|{\bf x}|=r}{\bf E}\cdot d{\bf A}
     =4\pi r^2 E_r(r)
@@ -415,11 +436,12 @@ $$
         ={{q_{\rm enc}}\over{4\pi\varepsilon_0 r^2}},
 $$
 d{\"a}r $q_{\rm enc}$ {\"a}r den laddning som innesluts av sf{\"a}ren med samma
-radie $r$ som avst{\aa}ndet till en observat{\"o}r. {\it Notera att denna form
-{\"a}r identisk med den som skuller erh{\aa}llas f{\"o}r situationen d{\aa}
-all innesluten laddning $q_{\rm enc}$ ist{\"a}llet skulle placerats som en
-punktladdning i origo.}
-
+radie $r$ som avst{\aa}ndet till en observat{\"o}r.
+\quote{{\it Notera att denna form {\"a}r identisk med den som skulle
+  erh{\aa}llas f{\"o}r situationen d{\aa} all innesluten laddning
+  $q_{\rm enc}$ ist{\"a}llet skulle placerats som en punktladdning i
+  origo.}\sidx{Punktladdning}}
+\medskip\noindent
 Detta resultat f{\"o}r det elektriska f{\"a}ltet {\"a}r helt och h{\aa}llet i
 analogi med exempelvis den gravitation (gravitationskraft dividerat med massa)
 som vi skulle uppleva om vi t{\"a}nker oss ett experiment d{\"a}r vi gr{\"a}ver
@@ -443,7 +465,8 @@ F{\"o}r att beskriva grundl{\"a}ggande egenskaper hos ett material, och d{\aa}
 inte bara ur elektromagnetisk synvinkel, s{\aa} finns n{\aa}gra
 grundl{\"a}ggande begrepp som kan vara bra att ha i bakhuvudet:
 \medskip
-\item{$\bullet$}{{\it Isotropt:} Invariant under godtycklig rotation.}
+\item{$\bullet$}{{\it Isotropt:} Invariant under godtycklig rotation.
+      \sidx{Isotropt medium}}
 \item{}{{\it ``Mediet beter sig lokalt likadant oavsett i vilket riktning man
       tittar.''}}
 \smallskip
@@ -451,19 +474,20 @@ grundl{\"a}ggande begrepp som kan vara bra att ha i bakhuvudet:
     \to P_i=\varepsilon_0\chi_{\rm e}E_i$\hskip20pt (med $\chi_{ij}$ diagonal).}
 \smallskip
 \item{$\bullet$}{{\it Anisotropt:} Egenskaperna hos mediet i ett fixt
-      koordinatsystem (``labbsystem'') {\it {\"a}ndras} under rotation.}
+      koordinatsystem (``labbsystem'') {\it {\"a}ndras} under rotation.
+      \sidx{Anisotropt medium}}
 \smallskip
 \item{}{$\displaystyle \qquad\qquad\to P_i=\varepsilon_0\sum_{j}\chi_{ij}E_j$.}
 \smallskip
 \item{$\bullet$}{{\it Homogent:} Egenskaperna hos mediet {\"a}r samma oavsett
-      vilken punkt man observerar.}
+      vilken punkt man observerar.\sidx{Homogent medium}}
 \item{}{{\it Notera att ett homogent medium fortfarande kan vara anisotropt!}}
 \smallskip
 \item{}{$\displaystyle \qquad\qquad\to \chi_{ij}=\hbox{konstant}$,
       oberoende av ${\bf r}$.}
 \smallskip
 \item{$\bullet$}{{\it Inhomogent:} Egenskaperna hos mediet varierar
-      beroende p{\aa} var i rummet man observerar dem.}
+      beroende p{\aa} var i rummet man observerar dem.\sidx{Inhomogent medium}}
 \item{}{{\it Notera att ett inhomogent men i {\"o}vrigt lokalt isotropt
       medium ger effekter som kan vara beroende p{\aa} riktning!
       Ett vardagligt exempel {\"a}r polarisation hos solljuset som n{\aa}r
@@ -472,17 +496,20 @@ grundl{\"a}ggande begrepp som kan vara bra att ha i bakhuvudet:
 \item{}{$\displaystyle \qquad\qquad\to \chi_{ij}=\chi_{ij}({\bf r})$.}
 \smallskip
 \item{$\bullet$}{{\it Dispersion:} Egenskaperna hos mediet varierar beroende
-      p{\aa} vilken frekvens ett drivande f{\"a}lt har.}
+      p{\aa} vilken frekvens (v{\aa}gl{\"a}ngd) ett drivande elektromagnetiskt
+      f{\"a}lt har.}
 \item{}{{\it Vardagligt exempel: F{\"a}rger fr{\aa}n vitt ljus som bryts
-      i en kristall (eller billig lins).}
+      i en kristall (eller billig lins).\sidx{Dispersion}}
 \smallskip
 \item{}{$\displaystyle \qquad\qquad\to \chi_{ij}=\chi_{ij}(\omega)$.}
 \medskip
 \section{Anisotropi}
+\sidx{Anisotropt medium}
 F{\"o}r molekyler som {\"a}r l{\aa}sta i gitter (kristallina strukturer)
-{\"a}r polarisabiliteten generellt en {\it tensor} som komponentvis ger hur
-polarisabiliteten i en viss riktning p{\aa}verkas av en given komposant hos
-det externt p{\aa}lagda elektriska f{\"a}ltet $E_k$, som
+{\"a}r polarisabiliteten generellt en {\it tensor} \sidx{Tensor} som
+komponentvis ger hur polarisabiliteten i en viss riktning p{\aa}verkas
+av en given komposant hos det externt p{\aa}lagda elektriska f{\"a}ltet
+$E_k$, som
 $$
   p_j=\alpha_{jk}E_k
   \qquad\Leftrightarrow\qquad
@@ -497,32 +524,37 @@ $$
 Denna form svarar f{\"o}r effekter som exempelvis dubbelbrytning och optisk
 aktivitet, samt {\"a}ven Faraday-rotation (i vilken ett statiskt p{\aa}lagt
 magnetf{\"a}lt skapar en anisotropi).
+\sidx{Optisk aktivitet}\sidx{Faraday-rotation}
 \vfill\eject
 
-\section{Elektrisk polarisationsdensitet}
+\section{\idx{Elektrisk polarisationsdensitet}}
 I ett dielektrikum {\"a}r laddningarna bundna till molekylerna i ett effektivt
-``moln'' av elektroner kring en k{\"a}rna. Om detta moln av elektroner ligger
-centrerat kring k{\"a}rnan finns inga permanenta elektriska dipoler i mediet,
-och d{\"a}rmed heller ingen netto-polarisering. Om ett elektriskt f{\"a}lt
+``moln'' av elektroner \sidx{Elektronmoln} kring en k{\"a}rna. Om detta moln av
+elektroner ligger centrerat kring k{\"a}rnan \sidx{Atomk{\"a}rna} finns inga
+permanenta elektriska dipoler i mediet, och d{\"a}rmed heller ingen
+netto-polarisering. Om ett elektriskt f{\"a}lt \sidx{Elektrisk f{\"a}ltstyrka}
 l{\"a}ggs p{\aa} {\"o}ver detta dielektrikum kommer dock molnet av elektroner
-att dras mot den ``positiva'' k{\"a}llan f{\"o}r de elektriska
-f{\"a}ltlinjerna, och kommer d{\"a}rmed ocks{\aa} att orsaka en elektrisk
-polarisering av materialet. I den h{\"a}r modellen blir polariseringen av
-mediet riktad {\it l{\"a}ngs med} f{\"a}ltlinjerna f{\"o}r ${\bf E}$-f{\"a}ltet.
+att dras mot den ``positiva'' k{\"a}llan f{\"o}r de elektriska f{\"a}ltlinjerna,
+\sidx{F{\"a}ltlinjer}[Elektriska] och kommer d{\"a}rmed ocks{\aa} att orsaka en
+elektrisk polarisering av materialet.
+I den h{\"a}r modellen blir polariseringen av mediet riktad {\it l{\"a}ngs med}
+f{\"a}ltlinjerna f{\"o}r ${\bf E}$-f{\"a}ltet.
 \epsfig{figs/poldensity.1}\noindent
 Vi m{\"a}ter denna inducerade (``p{\aa}tvingade'') polarisering som en
 {\it elektrisk polarisationsdensitet} ${\bf P}$, beskrivande det elektriska
 dipolmomentet per volymenhet (d{\"a}rav ``densitet''). Som en f{\"o}renklad
 modell kan vi se detta inducerade dipolmoment som linj{\"a}rt beroende av det
 p{\aa}lagda elektriska f{\"a}ltet,\numberedfootnote{Uttryckt i den nyligen
-  n{\"a}mnda {\it atom{\"a}ra polarisabiliteten} som vi tog fram f{\"o}r
+  n{\"a}mnda {\it atom{\"a}ra polarisabiliteten}
+  \sidx{Atom{\"a}r polarisabilitet $\alpha$} som vi tog fram f{\"o}r
   en rent elektrostatisk/mekanisk modell motsvarar detta f{\"o}r en densitet
   med $N$ ``atomer'' per volym $V$ att
   $$
     {\bf P}=(N/V)\alpha{\bf E}=\varepsilon_0\chi_{\rm e}{\bf E},
   $$
-  det vill s{\"a}ga att susceptibiliteten ges i termer av detta oerh{\"o}rt
-  f{\"o}renklade m{\aa}tt p{\aa} polarisabiliteten $\alpha$ som
+  det vill s{\"a}ga att susceptibiliteten \sidx{Elektrisk susceptibilitet
+  $\chi_{\rm e}$} ges i termer av detta oerh{\"o}rt f{\"o}renklade m{\aa}tt
+  p{\aa} polarisabiliteten $\alpha$ som
   $$
     \chi_{\rm e}=(N/V)\alpha/\varepsilon_0.
   $$}
@@ -538,7 +570,7 @@ Inom elektromagnetisk teori anv{\"a}nder vi ofta ett f{\"a}lt som beskriver
 summan av den effektiva polariseringen som ges av det externt p{\aa}lagda
 ${\bf E}$-f{\"a}ltet tillsammans med den elektriska polariseringen av
 materialet i sig, det s{\aa} kallade {\it elektriska fl{\"o}dest{\"a}theten}
-(electric displacement field),
+(electric displacement field),\sidx{Elektrisk fl{\"o}dest{\"a}thet}
 $$
   \eqalign{
     {\bf D}&\equiv\varepsilon_0{\bf E}+{\bf P}\cr
@@ -549,7 +581,11 @@ $$
 Vi kommer fram{\"o}ver alltsom oftast ist{\"a}llet f{\"o}r den elektriska
 susceptibiliteten $\chi_{\rm e}$ att anv{\"a}nda den {\it relativa elektriska
 permittiviteten} $\varepsilon_{\rm r}\equiv 1+\chi_{\rm e}$ (liksom
-$\chi_{\rm e}$ {\"a}ven den dimensionsl{\"o}s). F{\"o}r material med
+$\chi_{\rm e}$
+\sidx{Relativ elektrisk permittivitet $\varepsilon_{\rm r}$}
+\sidx{Elektrisk permittivitet}[Relativ permittivitet $\varepsilon_{\rm r}$]
+\sidx{Elektrisk permittivitet}[Vakuumpermittivitet $\varepsilon_0$]
+{\"a}ven den dimensionsl{\"o}s). F{\"o}r material med
 f{\"o}rsumbar magnetisering och i avsaknad av fria laddningar motsvarar
 $n=\sqrt{\varepsilon_{\rm r}}$ brytningsindex hos materialet (mer om detta
 i kommande f{\"o}rel{\"a}sning om den elektromagnetiska v{\aa}gekvationen).
@@ -559,14 +595,19 @@ $\varepsilon_{\rm r}$ f{\"o}r att beskriva materialegenskaperna.
 \vfill\eject
 
 \section{Gauss teorem f{\"o}r elektriska fl{\"o}dest{\"a}theten {\bf D}}
-Att den eletriska fl{\"o}dest{\"a}theten ${\bf D}$ {\"a}r konstruerad som den
+\sidx{Gauss lag}[F{\"o}r elektrisk fl{\"o}dest{\"a}thet]
+Att den elektriska fl{\"o}dest{\"a}theten ${\bf D}$
+\sidx{Elektrisk fl{\"o}dest{\"a}thet} {\"a}r konstruerad som den
 {\"a}r faller sig naturligt om vi betraktar, till exempel, hur en mer generell
 form av Gauss lag kan formuleras i termer av fria s{\aa}v{\"a}l som bundna
 laddningsdensiteter.
 Genom att anv{\"a}nda att sambandet mellan divergensen av
-polarisationsdensiteten ${\bf P}$ och den {\it bundna} laddningst{\"a}theten
+polarisationsdensiteten ${\bf P}$ \sidx{Elektrisk polarisationsdensitet} och
+den {\it bundna} laddningst{\"a}theten \sidx{Bundna laddningar}
+\sidx{Bunden laddningst{\"a}thet $\rho_{\rm b}$}
+\sidx{Laddningst{\"a}thet}[Bunden, $\rho_{\rm b}$]
 $\rho_{\rm b}$,\numberedfootnote{Griffiths Ekv.~(4.12), sidan~174; f{\"o}r
-h{\"a}rledning av denna, se Griffiths, kapitel 4.2.1, sid.~173--174.}
+  h{\"a}rledning av denna, se Griffiths, kapitel 4.2.1, sid.~173--174.}
 $$
   \qquad
   \qquad
@@ -592,30 +633,35 @@ $$
   \nabla\cdot(\varepsilon_0{\bf E}+{\bf P})=\rho_{\rm f},
 $$
 d{\"a}r nu allts{\aa} k{\"a}lltermen i h{\"o}gerledet endast utg{\"o}rs av den
-{\it fria} laddningst{\"a}theten $\rho_{\rm f}$, och om vi {\it definierar} den
-elektriska fl{\"o}dest{\"a}theten som
+{\it fria} laddningst{\"a}theten $\rho_{\rm f}$,
+\sidx{Fri laddningst{\"a}thet $\rho_{\rm f}$}
+\sidx{Laddningst{\"a}thet}[Fri, $\rho_{\rm f}$]
+och om vi {\it definierar} den elektriska fl{\"o}dest{\"a}theten som
 $$
   {\bf D}\equiv\varepsilon_0{\bf E}+{\bf P},
 $$
 s{\aa} lyder allts{\aa} denna under Gauss lag
+\sidx{Gauss lag}[F{\"o}r elektrisk fl{\"o}dest{\"a}thet]
 $$
   \nabla\cdot{\bf D}=\rho_{\rm f}.
 $$
 Eftersom denna nu innefattar {\"a}ven den elektriska polarisationsdensiteten
-hos materialet, med andra ord v{\"a}xelverkan mellan det elektriska f{\"a}ltet
-och mediet, s{\aa} {\"a}r detta en mycket anv{\"a}ndbar generalisering n{\"a}r
-vi nu skall analysera gr{\"a}nsytor mellan olika medier.
+\idx{Elektrisk polarisationsdensitet} hos materialet, med andra ord
+v{\"a}xelverkan mellan det elektriska f{\"a}ltet och mediet, s{\aa} {\"a}r
+detta en mycket anv{\"a}ndbar generalisering n{\"a}r vi nu skall analysera
+gr{\"a}nsytor mellan olika medier.
 \vfill\eject
 
 \section{Randvillkor och {\"o}verg{\aa}ngar mellan olika media}
+\sidx{Randvillkor}\sidx{Hoppvillkor}
+\sidx{Dielektrikum}[{\"O}verg{\aa}ng mellan olika]
 Vid {\"o}verg{\aa}ngar mellan olika media blir {\"a}ndringarna p{\aa}
 ${\bf E}$- och ${\bf D}$-f{\"a}ltens komposanter olika bero\-ende p{\aa} om
 de {\"a}r  normala (vinkelr{\"a}ta) eller tangentiala (parallella) mot
 gr{\"a}nsytan mellan media.\numberedfootnote{Se Griffiths s.~185.}
-\medskip
-\noindent{\it Recap p{\aa} hoppvillkor f{\"o}r elektriska f{\"a}lt i vakuum}
-\smallskip
-\noindent
+
+\subsection{Recap p{\aa} hoppvillkor f{\"o}r elektriska f{\"a}lt i vakuum}
+\sidx{Hoppvillkor}[F{\"o}r elektriska f{\"a}lt i vakuum]
 F{\"o}rst av allt en liten recap p{\aa} randvillkor (``hoppvillkor'') {\"o}ver
 gr{\"a}nsytor som uppb{\"a}r en ytladdning $\sigma$!
 \epsfig{figs/esurfnorm.1}\noindent
@@ -628,7 +674,8 @@ $\Omega$ av h{\"o}jd $h\to0$, som har platta ytor ovanf{\"o}r och under,
 s{\aa} har vi fr{\aa}n Gauss teorem i elektrostatik att normal-komposanterna
 ($\perp$) f{\"a}ltet ${\bf E}_1$ under ytan och f{\"a}ltet ${\bf E}_2$ ovan
 ytan {\"a}r relaterade genom:\numberedfootnote{Sj{\"a}lvfallet med
-  ytladdningsdensiteten som $\sigma=Q/A$ (${\rm C}/{\rm m}^2$).}
+  ytladdningsdensiteten som $\sigma=Q/A$ (${\rm C}/{\rm m}^2$).}\sidx{Gauss
+  lag}[F{\"o}r elektrisk f{\"a}ltstyrka]
 $$
   \hbox{Gauss:}\qquad
   \displaystyle
@@ -644,7 +691,7 @@ $$
 P{\aa} liknande s{\"a}tt kan vi analysera tangentiella komposanter
 ($\parallel$), parallella med ytan, genom att ist{\"a}llet anv{\"a}nda Stokes
 teorem i en sluten rektangul{\"a}r slinga $\Sigma$ av h{\"o}jd $h\to0$ och
-som innefattar gr{\"a}nsytan:
+som innefattar gr{\"a}nsytan:\sidx{Stokes teorem}
 $$
   \hbox{Stokes:}\qquad
   \iint_{\Sigma}\underbrace{(\nabla\times{\bf E})}_{=-\partial{\bf B}/\partial t=0}
@@ -657,19 +704,20 @@ $$
   E^{\parallel}_2=E^{\parallel}_1
 $$
 \vfill\eject
-\noindent{\it Hoppvillkor f{\"o}r elektriska f{\"a}lt mellan olika media}
-\smallskip
-\noindent
+
+\subsection{Hoppvillkor f{\"o}r elektriska f{\"a}lt mellan olika media}
+%\sidx{Hoppvillkor}[F{\"o}r elektriska f{\"a}lt mellan olika media]
 Vi kan nu anv{\"a}nda en analogi till ovanst{\aa}ende f{\"o}r att analysera vad
 som h{\"a}nder d{\aa} materialen under och ovanf{\"o}r gr{\"a}nsytan har olika
-relativ elektrisk permittivitet.
-F{\"o}r den elektriska fl{\"o}dest{\"a}theten har Gauss lag (utifr{\aa}n
+relativ elektrisk permittivitet. \sidx{Elektrisk fl{\"o}dest{\"a}thet}
+F{\"o}r den elektriska fl{\"o}dest{\"a}theten har \idx{Gauss lag} (utifr{\aa}n
 $\nabla\cdot{\bf D}=\rho_{\rm f}$) samma form som f{\"o}r det elektriska
 f{\"a}ltet, med skillnaden att vi nu har den {\it fria} elektriska
 laddningst{\"a}theten $\rho_{\rm f}$ som en k{\"a}llterm i h{\"o}gerledet.
 Med exakt samma geometri som tidigare f{\"o}ljer d{\"a}rmed att vi
 f{\aa}r\numberedfootnote{{\AA}terigen, sj{\"a}lvfallet med den {\it fria}
-  ytladdningsdensiteten som $\sigma_{\rm f}=Q_{\rm f}/A$ (${\rm C}/{\rm m}^2$).}
+  ytladdningsdensiteten som $\sigma_{\rm f}=Q_{\rm f}/A$ (${\rm C}/{\rm m}^2$).
+  \sidx{Laddningst{\"a}thet}[Yt-]\sidx{Ytladdningst{\"a}thet}}
 $$
   \hbox{Gauss:}\qquad
   \displaystyle
@@ -736,7 +784,8 @@ $$
   \qquad\Leftrightarrow\qquad
   E^{\parallel}_2=E^{\parallel}_1,
 $$
-alternativt uttryckt i ${\bf D}$-f{\"a}ltet och de relativa permittiviteterna som 
+alternativt uttryckt i ${\bf D}$-f{\"a}ltet och de relativa permittiviteterna
+som \sidx{Elektrisk permittivitet}[Relativ permittivitet $\varepsilon_{\rm r}$]
 $$
   {{D^{\parallel}_2}\over{\varepsilon^{(2)}_{\rm r}}}
     ={{D^{\parallel}_1}\over{\varepsilon^{(1)}_{\rm r}}}
@@ -744,6 +793,7 @@ $$
 \vfill\eject
 
 \section{Upplagrad elektrisk energi}
+\sidx{Upplagrad energi}[I elektriskt f{\"a}lt]
 D{\aa} vi applicerar ett elektriskt f{\"a}lt {\"o}ver ett dielektrikun, s{\aa}
 kommer vi att lagra upp energi i det system av mikrosopiska
 (atom{\"a}ra/molekyl{\"a}ra) dipoler som d{\"a}rmed kommer att linjeras upp i
@@ -762,6 +812,7 @@ H{\"a}rledningen av denna form ges av Griffiths p{\aa} sidorna 197--198, och
 {\"a}r en nyttig {\"o}vningsuppgift att f{\"o}lja.
 
 \section{Dielektrisk sf{\"a}r i elektriskt f{\"a}lt}
+\sidx{Dielektrisk sf{\"a}r}
 Vi har just sett hur en extremt f{\"o}renklad modell av en atom kan anv{\"a}ndas
 f{\"o}r att kvalitativt beskriva uppkomsten av dipolmoment d{\aa} systemet
 uts{\"a}tts f{\"o}r ett externt p{\aa}lagt elektriskt f{\"a}lt. Om vi lyfter
@@ -778,13 +829,13 @@ Om en dielektrisk sf{\"a}r av radie $R$ och relativ permittivitet
 f{\"a}lt ${\bf E}$, s{\aa} kommer dipolmomenten i sf{\"a}ren att addera upp
 till att ge sf{\"a}ren i sig ett netto-dipolmoment ${\bf p}$. Man kan visa att
 detta dipolmoment ges som\numberedfootnote{F{\"o}r en h{\"a}rledning av det
-elektriska f{\"a}ltet inuti en dielektrisk sf{\"a}r, se Griffiths Exempel~4.7
-p{\aa} sidan 193 (vilket f{\"o}r {\"o}vrigt {\"a}r ett mycket bra exempel);
-alternativt Jackson, s.~151. Se {\"a}ven Griffiths, Problem~4.41, sidan 208
-f{\"o}r ett exempel p{\aa} relationen mellan atom{\"a}r polarisabilitet
-$\alpha$ och relativ permittivitet $\varepsilon_{\rm r}$.
-Clausius--Mossotti-relationen g{\"a}ller generellt f{\"o}r icke-pol{\"a}ra
-media, medan uttryck enligt Langevin g{\"a}ller f{\"o}r pol{\"a}ra media.}
+  elektriska f{\"a}ltet inuti en dielektrisk sf{\"a}r, se Griffiths Exempel~4.7
+  p{\aa} sidan 193 (vilket f{\"o}r {\"o}vrigt {\"a}r ett mycket bra exempel);
+  alternativt Jackson, s.~151. Se {\"a}ven Griffiths, Problem~4.41, sidan 208
+  f{\"o}r ett exempel p{\aa} relationen mellan atom{\"a}r polarisabilitet
+  $\alpha$ och relativ permittivitet $\varepsilon_{\rm r}$.
+  Clausius--Mossotti-relationen g{\"a}ller generellt f{\"o}r icke-pol{\"a}ra
+  media, medan uttryck enligt Langevin g{\"a}ller f{\"o}r pol{\"a}ra media.}
 $$
   {\bf p}=\underbrace{4\pi\varepsilon_0
     \bigg({{\varepsilon_{\rm r}-1}\over{\varepsilon_{\rm r}+2}}\bigg)
@@ -793,9 +844,12 @@ $$
 d{\"a}r ${\bf E}_{\infty}$ {\"a}r det elektriska f{\"a}ltet l{\aa}ngt ifr{\aa}n
 sj{\"a}lva sf{\"a}ren. Faktorn $(\varepsilon_{\rm r}-1)/(\varepsilon_{\rm r}+1)$
 kallas {\it Clausius--Mossotti}-relationen\numberedfootnote{Efter
-Ottaviano-Fabrizio Mossotti (1791--1863) och Rudolf Clausius (1822--1888).}.
-Ur denna relation har vi att den effektiva polarisabiliteten hos sf{\"a}ren
-i sig ges som
+Ottaviano-Fabrizio Mossotti (1791--1863) \sidx{Mossotti, Ottaviano-Fabrizio
+(1791--1863)} och Rudolf Clausius (1822--1888).\sidx{Clausius, Rudolf
+(1822--1888)}}.
+Ur denna relation har vi att den effektiva polarisabiliteten
+\sidx{Atom{\"a}r polarisabilitet $\alpha$} hos sf{\"a}ren
+i sig ges som\sidx{Clausius--Mossotti-relationen}
 $$
   \alpha=4\pi\varepsilon_0
     \bigg({{\varepsilon_{\rm r}-1}\over{\varepsilon_{\rm r}+2}}\bigg) R^3
@@ -863,5 +917,5 @@ $$
   $$
     W = {{1}\over{2}}\iiint{\bf D}\cdot{\bf E}\,dV.
   $$}
-
+\index
 \bye
