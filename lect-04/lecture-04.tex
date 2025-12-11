@@ -418,7 +418,7 @@ i termer av en {\it str{\"o}mt{\"a}thet} ${\bf J}$, med den senare m{\"a}tt i
 den laddning som transporteras per ytenhet och per tidsenhet, eller
 ${\rm C}/({\rm m}^2{\rm s})$,
 $$
-  I=\iint_S {\bf J}\cdot d{\bf A}.
+  I=\iint_S {\bf J}\cdot d{\bf S}.
 $$
 Vi kan sj{\"a}lvfallet utveckla detta till att g{\"a}lla den totala str{\"o}m
 som passerar genom en {\it sluten} yta $S$ som omsluter en volym $V$, genom att
@@ -435,7 +435,7 @@ anv{\"a}nda Gauss lag\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa}
   {\it surface}) inkluderande normalriktning.}
 $$
   I=\Big[\hbox{str{\"o}mmen ut genom ytan $S$}\Big]
-   =\oiint_S {\bf J}\cdot d{\bf A}
+   =\oiint_S {\bf J}\cdot d{\bf S}
    =\iiint_V (\nabla\cdot{\bf J})\,dV.
 $$
 \sidx{Elektrisk laddning}
@@ -993,7 +993,7 @@ $$
     &=\big\{\hbox{ Gauss lag }\big\}\cr
     &=-\oiint_S\bigg(
       {{x_k-x'_k}\over{|{\bf x}-{\bf x}'|^3}}{\bf J}({\bf x}')
-      \bigg)\cdot d{\bf A}\cr
+      \bigg)\cdot d{\bf S}\cr
     &=0.
   }
 $$
@@ -1060,11 +1060,11 @@ av Stokes teorem, f{\"o}r en sluten slinga $\Gamma$ inneslutande en yta $S$ i
 magnetf{\"a}ltet och str{\"o}mt{\"a}theten, som\numberedfootnote{Se exempelvis
   innerp{\"a}rmen p{\aa} Griffiths, {\it Curl theorem}.}
 $$
-  \iint_{S}(\nabla\times{\bf B})\cdot d{\bf A}=
+  \iint_{S}(\nabla\times{\bf B})\cdot d{\bf S}=
   \oint_{\Gamma}{\bf B}\cdot d{\bf l}=
-  \mu_0\underbrace{\iint_{S}{\bf J}\cdot d{\bf A}}_{\displaystyle =I_{\rm enc}},
+  \mu_0\underbrace{\iint_{S}{\bf J}\cdot d{\bf S}}_{\displaystyle =I_{\rm enc}},
 $$
-d{\"a}r nu $\iint_{S}{\bf J}\cdot d{\bf A}=I_{\rm enc}$ {\"a}r den av $\Gamma$
+d{\"a}r nu $\iint_{S}{\bf J}\cdot d{\bf S}=I_{\rm enc}$ {\"a}r den av $\Gamma$
 inneslutna str{\"o}mmen (med andra ord den totala str{\"o}m som passerar genom
 integrationsytan $S$). Med andra ord har vi integralformen av Amp\`eres lag som
 $$
@@ -1189,7 +1189,7 @@ $$
 \item{$\bullet$}{Str{\"o}mmen $I$ genom en yta $S$ ges av str{\"o}mt{\"a}theten
   ${\bf J}$ som
   $$
-    I=\iint_S {\bf J}\cdot d{\bf A},
+    I=\iint_S {\bf J}\cdot d{\bf S},
   $$
 \item{$\bullet$}{I en volym med konduktivitet $\sigma$ och ett elektriskt
   f{\"a}lt ${\bf E}$ ges str{\"o}mt{\"a}theten som ${\bf J}=\sigma{\bf E}$.}
@@ -1232,12 +1232,15 @@ $$
   Nollan i h{\"o}gerledet har som direkt f{\"o}ljd, via tolkning genom
   Gauss lag,  att ``magnetisk laddning'' inte existerar! (``Magnetisk
   laddning'' {\"a}r h{\"a}r ekvivalent med ``magnetiska monopoler''.)}
-\item{$\bullet$}{Amp\`eres lag p{\aa} integral- respektive differentialform,
+\item{$\bullet$}{Amp\`eres magnetostatiska lag p{\aa} integral- respektive
+  differentialform,
   $$
-    \oint_{\Gamma}{\bf B}\,d{\bf l}=\mu_0I_{\rm enc}
+    \oint_{\Gamma}{\bf B}\cdot d{\bf l}
+      =\mu_0\iint_S{\bf J}\cdot d{\bf S}
+      =\mu_0I_{\rm enc}
     \quad\Leftrightarrow\quad
     \nabla\times{\bf B}=\mu_0{\bf J}.
-  $$}
+$$}
 \item{$\bullet$}{Ur ``lagen om att inga magnetiska monopoler existerar''
   kan vi direkt formulera vektorpotentialen ${\bf A}$ som
   $$
