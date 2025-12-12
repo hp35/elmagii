@@ -1,0 +1,111 @@
+\countdef\chapno=28         % register to keep track of chapter numbers
+\countdef\secno=29          % register to keep track of section numbers
+\countdef\subsecno=30       % register to keep track of subsection numbers
+\countdef\chapstartpage=31  % register to keep track of start page of chapter
+\countdef\appno=32          % register to keep track of appendix numbers
+\countdef\figno=32          % register to keep track of figure numbers
+\chapno=0
+\appno=0
+\figno=0
+\pageno=-1                  % start with roman page numbering
+
+%
+% Define a convenient macro for the expansion of the chapter numbers.
+% This macro is introduced in order to provide for an easy change of
+% the chapter labeling (from numbers to capital letters) whenever the
+% appendices appear, via a redefinition of '\thechapno' in the '\appendix'
+% macro definition.
+%
+\def\thechapno{\the\chapno}
+
+%
+% Define a macro for the expansion of page numbers, in similar to the
+% '\thechapno' macro for expansion of chapter numbering. In this case
+% we are in particular interested in typsetting the pages preceding the
+% first chapter with roman numerals; this is done by associating them
+% with negative page numbers.
+%
+\def\thepageno{\ifnum\pageno<0\romannumeral-\pageno \else\number\pageno\fi}
+\def\abs#1{\ifnum#1<0 \number-#1\else\number#1\fi}
+
+%
+% The following redefinitions of the default eplain TeX table-of-contents
+% line styles causes the generated table of contents to be of the form:
+%
+%        Preface . . . . . . . . . . . . . . . . . . . . . . .  v
+%     1  Introduction                                           1
+%     2  The classical picture                                  9
+%        2.1  The mechanical spring oscillator . . . . . . . . 10
+%        2.2  Damped motion  . . . . . . . . . . . . . . . . . 12
+%             2.2.1 Longitudinal relaxation  . . . . . . . . . 14
+%             2.2.2 Transverse relaxation  . . . . . . . . . . 15
+%     3  Lagrangian formulation                                17
+%     Bibliography                                             27
+%     Index                                                    35
+%
+\newdimen\tocchapindent \tocchapindent=20pt
+\newdimen\tocsecindent \tocsecindent=20pt
+\newdimen\tocsubsecindent \tocsubsecindent=27pt
+\def\tocpreentry#1#2#3{\line{
+  \hbox to\tocchapindent{\hfil}
+  \hbox{#1}\dotfill{#3}}}%
+\def\tocchapterentry#1#2#3{\bigskip\goodbreak\line{
+  \hbox to\tocchapindent{\bf #2\hfil}
+  \hbox{\bf #1}\hfill{\bf #3}}}%
+\def\tocsectionentry#1#2#3{\line{
+  \hbox to\tocchapindent{\hfil}
+  \hbox to\tocsecindent{#2\hfil}
+  \hbox{#1}\dotfill\ {#3}}}%
+\def\tocsubsectionentry#1#2#3{\line{
+  \hbox to\tocchapindent{\hfil}
+  \hbox to\tocsecindent{\hfil}
+  \hbox to\tocsubsecindent{#2\hfil}
+  \hbox{#1}\dotfill\ {#3}}}%
+\def\tocappendixentry#1#2#3{\bigskip\line{
+  \hbox to\tocchapindent{\bf #2\hfil}
+  \hbox{\bf #1}\hfill{\bf #3}}}%
+\def\tocbibentry#1#2#3{\bigskip\line{
+  \hbox{\bf #1}\hfill{\bf #3}}}%
+\def\tocindexentry#1#2#3{\tocbibentry{#1}{#2}{#3}}% identical to '\tocbibentry'
+
+%
+% The following redefinition of the '\writenumberedcontentsentry' macro of
+% the eplain macro package has been done in order to avoid the '\sanitize'
+% operation on the secondary number. If '\sanitized', any multiple appearance
+% of chapter number, section number, etc. would otherwise be destroyed in the
+% secondary number.
+%
+\def\writecontentsentry#1#2#3{\writenumberedcontentsentry{#1}{#2}{#3}{}}%
+\def\writenumberedcontentsentry#1#2#3#4{%
+  \csname ifrewrite#1file\endcsname
+    \csname open#1file\endcsname
+    \toks0 = {\expandafter\noexpand \csname #1#2entry\endcsname}%
+    \def\temp{#3}%
+    \toks2 = \expandafter{#4}%
+    \edef\cs{\the\toks2}%
+    \edef\@wr{%
+      \write\csname #1file\endcsname{%
+        \the\toks0 % the \toc...entry control sequence
+        {\sanitize\temp}% the text
+        \ifx\empty\cs\else {\cs}\fi % A secondary number, or nothing
+        {\noexpand\folio}% the page number
+      }%
+    }%
+    \@wr
+  \fi
+  \ignorespaces
+}%
+
+%
+% The '\tableofcontents' macro typesets the table of contents, based on
+% the entries written to the .toc file by the '\writenumberedtocentry'
+% blocks in the '\chapter', '\section', and '\subsection' macros. The
+% page layout and placement of the `Contents' label is identical to the
+% preface.
+%
+\def\tableofcontents{
+  \chapstartpage=\pageno
+  \message{Contents}
+  ~\vskip 5pc\goodbreak\noindent{\twelvecmbx Inneh{\aa}ll}\par
+  \nobreak\vskip 48pt\noindent\ignorespaces
+  \readtocfile\vfill\eject}

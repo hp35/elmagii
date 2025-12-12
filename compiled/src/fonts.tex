@@ -1,0 +1,37 @@
+%
+% Various font definitions
+%
+\font\ninerm=cmr9
+\font\tenssbx=cmssbx10
+\font\twelvesc=cmcsc10 at 12 truept
+\font\fivecmr=cmr7 at 5 truept
+\font\sevencmr=cmr7
+\font\eightcmr=cmr8
+\font\eightcmssq=cmssq8
+\font\eightcmssqi=cmssqi8
+\font\ninecmti=cmti9
+\font\tencmti=cmti10
+\font\tencmss=cmss10
+\font\tencmcsc=cmcsc10
+\font\tencmssi=cmssi10
+\font\twelvecmbx=cmbx12
+\font\sixteencmbx=cmbx12 at 16 truept
+\font\sixteencmsc=cmcsc10 at 16 truept
+\font\fourteencmssbx=cmssbx10 at 14 truept
+\font\twentyeightcmssbx=cmssbx10 at 28 truept
+\def\thinspace{\kern .16667em }
+
+%
+% Make sure that the METAPOST logo can be loaded even in plain TeX.
+%
+\ifx\MP\undefined
+    \ifx\manfnt\undefined
+            \font\manfnt=logo10
+    \fi
+    \ifx\manfntsl\undefined
+            \font\manfntsl=logosl10
+    \fi
+    \def\MP{{\ifdim\fontdimen1\font>0pt \let\manfnt = \manfntsl \fi
+      {\manfnt META}\-{\manfnt POST}}\spacefactor1000 }%
+\fi
+\ifx\METAPOST\undefined \let\METAPOST=\MP \fi

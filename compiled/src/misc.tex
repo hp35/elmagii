@@ -1,0 +1,45 @@
+\def\section #1 {\advance\secno by 1
+  \subsecno=0
+  \writenumberedtocentry{section}{#1}{\thechapno.\the\secno}
+  \medskip\goodbreak\noindent{\tenssbx{\thechapno.\the\secno.} #1}
+  \par\nobreak\smallskip\noindent}
+\def\subsection #1 {\advance\subsecno by 1
+  \writenumberedtocentry{subsection}{#1}{\thechapno.\the\secno.\the\subsecno}
+  \medskip\goodbreak\noindent{\it{\thechapno.\the\secno.\the\subsecno.} #1}
+  \par\nobreak\smallskip\noindent}
+\def\iint{\mathop{\int\kern-8pt\int}}
+\def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+\def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
+\def\sgn{\mathop{\rm sgn}\nolimits} % sign
+\def\Re{\mathop{\rm Re}\nolimits}   % real part
+\def\Im{\mathop{\rm Im}\nolimits}   % imaginary part
+\def\Tr{\mathop{\rm Tr}\nolimits}   % quantum mechanical trace
+\def\eqq{\mathop{\vbox{\hbox{\hskip2pt?}\vskip-6pt\hbox{=}}}}
+\def\encircle#1{\kern3pt#1\kern-7.6pt$\bigcirc$\kern4pt}
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+\def\quote#1{\par\leftskip=36pt\rightskip=36pt\smallskip\noindent#1\par
+  \leftskip=0pt\rightskip=0pt\smallskip}
+\long\def\plan#1{\par\leftskip=36pt\rightskip=36pt\bigskip%
+  \noindent{\it Sammanfattning av f{\"o}rel{\"a}sningen}\smallskip
+  \noindent{\it #1}\par\leftskip=0pt\rightskip=0pt} %\vfill\eject}
+\def\threepointsummary#1#2#3{\par\leftskip=36pt\rightskip=36pt\bigskip
+  \noindent{\it Sammanfattning i tre punkter}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{1. }#1}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{2. }#2}\smallskip
+  \leftskip=48pt\rightskip=36pt\hangindent=20pt
+  \noindent{\it\hbox to 20pt{3. }#3}\par%\medskip
+  \leftskip=0pt\rightskip=0pt\vfill\eject}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
+\def\captionwide{\advance\leftskip by 60pt
+  \advance\rightskip by 60pt}
+\newdimen\itemindent \itemindent=28pt
+\newdimen\hangitemindent \hangitemindent=46pt
+\def\litem[#1]{\smallbreak\noindent%
+  \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
+  \hangindent\hangitemindent\ignorespaces}
+\def\cleardoublepage{\ifodd\pageno\vfill\eject~\vskip260pt%
+  \centerline{[Page intentionally left blank]} ~\vfill\eject%
+  \else\vfill\eject\fi}

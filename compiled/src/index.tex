@@ -1,0 +1,7 @@
+\newif\ifshowindex
+\showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject%
+  ~\vskip 5pc\goodbreak\noindent{\twelvecmbx{Index}}%
+  \writenumberedtocentry{index}{\hskip24pt{Index}}%
+  \nobreak\vskip 48pt\noindent\ignorespaces%
+  \readindexfile{i}\cleardoublepage\fi}
