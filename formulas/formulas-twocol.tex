@@ -1,8 +1,7 @@
-%\def\formulas#1{
 \vskip 0pc\goodbreak\noindent{\twelvecmbx{Formelsamling}}%
   \writenumberedtocentry{index}{\hskip24pt{Formelsamling}}%
   \nobreak\vskip 0pt\noindent\ignorespaces
-%=== Begin two-column mode ===
+%%%%%%%%%%%%%%%%% Begin two-column mode %%%%%%%%%%%%%%%%%%
 {\newdimen\fullhsize
 \fullhsize=170mm \hsize=82mm
 \topskip=36pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\rightskip=0pt
@@ -28,7 +27,6 @@
   \vskip4pt%
   \hrule width\hsize\vskip1pt%
   \hrule width\hsize\vskip10pt}
-%% \def\eqtitle#1{{\it #1}\goodbreak}
 \def\eqtitle#1{\vskip2pt{\it #1}\par}
 \def\versionnumber{1.0}             % Version of this collection of formulas
 \def\versiondate{11 december, 2025} % Timestamp of this collection of formulas
@@ -42,93 +40,4 @@
 \vfill
 \supereject
 \if R\lr \null\vfill\eject\fi}
-%}
-
-
-
-
-
-% \vskip 0pc\goodbreak\noindent{\twelvecmbx{Formelsamling}}%
-%   \writenumberedtocentry{index}{\hskip24pt{Formelsamling}}%
-%   \nobreak\vskip 0pt\noindent\ignorespaces
-% %=== Begin two-column mode ===
-% {\newdimen\fullhsize
-% \fullhsize=170mm \hsize=82mm
-% \topskip=36pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\rightskip=0pt
-% \parindent=0pt
-% \def\fulline{\hbox to\fullhsize}
-% \footline={\hfill{\rm\folio}}
-% \let\lr=L \newbox\leftcolumn
-% \output={\if L\lr
-%   \global\setbox\leftcolumn=\columnbox \global\let\lr=R
-%   \else \doubleformat \global\let\lr=L\fi
-%   \ifnum\outputpenalty>-20000 \else\dosupereject\fi}
-% \def\doubleformat{\shipout\vbox{\makeheadline
-%     \fulline{\box\leftcolumn\hfil\columnbox}
-%   \makefootline}
-%   \advancepageno}
-% \def\columnbox{\leftline{\pagebody}}
-% \def\eqsection#1{\goodbreak%
-%   \vskip6pt%
-%   \hrule width\hsize\vskip1pt%
-%   \hrule width\hsize
-%   \vskip4pt%
-%   \centerline{\bf #1}%
-%   \vskip4pt%
-%   \hrule width\hsize\vskip1pt%
-%   \hrule width\hsize\vskip10pt}
-% %% \def\eqtitle#1{{\it #1}\goodbreak}
-% \def\eqtitle#1{\vskip2pt{\it #1}\par}
-% \def\versionnumber{1.0}             % Version of this collection of formulas
-% \def\versiondate{11 december, 2025} % Timestamp of this collection of formulas
-% \def\version{v.\versionnumber\ (\versiondate)}
-% \vskip4pt
-% \centerline{Elektromagnetism II, Uppsala Universitet}
-% \centerline{\version}
-% \centerline{{\tt github.com/hp35/elmagii}}
-% \vskip10pt
-% 
-% \input ../formulas/formulas.tex
-% 
-% \vfill
-% \supereject
-% \if R\lr \null\vfill\eject\fi}
-% %=== Back to normal single-column TeX ===
-% %~\cleardoublepage
-% 
-
-
-% \newbox\cols    % box to store all two-column text
-% \newdimen\colwd % width of columns
-% \colwd=.45\hsize
-% 
-% % Start collecting multi-column material:
-% \setbox\cols=\vbox\bgroup
-% % ------------------------------------------------------
-% % Put your two-column content here:
-% Some text that will be typeset in two columns.
-% Next paragraph...
-% \par
-% Even more text.
-% % ------------------------------------------------------
-% \egroup   % end of collection
-% 
-% % Now split into two columns:
-% \newbox\colA
-% \newbox\colB
-% 
-% % Height for each column (for a balanced page):
-% \dimen0=\ht\cols
-% \dimen0=.5\dimen0
-% 
-% \setbox\colA=\vsplit\cols to \dimen0
-% \setbox\colB=\vsplit\cols to \dimen0
-% 
-% % Output the two columns side-by-side:
-% \vbox{
-%   \hbox to \hsize{
-%     \vbox to \dimen0{\box\colA\vfil}\hfil
-%     \vbox to \dimen0{\box\colB\vfil}
-%   }
-% }
-
+%%%%%%%%%%%%%% Back to normal single-column %%%%%%%%%%%%%%
