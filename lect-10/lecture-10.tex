@@ -98,6 +98,9 @@
 \def\litem[#1]{\smallbreak\noindent%
   \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
   \hangindent\hangitemindent\ignorespaces}
+\newif\ifshowindex
+\showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject\section{Index} \readindexfile{i}\fi}
 %--------------------- END OF LOCAL MACROS ---------------------
 
 \initlecture
@@ -106,11 +109,15 @@
   sammanfattas och vi introducerar fyra t{\"a}mligen allm{\"a}nt giltiga
   approximationer:
     (i)   ${\bf J}_{\rm f}={\bf 0}$ (inga fria str{\"o}mmar),
+          \sidx{Str{\"o}mt{\"a}thet}[Fria laddningar]
     (ii)  $\rho=0$ (inga fria laddningar),
+          \sidx{Laddningst{\"a}thet}[Fria laddningar $\rho_{\rm f}$]
     (iii) ${\bf P}=\varepsilon_0(\varepsilon_{\rm r}-1){\bf E}$
               (linj{\"a}rt medium med homogent $\varepsilon_{\rm r}({\bf x})
                =\hbox{konstant}$), samt
+          \sidx{Elektrisk polarisationsdensitet ${\bf P}$}
     (iv)  ${\bf M}={\bf 0}$ (f{\"o}rsumbar magnetisering, $\mu_{\rm r}\approx1$).
+          \sidx{Magnetisering ${\bf M}$}
   Med dessa approximationer omformulerar vi v{\aa}gekvationerna f{\"o}r det
   elektromagnetiska f{\"a}ltet i form av tv{\aa} identiska ekvationer, f{\"o}r
   det elektriska f{\"a}ltet ${\bf E}$ och det magnetiska f{\"a}ltet ${\bf B}$
@@ -131,9 +138,10 @@
   \cdot{\bf x}-i\omega({\bf k}) t)]$, med samma form f{\"o}r det magnetiska
   f{\"a}ltet, och visar p{\aa} hur denna planv{\aa}gsuppdelning leder till
   en ortogonal koppling mellan det elektriska och magnetiska f{\"a}ltet som
-  ${\bf B}_{\bf k}={\bf k}\times{\bf E}_{\bf k}/\omega$.}
+  ${\bf B}_{\bf k}={\bf k}\times{\bf E}_{\bf k}/\omega$.\sidx{Planv{\aa}guppdelning}}
 
 \threepointsummary{%
+  \sidx{Elektromagnetisk v{\aa}gekvation}
   Den elektromagnetiska v{\aa}gekvationen i homogena dielektrika utan
   n{\"a}rvaro av fria laddningar, str{\"o}mmar eller magnetisering {\"a}r
   identisk f{\"o}r det elektriska och magnetiska f{\"a}ltet,
@@ -146,6 +154,8 @@
   ljus\-hastigheten i vakuum $c_0=(\mu_0\varepsilon_0)^{-1/2}$ och
   brytnings\-index $n=\varepsilon^{1/2}_{\rm r}$.
 }{%
+  \sidx{d'Alembert, Jean le Rond (1717--1783)}[d'Alemberts l{\"o}sningsmetod
+  (1747)]
   Med d'Alemberts l{\"o}sningsmetod ges generella l{\"o}sningar till
   v{\aa}gekvationen i en dimension som
   $$
@@ -153,7 +163,7 @@
   $$
 }{%
   Planv{\aa}gsuppdelning av den elektromagnetiska v{\aa}gen med
-  komplex-v{\"a}rda envelopper,
+  komplex-v{\"a}rda envelopper,\sidx{Planv{\aa}guppdelning}
   $$
     \eqalign{
       {\bf E}({\bf x},t)&=\sum_{\bf k}
@@ -166,10 +176,11 @@
 %----------------------- END OF PREAMBLE -----------------------
 
 \section{Elektromagnetiska v{\aa}gekvationen i homogena dielektrika}
+\sidx{Elektromagnetisk v{\aa}gekvation}[I homogent dielektrikum]
 Under den f{\"o}rra f{\"o}rel{\"a}sningen tog vi ur Maxwells ekvationer fram
 de generella v{\aa}gekvationerna f{\"o}r ${\bf E}$- och ${\bf B}$-f{\"a}lten.
 Dessa visade sig ha en gemensam form p{\aa} k{\"a}lltermerna i h{\"o}gerledet
-som
+som\sidx{Homogent medium}\sidx{Elektromagnetisk v{\aa}gekvation}
 $$
   \eqalign{
     \nabla\times\nabla\times{\bf E}
@@ -196,6 +207,12 @@ fr{\aa}nvaro av approximationer, s{\aa} {\"a}r de i rent praktisk mening av
 begr{\"a}nsad betydelse eftersom de inte {\"a}nnu klarg{\"o}r hur effekten av
 mediet f{\"o}r v{\aa}gpropagationen sl{\aa}r in. Vi kommer d{\"a}rf{\"o}r att
 nu g{\"o}ra f{\"o}ljande f{\"o}renklingar:
+\sidx{Laddningst{\"a}thet}[Fria laddningar $\rho_{\rm f}$]
+\sidx{Str{\"o}mt{\"a}thet}[Fria laddningar]
+\sidx{Elektrisk polarisationsdensitet ${\bf P}$}
+\sidx{Elektrisk polarisationsdensitet ${\bf P}$}[Linearitet]
+\sidx{Polarisationsdensitet {\bf P}}[Elektrisk]
+\sidx{Magnetisering ${\bf M}$}
 \medskip
 \item{$\bullet$}{${\bf J}_{\rm f}={\bf 0}$ (inga fria str{\"o}mmar)}
 \item{$\bullet$}{$\rho=0$ (inga fria laddningar)}
@@ -251,6 +268,7 @@ $$
 $$
 F{\"o}r v{\aa}gutbredning i {\it homogena} material {\it utan fria laddningar}
 blir termen $\nabla(\nabla\cdot{\bf E})$ noll, eftersom
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}[Divergens f{\"o}r]
 $$
   \nabla\cdot{\bf E}
     =\nabla\cdot\bigg({{{\bf D}}\over{\varepsilon_0\varepsilon_{\rm r}}}\bigg)
@@ -292,6 +310,9 @@ l{\"o}sningen f{\"o}r magnetf{\"a}ltet.
 
 \section{Plana elektromagnetiska f{\"a}lt och d'Alemberts generella l{\"o}sning
          till v{\aa}gekvationen}
+\sidx{Plana elektromagnetiska f{\"a}lt}
+\sidx{d'Alembert, Jean le Rond (1717--1783)}[d'Alemberts l{\"o}sningsmetod
+  (1747)]
 Formen med ``$\nabla^2$'' f{\"o}r de elektromagnetiska f{\"a}ltekvationerna
 {\"a}r viktig och kan i m{\aa}nga fall l{\"o}sas {\"a}ven analytiskt, givet
 att geometrin {\"a}r tillr{\"a}ckligt enkel. Denna form kan anv{\"a}ndas
@@ -348,8 +369,9 @@ p{\aa}.\numberedfootnote{Griffiths v{\"a}ljer tyv{\"a}rr att inte g{\aa}
 F{\"o}rst av allt, byt variabler till\numberedfootnote{Detta
    tillv{\"a}gag{\aa}ngss{\"a}tt f{\"o}ljer i stort sett den h{\"a}rledning av
    den generella l{\"o}sningen till v{\aa}g\-ekva\-tionen som gjordes 1747 av
-   den franske matematikern Jean le Rond d'Alembert. Faktum {\"a}r att
-   d'Alembert-operatorn
+   den franske matematikern Jean le Rond d'Alembert, fransk matematiker och
+   upplysningsfilosof (1717--1783). Faktum {\"a}r att d'Alembert-operatorn
+   \sidx{d'Alembert, Jean le Rond (1717--1783)}[d'Alembert-operator]
    $$
      \square\equiv{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}-\nabla^2
    $$
@@ -428,6 +450,8 @@ satisfiera ekvationen.
 \vfill\eject
 
 \subsection{Integration of d'Alemberts transformerade v{\aa}gekvation}
+\sidx{d'Alembert, Jean le Rond (1717--1783)}[Integration of d'Alemberts
+  transformerade v{\aa}gekvation]
 Vi v{\"a}ljer att f{\"o}rst integrera d'Alemberts ekvation i de transformerade
 variablerna med avseende p{\aa} $\xi$, vilket resulterar i ett h{\"o}gerled med
 en ``integrationskonstant'' i form av en funktion $h$ som {\it endast kan bero
@@ -449,26 +473,6 @@ $$
 Om vi ers{\"a}tter de transformerade variablerna med de ursprungliga,
 $\xi=z-ct$ och $\eta=z+ct$, s{\aa} erh{\aa}ller vi allts{\aa} den generella
 l{\"o}sningen som
-%
-% $$
-%   \hbox{Alternativ I: Integrera f{\"o}rst m.a.p.}\ \xi:
-%   \hbox{\hphantom{II}\hphantom{$\eta$}}
-%   \qquad{{\partial E_1(\xi)}\over{\partial\eta}}=0
-%   \quad\Leftrightarrow\quad E_1=f(\xi)
-% $$
-% $$
-%   \hbox{Alternativ II: Integrera f{\"o}rst m.a.p.}\ \eta:
-%   \hbox{\hphantom{I}\hphantom{$\xi$}}
-%   \qquad{{\partial E_2(\eta)}\over{\partial\xi}}=0
-%   \quad\Leftrightarrow\quad E_2=g(\eta)
-% $$
-% Med andra ord m{\aa}ste l{\"o}sningen best{\aa} av en funktion, s{\"a}g,
-% $f(\xi)=f(z-ct)$ samt en annan funktion, s{\"a}g, $g(\eta)=g(z+ct)$
-% (b{\aa}da med sina respektive amplituder, som givetvis {\"a}ven kan vara
-% noll). Sammantaget med superpositionsprincipen f{\"o}r linj{\"a}ra
-% (ordin{\"a}ra s{\aa} v{\"a}l som partiella) differentialekvationer ger
-% d{\aa} att
-%
 $$
   E = f(\underbrace{z-ct}_{=\xi}) + g(\underbrace{z+ct}_{=\eta}).
 $$
@@ -477,9 +481,16 @@ i {\it positiv} $z$-led med hastigheten $c$, dels en v{\aa}g $g(z+ct)$ som
 r{\"o}r sig i {\it negativ} $z$-led med samma hastighet. B{\aa}da dessa
 v{\aa}gor {\"a}r generella till sin form, och beh{\"o}ver ej vara ``klassiska
 harmoniska sinusv{\aa}gor''. V{\aa}gorna beh{\"o}ver ej heller vara repetitiva,
-utan kan lika v{\"a}l beskriva solit{\"a}ra pulser.
+utan kan lika v{\"a}l beskriva solit{\"a}ra pulser.\sidx{Motpropagerande
+v{\aa}gor}
 
 \subsection{Tolkning av reducerad fashastighet och brytningsindex}
+\sidx{Brytningsindex $n$}
+\sidx{Ljushastighet}[I dielektrikum, $c$]
+\sidx{Ljushastighet}[I vakuum, $c_0$]
+\sidx{Magnetisk permeabilitet}[Vakuumpermeabilitet $\mu_0$]
+\sidx{Elektrisk permittivitet}[Vakuumpermittivitet $\varepsilon_0$]
+\sidx{Elektrisk permittivitet}[Relativ permittivitet $\varepsilon$]
 Det intressanta h{\"a}r {\"a}r att vi nu har en tolkning av
 $$
   c \equiv {{1}\over{(\mu_0\varepsilon_0\varepsilon_{\rm r})^{1/2}}}
@@ -502,6 +513,7 @@ $$
 {\"a}r {\it brytningsindex} f{\"o}r mediet.
 
 \subsection{Initialvillkor}
+\sidx{Initialvillkor f{\"o}r v{\aa}gpropagation}
 F{\"o}r den formella l{\"o}sningen f{\"o}r $E(z,t)$ {\"o}ver en dom{\"a}n,
 s{\"a}g, $0\le z\le L$, beh{\"o}ver vi dessutom dels initialv{\"a}rdet
 $$
@@ -519,7 +531,9 @@ praktiskt taget vilken standardbok som helst f{\"o}r en grundkurs i partiella
 differentialekvationer.\numberedfootnote{Exempelvis D.~W.~Trim, {\it Applied
 Partial Differential Equations} (PWS-Kent, 1990), s.~48.}
 
-\section{Tidsharmoniska f{\"a}lt och planv{\aa}gsuppdelning}
+\section{Tidsharmoniska f{\"a}lt och planv{\aa}guppdelning}
+\sidx{Tidsharmoniska f{\"a}lt}
+\sidx{Planv{\aa}guppdelning}
 I f{\"o}reg{\aa}ende sektion visade vi f{\"o}r en plan v{\aa}g att vi har en
 generell l{\"o}sning i form av en fram{\aa}tg{\aa}ende och en
 bak{\aa}tg{\aa}ende v{\aa}g med samma fashastighet $c$. Detta visade vi f{\"o}r
@@ -531,6 +545,10 @@ superpositionsprincipen g{\"a}ller, varvid vi kan analysera l{\"o}sningar
 f{\"o}r olika delar av ett elektromagnetiskt f{\"a}lt, och d{\"a}refter
 sammanfoga den totala l{\"o}sningen f{\"o}r f{\"a}ltet.
 
+\subsection{Komplexv{\"a}rda f{\"a}ltenvelopper}
+\sidx{Komplexv{\"a}rda f{\"a}ltenvelopper}
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}[Komplexv{\"a}rd envelopp]
+\sidx{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}[Komplexv{\"a}rd envelopp]
 Formen p{\aa} den homogena differentialekvationen,\numberedfootnote{Den
   f{\"o}ljande behandlingen av plana v{\aa}gor f{\"o}ljer i huvudsak
   Griffiths Kap.~9.2, sid.~393--415.}
@@ -548,7 +566,25 @@ skal{\"a}r±-multipli\-cerar med en enhetsvektor {\aa}t n{\aa}got h{\aa}ll
 och direkt f{\aa}r en frikopplad skal{\"a}r partiell differentialekvation
 f{\"o}r just det polarisationstillst{\aa}ndets f{\"a}lt), men {\"a}ven att
 vi kan dela f{\"a}lten i deras respektive harmoniska frekvensinneh{\aa}ll,
-enligt
+enligt\numberedfootnote{Ett litet sidosp{\aa}r som kan vara v{\"a}rt att
+  n{\"a}mna: Om vi i formen f{\"o}r de homogena differentialekvationerna
+  stannar vid att enbart projicera ut den tidsharmoniska delen, genom
+  $$
+    {\bf E}({\bf x},t)=\sum_{\bf k}\Re[\tilde{\bf E}\exp(-i\omega({\bf k}) t)],
+    \qquad\qquad
+    {\bf B}({\bf x},t)=\sum_{\bf k}\Re[\tilde{\bf B}\exp(-i\omega({\bf k}) t)],
+  $$
+  s{\aa} erh{\aa}ller vi egenv{\"a}rdesproblemen f{\"o}r Laplace-operatorn som
+  $$
+    \nabla^2\tilde{\bf E} - {{\omega^2}\over{c^2}}\tilde{\bf E} = 0,
+    \qquad\qquad
+    \nabla^2\tilde{\bf B} - {{\omega^2}\over{c^2}}\tilde{\bf B} = 0,
+  $$
+  i form av {\it Helmholtz ekvationer} f{\"o}r de komplexv{\"a}rda
+  tids-envelopperna $\tilde{\bf E}$ och $\tilde{\bf B}$. Dessa ekvationer
+  {\"a}r uppkallade efter Hermann von Helmholtz, tysk fysiker (1821--1894).
+  \sidx{von Helmholtz, Hermann (1821--1894)}
+  \sidx{Laplace-operatorn}[Egenv{\"a}rdesproblem f{\"o}r]}
 $$
   {\bf E}({\bf x},t)=\sum_{\bf k}
      \Re[{\bf E}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega({\bf k}) t)],
@@ -562,7 +598,7 @@ vinkelhastigheten (rad/s) f{\"o}r oscillationen hos f{\"a}lten i tid.
 Om vi har generella v{\aa}gformer som inte {\"a}r av ``sinus-typ'', s{\aa} kan
 vi alltid f{\aa} fram dessa genom addition av harmoniska f{\"a}lt till en
 {\it Fourier-utveckling}, med respektive amplitud hos varje frekvenskomponent
-som {\it Fourier-koefficienter}.
+som {\it Fourier-koefficienter}.\sidx{V{\aa}gvektor ${\bf k}$}
 
 Denna tids- och rums-harmoniska form f{\"o}r {\"o}ver de partiella
 differentialekvationerna f{\"o}r f{\"a}lten p{\aa}
@@ -591,6 +627,10 @@ $$
   n = \sqrt{\varepsilon_{\rm r}}.
   \hskip69pt(\hbox{brytningsindex})
 $$
+
+\subsection{Ortogonalitet mellan f{\"a}lt och v{\aa}gvektor}
+\sidx{Komplexv{\"a}rda f{\"a}ltenvelopper}
+\sidx{Ortogonalitet mellan f{\"a}lt och v{\aa}gvektor}
 Med den tids- och rums-harmoniska formen f{\aa}r vi {\"a}ven direkt ett par
 andra karakteristiska egenskaper f{\"o}r elektromagnetisk v{\aa}gutbredning
 i homogena och isotropa material, exempelvis fr{\aa}n Faradays lag, att
@@ -608,7 +648,7 @@ $$
   {\bf E}_{\bf k}\cdot{\bf B}_{\bf k}=0,
 $$
 men {\"a}ven ortogonatlitet mellan magnetiska fl{\"o}dest{\"a}theten och
-v{\aa}gvektorn, d{\aa}
+v{\aa}gvektorn, d{\aa}\sidx{V{\aa}gvektor ${\bf k}$}
 $$
   {\bf k}\cdot{\bf B}_{\bf k}=0.
 $$
@@ -631,6 +671,8 @@ ortogonala mot v{\aa}gvektorn (riktningen) f{\"o}r v{\aa}gutbredningen.
 \epsfig{figs/ebk.1}
 
 \section{Poynting-vektorn}
+\sidx{Poynting-vektorn ${\bf S}$}[Effekt transporterat av elektromagnetiskt
+  f{\"a}lt]
 Som ett m{\aa}tt p{\aa} den effekt som transporteras per ytenhet i
 tv{\"a}rsnitt av ett elektromagnetiskt f{\"a}lt, definieras
 {\it Poynting-vektorn} ${\bf S}$ som
@@ -712,5 +754,5 @@ med enheten ${\rm W}/{\rm m}^2$.
     {\bf S}={\bf E}\times{\bf H},
   $$
   med enheten ${\rm W}/{\rm m}^2$.}
-
+\index
 \bye
