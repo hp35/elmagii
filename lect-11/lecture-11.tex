@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-11/lecture-11.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-11/
-% Last change: November 30, 2025
+% Last change: December 15, 2025
 %
 % Lecture No 11 in the course ``Elektromagnetism II, 1TE626 (2023)'',
 % held December 1, 2025, at Uppsala University, Sweden.
@@ -98,6 +98,9 @@
 \def\litem[#1]{\smallbreak\noindent%
   \hbox to\itemindent{\hfil}\hbox to\itemindent{#1\hfill}%
   \hangindent\hangitemindent\ignorespaces}
+\newif\ifshowindex
+\showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject\section{Index} \readindexfile{i}\fi}
 %--------------------- END OF LOCAL MACROS ---------------------
 
 \initlecture
@@ -140,6 +143,8 @@
   l{\"a}mnar de elektromagnetiska f{\"a}lten of{\"o}r{\"a}ndrade. Vi kan
   med dessa till viss del v{\"a}lja vilken form av v{\aa}gekvation vi
   {\"o}nskar f{\"o}r potentialerna.
+  \sidx{Skal{\"a}r potential $\phi$}[Elektrodynamisk]
+  \sidx{Vektorpotential ${\bf A}$}[Elektrodynamisk]
 }{%
   Specifikt erh{\aa}ller vi under Lorenz-villkoret, eller ``Lorenz gauge'',
   d{\"a}r
@@ -149,7 +154,8 @@
       {{\partial\phi'({\bf x},t)}\over{\partial t}} = 0.
   $$
   att v{\aa}gekvationerna f{\"o}r potentialerna frikopplas fr{\aa}n varandra,
-  till att lyda
+  till att lyda\sidx{Lorenz-villkoret}
+  \sidx{Lorenz-villkoret}[{{\it Lorenz gauge}}]
   $$
      \Big(
        \nabla^2-{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}
@@ -163,6 +169,7 @@
 }{%
   Retarderade potentialer i den retarderade tiden $t'=t-|{\bf x}-{\bf x}'|/c$
   ges som volymintegralerna
+  \sidx{Retarderad potential}[Tidsf{\"o}rdr{\"o}jd potential]
   $$
     \phi({\bf x},t)={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
       {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\qquad
@@ -178,6 +185,7 @@ ekvationer kan omformuleras till tv{\aa} v{\aa}gekvationer f{\"o}r den
 elektriska f{\"a}ltstyrkan ${\bf E}$ och den magnetiska fl{\"o}dest{\"a}theten
 ${\bf B}$, med v{\"a}xel\-verkan mellan mediet och de elektromagnetiska
 f{\"a}lten beskrivna av k{\"a}lltermer i h{\"o}gerledet enligt
+\sidx{Elektromagnetisk v{\aa}gekvation}
 $$
   \eqalign{
     \nabla\times\nabla\times{\bf E}
@@ -196,6 +204,12 @@ $$
 	        +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}},\cr
   }
 $$
+\sidx{Str{\"o}mt{\"a}thet}[Fria laddningar, ${\bf J}_{\rm f}$]
+\sidx{Elektrisk polarisationsdensitet ${\bf P}$}
+\sidx{Magnetisering ${\bf M}$}
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}
+\sidx{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}
+\sidx{Elektromagnetisk v{\aa}gekvation}[Gemensam k{\"a}llterm]
 d{\"a}r ${\bf J}_{\rm f}$ {\"a}r den fria str{\"o}mt{\"a}theten, ${\bf P}$ den
 elektriska polarisationsdensiteten och ${\bf M}$ magnetiseringen hos mediet.
 Tidigare har vi anv{\"a}nt den skal{\"a}ra potentialen $\phi({\bf x})$ och
@@ -220,12 +234,14 @@ s{\"a}tt, inkluderande s{\aa}v{\"a}l dynamiken som tidsf{\"o}rdr{\"o}jningen
 fr{\aa}n olika delar av k{\"a}llan eller k{\"a}llorna.
 
 Svaret {\"a}r att det finns s{\aa}dana potentialer, s{\aa} kallade
-{\it retarderade potentialer}, vilkas existens kan h{\"a}rledas fram
-(n{\"a}stan) analogt med det elektrostatiska fallet.
+{\it retarderade potentialer}, \sidx{Retarderad potential}[Tidsf{\"o}rdr{\"o}jd
+potential] vilkas existens kan h{\"a}rledas fram (n{\"a}stan) analogt med det
+elektrostatiska fallet.
 \vfill\eject
 
 \section{Recap p{\aa} vad skal{\"a}ra potentialen och vektorpotentialen
          {\"a}r bra f{\"o}r}
+\sidx{Skal{\"a}r potential $\phi$}[Analogi med gravitation]
 I en analogi med klassisk mekanik kan vi betrakta en punktmassa i ett
 gravitationsf{\"a}lt ${\bf G}$ med gravitationskonstanten $g$ (N/kg).
 Partikeln startar med en horisontell hastighet $v_0$ vid h{\"o}jden $z=h$
@@ -256,7 +272,8 @@ $$
 $$
 i analogi med ett statiskt elektriskt f{\"a}lt ${\bf E}$. Kraften (N) p{\aa}
 punktmassan $m$ (i analogi med kraften ${\bf F}=q{\bf E}$ p{\aa} en
-punkt\-laddning $q$ i ett elektrostatikt f{\"a}lt) blir
+punkt\-laddning $q$ i ett elektrostatiskt f{\"a}lt) blir
+\sidx{Elektrostatiskt f{\"a}lt}[Analogi med gravitationsf{\"a}lt]
 $$
   {\bf F}=m{\bf G}.
   \qquad\Bigg(\quad\Leftrightarrow\qquad
@@ -266,6 +283,7 @@ $$
 Om vi utg{\aa}r ifr{\aa}n planet $z=0$ som referens, s{\aa} blir den
 potentiella {\it energin} (J) f{\"o}r partikeln p{\aa} h{\"o}jden $z$
 d{\"a}rmed
+\sidx{Potentiell energi}[Elektrostatisk]
 $$
   W = -\int^z_{z=0}{\bf F}\cdot d{\bf x} = mgz
   \qquad\Bigg(\quad\Leftrightarrow\qquad
@@ -284,6 +302,7 @@ fl{\"o}dest{\"a}theten som ${\bf B}=\nabla\times{\bf A}$.
 \vfill\eject
 
 \section{Retarderade potentialer och kopplingen till elektromagnetiska f{\"a}lt}
+\sidx{Retarderad potential}[Tidsf{\"o}rdr{\"o}jd potential]
 Gauss lag f{\"o}r magnetiska fl{\"o}dest{\"a}theten ${\bf B}({\bf x},t)$
 g{\"a}ller alltid generellt, och ger direkt vid hand att {\"a}ven en
 {\it tidsberoende} vektorpotential ${\bf A}({\bf x},t)$ har exakt samma l{\"a}nk
@@ -319,7 +338,7 @@ att\numberedfootnote{V{\"a}n av ordning kan h{\"a}r fr{\aa}ga sig hur vi
   {\it dynamiskt} g{\"a}ller att $\nabla\cdot{\bf B}=0$.
   (Ut{\"o}ver att det vore synnerligen m{\"a}rklig fysik om magnetiska
   monopoler, om de skulle existera, skulle b{\"o}rja upptr{\"a}da enbart
-  i dynamiska experiment.)}
+  i dynamiska experiment.)\sidx{Magnetiska monopoler}[Icke-existens av]}
 $$
   \nabla\cdot{\bf B}({\bf x},t)=0
   \qquad\Leftrightarrow\qquad
@@ -346,7 +365,8 @@ Eftersom rotationen av argumentet {\"a}r noll,\numberedfootnote{Se Griffiths
   sammanfattade vektoridentiteter p{\aa} insidan av p{\"a}rmen,
   $\nabla\times(\nabla f)=0$.}
 s{\aa} betyder detta att argumentet kan skrivas som gradienten av en skal{\"a}r
-potential, s{\"a}g som
+potential, s{\"a}g som\sidx{Skal{\"a}r potential $\phi$}[Elektrodynamisk]
+\sidx{Vektorpotential ${\bf A}$}[Elektrodynamisk]
 $$
   {\bf E}({\bf x},t)
     +{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
@@ -373,6 +393,7 @@ i ekvationerna. Detta kommer dock att inkluderas h{\"a}rn{\"a}st.
 \vfill\eject
 
 \section{V{\aa}gekvationen f{\"o}r retarderade potentialer}
+\sidx{Elektromagnetisk v{\aa}gekvation}[f{\"o}r retarderade potentialer]
 \subsection{Plan f{\"o}r hur vi angriper problemet med tidsf{\"o}rdr{\"o}jning
   hos potentialer}
 S{\aa} l{\aa}ngt i kursen har vi analyserat f{\"a}lt och deras kopplingar till
@@ -382,14 +403,16 @@ f{\"o}rdr{\"o}jning i tid}. I m{\aa}nga situationer kan vi dock inte
 f{\"o}rsumma den f{\"o}rdr{\"o}jning som sker, exempelvis om vi r{\aa}kar ha
 en tidsvarierande laddningsf{\"o}rdelning, s{\"a}g p{\aa} en antenn, d{\"a}r
 de olika delarna f{\"o}rdelningen har ett s{\aa} pass varierande avst{\aa}nd
-som inte kan r{\"a}knas som litet i f{\"o}rh{\aa}llande till observationspunkten.
+som inte kan r{\"a}knas som litet i f{\"o}rh{\aa}llande till
+observa\-tions\-punkten.
 Vi har i F{\"o}rel{\"a}sningarna~2 och~ sett hur de {\it statiska} potentialerna,
-som lyder Poissons ekvation
+som lyder \idx{Poissons ekvation}
 $$
   \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0,\qquad
   \nabla^2{\bf A}=-\mu_0{\bf J}_{\rm f},
 $$
-direkt leder till explicita l{\"o}sningar p{\aa} integralform som
+direkt leder till explicita l{\"o}sningar p{\aa} integralform som\sidx{Poissons
+ekvation}[L{\"o}sningar p{\aa} integralform]
 $$
   \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V
     {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',\qquad
@@ -398,15 +421,17 @@ $$
 $$
 vilket vi erinrar oss {\"a}r en direkt f{\"o}ljd fr{\aa}n formen p{\aa} det
 elektriska f{\"a}ltet fr{\aa}n den generaliserade formen av Gauss lag f{\"o}r
-statisk laddning, samt formen p{\aa} magnetf{\"a}ltet enligt Amp\`eres lag
-(vilken i sin tur {\"a}r h{\"a}rledd fr{\aa}n Biot--Savarts lag).
+statisk laddning, samt formen p{\aa} magnetf{\"a}ltet enligt \idx{Amp\`eres lag}
+(vilken i sin tur {\"a}r h{\"a}rledd fr{\aa}n \idx{Biot--Savarts lag}).
 Vi kan med t{\"a}mligen stor sannolikhet konstatera att potentialerna, liksom den
 elektromagnetiska v{\aa}g de beskriver, f{\"a}rdas med ljusets hastighet $c=c_0$
-(eller $c=c_0/n$, skalat med brytningsindex $n$ om vi betraktar icke-vakuum),
-och det {\"a}r rimligt att anta att varje delbidrag i integralformerna ovan
-d{\"a}rmed kommer att detekteras en viss tid $|{\bf x}-{\bf x}'|/c$ efter den
-tid $t$ d{\aa} k{\"a}llan hade det tillst{\aa}nd (laddning eller str{\"o}m) som
-en observat{\"o}r observerar en str{\"a}cka $|{\bf x}-{\bf x}'|$ bort.
+\sidx{Ljushastighet}[I dielektrikum, $c$] \sidx{Ljushastighet}[I vakuum, $c_0$]
+(eller $c=c_0/n$, skalat med brytningsindex $n$ \sidx{Brytningsindex $n$} om vi
+betraktar icke-vakuum), och det {\"a}r rimligt att anta att varje delbidrag i
+integralformerna ovan d{\"a}rmed kommer att detekteras en viss tid
+$|{\bf x}-{\bf x}'|/c$ efter den tid $t$ d{\aa} k{\"a}llan hade det
+tillst{\aa}nd (laddning eller str{\"o}m) som en observat{\"o}r observerar
+en str{\"a}cka $|{\bf x}-{\bf x}'|$ bort.
 
 Med andra ord s{\aa} faller det sig helt naturligt att {\it gissa} att en
 generaliserad form av dessa integralformer, som tar h{\"a}nsyn till den tid
@@ -425,7 +450,7 @@ $$
 $$
 {\"a}r den {\it retarderade tiden}, eller {\it f{\"o}rdr{\"o}jda tiden}, som
 beror av avst{\aa}ndet $|{\bf x}-{\bf x}'|$ mellan k{\"a}llpunkt ${\bf x}'$ och
-observationspunkt ${\bf x}$.
+observationspunkt ${\bf x}$.\sidx{Retarderad tid}[Tidsf{\"o}rdr{\"o}jning]
 
 Detta argument {\"a}r dock {\"a}n s{\aa} l{\"a}nge av t{\"a}mligen handviftande
 karakt{\"a}r, och vi har i strikt mening inte {\"a}nnu formulerat hur de
@@ -458,7 +483,8 @@ $$
   {\bf D}({\bf x},t)=\varepsilon_0\varepsilon_{\rm r}{\bf E}({\bf x},t),
 $$
 fr{\aa}n Gauss lag $\nabla\cdot{\bf D}({\bf x},t)=\rho({\bf x},t)$ f{\"o}r den
-elektriska fl{\"o}dest{\"a}theten att
+elektriska fl{\"o}dest{\"a}theten att\sidx{Gauss lag}[F{\"o}r elektrisk fl{\"o}dest{\"a}thet
+${\bf D}$]
 $$
   \nabla\cdot{\bf D}({\bf x},t)
     =-\varepsilon_0\varepsilon_{\rm r}\nabla\cdot
@@ -478,9 +504,10 @@ b{\"o}rja gissa oss till kommer att handla om en v{\aa}gekvation.
 Det som saknas h{\"a}r {\"a}r hur vi skall tolka tidsderivatan av
 $\nabla\cdot{\bf A}({\bf x},t)$.
 
-Fr{\aa}n Amp\`eres lag i dess grundform (notera att detta {\"a}r punkten d{\aa}
-vi i princip f{\"o}r in kopplingen med magnetiska egenskaper i problemet via de
-konstitutiva relationerna f{\"o}r ${\bf H}$ och ${\bf D}$),
+Fr{\aa}n \idx{Amp\`eres lag} i dess grundform (notera att detta {\"a}r punkten
+d{\aa} vi i princip f{\"o}r in kopplingen med magnetiska egenskaper i problemet
+via de konstitutiva relationerna \sidx{Konstitutiva relationer} f{\"o}r
+${\bf H}$ och ${\bf D}$),
 $$
   \nabla\times{\bf H}={\bf J}_{\rm f}+{{\partial{\bf D}}\over{\partial t}},
 $$
@@ -542,6 +569,7 @@ $$
 
 \subsection{Den generella formen av v{\aa}gekvationen f{\"o}r skal{\"a}ra
   potentialen}
+\sidx{Skal{\"a}r potential}[V{\aa}gekvation f{\"o}r]
 Embryot till en v{\aa}gekvation f{\"o}r den skal{\"a}ra potentialen $\phi$ kan
 tas fram p{\aa} ett liknande s{\"a}tt, om {\"a}n betydligt enklare {\"a}n
 f{\"o}r vektorpotentialen, genom att utveckla divergensen f{\"o}r den
@@ -569,6 +597,7 @@ trivialt f{\aa} en l{\"o}sning s{\aa} snart som den mer trixiga termen f{\"o}r
 vektorpotentialen eliminerats.
 
 \subsection{Gauge-transformen}
+\sidx{Gauge-transform}
 Om vi skall sammanfatta detta halvv{\"a}gs, s{\aa} har vi i och med detta
 reducerat Maxwells fyra ekvationer till tv{\aa}, en f{\"o}r den skal{\"a}ra
 potentialen $\phi$ och en f{\"o}r vektorpotentialen ${\bf A}$, vilka dock
@@ -581,7 +610,7 @@ utf{\"o}ras genom att utnyttja en viss grad av godtycklighet som fortfarande
 finns inneboende i ekvationerna, som vi nu skall visa.
 
 Vi noterar att eftersom vektorpotentialen ${\bf B}({\bf x},t)$ definieras
-utifr{\aa}n rotationen av vektorpotentialen som
+utifr{\aa}n rotationen av vektorpotentialen som\sidx{Vektorpotential}
 $$
   {\bf B}({\bf x},t)=\nabla\times{\bf A}({\bf x},t),
 $$
@@ -655,7 +684,7 @@ $$
     \phi'({\bf x},t)
       &=\phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}},\cr
   }
-$$
+$$\sidx{Gauge-transformation}
 som kallas f{\"o}r {\it gauge-transformation} och anv{\"a}nds inte bara inom
 klassisk elektrodynamik, utan {\"a}ven ofta inom kvantmekanik, l{\"a}mnar de
 elektriska och magnetiska f{\"a}lten\numberedfootnote{Om man skall vara petig,
@@ -687,6 +716,8 @@ v{\aa}gekvationen f{\"o}r vektorpotentialen.
 \vfill\eject
 
 \subsection{Lorenz-villkoret (``Lorenz gauge'')}
+\sidx{Lorenz-villkoret}[{{\it Lorenz gauge}}]
+\sidx{Gauge-funktion $\psi$}
 Om vi nu {\aa}terv{\"a}nder till grundproblemet med ekvationen f{\"o}r
 vektorpotentialen ovan, s{\aa} kan vi se att vi med de {\it gauge-transformerade}
 potentialerna $\phi'({\bf x},t)$ och ${\bf A}'({\bf x},t)$ har
@@ -722,10 +753,12 @@ $$
           }}.\cr
   }
 $$
-Eftersom funktionen $\psi({\bf x},t)$ {\"a}r {\it godtycklig} (och vi ser nu
-dessutom i formen ovan varf{\"o}r vi kr{\"a}ver att funktionen {\"a}r just
-{\it tv{\aa}} g{\aa}nger differentierbar b{\aa}de i rum och tid), s{\aa}
-inneb{\"a}r detta specifikt att vi kan v{\"a}lja den s{\aa} att
+Eftersom funktionen\numberedfootnote{Enheten f{\"o}r $\psi({\bf x},t)$ {\"a}r
+  ${\rm V}\cdot{\rm s}$.}
+$\psi({\bf x},t)$ {\"a}r {\it godtycklig} (och vi ser nu dessutom i formen ovan
+varf{\"o}r vi kr{\"a}ver att funktionen {\"a}r just {\it tv{\aa}} g{\aa}nger
+differentierbar b{\aa}de i rum och tid), s{\aa} inneb{\"a}r detta specifikt att
+vi kan v{\"a}lja den s{\aa} att
 $$
   \nabla\cdot{\bf A}({\bf x},t)
     +{{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}}
@@ -791,10 +824,11 @@ Fr{\aa}n dessa tv{\aa} {\it v{\aa}gekvationer} ser vi direkt tv{\aa} saker:
     i beaktande {\it tidsf{\"o}r\-dr{\"o}j\-ningen
     $\Delta t=|{\bf x}-{\bf x}'|/c$ fr{\aa}n k{\"a}lla till
     observationspunkt}, resulterande i s{\aa} kallade {\it retarderade
-    potentialer}.}
+    potentialer}.\sidx{Retarderad potential}[Tidsf{\"o}rdr{\"o}jd potential]}
 
 \section{[{\"O}verkurs] Gauge-transformen: Lorenz och Coulomb gauge}
 \subsection{Lorenz gauge}
+\sidx{Lorenz-villkoret}[{{\it Lorenz gauge}}]
 Gauge-transformationen ovan, vilken s{\"a}gs fixera potentialerna i den s{\aa}
 kallade {\it Lorenz gauge},\numberedfootnote{Om Lorenz gauge (Wikipedia):
     ``It is unique among the constraint gauges in retaining manifest Lorentz
@@ -827,6 +861,7 @@ vektorpotentialen.\numberedfootnote{F{\"o}r en intressant utl{\"a}ggning kring
   {\tt https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.73.663}.}
 
 \subsection{Coulomb gauge}
+\sidx{Coulomb-villkoret}[{{\it Coulomb gauge}}]
 Den andra ofta f{\"o}rekommande varianten {\"a}r {\it Coulomb-villkoret}
 f{\"o}r gauge-transformen, i vilket vi fixerar potentialerna i det s{\aa}
 kallade {\it Coulomb gauge}. I detta fall v{\"a}ljer vi $\psi({\bf x},t)$
@@ -921,6 +956,7 @@ av de retarderade potentialerna som bist{\aa}r med l{\"o}sningarna.
 \vfill\eject
 
 \section{Retarderade potentialer p{\aa} integralform}
+\sidx{Retarderad potential}[Tidsf{\"o}rdr{\"o}jd potential p{\aa} integralform]
 Vi kommer nu att forts{\"a}tta under antagandet att vi fixerar potentialerna
 under Lorenz-villkoret. Som vi sett kan vi om vi fixerar den skal{\"a}ra
 potentialen och vektorpotentialen i {\it Lorenz gauge} frikoppla ekvationerna
@@ -974,6 +1010,7 @@ potentialerna har ju inkluderats genom sj{\"a}lva integrationen.
 \vfill\eject
 
 \section{Exempel: Halvv{\aa}gsantenn och emitterade elektromagnetiska f{\"a}lt}
+\sidx{Halvv{\aa}gsantenn}\sidx{Antenn}[Halvv{\aa}gsantenn]
 Som ett handfast exempel p{\aa} den praktiska till{\"a}mpningen av de
 retarderade potentialerna $\phi({\bf x},t)$ och ${\bf A}({\bf x},t)$ skall vi
 nu genom dessa potentialer ber{\"a}kna de emitterade elektriska och magnetiska
@@ -1098,9 +1135,11 @@ kan f{\"o}rledas att tro ifr{\aa}n det {\it elektrostatiska} sambandet
 ${\bf E}=-\nabla\phi$, vilket inte {\"a}r applicerbart r{\"a}tt av f{\"o}r
 {\it elektrodynamiska} (tidsberoende) problem som detta. Ist{\"a}llet {\"a}r
 det tidsderivatan av vektorpotentialen som kommer att bist{\aa} med detta.
+\sidx{Elektrodynamik}
 
 Den retarderade vektorpotentialen f{\aa}s (som vi tidigare n{\"a}mnt) direkt
 fr{\aa}n den givna str{\"o}m\-f{\"o}r\-del\-ningen $I(z,t)$ som
+\sidx{Retarderad potential}[Tidsf{\"o}rdr{\"o}jd potential]
 $$
   \eqalign{
     {\bf A}({\bf x},t)
@@ -1209,6 +1248,8 @@ $$
 \section{Sammanfattning av F{\"o}rel{\"a}sning~11 -- Retarderade potentialer}
 \item{$\bullet$}{Den elektro{\it dynamiska} formen f{\"o}r den skal{\"a}ra
   potentialen $\phi$ och vektorpotentialen ${\bf A}$ lyder
+  \sidx{Skal{\"a}r potential $\phi$}[Elektrodynamisk]
+  \sidx{Vektorpotential ${\bf A}$}[Elektrodynamisk]
   $$
     \eqalign{
       {\bf E}({\bf x},t)
@@ -1219,7 +1260,7 @@ $$
     }
   $$}
 \item{$\bullet$}{Den s{\aa} kallade {\it gauge-transformationen} av
-  potentialerna,
+  potentialerna,\sidx{Gauge-transform}\sidx{Gauge-funktion}
   $$
     \eqalign{
       \phi'({\bf x},t)&=\phi({\bf x},t)
@@ -1232,7 +1273,7 @@ $$
   of{\"o}r{\"a}ndrade. Vi kan med denna transform till viss del v{\"a}lja
   vilken form av v{\aa}gekvation vi {\"o}nskar f{\"o}r potentialerna.}
 \item{$\bullet$}{Under {\it Lorenz-villkoret}, d{\"a}r vi v{\"a}ljer $\psi$
-  s{\aa} att
+  s{\aa} att\sidx{Lorenz-villkoret}
   $$
     \nabla\cdot{\bf A}'({\bf x},t)+
       {{1}\over{c^2}}
@@ -1257,6 +1298,7 @@ $$
   k{\"a}llor vid k{\"a}llpunkterna ${\bf x}'$ har fram till att deras
   respektive bidrag observeras vid en observationspunkt ${\bf x}$, och
   formuleras p{\aa} integralform som
+  \sidx{Retarderad potential}[Tidsf{\"o}rdr{\"o}jd potential]
   $$
     \eqalign{
       \phi({\bf x},t)&={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
@@ -1266,6 +1308,7 @@ $$
     }
   $$
   d{\"a}r $t'=t-|{\bf x}-{\bf x}'|/c$ {\"a}r den {\it retarderade tiden}
-  fr{\aa}n ${\bf x}'$ till ${\bf x}$.}
-
+  fr{\aa}n ${\bf x}'$ till ${\bf x}$.
+  \sidx{Retarderad tid}[Tidsf{\"o}rdr{\"o}jning]}
+\index
 \bye
