@@ -7,11 +7,13 @@
 #
 LECTURES = lect-01 lect-02 lect-03 lect-04 lect-05 lect-06 \
 		lect-07 lect-08 lect-09 lect-10 lect-11
+COMPILED = compiled
 
 all:
 	for lecture in $(LECTURES) ; do\
 	   make -C $$lecture ;\
 	done
+	make -C $(COMPILED)
 
 archive:
 	make -ik clean
@@ -22,3 +24,4 @@ clean:
 	for lecture in $(LECTURES) ; do\
 	   make -ik clean -C $$lecture ;\
 	done
+	make clean -C $(COMPILED)
