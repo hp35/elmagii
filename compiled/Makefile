@@ -175,12 +175,13 @@ insert-copyright-pages:
 	done
 
 #
-# Initialize the project by copying the frontmatter, index definitions etc.,
-# to an empty skeleton which we soon will fill and stream-edit to the complete
+# Initialize the project by copying the main.tex file, containing the
+# frontmatter, index definitions, table of contents blocks, etc., to an
+# empty skeleton which we soon will fill and stream-edit to the complete
 # TeX source for all lectures in a single document.
 #
 compile-booksrc:
-	cp src/frontmatter.tex $(PROJECT).tex
+	cp src/main.tex $(PROJECT).tex
 	@for n in $(LECTNUMS); do \
 		cat lecture-$$n-strip.tex >> $(PROJECT).tex; \
 	done
@@ -209,5 +210,12 @@ recompile-all-from-scratch:
 	done
 	make
 
+texchars:
+	@echo "Converting Swedish Unicode chars in $(TEXFILE) to TeX codes."
+	@../lect-01/macros/se-texchars.sh src/frontmatter.tex > tmp.tex
+	@mv tmp.tex src/frontmatter.tex
+	@echo "Reload src/frontmatter.tex to incorporate the changes."
+
 clean:
 	rm -Rf *~ lect*.tex *.log *.idx *.ilg *.ind *.dvi *.ps complete.*
+	make clean -C src
