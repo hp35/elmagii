@@ -61,7 +61,8 @@ $\sigma$ & Ytladdningst{\"a}thet & ${\rm C}/{\rm m}^2$\cr
 ${\bf S}$ & Poyntingvektor & ${\rm W}/{\rm m}^2$\cr
 $\tau$ & Vridmoment & ${\rm N}\cdot{\rm m}^2$\cr
 $t$ & Tid & ${\rm s}$\cr
-${\bf v}$ & Hastighet, $v=|{\bf v}|$ & ${\rm m}/{\rm s}$\cr
+${\bf v}$ & Hastighet & ${\rm m}/{\rm s}$\cr
+$v$ & Fart, $v=|{\bf v}|$ & ${\rm m}/{\rm s}$\cr
 $V$ & Volym  & ${\rm m}^3$\cr
 $\omega$ & Vinkelfrekvens, $\omega=2\pi f$  & $1/{\rm s}$\cr
 $W_{\rm e}$ & Elektrostatisk energi & ${\rm J}$\cr
@@ -308,13 +309,39 @@ $$
 \vfill\eject
 
 \eqsection{Vektoridentiteter}
-\eqtitle{Gauss teorem}
+\eqtitle{Gauss teorem (``divergensteoremet'')}
 $$
-  \int_V(\nabla\cdot{\bf A})\,dV=\oiint_S{\bf A}\cdot d{\bf S}
+  \int_V(\nabla\cdot{\bf a})\,dV=\oiint_S{\bf a}\cdot d{\bf S}
 $$
-\eqtitle{Stokes teorem}
+\eqtitle{Stokes teorem (``rotationsteoremet'')}
 $$
-  \iint_V(\nabla\times{\bf A})\cdot d{\bf S}=\oint_{\Gamma}{\bf A}\cdot d{\bf l}
+  \iint_V(\nabla\times{\bf a})\cdot d{\bf S}=\oint_{\Gamma}{\bf a}\cdot d{\bf l}
+$$
+\eqtitle{Gradient-teoremet}
+$$
+  \int^{{\bf x}_b}_{{\bf x}_a}\nabla f\cdot d{\bf l}=f({\bf x}_b)-f({\bf x}_a)
+$$
+\eqtitle{Produktregler}
+$$
+  \eqalign{
+    \nabla(fg) &= f\nabla g + g\nabla f\cr
+    \nabla\cdot(f{\bf a})&=f\nabla\cdot{\bf a}+{\bf a}\cdot\nabla f\cr
+    \nabla\times(f{\bf a}) &= f\nabla\times{\bf a} - {\bf a}\times\nabla f\cr
+      \nabla({\bf a}\cdot{\bf b})&=
+        {\bf a}\times\nabla\times{\bf b}
+          +{\bf b}\times\nabla\times{\bf a}\cr
+          &\hskip50pt
+          +({\bf a}\cdot\nabla){\bf b}
+          +({\bf b}\cdot\nabla){\bf a}\cr
+    \nabla\cdot({\bf a}\times{\bf b})&=
+      {\bf b}\cdot(\nabla\times{\bf a})-{\bf a}\cdot(\nabla\times{\bf b})\cr
+      \nabla\times({\bf a}\times{\bf b})&=
+        ({\bf b}\cdot\nabla){\bf a}
+          -({\bf a}\cdot\nabla){\bf b}\cr
+          &\hskip50pt
+          +{\bf a}(\nabla\cdot{\bf b})
+          -{\bf b}(\nabla\cdot{\bf a})
+  }
 $$
 \eqtitle{``Tricket''}
 $$
@@ -322,15 +349,40 @@ $$
     =-\nabla'{{1}\over{|{\bf x}-{\bf x}'|}}
     =-{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
 $$
-\eqtitle{Gradient-teoremet}
+
 $$
-  \int^{{\bf x}_b}_{{\bf x}_a}\nabla f\cdot d{\bf l}=f({\bf x}_b)-f({\bf x}_a)
+  \iiint_V(\nabla f)\,dV=\oiint_S f d{\bf S}
+$$
+$$
+  \iiint_V(\nabla\times{\bf a})\,dV=-\oiint_S{\bf a}\times d{\bf S}
+$$
+$$
+  \iint_S(\nabla f)\times d{\bf S}=-\oint_{\Gamma}f\,d{\bf l}
+$$
+\eqtitle{Greens teorem}
+$$
+  \iiint_V(f\nabla^2g+(\nabla f)\cdot(\nabla g))\,dV
+    =\oiint_S(f\nabla g)\cdot d{\bf S}
+$$
+\eqtitle{Greens andra teorem}
+$$
+  \iiint_V(f\nabla^2g-g\nabla^2f)\,dV
+    =\oiint_S(f\nabla g-g\nabla f)\cdot d{\bf S}
+$$
+\eqtitle{Andraderivator}
+$$
+  \eqalign{
+    \nabla\cdot(\nabla\times{\bf a})&=0\cr
+    \nabla\times(\nabla f)&=0\cr
+    \nabla\times(\nabla\times{\bf a})
+      &=\nabla(\nabla\cdot{\bf a})-\nabla^2{\bf a}\cr
+  }
 $$
 
 \eqsection{Integraler}
 $$
   \eqalign{
-    \int&x^n\,dx={{1}\over{(n+1)}}x^{n+1}\cr
+    \int&x^n\,dx={{1}\over{(n+1)}}x^{n+1},\quad n\ne-1\cr
     \int&{{dx}\over{x}}=\ln x\cr
     \int&\sqrt{x^2+a^2}\,dx={{1}\over{2}}
          [x\sqrt{x^2+a^2}\cr & \hskip80pt+a^2\ln(x+\sqrt{x^2+a^2})]\cr
@@ -343,9 +395,10 @@ $$
     \int&\ln x\,dx=x\ln x - x\cr
   }
 $$
+\vfill\eject
 
 \eqsection{Koordinatsystem}
-\eqtitle{Kartesiska koordinater}
+\eqtitle{Kartesiska koordinater ($x,y,z$)}
 \halign{#\hfil\quad & #\hfil\cr
   Ortsvektor    & ${\bf x}={\bf e}_xx+{\bf e}_yy+{\bf e}_zz$ \cr
   Linjeelement    & $d{\bf l}={\bf e}_xdx+{\bf e}_ydy+{\bf e}_zdz$ \cr
@@ -357,6 +410,9 @@ $$
      &\nabla\phi={\bf e}_x{{\partial\phi}\over{\partial x}}
                 +{\bf e}_y{{\partial\phi}\over{\partial y}}
                 +{\bf e}_z{{\partial\phi}\over{\partial z}}\cr
+     &\nabla^2\phi={{\partial^2\phi}\over{\partial x^2}}
+                +{{\partial^2\phi}\over{\partial y^2}}
+                +{{\partial^2\phi}\over{\partial z^2}}\cr
      &\nabla\cdot{\bf A}={{\partial A_x}\over{\partial x}}
                 +{{\partial A_y}\over{\partial y}}
                 +{{\partial A_z}\over{\partial z}}\cr
@@ -371,18 +427,104 @@ $$
        +{\bf e}_z\Big(
           {{\partial A_y}\over{\partial x}}-{{\partial A_x}\over{\partial y}}
         \Big)\cr
-     &\nabla^2\phi={{\partial^2\phi}\over{\partial x^2}}
-                +{{\partial^2\phi}\over{\partial y^2}}
-                +{{\partial^2\phi}\over{\partial z^2}}\cr
   }
 $$
 
-\eqtitle{Cylindriska koordinater}
+\eqtitle{Cylindriska koordinater ($r,\varphi,z$)}
 \halign{#\hfil\quad & #\hfil\cr
   Ortsvektor    & ${\bf x}={\bf e}_rr+{\bf e}_zz$ \cr
   Enhetsvektorer & ${\bf e}_r={\bf e}_x\cos\varphi+{\bf e}_y\sin\varphi$ \cr
               & ${\bf e}_{\varphi}=-{\bf e}_x\sin\varphi+{\bf e}_y\cos\varphi$ \cr
-  Linjeelement  & $d{\bf l}={\bf e}_rdr+{\bf e}_{\varphi}r\,d\varphi+{\bf e}_zdz$ \cr
+  Linjeelement  & $d{\bf l}={\bf e}_r\,dr
+                     +{\bf e}_{\varphi}r\,d\varphi
+                     +{\bf e}_z\,dz$ \cr
   Volymelement  & $dV=r\,dr\,d\varphi\,dz$ \cr
 }
 Differentialoperatorer
+$$
+  \eqalign{
+     &\nabla\phi={\bf e}_r{{\partial\phi}\over{\partial r}}
+                +{\bf e}_{\varphi}{{1}\over{r}}
+                  {{\partial\phi}\over{\partial\varphi}}
+                +{\bf e}_z{{\partial\phi}\over{\partial z}}\cr
+     &\nabla^2\phi={{1}\over{r}}{{\partial}\over{\partial r}}
+        \Big(r{{\partial\phi}\over{\partial r}}\Big)
+                +{{1}\over{r^2}}{{\partial^2\phi}\over{\partial\varphi^2}}
+                +{{\partial^2\phi}\over{\partial z^2}}\cr
+     &\nabla\cdot{\bf A}={{1}\over{r}}{{\partial}\over{\partial r}}(rA_r)
+                +{{1}\over{r}}{{\partial A_{\varphi}}\over{\partial\varphi}}
+                +{{\partial A_z}\over{\partial z}}\cr
+     &\nabla\times{\bf A}=
+        {\bf e}_r\Big(
+          {{1}\over{r}}{{\partial A_z}\over{\partial\varphi}}
+            -{{\partial A_{\varphi}}\over{\partial z}}
+        \Big)
+       +{\bf e}_{\varphi}\Big(
+          {{\partial A_r}\over{\partial z}}-{{\partial A_z}\over{\partial r}}
+        \Big)
+        \cr & \hskip110pt
+       +{\bf e}_z{{1}\over{r}}\Big(
+          {{\partial}\over{\partial r}}(rA_{\varphi})
+            -{{\partial A_r}\over{\partial\varphi}}
+        \Big)\cr
+  }
+$$
+\vfill\eject
+
+\eqtitle{Sf{\"a}riska koordinater ($r,\varphi,\theta$)}
+\halign{#\hfil\quad & #\hfil\cr
+  Ortsvektor    & ${\bf x}={\bf e}_rr$ \cr
+}
+\halign{#\hfil\quad & #\hfil\cr
+  Enhetsvektorer & \cr
+  \hskip36pt${\bf e}_r={\bf e}_x\sin\theta\cos\varphi
+                        +{\bf e}_y\sin\theta\sin\varphi
+                        +{\bf e}_z\cos\theta$ & \cr
+  \hskip36pt${\bf e}_{\theta}={\bf e}_x\cos\theta\cos\varphi
+                        +{\bf e}_y\cos\theta\sin\varphi
+                        -{\bf e}_z\sin\theta$ & \cr
+  \hskip36pt${\bf e}_{\varphi}=-{\bf e}_x\sin\varphi+{\bf e}_y\cos\varphi$ & \cr
+}
+\halign{#\hfil\quad & #\hfil\cr
+  Linjeelement  & $d{\bf l}={\bf e}_r\,dr
+                    +{\bf e}_{\varphi}r\sin\theta\,d\varphi
+                    +{\bf e}_{\vartheta}r\,d\theta$ \cr
+  Volymelement  & $dV=r^2\sin\theta\,dr\,d\varphi\,d\theta$ \cr
+}
+Differentialoperatorer
+$$
+  \eqalign{
+     &\nabla\phi={\bf e}_r{{\partial\phi}\over{\partial r}}
+                +{\bf e}_{\varphi}{{1}\over{r\sin\theta}}
+                   {{\partial\phi}\over{\partial\varphi}}
+                +{\bf e}_{\vartheta}{{1}\over{r}}
+                   {{\partial\phi}\over{\partial\theta}}\cr
+     &\nabla^2\phi={{1}\over{r^2}}{{\partial}\over{\partial r}}
+         \Big(r^2{{\partial\phi}\over{\partial r}}\Big)
+       +{{1}\over{r^2\sin^2\theta}}{{\partial^2\phi}\over{\partial\varphi^2}}
+          \cr & \hskip90pt
+       +{{1}\over{r^2\sin\theta}}{{\partial}\over{\partial\theta}}
+           \Big(\sin\theta{{\partial\phi}\over{\partial\theta}}\Big)\cr
+     &\nabla\cdot{\bf A}={{1}\over{r^2}}{{\partial}\over{\partial r}}(r^2A_r)
+                +{{1}\over{r\sin\theta}}
+                   {{\partial A_{\varphi}}\over{\partial\varphi}}
+        \cr & \hskip110pt
+                +{{1}\over{r\sin\theta}}
+                   {{\partial}\over{\partial\theta}}(A_{\theta}\sin\theta)\cr
+     &\nabla\times{\bf A}=
+        {\bf e}_r{{1}\over{r\sin\theta}}\Big(
+          {{\partial}\over{\partial\theta}}(A_{\varphi}\sin\theta)
+            -{{\partial A_{\theta}}\over{\partial\varphi}}
+        \Big)
+        \cr & \hskip90pt
+       +{\bf e}_{\varphi}{{1}\over{r}}\Big(
+          {{\partial}\over{\partial r}}(rA_{\theta})
+              -{{\partial A_r}\over{\partial\theta}}
+        \Big)
+        \cr & \hskip90pt
+       +{\bf e}_{\theta}{{1}\over{r}}\Big(
+          {{1}\over{\sin\theta}}{{\partial A_r}\over{\partial\varphi}}
+            -{{\partial}\over{\partial r}}(rA_{\varphi})
+        \Big)\cr
+  }
+$$
