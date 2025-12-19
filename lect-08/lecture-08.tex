@@ -262,8 +262,8 @@ $$
   \eqalign{
     [\phi]&={{[\rho][dV']}\over{[\varepsilon_0][{\bf x}]}}
         ={{({\rm C}/{\rm m}^3){\rm m}^3}\over{({\rm F}/{\rm m}){\rm m}}}
-	=\{\ {\rm F}={\rm C}/{\rm V}\ \}
-	={\rm V},\cr
+        =\{\ {\rm F}={\rm C}/{\rm V}\ \}
+        ={\rm V},\cr
     [{\bf A}]&={{[\mu_0][{\bf J}][dV']}\over{[{\bf x}]}}
         ={{({\rm N}/{\rm A}^2)({\rm A}/{\rm m}^2){\rm m}^3}\over{{\rm m}}}
         ={\rm N}/{\rm A}.\cr
@@ -330,7 +330,7 @@ $$
          \underbrace{{{b\cos\theta}\over{r^2}}}_{\rm dipol}
          +\underbrace{{{(b\cos\theta)^3}\over{r^4}}}_{\rm oktopol}
          +\underbrace{{{(b\cos\theta)^5}\over{r^6}}}_{\rm dotriacontapol}
-	 +\ldots
+         +\ldots
         \Bigg)\cr
   }
 $$
@@ -562,7 +562,7 @@ $$
       &={{{{\partial(x_k-x'_k)}\over{\partial x'_j}}
           ((x-x')^2+(y-y')^2+(z-z')^2)^{3/2}-
             (x_k-x'_k){{\partial ((x-x')^2+(y-y')^2+(z-z')^2)^{3/2}}
-	      \over{\partial x'_j}}}\over{((x-x')^2+(y-y')^2+(z-z')^2)^{3}}}\cr
+              \over{\partial x'_j}}}\over{((x-x')^2+(y-y')^2+(z-z')^2)^{3}}}\cr
       &=\ldots\cr
       &={{3(x_j-x'_j)(x_k-x'_k)
       -\delta_{jk}((x-x')^2+(y-y')^2+(z-z')^2)}
@@ -586,7 +586,7 @@ och v{\aa}r Taylor-utveckling av viktsfunktionen bist{\aa}r direkt med
 respektive multipol-termer i uttrycket f{\"o}r skal{\"a}ra elektriska
 potentialen som
 \sidx{Taylor-utveckling}\sidx{Maclaurin-utveckling}
-\sidx{Skal{\"a}r potential $\phi$}
+\sidx{Skal{\"a}r potential $\phi$}[Multipolutveckling]
 $$
   \eqalign{
     \phi({\bf x})
@@ -602,29 +602,21 @@ $$
       &={{1}\over{4\pi\varepsilon_0}}
         \Bigg(
         {{1}\over{|{\bf x}|}}
-	\underbrace{
-	  \iiint_{V} \rho({\bf x}')\,dV'
-	}_{{\rm monopol},\ q}
+        \underbrace{
+          \iiint_{V} \rho({\bf x}')\,dV'
+        }_{{\rm monopol},\ q}
       +\sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}}
-	\underbrace{
-	  \iiint_{V} x'_k \rho({\bf x}')\,dV'
-	}_{{\rm dipolmoment},\ p_k}
-	\cr&\hskip150pt
+        \underbrace{
+          \iiint_{V} x'_k \rho({\bf x}')\,dV'
+        }_{{\rm dipolmoment},\ p_k}
+        \cr&\hskip150pt
       +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
           {{3 x_j x_k - \delta_{jk}|{\bf x}|^2}\over{|{\bf x}|^5}}
-	\underbrace{
+        \underbrace{
           \iiint_{V} x'_j x'_k \rho({\bf x}')\,dV'
-	}_{{\rm kvadrupolmoment},\ Q_{jk}}
+        }_{{\rm kvadrupolmoment},\ Q_{jk}}
       +\ldots
-        \Bigg)\cr
-%      &={{1}\over{4\pi\varepsilon_0}}
-%        \Bigg(
-%        {{q}\over{|{\bf x}|}}
-%      +\sum^{3}_{k=1} {{x_k p_k}\over{|{\bf x}|^3}}
-%      +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
-%          {{(3 x_j x_k - \delta_{jk}|{\bf x}|^2)Q_{jk}}\over{|{\bf x}|^5}}
-%      +\ldots
-%        \Bigg)
+        \Bigg).\cr
   }
 $$
 Notera att f{\"o}r dipoltermen utg{\"o}rs skal{\"a}ra potentialen av en
@@ -669,13 +661,170 @@ ${\bf J}({\bf x})$.
          (i termer av vektorpotentialen)}
 \sidx{Multipolutveckling}[F{\"o}r vektorpotential]
 \sidx{Multipolutveckling}[Generell str{\"o}mt{\"a}thet]
+Motsvarande serieutveckling f{\"o}r vektorpotentialen f{\"o}ljer direkt fr{\aa}n
+exakt samma serietveckling av ``viktfunktionen'' $f({\bf x}')$ i
+k{\"a}llkoordinater som f{\"o}r den skal{\"a}ra potentialen, med den enda
+skillnaden att vi nu tar fram vektorpotentialen ${\bf A}({\bf x})$ i
+observationspunkten komponentvis fr{\aa}n str{\"o}mt{\"a}theten (k{\"a}llan)
+${\bf J}({\bf x}')$, som
+\sidx{Taylor-utveckling}\sidx{Maclaurin-utveckling}
+\sidx{Vektorpotential ${\bf A}$}[Multipolutveckling]
+$$
+  \eqalign{
+    {\bf A}({\bf x})
+      &={{\mu_0}\over{4\pi}}
+        \iiint_{V} 
+        \bigg(
+          {{1}\over{|{\bf x}|}}
+            +\sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}} x'_k
+            +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
+              {{3 x_j x_k - \delta_{jk}|{\bf x}|^2}\over{|{\bf x}|^5}} x'_j x'_k
+            +\ldots
+        \bigg) {\bf J}({\bf x}')\,dV'\cr
+      &={{\mu_0}\over{4\pi}}
+        \Bigg(
+        {{1}\over{|{\bf x}|}}
+        \underbrace{
+          \iiint_{V} {\bf J}({\bf x}')\,dV'
+        }_{\vbox{\hbox{magnetisk}\vskip-5pt\hbox{``monopol''}}}
+      +\sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}}
+        \underbrace{
+          \iiint_{V} x'_k {\bf J}({\bf x}')\,dV'
+        }_{\vbox{\hbox{magnetiskt}\vskip-5pt\hbox{dipolmoment, ${\bf m}$}}}
+        \cr&\hskip140pt
+      +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
+          {{3 x_j x_k - \delta_{jk}|{\bf x}|^2}\over{|{\bf x}|^5}}
+        \underbrace{
+          \iiint_{V} x'_j x'_k {\bf J}({\bf x}')\,dV'
+        }_{\vbox{\hbox{magnetiskt kvadrupol-}\vskip-5pt\hbox{moment, $m_{jk}$}}}
+      +\ldots
+        \Bigg).\cr
+  }
+$$
+Tolkningen av de ing{\aa}ende magnetiska momenten, som nu involverar
+str{\"o}mt{\"a}theten ${\bf J}$ snarare {\"a}n den statiska
+laddningst{\"a}theten $\rho$ som f{\"o}r den skal{\"a}ra potentialen,
+blir dock lite annorlunda som vi nu skall se.
+
+Ett antagande som vi beh{\"o}ver g{\"o}ra {\"a}r att str{\"o}mt{\"a}theten
+${\bf J}$, likt den statiska laddnings\-f{\"o}r\-delningen $\rho$ i fallet
+f{\"o}r den skal{\"a}ra potentialen $\phi$, m{\aa}ste uppfylla att den {\"a}r
+{\it lokaliserad}, det vill s{\"a}ga att den g{\aa}r mot noll f{\"o}r ett
+tillr{\"a}ckligt stort avst{\aa}nd fr{\aa}n origo (som vi valt att lokalisera
+n{\aa}gonstans inuti k{\"a}llans utstr{\"a}ckning).
+
+\subsection{Magnetisk monopolterm}
+\sidx{Magnetiska monopoler}[Icke-existens av, statiskt]
+L{\aa}t oss f{\"o}rst av allt ta oss an den magnetiska
+``monopolen''.\numberedfootnote{Fr{\aa}n
+  F{\"o}rel{\"a}sning~4 och Gauss lag f{\"o}r den magnetiska
+  fl{\"o}dest{\"a}theten $\nabla\cdot{\bf B}=0$ s{\aa} vet vi
+  {\it a priori} att denna term kommer att vara noll, s{\aa}
+  i princip skulle vi h{\"a}r bara kunna konstatera detta faktum;
+  dock finns det ett egenv{\"a}rde i att faktiskt visa detta {\"a}ven
+  utifr{\aa}n egenskaper hos str{\"o}mt{\"a}theten ${\bf J}$.}
+\sidx{Lagen om att laddning inte kan f{\"o}rsvinna}
+Fr{\aa}n ``lagen om att laddning inte kan f{\"o}rsvinna''\numberedfootnote{Se
+  F{\"o}rel{\"a}sning~4 eller Griffiths Ekv.~(5.29), sid.~222.}
+har vi i statiska problem att
+$$
+  \nabla\cdot{\bf J}=-{{d\rho}\over{dt}}=0,
+$$
+vilket i sin tur, genom att tolka $\nabla\cdot{\bf J}=0$ via
+vektoridentiteten\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa}
+  Griffiths, {\it Second Derivatives (9)}.}
+$\nabla\cdot(\nabla\times{\bf a})=0$, ger att vi kan tolka den
+{\it magnetostatiska}\numberedfootnote{Notera att detta endast generellt
+  g{\"a}ller f{\"o}r {\it statiska} problem, och ej generellt f{\"o}r
+  (elektro-){\it dynamiska} fall.}
+str{\"o}mt{\"a}theten som en rotation
+$$
+  {\bf J}=\nabla\times{\bf K},
+$$
+f{\"o}r n{\aa}gon vektorv{\"a}rd funktion ${\bf K}={\bf K}({\bf x})$, som vi
+f{\"o}r stunden l{\aa}ter bli att definiera i detalj.
+Denna form av den magnetostatiska str{\"o}mt{\"a}theten betyder att
+monopoltermen antar formen
+$$
+  \eqalign{
+    \iiint_{V} {\bf J}({\bf x}')\,dV'
+      &=\iiint_{V} \nabla\times{\bf K}({\bf x}')\,dV'\cr
+      &=\big\{\hbox{ Rotations-versionen av Gauss teorem }\big\}\cr
+      &=\oiint_{S} d{\bf S}'\times{\bf K}({\bf x}').\cr
+  }
+$$
+Eftersom denna identitet g{\"a}ller f{\"o}r en godtycklig volum $V$ med
+omslutande gr{\"a}nsyta $S$, s{\aa} kan vi v{\"a}lja denna som exempelvis
+en sf{\"a}r med radie $r\to\infty$. Med antagandet att vi har en str{\"o}m
+som {\"a}r lokaliserad (ej o{\"a}ndligt utspridd) s{\aa} kan vi alltid v{\"a}lja
+funktionen ${\bf K}({\bf x})$ s{\aa} att den liksom ${\bf J}({\bf x})$ g{\aa}r
+mot noll d{\aa} $r\to\infty$. Den enda m{\"o}jligheten {\"a}r d{\"a}rmed att
+den inneslutna magnetiska laddningen, eller om man s{\aa} vill magnetiska
+monopolen, m{\aa}ste vara noll,
+$$
+  \iiint_{V} {\bf J}({\bf x}')\,dV'=0.
+$$
+Denna h{\"a}rledning l{\"a}mnar dock en viss k{\"a}nsla av icke-stringens efter
+sig, d{\aa} vi ju kan fr{\aa}ga oss om vi verkligen har visat att magnetiska
+monopoler inte kan existera bara f{\"o}r att den {\it inneslutna magnetiska
+netto-laddningen} alltid {\"a}r noll. Trots allt, s{\aa} kan vi ju exempelvis
+mycket v{\"a}l ha en innesluten elektrisk laddning som till sin total {\"a}r
+noll, trots att vi mycket v{\"a}l vet att elektriska monopoler
+(de elementarladdningar som {\"a}r de diskreta byggblocken som bygger upp en
+elektrisk totalladdning) existerar i h{\"o}gsta grad.
+
+Det argumentet ovan visar {\"a}r att hur vi {\"a}n v{\"a}nder och vrider p{\aa}
+problemet, s{\aa} visar slutsatsen att den inst{\"a}ngda magnetiska
+``laddningen'' alltid summerar till exakt noll p{\aa} att magnetiska
+``laddningar'' (magnetiska monopoler) alltid m{\aa}ste upptr{\"a}da parvis,
+vilket vi f{\"o}rvisso kan f{\"o}rest{\"a}lla oss som Gilberts
+modell\numberedfootnote{Se F{\"o}rel{\"a}sning~7, {\it Magnetiska
+  f{\"a}lt i material}.}
+av magnetiska dipoler med associerade nord- och sydpoler, men som i en mer
+grundl{\"a}ggande form snarare b{\"o}r ses som individuella magnetiska
+{\it dipolmoment} som i Amp\`eres modell.
+
+\subsection{Fysikalisk tolkning av magnetisk monopolterm}
+Eftersom vi i magneto-statiken har att $\nabla\times{\bf J}=0$, det vill
+s{\"a}ga att str{\"o}mt{\"a}theten {\"o}verallt {\"a}r {\it divergensfri},
+s{\aa} inneb{\"a}r detta att {\it varje str{\"o}mlinje l{\"a}ngs
+str{\"o}mt{\"a}theten bildar en sluten slinga}.
+Detta betyder i sin tur att ingen magnetisk ``laddning'' kan ackumuleras
+n{\aa}gonstans, vilket i sin tur leder till att inga magnetiska monopoler kan
+existera. Med andra ord, den magnetiska monopoltermen m{\aa}ste vara identiskt
+noll {\"o}verallt.
+
+\subsection{Magnetisk dipolterm}
+\sidx{Magnetiskt dipolmoment}
 
 
+\subsection{Magnetisk kvadrupolterm}
+\sidx{Magnetiskt kvadrupolmoment}
 
 
+\section{Kan dynamiska magnetiska monopoler existera?}
+\sidx{Magnetiska monopoler}[Icke-existens av, dynamiskt]
+Vi har just precis p{\aa} ett alternativt s{\"a}tt, ut{\"o}ver det tidigare $\nabla\cdot{\bf B}=0$ fr{\aa}n exempelvis F{\"o}rel{\"a}sning~4, visat att {\it magnetiska monopoler inte existerar i magneto-statiska problem}. Fr{\aa}gan infinner sig d{\aa} f{\"o}rst{\aa}s om det finns m{\"o}jlighet att magnetiska monopoler existerar om vi till{\aa}ter statiken att g{\aa} {\"o}ver till {\it dynamik}, d{\"a}r vi till{\aa}ter ett tidsberoende hos laddningsf{\"o}rdelningen $\rho$.
 
+Det enklaste argumentet f{\"o}r att magnetiska monopoler ej heller kan existera i en dynamisk regim f{\"o}ljer fr{\aa}n det klassiska statiska argumentet att $\nabla\cdot{\bf B}=0$. Vi kan generalisera detta argument till en lika giltig {\it elektrodynamisk} lag genom att applicera divergensen p{\aa} Faradays lag,\numberedfootnote{Se F{\"o}rel{\"a}sning~5 eller Griffiths Ekv.~(7.16), sid.~313.}
+$$
+  \underbrace{
+  \nabla\cdot\big(\nabla\times{\bf E}({\bf x},t)\big)
+  }_{\nabla\cdot(\nabla\times{\bf a})\equiv0}
+  =-\nabla\cdot\Big({{\partial{\bf B}({\bf x},t)}\over{\partial t}}\Big)
+  =-{{\partial}\over{\partial t}}\nabla\cdot{\bf B}({\bf x},t)
+  =0.
+$$
+Den sista likheten kan trivialt integreras till
+$$
+  \nabla\cdot{\bf B}({\bf x},t)=\hbox{konstant},
+$$
+och om denna relation skall g{\"a}lla f{\"o}r alla tider $t$, s{\aa} m{\aa}ste den {\"a}ven g{\"a}lla f{\"o}r n{\aa}gon start-tid (eller f{\"o}r den delen senare tid) d{\aa} vi r{\aa}kar ha en {\it statisk} konfiguration vid vilken $\nabla\cdot{\bf B}({\bf x},t)=0$. Enda m{\"o}jligheten {\"a}r d{\"a}rmed att vi {\"a}ven {\it elektrodynamiskt} har att
+$$
+  \nabla\cdot{\bf B}({\bf x},t)=0,
+$$
+vilket direkt ger vid hand att magnetiska monopoler inte kan existera dynamiskt heller. Argumentet ovan betyder ocks{\aa} att Gauss lag f{\"o}r den magnetiska fl{\"o}dest{\"a}theten {\"a}r identisk i magnetostatiska s{\aa}v{\"a}l som i elektrodynamiska situationer.
 \vfill\eject
-
 
 \section{Dipolapproximationen f{\"o}r station{\"a}ra laddningsf{\"o}rdelningar
    och str{\"o}mmar}
@@ -719,7 +868,7 @@ $$
   {\bf E}({\bf x})=-\nabla\phi({\bf x}),\qquad\qquad
   {\bf B}({\bf x})=\nabla\times{\bf A}({\bf x}).
 $$
-\sidx{Magnetiska monopoler}[Icke-existens av]
+\sidx{Magnetiska monopoler}[Icke-existens av, statiskt]
 Man kan h{\"a}r fr{\aa}ga sig varf{\"o}r multipolutvecklingen f{\"o}r
 vektorpotentialen ${\bf A}$ b{\"o}rjar med dipolmomentet, som g{\aa}r som
 $\sim 1/|{\bf x}|^3$, och inte som den skal{\"a}ra potentialen inneh{\aa}ller
