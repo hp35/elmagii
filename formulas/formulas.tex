@@ -133,7 +133,7 @@ $$
      ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV
      = q_{\rm tot}/\varepsilon_0
 $$
-\eqtitle{Gauss lag}
+\eqtitle{Gauss lag f{\"o}r elektrisk fl{\"o}dest{\"a}thet}
 $$
   \oiint{\bf D}\cdot d{\bf S}=\iiint\rho\,dV
 $$
@@ -309,17 +309,16 @@ $$
 \vfill\eject
 
 \eqsection{Vektoridentiteter}
-\eqtitle{Gauss teorem (``divergensteoremet'')}
+\eqtitle{Trippelprodukter}
 $$
-  \int_V(\nabla\cdot{\bf a})\,dV=\oiint_S{\bf a}\cdot d{\bf S}
-$$
-\eqtitle{Stokes teorem (``rotationsteoremet'')}
-$$
-  \iint_V(\nabla\times{\bf a})\cdot d{\bf S}=\oint_{\Gamma}{\bf a}\cdot d{\bf l}
-$$
-\eqtitle{Gradient-teoremet}
-$$
-  \int^{{\bf x}_b}_{{\bf x}_a}\nabla f\cdot d{\bf l}=f({\bf x}_b)-f({\bf x}_a)
+  \eqalign{
+    {\bf a}\cdot({\bf b}\times{\bf c})&=
+      {\bf b}\cdot({\bf c}\times{\bf a})=
+      {\bf c}\cdot({\bf a}\times{\bf b})\cr
+    {\bf a}\times({\bf b}\times{\bf c})&=
+      {\bf b}({\bf a}\cdot{\bf c})
+        -{\bf c}({\bf a}\cdot{\bf b})
+  }
 $$
 \eqtitle{Produktregler}
 $$
@@ -349,15 +348,30 @@ $$
     =-\nabla'{{1}\over{|{\bf x}-{\bf x}'|}}
     =-{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
 $$
-
+\eqtitle{Andraderivator}
 $$
-  \iiint_V(\nabla f)\,dV=\oiint_S f d{\bf S}
+  \eqalign{
+    \nabla\cdot(\nabla\times{\bf a})&=0\cr
+    \nabla\times(\nabla f)&=0\cr
+    \nabla\times(\nabla\times{\bf a})
+      &=\nabla(\nabla\cdot{\bf a})-\nabla^2{\bf a}\cr
+  }
 $$
+\eqtitle{Gauss teorem (``divergensteoremet'')}
 $$
-  \iiint_V(\nabla\times{\bf a})\,dV=-\oiint_S{\bf a}\times d{\bf S}
+  \int_V(\nabla\cdot{\bf a})\,dV=\oiint_S{\bf a}\cdot d{\bf S}
 $$
+\eqtitle{Gauss teorem (rotations-versionen)}
 $$
-  \iint_S(\nabla f)\times d{\bf S}=-\oint_{\Gamma}f\,d{\bf l}
+  \iiint_V(\nabla\times{\bf a})\,dV=\oiint_S d{\bf S}\times{\bf a}
+$$
+\eqtitle{Stokes teorem (``rotationsteoremet'')}
+$$
+  \iint_V(\nabla\times{\bf a})\cdot d{\bf S}=\oint_{\Gamma}{\bf a}\cdot d{\bf l}
+$$
+\eqtitle{Gradient-teoremet (analysens fundamentalsats)}
+$$
+  \int^{{\bf x}_b}_{{\bf x}_a}\nabla f\cdot d{\bf l}=f({\bf x}_b)-f({\bf x}_a)
 $$
 \eqtitle{Greens teorem}
 $$
@@ -369,14 +383,12 @@ $$
   \iiint_V(f\nabla^2g-g\nabla^2f)\,dV
     =\oiint_S(f\nabla g-g\nabla f)\cdot d{\bf S}
 $$
-\eqtitle{Andraderivator}
+\eqtitle{Diverse anv{\"a}ndbara integraler i vektoranalys}
 $$
-  \eqalign{
-    \nabla\cdot(\nabla\times{\bf a})&=0\cr
-    \nabla\times(\nabla f)&=0\cr
-    \nabla\times(\nabla\times{\bf a})
-      &=\nabla(\nabla\cdot{\bf a})-\nabla^2{\bf a}\cr
-  }
+  \iiint_V(\nabla f)\,dV=\oiint_S f d{\bf S}
+$$
+$$
+  \iint_S(\nabla f)\times d{\bf S}=-\oint_{\Gamma}f\,d{\bf l}
 $$
 
 \eqsection{Integraler}
@@ -400,9 +412,9 @@ $$
 \eqsection{Koordinatsystem}
 \eqtitle{Kartesiska koordinater ($x,y,z$)}
 \halign{#\hfil\quad & #\hfil\cr
-  Ortsvektor    & ${\bf x}={\bf e}_xx+{\bf e}_yy+{\bf e}_zz$ \cr
-  Linjeelement    & $d{\bf l}={\bf e}_xdx+{\bf e}_ydy+{\bf e}_zdz$ \cr
-  Volymelement    & $dV=dx\,dy\,dz$ \cr
+  Ortsvektor   & ${\bf x}={\bf e}_xx+{\bf e}_yy+{\bf e}_zz$ \cr
+  Linjeelement & $d{\bf l}={\bf e}_xdx+{\bf e}_ydy+{\bf e}_zdz$ \cr
+  Volymelement & $dV=dx\,dy\,dz$ \cr
 }
 Differentialoperatorer
 $$
