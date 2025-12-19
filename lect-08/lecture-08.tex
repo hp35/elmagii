@@ -479,7 +479,8 @@ elektrisk kvadrupol med f{\"a}ltlinjer ${\bf E}(x,y)=-\nabla\phi(x,y)$.}
 
 \section{Multipolutveckling f{\"o}r generella laddningsf{\"o}rdelningar
          (i termer av skal{\"a}r potential)}
-\sidx{Multipolutveckling}[F{\"o}r generell laddningsf{\"o}rdelning]
+\sidx{Multipolutveckling}[F{\"o}r skal{\"a}r potential]
+\sidx{Multipolutveckling}[Generell laddnings\-f{\"o}r\-del\-ning]
 Betrakta en generell laddningsf{\"o}rdelning enligt figur.
 Laddningsf{\"ordelningen} kan vara en generell distribution i 3D, men {\"a}ven
 i kombinationer av 2D (ytladdningar, sk{\"a}rmar, jordplan),
@@ -616,25 +617,65 @@ $$
 	}_{{\rm kvadrupolmoment},\ Q_{jk}}
       +\ldots
         \Bigg)\cr
-      &={{1}\over{4\pi\varepsilon_0}}
-        \Bigg(
-        {{q}\over{|{\bf x}|}}
-      +\sum^{3}_{k=1} {{x_k p_k}\over{|{\bf x}|^3}}
-      +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
-          {{(3 x_j x_k - \delta_{jk}|{\bf x}|^2)Q_{jk}}\over{|{\bf x}|^5}}
-      +\ldots
-        \Bigg)
+%      &={{1}\over{4\pi\varepsilon_0}}
+%        \Bigg(
+%        {{q}\over{|{\bf x}|}}
+%      +\sum^{3}_{k=1} {{x_k p_k}\over{|{\bf x}|^3}}
+%      +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
+%          {{(3 x_j x_k - \delta_{jk}|{\bf x}|^2)Q_{jk}}\over{|{\bf x}|^5}}
+%      +\ldots
+%        \Bigg)
   }
 $$
 Notera att f{\"o}r dipoltermen utg{\"o}rs skal{\"a}ra potentialen av en
 {\it skal{\"a}rprodukt} ${\bf x}\cdot{\bf p}$, medan kvadrupoltermen svarar mot
 en {\it matrisprodukt} fr{\aa}n vilken sp{\aa}ret (``trace'') subtraheras,
 $3{\bf x}^{\rm T}{\Bbb Q}{\bf x}-|{\bf x}|^2\Tr[{\Bbb Q}]$.
+\vfill\eject
 
+F{\"o}r att sammanfatta detta, s{\aa} har vi allts{\aa} kommit fram till att
+den skal{\"a}ra potentialen resulterande fr{\aa}n en godtycklig
+laddningsf{\"o}rdelning $\rho({\bf x})$ kan skrivas som en serieutveckling i
+olika {\it moment} som
+$$
+  \eqalign{
+    \phi({\bf x})
+      &={{1}\over{4\pi\varepsilon_0}}
+        \Bigg(
+        {{1}\over{|{\bf x}|}}q
+      +\sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}}p_k
+      +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
+          {{(3 x_j x_k - \delta_{jk}|{\bf x}|^2)}\over{|{\bf x}|^5}}Q_{jk}
+      +\ldots
+        \Bigg),
+  }
+$$
+d{\"a}r
+\halign{\hskip80pt#\hfil&\hskip40pt(#)\hfil\cr
+  $\displaystyle q=\iiint_{V} \rho({\bf x}')\,dV'$
+    &elektrisk monopol; enhet: ${\rm C}$\cr
+  $\displaystyle p_k=\iiint_{V} x'_k \rho({\bf x}')\,dV'$
+    &elektriskt dipolmoment; enhet: ${\rm C}\cdot{\rm m}$\cr
+  $\displaystyle Q_{jk}=\iiint_{V} x'_j x'_k \rho({\bf x}')\,dV'$
+    &elektriskt kvadrupolmoment; enhet: ${\rm C}\cdot{\rm m}^2$\cr
+}
 Analysen f{\"o}r vektorpotentialen ${\bf A}({\bf x})$ f{\"o}ljer p{\aa} samma
 s{\"a}tt, med en helt och h{\aa}llet analog serieutveckling av
 ``viktfunktionen'' $f({\bf x}')$ f{\"o}r den elektriska str{\"o}mdensiteten
 ${\bf J}({\bf x})$.
+\vfill\eject
+
+\section{Multipolutveckling f{\"o}r generella str{\"o}mt{\"a}theter
+         (i termer av vektorpotentialen)}
+\sidx{Multipolutveckling}[F{\"o}r vektorpotential]
+\sidx{Multipolutveckling}[Generell str{\"o}mt{\"a}thet]
+
+
+
+
+
+\vfill\eject
+
 
 \section{Dipolapproximationen f{\"o}r station{\"a}ra laddningsf{\"o}rdelningar
    och str{\"o}mmar}
