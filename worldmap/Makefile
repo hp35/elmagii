@@ -1,0 +1,48 @@
+#
+# Makefile for compilation of Lecture Notes in Electromagnetic Theory,
+# Uppsala University, 2025. Code for the lectures written in plain TeX.
+# Lectures available at Github: https://github.com/hp35/elmagii/
+#
+# Copyright (C) 2025 under GPL 3.0, Fredrik Jonsson
+#
+TEX    = tex
+DVIPS  = dvips
+MKIDX  = makeindex
+PS2PDF = ps2pdf
+
+srcs = $(wildcard *.tex)
+dvis = $(patsubst %.tex,%.dvi,$(srcs))
+pss  = $(patsubst %.tex,%.ps ,$(srcs))
+pdfs = $(patsubst %.tex,%.pdf,$(srcs))
+
+TEXFILE := $(firstword $(wildcard *.tex))
+PROJDIR := $(notdir $(CURDIR))
+
+all: figures $(pdfs)
+
+figures:
+	@make -C figs
+
+$(pdfs): $(pss)
+	@$(eval BASE = $(shell basename $@ .pdf))
+	@echo "Converting PS file $< to PDF (target $@)."
+	@$(PS2PDF) $(BASE).ps $(BASE).pdf
+	@echo "PDF file for $(BASE).ps written to $(BASE).pdf."
+
+$(pss): $(dvis)
+	@$(eval BASE = $(shell basename $@ .ps))
+	@echo "Converting DVI file $< to PostScript (target $@)."
+	@$(DVIPS) -D1200 -ta4 $(BASE).dvi -o $(BASE).ps
+	@echo "PostScript file for $< written to $@."
+
+$(dvis): $(srcs)
+	@$(eval BASE = $(shell basename $@ .dvi))
+	@echo "Compiling source file $(BASE).tex to DVI (target $(BASE).dvi)."
+	@$(TEX) $(BASE).tex
+	@$(MKIDX) $(BASE).idx
+	@$(TEX) $(BASE).tex
+	@echo "DVI file for $(BASE).tex written to $(BASE).dvi."
+
+clean:
+	@make -ik clean -C figs
+	@rm -Rf *~ *.aux *.toc *.idx *.ind *.log *.ilg *.dvi *.ps

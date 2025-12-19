@@ -1,0 +1,58 @@
+%
+% File: teach/elmagii/worldmap/worldmap.tex [plain TeX code]
+% Github: https://github.com/elmagii/worldmap/
+% Last change: December 19, 2025
+%
+% World map of the electromagnetic theory as presented in the series of
+% lectures in the course ``Elektromagnetism II, 1TE626 (2025)'', held
+% 2022-2025, at Uppsala University, Sweden.
+%
+% Copyright (C) 2022-2025, Fredrik Jonsson, under Gnu General Public
+% License (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
+\def\coursename{Elektromagnetism II}
+\def\coursecode{1TE626}
+\def\courseyear{2025}
+\def\courserepo{https://github.com/hp35/elmagii/}
+%-------------------- BEGIN OF LOCAL MACROS --------------------
+\input ../lect-01/macros/epsf.tex
+\input ../lect-01/macros/eplain.tex
+\font\ninerm=cmr9
+\font\tenssbx=cmssbx10
+\font\twelvesc=cmcsc10 at 12 truept
+\def\initmap{
+  \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+  \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+  \vskip-54pt\hfill\vbox{
+      \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
+      \hbox{{\it Document Revision \today}}
+      \hbox{{\it \courserepo}}}\vskip 24pt
+  \centerline{\twelvesc V{\"a}rldskarta i elektromagnetisk f{\"a}ltteori}
+  \vskip 12pt\noindent}
+\def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
+\def\captionwide{\advance\leftskip by 60pt
+  \advance\rightskip by 60pt}
+\newif\ifshowindex
+\showindexfalse  % Use \showindextrue and \showindexfalse to enable/disable index
+\def\index{\ifshowindex\vfill\eject%
+  \noindent{\bf Index}\bigskip\readindexfile{i}\fi}
+%--------------------- END OF LOCAL MACROS ---------------------
+\initmap
+\epsfig{figs/worldmap.1}
+\sidx{V{\"a}rldskarta i elektromagnetisk f{\"a}ltteori}
+\index
+\bye
