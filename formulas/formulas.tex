@@ -131,7 +131,7 @@ $$
 $$
   \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf A}
      ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV
-     = q_{\rm tot}/\varepsilon_0
+     ={{q_{\rm tot}}\over{\varepsilon_0}}
 $$
 \eqtitle{Gauss lag f{\"o}r elektrisk fl{\"o}dest{\"a}thet}
 $$
@@ -251,13 +251,14 @@ $$
 $$
 \eqtitle{Faradays induktionslag}
 $$
-  {\cal E}=-{{d\Phi_{\rm M}}\over{dt}}.
+  {\cal E}=-{{d\Phi_{\rm M}}\over{dt}}
 $$
 \eqtitle{Lenz lag}
-En inducerad str{\"o}m har en riktning som motverkar orsaken till att den uppkom.
-Detta inneb{\"a}r att om magnetf{\"a}ltet genom en ledande slinga {\"o}kar,
-s{\aa} kommer den i slingan inducerade str{\"o}mmen att ha en riktning som
-skapar ett magnetf{\"a}lt som motverkar {\"o}kningen, och vice versa.
+En inducerad str{\"o}m har en riktning som motverkar orsaken till att den
+uppkom. Detta inneb{\"a}r att om magnetf{\"a}ltet genom en ledande slinga
+{\"o}kar, s{\aa} kommer den i slingan inducerade str{\"o}mmen att ha en
+riktning som skapar ett magnetf{\"a}lt som motverkar {\"o}kningen, och vice
+versa.
 \eqtitle{Faradays induktionslag f{\"o}r spole med $N$ varv}
 $$
   {\cal E}=-N{{d\Phi_{\rm M}}\over{dt}}
@@ -270,7 +271,7 @@ $$
 \eqtitle{Faradays lag p{\aa} integralform}
 $$
   \oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
-    =-{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\cdot d{\bf S}.
+    =-{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\cdot d{\bf S}
 $$
 \eqtitle{{\"O}msesidig induktans beskrivs av det magnetiska fl{\"o}de
 som genereras i en sekund{\"a}rslinga $\Gamma$ fr{\aa}n en
@@ -347,6 +348,10 @@ $$
   \nabla{{1}\over{|{\bf x}-{\bf x}'|}}
     =-\nabla'{{1}\over{|{\bf x}-{\bf x}'|}}
     =-{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
+$$
+\eqtitle{``Tricket II'' (f{\"o}r att visa att $\nabla\cdot B=0$)}
+$$
+\nabla\times{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}=0
 $$
 \eqtitle{Andraderivator}
 $$
