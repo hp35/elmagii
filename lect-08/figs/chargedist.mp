@@ -96,5 +96,29 @@ beginfig(1);
   %
   label.rt(btex $\rho({\bf x})$, ${\bf J}({\bf x})$ etex,(2u,-12u));
 
+  %
+  % Adding explicit statements of the integral solutions for the scalar
+  % and vector potentials in terms of distributions of the charge and
+  % current densities.
+  %
+  label.urt(btex
+      \input amssym
+      \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+        $
+	\displaystyle
+	\phi({\bf x})={{1}\over{4\pi\varepsilon_0}}
+	\iiint_{{\Bbb R}^3}{{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
+        $
+      etex,(-70u,52u));
+  label.urt(btex
+      \input amssym
+      \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+        $
+	\displaystyle
+        {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
+        \iiint_{{\Bbb R}^3}{{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+        $
+      etex,(-70u,38u));
+
 endfig;
 end
