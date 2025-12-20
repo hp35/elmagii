@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-08/lecture-08.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-08/
-% Last change: November 19, 2025
+% Last change: December 20, 2025
 %
 % Lecture No 8 in the course ``Elektromagnetism II, 1TE626 (2023)'',
 % held November 24, 2025, at Uppsala University, Sweden.
@@ -481,14 +481,16 @@ elektrisk kvadrupol med f{\"a}ltlinjer ${\bf E}(x,y)=-\nabla\phi(x,y)$.}
          (i termer av skal{\"a}r potential)}
 \sidx{Multipolutveckling}[F{\"o}r skal{\"a}r potential]
 \sidx{Multipolutveckling}[Generell laddnings\-f{\"o}r\-del\-ning]
-Betrakta en generell laddningsf{\"o}rdelning enligt figur.
+Vi betraktar en generell laddningsf{\"o}rdelning enligt figur.
 Laddningsf{\"ordelningen} kan vara en generell distribution i 3D, men {\"a}ven
 i kombinationer av 2D (ytladdningar, sk{\"a}rmar, jordplan),
 1D (linjeladdningar, antenner) eller 0D (punktladdningar). Vi kommer i det
 f{\"o}ljande att anv{\"a}nda en geometri i vilken laddningst{\"a}theten
 $\rho({\bf x})$ {\"a}r lokaliserad i n{\"a}rheten av origo (vilket g{\"o}r
-det enklare att r{\"a}tt av till{\"a}mpa en serieutveckling f{\"o}r
-laddningsdensiteten i en Taylor-serie), enligt figur.
+det enklare rent algebraiskt att r{\"a}tt av till{\"a}mpa en serieutveckling
+f{\"o}r laddningsdensiteten i en Maclaurin-utveckling, snarare {\"a}n i en
+generell Taylor-utveckling, {\"a}ven om slutresultatet naturligtvis {\"a}r
+detsamma), enligt figur.
 \sidx{Taylor-utveckling}\sidx{Maclaurin-utveckling}
 \sidx{Skal{\"a}r potential $\phi$}
 \epsfig{figs/chargedist.1}\noindent
@@ -521,6 +523,7 @@ Vi kan, om vi s{\aa} vill, se detta som en summation av potentialbidragen
 fr{\aa}n alla infinitesimala elektriska {\it monopoler} som ryms i volymen
 $V$.
 
+\subsection{Maclaurin-utveckling av den geometriska viktfunktionen}
 Liksom i det enkla fallet med dipolen, siktar vi h{\"a}r mot en serieutveckling
 av denna viktfunktion f{\"o}r att enklare kunna tolka de termer som blir
 resultatet. F{\"o}r att rekapitulera, s{\aa} var serieutvecklingen i fallet
@@ -528,8 +531,8 @@ med dipolen i grund och botten en serieutveckling av position f{\"o}r
 k{\"a}lltermerna, med ``litet separations-avst{\aa}nd $L$ i f{\"o}rh{\aa}llande
 till avst{\aa}ndet till observationspunkten ${\bf x}$''. Vi {\"o}nskar
 d{\"a}rmed att uttrycka serieutvecklingen i koordinaten ${\bf x}'$ f{\"o}r
-{\it k{\"a}llan} $\rho({\bf x}')$. Generellt har vi att en Taylor-utveckling i
-tre dimensioner ges av
+{\it k{\"a}llan} $\rho({\bf x}')$. Generellt har vi att en Maclaurin-utveckling
+(Taylor-utveckling kring origo) i tre dimensioner ges av
 \sidx{Taylor-utveckling}\sidx{Maclaurin-utveckling}
 \sidx{Skal{\"a}r potential $\phi$}
 $$
@@ -715,6 +718,8 @@ n{\aa}gonstans inuti k{\"a}llans utstr{\"a}ckning).
 
 \subsection{Magnetisk monopolterm}
 \sidx{Magnetiska monopoler}[Icke-existens av, statiskt]
+\sidx{Magnetiska monopoler}[Fr{\aa}n multipolutveckling av vektorpotential]
+\sidx{Vektorpotential ${\bf A}$}[Magnetisk monopolterm]
 L{\aa}t oss f{\"o}rst av allt ta oss an den magnetiska
 ``monopolen''.\numberedfootnote{Fr{\aa}n
   F{\"o}rel{\"a}sning~4 och Gauss lag f{\"o}r den magnetiska
@@ -785,6 +790,7 @@ grundl{\"a}ggande form snarare b{\"o}r ses som individuella magnetiska
 {\it dipolmoment} som i Amp\`eres modell.
 
 \subsection{Fysikalisk tolkning av magnetisk monopolterm}
+\sidx{Vektorpotential ${\bf A}$}[Magnetiska monopolterm]
 Eftersom vi i magneto-statiken har att $\nabla\times{\bf J}=0$, det vill
 s{\"a}ga att str{\"o}mt{\"a}theten {\"o}verallt {\"a}r {\it divergensfri},
 s{\aa} inneb{\"a}r detta att {\it varje str{\"o}mlinje l{\"a}ngs
@@ -795,21 +801,39 @@ existera. Med andra ord, den magnetiska monopoltermen m{\aa}ste vara identiskt
 noll {\"o}verallt.
 
 \subsection{Magnetisk dipolterm}
-\sidx{Magnetiskt dipolmoment}
-
+\sidx{Magnetiskt dipolmoment}[Fr{\aa}n multipolutveckling av vektorpotential]
+\sidx{Vektorpotential ${\bf A}$}[Magnetiskt dipolmoment]
+Den magnetiska dipoltermen kan uttryckas som
+$$
+  \eqalign{
+    {\bf m}&=\iiint_{V} x'_k {\bf J}({\bf x}')\,dV'\cr
+  }
+$$
 
 \subsection{Magnetisk kvadrupolterm}
-\sidx{Magnetiskt kvadrupolmoment}
+\sidx{Magnetiskt kvadrupolmoment}[Fr{\aa}n multipolutveckling av vektorpotential]
+\sidx{Vektorpotential ${\bf A}$}[Magnetiskt kvadrupolmoment]
 
 
 \section{Kan dynamiska magnetiska monopoler existera?}
 \sidx{Magnetiska monopoler}[Icke-existens av, dynamiskt]
-Vi har just precis p{\aa} ett alternativt s{\"a}tt, ut{\"o}ver det tidigare $\nabla\cdot{\bf B}=0$ fr{\aa}n exempelvis F{\"o}rel{\"a}sning~4, visat att {\it magnetiska monopoler inte existerar i magneto-statiska problem}. Fr{\aa}gan infinner sig d{\aa} f{\"o}rst{\aa}s om det finns m{\"o}jlighet att magnetiska monopoler existerar om vi till{\aa}ter statiken att g{\aa} {\"o}ver till {\it dynamik}, d{\"a}r vi till{\aa}ter ett tidsberoende hos laddningsf{\"o}rdelningen $\rho$.
+Vi har just precis p{\aa} ett alternativt s{\"a}tt, ut{\"o}ver det tidigare
+$\nabla\cdot{\bf B}=0$ fr{\aa}n exempelvis F{\"o}rel{\"a}sning~4, visat att
+{\it magnetiska monopoler inte existerar i magneto-statiska problem}.
+Fr{\aa}gan infinner sig d{\aa} f{\"o}rst{\aa}s om det finns m{\"o}jlighet att
+magnetiska monopoler existerar om vi till{\aa}ter statiken att g{\aa} {\"o}ver
+till {\it dynamik}, d{\"a}r vi till{\aa}ter ett tidsberoende hos
+laddningsf{\"o}rdelningen $\rho$.
 
-Det enklaste argumentet f{\"o}r att magnetiska monopoler ej heller kan existera i en dynamisk regim f{\"o}ljer fr{\aa}n det klassiska statiska argumentet att $\nabla\cdot{\bf B}=0$. Vi kan generalisera detta argument till en lika giltig {\it elektrodynamisk} lag genom att applicera divergensen p{\aa} Faradays lag,\numberedfootnote{Se F{\"o}rel{\"a}sning~5 eller Griffiths Ekv.~(7.16), sid.~313.}
+Det enklaste argumentet f{\"o}r att magnetiska monopoler ej heller kan existera
+i en dynamisk regim f{\"o}ljer fr{\aa}n det klassiska statiska argumentet att
+$\nabla\cdot{\bf B}=0$. Vi kan generalisera detta argument till en lika giltig
+{\it elektrodynamisk} lag genom att applicera divergensen p{\aa} Faradays
+lag,\numberedfootnote{Se F{\"o}rel{\"a}sning~5 eller Griffiths Ekv.~(7.16),
+  sid.~313.}
 $$
   \underbrace{
-  \nabla\cdot\big(\nabla\times{\bf E}({\bf x},t)\big)
+    \nabla\cdot\big(\nabla\times{\bf E}({\bf x},t)\big)
   }_{\nabla\cdot(\nabla\times{\bf a})\equiv0}
   =-\nabla\cdot\Big({{\partial{\bf B}({\bf x},t)}\over{\partial t}}\Big)
   =-{{\partial}\over{\partial t}}\nabla\cdot{\bf B}({\bf x},t)
@@ -819,11 +843,18 @@ Den sista likheten kan trivialt integreras till
 $$
   \nabla\cdot{\bf B}({\bf x},t)=\hbox{konstant},
 $$
-och om denna relation skall g{\"a}lla f{\"o}r alla tider $t$, s{\aa} m{\aa}ste den {\"a}ven g{\"a}lla f{\"o}r n{\aa}gon start-tid (eller f{\"o}r den delen senare tid) d{\aa} vi r{\aa}kar ha en {\it statisk} konfiguration vid vilken $\nabla\cdot{\bf B}({\bf x},t)=0$. Enda m{\"o}jligheten {\"a}r d{\"a}rmed att vi {\"a}ven {\it elektrodynamiskt} har att
+och om denna relation skall g{\"a}lla f{\"o}r alla tider $t$, s{\aa} m{\aa}ste
+den {\"a}ven g{\"a}lla f{\"o}r n{\aa}gon start-tid (eller f{\"o}r den delen
+senare tid) d{\aa} vi r{\aa}kar ha en {\it statisk} konfiguration vid vilken
+$\nabla\cdot{\bf B}({\bf x},t)=0$. Enda m{\"o}jligheten {\"a}r d{\"a}rmed att
+vi {\"a}ven {\it elektrodynamiskt} har att
 $$
   \nabla\cdot{\bf B}({\bf x},t)=0,
 $$
-vilket direkt ger vid hand att magnetiska monopoler inte kan existera dynamiskt heller. Argumentet ovan betyder ocks{\aa} att Gauss lag f{\"o}r den magnetiska fl{\"o}dest{\"a}theten {\"a}r identisk i magnetostatiska s{\aa}v{\"a}l som i elektrodynamiska situationer.
+vilket direkt ger vid hand att magnetiska monopoler inte kan existera dynamiskt
+heller. Argumentet ovan betyder ocks{\aa} att Gauss lag f{\"o}r den magnetiska
+fl{\"o}dest{\"a}theten {\"a}r identisk i magnetostatiska s{\aa}v{\"a}l som i
+elektrodynamiska situationer.
 \vfill\eject
 
 \section{Dipolapproximationen f{\"o}r station{\"a}ra laddningsf{\"o}rdelningar
