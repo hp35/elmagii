@@ -574,7 +574,8 @@ $$
           \over{|{\bf x}-{\bf x}'|^5}}\cr
   }
 $$
-F{\"o}r koefficienterna i Taylor-utvecklingen inneb{\"a}r detta specifikt att
+F{\"o}r koefficienterna i Maclaurin-utvecklingen av den skal{\"a}ra potentialen
+inneb{\"a}r detta specifikt att
 $$
     f({\bf 0})
       ={{1}\over{|{\bf x}|}},\qquad\qquad
@@ -585,8 +586,8 @@ $$
       \over{\partial x'_j \partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}
         ={{3 x_j x_k - \delta_{jk}|{\bf x}|^2}\over{|{\bf x}|^5}},
 $$
-och v{\aa}r Taylor-utveckling av viktsfunktionen bist{\aa}r direkt med
-respektive multipol-termer i uttrycket f{\"o}r skal{\"a}ra elektriska
+och v{\aa}r Maclaurin-utveckling av viktsfunktionen $f({\bf x}')$ bist{\aa}r
+direkt med respektive multipol-termer i uttrycket f{\"o}r skal{\"a}ra elektriska
 potentialen som
 \sidx{Taylor-utveckling}\sidx{Maclaurin-utveckling}
 \sidx{Skal{\"a}r potential $\phi$}[Multipolutveckling]
@@ -628,6 +629,8 @@ en {\it matrisprodukt} fr{\aa}n vilken sp{\aa}ret (``trace'') subtraheras,
 $3{\bf x}^{\rm T}{\Bbb Q}{\bf x}-|{\bf x}|^2\Tr[{\Bbb Q}]$.
 \vfill\eject
 
+\subsection{Sammanfattning av multipolutvecklingen av den skal{\"a}ra
+  potentialen}
 F{\"o}r att sammanfatta detta, s{\aa} har vi allts{\aa} kommit fram till att
 den skal{\"a}ra potentialen resulterande fr{\aa}n en godtycklig
 laddningsf{\"o}rdelning $\rho({\bf x})$ kan skrivas som en serieutveckling i
@@ -791,14 +794,16 @@ grundl{\"a}ggande form snarare b{\"o}r ses som individuella magnetiska
 
 \subsection{Fysikalisk tolkning av magnetisk monopolterm}
 \sidx{Vektorpotential ${\bf A}$}[Magnetiska monopolterm]
-Eftersom vi i magneto-statiken har att $\nabla\times{\bf J}=0$, det vill
+Eftersom vi i magneto-statiken har att $\nabla\cdot{\bf J}=0$, det vill
 s{\"a}ga att str{\"o}mt{\"a}theten {\"o}verallt {\"a}r {\it divergensfri},
 s{\aa} inneb{\"a}r detta att {\it varje str{\"o}mlinje l{\"a}ngs
 str{\"o}mt{\"a}theten bildar en sluten slinga}.
-Detta betyder i sin tur att ingen magnetisk ``laddning'' kan ackumuleras
-n{\aa}gonstans, vilket i sin tur leder till att inga magnetiska monopoler kan
-existera. Med andra ord, den magnetiska monopoltermen m{\aa}ste vara identiskt
-noll {\"o}verallt.
+Detta betyder i sin tur att varje str{\"o}mslingas bidrag m{\aa}ste vara i
+form av ett magnetiskt dipolmoment, med en perfekt matchning mellan ``negativ
+och positiv magnetisk laddning'', vilket i sin tur betyder att ingen isolerad
+magnetisk laddning kan existera. Med andra ord, {\it inga magnetiska monopoler
+kan existera}, och den magnetiska monopoltermen m{\aa}ste vara identiskt noll
+{\"o}verallt.
 
 \subsection{Magnetisk dipolterm}
 \sidx{Magnetiskt dipolmoment}[Fr{\aa}n multipolutveckling av vektorpotential]
@@ -806,20 +811,45 @@ noll {\"o}verallt.
 Den magnetiska dipoltermen kan uttryckas som
 $$
   \eqalign{
-    {\bf m}&=\iiint_{V} x'_k {\bf J}({\bf x}')\,dV'\cr
+%    {\bf m}&=\iiint_{V} x'_k {\bf J}({\bf x}')\,dV'\cr
+%      &=\iiint_{V} x'_k {\bf J}({\bf x}')\,dV'\cr
+    \sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}}\iiint_{V} x'_k {\bf J}({\bf x}')\,dV'
+      &={{1}\over{|{\bf x}|^3}}\iiint_{V}
+        \underbrace{
+          ({\bf x}\cdot{\bf x}'){\bf J}({\bf x}')}
+          _{\hbox{``$({\bf a}\cdot{\bf b}){\bf c}$''}}\,dV'\cr
+      &=\big\{\hbox{ Vektoridentitet ${\bf a}\times({\bf b}\times{\bf c})=
+          {\bf b}({\bf a}\cdot{\bf c})-{\bf c}({\bf a}\cdot{\bf b})$ }\big\}\cr
+      &={{1}\over{|{\bf x}|^3}}\iiint_{V}\big[
+              {\bf x}\times({\bf x}'\times{\bf J}({\bf x}'))
+                +{\bf x}'({\bf x}\cdot{\bf J}({\bf x}'))
+            \big]\,dV'\cr
   }
 $$
+
+
+
+
+
 
 \subsection{Magnetisk kvadrupolterm}
 \sidx{Magnetiskt kvadrupolmoment}[Fr{\aa}n multipolutveckling av vektorpotential]
 \sidx{Vektorpotential ${\bf A}$}[Magnetiskt kvadrupolmoment]
 
+\vfill\eject
 
 \section{Kan dynamiska magnetiska monopoler existera?}
 \sidx{Magnetiska monopoler}[Icke-existens av, dynamiskt]
 Vi har just precis p{\aa} ett alternativt s{\"a}tt, ut{\"o}ver det tidigare
 $\nabla\cdot{\bf B}=0$ fr{\aa}n exempelvis F{\"o}rel{\"a}sning~4, visat att
-{\it magnetiska monopoler inte existerar i magneto-statiska problem}.
+{\it magnetiska monopoler inte existerar i magneto-statiska problem}.\numberedfootnote{Vi kan rekapitulera att vi inom magnetostatiken fann $\nabla\cdot{\bf B}=0$ som en direkt f{\"o}ljd av formen p{\aa} Biot--Savarts lag f{\"o}r en generell str{\"o}mt{\"a}thet, samt fr{\aa}n identiteten
+$$
+  \nabla\times{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
+    =\underbrace{
+       \nabla\times\bigg(-\nabla{{1}\over{|{\bf x}-{\bf x}'|}}\bigg)
+     }_{\nabla\times(\nabla f)\equiv 0}
+    =0.
+$$}
 Fr{\aa}gan infinner sig d{\aa} f{\"o}rst{\aa}s om det finns m{\"o}jlighet att
 magnetiska monopoler existerar om vi till{\aa}ter statiken att g{\aa} {\"o}ver
 till {\it dynamik}, d{\"a}r vi till{\aa}ter ett tidsberoende hos
@@ -829,7 +859,8 @@ Det enklaste argumentet f{\"o}r att magnetiska monopoler ej heller kan existera
 i en dynamisk regim f{\"o}ljer fr{\aa}n det klassiska statiska argumentet att
 $\nabla\cdot{\bf B}=0$. Vi kan generalisera detta argument till en lika giltig
 {\it elektrodynamisk} lag genom att applicera divergensen p{\aa} Faradays
-lag,\numberedfootnote{Se F{\"o}rel{\"a}sning~5 eller Griffiths Ekv.~(7.16),
+lag,\numberedfootnote{Se F{\"o}rel{\"a}sning~5, {\it Faradays lag p{\aa}
+  differentialform}, eller Griffiths Ekv.~(7.16),
   sid.~313.}
 $$
   \underbrace{
