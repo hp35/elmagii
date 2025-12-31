@@ -24,6 +24,7 @@
 %
 \input ../lect-01/macros/epsf.tex
 \input ../lect-01/macros/eplain.tex
+\input amssym % to get the {\Bbb E} font (strikethrough E)
 \input src/fonts.tex
 \input src/misc.tex
 \input src/toc.tex
@@ -31,7 +32,6 @@
 \input src/copyrights.tex
 \input src/frontpage.tex
 \input src/preface.tex
-\input amssym % to get the {\Bbb E} font (strikethrough E)
 
 \frontpage                             % Title page of compilation
 \pageno=-2\footline{\hfil\folio\hfil}  % Roman pagenumbering for intro
@@ -39,8 +39,8 @@
 \tableofcontents                       % Four pages, manual page advance
 \pageno=-7\footline{\hfil\folio\hfil}  % Roman pagenumbering for preface
 \preface{Detta {\"a}r den kompletta serien av f{\"o}rel{\"a}sningar i kursen
-  Elektromagnetism II (1TE626, 5hp), givna 2022--2025 f{\"o}r teknologer i
-  andra {\aa}rskursen f{\"o}r Teknisk Fysik p{\aa} Masterniv{\aa} (syftande
+  {\it Elektromagnetism II} (1TE626, 5hp), givna 2022--2025 f{\"o}r teknologer
+  i andra {\aa}rskursen f{\"o}r Teknisk Fysik p{\aa} Masterniv{\aa} (syftande
   mot civilingenj{\"o}rsexamen) p{\aa} {\AA}ngstr{\"o}mlaboratoriet, Uppsala
   Universitet, med varje kapitel motsvarande en f{\"o}rel{\"a}sning om tv{\aa}
   timmar ($2\times45$ minuter i svensk akademisk standard).
@@ -69,12 +69,19 @@
   och ha till hands i fysisk form under det att l{\"a}saren l{\"o}ser problem
   under lektioner eller p{\aa} egen kammare.
 
+  I kursen {\it Elektromagnetism II} {\"a}r den rekommenderade kurslitteraturen
+  David J.~Griffiths {\it Introduction to Electrodynamics}, och f{\"o}rekommande
+  sidreferenser till denna i f{\"o}rel{\"a}sningarna till denna bok g{\"a}ller
+  den fj{\"a}rde utg{\aa}van (2017). Den som {\"o}nskar inf{\"o}rskaffa detta
+  standardverk inom elektromagnetism kan dock med f{\"o}rdel passa p{\aa} att
+  ist{\"a}llet rikta in sig p{\aa} den uppdaterade femte utg{\aa}van (2023).
+
   Denna f{\"o}rel{\"a}sningsserie publiceras dels som ett elektroniskt dokument
   p{\aa} {\it Digitala Vetenskapliga Arkivet} (DiVA),
   {\tt https://www.diva-portal.org/smash/record.jsf?pid=diva2:25333}, men
-  {\"a}ven som helt {\"o}ppen k{\"a}ll\-kod, med all text i ren \TeX\ samt
-  kod i \MP\ och Python f{\"o}r generering av samtliga figurer, tillg{\"a}nglig
-  p{\aa} {\tt https://github.com/hp35/elmagii/}.
+  {\"a}ven som helt {\"o}ppen k{\"a}ll\-kod p{\aa}
+  {\tt https://github.com/hp35/elmagii/}, med all text i ren \TeX\ samt kod
+  i \MP\ och Python f{\"o}r generering av samtliga figurer.
   \vskip32pt
   \noindent Fredrik Jonsson,\par
   \noindent December 2025}
