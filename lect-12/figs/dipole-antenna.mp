@@ -103,7 +103,7 @@ beginfig(1);
   %
   % Draw the observation point and attach labels of the quantities of interest.
   %
-  qa:=(70u,.9ll);      % Observation point ${\bf x}$
+  qa:=(90u,.9ll);      % Observation point ${\bf x}$
   qb:=(ra-1u,.7ll);    % Source point ${\bf x}'$
   qc:=(0u,0u);         % Origo ${\bf 0}$
   drawarrow qc--qa;
@@ -114,6 +114,19 @@ beginfig(1);
   label.lft(btex ${\bf x}'$ etex, (-28u,ypart qb));
   draw (-28u,ypart qb){dir 0}..{dir 0}(.5[qc,qb]+(-1u,0u));
 
+  %
+  % Lumped ports for driving the antenna with a harmonic voltage applied across
+  % the gap between the elements.
+  %
+  qa:=(-30u,7u);
+  qb:=(xpart qa,-ypart qa);
+  dotlabel.lft(btex etex,qa);
+  dotlabel.lft(btex etex,qb);
+  draw qa{dir 0}..{dir 0}(-ra,zgap/2);
+  draw qb{dir 0}..{dir 0}(-ra,-zgap/2);
+
+  drawarrow (qa shifted (0u,-1u))--(qb shifted (0u,1u));
+  label.lft(btex $V(t)$ etex, (xpart qa, ypart (qa+qb)/2));
 
 endfig;
 end
