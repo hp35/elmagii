@@ -24,7 +24,7 @@ beginfig(1);
   rb:=5u;            % Inner radius r_b of the antenna tube
   ra:=8u;            % Outer radius r_a of the antenna tube
   ll:=50u;           % Length L of each antenna tube
-  zgap:=4u;          % Gap between the two elements
+  zgap:=6u;          % Gap between the two elements
   aspectratio:=0.3;  % Y/X-scaling
 
   %
@@ -103,30 +103,94 @@ beginfig(1);
   %
   % Draw the observation point and attach labels of the quantities of interest.
   %
-  qa:=(90u,.9ll);      % Observation point ${\bf x}$
+  qa:=(70u,.9ll);      % Observation point ${\bf x}$
   qb:=(ra-1u,.7ll);    % Source point ${\bf x}'$
   qc:=(0u,0u);         % Origo ${\bf 0}$
   drawarrow qc--qa;
   label.top(btex ${\bf x}$ etex, qc) rotated angle (qa-qc) shifted .5[qa,qc];
+  label.top(btex ${\bf E}({\bf x},t),\,{\bf B}({\bf x},t)$ etex, qa);
+  label.lrt(btex Observationspunkt etex, qa);
   drawarrow qb--qa;
   label.top(btex ${\bf x}-{\bf x}'$ etex, qc) rotated angle (qa-qb) shifted .5[qb,qa];
   drawarrow qc--qb;
-  label.lft(btex ${\bf x}'$ etex, (-28u,ypart qb));
-  draw (-28u,ypart qb){dir 0}..{dir 0}(.5[qc,qb]+(-1u,0u));
+  label.top(btex ${\bf x}'$ etex, (0u,0u)) rotated angle (qb-qc) shifted .3[qb,qc];
+  label.lrt(btex K{\"a}llpunkt etex, qb shifted (1u,0u));
+%  qa:=(50u,-80u);
+%  label.top(btex $\displaystyle\Bigg\{$ etex, qa shifted (-33pt,-1pt));
+%  label.top(btex \hbox to 80pt{}$\displaystyle E({\bf x},t)=-\nabla\phi({\bf x},t)
+%      -{{\partial{\bf A}({\bf x},t)}\over{\partial t}}$ etex, qa shifted (0u,12pt));
+%  label.top(btex \hbox to 36pt{}$\displaystyle
+%      B({\bf x},t)=\nabla\times{\bf A}({\bf x},t)$ etex, qa);
 
   %
   % Lumped ports for driving the antenna with a harmonic voltage applied across
   % the gap between the elements.
   %
-  qa:=(-30u,7u);
+  qa:=(50u,15u);
   qb:=(xpart qa,-ypart qa);
-  dotlabel.lft(btex etex,qa);
-  dotlabel.lft(btex etex,qb);
-  draw qa{dir 0}..{dir 0}(-ra,zgap/2);
-  draw qb{dir 0}..{dir 0}(-ra,-zgap/2);
+  pickup pencircle scaled 1.4pt;
+  draw qa{dir 180}..{dir 180}(ra,zgap/2);
+  draw qb{dir 180}..{dir 180}(ra,-zgap/2);
+  pickup pencircle scaled 1pt;
+  fill fullcircle scaled 4pt shifted qa withcolor white;
+  draw fullcircle scaled 4pt shifted qa;
+  fill fullcircle scaled 4pt shifted qb withcolor white;
+  draw fullcircle scaled 4pt shifted qb;
+  pickup pencircle scaled 1pt;
+  drawarrow (qa shifted (0u,-2u))--(qb shifted (0u,2u));
+  label.rt(btex $U(t)$, matningssp{\"a}nning etex, (xpart qa, ypart (qa+qb)/2));
 
-  drawarrow (qa shifted (0u,-1u))--(qb shifted (0u,1u));
-  label.lft(btex $V(t)$ etex, (xpart qa, ypart (qa+qb)/2));
+  %
+  % Measures of the radii.
+  %
+  pickup pencircle scaled .7pt;
+  draw (-ra,-ll-zgap/2-4u)--(-ra,-ll-zgap/2-4u-26u);
+  draw (ra,-ll-zgap/2-4u)--(ra,-ll-zgap/2-4u-26u);
+  drawarrow (-ra,-ll-zgap/2-4u-24u)--(ra,-ll-zgap/2-4u-24u);
+  drawarrow reverse ((-ra,-ll-zgap/2-4u-24u)--(ra,-ll-zgap/2-4u-24u));
+  label.top(btex $a$ etex, (0u,-ll-zgap/2-4u-24u));
+  draw (-rb,-ll-zgap/2-4u)--(-rb,-ll-zgap/2-4u-16u);
+  draw (rb,-ll-zgap/2-4u)--(rb,-ll-zgap/2-4u-16u);
+  drawarrow (-rb,-ll-zgap/2-4u-14u)--(rb,-ll-zgap/2-4u-14u);
+  drawarrow reverse ((-rb,-ll-zgap/2-4u-14u)--(rb,-ll-zgap/2-4u-14u));
+  label.top(btex $b$ etex, (0u,-ll-zgap/2-4u-14u));
+
+  %
+  % Measure of the air gap between the elements.
+  %
+  pickup pencircle scaled .7pt;
+  draw (-ra-4u,zgap/2)--(-ra-26u,zgap/2);
+  draw (-ra-4u,-zgap/2)--(-ra-26u,-zgap/2);
+  drawarrow (-ra-24u,-zgap/2)--(-ra-24u,zgap/2);
+  drawarrow reverse ((-ra-24u,-zgap/2)--(-ra-24u,zgap/2));
+  label.lft(btex $g$ etex, (-ra-24u,0u));
+
+  %
+  % Measure of the length of the top (z>0) element.
+  %
+  pickup pencircle scaled .7pt;
+  draw (-ra-4u,zgap/2+ll)--(-ra-26u,zgap/2+ll);
+  drawarrow (-ra-24u,zgap/2)--(-ra-24u,zgap/2+ll);
+  drawarrow reverse ((-ra-24u,zgap/2)--(-ra-24u,zgap/2+ll));
+  label.lft(btex $L$ etex, (-ra-24u,zgap/2+ll/2));
+
+  %
+  % Measure of the length of the bottom (z<0) element.
+  %
+  pickup pencircle scaled .7pt;
+  draw (-ra-4u,-zgap/2-ll)--(-ra-26u,-zgap/2-ll);
+  drawarrow (-ra-24u,-zgap/2)--(-ra-24u,-zgap/2-ll);
+  drawarrow reverse ((-ra-24u,-zgap/2)--(-ra-24u,-zgap/2-ll));
+  label.lft(btex $L$ etex, (-ra-24u,-zgap/2-ll/2));
+
+  %
+  % A few convenient labels.
+  %
+  pickup pencircle scaled 1pt;
+  qa:=((ra,-zgap/2-ll/2) shifted (-1u,0u));
+  qb:=(qa shifted (40u,-15u));
+  draw qa{dir -10}..{dir -10}qb;
+  label.rt(btex ${\bf J}({\bf x}',t)$ etex, qb);
 
 endfig;
 end
