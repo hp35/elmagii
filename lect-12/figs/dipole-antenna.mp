@@ -103,13 +103,13 @@ beginfig(1);
   %
   % Draw the observation point and attach labels of the quantities of interest.
   %
-  qa:=(70u,.9ll);      % Observation point ${\bf x}$
+  qa:=(90u,.9ll);      % Observation point ${\bf x}$
   qb:=(ra-1u,.7ll);    % Source point ${\bf x}'$
   qc:=(0u,0u);         % Origo ${\bf 0}$
   drawarrow qc--qa;
   label.top(btex ${\bf x}$ etex, qc) rotated angle (qa-qc) shifted .5[qa,qc];
   label.top(btex ${\bf E}({\bf x},t),\,{\bf B}({\bf x},t)$ etex, qa);
-  label.lrt(btex Observationspunkt etex, qa);
+  label.top(btex Observationspunkt etex, qa shifted (0pt,12pt));
   drawarrow qb--qa;
   label.top(btex ${\bf x}-{\bf x}'$ etex, qc) rotated angle (qa-qb) shifted .5[qb,qa];
   drawarrow qc--qb;
@@ -128,14 +128,14 @@ beginfig(1);
   %
   qa:=(50u,15u);
   qb:=(xpart qa,-ypart qa);
-  pickup pencircle scaled 1.4pt;
+  pickup pencircle scaled 2pt; % 1.4pt;
   draw qa{dir 180}..{dir 180}(ra,zgap/2);
   draw qb{dir 180}..{dir 180}(ra,-zgap/2);
   pickup pencircle scaled 1pt;
-  fill fullcircle scaled 4pt shifted qa withcolor white;
-  draw fullcircle scaled 4pt shifted qa;
-  fill fullcircle scaled 4pt shifted qb withcolor white;
-  draw fullcircle scaled 4pt shifted qb;
+  fill fullcircle scaled 6pt shifted qa withcolor white;
+  draw fullcircle scaled 6pt shifted qa;
+  fill fullcircle scaled 6pt shifted qb withcolor white;
+  draw fullcircle scaled 6pt shifted qb;
   pickup pencircle scaled 1pt;
   drawarrow (qa shifted (0u,-2u))--(qb shifted (0u,2u));
   label.rt(btex $U(t)$, matningssp{\"a}nning etex, (xpart qa, ypart (qa+qb)/2));
