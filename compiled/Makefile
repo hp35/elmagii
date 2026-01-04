@@ -11,7 +11,7 @@ MKIDX  = makeindex
 DVIPS  = dvips
 PS2PDF = ps2pdf
 
-LECTNUMS := $(shell printf "%02d " $$(seq 1 11))
+LECTNUMS := $(shell printf "%02d " $$(seq 1 12))
 LECTURES := $(foreach n,$(LECTNUMS),../lect-$(n)/lecture-$(n).tex)
 STRIPPED := $(notdir $(LECTURES:.tex=-strip.tex))
 
@@ -211,10 +211,12 @@ recompile-all-from-scratch:
 	make
 
 texchars:
-	@echo "Converting Swedish Unicode chars in $(TEXFILE) to TeX codes."
-	@../lect-01/macros/se-texchars.sh src/frontmatter.tex > tmp.tex
-	@mv tmp.tex src/frontmatter.tex
-	@echo "Reload src/frontmatter.tex to incorporate the changes."
+	@for f in 'src/main.tex'; do \
+	   echo "Converting Swedish Unicode chars in $$f to TeX codes." ;\
+	   ../lect-01/macros/se-texchars.sh $$f > tmp.tex ;\
+	   mv tmp.tex $$f ;\
+	   echo "Reload $$f to incorporate the changes." ;\
+	done
 
 clean:
 	rm -Rf *~ lect*.tex *.log *.idx *.ilg *.ind *.dvi *.ps complete.*
