@@ -1,0 +1,106 @@
+%
+% File: teach/elmagii/gallery/gallery.tex [plain TeX code]
+% Github: https://github.com/elmagii/gallery/
+% Last change: January 13, 2026
+%
+% Gallery of primary physicists who formed the theory of electomagnetism
+% through history. These physicists and mathematicians essentially formed
+% the theory which we are describing in the course ``Elektromagnetism II,
+% 1TE626'', held 2022--2026 at Uppsala University, Sweden.
+%
+% Copyright (C) 2026, Fredrik Jonsson, under Gnu General Public
+% License (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
+\input macros/epsf.tex
+\input macros/eplain.tex
+
+\newdimen\portraitsize
+\portraitsize=200pt
+\def\portrait#1#2{%
+%  \hbox{%
+  \vbox{%
+    \hbox{\epsfxsize=\portraitsize\epsfbox{#1}}
+    \hbox{%
+      \vbox{%
+        \hsize=\portraitsize%
+        \parindent=0pt%
+        {#2}%
+      }%
+    }%
+  }%
+%  }%
+}
+
+\hbox{
+  \portrait{images/jean_le_rond_dalembert_scaled_bw.eps}{Jean Le Rond
+    d'Alembert (1717--1783). French mathematician, mechanician, physicist,
+    philosopher, and music theorist. In this course we are using d'Alembert's
+    formulation of wave propagation in the form $f(z-ct)+g(z+ct)$.
+    \sidx{d'Alembert, Jean le Rond (1717--1783)}}
+  \hskip30pt
+  \portrait{images/andre_ampere_scaled_bw.eps}{Andr\'e-Marie Amp\`ere
+    (1775--1836). French physicist and mathematician. One of the principal
+    founders of classical electromagnetism, which he referred to as
+    electrodynamics. Amp\`ere's law for static magnetic fields yields
+    $\nabla\times{\bf B}=\mu_0{\bf J}$, later modified by Maxwell to
+    include the displacement current.
+    \sidx{Amp\`ere, Andr\'e-Marie (1775--1836)}}
+}
+
+\portrait{images/michael_faraday_scaled_bw.eps}{Michael Faraday (1791--1867).
+  English chemist and physicist. Discovered the principles underlying
+  electromagnetic induction, diamagnetism, and electrolysis. Faraday's
+  law of induction yields ${\cal E}= −d\Phi_{\rm M}/dt\ \Leftrightarrow
+  \ \nabla\times{\bf E}=-{{\partial{\bf B}}/{\partial t}}$.
+  \sidx{Faraday, Michael (1791--1867)}}
+
+\portrait{images/lord_kelvin_scaled_bw.eps}{William Thomson, 1st Baron
+  Kelvin (1824--1907). British mathematician, mathematical physicist
+  and engineer. In this course we focus on the Kelvin--Stokes theorem,
+  $\def\iint{\mathop{\int\kern-5pt\int}}\iint_V(\nabla\times{\bf a})
+  \cdot d{\bf S}=\oint_{\Gamma}{\bf a}\cdot d{\bf l}$, after Lord Kelvin
+  and George Stokes, the fundamental theorem for curls.
+  \sidx{Kelvin, Lord (1824--1907)}[William Thomson, 1st Baron Kelvin]}
+
+\portrait{images/hans_christian_oersted_scaled_bw.eps}{Hans Christian
+  {\OE}rsted (1777--1851). Danish chemist and physicist who discovered
+  that electric currents create magnetic fields.
+  \sidx{{\OE}rsted, Hans Christian (1777--1851)}}
+
+\portrait{images/hendrik_lorentz_scaled_bw.eps}{Hendrik Antoon Lorentz
+  (1853--1928). Dutch theoretical physicist who shared the 1902 Nobel
+  Prize in Physics with Pieter Zeeman for their discovery and theoretical
+  explanation of the Zeeman effect. Derived the Lorentz transformation of
+  the special theory of relativity, as well as the Lorentz force,
+  describing the force acting upon a moving charged particle,
+  ${\bf F}=q\big[{\bf E}+({\bf v}\times{\bf B})\big]$.
+  \sidx{Lorentz, Hendrik Antoon (1853--1928)}}
+
+\portrait{images/ludvig_valentin_lorenz_scaled_bw.eps}{Ludvig Lorenz
+  (1829--1891). Danish physicist and mathematician. In 1867, Lorenz gave
+  completely general integral solutions to the differential equations of
+  electromagnetism, including retardation, reflecting the finite speed of
+  light, and the introduction of the Lorenz gauge.
+  \sidx{Lorenz, Ludvig (1829--1891)}}
+
+\portrait{images/charles_de_coulomb_scaled_bw.eps}{Charles-Augustin de
+  Coulomb (1736--1806). French officer, engineer, and physicist. Discoverer
+  of the law describing the electrostatic force of attraction and repulsion,
+  ${\bf F}=({{qq'}/{4\pi\varepsilon_0}})
+  {{({\bf x}-{\bf x}')}/{|{\bf x}-{\bf x}'|^3}}$.
+  \sidx{de Coulomb, Charles-Augustin (1736--1806)}\sidx{Coulombs kraftlag}}
+
+\bye
