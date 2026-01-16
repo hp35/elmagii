@@ -27,22 +27,38 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 
+%
+% Define the 'boxit' macro from D.E. Knuths "The TeXbook, Exercise 21.3.
+%
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+
+%
+% Define the macro which "typographically atomizes" the individual portraits.
+%
 \newdimen\portraitsize
 \portraitsize=200pt
 \def\portrait#1#2{%
 %  \hbox{%
-  \vbox{%
-    \hbox{\epsfxsize=\portraitsize\epsfbox{#1}}
-    \hbox{%
+    \boxit{%
       \vbox{%
-        \hsize=\portraitsize%
-        \parindent=0pt%
-        {#2}%
+        \boxit{%
+%          \hbox{\epsfxsize=\portraitsize\epsfbox{#1}}
+          \hbox to \portraitsize{\epsfysize=200pt\hfil\epsfbox{#1}\hfil}
+        }%
+      \hbox{\vbox{\hsize=\portraitsize\parindent=0pt{#2}}}
       }%
     }%
-  }%
 %  }%
 }
+
+%~\vskip 5pc\goodbreak\noindent{\bf{Persongalleri}}%
+%  \writenumberedtocentry{index}{\hskip24pt{Persongalleri}}
+%\nobreak\vskip 48pt\noindent\ignorespaces
+
+\noindent
+Persongalleri inom klassisk elektromagnetism
+% Gallery of the principal scientists behind the theory covered in the course.
 
 \hbox{
   \portrait{images/jean_le_rond_dalembert_scaled_bw.eps}{Jean Le Rond
