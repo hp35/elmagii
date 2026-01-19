@@ -73,7 +73,7 @@
 %\nobreak\vskip 48pt\noindent\ignorespaces
 
 \noindent
-Persongalleri inom klassisk elektromagnetism
+Portr{\"a}ttgalleri inom klassisk elektromagnetism
 % Gallery of the principal scientists behind the theory covered in the course.
 
 %
@@ -112,9 +112,13 @@ Persongalleri inom klassisk elektromagnetism
     {Michael Faraday}%
     {1791--1867}%
     {English chemist and physicist. Discovered the principles underlying
-    electromagnetic induction, diamagnetism, and electrolysis. Faraday's
-    law of induction yields ${\cal E}= −d\Phi_{\rm M}/dt\ \Leftrightarrow
-    \ \nabla\times{\bf E}=-{{\partial{\bf B}}/{\partial t}}$.
+    electromagnetic induction, diamagnetism, and electrolysis. In this
+    course, we make frequent use of Faraday's law of induction
+    $$
+      {\cal E}= -{{d\Phi_{\rm M}}\over{dt}}
+        \quad\Leftrightarrow\quad
+        \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}}.
+    $$
     \sidx{Faraday, Michael (1791--1867)}}%
 }
 
@@ -152,8 +156,10 @@ Persongalleri inom klassisk elektromagnetism
     {Hans Christian {\OE}rsted}%
     {1777--1851}%
     {Danish chemist and physicist who discovered that electric currents
-    create magnetic fields.
-    \sidx{{\OE}rsted, Hans Christian (1777--1851)}}%
+    create magnetic fields. The unit Oe (oersted) of the magnetic field
+    strength ${\bf H}$ is named after him, and defined as $1\ {\rm Oe}=
+    (4\pi)^{-1}\times10^3\ {\rm A}/{\rm m}\approx 79.58\ {\rm A}/{\rm m}$.}%
+    \sidx{{\OE}rsted, Hans Christian (1777--1851)}%
 }
 
 %
@@ -168,7 +174,7 @@ Persongalleri inom klassisk elektromagnetism
     explanation of the Zeeman effect. Derived the Lorentz transformation of
     the special theory of relativity, as well as the Lorentz force
     $
-      {\bf F}=q\big[{\bf E}+({\bf v}\times{\bf B})\big]
+      {\bf F}=q\big({\bf E}+({\bf v}\times{\bf B})\big)
     $,
     describing the force acting upon a moving charged particle.
     \sidx{Lorentz, Hendrik Antoon (1853--1928)}}%
@@ -360,11 +366,26 @@ Persongalleri inom klassisk elektromagnetism
     \sidx{Stokes teorem}%
 }
 
+%
+% Franz Ernst Neumann (1798--1895)
+%
+\def\neumann{%
+  \portrait{images/franz_ernst_neumann_scaled_bw.eps}%
+    {Franz Ernst Neumann}%
+    {1798--1895}%
+    {German mineralogist and physicist. Devised the first formulas to
+    calculate inductance, and the purely geometrical formula for mutual
+    inductance is named after him. In electromagnetism, he is credited
+    for introducing the magnetic vector potential ${\bf A}$, as extensively
+    used throughout this course.}%
+    \sidx{Neumann, Franz Ernst (1798--1895)}%
+    \sidx{Neumanns formel}[{\"O}msesidig induktans]%
+}
 
 \portraitpage{\dalembert}{\ampere}{\faraday}{\kelvin}
 \portraitpage{\wilson}{\oersted}{\lorentz}{\lorenz}
 \portraitpage{\coulomb}{\biot}{\savart}{\heaviside}
 \portraitpage{\maxwell}{\feynman}{\laplace}{\poisson}
-\portraitpage{\gauss}{\stokes}{}{}
+\portraitpage{\gauss}{\stokes}{\neumann}{}
 
 \bye
