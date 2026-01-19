@@ -26,7 +26,11 @@ SCALED := $(BASES:%=%_scaled.png)
 EPS    := $(BASES:%=%_scaled.eps)
 BW_EPS := $(BASES:%=%_scaled_bw.eps)
 
+.PHONY: all clean
+
 all: $(SCALED) $(EPS) $(BW_EPS)
+
+$(SCALED) $(EPS) $(BW_EPS): | clean
 
 #
 # Scale all images to 256px width (PNG as well as JPG output)
@@ -50,4 +54,4 @@ all: $(SCALED) $(EPS) $(BW_EPS)
 	convert -colorspace Gray "$<" "$@"
 
 clean:
-	rm -f *~ *_scaled.png *_scaled.eps
+	rm -f *~ *_scaled*
