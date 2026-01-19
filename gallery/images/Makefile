@@ -9,8 +9,8 @@
 #
 # Conversion of JPG and PNG images to greyscale EPS.
 #
-PNG_IMAGES := $(wildcard *.png)
-JPG_IMAGES := $(wildcard *.jpg)
+PNG_IMAGES := $(filter-out %_scaled.png, $(wildcard *.png))
+JPG_IMAGES := $(filter-out %_scaled.jpg, $(wildcard *.jpg))
 
 #
 # Extract base names without their extension.
@@ -26,11 +26,7 @@ SCALED := $(BASES:%=%_scaled.png)
 EPS    := $(BASES:%=%_scaled.eps)
 BW_EPS := $(BASES:%=%_scaled_bw.eps)
 
-.PHONY: all clean
-
 all: $(SCALED) $(EPS) $(BW_EPS)
-
-$(SCALED) $(EPS) $(BW_EPS): | clean
 
 #
 # Scale all images to 256px width (PNG as well as JPG output)
