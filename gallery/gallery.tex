@@ -40,14 +40,15 @@
 \newdimen\portraitysize  \portraitysize=300pt
 \newdimen\portraitmargin \portraitmargin=14pt
 
-\def\portrait#1#2#3{%
+\def\portrait#1#2#3#4{%
   \boxit{%
     \vbox{%
       \boxit{%
-        \hbox to \portraitxsize{\epsfysize=170pt\hfil\epsfbox{#1}\hfil}%
+        \hbox to \portraitxsize{\epsfysize=164pt\hfil\epsfbox{#1}\hfil}%
       }%
       \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{\bf#2}\hfil}}%
-      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt{#3}}}%
+      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{(#3)}\hfil}}%
+      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt{#4}}}%
     }%
   }%
 }
@@ -80,7 +81,8 @@ Persongalleri inom klassisk elektromagnetism
 %
 \def\dalembert{%
   \portrait{images/jean_le_rond_dalembert_scaled_bw.eps}%
-    {Jean Le Rond d'Alembert (1717--1783)}%
+    {Jean Le Rond d'Alembert}%
+    {1717--1783}%
     {French mathematician, mechanician, physicist, philosopher, and music
     theorist. In this course we are using d'Alembert's formulation of wave
     propagation in the form $f(z-ct)+g(z+ct)$.
@@ -92,7 +94,8 @@ Persongalleri inom klassisk elektromagnetism
 %
 \def\ampere{%
   \portrait{images/andre_ampere_scaled_bw.eps}%
-    {Andr\'e-Marie Amp\`ere (1775--1836)}%
+    {Andr\'e-Marie Amp\`ere}%
+    {1775--1836}%
     {French physicist and mathematician. One of the principal
     founders of classical electromagnetism, which he referred to as
     electrodynamics. Amp\`ere's law for static magnetic fields yields
@@ -106,7 +109,8 @@ Persongalleri inom klassisk elektromagnetism
 %
 \def\faraday{%
   \portrait{images/michael_faraday_scaled_bw.eps}%
-    {Michael Faraday (1791--1867)}%
+    {Michael Faraday}%
+    {1791--1867}%
     {English chemist and physicist. Discovered the principles underlying
     electromagnetic induction, diamagnetism, and electrolysis. Faraday's
     law of induction yields ${\cal E}= −d\Phi_{\rm M}/dt\ \Leftrightarrow
@@ -119,7 +123,8 @@ Persongalleri inom klassisk elektromagnetism
 %
 \def\kelvin{%
   \portrait{images/lord_kelvin_scaled_bw.eps}%
-    {William Thomson, 1st Baron Kelvin (1824--1907)}%
+    {William Thomson, Lord Kelvin}%
+    {1824--1907}%
     {British mathematician, mathematical physicist and engineer.
     In this course we focus on the Kelvin--Stokes theorem,
     $\def\iint{\mathop{\int\kern-5pt\int}}\iint_V(\nabla\times{\bf a})
@@ -133,7 +138,8 @@ Persongalleri inom klassisk elektromagnetism
 %
 \def\wilson{%
   \portrait{images/rickard_wilson_scaled_bw.eps}%
-    {Rickard Wilson (1930--2000)}%
+    {Rickard Wilson}%
+    {1930--2000}%
     {Svensk vetenskapsman. Upphovsman till fatilarkalkylen, presenterad 1955.}%
     \sidx{Wilson, Rickard (1930--2000)}%
 }
@@ -143,7 +149,8 @@ Persongalleri inom klassisk elektromagnetism
 %
 \def\oersted{%
   \portrait{images/hans_christian_oersted_scaled_bw.eps}%
-    {Hans Christian {\OE}rsted (1777--1851)}%
+    {Hans Christian {\OE}rsted}%
+    {1777--1851}%
     {Danish chemist and physicist who discovered that electric currents
     create magnetic fields.
     \sidx{{\OE}rsted, Hans Christian (1777--1851)}}%
@@ -154,7 +161,8 @@ Persongalleri inom klassisk elektromagnetism
 %
 \def\lorentz{%
   \portrait{images/hendrik_lorentz_scaled_bw.eps}%
-    {Hendrik Antoon Lorentz (1853--1928)}%
+    {Hendrik Antoon Lorentz}%
+    {1853--1928}%
     {Dutch theoretical physicist who shared the 1902 Nobel
     Prize in Physics with Pieter Zeeman for their discovery and theoretical
     explanation of the Zeeman effect. Derived the Lorentz transformation of
@@ -169,7 +177,8 @@ Persongalleri inom klassisk elektromagnetism
 %
 \def\lorenz{%
   \portrait{images/ludvig_valentin_lorenz_scaled_bw.eps}%
-    {Ludvig Lorenz (1829--1891)}%
+    {Ludvig Lorenz}%
+    {1829--1891}%
     {Danish physicist and mathematician. In 1867, Lorenz gave
     completely general integral solutions to the differential equations of
     electromagnetism, including retardation, reflecting the finite speed of
@@ -182,16 +191,67 @@ Persongalleri inom klassisk elektromagnetism
 %
 \def\coulomb{%
   \portrait{images/charles_de_coulomb_scaled_bw.eps}%
-    {Charles-Augustin de Coulomb (1736--1806)}%
+    {Charles-Augustin de Coulomb}%
+    {1736--1806}%
     {French officer, engineer, and physicist. Discoverer of the law
     describing the electrostatic force of attraction and repulsion,
-    ${\bf F}=({{qq'}/{4\pi\varepsilon_0}})
-    {{({\bf x}-{\bf x}')}/{|{\bf x}-{\bf x}'|^3}}$.
+    $$
+      {\bf F}={{qq'}\over{4\pi\varepsilon_0}}
+        {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
+    $$
     \sidx{de Coulomb, Charles-Augustin (1736--1806)}\sidx{Coulombs kraftlag}}%
+}
+
+%
+% Jean-Baptiste Biot (1774--1862)
+%
+\def\biot{%
+  \portrait{images/jean-baptiste_biot_scaled_bw.eps}%
+    {Jean-Baptiste Biot}%
+    {1774--1862}%
+    {French physicist, astronomer, and mathematician who co-discovered
+    the Biot--Savart law of magnetostatics with F\'elix Savart,
+    $$
+      {\bf B}({\bf x})={{\mu_0 I}\over{4\pi}}\int^{{\bf x}_b}_{{\bf x}_a}
+        {{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
+    $$
+    and studied the polarization of light.}%
+    \sidx{Biot, Jean-Baptiste (1774--1862)}\sidx{Biot--Savarts lag}%
+}
+
+%
+% Felix Savart (1791--1841)
+%
+\def\savart{%
+  \portrait{images/felix_savart_scaled_bw.eps}%
+    {F\'elix Savart}%
+    {1791--1841}%
+    {French physicist and mathematician who is primarily known for the
+    Biot--Savart law of electromagnetism,
+    $$
+      {\bf B}({\bf x})={{\mu_0 I}\over{4\pi}}\int^{{\bf x}_b}_{{\bf x}_a}
+        {{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
+    $$
+    co-discovered with Jean-Baptiste Biot.}%
+    \sidx{Savart, F\'elix (1791--1841)}\sidx{Biot--Savarts lag}%
+}
+
+%
+% Oliver Heaviside (1850--1925)
+%
+\def\heaviside{%
+  \portrait{images/oliver_heaviside_scaled_bw.eps}%
+    {Oliver Heaviside}%
+    {1850--1925}%
+    {British mathematician and electrical engineer who invented a new
+    technique for solving differential equations (equivalent to the
+    Laplace transform), independently developed vector calculus, and
+    rewrote Maxwell's equations in the form commonly used today.}%
+    \sidx{Heaviside, Oliver (1850--1925)}\sidx{Maxwells ekvationer}%
 }
 
 \portraitpage{\dalembert}{\ampere}{\faraday}{\kelvin}
 \portraitpage{\wilson}{\oersted}{\lorentz}{\lorenz}
-\portraitpage{\coulomb}{}{}{}
+\portraitpage{\coulomb}{\biot}{\savart}{\heaviside}
 
 \bye
