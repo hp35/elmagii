@@ -22,6 +22,7 @@ ARCHIVE := $(notdir $(CURDIR)).tar.gz
 all: $(pdfs)
 
 imgs:
+	@make -ik clean -C images
 	@make -C images
 
 $(pdfs): $(pss)

@@ -50,4 +50,4 @@ all: $(SCALED) $(EPS) $(BW_EPS)
 	convert -colorspace Gray "$<" "$@"
 
 clean:
-	rm -f *~ *_scaled*
+	rm -f *~ $(filter-out %_scaled_bw.eps, $(wildcard *_scaled*))
