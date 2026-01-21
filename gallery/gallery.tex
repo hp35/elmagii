@@ -39,15 +39,15 @@
   \vbox{\kern1pt#1\kern1pt}\kern1pt\vrule}\hrule}}
 \newif\ifboxed
 \boxedtrue   % \boxedtrue or \boxedfalse
-% \boxedfalse
+%\boxedfalse
 
 %
 % Define the macro which "typographically atomizes" the individual portraits.
 %
 \newdimen\portraitxsize  \portraitxsize=200pt
 \newdimen\portraitysize  \portraitysize=300pt
-\newdimen\portraitxmargin \portraitxmargin=14pt
-\newdimen\portraitymargin \portraitymargin=8pt
+\newdimen\portraitxmargin \portraitxmargin=36pt
+\newdimen\portraitymargin \portraitymargin=14pt
 
 \def\portrait#1#2#3#4{%
   \ifboxed
@@ -74,12 +74,14 @@
 \def\portraitpair#1#2{%
   \ifboxed
   \hbox{%
+    \hskip14pt%
     \boxit{\hbox{\vbox to \portraitysize{\hbox{#1}}}}%
     \hskip\portraitxmargin%
     \boxit{\hbox{\vbox to \portraitysize{\hbox{#2}}}}%
   }%
   \else
   \hbox{%
+    \hskip14pt%
     \hbox{\vbox to \portraitysize{\hbox{#1}}}%
     \hskip\portraitxmargin%
     \hbox{\vbox to \portraitysize{\hbox{#2}}}%
@@ -102,37 +104,37 @@
     {Jean le Rond d'Alembert}%
     {1717--1783}%
     {\ifswedish
-    {Fransk matematiker, fysiker och musikteore\-ti\-ker. I denna kurs
-    anv{\"a}nder vi d'Alembert's metod f{\"o}r att visa att v{\aa}gor
-    som f{\"o}ljer
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      {{\partial^2 E(z,t)}\over{\partial z^2}}
-        -{{1}\over{c^2}}{{\partial^2 E(z,t)}\over{\partial t^2}} = 0.
-    $$
-    ger l{\"o}sningar p{\aa} formen
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=0pt
-      E(z,t)=f(z-ct)+g(z+ct).
-    $$}
+      {Fransk matematiker, fysiker och musikteore\-ti\-ker. I denna kurs
+      anv{\"a}nder vi d'Alembert's metod f{\"o}r att visa att v{\aa}gor
+      som f{\"o}ljer
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        {{\partial^2 E(z,t)}\over{\partial z^2}}
+          -{{1}\over{c^2}}{{\partial^2 E(z,t)}\over{\partial t^2}} = 0.
+      $$
+      ger l{\"o}sningar p{\aa} formen
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=0pt
+        E(z,t)=f(z-ct)+g(z+ct).
+      $$}
     \else
-    {French mathematician, physicist, and music
-    theorist. In this course we use d'Alembert's method to show that
-    waves following
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      {{\partial^2 E(z,t)}\over{\partial z^2}}
-        -{{1}\over{c^2}}{{\partial^2 E(z,t)}\over{\partial t^2}} = 0.
-    $$
-    gives solutions of the form
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=0pt
-      E(z,t)=f(z-ct)+g(z+ct).
-    $$}
+      {French mathematician, physicist, and music
+      theorist. In this course we use d'Alembert's method to show that
+      waves following
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        {{\partial^2 E(z,t)}\over{\partial z^2}}
+          -{{1}\over{c^2}}{{\partial^2 E(z,t)}\over{\partial t^2}} = 0.
+      $$
+      gives solutions of the form
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=0pt
+        E(z,t)=f(z-ct)+g(z+ct).
+      $$}
     \fi}%
     \sidx{d'Alembert, Jean le Rond (1717--1783)}
 }
@@ -145,27 +147,27 @@
     {Andr\'e-Marie Amp\`ere}%
     {1775--1836}%
     {\ifswedish
-    {Fransk fysiker och matematiker. En av de prim{\"a}ra grundarna av
-    klassisk elektromagne\-tism, vilken Amp\`ere betecknade elektrodyna\-mik.
-    Amp\`eres lag f{\"o}r statiska magnetf{\"a}lt,
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      \nabla\times{\bf B}=\mu_0{\bf J},
-    $$
-    modifierades senare av Maxwell att inkludera f{\"o}rskjutningsstr{\"o}mmen.}
+      {Fransk fysiker och matematiker. En av de prim{\"a}ra grundarna av
+      klassisk elektromagne\-tism, vilken Amp\`ere betecknade elektrodyna\-mik.
+      Amp\`eres lag f{\"o}r statiska magnetf{\"a}lt,
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        \nabla\times{\bf B}=\mu_0{\bf J},
+      $$
+      modifierades senare av Maxwell att inkludera
+      f{\"o}rskjutningsstr{\"o}mmen.}
     \else
-    {French physicist and mathematician. One of the principal
-    founders of classical electromagnetism, which he referred to as
-    electrodynamics. Amp\`ere's law for static magnetic fields,
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      \nabla\times{\bf B}=\mu_0{\bf J},
-    $$
-    was later modified by Maxwell to include the displacement current.}
-    \fi
-    }%
+      {French physicist and mathematician. One of the principal
+      founders of classical electromagnetism, which he referred to as
+      electrodynamics. Amp\`ere's law for static magnetic fields,
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        \nabla\times{\bf B}=\mu_0{\bf J},
+      $$
+      was later modified by Maxwell to include the displacement current.}
+    \fi}%
     \sidx{Amp\`ere, Andr\'e-Marie (1775--1836)}
     \sidx{Amp\`eres lag}[F{\"or}r statiska magnetiska f{\"a}lt]
 }
@@ -178,25 +180,25 @@
     {Jean-Baptiste Biot}%
     {1774--1862}%
     {\ifswedish
-    {Fransk fysiker, astronom och matematiker som med F\'elix Savart
-    formulerade Biot--Savarts lag f{\"o}r magnetostatik,
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      {\bf B}({\bf x})={{\mu_0 I}\over{4\pi}}
-        \int{{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
-    $$
-    samt studerade polarisation hos elektromagnetiska v{\aa}gor.}
+      {Fransk fysiker, astronom och matematiker som med F\'elix Savart
+      formulerade Biot--Savarts lag f{\"o}r magnetostatik,
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        {\bf B}({\bf x})={{\mu_0 I}\over{4\pi}}
+          \int{{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
+      $$
+      samt studerade polarisation hos elektromagnetiska v{\aa}gor.}
     \else
-    {French physicist, astronomer, and mathematician who co-discovered
-    the Biot--Savart law of magnetostatics with F\'elix Savart,
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      {\bf B}({\bf x})={{\mu_0 I}\over{4\pi}}
-        \int{{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
-    $$
-    and studied the polarization of light.}
+      {French physicist, astronomer, and mathematician who co-discovered
+      the Biot--Savart law of magnetostatics with F\'elix Savart,
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        {\bf B}({\bf x})={{\mu_0 I}\over{4\pi}}
+          \int{{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
+      $$
+      and studied the polarization of light.}
     \fi}%
     \sidx{Biot, Jean-Baptiste (1774--1862)}
     \sidx{Biot--Savarts lag}
@@ -210,27 +212,27 @@
     {Charles-Augustin de Coulomb}%
     {1736--1806}%
     {\ifswedish
-    {Fransk officer, ingenj{\"o}r och fysiker. Formule\-ra\-de den
-    fysikaliska lag som beskriver elektrostatisk kraft som attraktion
-    eller repulsion,
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      {\bf F}={{qq'}\over{4\pi\varepsilon_0}}
-        {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
-    $$
-    som l{\"a}gger grunden f{\"o}r konceptet och definitionen av det
-    elektriska f{\"a}ltet.}
+      {Fransk officer, ingenj{\"o}r och fysiker. Formule\-ra\-de den
+      fysikaliska lag som beskriver elektrostatisk kraft som attraktion
+      eller repulsion,
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        {\bf F}={{qq'}\over{4\pi\varepsilon_0}}
+          {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
+      $$
+      som l{\"a}gger grunden f{\"o}r konceptet och definitionen av det
+      elektriska f{\"a}ltet.}
     \else
-    {French officer, engineer, and physicist. Discoverer of the law
-    describing the electrostatic force of attraction and repulsion,
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      {\bf F}={{qq'}\over{4\pi\varepsilon_0}}
-        {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
-    $$
-    forming the basis for the concept and definition of the electric field.}
+      {French officer, engineer, and physicist. Discoverer of the law
+      describing the electrostatic force of attraction and repulsion,
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        {\bf F}={{qq'}\over{4\pi\varepsilon_0}}
+          {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
+      $$
+      forming the basis for the concept and definition of the electric field.}
     \fi}%
     \sidx{de Coulomb, Charles-Augustin (1736--1806)}
     \sidx{Coulombs kraftlag}
@@ -243,16 +245,31 @@
   \portrait{images/michael_faraday_scaled_bw.eps}%
     {Michael Faraday}%
     {1791--1867}%
-    {English chemist and physicist. Discovered the principles underlying
-    electromagnetic induction, diamagnetism, and electrolysis. In this
-    course, we make frequent use of Faraday's law of induction
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      {\cal E}= -{{d\Phi_{\rm M}}\over{dt}}
-        \quad\Leftrightarrow\quad
-        \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}}.
-    $$}%
+    {\ifswedish
+      {Engelsk kemist och fysiker. Formulerade prin\-cip\-en f{\"o}r
+      elektromagnetisk induktion, diamagnetism och elektrolys. I denna
+      kurs anv{\"a}nder vi frekvent Faradays induktionslag
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        {\cal E}= -{{d\Phi_{\rm M}}\over{dt}}
+          \quad\Leftrightarrow\quad
+          \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}},
+      $$
+      vilken kan h{\"a}rledas fr{\aa}n Lorentz kraftlag.}
+    \else
+      {English chemist and physicist. Discovered the principles underlying
+      electromagnetic induction, diamagnetism, and electrolysis. In this
+      course, we make frequent use of Faraday's law of induction
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        {\cal E}= -{{d\Phi_{\rm M}}\over{dt}}
+          \quad\Leftrightarrow\quad
+          \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}},
+      $$
+      which can be derived from the Lorentz force.}
+    \fi}%
     \sidx{Faraday, Michael (1791--1867)}
     \sidx{Faradays induktionslag}
     \sidx{Faradays lag}[Differentialform]
@@ -265,11 +282,20 @@
   \portrait{images/charles_francois_de_cisternay_du_fay_scaled_bw.eps}%
     {Charles Fran\c{c}ois de Cisternay du Fay}%
     {1698--1739}%
-    {French chemist and superintendent of {\it Jardin du Roi} in Paris.
-    Discovered that some charged items would repel while some would
-    attract and posited the existence of two types of electricity,
-    named ``vitreous'' and ``resinous'' (later to be known as
-    positive and negative charge, respectively).}%
+    {\ifswedish
+      {Fransk kemist och f{\"o}rest{\aa}ndare f{\"o}r {\it Jardin du Roi}
+      i Paris. Uppt{\"a}ckte att vissa elektriskt laddade objekt attraherade
+      varandra medan andra repellerade, och formulerade hypotesen att det
+      fanns tv{\aa} typer av ``elektrisk v{\"a}tska'' som han betecknade
+      ``vitreous'' and ``resinous'' (senare betecknat som respektive positiv
+      och negativ elektrisk ladd\-ning).}
+    \else
+      {French chemist and superintendent of {\it Jardin du Roi} in Paris.
+      Discovered that some charged items would repel while some would
+      attract and posited the existence of two types of electricity,
+      named ``vitreous'' and ``resinous'' (later to be known as
+      positive and negative charge, respectively).}
+    \fi}%
     \sidx{de Cisternay du Fay, Fran\c{c}ois (1698--1739)}
     \sidx{de Cisternay du Fay, Fran\c{c}ois (1698--1739)}[{{\it Sixi\`eme
       m\'emoire sur l'\'electricit\'e (1734)}}]
@@ -282,11 +308,15 @@
   \portrait{images/richard_feynman_drums_scaled_bw.eps}%
     {Richard Feynman}%
     {1918--1988}%
-    {American theoretical physicist. Developed the path integral formulation
-    of quantum mechanics and the development of the theory of quantum
-    electrodynamics. For his contributions to the development of quantum
-    electrodynamics, Feynman in 1965 received the Nobel Prize in Physics
-    along with Julian Schwinger and Shin'ichir{\=o} Tomonaga.}%
+    {\ifswedish
+      {Amerikansk teoretisk fysiker vid California Institute of Technology (Caltech). Feynman formulerade meto\-di\-ken f{\"o}r v{\"a}gintegraler ({\it path integrals}) inom kvantmekanik samt grundl{\"a}gg\-an\-de teori f{\"o}r kvantelektrodynamik (QED). F{\"o}r sina bidrag till QED erh{\"o}ll han 1965 Nobelpriset i fysik tillsammans med Julian Schwinger and Shin'ichir{\=o} Tomonaga.}
+    \else
+      {American theoretical physicist. Developed the path integral formulation
+      of quantum mechanics and the development of the theory of quantum
+      electrodynamics. For his contributions to the development of quantum
+      electrodynamics, Feynman in 1965 received the Nobel Prize in Physics
+      along with Julian Schwinger and Shin'ichir{\=o} Tomonaga.}
+    \fi}%
     \sidx{Feynman, Richard (1918--1988)}
     \sidx{Elektrodynamik}[Kvantelektrodynamik]
 }
@@ -586,6 +616,31 @@
 }
 
 %
+% Nikola Tesla (1856--1943)
+%
+\def\tesla{%
+  \portrait{images/nikola_tesla_scaled_bw.eps}%
+    {Nikola Tesla}%
+    {1856--1943}%
+    {\ifswedish
+      {Serbisk-amerikansk uppfinnare samt maskin- och elektroingenj{\"o}r.
+      Hans patent och teoretis\-ka arbeten lade grunden f{\"o}r den
+      till{\"a}mpade v{\"a}xelstr{\"o}mstekniken, som distributionssystem
+      och v{\"a}xelstr{\"o}msmotorer med tre faser, vilket banade v{\"a}gen
+      f{\"o}r den andra industriella revolutionen. SI-enheten tesla (T)
+      f{\"o}r den magnetiska fl{\"o}dest{\"a}theten ${\bf B}$ namngavs 1960
+      efter honom p{\aa} Conf\'erence G\'en\'erale des Poids et Mesures i
+      Paris, Frankrike.}
+    \else
+      {Serbian-American engineer, futurist, and inventor. Primarily known
+      for his contributions to applied electrodynamics, such as the design
+      of the modern alternating current (AC) electricity supply system.
+      The unit tesla (T) of the magnetic field ${\bf B}$ is named after him.}
+    \fi}%
+    \sidx{Tesla, Nikola (1856--1943)}
+}
+
+%
 % Rickard Wilson (1930--2000)
 %
 \def\wilson{%
@@ -593,29 +648,32 @@
     {Rickard Wilson}%
     {1930--2000}%
     {\ifswedish
-    {Svensk vetenskapsman och arkitekt. Upphovsman till fatilarkalkylen,
-    presenterad 1955.}
+      {Svensk civilingenj{\"o}r, vetenskapsman och bro\-konstrukt{\"o}r.
+      Upphovsman till fatilarkalkylen, presenterad 1955. Kortfattat beskriver
+      fatilarkalkylen den elastiska fekansens beroende av den fatilara
+      koefficienten, dulationen, contaviseringen och till uttrycket med
+      dessa fogas coaviliseringstermen.}
     \else
-    {Swedish scientist and architect. Discoverer of the fatilar calculus,
-    presented in 1955.}
+      {Swedish scientist and architect. Discoverer of the fatilar calculus,
+      presented in 1955.}
     \fi}%
     \sidx{Wilson, Rickard (1930--2000)}
 }
 
-
-%~\vskip 5pc\goodbreak\noindent{\bf{Persongalleri}}%
-%  \writenumberedtocentry{index}{\hskip24pt{Persongalleri}}
-%\nobreak\vskip 48pt\noindent\ignorespaces
-
-% \noindent
-
-% Gallery of the principal scientists behind the theory covered in the course.
-
 \font\twelvecmbx=cmbx12
 \vskip 0pc\goodbreak\noindent{\twelvecmbx
-  {Portr{\"a}ttgalleri inom klassisk elektromagnetism}}%
+  \ifswedish
+    {Portr{\"a}ttgalleri inom klassisk elektromagnetism}
+  \else
+    {Portrait gallery in classical electromagnetism}
+  \fi}%
   \writenumberedtocentry{index}{\hskip24pt
-  {Portr{\"a}ttgalleri inom klassisk elektromagnetism}}%
+  {Portr{\"a}ttgalleri inom klassisk elektromagnetism}
+  \ifswedish
+    {Portr{\"a}ttgalleri inom klassisk elektromagnetism}
+  \else
+    {Portrait gallery in classical electromagnetism}
+  \fi}%
   \nobreak\bigskip\noindent\ignorespaces
 Elektromagnetism som {\"a}mne {\"a}r proppfyllt med celebriteter inom den
 klassiska fysiken, och det {\"a}r alltid trevligt att ha ett ansikte associerat
@@ -629,6 +687,6 @@ inom elektrostatik, magnetostatik och elektrodynamik.
 \portraitpage{\gauss}{\gilbert}{\heaviside}{\kelvin}
 \portraitpage{\laplace}{\lenz}{\lorentz}{\lorenz}
 \portraitpage{\maxwell}{\neumann}{\oersted}{\poisson}
-\portraitpage{\savart}{\stokes}{\wilson}{}
+\portraitpage{\savart}{\stokes}{\tesla}{\wilson}
 
 \bye
