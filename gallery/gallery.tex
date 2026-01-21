@@ -27,8 +27,8 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 \newif\ifswedish
-% \swedishtrue   % \swedishtrue or \swedishfalse
-\swedishfalse
+\swedishtrue   % \swedishtrue or \swedishfalse
+% \swedishfalse
 
 %
 % Define the 'boxit' macro from D.E. Knuths "The TeXbook, Exercise 21.3.
@@ -95,12 +95,29 @@
 }
 
 %
-% Jean Le Rond d'Alembert (1717--1783)
+% Jean le Rond d'Alembert (1717--1783)
 %
 \def\dalembert{%
   \portrait{images/jean_le_rond_dalembert_scaled_bw.eps}%
-    {Jean Le Rond d'Alembert}%
+    {Jean le Rond d'Alembert}%
     {1717--1783}%
+    {\ifswedish
+    {Fransk matematiker, fysiker och musikteore\-ti\-ker. I denna kurs
+    anv{\"a}nder vi d'Alembert's metod f{\"o}r att visa att v{\aa}gor
+    som f{\"o}ljer
+    $$
+      \abovedisplayskip=3pt
+      \belowdisplayskip=3pt
+      {{\partial^2 E(z,t)}\over{\partial z^2}}
+        -{{1}\over{c^2}}{{\partial^2 E(z,t)}\over{\partial t^2}} = 0.
+    $$
+    ger l{\"o}sningar p{\aa} formen
+    $$
+      \abovedisplayskip=3pt
+      \belowdisplayskip=0pt
+      E(z,t)=f(z-ct)+g(z+ct).
+    $$}
+    \else
     {French mathematician, physicist, and music
     theorist. In this course we use d'Alembert's method to show that
     waves following
@@ -115,7 +132,8 @@
       \abovedisplayskip=3pt
       \belowdisplayskip=0pt
       E(z,t)=f(z-ct)+g(z+ct).
-    $$}%
+    $$}
+    \fi}%
     \sidx{d'Alembert, Jean le Rond (1717--1783)}
 }
 
@@ -126,6 +144,17 @@
   \portrait{images/andre_ampere_scaled_bw.eps}%
     {Andr\'e-Marie Amp\`ere}%
     {1775--1836}%
+    {\ifswedish
+    {Fransk fysiker och matematiker. En av de prim{\"a}ra grundarna av
+    klassisk elektromagne\-tism, vilken Amp\`ere betecknade elektrodyna\-mik.
+    Amp\`eres lag f{\"o}r statiska magnetf{\"a}lt,
+    $$
+      \abovedisplayskip=3pt
+      \belowdisplayskip=3pt
+      \nabla\times{\bf B}=\mu_0{\bf J},
+    $$
+    modifierades senare av Maxwell att inkludera f{\"o}rskjutningsstr{\"o}mmen.}
+    \else
     {French physicist and mathematician. One of the principal
     founders of classical electromagnetism, which he referred to as
     electrodynamics. Amp\`ere's law for static magnetic fields,
@@ -134,7 +163,9 @@
       \belowdisplayskip=3pt
       \nabla\times{\bf B}=\mu_0{\bf J},
     $$
-    was later modified by Maxwell to include the displacement current.\vfill}%
+    was later modified by Maxwell to include the displacement current.}
+    \fi
+    }%
     \sidx{Amp\`ere, Andr\'e-Marie (1775--1836)}
     \sidx{Amp\`eres lag}[F{\"or}r statiska magnetiska f{\"a}lt]
 }
@@ -146,6 +177,17 @@
   \portrait{images/jean-baptiste_biot_scaled_bw.eps}%
     {Jean-Baptiste Biot}%
     {1774--1862}%
+    {\ifswedish
+    {Fransk fysiker, astronom och matematiker som med F\'elix Savart
+    formulerade Biot--Savarts lag f{\"o}r magnetostatik,
+    $$
+      \abovedisplayskip=3pt
+      \belowdisplayskip=3pt
+      {\bf B}({\bf x})={{\mu_0 I}\over{4\pi}}
+        \int{{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
+    $$
+    samt studerade polarisation hos elektromagnetiska v{\aa}gor.}
+    \else
     {French physicist, astronomer, and mathematician who co-discovered
     the Biot--Savart law of magnetostatics with F\'elix Savart,
     $$
@@ -154,7 +196,8 @@
       {\bf B}({\bf x})={{\mu_0 I}\over{4\pi}}
         \int{{d{\bf l}'\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
     $$
-    and studied the polarization of light.}%
+    and studied the polarization of light.}
+    \fi}%
     \sidx{Biot, Jean-Baptiste (1774--1862)}
     \sidx{Biot--Savarts lag}
 }
@@ -166,6 +209,19 @@
   \portrait{images/charles_de_coulomb_scaled_bw.eps}%
     {Charles-Augustin de Coulomb}%
     {1736--1806}%
+    {\ifswedish
+    {Fransk officer, ingenj{\"o}r och fysiker. Formule\-ra\-de den
+    fysikaliska lag som beskriver elektrostatisk kraft som attraktion
+    eller repulsion,
+    $$
+      \abovedisplayskip=3pt
+      \belowdisplayskip=3pt
+      {\bf F}={{qq'}\over{4\pi\varepsilon_0}}
+        {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
+    $$
+    som l{\"a}gger grunden f{\"o}r konceptet och definitionen av det
+    elektriska f{\"a}ltet.}
+    \else
     {French officer, engineer, and physicist. Discoverer of the law
     describing the electrostatic force of attraction and repulsion,
     $$
@@ -174,7 +230,8 @@
       {\bf F}={{qq'}\over{4\pi\varepsilon_0}}
         {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}},
     $$
-    forming the basis for the concept and definition of the electric field.}%
+    forming the basis for the concept and definition of the electric field.}
+    \fi}%
     \sidx{de Coulomb, Charles-Augustin (1736--1806)}
     \sidx{Coulombs kraftlag}
 }
