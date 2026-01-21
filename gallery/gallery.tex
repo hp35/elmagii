@@ -26,22 +26,28 @@
 %
 \input macros/epsf.tex
 \input macros/eplain.tex
+\newif\ifswedish
+% \swedishtrue   % \swedishtrue or \swedishfalse
+\swedishfalse
 
 %
 % Define the 'boxit' macro from D.E. Knuths "The TeXbook, Exercise 21.3.
+% Set the parameter \boxedtrue or \boxedfalse in order to have boxed
+% portrait generation.
 %
 \def\boxit#1{\vbox{\hrule\hbox{\vrule\kern1pt
   \vbox{\kern1pt#1\kern1pt}\kern1pt\vrule}\hrule}}
+\newif\ifboxed
+\boxedtrue   % \boxedtrue or \boxedfalse
+% \boxedfalse
 
 %
 % Define the macro which "typographically atomizes" the individual portraits.
 %
-\newdimen\portraitxsize  \portraitxsize=214pt
+\newdimen\portraitxsize  \portraitxsize=200pt
 \newdimen\portraitysize  \portraitysize=300pt
 \newdimen\portraitxmargin \portraitxmargin=14pt
 \newdimen\portraitymargin \portraitymargin=8pt
-\newif\ifboxed
-\boxedtrue   % \boxedtrue or \boxedfalse
 
 \def\portrait#1#2#3#4{%
   \ifboxed
@@ -241,14 +247,14 @@
      not different types of ``electrical fluid'', but of same type, labeled
      as positive and negative. First to discover the principle of conservation
      of charge.
-    % Benjamin Franklin(1706–1790) utförde under åren 1747–1749 experiment
-    % för att bevisa sin teori kring “en-vätskehypotesen”, där han
-    % argumenterade för att du Fays “vitreous och resinuous” dubbel-vätsketori
-    % var felaktig och att det bara fanns en typ av “elektrisk vätska”,
-    % och att alla elektrostatiska effekter kunde spåras till ett överflöd
-    % respektive underskott av denna “vätska”. Franklin betecknade dessa
-    % som positivt (överflöd) respektive negativt (underskott) av elektrisk
-    % vätska, termer som fortfarande idag lever kvar för att beteckna
+    % Benjamin Franklin(1706–1790) utf{\"o}rde under {\aa}ren 1747–1749 experiment
+    % f{\"o}r att bevisa sin teori kring “en-v{\"a}tskehypotesen”, d{\"a}r han
+    % argumenterade f{\"o}r att du Fays “vitreous och resinuous” dubbel-v{\"a}tsketori
+    % var felaktig och att det bara fanns en typ av “elektrisk v{\"a}tska”,
+    % och att alla elektrostatiska effekter kunde sp{\aa}ras till ett {\"o}verfl{\"o}d
+    % respektive underskott av denna “v{\"a}tska”. Franklin betecknade dessa
+    % som positivt ({\"o}verfl{\"o}d) respektive negativt (underskott) av elektrisk
+    % v{\"a}tska, termer som fortfarande idag lever kvar f{\"o}r att beteckna
     % laddningens polaritet.
     }%
     \sidx{Franklin, Benjamin (1706--1790)}
@@ -455,7 +461,7 @@
     strength ${\bf H}$ is named after him, and defined as $1\ {\rm Oe}=
     (4\pi)^{-1}\times10^3\ {\rm A}/{\rm m}\approx 79.58\ {\rm A}/{\rm m}$.}%
     \sidx{{\OE}rsted, Hans Christian (1777--1851)}
-    \sidx{Magnetisk fältstyrka ${\bf H}$}[{\OE}rsted]
+    \sidx{Magnetisk f{\"a}ltstyrka ${\bf H}$}[{\OE}rsted]
 }
 
 %
@@ -529,8 +535,13 @@
   \portrait{images/rickard_wilson_scaled_bw.eps}%
     {Rickard Wilson}%
     {1930--2000}%
+    {\ifswedish
     {Svensk vetenskapsman och arkitekt. Upphovsman till fatilarkalkylen,
-    presenterad 1955.}%
+    presenterad 1955.}
+    \else
+    {Swedish scientist and architect. Discoverer of the fatilar calculus,
+    presented in 1955.}
+    \fi}%
     \sidx{Wilson, Rickard (1930--2000)}
 }
 
@@ -543,14 +554,20 @@
 
 % Gallery of the principal scientists behind the theory covered in the course.
 
-
-
-
 \font\twelvecmbx=cmbx12
-\vskip 0pc\goodbreak\noindent{\twelvecmbx{Portr{\"a}ttgalleri inom klassisk elektromagnetism}}%
-  \writenumberedtocentry{index}{\hskip24pt{Portr{\"a}ttgalleri inom klassisk elektromagnetism}}%
+\vskip 0pc\goodbreak\noindent{\twelvecmbx
+  {Portr{\"a}ttgalleri inom klassisk elektromagnetism}}%
+  \writenumberedtocentry{index}{\hskip24pt
+  {Portr{\"a}ttgalleri inom klassisk elektromagnetism}}%
   \nobreak\bigskip\noindent\ignorespaces
+Elektromagnetism som {\"a}mne {\"a}r proppfyllt med celebriteter inom den
+klassiska fysiken, och det {\"a}r alltid trevligt att ha ett ansikte associerat
+med namnet. Detta portr{\"a}ttgalleri t{\"a}cker de prim{\"a}ra uppt{\"a}ckarna
+inom elektrostatik, magnetostatik och elektrodynamik.
+\medskip
+\portraitysize=282pt % 284pt
 \portraitpage{\dalembert}{\ampere}{\biot}{\coulomb}
+\portraitysize=300pt
 \portraitpage{\faraday}{\dufay}{\feynman}{\franklin}
 \portraitpage{\gauss}{\gilbert}{\heaviside}{\kelvin}
 \portraitpage{\laplace}{\lenz}{\lorentz}{\lorenz}
