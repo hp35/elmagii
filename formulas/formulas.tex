@@ -121,11 +121,18 @@ $$
     {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
       ={{q'}\over{4\pi\varepsilon_0 r^2}}{\bf e}_r
 $$
-\eqtitle{Coulombs generaliserade lag}
+\eqtitle{Coulombs generaliserade lag -- ``Coulombintegralen''}
 $$
   {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
-    {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'\
-  \Rightarrow\ \nabla\times{\bf E}={\bf 0}
+    {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'
+$$
+\eqtitle{Existens av skal{\"a}r elektrostatisk potential}
+Ur Coulombs generaliserade lag f{\"o}r elektrostatiska f{\"a}lt erh{\aa}lls
+$\nabla\times{\bf E}={\bf 0}$, vilket visar att den elektriska f{\"a}ltstyrkan
+alltid kan skrivas som en gradient av en skal{\"a}r funktion, den skal{\"a}ra
+potentialen $\phi$, definierad som
+$$
+  {\bf E}=-\nabla\phi.
 $$
 \eqtitle{Elektriskt fl{\"o}de}
 $$
@@ -192,17 +199,25 @@ $$
 $$
   {{d\rho}\over{dt}}=0\quad\Rightarrow\quad\nabla\cdot{\bf J}=0
 $$
+\eqtitle{Biot--Savarts lag f{\"o}r str{\"o}mslingor}
+$$
+  {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\int^{{\bf x}_b}_{{\bf x}_a}
+      {{{\bf I}({\bf x}')\times({\bf x}-{\bf x}')}
+        \over{|{\bf x}-{\bf x}'|^3}}\,dl'
+$$
 \eqtitle{Biot--Savarts generella lag}
 $$
   {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
       {{{\bf J}({\bf x}')\times({\bf x}-{\bf x}')}
         \over{|{\bf x}-{\bf x}'|^3}}\,dV'
 $$
-\eqtitle{Biot--Savarts lag f{\"o}r str{\"o}mslingor}
+\eqtitle{Existens av magnetostatisk vektorpotential}
+Ur Biot--Savarts generalla lag f{\"o}r magnetostatiska f{\"a}lt erh{\aa}lls
+$\nabla\cdot{\bf B}={\bf 0}$, vilket visar att den magnetiska
+fl{\"o}dest{\"a}theten alltid kan skrivas som en rotation av en vektorfunktion,
+vektorpotentialen ${\bf A}$, definierad som
 $$
-  {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\int^{{\bf x}_b}_{{\bf x}_a}
-      {{{\bf I}({\bf x}')\times({\bf x}-{\bf x}')}
-        \over{|{\bf x}-{\bf x}'|^3}}\,dl'
+  {\bf B}=\nabla\times{\bf A}.
 $$
 \eqtitle{Gauss lag f{\"o}r magnetisk fl{\"o}dest{\"a}thet --
          icke-existens f{\"o}r magnetiska mono\-poler} % existerar inte}
@@ -224,10 +239,6 @@ $$
 \eqtitle{Bunden ytstr{\"o}mt{\"a}thet}
 $$
   {\bf K}_{\rm b}={\bf M}\times{\bf e}_n
-$$
-\eqtitle{Magnetostatisk vektorpotential}
-$$
-  \nabla\cdot{\bf B}=0\quad\Leftrightarrow\quad{\bf B}=\nabla\times{\bf A}
 $$
 \eqtitle{Amp\`eres lag f{\"o}r vektorpotentialen}
 $$
