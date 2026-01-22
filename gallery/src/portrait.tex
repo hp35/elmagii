@@ -1,4 +1,32 @@
 %
+% File: teach/elmagii/gallery/src/portrait.tex [plain TeX code]
+% Github: https://github.com/elmagii/gallery/
+% Last change: January 22, 2026
+%
+% Macros for the typesetting of the gallery of primary physicists who
+% formed the theory of electomagnetism through history. These physicists
+% and mathematicians essentially formed the theory which we are describing
+% in the course ``Elektromagnetism II, 1TE626'', held 2022--2026 at Uppsala
+% University, Sweden.
+%
+% Copyright (C) 2026, Fredrik Jonsson, under Gnu General Public
+% License (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
+
+%
 % Define the macro which "typographically atomizes" the individual portraits.
 %
 \newdimen\portraitxsize  \portraitxsize=200pt
@@ -6,15 +34,16 @@
 \newdimen\portraitxmargin \portraitxmargin=36pt
 \newdimen\portraitymargin \portraitymargin=14pt
 
+%
+% Define a macro for the display of an individual image, primarily using
+% argument #1 for the image but if this is found to be missing instead
+% using argument #2.
+%
 \newread\imgtest
 \def\portraitimage#1#2{%
-%  \def\includeimage#1{%
-%    \pdfximage width 5cm {#1}%
-%    \pdfrefximage\pdflastximage
-%  }
   \openin\imgtest=#1
   \ifeof\imgtest
-    % File does NOT exist
+    % File #1 does not exist -> Try using #2 instead
     \hbox to \portraitxsize{\epsfysize=164pt\hfil\epsfbox{#2}\hfil}%
   \else
     % File exists
@@ -23,6 +52,14 @@
   \fi
 }
 
+%
+% Define a macro for the typesetting of an individual portrait.
+%   Argument #1: Primary image file (EPS) to be used.
+%   Argument #2: Secondary image file (EPS) to be used if #1 is missing.
+%   Argument #3: Name to be displayed in bold beneath the image.
+%   Argument #4: Year span (yyyy-yyyy) to be displayed beneath the name.
+%   Argument #5: Descriptive text to be displayed beneath the Year span.
+%
 \def\portrait#1#2#3#4#5{%
   \ifboxed
     \boxit{%
@@ -45,6 +82,10 @@
   \fi
 }
 
+%
+% Define a macro for the typesetting of a single row containing a
+% pair of portraits.
+%
 \def\portraitpair#1#2{%
   \ifboxed
   \hbox{%
@@ -63,6 +104,10 @@
   \fi
 }
 
+%
+% Define a macro for the typesetting of a single page of four portraits,
+% composed of two rows each containing a pair of portraits.
+%
 \def\portraitpage#1#2#3#4{%
   \portraitpair{#1}{#2}%
   \vskip\portraitymargin%
