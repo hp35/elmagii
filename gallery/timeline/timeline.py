@@ -38,14 +38,14 @@ Data of timelines in the format "(Name, birth_year, death_year)"
 """
 people = [
     ("William Gilbert", 1544, 1603),
-    ("Charles Francois de Cisternay du Fay", 1698, 1739),
+    ("Fran\c{c}ois de Cisternay du Fay", 1698, 1739),
     ("Benjamin Franklin", 1706, 1790),
     ("Jean le Rond d'Alembert", 1717, 1783),
     ("Charles-Augustin de Coulomb", 1736, 1806),
     ("Pierre-Simon Laplace", 1749, 1827),
     ("Jean-Baptiste Biot", 1774, 1862),
-    ("Andre-Marie Ampere", 1775, 1836),
-    ("Hans Christian Oersted", 1777, 1851),
+    ("Andr{\\'e}-Marie Amp\`ere", 1775, 1836),
+    ("Hans Christian {\OE}rsted", 1777, 1851),
     ("Carl Friedrich Gauss", 1777, 1855),
     ("Siméon Denis Poisson", 1781, 1840),
     ("Felix Savart", 1791, 1841),
@@ -54,12 +54,15 @@ people = [
     ("Emil Lenz", 1804, 1865),
     ("Wilhelm Eduard Weber", 1804, 1891),
     ("George Stokes", 1819, 1903),
-    ("William Thomson, 1st Baron Kelvin", 1824, 1907),
+    ("Lord Kelvin", 1824, 1907),
     ("Ludvig Lorenz", 1829, 1891),
     ("James Clerk Maxwell", 1831, 1879),
     ("Oliver Heaviside", 1850, 1925),
     ("Hendrik Antoon Lorentz", 1853, 1928),
+    ("John Joseph ``J. J.'' Thomson", 1856, 1940),
     ("Nikola Tesla", 1856, 1943),
+    ("George Paget Thomson", 1892, 1975),
+    ("Louis de Broglie", 1892, 1987),
     ("Richard Feynman", 1918, 1988),
     ("Rickard Wilson", 1930, 2000),
 ]
@@ -85,7 +88,7 @@ ax.barh(
 ax.set_yticks(y_pos)
 ax.set_yticklabels(names)
 ax.set_xlabel("Year")
-ax.set_title("A brief history of classical electromagnetics")
+# ax.set_title("A brief history of classical electromagnetics")
 
 ax.grid(axis="x", linestyle="--", alpha=0.5)
 ax.invert_yaxis()
@@ -121,8 +124,8 @@ x_padding = 5  # years
 ax.set_xlim(min_year - x_padding, max_year + x_padding)
 
 # Set gridlines every 50 years
-start_year = (min_year // 50) * 50
-end_year = ((max_year // 50) + 1) * 50
+start_year = (min_year // 50) * 50 + 50
+end_year = ((max_year // 50) + 1) * 50 - 50
 ax.set_xticks(np.arange(start_year, end_year + 1, 50))
 ax.grid(axis="x", linestyle="--", alpha=0.5)
 
