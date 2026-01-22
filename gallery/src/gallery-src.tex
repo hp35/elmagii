@@ -351,7 +351,12 @@
     {Oliver Heaviside}%
     {1850--1925}%
     {\ifswedish
-      {Brittisk matematiker och elektroingenj{\"o}r som utvecklade tekniker f{\"o}r att l{\"o}sa differentialekvationer, ekvivalent till Laplace-transformen, utvecklade den moderna vektoranalysen och formulerade Maxwells ekvationer p{\aa} den kocisa och kompakta form som idag anv{\"a}nds. Uppfann koaxialkabeln och {\"a}r namnet bakom Heaviside-funktionen $H(x)$.}
+      {Brittisk matematiker och elektroingenj{\"o}r som utvecklade
+      tekniker f{\"o}r att l{\"o}sa differentialekvationer, ekvivalent
+      till Laplace-transformen, utvecklade den moderna vektoranalysen
+      och formulerade Maxwells ekvationer p{\aa} den kocisa och kompakta
+      form som idag anv{\"a}nds. Uppfann koaxialkabeln och {\"a}r namnet
+      bakom Heaviside-funktionen $H(x)$.}
     \else
       {British mathematician and electrical engineer who invented a new
       technique for solving differential equations (equivalent to the
@@ -369,18 +374,36 @@
 %
 \def\kelvin{%
   \portrait{images/lord_kelvin_scaled_bw.eps}%
-    {William Thomson, Lord Kelvin}%
+    {Lord Kelvin}%
     {1824--1907}%
-    {British mathematician, mathematical physicist and engineer.
-    In this course we focus on the Kelvin--Stokes theorem,
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      \def\iint{\mathop{\int\kern-8pt\int}}
-      \iint(\nabla\times{\bf a})\cdot d{\bf S}
-        =\oint{\bf a}\cdot d{\bf l},
-    $$
-    after Lord Kelvin and George Stokes, the fundamental theorem for curls.}%
+    {\ifswedish
+      {William Thomson, 1:e Baron Kelvin. Brittisk ingenj{\"o}r, matematiker
+      och fysiker. Kom fram till att absoluta nollpunkten motsvarar cirka
+      $-273.15^{\circ}\ {\rm C}$. I denna kurs anv{\"a}nder vi frekvent
+      Kelvin--Stokes teorem (``Stokes teorem''),
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        \def\iint{\mathop{\int\kern-8pt\int}}
+        \iint(\nabla\times{\bf a})\cdot d{\bf S}
+          =\oint{\bf a}\cdot d{\bf l},
+      $$
+      efter Lord Kelvin och George Stokes.}
+    \else
+      {William Thomson, 1st Baron Kelvin. British engineer, mathematician
+      and physicist. Determined the value of absolute zero temperature as
+      approximately $-273.15^{\circ}\ {\rm C}$. In this course we use the
+      Kelvin--Stokes theorem,
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        \def\iint{\mathop{\int\kern-8pt\int}}
+        \iint(\nabla\times{\bf a})\cdot d{\bf S}
+          =\oint{\bf a}\cdot d{\bf l},
+      $$
+      after Lord Kelvin and George Stokes, being the fundamental theorem
+      for curls.}
+    \fi}%
     \sidx{Kelvin, Lord (1824--1907)}[William Thomson, 1st Baron Kelvin]
     \sidx{Kelvin--Stokes teorem}[Se Stokes teorem]
 }
@@ -392,19 +415,31 @@
   \portrait{images/pierre-simon_de_laplace_scaled_bw.eps}%
     {Pierre-Simon Laplace}%
     {1749--1827}%
-    {French polymath, a scholar whose work has been instrumental in the
-    fields of physics, astronomy, mathematics, engineering, statistics,
-    and philosophy. In this course we are primarily concerned with the
-    Laplace equation
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      \nabla^2\phi=0
-    $$
-    for the scalar electrostatic potential $\phi$.}%
+    {\ifswedish
+      {Franskt universalgeni ({\it polymath}) vars arbeten haft en fundamental
+      betydelse inom fysik, astronomi, matematik, ingenj{\"o}rskonst, statistik
+      och filosofi. I denna kurs behandlar vi prim{\"a}rt Laplaces ekvation
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        \nabla^2\phi=0
+      $$
+      f{\"o}r den skal{\"a}ra elektrostatiska potentialen $\phi$.}
+    \else
+      {French polymath, a scholar whose work has been instrumental in the
+      fields of physics, astronomy, mathematics, engineering, statistics,
+      and philosophy. In this course we are primarily concerned with the
+      Laplace equation
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        \nabla^2\phi=0
+      $$
+      for the scalar electrostatic potential $\phi$.}
+    \fi}%
     \sidx{Laplace, Pierre-Simon (1749--1827)}
     \sidx{Laplaces ekvation}
-    \sidx{Laplace-operatorn}
+    \sidx{Laplace-operatorn $\nabla^2$}
 }
 
 %
@@ -414,16 +449,29 @@
   \portrait{images/emil_lenz_scaled_bw.eps}%
     {Emil Lenz}%
     {1804--1865}%
-    {Russian physicist of Baltic German descent who is most noted for
-    formulating Lenz's law in electrodynamics in 1834. In some sense, we
-    can associate Lenz with the minus sign in Faraday's law of induction,
-    $$
-      \abovedisplayskip=3pt
-      \belowdisplayskip=3pt
-      {\cal E}= -{{d\Phi_{\rm M}}\over{dt}}
-        \quad\Leftrightarrow\quad
-        \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}}.
-    $$}%
+    {\ifswedish
+      {Russian physicist of Baltic German descent who is most noted for
+      formulating Lenz's law in electrodynamics in 1834. In some sense, we
+      can associate Lenz with the minus sign in Faraday's law of induction,
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        {\cal E}= -{{d\Phi_{\rm M}}\over{dt}}
+          \quad\Leftrightarrow\quad
+          \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}}.
+      $$}
+    \else
+      {Russian physicist of Baltic German descent who is most noted for
+      formulating Lenz's law in electrodynamics in 1834. In some sense, we
+      can associate Lenz with the minus sign in Faraday's law of induction,
+      $$
+        \abovedisplayskip=3pt
+        \belowdisplayskip=3pt
+        {\cal E}= -{{d\Phi_{\rm M}}\over{dt}}
+          \quad\Leftrightarrow\quad
+          \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}}.
+      $$}
+    \fi}%
     \sidx{Lenz, Emil (1804--1865)}
     \sidx{Lenz lag}
 }
