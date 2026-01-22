@@ -48,7 +48,10 @@
   \vbox{\kern1pt#1\kern1pt}\kern1pt\vrule}\hrule}}
 \newif\ifboxed
 \boxedtrue   % \boxedtrue or \boxedfalse
-%\boxedfalse
+
+\def\presection#1{%
+  \noindent{\font\twelvecmbx=cmbx12\twelvecmbx{#1}}%
+  \smallskip\noindent}%
 
 \input src/portrait.tex
 \input src/gallery-src.tex
