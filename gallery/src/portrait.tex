@@ -6,24 +6,41 @@
 \newdimen\portraitxmargin \portraitxmargin=36pt
 \newdimen\portraitymargin \portraitymargin=14pt
 
-\def\portrait#1#2#3#4{%
+\newread\imgtest
+\def\portraitimage#1#2{%
+%  \def\includeimage#1{%
+%    \pdfximage width 5cm {#1}%
+%    \pdfrefximage\pdflastximage
+%  }
+  \openin\imgtest=#1
+  \ifeof\imgtest
+    % File does NOT exist
+    \hbox to \portraitxsize{\epsfysize=164pt\hfil\epsfbox{#2}\hfil}%
+  \else
+    % File exists
+    \closein\imgtest
+    \hbox to \portraitxsize{\epsfysize=164pt\hfil\epsfbox{#1}\hfil}%
+  \fi
+}
+
+\def\portrait#1#2#3#4#5{%
   \ifboxed
     \boxit{%
       \vbox{%
         \boxit{%
-          \hbox to \portraitxsize{\epsfysize=164pt\hfil\epsfbox{#1}\hfil}%
+          \portraitimage{#1}{#2}%
         }%
-        \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{\bf#2}\hfil}}%
-        \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{(#3)}\hfil}}%
-        \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt{#4}}}%
+        \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{\bf#3}\hfil}}%
+        \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{(#4)}\hfil}}%
+        \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt{#5}}}%
       }%
     }%
   \else
     \vbox{%
-      \hbox to \portraitxsize{\epsfysize=164pt\hfil\epsfbox{#1}\hfil}%
-      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{\bf#2}\hfil}}%
-      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{(#3)}\hfil}}%
-      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt{#4}}}%
+      \portraitimage{#1}{#2}%
+      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{\bf#3}\hfil}}%
+      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{(#4)}\hfil}}%
+      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt{#5}}}%
     }%
   \fi
 }
