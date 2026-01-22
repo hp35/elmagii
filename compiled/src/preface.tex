@@ -2,3 +2,6 @@
   \writenumberedtocentry{index}{\hskip24pt{F{\"o}rord}}%
   \nobreak\vskip 48pt% \noindent\ignorespaces%
   \noindent{#1}\par\cleardoublepage}
+\def\presection#1{\par~\vskip 5pc\goodbreak\noindent{\twelvecmbx{#1}}%
+  \advance\secno by -1\writenumberedtocentry{index}{\hskip24pt{#1}}%
+  \nobreak\vskip 24pt\noindent\ignorespaces}
