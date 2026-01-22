@@ -1,0 +1,54 @@
+%
+% Define the macro which "typographically atomizes" the individual portraits.
+%
+\newdimen\portraitxsize  \portraitxsize=200pt
+\newdimen\portraitysize  \portraitysize=300pt
+\newdimen\portraitxmargin \portraitxmargin=36pt
+\newdimen\portraitymargin \portraitymargin=14pt
+
+\def\portrait#1#2#3#4{%
+  \ifboxed
+    \boxit{%
+      \vbox{%
+        \boxit{%
+          \hbox to \portraitxsize{\epsfysize=164pt\hfil\epsfbox{#1}\hfil}%
+        }%
+        \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{\bf#2}\hfil}}%
+        \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{(#3)}\hfil}}%
+        \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt{#4}}}%
+      }%
+    }%
+  \else
+    \vbox{%
+      \hbox to \portraitxsize{\epsfysize=164pt\hfil\epsfbox{#1}\hfil}%
+      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{\bf#2}\hfil}}%
+      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt\hfil{(#3)}\hfil}}%
+      \hbox{\vbox{\hsize=\portraitxsize\parindent=0pt{#4}}}%
+    }%
+  \fi
+}
+
+\def\portraitpair#1#2{%
+  \ifboxed
+  \hbox{%
+    \hskip14pt%
+    \boxit{\hbox{\vbox to \portraitysize{\hbox{#1}}}}%
+    \hskip\portraitxmargin%
+    \boxit{\hbox{\vbox to \portraitysize{\hbox{#2}}}}%
+  }%
+  \else
+  \hbox{%
+    \hskip14pt%
+    \hbox{\vbox to \portraitysize{\hbox{#1}}}%
+    \hskip\portraitxmargin%
+    \hbox{\vbox to \portraitysize{\hbox{#2}}}%
+  }%
+  \fi
+}
+
+\def\portraitpage#1#2#3#4{%
+  \portraitpair{#1}{#2}%
+  \vskip\portraitymargin%
+  \portraitpair{#3}{#4}%
+  \vfill\eject%
+}
