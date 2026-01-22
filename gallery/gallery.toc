@@ -1,1 +1,0 @@
-\tocindexentry {\hskip 24pt {Portr{\"a}ttgalleri inom klassisk elektromagnetism} \ifswedish {Portr{\"a}ttgalleri inom klassisk elektromagnetism} \else {Portrait gallery in classical electromagnetism} \fi }{\penalty \@M }{1}
