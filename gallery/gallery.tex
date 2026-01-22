@@ -26,9 +26,18 @@
 %
 \input macros/epsf.tex
 \input macros/eplain.tex
-\newif\ifswedish
-\swedishtrue   % \swedishtrue or \swedishfalse
-% \swedishfalse
+
+%
+% Define language constants. We are here only concerned with Swedish or English.
+%
+\newcount\swedish \swedish=0
+\newcount\english \english=1
+
+%
+% Set the current language to be used throughout.
+%
+\newcount\lang
+\lang=\swedish  % Change to \english for English
 
 %
 % Define the 'boxit' macro from D.E. Knuths "The TeXbook, Exercise 21.3.
