@@ -14,6 +14,7 @@ all:
 	   make -C $$lecture ;\
 	done
 	make -C $(COMPILED)
+	make -C ./gallery/
 
 archive:
 	make -ik clean
@@ -25,3 +26,4 @@ clean:
 	   make -ik clean -C $$lecture ;\
 	done
 	make clean -C $(COMPILED)
+	make clean -C ./gallery/
