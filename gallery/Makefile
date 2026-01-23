@@ -43,6 +43,12 @@ $(dvis): $(srcs)
 	@$(TEX) $(BASE).tex
 	@echo "DVI file for $(BASE).tex written to $(BASE).dvi."
 
+texchars:
+	@echo "Converting Swedish Unicode chars in gallery.tex to TeX codes."
+	@../lect-01/macros/se-texchars.sh gallery.tex > tmp.tex
+	@mv tmp.tex gallery.tex
+	@echo "Reload gallery.tex to incorporate the changes."
+
 clean:
 	@make -ik clean -C images
 	@rm -Rf *~ *.aux *.toc *.idx *.ind *.log *.ilg *.dvi *.ps $(ARCHIVE)
