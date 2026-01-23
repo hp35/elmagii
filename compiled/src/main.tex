@@ -33,6 +33,15 @@
 \input src/frontpage.tex
 \input src/preface.tex
 
+%
+% Define language constants. We are here only concerned with Swedish
+% or English, and we for this document set the language to be used
+% throughout to Swedish.
+%
+\newcount\swedish \swedish=0
+\newcount\english \english=1
+\newcount\lang \lang=\swedish  % Change to \english for English
+
 \frontpage                             % Title page of compilation
 \pageno=-2\footline{\hfil\folio\hfil}  % Roman pagenumbering for intro
 \copyrights                            % Generic copyrights page
@@ -44,6 +53,10 @@
   mot civilingenj{\"o}rsexamen) p{\aa} {\AA}ngstr{\"o}mlaboratoriet, Uppsala
   Universitet, med varje kapitel motsvarande en f{\"o}rel{\"a}sning om tv{\aa}
   timmar ($2\times45$ minuter i svensk akademisk standard).
+  Dessa f{\"o}rel{\"a}sningar publiceras h{\"a}rmed publikt med hopp om att
+  de kan v{\"a}gleda i den stundtals sn{\aa}riga och matematiskt t{\"a}mligen
+  intensiva disciplin som elektrostatik, magnetostatik och elektrodynamik
+  utg{\"o}r.
   Vissa h{\"a}rledningar {\"a}r till sin natur t{\"a}mligen omst{\"a}ndliga
   och kan med f{\"o}rdel l{\"a}mnas till den intresserade l{\"a}saren att
   f{\"o}lja  p{\aa} egen kammare med papper och penna tillhands.
@@ -97,7 +110,17 @@
   \noindent Fredrik Jonsson,\par
   \noindent December 2025}
 
+%
+% Collection of formulas in electromagnetism.
+%
 \input ../formulas/formulas-twocol.tex % Two-column collection of formulas
+
+%
+% Portrait gallery in electromagnetism.
+%
+\input ../gallery/src/portrait.tex
+\input ../gallery/src/gallery-src.tex
+
 \pageno=1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
