@@ -309,7 +309,7 @@ som {\"a}r centrerad i elektronmolnet och med k{\"a}rnan p{\aa} ytan,
 \sidx{Integral}[Sluten yt-]\sidx{Integral}[Volym-]
 $$
   \iiint_V\nabla\cdot{\bf E}_{\rm e}\,dV
-    =\oiint_{\Omega}{\bf E}_{\rm e}\cdot d{\bf A}
+    =\oiint_{\Omega}{\bf E}_{\rm e}\cdot d{\bf S}
     ={{Q}\over{\varepsilon_0}},
 $$
 d{\"a}r $Q$ {\"a}r den av $\Omega$ inneslutna laddningen.
@@ -326,7 +326,7 @@ elektronmolnet att den radiella komponenten av elektriska f{\"a}ltet p{\aa}
 sf{\"a}ren med radie $r$ {\"a}r konstant, och ytintegralen \sidx{Integral}[Yt-]
 ges d{\"a}rmed som
 $$
-  \oiint_{\Omega}{\bf E}_{\rm e}\cdot d{\bf A} =E_{\rm e}4\pi r^2.
+  \oiint_{\Omega}{\bf E}_{\rm e}\cdot d{\bf S} =E_{\rm e}4\pi r^2.
 $$
 Om vi s{\"a}tter samman dessa uttryck har vi allts{\aa} att
 $$
@@ -426,7 +426,7 @@ laddningen {\"a}r positiv eller negativ. Formulerat med \idx{Gauss lag} har vi
 d{\"a}rmed
 att
 $$
-  \oiint_{\Omega:|{\bf x}|=r}{\bf E}\cdot d{\bf A}
+  \oiint_{\Omega:|{\bf x}|=r}{\bf E}\cdot d{\bf S}
     =4\pi r^2 E_r(r)
     ={{1}\over{\varepsilon_0}}\iiint_{V:|{\bf x}|\le r}\rho(r')\,dV'
     ={{1}\over{\varepsilon_0}}\int^r_0\rho(r')
@@ -623,7 +623,7 @@ $$
   \bigg(\quad\Leftrightarrow\qquad
   \iiint_V \rho_{\rm b}\,dV
     = -\iiint_V\nabla\cdot{\bf P}\,dV
-    = -\oiint_{\Omega}{\bf P}\,dA
+    = -\oiint_{\Omega}{\bf P}\,dS
     \quad\bigg)
 $$
 s{\aa} har vi allts{\aa} f{\"o}r divergensen f{\"o}r det elektriska f{\"a}ltet
@@ -686,7 +686,7 @@ $$
   \hbox{Gauss:}\qquad
   \displaystyle
   \iiint_V\nabla\cdot{\bf E}\,dV=
-  \oiint_{\Omega}{\bf E}\cdot d{\bf A}={{Q}\over{\varepsilon_0}}
+  \oiint_{\Omega}{\bf E}\cdot d{\bf S}={{Q}\over{\varepsilon_0}}
   \qquad\to\qquad
   {\bf e}_n \cdot({\bf E}_{2}-{\bf E}_{1})A
     ={{Q}\over{\varepsilon_0}}
@@ -701,7 +701,7 @@ som innefattar gr{\"a}nsytan:\sidx{Stokes teorem}
 $$
   \hbox{Stokes:}\qquad
   \iint_{\Sigma}\underbrace{(\nabla\times{\bf E})}_{=-\partial{\bf B}/\partial t=0}
-      \cdot d{\bf A}
+      \cdot d{\bf S}
     =\oint_{\Sigma}{\bf E}\cdot d{\bf s}
     =0
   \qquad\to\qquad
@@ -728,7 +728,7 @@ $$
   \hbox{Gauss:}\qquad
   \displaystyle
   \iiint_V\nabla\cdot{\bf D}\,dV=
-  \oiint_{\Omega}{\bf D}\cdot d{\bf A} = Q_{\rm f}
+  \oiint_{\Omega}{\bf D}\cdot d{\bf S} = Q_{\rm f}
   \qquad\to\qquad
   {\bf e}_n \cdot({\bf D}_{2}-{\bf D}_{1})A = Q_{\rm f}
   \quad\Leftrightarrow\quad
@@ -763,7 +763,7 @@ erh{\aa}ller vi ist{\"a}llet
 $$
   \eqalign{
   \hbox{Stokes:}\qquad
-  \iint_{\Sigma}\underbrace{(\nabla\times{\bf D})}_{\ne0}\cdot d{\bf A}
+  \iint_{\Sigma}\underbrace{(\nabla\times{\bf D})}_{\ne0}\cdot d{\bf S}
     =\oint_{\Sigma}{\bf D}\cdot d{\bf s}
     =\oint_{\Sigma}{\bf P}\cdot d{\bf s}
   \quad\to\quad&
