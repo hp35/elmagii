@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%%% Begin two-column mode %%%%%%%%%%%%%%%%%%
 {\newdimen\fullhsize
 \fullhsize=170mm \hsize=82mm
-\topskip=36pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\rightskip=0pt
+\topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\rightskip=0pt
 \parindent=0pt
 \def\fulline{\hbox to\fullhsize}
 \footline={\hfill{\rm\folio}}
@@ -18,8 +18,8 @@
   \makefootline}
   \advancepageno}
 \def\columnbox{\leftline{\pagebody}}
-\def\eqsection#1{\goodbreak%
-  \vskip6pt%
+\def\eqsection#1{%
+  \vskip6pt\goodbreak%
   \hrule width\hsize\vskip1pt%
   \hrule width\hsize
   \vskip4pt%
@@ -27,7 +27,7 @@
   \vskip4pt%
   \hrule width\hsize\vskip1pt%
   \hrule width\hsize\vskip10pt}
-\def\eqtitle#1{\vskip2pt{\it #1}\par}
+\def\eqtitle#1{\vskip2pt\goodbreak{\it #1}\par}
 \def\versionnumber{1.0}             % Version of this collection of formulas
 \def\versiondate{11 december, 2025} % Timestamp of this collection of formulas
 \def\version{v.\versionnumber\ (\versiondate)}

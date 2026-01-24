@@ -85,22 +85,26 @@ $m_{\rm p}=1.67262192595(52)\times10^{-27}\ {\rm kg}$\cr
 }
 
 \eqsection{Konstitutiva relationer}
+% \eqtitle{Elektrisk polarisationsdensitet ${\bf P}$}
 \eqtitle{Elektrisk polarisationsdensitet}
 $$
   {\bf P} \equiv \Big\langle{{d{\bf p}}\over{dV}}\Big\rangle
     = \varepsilon_0\chi_{\rm e}{\bf E},\qquad
   \nabla\cdot{\bf P}=-\rho_{\rm b}
 $$
+% \eqtitle{Elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}
 \eqtitle{Elektrisk fl{\"o}dest{\"a}thet}
 $$
   {\bf D}\equiv\varepsilon_0{\bf E}+{\bf P}
     =\varepsilon_0\varepsilon_{\rm r}{\bf E}
 $$
+% \eqtitle{Magnetisering ${\bf M}$}
 \eqtitle{Magnetisering}
 $$
   {\bf M} \equiv \Big\langle{{d{\bf m}}\over{dV}}\Big\rangle
     = {{1}\over{\mu_0}}\Big(1-{{1}\over{\mu_{\rm r}}}\Big){\bf B}
 $$
+% \eqtitle{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}
 \eqtitle{Magnetisk fl{\"o}dest{\"a}thet}
 $$
   {\bf B}\equiv\mu_0({\bf H}+{\bf M})
@@ -321,6 +325,15 @@ $$
 \vfill\eject
 
 \eqsection{Vektoridentiteter}
+\eqtitle{Notation}
+\halign{#\hfil\ &#\hfil&\quad\hfil(#)\cr
+  $dl$       & Skal{\"a}rt linjeelement l{\"a}ngs kurva & ${\rm m}$\cr
+  $d{\bf l}$ & Riktat linjeelement $d{\bf l}={\bf e}_l dl$
+               l{\"a}ngs kurva& ${\rm m}$\cr
+  $dS$       & Skal{\"a}rt ytelement & ${\rm m}^2$\cr
+  $d{\bf S}$ & Riktat ytelement $d{\bf S}={\bf e}_n dS$ & ${\rm m}^2$\cr
+  $dV$       & Volymelement & ${\rm m}^3$\cr
+}
 \eqtitle{Trippelprodukter}
 $$
   \eqalign{
@@ -390,7 +403,7 @@ $$
 $$
 \eqtitle{Gradient-teoremet (analysens fundamentalsats)}
 $$
-  \int^{{\bf x}_b}_{{\bf x}_a}\nabla f\cdot d{\bf l}=f({\bf x}_b)-f({\bf x}_a)
+  \int^{{\bf x}_b}_{{\bf x}_a}(\nabla f)\cdot d{\bf l}=f({\bf x}_b)-f({\bf x}_a)
 $$
 \eqtitle{Greens teorem}
 $$
@@ -409,8 +422,9 @@ $$
 $$
   \iint_S(\nabla f)\times d{\bf S}=-\oint_{\Gamma}f\,d{\bf l}
 $$
-
-\eqsection{Integraler}
+\vfill\eject
+% \eqsection{Ofta anv{\"a}ndbara skal{\"a}ra integraler}
+\eqsection{Skal{\"a}ra integraler}
 $$
   \eqalign{
     \int&x^n\,dx={{1}\over{(n+1)}}x^{n+1},\quad n\ne-1\cr
@@ -424,6 +438,42 @@ $$
     \int&{{dx}\over{\cos^2x}}=\tan(x)\cr
     \int&{{dx}\over{\sin x}}=\ln|\tan(x/2)|\cr
     \int&\ln x\,dx=x\ln x - x\cr
+  }
+$$
+\vfill\eject
+
+\eqsection{Serieutvecklingar}
+\eqtitle{Endimensionella Maclaurin-utvecklingar}
+$$
+  \eqalign{
+    \sin(x)&=x-{{x^3}\over{3!}}+{{x^5}\over{5!}}-{{x^7}\over{7!}}+\ldots\cr
+%            =\sum^{\infty}_{n=0}(-1)^n{{x^{2n+1}}\over{(2n+1)!}}\cr
+    \cos(x)&=1-{{x^2}\over{2!}}+{{x^4}\over{4!}}-{{x^6}\over{6!}}+\ldots\cr
+    {{1}\over{1+x}}&=1-x+x^2-x^3+\ldots\cr
+    {{1}\over{1-x}}&=1+x+x^2+x^3+\ldots\cr
+    \exp(x)&=1+x+{{x^2}\over{2}}+{{x^3}\over{3}}+\ldots\cr
+    \ln(1+x)&=x-{{x^2}\over{2}}+{{x^3}\over{3}}-{{x^4}\over{4}}+\ldots\cr
+  }
+$$
+\eqtitle{Tredimensionell Taylor-utveckling runt ${\bf x}={\bf x}_0$}
+$$
+  \eqalign{
+  f({\bf x}) &= \sum^{\infty}_0 {{1}\over{n!}}
+    [({\bf x}-{\bf x}_0)\cdot\nabla]^n f({\bf x}_0)\cr
+  }
+$$
+\eqtitle{Tredimensionell Maclaurin-utveckling}
+$$
+  \eqalign{
+  f({\bf x}) &= f({\bf 0})
+  +\sum^{3}_{k=1} x'_k
+     {{\partial f({\bf x}')}
+       \over{\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}\cr
+       &\qquad
+  +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1} x'_j x'_k
+     {{\partial^2 f({\bf x}')}
+       \over{\partial x'_j\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}
+  +\ldots\cr
   }
 $$
 \vfill\eject
