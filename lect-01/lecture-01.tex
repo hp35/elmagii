@@ -143,7 +143,7 @@
 }{%
   Gauss lag p{\aa} integral- respektive differentialform:
   $$
-    \oiint_S {\bf E}\cdot d{\bf A}
+    \oiint_S {\bf E}\cdot d{\bf S}
        ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV
     \qquad\Leftrightarrow\qquad
     \nabla\cdot{\bf E}={{\rho({\bf x})}\over{\varepsilon_0}}.
@@ -186,7 +186,7 @@ Gilberts\sidx{Gilbert, William (1544--1603)} (1544--1603)
 {\it On Magnetism}\sidx{Gilbert, William (1544--1603)}[{{\it On Magnetism}}]
 (1600), d{\"a}r elektrisk attraktionskraft\sidx{Attraktionskraft}[Elektrisk]
 separerades fr{\aa}n magnetism, samt
-Fran\c{c}ois de Cisternay du Fays (1698--1739)\sidx{de Cisternay du Fays,
+Fran\c{c}ois de Cisternay du Fays (1698--1739)\sidx{de Cisternay du Fay,
 Fran\c{c}ois (1698--1739)}[{{\it Sixi\`eme m\'emoire sur l'\'electricit\'e
 (1734)}}]\numberedfootnote{Vilket namn!} uppt{\"a}ckt (1730) av {\it tv{\aa}
 typer} av laddning, ``vitreous'' (``glasaktig'', associerat med att den uppstod
@@ -558,10 +558,11 @@ fl{\"o}det\sidx{Elektriskt fl{\"o}de} ut fr{\aa}n denna laddning, s{\aa} kan vi
 se det som att fl{\"o}det h{\"a}rr{\"o}r fr{\aa}n en {\it k{\"a}lla}, och vi
 kommer fram{\"o}ver i kursen ofta att relatera till ``k{\"a}lladdningar'' som
 ger upphov till elektriska f{\"a}lt och
-fl{\"o}den.\numberedfootnote{Genomg{\aa}ende kommer vi i kursen att
-  s{\"a}tta ett prim ($'$) p{\aa} de objekt som vi betraktar som
-  k{\"a}llor,\sidx{K{\"a}lladdning} som ${\bf x}'$, $dA'$ eller $dV'$,
-  och l{\aa}ta observationspunkt och m{\"a}tetal vid denna vara oprimmade.
+fl{\"o}den.\numberedfootnote{Genomg{\aa}ende kommer vi i kursen att s{\"a}tta
+  ett prim ($'$) p{\aa} de objekt som vi betraktar som k{\"a}llor,
+  \sidx{K{\"a}lladdning} som ${\bf x}'$, $dS'$ (ytelement) eller $dV'$
+  (volymelement), och l{\aa}ta observationspunkt och m{\"a}tetal vid denna
+  vara oprimmade.
   Vi kommer {\"a}ven att genomg{\aa}ende explicit anv{\"a}nda
   Leibniz\sidx{Leibniz, Gottfried Wilhelm (1646--1716)} notation
   (${{\partial}\over{\partial x}}$, ${{d}\over{dx}}$) f{\"o}r derivator,
@@ -578,18 +579,18 @@ gentemot ytans normalvektor ${\bf n}$, ges med utnyttjandet av den sf{\"a}riska
 symmetrin som\sidx{Integral}[Ytintegral]
 $$
   \eqalign{
-    \Phi_{\rm E}&=\oiint_S {\bf E}({\bf x})\cdot d{\bf A}\cr
+    \Phi_{\rm E}&=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}\cr
       &=\oiint_S
       \underbrace{
         {{q'}\over{4\pi\varepsilon_0}}
         {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
       }_{=E_r(r){\bf e}_r}\cdot
       \underbrace{
-        {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|}}dA
-      }_{={\bf e}_r dA}
+        {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|}}dS
+      }_{={\bf e}_r dS}
       =\big\{\hbox{Tag $r\equiv|{\bf x}-{\bf x}'|$}\big\}\cr
-      &=\oiint_S{{q'}\over{4\pi\varepsilon_0 r^2}}\,dA
-      ={{q'}\over{4\pi\varepsilon_0 r^2}}\oiint_S\,dA
+      &=\oiint_S{{q'}\over{4\pi\varepsilon_0 r^2}}\,dS
+      ={{q'}\over{4\pi\varepsilon_0 r^2}}\oiint_S\,dS
       ={{q'}\over{4\pi\varepsilon_0 r^2}}4\pi r^2
       ={{q'}\over{\varepsilon_0}}\cr
   }
@@ -642,7 +643,7 @@ totala elektriska fl{\"o}de} $\Phi_{\rm E}$ ut genom ytan som omsluter
 punktladdningen $q'$. Med andra ord g{\"a}ller det {\"a}ven f{\"o}r en
 {\it godtycklig} omslutande yta $S$ att\sidx{Integral}[Ytintegral]
 $$
-  \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf A}={{q'}\over{\varepsilon_0}},
+  \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}={{q'}\over{\varepsilon_0}},
 $$
 det vill s{\"a}ga att {\it det totala elektriska fl{\"o}det ut genom den slutna
 ytan enbart best{\"a}ms av v{\"a}rdet p{\aa} den inneslutna punktladdningen}.
@@ -665,12 +666,12 @@ generella ytan $S$ enligt superpositionsprincipen given
 som\sidx{Integral}[Ytintegral]
 $$
   \eqalign{
-    \Phi_{\rm E}&=\oiint_S {\bf E}({\bf x})\cdot d{\bf A}
+    \Phi_{\rm E}&=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}
       =\big\{\hbox{Superpositionsprincipen}\big\}\cr
-      &=\oiint_S \Bigg(\sum^N_{k=1}{\bf E}_k({\bf x})\Bigg)\cdot d{\bf A}
+      &=\oiint_S \Bigg(\sum^N_{k=1}{\bf E}_k({\bf x})\Bigg)\cdot d{\bf S}
        =\big\{\hbox{Bryt ut summationen}\big\}\cr
       &=\sum^N_{k=1}\underbrace{
-             \oiint_S {\bf E}_k({\bf x})\cdot d{\bf A}
+             \oiint_S {\bf E}_k({\bf x})\cdot d{\bf S}
            }_{=q'_k/\varepsilon_0}
        ={{1}\over{\varepsilon_0}}\sum^N_{k=1}q'_k
        ={{q'_{\rm tot}}/{\varepsilon_0}}.\cr
@@ -711,7 +712,7 @@ volymintegralen\numberedfootnote{Notera att Griffiths (sid.~70)
   anv{\"a}nder vi $\tau$ som integrationsvariabel i {\it tid}.}
 $$
   \eqalign{
-    \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf A}
+    \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}
        =\big\{
           \hbox{ Steg 3: ``${{1}\over{\varepsilon_0}}\sum^N_{k=1} dq'_k$'' }
         \big\}
@@ -722,7 +723,7 @@ $$
 Vi har d{\"a}rmed kommit fram till den generella formen av {\it Gauss lag p{\aa}
 integralform},\sidx{Gauss lag}[Integralform] vilken vi sam\-man\-fattar med
 $$
-  \oiint_S {\bf E}({\bf x})\cdot d{\bf A}
+  \oiint_S {\bf E}({\bf x})\cdot d{\bf S}
      ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x}')\,dV'.
 $$
 Vi rekapitulerar att {\it Gauss lag har h{\"a}rletts enbart utifr{\aa}n
@@ -772,7 +773,7 @@ punktladdning. Gauss lag f{\"o}r laddnings\-f{\"o}rdel\-ningar ger oss d{\aa}
 med anv{\"a}ndande av sf{\"a}risk symmetri att
 $$
   \underbrace{
-    \oiint_S {\bf E}({\bf x})\cdot d{\bf A}
+    \oiint_S {\bf E}({\bf x})\cdot d{\bf S}
   }_{=E_r(r)4\pi r^2}
   ={{1}\over{\varepsilon_0}}
   \underbrace{
@@ -811,14 +812,14 @@ Vi applicerar f{\"o}rst divergensteoremet\numberedfootnote{Se exempelvis
 p{\aa} det elektriska f{\"a}ltet, som f{\"o}r en godtycklig volym $V$ omsluten
 av en yta $S$ lyder
 $$
-  \iiint_V\nabla\cdot{\bf E}\,dV=\oiint_S{\bf E}\cdot d{\bf A}.
+  \iiint_V\nabla\cdot{\bf E}\,dV=\oiint_S{\bf E}\cdot d{\bf S}.
 $$
 Vi har samtidigt visat att detta uttryck enligt Gauss lag uppenbarligen ges
 som\sidx{Integral}[Sluten ytintegral]\numberedfootnote{Vi tar oss h{\"a}r
   friheten att skippa primmet p{\aa} k{\"a}llorna; det {\"a}r i sammanhanget
   uppenbart {\"o}ver vilka dom{\"a}ner integralerna skall tolkas.}
 $$
-  \oiint_S {\bf E}\cdot d{\bf A}
+  \oiint_S {\bf E}\cdot d{\bf S}
      ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV,
 $$
 vilket i sin tur betyder att
@@ -895,7 +896,7 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.\sidx{Gauss lag}[Dif
   volymladdning $\rho$ (${\rm C}/{\rm m}^3$).}
 \item{$\bullet$}{Gauss lag p{\aa} integral- respektive differentialform:
   $$
-    \oiint_S {\bf E}\cdot d{\bf A}
+    \oiint_S {\bf E}\cdot d{\bf S}
        ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV
     \qquad\Leftrightarrow\qquad
     \nabla\cdot{\bf E}={{\rho({\bf x})}\over{\varepsilon_0}}.
@@ -907,7 +908,7 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.\sidx{Gauss lag}[Dif
   $\varepsilon_0$, som
   $$
     \Phi_{\rm E}
-       \equiv\oiint_S {\bf E}({\bf x})\cdot d{\bf A}
+       \equiv\oiint_S {\bf E}({\bf x})\cdot d{\bf S}
        ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV
        \equiv q_{\rm tot}/\varepsilon_0.
   $$}
