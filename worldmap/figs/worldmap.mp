@@ -44,11 +44,22 @@ enddef;
 
 beginfig(1);
   path p;
-  pair poscoulombgen, posbiotsavarti, posb;
+  pair poscoulombforce, poscoulombgen, posscalarpotential, posbiotsavarti, posb;
   ws := 60u;  % Standard box width
   hs := 20u;  % Standard box height
   rs := 3u;   % Standard corner rounding
   pickup pencircle scaled 1pt;
+
+  poscoulombforce:=(0u,250u);
+  drawbox(btex 
+      $\def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+       \displaystyle
+      {\bf F}={{q q'}\over{4\pi\varepsilon_0}}
+          {{({\bf x}-{\bf x}')}
+            \over{|{\bf x}-{\bf x}'|^3}}\,dV'.
+      $ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Coulombs kraftlag} etex, poscoulombforce, ws, hs, rs);
 
   poscoulombgen:=(0u,220u);
   drawbox(btex 
@@ -63,7 +74,13 @@ beginfig(1);
       {Coulombs generaliserade lag} etex, poscoulombgen, ws, hs, rs);
   posb:=(60u,180u);
   connect(poscoulombgen,posb,ws,hs,ws,hs,270,270);
-  
+
+  posscalarpotential:=(0u,195u);
+  drawbox(btex 
+      ${\bf E}=-\nabla\phi$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Skal{\"a}r potential} etex, posscalarpotential, ws, hs, rs);
+
   posbiotsavarti:=(0u,180u);
   drawbox(btex
 	$\displaystyle
