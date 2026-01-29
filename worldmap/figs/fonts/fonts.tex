@@ -1,0 +1,25 @@
+% 8pt text fonts
+\font\eightrm=cmr8
+\font\eighti=cmmi8
+\font\eightsy=cmsy8
+\font\eightex=cmex8
+
+% 6pt and 5pt for scripts
+\font\sixrm=cmr6
+\font\sixi=cmmi6
+\font\sixsy=cmsy6
+
+\font\fiverm=cmr5
+\font\fivei=cmmi5
+\font\fivesy=cmsy5
+
+\def\eightpoint{%
+  \textfont0=\eightrm \scriptfont0=\sixrm \scriptscriptfont0=\fiverm
+  \textfont1=\eighti  \scriptfont1=\sixi  \scriptscriptfont1=\fivei
+  \textfont2=\eightsy \scriptfont2=\sixsy \scriptscriptfont2=\fivesy
+  \textfont3=\eightex
+  \normalbaselineskip=9pt
+  \setbox\strutbox=\hbox{\vrule height7pt depth2pt width0pt}%
+  \normalbaselines
+  \rm
+}
