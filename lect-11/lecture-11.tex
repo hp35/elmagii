@@ -710,9 +710,9 @@ $$
       \bigg(\ =\nabla\times{\bf A}({\bf x},t)\ \bigg)\cr
   }
 $$
-Vi kommer nu att utnyttja denna m{\"o}jlighet till val av gaugefunktionen $\psi$
-f{\"o}r att g{\"o}ra oss av med det som s{\aa} att s{\"a}ga ``inte passar in'' i
-v{\aa}gekvationen f{\"o}r vektorpotentialen.
+Vi kommer nu att utnyttja denna m{\"o}jlighet till {\it aktivt val} av
+gaugefunktionen $\psi$ f{\"o}r att g{\"o}ra oss av med det som s{\aa} att
+s{\"a}ga ``inte passar in'' i v{\aa}gekvationen f{\"o}r vektorpotentialen.
 \vfill\eject
 
 \subsection{Lorenz-villkoret (``Lorenz gauge'')}
@@ -810,14 +810,15 @@ best{\"a}mt oss f{\"o}r en viss {\it gauge} och att detta {\"a}r inkluderat i
 variablerna, vilket vi erinrar oss i alla h{\"a}ndelser ej kommer att
 p{\aa}verka l{\"o}sningarna f{\"o}r det elektromagnetiska f{\"a}ltet.
 
-\subsection{N{\aa}gra observationer}
+\subsection{Tre viktiga observationer}
 Fr{\aa}n dessa tv{\aa} {\it v{\aa}gekvationer} ser vi direkt tv{\aa} saker:
 \medskip
-\litem[1.]{Potentialerna propagerar med ljusets hastighet $c$ (notera
-    att $c=c_0/n$ h{\"a}r fortfarande inkluderar brytningsindex
-    $n=\sqrt{\varepsilon_{\rm r}}$), s{\aa} teorin bakom gauge-transformationen
-    {\"a}r till{\"a}mplig {\"a}ven f{\"o}r elektromagnetisk v{\aa}gpropagation
-    i ett dielektrikum.}
+\litem[1.]{Potentialerna propagerar enligt dessa v{\aa}gekvationer med
+    {\it ljusets hastighet}\numberedfootnote{Vi erinrar
+      oss att $c=c_0/n$ {\"a}r ljushastigheten i mediet med brytningsindex
+      $n=\sqrt{\varepsilon_{\rm r}}$, och d{\"a}rmed inte begr{\"a}nsar
+      slutsatsen om potentialernas utbredningshastighet till vakuum.}
+    $c$.}
 \litem[2.]{L{\"o}sningarna till v{\aa}gekvationerna f{\"o}r potentialerna
     kan f{\aa}s fram exakt p{\aa} analogt s{\"a}tt som f{\"o}r det
     elektrostatiska fallet, s{\aa} l{\"a}nge som vi {\"a}r noga med att ta
@@ -825,6 +826,33 @@ Fr{\aa}n dessa tv{\aa} {\it v{\aa}gekvationer} ser vi direkt tv{\aa} saker:
     $\Delta t=|{\bf x}-{\bf x}'|/c$ fr{\aa}n k{\"a}lla till
     observationspunkt}, resulterande i s{\aa} kallade {\it retarderade
     potentialer}.\sidx{Retarderad potential}[Tidsf{\"o}rdr{\"o}jd potential]}
+\litem[3.]{I fall d{\aa} vi har att g{\"o}ra med tidsoberoende, statiska
+    problem s{\aa} f{\"o}rsvinner sj{\"a}lvfallet tidsderivatorna och vi
+    erh{\aa}ller {\it exakt samma form} p{\aa} Poissons ekvationer f{\"o}r
+    den {\it elektro\-statiska} skal{\"a}ra potentialen (som vi behandlade
+    under F{\"o}rel{\"a}sning~2 och~3) och den {\it magneto\-statiska}
+    vektorpotentialen (som vi behandlade under F{\"o}rel{\"a}sning~4),
+    $$
+      \eqalign{
+        \nabla^2\phi({\bf x},t)
+          &=-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}},\cr
+        \nabla^2{\bf A}({\bf x},t)
+          &=-\mu_0{\bf J}_{\rm f}({\bf x},t).\cr
+      }
+    $$
+    Notera att ljushastigheten $c$ i och med denna {\aa}terg{\aa}ng,
+    fr{\aa}n {\it dynamik} till {\it statik}, automagiskt f{\"o}rsvinner
+    fr{\aa}n ekvationerna!}
+\medskip
+\noindent
+Det b{\"o}r h{\"a}r understrykas att {\it utbredningshastigheten f{\"o}r potentialerna {\"a}r beroende av vilken gauge vi v{\"a}ljer att behandla dem i}, och att vi i Coulomb-gauge ist{\"a}llet betraktar potentialerna som instantana (samtidiga) {\"o}verallt!
+
+Den som t{\"a}nker n{\aa}gorlunda kritiskt b{\"o}r h{\"a}r st{\"a}lla sig fr{\aa}gan: Hur i hela friden h{\"a}nger detta ihop? Vi kan v{\"a}l inte godtyckligt, bara s{\aa}d{\"a}r, v{\"a}lja utbredningshastigheten f{\"o}r elektromagnetiska f{\"a}lt genom att v{\"a}lja n{\aa}gon l{\"a}mplig gauge-funktion $\psi$? En matematisk konstruktion kan ju inte g{\"o}ra v{\aa}ld p{\aa} fysiken i sig!
+
+Gaugeteori {\"a}r onekligen ett av de mer sv{\aa}rgreppbara koncepten inom elektrodynamik s{\aa} snart vi b{\"o}rjar granska fundamenta f{\"o}r det elektromagnetiska f{\"a}ltet. Som 
+
+
+
 
 \section{[{\"O}verkurs] Gauge-transformen: Lorenz och Coulomb gauge}
 \subsection{Lorenz gauge}
