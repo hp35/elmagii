@@ -31,8 +31,8 @@ $(pss): $(dvis)
 $(dvis): $(srcs)
 	@$(eval BASE = $(shell basename $@ .dvi))
 	@echo "Compiling source file $(BASE).tex to DVI (target $(BASE).dvi)."
-	@$(TEX) $(BASE).tex
-	@$(TEX) $(BASE).tex
+	@$(TEX) '\input $(BASE).tex \bye'
+	@$(TEX) '\input $(BASE).tex \bye'
 	@echo "DVI file for $(BASE).tex written to $(BASE).dvi."
 
 texchars:
