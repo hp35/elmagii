@@ -1,3 +1,16 @@
+\font\twelvecmbx=cmbx12
+\input ../lect-01/macros/eplain.tex
+\input amssym % to get the {\Bbb E} font (strikethrough E)
+\def\iint{\mathop{\int\kern-8pt\int}}
+\def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
+\def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
+\def\sgn{\mathop{\rm sgn}\nolimits} % sign
+\def\Re{\mathop{\rm Re}\nolimits}   % real part
+\def\Im{\mathop{\rm Im}\nolimits}   % imaginary part
+\def\Tr{\mathop{\rm Tr}\nolimits}   % quantum mechanical trace
+\def\cleardoublepage{\ifodd\pageno\vfill\eject~\vskip260pt%
+  \centerline{[Page intentionally left blank]} ~\vfill\eject%
+  \else\vfill\eject\fi}
 \vskip 0pc\goodbreak\noindent{\twelvecmbx{Formelsamling}}%
   \writenumberedtocentry{index}{\hskip24pt{Formelsamling}}%
   \nobreak\vskip 0pt\noindent\ignorespaces
@@ -36,9 +49,10 @@
 \centerline{\version}
 \centerline{{\tt github.com/hp35/elmagii}}
 \vskip10pt
-\input ../formulas/formulas.tex
+\input ../formulas/src/formulas.tex
 \vfill
 \supereject
 \if R\lr \null\vfill\eject\fi}
 %%%%%%%%%%%%%% Back to normal single-column %%%%%%%%%%%%%%
 ~\cleardoublepage
+\bye

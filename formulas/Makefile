@@ -1,9 +1,9 @@
 #
 # Makefile for compilation of Lecture Notes in Electromagnetic Theory,
-# Uppsala University, 2025. Code for the lectures written in plain TeX.
+# Uppsala University, 2026. Code for the lectures written in plain TeX.
 # Lectures available at Github: https://github.com/elmagii/
 #
-# Copyright (C) 2025 under GPL 3.0, Fredrik Jonsson
+# Copyright (C) 2026 under GPL 3.0, Fredrik Jonsson
 #
 TEX    = tex
 DVIPS  = dvips
@@ -25,7 +25,7 @@ $(pdfs): $(pss)
 $(pss): $(dvis)
 	@$(eval BASE = $(shell basename $@ .ps))
 	@echo "Converting DVI file $< to PostScript (target $@)."
-	@$(DVIPS) -D1200 -ta4 -t landscape $(BASE).dvi -o $(BASE).ps
+	@$(DVIPS) -D1200 -ta4 $(BASE).dvi -o $(BASE).ps
 	@echo "PostScript file for $< written to $@."
 
 $(dvis): $(srcs)
@@ -42,4 +42,4 @@ texchars:
 	@echo "Reload formulas.tex to incorporate the changes."
 
 clean:
-	@rm -Rf *~ *.aux *.toc *.log *.dvi *.ps
+	@rm -Rf *~ *.aux *.toc *.idx *.log *.dvi *.ps *.pdf
