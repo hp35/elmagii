@@ -255,12 +255,15 @@ $$
 $$
   \oiint{\bf D}\cdot d{\bf S}=\iiint\rho\,dV
 $$
-\eqtitle{Skal{\"a}r elektrostatisk potential}
+\eqtitle{Poissons ekvation (Coulombs lag) for skal{\"a}r potential}
+$$
+  \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0
+$$
+\eqtitle{Skal{\"a}r potential, explicit l{\"o}sning till Poissons ekvation}
 $$
   \phi({\bf x})\equiv{{1}\over{4\pi\varepsilon_0}}\iiint_V
       {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
-  \ \Rightarrow\
-  {\bf E}({\bf x})=-\nabla\phi({\bf x})
+  %  \ \Rightarrow\ {\bf E}({\bf x})=-\nabla\phi({\bf x})
 $$
 \eqtitle{Skal{\"a}r elektrostatisk potential fr{\aa}n punktladdning $q'$}
 $$
@@ -273,10 +276,6 @@ $$
 $$
   W_{\rm e}=-\int^{{\bf x}_b}_{{\bf x}_a}{\bf F}({\bf x})\cdot d{\bf l}
           =q\big(\phi({{\bf x}_b})-\phi({{\bf x}_a})\big) % =W_b-W_a
-$$
-\eqtitle{Poissons ekvation for elektrostatisk skal{\"a}r potential}
-$$
-  \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0
 $$
 
 \eqsection{Magnetostatik}
@@ -351,11 +350,11 @@ $$
 $$
   {\bf K}_{\rm b}={\bf M}\times{\bf e}_n
 $$
-\eqtitle{Amp\`eres lag f{\"o}r vektorpotentialen}
+\eqtitle{Poissons ekvation (Amp\`eres lag) f{\"o}r vektorpotentialen}
 $$
   \nabla^2{\bf A}=-\mu_0{\bf J},
 $$
-\eqtitle{Explicit l{\"o}sning till Amp\`eres lag f{\"o}r vektorpotentialen}
+\eqtitle{Vektorpotential, explicit l{\"o}sning till Poissons ekvation}
 $$
   {\bf A}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
     {{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
