@@ -26,6 +26,10 @@ all:
 	make replace-figure-paths
 	make insert-copyright-pages
 	make compile-booksrc
+	make inline-formulas
+	make inline-formula-src
+	make inline-portrait
+	make inline-gallery-src
 	make compile-book
 
 #
@@ -187,6 +191,86 @@ compile-booksrc:
 	done
 	@echo '\\index' >> $(PROJECT).tex
 	@echo '\\bye' >> $(PROJECT).tex
+
+#
+# Replace the inclusion '\input ../formulas/formulas-twocolumn.tex' by
+# incorporating the file contents of the file instead. This way,
+# we obtain a more self-consistent master TeX file for compilation.
+#
+inline-formulas:
+	@INSERT=../formulas/formulas-twocol.tex;\
+	INPUT=complete.tex;\
+	OUTPUT=complete-tmp.tex;\
+	echo "Replacing \\\input ../formulas/formulas-twocol.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+\.\.\/formulas\/formulas-twocol\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input ../formulas/src/formulas.tex' by
+# incorporating the file contents of the file instead. This way,
+# we obtain a more self-consistent master TeX file for compilation.
+#
+inline-formula-src:
+	@INSERT=../formulas/src/formulas.tex;\
+	INPUT=complete.tex;\
+	OUTPUT=complete-tmp.tex;\
+	echo "Replacing \\\input ../formulas/src/formulas.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+\.\.\/formulas\/src\/formulas\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input ../gallery/src/portrait.tex' by
+# incorporating the file contents of the file instead. This way,
+# we obtain a more self-consistent master TeX file for compilation.
+#
+inline-portrait:
+	@INSERT=../gallery/src/portrait.tex;\
+	INPUT=complete.tex;\
+	OUTPUT=complete-tmp.tex;\
+	echo "Replacing \\\input ../gallery/src/portrait.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+\.\.\/gallery\/src\/portrait\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input ../gallery/src/portrait-src.tex' by
+# incorporating the file contents of the file instead. This way,
+# we obtain a more self-consistent master TeX file for compilation.
+#
+inline-gallery-src:
+	@INSERT=../gallery/src/gallery-src.tex;\
+	INPUT=complete.tex;\
+	OUTPUT=complete-tmp.tex;\
+	echo "Replacing \\\input ../gallery/src/gallery-src.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+\.\.\/gallery\/src\/gallery-src\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
 
 #
 # Compile the entire project (plain TeX) as extracted by the steps above.
