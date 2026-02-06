@@ -47,7 +47,7 @@ $m_{\rm p}$ & Protonens vilomassa & ${\rm kg}$\cr
 ${\bf m}$ & Magnetiskt dipolmoment & ${\rm A}\cdot{\rm m}^2$\cr
 ${\bf M}$ & Magnetisering & ${\rm A}/{\rm m}$\cr
 $n$ & Brytningsindex $n=\varepsilon^{1/2}_{\rm r}$  & $1$\cr
-$\psi$ & Gauge-funktion & ${\rm V}\cdot{\rm s}$\cr
+$\psi$ & Gauge-funktion $\psi=\psi({\bf x},t)$ & ${\rm V}\cdot{\rm s}$\cr
 ${\bf p}$ & Elektriskt dipolmoment & ${\rm C}\cdot{\rm m}$\cr
 ${\bf P}$ & Elektrisk polarisationsdensitet & ${\rm C}/{\rm m}^2$\cr
 $P$ & Effekt & ${\rm W}$\cr
@@ -201,7 +201,7 @@ $$
 $$
 \eqtitle{Divergens av str{\"o}mt{\"a}theten i statiska problem}
 $$
-  {{d\rho}\over{dt}}=0\quad\Rightarrow\quad\nabla\cdot{\bf J}=0
+  {{d\rho}\over{dt}}=0\quad\Leftrightarrow\quad\nabla\cdot{\bf J}=0
 $$
 \eqtitle{Biot--Savarts lag f{\"o}r str{\"o}mslingor}
 $$
@@ -322,6 +322,71 @@ $$
     \oiint{\bf B}\cdot d{\bf S} & =0.\cr
   }
 $$
+\vfill\eject
+\eqsection{Elektrodynamik och potentialer}
+
+\eqtitle{Elektrodynamiska potentialer}
+$$
+  \eqalign{
+    {\bf E}({\bf x},t)
+      &=-\nabla\phi({\bf x},t)
+          -{{\partial{\bf A}({\bf x},t)}\over{\partial t}},\cr
+    {\bf B}({\bf x},t)
+      &=\nabla\times{\bf A}({\bf x},t).\cr
+  }
+$$
+\eqtitle{Gauge-transformen}
+Med den godtyckliga och tv{\aa} g{\aa}nger i rum och tid kontinuerligt
+differentierbara gauge-funktionen $\psi({\bf x},t)$, {\"a}r
+gauge-transformationen definierad som
+$$
+  \eqalign{
+    {\bf A}'({\bf x},t)
+      &={\bf A}({\bf x},t)+\nabla\psi({\bf x},t),\cr
+    \phi'({\bf x},t)
+      &=\phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}},\cr
+  }
+$$
+vilken l{\"a}mnar de elektromagnetiska f{\"a}lten invarianta.
+\eqtitle{Lorenz-villkoret}
+Under Lorenz-villkoret v{\"a}ljs gauge-funktionen $\psi$ s{\aa} att
+$$
+  \nabla\cdot{\bf A}'({\bf x},t)+
+    {{1}\over{c^2}}{{\partial\phi'({\bf x},t)}\over{\partial t}} = 0
+$$
+\eqtitle{Lorenz-villkoret -- V{\aa}gekvationer f{\"o}r potentialer}
+Under Lorenz-villkoret frikopplas v{\aa}gekvationerna f{\"o}r den skal{\"a}ra
+potentialen och vektorpotentialen, till
+$$
+  \eqalign{
+    \Big(
+      \nabla^2-{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}
+    \Big)\phi({\bf x},t)
+        &=-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}},\cr
+    \Big(
+      \nabla^2-{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}
+    \Big){\bf A}({\bf x},t)
+        &=-\mu_0{\bf J}_{\rm f}({\bf x},t).\cr
+  }
+$$
+\eqtitle{Lorenz-villkoret -- Retarderade potentialer}
+Under Lorenz-villkoret erh{\aa}lls l{\"o}sningar till v{\aa}g\-ekva\-tion\-erna
+f{\"o}r potentialerna som de retarderade potentialerna
+$$
+  \eqalign{
+    \phi({\bf x},t)&={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
+      {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\cr
+    {\bf A}({\bf x},t)&={{\mu_0}\over{4\pi}}\iiint_{{\Bbb R}^3}
+      {{{\bf J}({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\cr
+  }
+$$
+d{\"a}r $t'=t-|{\bf x}-{\bf x}'|/c$ {\"a}r den {\it retarderade tiden}
+fr{\aa}n ${\bf x}'$ till ${\bf x}$.
+
+\eqtitle{Coulomb-villkoret}
+
+
+
 \vfill\eject
 
 \eqsection{Vektoridentiteter}
