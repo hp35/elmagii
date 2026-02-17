@@ -6,7 +6,7 @@
 %
 % Copyright (C) 2026 under GPL 3.0, Fredrik Jonsson
 %
-input TEX;
+% input TEX;
 u := 1mm;
 
 vardef drawbox(expr eqn, labeltext, cpos, w, h, r, lectno) =
@@ -49,7 +49,7 @@ enddef;
 beginfig(1);
   path p;
   pair poscoulombforce, poscoulombgen, posscalarpotential, posbiotsavarti,
-    poslorentzforce, posb;
+    poslorentzforce, posgaussintegral, posb;
   ws := 52u;  % Standard box width
   hs := 14u;  % Standard box height
   rs := 3u;   % Standard corner rounding
@@ -68,7 +68,7 @@ beginfig(1);
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
       {Coulombs kraftlag} etex, poscoulombforce, ws, hs, rs,
-      btex \font\labelfont=cmssi8\labelfont 1 etex);
+      btex \font\labelfont=cmssi8\labelfont{1} etex);
   pickup pencircle scaled .7pt;
   draw fullcircle scaled 4u shifted (-3.2u,-2.75u) withcolor red;
   pickup pencircle scaled 1pt;
@@ -86,7 +86,7 @@ beginfig(1);
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
       {Coulombs generaliserade lag} etex, poscoulombgen, ws, hs, rs,
-      btex \font\labelfont=cmssi8\labelfont 1 etex);
+      btex \font\labelfont=cmssi8\labelfont{1} etex);
   pickup pencircle scaled .7pt;
   draw fullcircle scaled 4u shifted (-6.75u,0u) shifted (dxb,0) withcolor red;
   pickup pencircle scaled 1pt;
@@ -103,7 +103,34 @@ beginfig(1);
       \font\eightsy=cmsy8
       \labelfont{Existens av skal{\"a}r potential $\eightsy\phi$} etex,
       posscalarpotential, ws, hs, rs,
-      btex \font\labelfont=cmssi8\labelfont 1 etex);
+      btex \font\labelfont=cmssi8\labelfont{1} etex);
+
+  %
+  % Gauss' law in integral form.
+  %
+  %  \def\oiintop{%
+  %    \vcenter{%
+  %      \offinterlineskip
+  %      \halign{##\cr
+  %        \hfil$\scriptscriptstyle\circ$\hfil\cr
+  %        \noalign{\kern-0.6ex}
+  %        $\displaystyle\iint$\cr
+  %      }%
+  %    }%
+  %  }
+  %  \def\oiint{\mathop{\oiintop}\displaylimits}
+  %
+  posgaussintegral:=(0u,-3dyb);
+  drawbox(btex $
+      \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+      \def\oiint{\mathop{\int\kern-5pt\int\kern-10.7pt%
+        {\scriptstyle\bigcirc}\kern2pt}}
+      \oiint {\bf E}({\bf x})\cdot d{\bf S}
+         ={{1}\over{\varepsilon_0}}\iiint\rho({\bf x})\,dV
+      $ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Gauss lag f{\"o}r elektrisk laddning} etex, posgaussintegral, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{1} etex);
 
   %
   % Biot--Savart's law.
@@ -116,7 +143,7 @@ beginfig(1);
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
       {Biot--Savarts lag} etex, posbiotsavarti, ws, hs, rs,
-      btex \font\labelfont=cmssi8\labelfont 1 etex);
+      btex \font\labelfont=cmssi8\labelfont{1} etex);
   posb:=(60u,140u);
 %  connect(posbiotsavarti,posb,ws,hs,ws,hs,270,270);
 
@@ -128,7 +155,7 @@ beginfig(1);
     drawbox(btex ${\bf F}=q({\bf E}+{\bf v}\times{\bf B})$ etex,
       btex \font\labelfont=cmssi8\labelfont
       {Lorentz kraftlag} etex, poslorentzforce, ws, hs, rs,
-      btex \font\labelfont=cmssi8\labelfont 1 etex);
+      btex \font\labelfont=cmssi8\labelfont{4} etex);
 
 endfig;
 end
