@@ -1,15 +1,15 @@
 %
-% MetaPost drawing of our World Map of electrodynamics, and how Coulomb's
-% law together with Biot-Savart's law and the Lorentz force, interlinked
-% with constitutive relations, result in Maxwell's equations, finally
-% producing the electromagnetic wave equation.
+% MetaPost drawing of our World Map of Classical Electromagnetics, and how
+% Coulomb's law together with Biot-Savart's law and the Lorentz force,
+% interlinked with constitutive relations, result in Maxwell's equations,
+% finally producing the electromagnetic wave equation.
 %
 % Copyright (C) 2026 under GPL 3.0, Fredrik Jonsson
 %
-% input TEX;
+input TEX;
 u := 1mm;
 
-vardef drawbox(expr eqn, labeltext, cpos, w, h, r) =
+vardef drawbox(expr eqn, labeltext, cpos, w, h, r, lectno) =
   begingroup
     pair p[];
     path box;
@@ -29,9 +29,13 @@ vardef drawbox(expr eqn, labeltext, cpos, w, h, r) =
               --p4{dir 90}..{dir 180}p5
               --p6{dir 180}..{dir 270}p7
               --p8{dir 270}..{dir 0}p1--cycle;
+    pickup pencircle scaled .7pt;
     draw box;
     label.bot(labeltext, (xc,yc+hh));
     label(eqn, (xc,yc-1u));
+    label(lectno,(xc+wh-r,yc+hh-r));
+    draw fullcircle scaled 3.6u shifted (xc+wh-r,yc+hh-r);
+    pickup pencircle scaled 1pt;
   endgroup
 enddef;
 
@@ -44,7 +48,8 @@ enddef;
 
 beginfig(1);
   path p;
-  pair poscoulombforce, poscoulombgen, posscalarpotential, posbiotsavarti, posb;
+  pair poscoulombforce, poscoulombgen, posscalarpotential, posbiotsavarti,
+    poslorentzforce, posb;
   ws := 52u;  % Standard box width
   hs := 14u;  % Standard box height
   rs := 3u;   % Standard corner rounding
@@ -62,7 +67,8 @@ beginfig(1);
             \over{|{\bf x}-{\bf x}'|^3}}\,dV'
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Coulombs kraftlag} etex, poscoulombforce, ws, hs, rs);
+      {Coulombs kraftlag} etex, poscoulombforce, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont 1 etex);
   pickup pencircle scaled .7pt;
   draw fullcircle scaled 4u shifted (-3.2u,-2.75u) withcolor red;
   pickup pencircle scaled 1pt;
@@ -79,7 +85,8 @@ beginfig(1);
             \over{|{\bf x}-{\bf x}'|^3}}\,dV'
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Coulombs generaliserade lag} etex, poscoulombgen, ws, hs, rs);
+      {Coulombs generaliserade lag} etex, poscoulombgen, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont 1 etex);
   pickup pencircle scaled .7pt;
   draw fullcircle scaled 4u shifted (-6.75u,0u) shifted (dxb,0) withcolor red;
   pickup pencircle scaled 1pt;
@@ -95,7 +102,8 @@ beginfig(1);
       btex \font\labelfont=cmssi8
       \font\eightsy=cmsy8
       \labelfont{Existens av skal{\"a}r potential $\eightsy\phi$} etex,
-      posscalarpotential, ws, hs, rs);
+      posscalarpotential, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont 1 etex);
 
   %
   % Biot--Savart's law.
@@ -107,9 +115,20 @@ beginfig(1);
             \over{|{\bf x}-{\bf x}'|^3}}\,dl'
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Biot--Savarts lag} etex, posbiotsavarti, ws, hs, rs);
+      {Biot--Savarts lag} etex, posbiotsavarti, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont 1 etex);
   posb:=(60u,140u);
 %  connect(posbiotsavarti,posb,ws,hs,ws,hs,270,270);
-  
+
+  %
+  % The Lorentz force, fundamental and independent of the laws of Coulomb
+  % and Biot--Savart.
+  %
+  poslorentzforce:=(2*dxb,0u);
+    drawbox(btex ${\bf F}=q({\bf E}+{\bf v}\times{\bf B})$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Lorentz kraftlag} etex, poslorentzforce, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont 1 etex);
+
 endfig;
 end
