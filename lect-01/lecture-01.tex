@@ -36,14 +36,18 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 \input amssym % to get the {\Bbb E} font (strikethrough E)
-\input color  % to get colored text output
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
 \def\ifempty#1{\ifx\relax#1\relax}
+\newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
+\colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
+\ifcolors\input color\fi  % to get colored text output
+\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 \def\initlecture{
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \ifcolors\voffset=-10.2mm\topskip=0pt\fi
   \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
     \else\hfill\fi}
   \def\rightheadline{\tenrm{\it F\"orel\"asning \lecturenumber}
@@ -96,9 +100,6 @@
 \newif\ifshowindex
 \showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
 \def\index{\ifshowindex\vfill\eject\section{Index} \readindexfile{i}\fi}
-\newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
-\colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
-\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 %--------------------- END OF LOCAL MACROS ---------------------
 
 \initlecture
@@ -176,11 +177,14 @@ magnetostatik enligt f{\"o}ljande:
 \section{Historik -- Elektrostatik fr{\aa}n de gamla grekerna till Coulomb}
 \sidx{Elektrostatik}
 \sidx{Elektrostatik}[Tidig historik]
-Elektrostatikens historik kan s{\"a}gas ha b{\"o}rjat med ``de gamla grekerna'',
-som observerade att b{\"a}rnsten som gnuggades med skinn efter{\aa}t attraherade
-l{\"a}tta objekt som damm eller h{\aa}rstr{\aa}n. Detta fenomen d{\"o}ptes till
-``elektricitet'' fr{\aa}n det gammalgrekiska (klassiskt grekiska) ordet f{\"o}r
-b{\"a}rnsten, ``elektron''.\numberedfootnote{%
+Elektrostatikens historik\numberedfootnote{Se g{\"a}rna persongalleri f{\"o}r
+  ofta f{\"o}rekommande fysiker och matematiker p{\aa} kursens GitHub-repo,
+  p{\aa} {\tt https://github.com/hp35/elmagii/tree/main/gallery}}
+kan s{\"a}gas ha b{\"o}rjat med ``de gamla grekerna'', som observerade att
+b{\"a}rnsten som gnuggades med skinn efter{\aa}t attraherade l{\"a}tta objekt
+som damm eller h{\aa}rstr{\aa}n. Detta fenomen d{\"o}ptes till ``elektricitet''
+fr{\aa}n det gammalgrekiska (klassiskt grekiska) ordet f{\"o}r b{\"a}rnsten,
+``elektron''.\numberedfootnote{%
   $\eta\lambda\varepsilon\kern-.4pt\kappa\tau\kern-1.4pt\rho o$;
   fr{\aa}n klassisk grekiska
   $\eta\lambda\varepsilon\kern-.4pt\kappa\tau\kern-1.4pt\rho o\nu$
@@ -202,13 +206,13 @@ respektive ``negativ'' laddning.
 Benjamin Franklin \sidx{Franklin, Benjamin (1706--1790)} (1706--1790)
 utf{\"o}rde under {\aa}ren 1747--1749 experiment f{\"o}r att bevisa sin teori
 kring ``en-v{\"a}tske\-hypo\-tesen'', d{\"a}r han argumenterade f{\"o}r att du
-Fays ``vitre{\"osa och resinu{\"o}sa'' (``vitreous and resinuous'')
+Fays ``glasaktiga'' och ``k{\aa}daktiga'' (``vitreous and resinuous'')
 dubbel-v{\"a}tsketori var felaktig och att det bara fanns en typ av ``elektrisk
 v{\"a}tska'', samt att alla elektrostatiska effekter kunde sp{\aa}ras till ett
 {\"o}verfl{\"o}d respektive underskott av denna ``v{\"a}tska''.
 Franklin betecknade dessa som {\it positivt} ({\"o}verfl{\"o}d) respektive
 {\it negativt} (underskott) av elektrisk v{\"a}tska, termer som fortfarande
-idag lever kvar f{\"o}r att beteckna laddningens polaritet.
+idag lever kvar f{\"o}r att beteckna laddningens polaritet.%
 \sidx{Elektrisk laddning}[Polaritet]
 
 Charles-Augustin de Coulomb \sidx{de Coulomb, Charles-Augustin (1736--1806)}
