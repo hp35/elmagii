@@ -36,6 +36,7 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 \input amssym % to get the {\Bbb E} font (strikethrough E)
+\input color  % to get colored text output
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
@@ -95,6 +96,9 @@
 \newif\ifshowindex
 \showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
 \def\index{\ifshowindex\vfill\eject\section{Index} \readindexfile{i}\fi}
+\newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
+\colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
+\def\red#1{\ifcolors{\color{red}#1}\else#1\fi}
 %--------------------- END OF LOCAL MACROS ---------------------
 
 \initlecture
@@ -249,7 +253,7 @@ atommodeller, som till exempel Ernest Rutherfords\sidx{Rutherford, Ernest
 fysik 1922) skalmodell av atomen 1913.
 \vfill\eject
 
-\section{Coulombs lag f{\"o}r punktladdningar}
+\section{\red{Coulombs lag f{\"o}r punktladdningar}}
 \sidx{Coulombs kraftlag}
 \epsfig{figs/coulomb.1}\noindent
 Som den mest fundamentala byggstenen i elektrostatiken har vi att tv{\aa}
@@ -271,12 +275,14 @@ kraft ${\bf F}$ genom Coulombs lag\numberedfootnote{Griffiths Ekv.~(2.1),
   kommer vi att helt undvika denna f{\"o}rbryllande notation och
   ist{\"a}llet genomg{\aa}ende att i klartext skriva ut
   ``$({\bf x}-{\bf x}')$''.}
+{\red{
 $$
   {\bf F}={{qq'}\over{4\pi\varepsilon_0}}
   \underbrace{
      {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
   }_{\sim 1/r^2},
 $$
+}}
 d{\"a}r
 $$
   \varepsilon_0\approx8.854\times10^{12}\ {\rm F}/{\rm m}
