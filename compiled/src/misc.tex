@@ -43,3 +43,6 @@
 \def\cleardoublepage{\ifodd\pageno\vfill\eject~\vskip260pt%
   \centerline{[Page intentionally left blank]} ~\vfill\eject%
   \else\vfill\eject\fi}
+\newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
+\colorsfalse     % \colorstrue turns colors on, \colorsfalse turns them off
+\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
