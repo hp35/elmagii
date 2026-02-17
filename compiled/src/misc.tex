@@ -44,11 +44,6 @@
   \centerline{[Page intentionally left blank]} ~\vfill\eject%
   \else\vfill\eject\fi}
 \newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
-%\colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
 \def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
-%\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
-%\topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
-%\ifcolors
-  \voffset=-10.2mm\topskip=0pt
-%\fi
 \colorsfalse     % \colorstrue turns colors on, \colorsfalse turns them off
+\voffset=-10.2mm\topskip=0pt
