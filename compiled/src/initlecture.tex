@@ -7,6 +7,9 @@
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning \lecturenumber -- \lecturetitle}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+\ifcolors
+  \voffset=-10.2mm\topskip=0pt
+\fi
 \headline={\ifnum\secno>0\ifodd\pageno\rightheadline\else\leftheadline\fi
   \else\hfill\fi}
 \def\rightheadline{\tenrm{\it F\"orel\"asning \lecturenumber}
