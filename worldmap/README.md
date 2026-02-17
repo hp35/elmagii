@@ -1,7 +1,7 @@
-# "World map" for theorems and relations in classical electromagnetism
+# "World Map of Classical Electromagnetics"
 
 This repository contains the source for a "world map" of the principal theorems
-and relations in classical electromagnetism. The map is compiled in order to
+and relations in classical electromagnetics. The map is compiled in order to
 assist the students in grasping the "helicopter picture" of the sometimes
 confusing but nevertheless strictly ordered and logical field of electrostatics,
 magnetostatics and electrodynamics.
