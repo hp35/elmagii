@@ -55,5 +55,8 @@ beginfig(1);
         \hbox{fr{\aa}n laddningen $q'$ i k{\"a}llpunkten ${\bf x}'$}}
       etex,(r+16u,dy));
   draw (r+16u,dy){dir 250}..{dir 250}(7r/8,6u);
+  label.llft(btex K{\"a}llpunkt etex, (0u,0u) shifted (0u,-rc));
+  label.lrt(btex Observationspunkt etex, (r,0u) shifted (0u,-rc));
+
 endfig;
 end
