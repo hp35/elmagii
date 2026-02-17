@@ -15,8 +15,8 @@ In the present directory, the included `Makefile` can be used to regenerate the
 documents, figures and graphs. Just run `make` and ensure to install any
 missing components in case there are any complaints.
 
-In order to generate all documents and figures in all lectures, just run
-`make` in the `elmagii` root directory. In order to clean up all directories,
+In order to generate all documents and figures in all individual lectures, just
+run `make` in the `elmagii` root directory. In order to clean up all directories,
 just run `make clean` in the `elmagii` root directory.
 
 ## Copyright
