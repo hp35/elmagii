@@ -346,10 +346,10 @@ the first appearing term.
 quadrupole, being the simplest construction with a quadrupole moment as
 the first appearing term.](lect-08/multipoles/multipoles/linquadrupole-str.png)
 
-[<i>Lecture 8 - The multipole expansion</i>](lect-08): The scalar potential and static
-electric field from a quadratic electric quadrupole.
+[<i>Lecture 8 - The multipole expansion</i>](lect-08): The scalar potential
+and static electric field from a quadratic electric quadrupole.
 ![The scalar potential and static electric field from a quadratic electric
 quadrupole.](lect-08/multipoles/multipoles/quadquadrupole-str.png)
 
 ## Copyright
-Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
+Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
