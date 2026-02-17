@@ -114,7 +114,10 @@ beginfig(1);
   label.top(btex ${\bf x}-{\bf x}'$ etex, qc) rotated angle (qa-qb) shifted .5[qb,qa];
   drawarrow qc--qb;
   label.top(btex ${\bf x}'$ etex, (0u,0u)) rotated angle (qb-qc) shifted .3[qb,qc];
-  label.lrt(btex K{\"a}llpunkt etex, qb shifted (1u,0u));
+  label.lrt(btex \vbox{
+      \hbox{K{\"a}llpunkt}
+      \hbox{p{\aa} antennens}
+      \hbox{mantelyta}} etex, qb shifted (1u,0u));
 %  qa:=(50u,-80u);
 %  label.top(btex $\displaystyle\Bigg\{$ etex, qa shifted (-33pt,-1pt));
 %  label.top(btex \hbox to 80pt{}$\displaystyle E({\bf x},t)=-\nabla\phi({\bf x},t)
