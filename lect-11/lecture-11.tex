@@ -39,11 +39,17 @@
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
-
+\newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
+\colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
+\ifcolors\input color\fi  % to get colored text output
+\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \ifcolors
+    \voffset=-10.2mm\topskip=0pt
+  \fi
   \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
     \else\hfill\fi}
   \def\rightheadline{\tenrm{\it F\"orel\"asning \lecturenumber}
@@ -300,6 +306,44 @@ laddningars {\it dynamik} (r{\"o}relse), har vi ist{\"a}llet vektorpotentialen
 ${\bf A}$, fr{\aa}n vilken vi ist{\"a}llet f{\aa}r den magnetiska
 fl{\"o}dest{\"a}theten som ${\bf B}=\nabla\times{\bf A}$.
 \vfill\eject
+
+\section{Konservativa kontra icke-konservativa f{\"a}lt}
+\sidx{Skal{\"a}r potential $\phi$}[Konservativa f{\"a}lt]
+\sidx{Vektorpotential ${\bf A}$}[Icke-konservativa f{\"a}lt]
+Vi ser hur begreppet potential {\"a}r synnerligen anv{\"a}ndbart i s{\aa} kallade {\it konservativa f{\"a}lt}, som exempelvis gravitation och elektrostatik. L{\aa}t oss med en handfull enkla fr{\aa}gor reda ut n{\aa}gra begrepp som kan vara aningen f{\"o}rvirrande i sammanhanget.
+
+\subsection{Fr{\aa}ga 1: Vad {\"a}r ett konservativt f{\"a}lt?}
+\sidx{Konservativt f{\"a}lt}
+Ett {\it konservativt f{\"a}lt}\numberedfootnote{Eller om vi skall vara petnoga,
+  {\it konservativt vektorf{\"a}lt}.}
+{\"a}r ett f{\"a}lt d{\"a}r arbetet mellan tv{\aa} punkter inte beror p{\aa} v{\"a}gen, bara p{\aa} start- och slutpunkt. Rent matematiskt {\"a}r arbetet
+$$
+  W=-\int^{{\bf x}_b}_{{\bf x}_a}{\bf F}\cdot d{\bf l}
+$$
+i ett konservativt f{\"a}lt detsamma oavsett vilken v{\"a}g vi v{\"a}ljer att ta mellan
+${\bf x}_a$ och ${\bf x}_b$. Vi kan h{\"a}r typiskt f{\"o}rest{\"a}lla oss att ${\bf F}=m{\bf G}$ (som i gravitation) eller ${\bf F}=q{\bf E}$ (som i elektrostatik). Lite l{\"o}st kan vi s{\"a}ga att ``allt som str{\aa}lar ut fr{\aa}n en punktk{\"a}lla'' (typ elektriska f{\"a}ltlinjer fr{\aa}n en statisk laddning) kommer att beskriva ett konservativt f{\"a}lt.
+
+\subsection{Fr{\aa}ga 2: Vad k{\"a}nnetecknar ett konservativt f{\"a}lt?}
+Definitionen enligt ovan {\"a}r f{\"o}rvisso tillr{\"a}cklig, men rent praktiskt vore det bra om vi kunde k{\"a}nna igen ett konservativt f{\"a}lt utifr{\aa}n sin form. Det absolut enklaste n{\"o}dv{\"a}ndiga och tillr{\"a}ckliga villkoret f{\"o}r att ett f{\"a}lt skall vara konservativt {\"a}r att dess rotation {\"a}r noll, exempelvis som f{\"o}r s{\aa}v{\"a}l elektrostatiska f{\"a}lt ${\bf E}$ med $\nabla\times{\bf E}={\bf 0}$ som f{\"o}r gravitationsf{\"a}ltet ${\bf G}$ med $\nabla\times{\bf G}={\bf 0}$.
+Vi kan erinra oss att detta i grunden ju var sj{\"a}lva {\it anledningen} att vi i F{\"o}rel{\"a}sning~2 kunde utnyttja vektorteoremet $\nabla\times(\nabla f)={\bf 0}$ till att dra slutsatsen om existens av en skal{\"a}r potential\numberedfootnote{Rekapitulera att vi v{\"a}ljer att {\it definiera} denna potential med negativt tecken s{\aa} att vi f{\aa}r den elektrostatiska kraften ${\bf F}=q{\bf E}$ i samma riktning som f{\"a}ltet ${\bf E}$ f{\"o}r positiva laddningar $q$.} ${\bf E}=-\nabla\phi$.
+
+\subsection{Fr{\aa}ga 3: Vad {\"a}r ett icke-konservativt f{\"a}lt?}
+\sidx{Icke-konservativt f{\"a}lt}
+
+\subsection{Fr{\aa}ga 4: Vad k{\"a}nnetecknar ett icke-konservativt f{\"a}lt?}
+
+
+\subsection{Fr{\aa}ga 5: {\"A}r ett elektrostatiskt f{\"a}lt alltid konservativt?}
+
+\subsection{Fr{\aa}ga 6: {\"A}r ett magnetostatiskt f{\"a}lt alltid konservativt?}
+
+\subsection{Fr{\aa}ga 7: {\"A}r ett elektrodynamiskt f{\"a}lt alltid konservativt?}
+
+
+\section{Finns det absoluta m{\aa}tt p{\aa} en potential?}
+\sidx{Skal{\"a}r potential $\phi$}[Absolut m{\aa}tt f{\"o}r]
+\sidx{Vektorpotential ${\bf A}$}[Absolut m{\aa}tt f{\"o}r]
+
 
 \section{Retarderade potentialer och kopplingen till elektromagnetiska f{\"a}lt}
 \sidx{Retarderad potential}[Tidsf{\"o}rdr{\"o}jd potential]
@@ -569,7 +613,7 @@ $$
 
 \subsection{Den generella formen av v{\aa}gekvationen f{\"o}r skal{\"a}ra
   potentialen}
-\sidx{Skal{\"a}r potential}[V{\aa}gekvation f{\"o}r]
+\sidx{Skal{\"a}r potential $\phi$}[V{\aa}gekvation f{\"o}r]
 Embryot till en v{\aa}gekvation f{\"o}r den skal{\"a}ra potentialen $\phi$ kan
 tas fram p{\aa} ett liknande s{\"a}tt, om {\"a}n betydligt enklare {\"a}n
 f{\"o}r vektorpotentialen, genom att utveckla divergensen f{\"o}r den
@@ -610,7 +654,7 @@ utf{\"o}ras genom att utnyttja en viss grad av godtycklighet som fortfarande
 finns inneboende i ekvationerna, som vi nu skall visa.
 
 Vi noterar att eftersom vektorpotentialen ${\bf B}({\bf x},t)$ definieras
-utifr{\aa}n rotationen av vektorpotentialen som\sidx{Vektorpotential}
+utifr{\aa}n rotationen av vektorpotentialen som\sidx{Vektorpotential ${\bf A}$}
 $$
   {\bf B}({\bf x},t)=\nabla\times{\bf A}({\bf x},t),
 $$

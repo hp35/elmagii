@@ -39,15 +39,17 @@
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
-\def\ifempty#1{\ifx\relax#1\relax}
 \newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
 \colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
 \ifcolors\input color\fi  % to get colored text output
 \def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
+\def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
-  \ifcolors\voffset=-10.2mm\topskip=0pt\fi
+  \ifcolors
+    \voffset=-10.2mm\topskip=0pt
+  \fi
   \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
     \else\hfill\fi}
   \def\rightheadline{\tenrm{\it F\"orel\"asning \lecturenumber}

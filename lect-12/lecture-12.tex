@@ -39,11 +39,17 @@
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
-
+\newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
+\colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
+\ifcolors\input color\fi  % to get colored text output
+\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \ifcolors
+    \voffset=-10.2mm\topskip=0pt
+  \fi
   \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
     \else\hfill\fi}
   \def\rightheadline{\tenrm{\it F\"orel\"asning \lecturenumber}
@@ -114,11 +120,12 @@
 %----------------------- END OF PREAMBLE -----------------------
 
 \section{Retarderade potentialer f{\"o}r antenner}
-\sidx{Retarderade potentialer}[f{\"o}r antennsystem]
+\sidx{Retarderade potentialer}[f{\"o}r cylindrisk rak antenn]
 Vi betraktar en dipolantenn best{\aa}ende av tv{\aa} identiska cylindriska
 element av l{\"a}ngd $L$, separerade med ett litet luftgap $g$. Med ``litet''
 luftgap menar vi h{\"a}r ett gap som {\"a}r litet i f{\"o}rh{\aa}llande till
-antennelementen, med $g\ll L$.
+antennelementen ($g\ll L$) s{\aa}v{\"a}l som i f{\"o}rh{\aa}llande till
+v{\aa}gl{\"a}ngden ($g\ll\lambda$).
 Utan att g{\"o}ra ett alltf{\"o}r stort avsteg fr{\aa}n det generella fallet,
 kan vi anta att str{\"o}mt{\"a}theten i antennelementen i huvudsak kommer att
 l{\"o}pa i elementens mantelyta, och vi kommer att anta att eventuella effekter

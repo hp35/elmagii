@@ -39,11 +39,18 @@
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
-
+\newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
+\colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
+\ifcolors\input color\fi  % to get colored text output
+\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 \def\ifempty#1{\ifx\relax#1\relax}
+\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 \def\initlecture{
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \ifcolors
+    \voffset=-10.2mm\topskip=0pt
+  \fi
   \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
     \else\hfill\fi}
   \def\rightheadline{\tenrm{\it F\"orel\"asning \lecturenumber}
@@ -411,7 +418,7 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
     f{\"o}rv{\"a}xling) lyder
     $$
       \iiint_V\big(\varphi\nabla^2\psi+(\nabla\varphi)\cdot(\nabla\psi)\big)\,dV
-        =\oiint \varphi{{\partial\psi}\over{\partial n}}\,dA.
+        =\oiint \varphi{{\partial\psi}\over{\partial n}}\,dS.
     $$
     Vi definierar i samma notation som Griffiths differensen $U\equiv\phi_2
     -\phi_1$ i en sluten volym $V$ med randen $S$, med egenskaperna
@@ -421,7 +428,7 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
     Greens f{\"o}rsta teorem, med $\varphi=\psi=U$, att
     $$
       \iiint_V\big(U\nabla^2U+(\nabla U)\cdot(\nabla U)\big)\,dV
-        =\oiint U{{\partial U}\over{\partial n}}\,dA.
+        =\oiint U{{\partial U}\over{\partial n}}\,dS.
     $$
     Med egenskaperna hos $U$ reduceras detta till
     $$

@@ -39,11 +39,17 @@
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
-
+\newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
+\colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
+\ifcolors\input color\fi  % to get colored text output
+\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+  \ifcolors
+    \voffset=-10.2mm\topskip=0pt
+  \fi
   \headline={\ifnum\pageno>1\ifodd\pageno\rightheadline\else\leftheadline\fi
     \else\hfill\fi}
   \def\rightheadline{\tenrm{\it F{\"o}rel{\"a}sning \lecturenumber}
@@ -477,8 +483,7 @@ kvadrupol.}
 {\captionwide Skal{\"a}r potential $\phi(x,y)$ f{\"o}r en kvadratisk
 elektrisk kvadrupol med f{\"a}ltlinjer ${\bf E}(x,y)=-\nabla\phi(x,y)$.}
 
-\section{Multipolutveckling f{\"o}r generella laddningsf{\"o}rdelningar
-         (i termer av skal{\"a}r potential)}
+\section{Multipolutveckling av skal{\"a}r potential f{\"o}r generella laddningsf{\"o}rdelningar}
 \sidx{Multipolutveckling}[F{\"o}r skal{\"a}r potential]
 \sidx{Multipolutveckling}[Generell laddnings\-f{\"o}r\-del\-ning]
 Vi betraktar en generell laddningsf{\"o}rdelning enligt figur.
@@ -663,8 +668,8 @@ s{\"a}tt, med en helt och h{\aa}llet analog serieutveckling av
 ${\bf J}({\bf x})$.
 \vfill\eject
 
-\section{Multipolutveckling f{\"o}r generella str{\"o}mt{\"a}theter
-         (i termer av vektorpotentialen)}
+\section{Multipolutveckling av vektorpotentialen f{\"o}r generella
+  str{\"o}mt{\"a}theter}
 \sidx{Multipolutveckling}[F{\"o}r vektorpotential]
 \sidx{Multipolutveckling}[Generell str{\"o}mt{\"a}thet]
 Motsvarande serieutveckling f{\"o}r vektorpotentialen f{\"o}ljer direkt fr{\aa}n
@@ -833,8 +838,10 @@ $$
 
 
 \subsection{Magnetisk kvadrupolterm}
-\sidx{Magnetiskt kvadrupolmoment}[Fr{\aa}n multipolutveckling av vektorpotential]
+\sidx{Magnetiskt kvadrupolmoment}[Fr{\aa}n multipolutveckling av
+  vektorpotential]
 \sidx{Vektorpotential ${\bf A}$}[Magnetiskt kvadrupolmoment]
+[TO BE CONTINUED]
 
 \vfill\eject
 
@@ -842,18 +849,22 @@ $$
 \sidx{Magnetiska monopoler}[Icke-existens av, dynamiskt]
 Vi har just precis p{\aa} ett alternativt s{\"a}tt, ut{\"o}ver det tidigare
 $\nabla\cdot{\bf B}=0$ fr{\aa}n exempelvis F{\"o}rel{\"a}sning~4, visat att
-{\it magnetiska monopoler inte existerar i magneto-statiska problem}.\numberedfootnote{Vi kan rekapitulera att vi inom magnetostatiken fann $\nabla\cdot{\bf B}=0$ som en direkt f{\"o}ljd av formen p{\aa} Biot--Savarts lag f{\"o}r en generell str{\"o}mt{\"a}thet, samt fr{\aa}n identiteten
-$$
-  \nabla\times{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
-    =\underbrace{
-       \nabla\times\bigg(-\nabla{{1}\over{|{\bf x}-{\bf x}'|}}\bigg)
-     }_{\nabla\times(\nabla f)\equiv 0}
-    =0.
-$$}
+{\it magnetiska monopoler inte existerar i magneto-statiska problem}.%
+\numberedfootnote{Vi kan rekapitulera att vi inom magnetostatiken,
+  i F{\"o}rel{\"a}sning~4, fann $\nabla\cdot{\bf B}=0$ som en direkt
+  f{\"o}ljd av formen p{\aa} Biot--Savarts lag f{\"o}r en generell
+  str{\"o}mt{\"a}thet, samt fr{\aa}n identiteten
+  $$
+    \nabla\times{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
+      =\underbrace{
+         \nabla\times\bigg(-\nabla{{1}\over{|{\bf x}-{\bf x}'|}}\bigg)
+       }_{\nabla\times(\nabla f)\equiv 0}
+      =0.
+  $$}
 Fr{\aa}gan infinner sig d{\aa} f{\"o}rst{\aa}s om det finns m{\"o}jlighet att
 magnetiska monopoler existerar om vi till{\aa}ter statiken att g{\aa} {\"o}ver
 till {\it dynamik}, d{\"a}r vi till{\aa}ter ett tidsberoende hos
-laddningsf{\"o}rdelningen $\rho$.
+laddningsf{\"o}rdelningen $\rho$?
 
 Det enklaste argumentet f{\"o}r att magnetiska monopoler ej heller kan existera
 i en dynamisk regim f{\"o}ljer fr{\aa}n det klassiska statiska argumentet att
@@ -882,10 +893,12 @@ vi {\"a}ven {\it elektrodynamiskt} har att
 $$
   \nabla\cdot{\bf B}({\bf x},t)=0,
 $$
-vilket direkt ger vid hand att magnetiska monopoler inte kan existera dynamiskt
-heller. Argumentet ovan betyder ocks{\aa} att Gauss lag f{\"o}r den magnetiska
-fl{\"o}dest{\"a}theten {\"a}r identisk i magnetostatiska s{\aa}v{\"a}l som i
-elektrodynamiska situationer.
+vilket direkt ger vid hand att {\it magnetiska monopoler inte heller kan
+existera  dynamiskt.} Argumentet ovan betyder ocks{\aa} att Gauss lag f{\"o}r
+den magnetiska fl{\"o}dest{\"a}theten {\"a}r identisk i magnetostatiska
+s{\aa}v{\"a}l som i elektrodynamiska situationer, n{\aa}got som vi kommer att
+anv{\"a}nda i F{\"o}rel{\"a}sning~9 d{\aa} vi s{\"a}tter samman den generella
+formen av {\it Maxwell's ekvationer.}
 \vfill\eject
 
 \section{Dipolapproximationen f{\"o}r station{\"a}ra laddningsf{\"o}rdelningar
