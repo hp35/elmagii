@@ -71,6 +71,8 @@ beginfig(1);
   label.urt(btex ${\bf x}'_k$ etex, .5[(xo,yo),p]);
   drawarrow (xo,yo)--(r,0u);
   label.ulft(btex ${\bf x}$ etex, .5[(xo,yo),(r,0u)]);
+  label.lrt(btex \vbox{\hbox{Observationspunkt}
+      \hbox{``Testladdning''}} etex, (r,0u) shifted (0u,-rc));
 
 endfig;
 end
