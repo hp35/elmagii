@@ -9,6 +9,9 @@
 % input TEX;
 u := 1mm;
 
+%
+% Macro for drawing the boxes of electromagnetic theorems and relations.
+%
 vardef drawbox(expr eqn, labeltext, cpos, w, h, r, lectno) =
   begingroup
     pair p[];
@@ -32,14 +35,18 @@ vardef drawbox(expr eqn, labeltext, cpos, w, h, r, lectno) =
     pickup pencircle scaled .7pt;
     draw box;
     label.bot(labeltext, (xc,yc+hh));
-    label(eqn, (xc,yc-1u));
+    label(eqn, (xc,yc-1.5u));
     label(lectno,(xc+wh-r,yc+hh-r));
     draw fullcircle scaled 3.6u shifted (xc+wh-r,yc+hh-r);
     pickup pencircle scaled 1pt;
   endgroup
 enddef;
 
-vardef connect(expr posa, posb, wa, ha, wb, hb, da, db) =
+%
+% Macro for drawing the connectors between the boxes of electromagnetic
+% theorems and relations.
+%
+vardef connect(expr posa, posb, ha, hb, da, db) =
   begingroup
     drawarrow (posa shifted (0u,-ha/2)){dir da}
       ..{dir db}(posb shifted (0u,hb/2));
@@ -48,13 +55,14 @@ enddef;
 
 beginfig(1);
   path p;
-  pair poscoulombforce, poscoulombgen, posscalarpotential, posbiotsavarti,
-    poslorentzforce, posgaussintegral, posb;
+  pair poscoulombforce, poscoulombgen, posscalpot,
+    posscalarpotential, posbiotsavarti, posbiotsavartj,
+    poslorentzforce, posgaussintegral, posgaussdifferential, pospoisson;
   ws := 52u;  % Standard box width
-  hs := 14u;  % Standard box height
+  hs := 12u;  % Standard box height
   rs := 3u;   % Standard corner rounding
   dxb:=60u;   % Pitch between boxes along x-axis
-  dyb:=25u;   % Pitch between boxes along y-axis
+  dyb:=18u;   % Pitch between boxes along y-axis
   pickup pencircle scaled 1pt;
 
   %
@@ -63,14 +71,14 @@ beginfig(1);
   poscoulombforce:=(0u,0u);
   drawbox(btex $
       {\bf F}={{q q'}\over{4\pi\varepsilon_0}}
-          {{({\bf x}-{\bf x}')}
-            \over{|{\bf x}-{\bf x}'|^3}}\,dV'
+          {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Coulombs kraftlag} etex, poscoulombforce, ws, hs, rs,
+      {Coulombs kraftlag} etex,
+      poscoulombforce, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{1} etex);
   pickup pencircle scaled .7pt;
-  draw fullcircle scaled 4u shifted (-3.2u,-2.75u) withcolor red;
+  draw fullcircle scaled 4u shifted (-3.1u,-2.95u) withcolor red;
   pickup pencircle scaled 1pt;
 
   %
@@ -85,13 +93,12 @@ beginfig(1);
             \over{|{\bf x}-{\bf x}'|^3}}\,dV'
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Coulombs generaliserade lag} etex, poscoulombgen, ws, hs, rs,
+      {Coulombs generaliserade lag} etex,
+      poscoulombgen, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{1} etex);
   pickup pencircle scaled .7pt;
-  draw fullcircle scaled 4u shifted (-6.75u,0u) shifted (dxb,0) withcolor red;
+  draw fullcircle scaled 4u shifted (-6.75u,-.5u) shifted (dxb,0) withcolor red;
   pickup pencircle scaled 1pt;
-  posb:=(60u,180u);
-%  connect(poscoulombgen,posb,ws,hs,ws,hs,270,270);
 
   %
   % Existence of a scalar potential, derived from the form of Coulomb's
@@ -103,6 +110,21 @@ beginfig(1);
       \font\eightsy=cmsy8
       \labelfont{Existens av skal{\"a}r potential $\eightsy\phi$} etex,
       posscalarpotential, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{1} etex);
+
+  %
+  % Explicit integral solution for the electrostatic potential.
+  %
+  posscalpot:=(0u,-3dyb);
+  drawbox(btex $
+      \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+      \phi({\bf x})\equiv{{1}\over{4\pi\varepsilon_0}}\iiint%_V
+          {{\rho({\bf x}')}
+            \over{|{\bf x}-{\bf x}'|}}\,dV'
+      $ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Elektrostatisk potential} etex,
+      posscalpot, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{1} etex);
 
   %
@@ -120,17 +142,38 @@ beginfig(1);
   %  }
   %  \def\oiint{\mathop{\oiintop}\displaylimits}
   %
-  posgaussintegral:=(0u,-3dyb);
+  posgaussintegral:=(0u,-4dyb);
   drawbox(btex $
       \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
       \def\oiint{\mathop{\int\kern-5pt\int\kern-10.7pt%
         {\scriptstyle\bigcirc}\kern2pt}}
-      \oiint {\bf E}({\bf x})\cdot d{\bf S}
-         ={{1}\over{\varepsilon_0}}\iiint\rho({\bf x})\,dV
+      \oiint {\bf E}({\bf x}')\cdot d{\bf S}'
+         ={{1}\over{\varepsilon_0}}\iiint\rho({\bf x}')\,dV'
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Gauss lag f{\"o}r elektrisk laddning} etex, posgaussintegral, ws, hs, rs,
+      {Gauss lag p{\aa} integralform} etex,
+      posgaussintegral, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{1} etex);
+
+  %
+  % Gauss' law in differential form.
+  %
+  posgaussdifferential:=(0u,-5dyb);
+  drawbox(btex $\nabla\cdot{\bf E}=\rho/\varepsilon_0$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Gauss lag p{\aa} differentialform} etex,
+      posgaussdifferential, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{1} etex);
+
+  %
+  % Poisson's equation in differential form.
+  %
+  pospoisson:=(0u,-6dyb);
+  drawbox(btex $\nabla^2\phi=-\rho/\varepsilon_0$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Poissons ekvation, skal{\"a}r pot.} etex,
+      pospoisson, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{2} etex);
 
   %
   % Biot--Savart's law.
@@ -142,10 +185,24 @@ beginfig(1);
             \over{|{\bf x}-{\bf x}'|^3}}\,dl'
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Biot--Savarts lag} etex, posbiotsavarti, ws, hs, rs,
-      btex \font\labelfont=cmssi8\labelfont{1} etex);
-  posb:=(60u,140u);
-%  connect(posbiotsavarti,posb,ws,hs,ws,hs,270,270);
+      {Biot--Savarts lag} etex,
+      posbiotsavarti, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{4} etex);
+
+  %
+  % Biot--Savart's law for current densities.
+  %
+  posbiotsavartj:=(dxb,-dyb);
+    drawbox(btex $
+          \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+          {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\iiint
+          {{{\bf J}({\bf x}')\times({\bf x}-{\bf x}')}
+            \over{|{\bf x}-{\bf x}'|^3}}\,dV'
+      $ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Biot--Savarts lag, str{\"o}mt{\"a}thet} etex,
+      posbiotsavartj, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{4} etex);
 
   %
   % The Lorentz force, fundamental and independent of the laws of Coulomb
@@ -154,8 +211,12 @@ beginfig(1);
   poslorentzforce:=(2*dxb,0u);
     drawbox(btex ${\bf F}=q({\bf E}+{\bf v}\times{\bf B})$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Lorentz kraftlag} etex, poslorentzforce, ws, hs, rs,
+      {Lorentz kraftlag} etex,
+      poslorentzforce, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
+
+  connect(poscoulombforce, poscoulombgen, hs, hs, 270, 270);
+  connect(poscoulombgen, posscalarpotential, hs, hs, 270, 270);
 
 endfig;
 end
