@@ -57,6 +57,7 @@ beginfig(1);
   path p;
   pair poscoulombforce, poscoulombgen, posscalpot,
     posscalarpotential, posbiotsavarti, posbiotsavartj,
+    posmagmonopoles, posampere, posvecpot, posamperepot,
     poslorentzforce, posgaussintegral, posgaussdifferential, pospoisson;
   ws := 52u;  % Standard box width
   hs := 12u;  % Standard box height
@@ -123,7 +124,7 @@ beginfig(1);
             \over{|{\bf x}-{\bf x}'|}}\,dV'
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Elektrostatisk potential} etex,
+      {Skal{\"a}r potential, integrall{\"o}sning} etex,
       posscalpot, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{1} etex);
 
@@ -202,6 +203,61 @@ beginfig(1);
       btex \font\labelfont=cmssi8\labelfont
       {Biot--Savarts lag, str{\"o}mt{\"a}thet} etex,
       posbiotsavartj, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{4} etex);
+
+  %
+  % The divergence theorem for magnetostatics, allowing us to draw the
+  % conclusion that magnetic monopoles do not exist.
+  %
+  posmagmonopoles:=(dxb,-2dyb);
+    drawbox(btex $\nabla\cdot{\bf B}({\bf x})=0$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Ingen magnetisk laddning} etex,
+      posmagmonopoles, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{4} etex);
+
+  %
+  % Ampere's law.
+  %
+  posampere:=(dxb,-3dyb);
+    drawbox(btex $\nabla\times{\bf B}({\bf x})=\mu_0{\bf J}_{\rm f}$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Amp\`eres lag} etex,
+      posampere, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{4} etex);
+
+  %
+  % Existence of a vector potential.
+  %
+  posvecpot:=(dxb,-4dyb);
+    drawbox(btex ${\bf B}({\bf x})=\nabla\times{\bf A}({\bf x})$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Vektorpotential} etex,
+      posvecpot, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{4} etex);
+
+  %
+  % Amp\`eres law for the vactor potential.
+  %
+  posamperepot:=(dxb,-5dyb);
+    drawbox(btex $\nabla^2{\bf A}({\bf x})=-\mu_0{\bf J}_{\rm f}({\bf x})$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Amp\`eres lag, vektorpotential} etex,
+      posamperepot, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{4} etex);
+
+  %
+  % Explicit integral solution for the vactor potential.
+  %
+  posamperepot:=(dxb,-6dyb);
+    drawbox(btex $
+            \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+            {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
+	    \iiint{{{\bf J}_{\rm f}({\bf x})}\over{|{\bf x}-{\bf x}'|}}\,dV'$
+	    etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Vektorpotential, integrall{\"o}sning} etex,
+      posamperepot, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
   %
