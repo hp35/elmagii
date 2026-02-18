@@ -62,6 +62,7 @@ beginfig(1);
     poscontinuity, poselecpoldens, poselecdispfield,
     posmagnetiz, posmagfieldstrength,
     posmaxwelldifferential, posmaxwellintegral, poselecwaveeq,
+    posplanewaveexp, posdalembert,
     posgaussintegral, posgaussdifferential, pospoisson;
   ws := 52u;  % Standard box width
   hs := 12u;  % Standard box height
@@ -369,6 +370,38 @@ beginfig(1);
       btex \font\labelfont=cmssi8\labelfont{7} etex);
 
   %
+  % Plane wave expansion of electromagnetic waves.
+  %
+  posplanewaveexp:=(2*dxb,-9dyb);
+    drawbox(btex
+        \def\Re{\mathop{\rm Re}\nolimits}
+        \vbox{
+          \hbox{${\bf E}=\sum_{\bf k}
+            \Re[{\bf E}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega t)]$}
+          \hbox{${\bf B}=\sum_{\bf k}
+            \Re[{\bf B}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega t)]$}
+%          \hbox{${\bf E}({\bf x},t)=\sum_{\bf k}
+%            \Re[{\bf E}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega t)]$}
+%          \hbox{${\bf B}({\bf x},t)=\sum_{\bf k}
+%            \Re[{\bf B}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega t)]$}
+        }
+      etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Planv{\aa}guppdelning av f{\"a}lt} etex,
+      posplanewaveexp, ws, 1.4*hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{10} etex);
+
+  %
+  % D'Alembert solution for traveling waves.
+  %
+  posdalembert:=(2*dxb,-10dyb);
+    drawbox(btex $E(z,t)=f(z-ct)+g(z+ct)$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {D'Alemberts l{\"o}sningsmetod} etex,
+      posdalembert, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{10} etex);
+
+  %
   % Maxwell's equations in differential form.
   %
   posmaxwelldifferential:=(0dxb,-8dyb);
@@ -438,7 +471,7 @@ beginfig(1);
       btex \font\labelfont=cmssi8\labelfont
         {Elektromagnetiska v{\aa}gekvationer - ljus, radio, gammastr{\aa}lning}
       etex,
-      poselecwaveeq, 1.7*ws, 1.5*hs, rs,
+      poselecwaveeq, 1.7*ws, 1.4*hs, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
 
   connect(poscoulombforce, poscoulombgen, hs, hs, 270, 270);
