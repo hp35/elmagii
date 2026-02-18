@@ -590,7 +590,7 @@ beginfig(1);
   %
   % The gauge transformation in electrodynamics.
   %
-  posgauge:=(1dxb,-10.5dyb);
+  posgauge:=(1dxb,-11.2dyb);
     drawbox(btex
         \vbox{
           \hbox{$\phi'({\bf x},t)=\phi({\bf x},t)
@@ -607,14 +607,16 @@ beginfig(1);
   %
   % The retarded potentials in electrodynamics.
   %
-  posretardedpots:=(1dxb,-12dyb);
+  posretardedpots:=(1dxb, ypart posgauge -1dyb-0.5hs);
     drawbox(btex
         \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
         \vbox{
           \hbox{$\phi({\bf x},t)={{1}\over{4\pi\varepsilon_0}}\iiint
             {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV'$}
+          \vskip2pt
           \hbox{${\bf A}({\bf x},t)={{\mu_0}\over{4\pi}}\iiint
             {{{\bf J}({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV'$}
+          \vskip2pt
           \hbox{Ret.~tid: $t'=t-|{\bf x}-{\bf x}'|/c$}
         }
       etex,
@@ -681,6 +683,11 @@ beginfig(1);
   %
   connect(posmultipole, posdipoleapprox, 2hs, 1.4hs, 270, 270);
 
+  %
+  % Connectors in the Explicit Solution to Maxwell Equations block.
+  %
+  connect(posgauge, posretardedpots, hs, 2.0hs, 270, 270);
+
   drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
         {Elektrostatik} etex,
 	(0dxb,-3.5dyb), ws+4u, 7dyb+hs+4u, rs);
@@ -696,11 +703,31 @@ beginfig(1);
   drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
         {Multipolutveckling av potentialer} etex,
 	(1dxb,-8.75dyb+0.15hs), ws+4u, 1.5dyb+1.7hs+4u, rs);
+
   ywpmax := ypart posmaxwellintegral + 1hs;
   ywpmin := ypart posplanewaveexp - 0.7hs;
   drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
         {Elektromagnetisk v{\aa}gutbredning} etex,
 	(2dxb,.5[ywpmin,ywpmax]), ws+4u, ywpmax-ywpmin+4u, rs);
+
+  ywpmax := ypart posgauge + 0.5hs;
+  ywpmin := ypart posretardedpots - 1.0hs;
+  drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
+        {Explicit l{\"o}sning till Maxwells ekvationer} etex,
+	(dxb,.5[ywpmin,ywpmax]), ws+4u, ywpmax-ywpmin+4u, rs);
+
+  %
+  % Connecting the Electrodynamic block to the Electromagnetic Wave
+  % Propagation block.
+  %
+  drawarrow (posdispcurr shifted (0u,-hs/2)){dir 270}
+    ..{dir 180}(posdispcurr shifted (0u,-hs/2) shifted (-4u,-4u))
+    ..{dir 180}(posdispcurr shifted (0u,-hs/2) shifted (-24u,-4u))
+    ..{dir 270}(posdispcurr shifted (0u,-hs/2) shifted (-28u,-8u))
+    ..{dir 0}(posdispcurr shifted (0u,-hs/2) shifted (-24u,-8u))
+%    ..{dir 0}(posdispcurr shifted (0u,-hs/2) shifted (-20u,-8u))
+    ..{dir 270}(posmaxwellintegral shifted (0u,hs) shifted (-22u,0u));
+
 
 endfig;
 end
