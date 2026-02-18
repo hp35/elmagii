@@ -116,7 +116,7 @@ beginfig(1);
       poscoulombforce, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{1} etex);
   pickup pencircle scaled .7pt;
-  draw fullcircle scaled 4u shifted (-3.1u,-2.95u) withcolor red;
+  draw fullcircle scaled 4u shifted (-0.1u,-3.1u) withcolor red;
   pickup pencircle scaled 1pt;
 
   %
@@ -461,7 +461,7 @@ beginfig(1);
   %
   % D'Alembert solution for traveling waves.
   %
-  posdalembert:=(2*dxb,-11dyb);
+  posdalembert:=(1*dxb,-11dyb);
     drawbox(btex $E(z,t)=f(z-ct)+g(z+ct)$ etex,
       btex \font\labelfont=cmssi8\labelfont
       {D'Alemberts l{\"o}sningsmetod} etex,
@@ -507,7 +507,7 @@ beginfig(1);
   %
   % Maxwell's equations in integral form.
   %
-  posmaxwelldifferential:=(2dxb,-7.0dyb);
+  posmaxwelldifferential:=(2dxb,-6.5dyb);
     drawbox(btex
         \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
         \def\iint{\mathop{\int\kern-5pt\int}}
@@ -530,7 +530,7 @@ beginfig(1);
   %
   % Maxwell's equations in differential form.
   %
-  posmaxwelldifferential:=(2dxb,-8.5dyb);
+  posmaxwelldifferential:=(2dxb,-8.0dyb);
     drawbox(btex
         \vbox{
           \hbox{$\nabla\times{\bf E}
@@ -550,19 +550,44 @@ beginfig(1);
   % The electromagnetic wave equations for the electric (E) and
   % magnetic (B) fields, as derived from Maxwell's equations.
   %
-  poselecwaveeq:=(1.5dxb,-10dyb);
+%  poselecwaveeq:=(1.5dxb,-10dyb);
+%    drawbox(btex
+%        \vbox{
+%          \hbox{$\nabla\times\nabla\times{\bf E}
+%                  +{{1}\over{c^2}}{{\partial^2{\bf E}}\over{\partial t^2}}=
+%                  -\mu_0{{\partial}\over{\partial t}}
+%                   \big({\bf J}_{\rm f}
+%                       +{{\partial{\bf P}}\over{\partial t}}
+%                       +\nabla\times{\bf M}
+%                   \big)$}
+%          \hbox{$\nabla\times\nabla\times{\bf B}
+%                  +{{1}\over{c^2}}{{\partial^2{\bf B}}\over{\partial t^2}}=
+%                   \mu_0\nabla\times
+%                   \big({\bf J}_{\rm f}
+%                       +{{\partial{\bf P}}\over{\partial t}}
+%                       +\nabla\times{\bf M}
+%                   \big)$}
+%        }
+%      etex,
+%      btex \font\labelfont=cmssi8\labelfont
+%        {Elektromagnetiska v{\aa}gekvationer - ljus, radio, gammastr{\aa}lning}
+%      etex,
+%      poselecwaveeq, 1.7*ws, 1.4*hs, rs,
+%      btex \font\labelfont=cmssi8\labelfont{9} etex);
+  poselecwaveeq:=(2dxb,-10dyb);
     drawbox(btex
         \vbox{
           \hbox{$\nabla\times\nabla\times{\bf E}
-                  +\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}=
-                  -\mu_0{{\partial}\over{\partial t}}
+                  +{{1}\over{c^2}}{{\partial^2{\bf E}}\over{\partial t^2}}$}
+          \hbox{\hskip10pt$=-\mu_0{{\partial}\over{\partial t}}
                    \big({\bf J}_{\rm f}
                        +{{\partial{\bf P}}\over{\partial t}}
                        +\nabla\times{\bf M}
                    \big)$}
+          \vskip2pt
           \hbox{$\nabla\times\nabla\times{\bf B}
-                  +\mu_0\varepsilon_0{{\partial^2{\bf B}}\over{\partial t^2}}=
-                   \mu_0\nabla\times
+                  +{{1}\over{c^2}}{{\partial^2{\bf B}}\over{\partial t^2}}$}
+          \hbox{\hskip10pt$=\mu_0\nabla\times
                    \big({\bf J}_{\rm f}
                        +{{\partial{\bf P}}\over{\partial t}}
                        +\nabla\times{\bf M}
@@ -570,10 +595,27 @@ beginfig(1);
         }
       etex,
       btex \font\labelfont=cmssi8\labelfont
-        {Elektromagnetiska v{\aa}gekvationer - ljus, radio, gammastr{\aa}lning}
+        {Elektromagnetiska v{\aa}gekvationer}
       etex,
-      poselecwaveeq, 1.7*ws, 1.4*hs, rs,
+      poselecwaveeq, ws, 2.2*hs, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
+
+  %
+  % The gauge transformation in electrodynamics.
+  %
+  posgauge:=(1dxb,-10dyb);
+    drawbox(btex
+        \vbox{
+          \hbox{$\phi'({\bf x},t)=\phi({\bf x},t)
+                  -{{\partial\psi({\bf x},t)}\over{\partial t}}$}
+          \hbox{${\bf A}'({\bf x},t)={\bf A}({\bf x},t)+\nabla\psi({\bf x},t)$}
+        }
+      etex,
+      btex \font\labelfont=cmssi8\labelfont
+        {Gauge-transformation}
+      etex,
+      posgauge, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{11} etex);
 
   %
   % The retarded potentials in electrodynamics.
@@ -583,15 +625,16 @@ beginfig(1);
         \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
         \vbox{
           \hbox{$\phi({\bf x},t)={{1}\over{4\pi\varepsilon_0}}\iiint
-        {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV'$}
+            {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV'$}
           \hbox{${\bf A}({\bf x},t)={{\mu_0}\over{4\pi}}\iiint
-        {{{\bf J}({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV'$}
+            {{{\bf J}({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV'$}
+          \hbox{Ret.~tid: $t'=t-|{\bf x}-{\bf x}'|/c$}
         }
       etex,
       btex \font\labelfont=cmssi8\labelfont
         {Retarderade potentialer}
       etex,
-      posretardedpots, ws, 1.4*hs, rs,
+      posretardedpots, ws, 2.0*hs, rs,
       btex \font\labelfont=cmssi8\labelfont{11} etex);
 
   connect(poscoulombforce, poscoulombgen, hs, hs, 270, 270);
