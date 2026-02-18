@@ -37,7 +37,7 @@ vardef drawbox(expr eqn, labeltext, cpos, w, h, r, lectno) =
     label.bot(labeltext, (xc,yc+hh));
     label(eqn, (xc,yc-1.5u));
     label(lectno,(xc+wh-r,yc+hh-r));
-    draw fullcircle scaled 3.6u shifted (xc+wh-r,yc+hh-r);
+    draw fullcircle scaled 3.8u shifted (xc+wh-r,yc+hh-r);
     pickup pencircle scaled 1pt;
   endgroup
 enddef;
@@ -59,8 +59,9 @@ beginfig(1);
     posscalarpotential, posbiotsavarti, posbiotsavartj,
     posmagmonopoles, posampere, posvecpot, posamperepot,
     poslorentzforce, posfaradayinduc, posfaradaylaw, posneumann,
+    posmultipole, posdipoleapprox,
     poscontinuity, poselecpoldens, poselecdispfield,
-    posmagnetiz, posmagfieldstrength,
+    posmagnetiz, posmagfieldstrength, possurfcurr,
     posmaxwelldifferential, posmaxwellintegral, poselecwaveeq,
     posplanewaveexp, posdalembert,
     posgaussintegral, posgaussdifferential, pospoisson;
@@ -329,7 +330,7 @@ beginfig(1);
     drawbox(btex ${\bf P} \equiv \big\langle{{d{\bf p}}\over{dV}}\big\rangle
       = \varepsilon_0\chi_{\rm e}{\bf E}$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {El. polarisationsdensitet} etex,
+      {Elektrisk polarisationsdensitet} etex,
       poselecpoldens, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{6} etex);
 
@@ -370,9 +371,20 @@ beginfig(1);
       btex \font\labelfont=cmssi8\labelfont{7} etex);
 
   %
+  % Surface and volume currents.
+  %
+  possurfcurr:=(2*dxb,-9dyb);
+    drawbox(btex ${\bf J}_{\rm b}=\nabla\times{\bf M}$,\quad
+                 ${\bf K}_{\rm b}={\bf M}\times{\bf e}_n$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Bundnda yt- och volymstr{\"o}mmar} etex,
+      possurfcurr, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{7} etex);
+
+  %
   % Plane wave expansion of electromagnetic waves.
   %
-  posplanewaveexp:=(2*dxb,-9dyb);
+  posplanewaveexp:=(2*dxb,-10dyb);
     drawbox(btex
         \def\Re{\mathop{\rm Re}\nolimits}
         \vbox{
@@ -394,12 +406,65 @@ beginfig(1);
   %
   % D'Alembert solution for traveling waves.
   %
-  posdalembert:=(2*dxb,-10dyb);
+  posdalembert:=(2*dxb,-11dyb);
     drawbox(btex $E(z,t)=f(z-ct)+g(z+ct)$ etex,
       btex \font\labelfont=cmssi8\labelfont
       {D'Alemberts l{\"o}sningsmetod} etex,
       posdalembert, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{10} etex);
+
+  %
+  % Multipole expansion of fields.
+  %
+  posmultipole:=(2*dxb,-12dyb);
+    drawbox(btex
+    \vbox{
+    \hbox{
+    $\phi({\bf x})
+      ={{1}\over{4\pi\varepsilon_0}}
+        \big(
+        {{1}\over{|{\bf x}|}}q
+      +\sum_k{{x_k}\over{|{\bf x}|^3}}p_k
+%      +\sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}}p_k
+$}
+%\hbox{\hskip20pt$      +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
+%          {{(3 x_j x_k - \delta_{jk}|{\bf x}|^2)}\over{|{\bf x}|^5}}Q_{jk}
+\hbox{\hskip20pt$      +{{1}\over{2}}\sum_j\sum_k
+          {{(3 x_j x_k - \delta_{jk}|{\bf x}|^2)}\over{|{\bf x}|^5}}Q_{jk}
+$}
+\hbox{\hskip20pt$+\ldots\big)$}
+}
+etex,
+%\phi({\bf x})
+%       ={{q}\over{2\pi\varepsilon_0}}\Bigg(
+%         \underbrace{{{b\cos\theta}\over{r^2}}}_{\rm dipol}
+%         +\underbrace{{{(b\cos\theta)^3}\over{r^4}}}_{\rm oktopol}
+%         +\underbrace{{{(b\cos\theta)^5}\over{r^6}}}_{\rm dotriacontapol}
+%         +\ldots
+%        \Bigg)
+      btex \font\labelfont=cmssi8\labelfont
+      {Multipolutveckling av f{\"a}lt} etex,
+      posmultipole, ws, 1.8*hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{8} etex);
+
+  %
+  % The dipole approximation.
+  %
+  posdipoleapprox:=(2*dxb,-13dyb);
+    drawbox(btex
+    \vbox{
+    \hbox{
+    $\phi({\bf x})\approx{{1}\over{4\pi\varepsilon_0}}\big(
+        {{q}\over{|{\bf x}|}} + {{{\bf p}\cdot{\bf x}}\over{|{\bf x}|^3}}
+      \big)$}
+    \hbox{${\bf A}({\bf x})\approx{{\mu_0}\over{4\pi}}
+        {{{\bf m}\times{\bf x}}\over{|{\bf x}|^3}}
+    $}}
+    etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Dipolapproximationen} etex,
+      posdipoleapprox, ws, 1.4*hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{8} etex);
 
   %
   % Maxwell's equations in differential form.
