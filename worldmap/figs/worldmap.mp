@@ -452,34 +452,6 @@ beginfig(1);
       btex \font\labelfont=cmssi8\labelfont{7} etex);
 
   %
-  % D'Alembert solution for traveling waves.
-  %
-  posdalembert:=(2*dxb,-11dyb);
-    drawbox(btex $E(z,t)=f(z-ct)+g(z+ct)$ etex,
-      btex \font\labelfont=cmssi8\labelfont
-      {D'Alemberts l{\"o}sningsmetod} etex,
-      posdalembert, ws, hs, rs,
-      btex \font\labelfont=cmssi8\labelfont{10} etex);
-
-  %
-  % Plane wave expansion of electromagnetic waves.
-  %
-  posplanewaveexp:=(2*dxb,-12dyb);
-    drawbox(btex
-        \def\Re{\mathop{\rm Re}\nolimits}
-        \vbox{
-          \hbox{${\bf E}=\sum_{\bf k}
-            \Re[{\bf E}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega t)]$}
-          \hbox{${\bf B}=\sum_{\bf k}
-            \Re[{\bf B}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega t)]$}
-        }
-      etex,
-      btex \font\labelfont=cmssi8\labelfont
-      {Planv{\aa}guppdelning av f{\"a}lt} etex,
-      posplanewaveexp, ws, 1.4*hs, rs,
-      btex \font\labelfont=cmssi8\labelfont{10} etex);
-
-  %
   % Multipole expansion of fields.
   %
   posmultipole:=(1*dxb,-8.0dyb);
@@ -518,7 +490,7 @@ beginfig(1);
   %
   % Maxwell's equations in integral form.
   %
-  posmaxwellintegral:=(2dxb,-6.5dyb);
+  posmaxwellintegral:=(2dxb,-7dyb);
     drawbox(btex
         \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
         \def\iint{\mathop{\int\kern-5pt\int}}
@@ -571,7 +543,7 @@ beginfig(1);
                        +{{\partial{\bf P}}\over{\partial t}}
                        +\nabla\times{\bf M}
                    \big)$}
-          \vskip2pt
+          \vskip4pt
           \hbox{$\nabla\times\nabla\times{\bf B}
                   +{{1}\over{c^2}}{{\partial^2{\bf B}}\over{\partial t^2}}$}
           \hbox{\hskip10pt$=\mu_0\nabla\times
@@ -586,6 +558,34 @@ beginfig(1);
       etex,
       poselecwaveeq, ws, 2.2*hs, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
+
+  %
+  % D'Alembert solution for traveling waves.
+  %
+  posdalembert:=(2*dxb, ypart poselecwaveeq -1dyb-0.6hs);
+    drawbox(btex $E(z,t)=f(z-ct)+g(z+ct)$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {D'Alemberts l{\"o}sningsmetod} etex,
+      posdalembert, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{10} etex);
+
+  %
+  % Plane wave expansion of electromagnetic waves.
+  %
+  posplanewaveexp:=(2*dxb, ypart posdalembert-1dyb-0.2hs);
+    drawbox(btex
+        \def\Re{\mathop{\rm Re}\nolimits}
+        \vbox{
+          \hbox{${\bf E}=\sum_{\bf k}
+            \Re[{\bf E}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega t)]$}
+          \hbox{${\bf B}=\sum_{\bf k}
+            \Re[{\bf B}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega t)]$}
+        }
+      etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Planv{\aa}guppdelning av f{\"a}lt} etex,
+      posplanewaveexp, ws, 1.4*hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{10} etex);
 
   %
   % The gauge transformation in electrodynamics.
@@ -668,6 +668,19 @@ beginfig(1);
   connect(poselecpoldens, poselecdispfield, hs, hs, 270, 270);
   connect(posmagnetiz, posmagfieldstrength, hs, hs, 270, 270);
 
+  %
+  % Connectors in the Wave Propagation block.
+  %
+  connect(posmaxwellintegral, posmaxwelldifferential, 2hs, 1.5hs, 270, 270);
+  connect(posmaxwelldifferential, poselecwaveeq, 1.5hs, 2.2hs, 270, 270);
+  connect(poselecwaveeq, posdalembert, 2.2hs, hs, 270, 270);
+  connect(posdalembert, posplanewaveexp, hs, 1.4hs, 270, 270);
+
+  %
+  % Connectors in the Multipole Expansion block.
+  %
+  connect(posmultipole, posdipoleapprox, 2hs, 1.4hs, 270, 270);
+
   drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
         {Elektrostatik} etex,
 	(0dxb,-3.5dyb), ws+4u, 7dyb+hs+4u, rs);
@@ -683,6 +696,11 @@ beginfig(1);
   drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
         {Multipolutveckling av potentialer} etex,
 	(1dxb,-8.75dyb+0.15hs), ws+4u, 1.5dyb+1.7hs+4u, rs);
+  ywpmax := ypart posmaxwellintegral + 1hs;
+  ywpmin := ypart posplanewaveexp - 0.7hs;
+  drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
+        {Elektromagnetisk v{\aa}gutbredning} etex,
+	(2dxb,.5[ywpmin,ywpmax]), ws+4u, ywpmax-ywpmin+4u, rs);
 
 endfig;
 end
