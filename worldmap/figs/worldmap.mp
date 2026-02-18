@@ -60,6 +60,8 @@ beginfig(1);
     posmagmonopoles, posampere, posvecpot, posamperepot,
     poslorentzforce, posfaradayinduc, posfaradaylaw, posneumann,
     poscontinuity, poselecpoldens, poselecdispfield,
+    posmagnetiz, posmagfieldstrength,
+    posmaxwelldifferential, posmaxwellintegral, poselecwaveeq,
     posgaussintegral, posgaussdifferential, pospoisson;
   ws := 52u;  % Standard box width
   hs := 12u;  % Standard box height
@@ -341,6 +343,103 @@ beginfig(1);
       {Elektrisk fl{\"o}dest{\"a}thet} etex,
       poselecdispfield, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{6} etex);
+
+  %
+  % Magnetization.
+  %
+  posmagnetiz:=(2*dxb,-7dyb);
+    drawbox(btex ${\bf M}\equiv\big\langle{{d{\bf m}}\over{dV}}\big\rangle
+      = {{1}\over{\mu_0}}\Big(1-{{1}\over{\mu_{\rm r}}}\Big){\bf B}$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Magnetisering} etex,
+      posmagnetiz, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{7} etex);
+
+  %
+  % Magnetic field strength.
+  %
+  posmagfieldstrength:=(2*dxb,-8dyb);
+    drawbox(btex $ {\bf H}\equiv{{\bf B}\over{\mu_0}}-{\bf M}
+      % ={{\bf B}\over{\mu_0\mu_{\rm r}}}
+      \ \Leftrightarrow\ 
+      {\bf B}=\mu_0\mu_{\rm r}{\bf H}$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Magnetisk f{\"a}ltstyrka} etex,
+      posmagfieldstrength, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{7} etex);
+
+  %
+  % Maxwell's equations in differential form.
+  %
+  posmaxwelldifferential:=(0dxb,-8dyb);
+    drawbox(btex
+        \vbox{
+          \hbox{$\nabla\times{\bf E}
+                    =-{{\partial{\bf B}}\over{\partial t}}$,\hskip19pt
+                $\nabla\cdot{\bf D}=\rho$}
+          \hbox{$\nabla\times{\bf H}={\bf J}_{\rm f}
+                    +{{\partial{\bf D}}\over{\partial t}}$,\
+                $\nabla\cdot{\bf B}=0$}
+        }
+      etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Maxwells ekvationer, diff.form} etex,
+      posmaxwelldifferential, ws, 1.4*hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{9} etex);
+
+  %
+  % Maxwell's equations in integral form.
+  %
+  posmaxwelldifferential:=(1dxb,-8dyb);
+    drawbox(btex
+        \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+        \def\iint{\mathop{\int\kern-5pt\int}}
+        \def\oiint{\mathop{\int\kern-5pt\int\kern-10.7pt%
+          {\scriptstyle\bigcirc}\kern2pt}}
+        \vbox{
+          \hbox{$\oiint{\bf D}\cdot d{\bf S}=\iiint\rho\,dV$}
+          \hbox{$\oiint{\bf B}\cdot d{\bf S}=0$}
+          \hbox{$\oint{\bf E}\cdot d{\bf l}
+               =-{{\partial}\over{\partial t}}\iint{\bf B}\cdot d{\bf S}$}
+%          \hbox{$\oint{\bf H}\cdot d{\bf l}=\iint{\bf J}_{\rm f}\cdot d{\bf S}
+%               +{{\partial}\over{\partial t}}\iint{\bf D}\cdot d{\bf S}$}
+          \hbox{$\oint{\bf H}\cdot d{\bf l}=\iint\big({\bf J}_{\rm f}
+               +{{\partial{\bf D}}\over{\partial t}}\big)\cdot d{\bf S}$}
+        }
+      etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Maxwells ekvationer, int.form} etex,
+      posmaxwelldifferential, ws, 2*hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{9} etex);
+
+  %
+  % The electromagnetic wave equations for the electric (E) and
+  % magnetic (B) fields, as derived from Maxwell's equations.
+  %
+  poselecwaveeq:=(0.5dxb,-10dyb);
+    drawbox(btex
+        \vbox{
+          \hbox{$\nabla\times\nabla\times{\bf E}
+                  +\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}=
+                  -\mu_0{{\partial}\over{\partial t}}
+                   \big({\bf J}_{\rm f}
+                       +{{\partial{\bf P}}\over{\partial t}}
+                       +\nabla\times{\bf M}
+                   \big)$}
+          \hbox{$\nabla\times\nabla\times{\bf B}
+                  +\mu_0\varepsilon_0{{\partial^2{\bf B}}\over{\partial t^2}}=
+                   \mu_0\nabla\times
+                   \big({\bf J}_{\rm f}
+                       +{{\partial{\bf P}}\over{\partial t}}
+                       +\nabla\times{\bf M}
+                   \big)$}
+        }
+      etex,
+      btex \font\labelfont=cmssi8\labelfont
+        {Elektromagnetiska v{\aa}gekvationer - ljus, radio, gammastr{\aa}lning}
+      etex,
+      poselecwaveeq, 1.7*ws, 1.5*hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{9} etex);
 
   connect(poscoulombforce, poscoulombgen, hs, hs, 270, 270);
   connect(poscoulombgen, posscalarpotential, hs, hs, 270, 270);
