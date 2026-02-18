@@ -58,7 +58,9 @@ beginfig(1);
   pair poscoulombforce, poscoulombgen, posscalpot,
     posscalarpotential, posbiotsavarti, posbiotsavartj,
     posmagmonopoles, posampere, posvecpot, posamperepot,
-    poslorentzforce, posgaussintegral, posgaussdifferential, pospoisson;
+    poslorentzforce, posfaradayinduc, posfaradaylaw, posneumann,
+    poscontinuity, poselecpoldens, poselecdispfield,
+    posgaussintegral, posgaussdifferential, pospoisson;
   ws := 52u;  % Standard box width
   hs := 12u;  % Standard box height
   rs := 3u;   % Standard corner rounding
@@ -270,6 +272,75 @@ beginfig(1);
       {Lorentz kraftlag} etex,
       poslorentzforce, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
+
+  %
+  % Faraday's law of induction.
+  %
+  posfaradayinduc:=(2*dxb,-dyb);
+    drawbox(btex ${\cal E}=-{{d\Phi_{\rm M}}/{dt}}$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Faradays induktionslag} etex,
+      posfaradayinduc, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{5} etex);
+
+  %
+  % Faraday's law.
+  %
+  posfaradaylaw:=(2*dxb,-2dyb);
+    drawbox(btex $\nabla\times{\bf E}({\bf r},t)
+                   =-{{\partial{\bf B}({\bf x},t)}\over{\partial t}}$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Faradays lag} etex,
+      posfaradaylaw, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{5} etex);
+
+  %
+  % Mutual inductance.
+  %
+  posneumann:=(2*dxb,-3dyb);
+    drawbox(btex $M_{\Gamma\Gamma'}={{\mu_0}\over{4\pi}}
+          \oint_{\Gamma}\oint_{\Gamma'}
+          {{d{\bf l}'\cdot d{\bf l}}\over{|{\bf x}-{\bf x}'|}}$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Mutual inductance, Neumann} etex,
+      posneumann, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{5} etex);
+
+  %
+  % Continuity equation for electric charge.
+  %
+  poscontinuity:=(2*dxb,-4dyb);
+    drawbox(btex $\nabla\cdot{\bf J}=-{{\partial\rho}\over{\partial t}}$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Kontinuitetsekvationen} etex,
+      poscontinuity, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{5} etex);
+
+  connect(poscoulombforce, poscoulombgen, hs, hs, 270, 270);
+  connect(poscoulombgen, posscalarpotential, hs, hs, 270, 270);
+
+  %
+  % Electric polarization density.
+  %
+  poselecpoldens:=(2*dxb,-5dyb);
+    drawbox(btex ${\bf P} \equiv \big\langle{{d{\bf p}}\over{dV}}\big\rangle
+      = \varepsilon_0\chi_{\rm e}{\bf E}$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {El. polarisationsdensitet} etex,
+      poselecpoldens, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{6} etex);
+
+  %
+  % Electric displacement field.
+  %
+  poselecdispfield:=(2*dxb,-6dyb);
+    drawbox(btex ${\bf D}\equiv\varepsilon_0{\bf E}+{\bf P}
+        % =\varepsilon_0(1+\chi_{\rm e}){\bf E}
+        =\varepsilon_0\varepsilon_{\rm r}{\bf E}$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Elektrisk fl{\"o}dest{\"a}thet} etex,
+      poselecdispfield, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{6} etex);
 
   connect(poscoulombforce, poscoulombgen, hs, hs, 270, 270);
   connect(poscoulombgen, posscalarpotential, hs, hs, 270, 270);
