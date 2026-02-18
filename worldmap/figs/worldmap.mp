@@ -16,8 +16,8 @@ vardef drawbox(expr eqn, labeltext, cpos, w, h, r, lectno) =
   begingroup
     pair p[];
     path box;
-    xc := xpart cpos;        % X-coordinate of centre position
-    yc := ypart cpos;        % Y-coordinate of centre position
+    xc := xpart cpos;        % X-coordinate of centre position of box
+    yc := ypart cpos;        % Y-coordinate of centre position of box
     wh := w/2;               % Half-width of box
     hh := h/2;               % Half-height of box
     p1 := (xc-wh+r, yc-hh);
@@ -48,8 +48,10 @@ enddef;
 %
 vardef connect(expr posa, posb, ha, hb, da, db) =
   begingroup
+    pickup pencircle scaled .7pt;
     drawarrow (posa shifted (0u,-ha/2)){dir da}
       ..{dir db}(posb shifted (0u,hb/2));
+    pickup pencircle scaled 1pt;
   endgroup
 enddef;
 
@@ -60,8 +62,8 @@ vardef drawlabeledbox(expr labeltext, cpos, w, h, r) =
   begingroup
     pair p[];
     path box;
-    xc := xpart cpos;        % X-coordinate of centre position
-    yc := ypart cpos;        % Y-coordinate of centre position
+    xc := xpart cpos;        % X-coordinate of centre position of box
+    yc := ypart cpos;        % Y-coordinate of centre position of box
     wh := w/2;               % Half-width of box
     hh := h/2;               % Half-height of box
     p1 := (xc-wh+r, yc-hh);
@@ -87,14 +89,14 @@ beginfig(1);
   path p;
   pair poscoulombforce, poscoulombgen, posscalpot,
     posscalarpotential, posbiotsavarti, posbiotsavartj,
-    posmagmonopoles, posampere, posvecpot, posamperepot,
+    posmagmonopoles, posampere, posvecpot, posamperepot, posamperepotint,
     poslorentzforce, posfaradayinduc, posfaradaylaw, posneumann,
     posmultipole, posdipoleapprox,
     poscontinuity, posdispcurr, poselecpoldens, poselecdispfield,
     posmagnetiz, posmagfieldstrength, possurfcurr,
     posmaxwelldifferential, posmaxwellintegral, poselecwaveeq,
     posplanewaveexp, posdalembert,
-    posgaussintegral, posgaussdifferential, pospoisson,
+    posgaussintegral, posgaussdifferential, pospoisson, posmirrorcharges,
     posretardedpots, posgauge;
   ws := 52u;  % Standard box width
   hs := 12u;  % Standard box height
@@ -216,18 +218,19 @@ beginfig(1);
   %
   % Poisson's equation in differential form.
   %
-  pospoisson:=(0u,-7dyb);
+  posmirrorcharges:=(0u,-7dyb);
   drawbox(btex
       \font\textfont=cmss8\textfont
       \hskip-10pt
       \vbox{
         \hbox{- Entydighetsteoremet, extremv{\"a}rden}
+	\vskip-2pt
         \hbox{- Spegelladdningar}
       }
       etex,
       btex \font\labelfont=cmssi8\labelfont
       {Spegelladdningar} etex,
-      pospoisson, ws, hs, rs,
+      posmirrorcharges, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{3} etex);
 
   %
@@ -303,7 +306,7 @@ beginfig(1);
   %
   % Explicit integral solution for the vactor potential.
   %
-  posamperepot:=(dxb,-6dyb);
+  posamperepotint:=(dxb,-6dyb);
     drawbox(btex $
             \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
             {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
@@ -311,7 +314,7 @@ beginfig(1);
 	    etex,
       btex \font\labelfont=cmssi8\labelfont
       {Vektorpotential, integrall{\"o}sning} etex,
-      posamperepot, ws, hs, rs,
+      posamperepotint, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
   %
@@ -349,13 +352,21 @@ beginfig(1);
   %
   % Mutual inductance.
   %
-  posneumann:=(2*dxb,-3dyb);
+%  posneumann:=(2*dxb,-3dyb);
+%    drawbox(btex $M_{\Gamma\Gamma'}={{\mu_0}\over{4\pi}}
+%          \oint_{\Gamma}\oint_{\Gamma'}
+%          {{d{\bf l}'\cdot d{\bf l}}\over{|{\bf x}-{\bf x}'|}}$ etex,
+%      btex \font\labelfont=cmssi8\labelfont
+%      {{\"O}msesidig induktans, Neumann} etex,
+%      posneumann, ws, hs, rs,
+%      btex \font\labelfont=cmssi8\labelfont{5} etex);
+  posneumann:=(2*dxb+(0.25/2)*ws,-3dyb);
     drawbox(btex $M_{\Gamma\Gamma'}={{\mu_0}\over{4\pi}}
           \oint_{\Gamma}\oint_{\Gamma'}
           {{d{\bf l}'\cdot d{\bf l}}\over{|{\bf x}-{\bf x}'|}}$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {{\"O}msesidig induktans, Neumann} etex,
-      posneumann, ws, hs, rs,
+      {{\"O}msesidig induktans} etex,
+      posneumann, ws-0.25ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{5} etex);
 
   %
@@ -441,9 +452,19 @@ beginfig(1);
       btex \font\labelfont=cmssi8\labelfont{7} etex);
 
   %
+  % D'Alembert solution for traveling waves.
+  %
+  posdalembert:=(2*dxb,-11dyb);
+    drawbox(btex $E(z,t)=f(z-ct)+g(z+ct)$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {D'Alemberts l{\"o}sningsmetod} etex,
+      posdalembert, ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{10} etex);
+
+  %
   % Plane wave expansion of electromagnetic waves.
   %
-  posplanewaveexp:=(1*dxb,-12dyb);
+  posplanewaveexp:=(2*dxb,-12dyb);
     drawbox(btex
         \def\Re{\mathop{\rm Re}\nolimits}
         \vbox{
@@ -459,19 +480,9 @@ beginfig(1);
       btex \font\labelfont=cmssi8\labelfont{10} etex);
 
   %
-  % D'Alembert solution for traveling waves.
-  %
-  posdalembert:=(1*dxb,-11dyb);
-    drawbox(btex $E(z,t)=f(z-ct)+g(z+ct)$ etex,
-      btex \font\labelfont=cmssi8\labelfont
-      {D'Alemberts l{\"o}sningsmetod} etex,
-      posdalembert, ws, hs, rs,
-      btex \font\labelfont=cmssi8\labelfont{10} etex);
-
-  %
   % Multipole expansion of fields.
   %
-  posmultipole:=(1*dxb,-7.5dyb);
+  posmultipole:=(1*dxb,-8.0dyb);
     drawbox(btex
         \vbox{
           \hbox{$\phi({\bf x})={{1}\over{4\pi\varepsilon_0}}
@@ -489,7 +500,7 @@ beginfig(1);
   %
   % The dipole approximation.
   %
-  posdipoleapprox:=(1*dxb,-9.0dyb);
+  posdipoleapprox:=(1*dxb,-9.5dyb);
     drawbox(btex
         \vbox{
           \hbox{$\phi({\bf x})\approx{{1}\over{4\pi\varepsilon_0}}\big(
@@ -507,7 +518,7 @@ beginfig(1);
   %
   % Maxwell's equations in integral form.
   %
-  posmaxwelldifferential:=(2dxb,-6.5dyb);
+  posmaxwellintegral:=(2dxb,-6.5dyb);
     drawbox(btex
         \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
         \def\iint{\mathop{\int\kern-5pt\int}}
@@ -524,13 +535,13 @@ beginfig(1);
       etex,
       btex \font\labelfont=cmssi8\labelfont
       {Maxwells ekvationer, int.form} etex,
-      posmaxwelldifferential, ws, 2*hs, rs,
+      posmaxwellintegral, ws, 2*hs, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
 
   %
   % Maxwell's equations in differential form.
   %
-  posmaxwelldifferential:=(2dxb,-8.0dyb);
+  posmaxwelldifferential:=(2dxb, ypart posmaxwellintegral-1dyb-0.75hs);
     drawbox(btex
         \vbox{
           \hbox{$\nabla\times{\bf E}
@@ -550,31 +561,7 @@ beginfig(1);
   % The electromagnetic wave equations for the electric (E) and
   % magnetic (B) fields, as derived from Maxwell's equations.
   %
-%  poselecwaveeq:=(1.5dxb,-10dyb);
-%    drawbox(btex
-%        \vbox{
-%          \hbox{$\nabla\times\nabla\times{\bf E}
-%                  +{{1}\over{c^2}}{{\partial^2{\bf E}}\over{\partial t^2}}=
-%                  -\mu_0{{\partial}\over{\partial t}}
-%                   \big({\bf J}_{\rm f}
-%                       +{{\partial{\bf P}}\over{\partial t}}
-%                       +\nabla\times{\bf M}
-%                   \big)$}
-%          \hbox{$\nabla\times\nabla\times{\bf B}
-%                  +{{1}\over{c^2}}{{\partial^2{\bf B}}\over{\partial t^2}}=
-%                   \mu_0\nabla\times
-%                   \big({\bf J}_{\rm f}
-%                       +{{\partial{\bf P}}\over{\partial t}}
-%                       +\nabla\times{\bf M}
-%                   \big)$}
-%        }
-%      etex,
-%      btex \font\labelfont=cmssi8\labelfont
-%        {Elektromagnetiska v{\aa}gekvationer - ljus, radio, gammastr{\aa}lning}
-%      etex,
-%      poselecwaveeq, 1.7*ws, 1.4*hs, rs,
-%      btex \font\labelfont=cmssi8\labelfont{9} etex);
-  poselecwaveeq:=(2dxb,-10dyb);
+  poselecwaveeq:=(2dxb, ypart posmaxwelldifferential-dyb-0.85hs);
     drawbox(btex
         \vbox{
           \hbox{$\nabla\times\nabla\times{\bf E}
@@ -603,7 +590,7 @@ beginfig(1);
   %
   % The gauge transformation in electrodynamics.
   %
-  posgauge:=(1dxb,-10dyb);
+  posgauge:=(1dxb,-10.5dyb);
     drawbox(btex
         \vbox{
           \hbox{$\phi'({\bf x},t)=\phi({\bf x},t)
@@ -620,7 +607,7 @@ beginfig(1);
   %
   % The retarded potentials in electrodynamics.
   %
-  posretardedpots:=(2dxb,-12dyb);
+  posretardedpots:=(1dxb,-12dyb);
     drawbox(btex
         \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
         \vbox{
@@ -637,18 +624,65 @@ beginfig(1);
       posretardedpots, ws, 2.0*hs, rs,
       btex \font\labelfont=cmssi8\labelfont{11} etex);
 
+  %
+  % Connectors in the Electrostatics block.
+  %
   connect(poscoulombforce, poscoulombgen, hs, hs, 270, 270);
   connect(poscoulombgen, posscalarpotential, hs, hs, 270, 270);
+  connect(posscalarpotential, posscalpot, hs, hs, 270, 270);
+  connect(posscalpot, posgaussintegral, hs, hs, 270, 270);
+  connect(posgaussintegral, posgaussdifferential, hs, hs, 270, 270);
+  connect(posgaussdifferential, pospoisson, hs, hs, 270, 270);
+  connect(pospoisson, posmirrorcharges, hs, hs, 270, 270);
 
+  %
+  % Connectors in the Magnetostatics block.
+  %
+  connect(posbiotsavarti, posbiotsavartj, hs, hs, 270, 270);
+  connect(posbiotsavartj, posmagmonopoles, hs, hs, 270, 270);
+  connect(posmagmonopoles, posampere, hs, hs, 270, 270);
+  connect(posampere, posvecpot, hs, hs, 270, 270);
+  connect(posvecpot, posamperepot, hs, hs, 270, 270);
+  connect(posamperepot, posamperepotint, hs, hs, 270, 270);
+
+  %
+  % Connectors in the Electrodynamics block.
+  %
+  connect(poslorentzforce, posfaradayinduc, hs, hs, 270, 270);
+  connect(posfaradayinduc, posfaradaylaw, hs, hs, 270, 270);
+  connect(posfaradaylaw, posneumann, hs, hs, 270, 270);
+  pickup pencircle scaled .7pt;
+  drawarrow (posfaradaylaw shifted (0u,-hs/2)){dir 270}
+              ..{dir 180}(posfaradaylaw shifted (0u,-hs/2) shifted (-2u,-2u))
+              ..{dir 180}(posfaradaylaw shifted (0u,-hs/2) shifted (-18u,-2u))
+              ..{dir 270}(posfaradaylaw shifted (0u,-hs/2) shifted (-22u,-6u))
+              ..{dir 270}(poscontinuity shifted (0u,hs/2) shifted (-22u,6u))
+              ..{dir 0}(poscontinuity shifted (0u,hs/2) shifted (-18u,2u))
+              ..{dir 0}(poscontinuity shifted (0u,hs/2) shifted (-2u,2u))
+              ..{dir 270}(poscontinuity shifted (0u,hs/2));
+  connect(poscontinuity, posdispcurr, hs, hs, 270, 270);
+
+  %
+  % Connectors in the Constitutive Relations block.
+  %
+  connect(poselecpoldens, poselecdispfield, hs, hs, 270, 270);
+  connect(posmagnetiz, posmagfieldstrength, hs, hs, 270, 270);
 
   drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
-        {Elektrostatik} etex, (0dxb,-3.5dyb), ws+4u, 7dyb+hs+4u, rs);
+        {Elektrostatik} etex,
+	(0dxb,-3.5dyb), ws+4u, 7dyb+hs+4u, rs);
   drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
-        {Magnetostatik} etex, (dxb,-3.0dyb), ws+4u, 6dyb+hs+4u, rs);
+        {Magnetostatik} etex,
+	(dxb,-3.0dyb), ws+4u, 6dyb+hs+4u, rs);
   drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
-        {Elektrodynamik} etex, (2dxb,-2.5dyb), ws+4u, 5dyb+hs+4u, rs);
+        {Elektrodynamik} etex,
+	(2dxb,-2.5dyb), ws+4u, 5dyb+hs+4u, rs);
   drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
-        {Konstitutiva relationer} etex, (0dxb,-10.5dyb), ws+4u, 4dyb+hs+4u, rs);
+        {Konstitutiva relationer} etex,
+	(0dxb,-10.5dyb), ws+4u, 4dyb+hs+4u, rs);
+  drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
+        {Multipolutveckling av potentialer} etex,
+	(1dxb,-8.75dyb+0.15hs), ws+4u, 1.5dyb+1.7hs+4u, rs);
 
 endfig;
 end
