@@ -28,6 +28,7 @@ all:
 	make compile-booksrc
 	make inline-formulas
 	make inline-formula-src
+	make inline-worldmap
 	make inline-portrait
 	make inline-gallery-src
 	make compile-book
@@ -224,6 +225,26 @@ inline-formula-src:
 	echo "Replacing \\\input ../formulas/src/formulas.tex by content";\
 	awk ' \
 	   /\\input[[:space:]]+\.\.\/formulas\/src\/formulas\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input ../worldmap/src/worldmap-src.tex' by
+# incorporating the file contents of the file instead. This way,
+# we obtain a more self-consistent master TeX file for compilation.
+#
+inline-worldmap:
+	@INSERT=../worldmap/src/worldmap-src.tex;\
+	INPUT=complete.tex;\
+	OUTPUT=complete-tmp.tex;\
+	echo "Replacing \\\input ../worldmap/src/worldmap-src.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+\.\.\/worldmap\/src\/worldmap-src\.tex/ { \
 	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
 	         close("'"$$INSERT"'"); \
 	         next; \
