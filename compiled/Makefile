@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2025 under GPL 3.0, Fredrik Jonsson
 #
-PROJECT = complete
+PROJECT = elmagii-complete
 TEX    = tex
 MKIDX  = makeindex
 DVIPS  = dvips
@@ -200,8 +200,8 @@ compile-booksrc:
 #
 inline-formulas:
 	@INSERT=../formulas/formulas-twocol.tex;\
-	INPUT=complete.tex;\
-	OUTPUT=complete-tmp.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
 	echo "Replacing \\\input ../formulas/formulas-twocol.tex by content";\
 	awk ' \
 	   /\\input[[:space:]]+\.\.\/formulas\/formulas-twocol\.tex/ { \
@@ -220,8 +220,8 @@ inline-formulas:
 #
 inline-formula-src:
 	@INSERT=../formulas/src/formulas.tex;\
-	INPUT=complete.tex;\
-	OUTPUT=complete-tmp.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
 	echo "Replacing \\\input ../formulas/src/formulas.tex by content";\
 	awk ' \
 	   /\\input[[:space:]]+\.\.\/formulas\/src\/formulas\.tex/ { \
@@ -240,8 +240,8 @@ inline-formula-src:
 #
 inline-worldmap:
 	@INSERT=../worldmap/src/worldmap-src.tex;\
-	INPUT=complete.tex;\
-	OUTPUT=complete-tmp.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
 	echo "Replacing \\\input ../worldmap/src/worldmap-src.tex by content";\
 	awk ' \
 	   /\\input[[:space:]]+\.\.\/worldmap\/src\/worldmap-src\.tex/ { \
@@ -260,8 +260,8 @@ inline-worldmap:
 #
 inline-portrait:
 	@INSERT=../gallery/src/portrait.tex;\
-	INPUT=complete.tex;\
-	OUTPUT=complete-tmp.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
 	echo "Replacing \\\input ../gallery/src/portrait.tex by content";\
 	awk ' \
 	   /\\input[[:space:]]+\.\.\/gallery\/src\/portrait\.tex/ { \
@@ -280,8 +280,8 @@ inline-portrait:
 #
 inline-gallery-src:
 	@INSERT=../gallery/src/gallery-src.tex;\
-	INPUT=complete.tex;\
-	OUTPUT=complete-tmp.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
 	echo "Replacing \\\input ../gallery/src/gallery-src.tex by content";\
 	awk ' \
 	   /\\input[[:space:]]+\.\.\/gallery\/src\/gallery-src\.tex/ { \
@@ -324,5 +324,5 @@ texchars:
 	done
 
 clean:
-	rm -Rf *~ lect*.tex *.log *.idx *.ilg *.ind *.dvi *.ps complete.*
+	rm -Rf *~ lect*.tex *.log *.idx *.ilg *.ind *.dvi *.ps $(PROJECT).*
 	make clean -C src
