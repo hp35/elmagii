@@ -10,6 +10,15 @@
 u := 1mm;
 
 %
+% Employing the TeX-arrow package by Tommy Ekola.
+%
+input ../macros/cmarrows/cmarrows.mp
+setup_cmarrows(
+  arrow_name = "texarrow";
+  parameter_file = "cmr12.mf";
+  macro_name = "drawtexarrow");
+
+%
 % Macro for drawing the boxes of electromagnetic theorems and relations.
 %
 vardef drawbox(expr eqn, labeltext, cpos, w, h, r, lectno) =
@@ -48,10 +57,15 @@ enddef;
 %
 vardef connect(expr posa, posb, ha, hb, da, db) =
   begingroup
-    pickup pencircle scaled .7pt;
-    drawarrow (posa shifted (0u,-ha/2)){dir da}
-      ..{dir db}(posb shifted (0u,hb/2));
-    pickup pencircle scaled 1pt;
+    boolean use_texarrows;
+    use_texarrows := true;
+    if use_texarrows:
+      drawtexarrow (posa shifted (0u,-ha/2)){dir da}
+        ..{dir db}(posb shifted (0u,hb/2));
+    else:
+      drawarrow (posa shifted (0u,-ha/2)){dir da}
+        ..{dir db}(posb shifted (0u,hb/2));
+    fi
   endgroup
 enddef;
 
@@ -100,7 +114,7 @@ beginfig(1);
     posretardedpots, posgauge;
   ws := 52u;  % Standard box width
   hs := 12u;  % Standard box height
-  rs := 3u;   % Standard corner rounding
+  rs := 3u;   % Standard corner rounding, radius
   dxb:=60u;   % Pitch between boxes along x-axis
   dyb:=16u;   % Pitch between boxes along y-axis
   pickup pencircle scaled 1pt;
@@ -465,7 +479,7 @@ beginfig(1);
         }
       etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Multipolutveckling av f{\"a}lt} etex,
+      \hskip-10pt{Monopol, dipol, kvadrupol, oktopol} etex,
       posmultipole, ws, 2*hs, rs,
       btex \font\labelfont=cmssi8\labelfont{8} etex);
 
@@ -654,7 +668,7 @@ beginfig(1);
   connect(posfaradayinduc, posfaradaylaw, hs, hs, 270, 270);
   connect(posfaradaylaw, posneumann, hs, hs, 270, 270);
   pickup pencircle scaled .7pt;
-  drawarrow (posfaradaylaw shifted (0u,-hs/2)){dir 270}
+  drawtexarrow (posfaradaylaw shifted (0u,-hs/2)){dir 270}
               ..{dir 180}(posfaradaylaw shifted (0u,-hs/2) shifted (-2u,-2u))
               ..{dir 180}(posfaradaylaw shifted (0u,-hs/2) shifted (-18u,-2u))
               ..{dir 270}(posfaradaylaw shifted (0u,-hs/2) shifted (-22u,-6u))
@@ -674,7 +688,9 @@ beginfig(1);
   % Connectors in the Wave Propagation block.
   %
   connect(posmaxwellintegral, posmaxwelldifferential, 2hs, 1.5hs, 270, 270);
+  connect(posmaxwelldifferential, posmaxwellintegral, -1.5hs, -2hs, 90, 90);
   connect(posmaxwelldifferential, poselecwaveeq, 1.5hs, 2.2hs, 270, 270);
+  connect(poselecwaveeq, posmaxwelldifferential, -2.2hs, -1.5hs, 90, 90);
   connect(poselecwaveeq, posdalembert, 2.2hs, hs, 270, 270);
   connect(posdalembert, posplanewaveexp, hs, 1.4hs, 270, 270);
 
@@ -720,14 +736,41 @@ beginfig(1);
   % Connecting the Electrodynamic block to the Electromagnetic Wave
   % Propagation block.
   %
-  drawarrow (posdispcurr shifted (0u,-hs/2)){dir 270}
+  drawtexarrow (posdispcurr shifted (0u,-hs/2)){dir 270}
     ..{dir 180}(posdispcurr shifted (0u,-hs/2) shifted (-4u,-4u))
-    ..{dir 180}(posdispcurr shifted (0u,-hs/2) shifted (-24u,-4u))
-    ..{dir 270}(posdispcurr shifted (0u,-hs/2) shifted (-28u,-8u))
-    ..{dir 0}(posdispcurr shifted (0u,-hs/2) shifted (-24u,-8u))
-%    ..{dir 0}(posdispcurr shifted (0u,-hs/2) shifted (-20u,-8u))
+    ..{dir 180}(posdispcurr shifted (0u,-hs/2) shifted (-20u,-4u))
+    ..(posdispcurr shifted (0u,-hs/2) shifted (-24u,-8u))
+    ..{dir 270}(posmaxwellintegral shifted (0u,hs) shifted (-22u,2u))
     ..{dir 270}(posmaxwellintegral shifted (0u,hs) shifted (-22u,0u));
 
+  %
+  % Connecting the scalar potential box to the Multipole Expansion block.
+  %
+  drawtexarrow (posscalpot shifted (ws/2-rs,-hs/2+rs)
+      shifted (.7071(rs,-rs))){dir 315}
+  ..{dir 270}(.5[0u,dxb], ypart posscalpot - hs/2 - 10u){dir 270}
+  ..{dir 270}(.5[0u,dxb], ypart posmultipole + hs + 10u){dir 270}
+  ..{dir 315}(posmultipole shifted (-ws/2+rs,hs-rs) shifted (.7071(-rs,rs)));
+
+  %
+  % Connecting the vector potential box to the Multipole Expansion block.
+  %
+  drawtexarrow (posamperepotint shifted (0u,-hs/2)){dir 270}
+    ..{dir 180}(posamperepotint shifted (0u,-hs/2) shifted (-4u,-4u))
+    ..{dir 180}(posamperepotint shifted (0u,-hs/2) shifted (-20u,-4u))
+    ..(posamperepotint shifted (0u,-hs/2) shifted (-24u,-8u))
+    ..{dir 270}(posmultipole shifted (0u,hs) shifted (-22u,2u))
+    ..{dir 270}(posmultipole shifted (0u,hs) shifted (-22u,0u));
+
+  %
+  % Connecting the Ampere's law box to the Electromagnetic Wave
+  % Propagation block.
+  %
+  drawtexarrow (posampere shifted (ws/2-rs,-hs/2+rs)
+      shifted (.7071(rs,-rs))){dir 315}
+    ..{dir 270}(.5[dxb,2dxb], ypart posampere - hs/2 - 10u){dir 270}
+    ..{dir 270}(.5[dxb,2dxb], ypart posmaxwellintegral + hs + 10u){dir 270}
+    ..{dir 315}(posmaxwellintegral shifted (-ws/2+rs,hs-rs) shifted (.7071(-rs,rs)));
 
 endfig;
 end
