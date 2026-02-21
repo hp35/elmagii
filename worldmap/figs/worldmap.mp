@@ -115,7 +115,7 @@ beginfig(1);
   ws := 52u;  % Standard box width
   hs := 12u;  % Standard box height
   rs := 3u;   % Standard corner rounding, radius
-  dxb:=60u;   % Pitch between boxes along x-axis
+  dxb:=62u;   % Pitch between boxes along x-axis % 60u
   dyb:=16u;   % Pitch between boxes along y-axis
   pickup pencircle scaled 1pt;
 
@@ -704,31 +704,31 @@ beginfig(1);
   %
   connect(posgauge, posretardedpots, hs, 2.0hs, 270, 270);
 
-  drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
+  drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Elektrostatik} etex,
 	(0dxb,-3.5dyb), ws+4u, 7dyb+hs+4u, rs);
-  drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
+  drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Magnetostatik} etex,
 	(dxb,-3.0dyb), ws+4u, 6dyb+hs+4u, rs);
-  drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
+  drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Elektrodynamik} etex,
 	(2dxb,-2.5dyb), ws+4u, 5dyb+hs+4u, rs);
-  drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
+  drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Konstitutiva relationer} etex,
 	(0dxb,-10.5dyb), ws+4u, 4dyb+hs+4u, rs);
-  drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
+  drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Multipolutveckling av potentialer} etex,
 	(1dxb,-8.75dyb+0.15hs), ws+4u, 1.5dyb+1.7hs+4u, rs);
 
   ywpmax := ypart posmaxwellintegral + 1hs;
   ywpmin := ypart posplanewaveexp - 0.7hs;
-  drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
+  drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Elektromagnetisk v{\aa}gutbredning} etex,
 	(2dxb,.5[ywpmin,ywpmax]), ws+4u, ywpmax-ywpmin+4u, rs);
 
   ywpmax := ypart posgauge + 0.5hs;
   ywpmin := ypart posretardedpots - 1.0hs;
-  drawlabeledbox(btex \font\labelfont=cmssi8\labelfont
+  drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Explicit l{\"o}sning till Maxwells ekvationer} etex,
 	(dxb,.5[ywpmin,ywpmax]), ws+4u, ywpmax-ywpmin+4u, rs);
 
@@ -748,9 +748,23 @@ beginfig(1);
   %
   drawtexarrow (posscalpot shifted (ws/2-rs,-hs/2+rs)
       shifted (.7071(rs,-rs))){dir 315}
-  ..{dir 270}(.5[0u,dxb], ypart posscalpot - hs/2 - 10u){dir 270}
-  ..{dir 270}(.5[0u,dxb], ypart posmultipole + hs + 10u){dir 270}
-  ..{dir 315}(posmultipole shifted (-ws/2+rs,hs-rs) shifted (.7071(-rs,rs)));
+    ..{dir 270}(.5[0u,dxb], ypart posscalpot - hs/2 - 10u){dir 270}
+    ..{dir 270}(.5[0u,dxb], ypart posmultipole + hs + 10u){dir 270}
+    ..{dir 315}(posmultipole shifted (-ws/2+rs,hs-rs) shifted (.7071(-rs,rs)));
+
+  %
+  % Connecting the scalar potential box to the Explicit Solutions to
+  % Maxwell's Equations (Retarded Potentials) block.
+  %
+  drawtexarrow (posscalpot shifted (ws/2-rs,-hs/2+rs)
+      shifted (.7071(rs,-rs))){dir 315}
+    ..{dir 270}(.5[0u,dxb], ypart posscalpot - hs/2 - 10u){dir 270}
+    ..{dir 270}(.5[0u,dxb], ypart posscalpot - hs/2 - 24u);
+  drawtexarrow (.5[0u,dxb], ypart posscalpot - hs/2 - 24u){dir 270}
+    ..{dir 270}(.5[0u,dxb], ypart posgauge + hs + 34u);
+  drawtexarrow (.5[0u,dxb], ypart posgauge + hs + 34u){dir 270}
+    ..{dir 270}(.5[0u,dxb], ypart posgauge + hs + 10u){dir 270}
+    ..{dir 315}(posgauge shifted (-ws/2+rs,hs/2-rs) shifted (.7071(-rs,rs)));
 
   %
   % Connecting the vector potential box to the Multipole Expansion block.
@@ -769,8 +783,49 @@ beginfig(1);
   drawtexarrow (posampere shifted (ws/2-rs,-hs/2+rs)
       shifted (.7071(rs,-rs))){dir 315}
     ..{dir 270}(.5[dxb,2dxb], ypart posampere - hs/2 - 10u){dir 270}
+    ..{dir 270}(.5[dxb,2dxb], ypart posampere - hs/2 - 24u);
+  drawtexarrow (.5[dxb,2dxb], ypart posampere - hs/2 - 24u){dir 270}
     ..{dir 270}(.5[dxb,2dxb], ypart posmaxwellintegral + hs + 10u){dir 270}
     ..{dir 315}(posmaxwellintegral shifted (-ws/2+rs,hs-rs) shifted (.7071(-rs,rs)));
 
-endfig;
+  %
+  % Connecting the "no magnetic monopoles" box to the Electromagnetic Wave
+  % Propagation block.
+  %
+  drawtexarrow (posmagmonopoles shifted (ws/2-rs,-hs/2+rs)
+      shifted (.7071(rs,-rs))){dir 315}
+    ..{dir 270}(.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 10u){dir 270}
+    ..{dir 270}(.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 14u);
+  drawtexarrow (.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 14u){dir 270}
+    ..{dir 270}(.5[dxb,2dxb], ypart posmaxwellintegral + hs + 10u){dir 270}
+    ..{dir 315}(posmaxwellintegral shifted (-ws/2+rs,hs-rs) shifted (.7071(-rs,rs)));
+
+  %
+  % Connecting the constitutive relations for the polarization density
+  % and magnetization to the Electromagnetic Wave Propagation block.
+  %
+  drawtexarrow (poselecdispfield shifted (ws/2-rs,-hs/2+rs)
+      shifted (.7071(rs,-rs))){dir 315}
+    ..{dir 270}(.5[0u,dxb], ypart poselecdispfield - hs/2 - 10u){dir 270};
+  drawtexarrow (.5[0u,dxb], ypart poselecdispfield - hs/2 - 10u){dir 270}
+    ..{dir 270}(.5[0u,dxb], ypart poselecdispfield - hs/2 - 55u){dir 270}
+    ..{dir 0}(.5[0u,dxb]+5u, ypart poselecdispfield - hs/2 - 55u - 5u)
+    ..{dir 0}(.5[dxb,2dxb]-5u, ypart poselecdispfield - hs/2 - 55u - 5u)
+    ..{dir 90}(.5[dxb,2dxb], ypart poselecdispfield - hs/2 - 55u)
+    ..{dir 90}(.5[dxb,2dxb], ypart posmaxwellintegral + hs/2 - rs - 10u)
+    ..{dir 0}(posmaxwellintegral shifted (-ws/2, hs-rs));
+  drawtexarrow (posmagfieldstrength shifted (ws/2-rs,-hs/2+rs)
+      shifted (.7071(rs,-rs))){dir 315}
+    ..{dir 270}(.5[0u,dxb], ypart posmagfieldstrength - hs/2 - 10u){dir 270}
+    ..{dir 270}(.5[0u,dxb], ypart poselecdispfield - hs/2 - 55u){dir 270};
+  drawtexarrow (.5[0u,dxb]+5u, ypart poselecdispfield - hs/2 - 55u - 5u){dir 0}
+    ..{dir 0}(.5[dxb,2dxb]-5u, ypart poselecdispfield - hs/2 - 55u - 5u)
+    ..{dir 90}(.5[dxb,2dxb], ypart poselecdispfield - hs/2 - 55u)
+    ..{dir 90}(.5[dxb,2dxb], ypart posmaxwellintegral + hs/2 - rs - 10u)
+    ..{dir 0}(posmaxwellintegral shifted (-ws/2, hs-rs));
+
+
+label.bot(btex \font\labelfont=cmssi8\labelfont Koppling till materialegenskaper etex,(dxb,ypart poselecdispfield - hs/2 - 55u - 5u));
+      
+  endfig;
 end
