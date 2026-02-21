@@ -417,6 +417,10 @@ beginfig(1);
       {Elektrisk polarisationsdensitet} etex,
       poselecpoldens, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{6} etex);
+  pickup pencircle scaled .7pt;
+  draw fullcircle scaled 4u shifted poselecpoldens
+    shifted (6.8u,-2.0u) withcolor red;
+  pickup pencircle scaled 1pt;
 
   %
   % Electric displacement field.
@@ -440,6 +444,10 @@ beginfig(1);
       {Magnetisering} etex,
       posmagnetiz, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{7} etex);
+  pickup pencircle scaled .7pt;
+  draw fullcircle scaled 4u shifted posmagnetiz
+    shifted (2.2u,-3.2u) withcolor red;
+  pickup pencircle scaled 1pt;
 
   %
   % Magnetic field strength.
