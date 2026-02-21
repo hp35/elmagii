@@ -410,7 +410,7 @@ beginfig(1);
   %
   % Electric polarization density.
   %
-  poselecpoldens:=(0*dxb,-8.5dyb);
+  poselecpoldens:=(0*dxb,-8.5dyb-5u);
     drawbox(btex ${\bf P} \equiv \big\langle{{d{\bf p}}\over{dV}}\big\rangle
       = \varepsilon_0\chi_{\rm e}{\bf E}$ etex,
       btex \font\labelfont=cmssi8\labelfont
@@ -421,7 +421,7 @@ beginfig(1);
   %
   % Electric displacement field.
   %
-  poselecdispfield:=(0*dxb,-9.5dyb);
+  poselecdispfield:=(0*dxb,-9.5dyb-5u);
     drawbox(btex ${\bf D}\equiv\varepsilon_0{\bf E}+{\bf P}
         % =\varepsilon_0(1+\chi_{\rm e}){\bf E}
         =\varepsilon_0\varepsilon_{\rm r}{\bf E}$ etex,
@@ -433,7 +433,7 @@ beginfig(1);
   %
   % Magnetization.
   %
-  posmagnetiz:=(0*dxb,-10.5dyb);
+  posmagnetiz:=(0*dxb,-10.5dyb-5u);
     drawbox(btex ${\bf M}\equiv\big\langle{{d{\bf m}}\over{dV}}\big\rangle
       = {{1}\over{\mu_0}}\Big(1-{{1}\over{\mu_{\rm r}}}\Big){\bf B}$ etex,
       btex \font\labelfont=cmssi8\labelfont
@@ -444,7 +444,7 @@ beginfig(1);
   %
   % Magnetic field strength.
   %
-  posmagfieldstrength:=(0*dxb,-11.5dyb);
+  posmagfieldstrength:=(0*dxb,-11.5dyb-5u);
     drawbox(btex $ {\bf H}\equiv{{\bf B}\over{\mu_0}}-{\bf M}
       % ={{\bf B}\over{\mu_0\mu_{\rm r}}}
       \ \Leftrightarrow\ 
@@ -457,7 +457,7 @@ beginfig(1);
   %
   % Surface and volume currents.
   %
-  possurfcurr:=(0*dxb,-12.5dyb);
+  possurfcurr:=(0*dxb,-12.5dyb-5u);
     drawbox(btex ${\bf J}_{\rm b}=\nabla\times{\bf M}$,\quad
                  ${\bf K}_{\rm b}={\bf M}\times{\bf e}_n$ etex,
       btex \font\labelfont=cmssi8\labelfont
@@ -715,7 +715,7 @@ beginfig(1);
 	(2dxb,-2.5dyb), ws+4u, 5dyb+hs+4u, rs);
   drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Konstitutiva relationer} etex,
-	(0dxb,-10.5dyb), ws+4u, 4dyb+hs+4u, rs);
+	(0dxb,-10.5dyb-5u), ws+4u, 4dyb+hs+4u, rs);
   drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Multipolutveckling av potentialer} etex,
 	(1dxb,-8.75dyb+0.15hs), ws+4u, 1.5dyb+1.7hs+4u, rs);
@@ -808,24 +808,24 @@ beginfig(1);
       shifted (.7071(rs,-rs))){dir 315}
     ..{dir 270}(.5[0u,dxb], ypart poselecdispfield - hs/2 - 10u){dir 270};
   drawtexarrow (.5[0u,dxb], ypart poselecdispfield - hs/2 - 10u){dir 270}
-    ..{dir 270}(.5[0u,dxb], ypart poselecdispfield - hs/2 - 55u){dir 270}
-    ..{dir 0}(.5[0u,dxb]+5u, ypart poselecdispfield - hs/2 - 55u - 5u)
-    ..{dir 0}(.5[dxb,2dxb]-5u, ypart poselecdispfield - hs/2 - 55u - 5u)
-    ..{dir 90}(.5[dxb,2dxb], ypart poselecdispfield - hs/2 - 55u)
+    ..{dir 270}(.5[0u,dxb], ypart poselecdispfield - hs/2 - 50u){dir 270}
+    ..{dir 0}(.5[0u,dxb]+5u, ypart poselecdispfield - hs/2 - 50u - 5u)
+    ..{dir 0}(.5[dxb,2dxb]-5u, ypart poselecdispfield - hs/2 - 50u - 5u)
+    ..{dir 90}(.5[dxb,2dxb], ypart poselecdispfield - hs/2 - 50u)
     ..{dir 90}(.5[dxb,2dxb], ypart posmaxwellintegral + hs/2 - rs - 10u)
     ..{dir 0}(posmaxwellintegral shifted (-ws/2, hs-rs));
   drawtexarrow (posmagfieldstrength shifted (ws/2-rs,-hs/2+rs)
       shifted (.7071(rs,-rs))){dir 315}
     ..{dir 270}(.5[0u,dxb], ypart posmagfieldstrength - hs/2 - 10u){dir 270}
-    ..{dir 270}(.5[0u,dxb], ypart poselecdispfield - hs/2 - 55u){dir 270};
-  drawtexarrow (.5[0u,dxb]+5u, ypart poselecdispfield - hs/2 - 55u - 5u){dir 0}
-    ..{dir 0}(.5[dxb,2dxb]-5u, ypart poselecdispfield - hs/2 - 55u - 5u)
-    ..{dir 90}(.5[dxb,2dxb], ypart poselecdispfield - hs/2 - 55u)
+    ..{dir 270}(.5[0u,dxb], ypart poselecdispfield - hs/2 - 50u){dir 270};
+  drawtexarrow (.5[0u,dxb]+5u, ypart poselecdispfield - hs/2 - 50u - 5u){dir 0}
+    ..{dir 0}(.5[dxb,2dxb]-5u, ypart poselecdispfield - hs/2 - 50u - 5u)
+    ..{dir 90}(.5[dxb,2dxb], ypart poselecdispfield - hs/2 - 50u)
     ..{dir 90}(.5[dxb,2dxb], ypart posmaxwellintegral + hs/2 - rs - 10u)
     ..{dir 0}(posmaxwellintegral shifted (-ws/2, hs-rs));
+  label.bot(btex \font\labelfont=cmssi8\labelfont
+              {Koppling till materialegenskaper}
+            etex,(dxb,ypart poselecdispfield - hs/2 - 50u - 5u));
 
-
-label.bot(btex \font\labelfont=cmssi8\labelfont Koppling till materialegenskaper etex,(dxb,ypart poselecdispfield - hs/2 - 55u - 5u));
-      
   endfig;
 end
