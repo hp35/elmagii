@@ -31,6 +31,10 @@ all:
 	make inline-worldmap
 	make inline-portrait
 	make inline-gallery-src
+	make inline-fonts
+	make inline-misc
+	make inline-toc
+	make inline-index
 	make compile-book
 
 #
@@ -285,6 +289,86 @@ inline-gallery-src:
 	echo "Replacing \\\input ../gallery/src/gallery-src.tex by content";\
 	awk ' \
 	   /\\input[[:space:]]+\.\.\/gallery\/src\/gallery-src\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input src/fonts.tex' by incorporating the file
+# contents of the file instead. This way, we obtain a more self-consistent
+# master TeX file for compilation.
+#
+inline-fonts:
+	@INSERT=./src/fonts.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
+	echo "Replacing \\\input src/fonts.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+src\/fonts\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input src/misc.tex' by incorporating the file
+# contents of the file instead. This way, we obtain a more self-consistent
+# master TeX file for compilation.
+#
+inline-misc:
+	@INSERT=./src/misc.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
+	echo "Replacing \\\input src/misc.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+src\/misc\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input src/toc.tex' by incorporating the file
+# contents of the file instead. This way, we obtain a more self-consistent
+# master TeX file for compilation.
+#
+inline-toc:
+	@INSERT=./src/toc.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
+	echo "Replacing \\\input src/toc.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+src\/toc\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input src/index.tex' by incorporating the file
+# contents of the file instead. This way, we obtain a more self-consistent
+# master TeX file for compilation.
+#
+inline-index:
+	@INSERT=./src/index.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
+	echo "Replacing \\\input src/index.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+src\/index\.tex/ { \
 	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
 	         close("'"$$INSERT"'"); \
 	         next; \
