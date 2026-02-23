@@ -43,6 +43,8 @@ $(dvis): $(srcs)
 	@$(TEX) $(BASE).tex
 	@echo "DVI file for $(BASE).tex written to $(BASE).dvi."
 
+
+
 clean:
 	@make -ik clean -C figs
 	@rm -Rf *~ *.aux *.toc *.idx *.ind *.log *.ilg *.dvi *.ps

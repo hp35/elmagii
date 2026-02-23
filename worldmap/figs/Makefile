@@ -10,14 +10,21 @@ DVIPS    = dvips
 PS2PDF   = ps2pdf
 PDFCROP  = pdfcrop
 PDF2SVG  = pdf2svg
+PDFTOPPM = pdftoppm
 
 srcs = $(wildcard *.mp)
 dvis = $(patsubst %.mp,%.dvi,$(srcs))
 epss = $(patsubst %.dvi,%.eps,$(dvis))
 pdfs = $(patsubst %.eps,%.pdf,$(epss))
 svgs = $(patsubst %.pdf,%.svg,$(pdfs))
+pngs = $(patsubst %.pdf,%.png,$(pdfs))
 
-all: $(svgs)
+all: $(svgs) $(pngs)
+
+$(pngs): $(pdfs)
+	@$(eval BASE = $(shell basename $@ .png))
+	@echo "Converting PDF file $< to PNG (600dpi, target $@)."
+	@$(PDFTOPPM) -r 300 -png $(BASE)-crop.pdf > $(BASE).png
 
 $(svgs): $(pdfs)
 	$(eval BASE = $(shell basename $@ .svg))
