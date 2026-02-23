@@ -7,14 +7,17 @@
 #
 LECTURES = lect-01 lect-02 lect-03 lect-04 lect-05 lect-06 \
 		lect-07 lect-08 lect-09 lect-10 lect-11
+GALLERY  = gallery
+WORLDMAP = worldmap
 COMPILED = compiled
 
 all:
 	for lecture in $(LECTURES) ; do\
 	   make -C $$lecture ;\
 	done
+	make -C $(GALLERY)
+	make -C $(WORLDMAP)
 	make -C $(COMPILED)
-	make -C ./gallery/
 
 archive:
 	make -ik clean
@@ -25,5 +28,6 @@ clean:
 	for lecture in $(LECTURES) ; do\
 	   make -ik clean -C $$lecture ;\
 	done
+	make clean -C $(GALLERY)
+	make clean -C $(WORLDMAP)
 	make clean -C $(COMPILED)
-	make clean -C ./gallery/
