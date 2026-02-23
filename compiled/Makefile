@@ -35,6 +35,9 @@ all:
 	make inline-misc
 	make inline-toc
 	make inline-index
+	make inline-copyrights
+	make inline-frontpage
+	make inline-preface
 	make compile-book
 
 #
@@ -369,6 +372,66 @@ inline-index:
 	echo "Replacing \\\input src/index.tex by content";\
 	awk ' \
 	   /\\input[[:space:]]+src\/index\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input src/copyrights.tex' by incorporating the file
+# contents of the file instead. This way, we obtain a more self-consistent
+# master TeX file for compilation.
+#
+inline-copyrights:
+	@INSERT=./src/copyrights.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
+	echo "Replacing \\\input src/copyrights.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+src\/copyrights\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input src/frontpage.tex' by incorporating the file
+# contents of the file instead. This way, we obtain a more self-consistent
+# master TeX file for compilation.
+#
+inline-frontpage:
+	@INSERT=./src/frontpage.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
+	echo "Replacing \\\input src/frontpage.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+src\/frontpage\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input src/preface.tex' by incorporating the file
+# contents of the file instead. This way, we obtain a more self-consistent
+# master TeX file for compilation.
+#
+inline-preface:
+	@INSERT=./src/preface.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
+	echo "Replacing \\\input src/preface.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+src\/preface\.tex/ { \
 	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
 	         close("'"$$INSERT"'"); \
 	         next; \
