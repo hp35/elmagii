@@ -397,14 +397,6 @@ beginfig(1);
   %
   % Mutual inductance.
   %
-%  posneumann:=(2*dxb,-3dyb);
-%    drawbox(btex $M_{\Gamma\Gamma'}={{\mu_0}\over{4\pi}}
-%          \oint_{\Gamma}\oint_{\Gamma'}
-%          {{d{\bf l}'\cdot d{\bf l}}\over{|{\bf x}-{\bf x}'|}}$ etex,
-%      btex \font\labelfont=cmssi8\labelfont
-%      {{\"O}msesidig induktans, Neumann} etex,
-%      posneumann, ws, hs, rs,
-%      btex \font\labelfont=cmssi8\labelfont{5} etex);
   posneumann:=(2*dxb+(0.10/2)*ws,-4dyb);
     drawbox(btex $M_{\Gamma\Gamma'}={{\mu_0}\over{4\pi}}
           \oint_{\Gamma}\oint_{\Gamma'}
@@ -434,9 +426,6 @@ beginfig(1);
       {F{\"o}rskjutningsstr{\"o}m} etex,
       posdispcurr, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{5} etex);
-
-  connect(poscoulombforce, poscoulombgen, hs, hs, 270, 270);
-  connect(poscoulombgen, posscalarpotential, hs, hs, 270, 270);
 
   %
   % Electric polarization density.
@@ -704,14 +693,12 @@ beginfig(1);
               ..{dir 0}(posampere shifted (0u,hs/2) shifted (-2u,2u))
               ..{dir 270}(posampere shifted (0u,hs/2));
   connect(posmagmonopoles, posvecpot, hs, hs, 270, 270);
-%  connect(posvecpot, posampere, hs, hs, 270, 270);
   connect(posampere, posamperepot, hs, hs, 270, 270);
   connect(posamperepot, posamperepotint, hs, hs, 270, 270);
 
   %
   % Connectors in the Electrodynamics block.
   %
-%  connect(poslorentzforce, posfaradayinduc, hs, hs, 270, 270);
   connect(poslorentzforce, posampereforce, hs, hs, 270, 270);
   drawtexarrow (poslorentzforce shifted (0u,-hs/2)){dir 270}
               ..{dir 180}(poslorentzforce shifted (0u,-hs/2) shifted (-2u,-2u))
