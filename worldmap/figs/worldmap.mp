@@ -293,31 +293,31 @@ beginfig(1);
   % The divergence theorem for magnetostatics, allowing us to draw the
   % conclusion that magnetic monopoles do not exist.
   %
-  posmagmonopoles:=(dxb,-2dyb);
+  posmagmonopoles:=(dxb+(0.25/2)*ws,-2dyb);
     drawbox(btex $\nabla\cdot{\bf B}({\bf x})=0$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Ingen magnetisk laddning} etex,
-      posmagmonopoles, ws, hs, rs,
-      btex \font\labelfont=cmssi8\labelfont{4} etex);
-
-  %
-  % Ampere's law.
-  %
-  posampere:=(dxb,-3dyb);
-    drawbox(btex $\nabla\times{\bf B}({\bf x})=\mu_0{\bf J}_{\rm f}$ etex,
-      btex \font\labelfont=cmssi8\labelfont
-      {Amp\`eres lag} etex,
-      posampere, ws, hs, rs,
+      \hskip-10pt{Ingen magnetisk laddning} etex,
+      posmagmonopoles, ws-0.25ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
   %
   % Existence of a vector potential.
   %
-  posvecpot:=(dxb,-4dyb);
+  posvecpot:=(dxb+(0.25/2)*ws,-3dyb);
     drawbox(btex ${\bf B}({\bf x})=\nabla\times{\bf A}({\bf x})$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Vektorpotential} etex,
-      posvecpot, ws, hs, rs,
+      \hskip-10pt{Vektorpotential, existens} etex,
+      posvecpot, ws-0.25ws, hs, rs,
+      btex \font\labelfont=cmssi8\labelfont{4} etex);
+
+  %
+  % Ampere's law.
+  %
+  posampere:=(dxb,-4dyb);
+    drawbox(btex $\nabla\times{\bf B}({\bf x})=\mu_0{\bf J}_{\rm f}$ etex,
+      btex \font\labelfont=cmssi8\labelfont
+      {Amp\`eres lag} etex,
+      posampere, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
   %
@@ -691,9 +691,17 @@ beginfig(1);
   %
   connect(posbiotsavarti, posbiotsavartj, hs, hs, 270, 270);
   connect(posbiotsavartj, posmagmonopoles, hs, hs, 270, 270);
-  connect(posmagmonopoles, posampere, hs, hs, 270, 270);
-  connect(posampere, posvecpot, hs, hs, 270, 270);
-  connect(posvecpot, posamperepot, hs, hs, 270, 270);
+  drawtexarrow (posbiotsavartj shifted (0u,-hs/2)){dir 270}
+              ..{dir 180}(posbiotsavartj shifted (0u,-hs/2) shifted (-2u,-2u))
+              ..{dir 180}(posbiotsavartj shifted (0u,-hs/2) shifted (-18u,-2u))
+              ..{dir 270}(posbiotsavartj shifted (0u,-hs/2) shifted (-22u,-6u))
+              ..{dir 270}(posampere shifted (0u,hs/2) shifted (-22u,6u))
+              ..{dir 0}(posampere shifted (0u,hs/2) shifted (-18u,2u))
+              ..{dir 0}(posampere shifted (0u,hs/2) shifted (-2u,2u))
+              ..{dir 270}(posampere shifted (0u,hs/2));
+  connect(posmagmonopoles, posvecpot, hs, hs, 270, 270);
+  connect(posvecpot, posampere, hs, hs, 270, 270);
+  connect(posampere, posamperepot, hs, hs, 270, 270);
   connect(posamperepot, posamperepotint, hs, hs, 270, 270);
 
   %
@@ -709,10 +717,7 @@ beginfig(1);
               ..{dir 0}(posfaradayinduc shifted (0u,hs/2) shifted (-18u,2u))
               ..{dir 0}(posfaradayinduc shifted (0u,hs/2) shifted (-2u,2u))
               ..{dir 270}(posfaradayinduc shifted (0u,hs/2));
-
-
-
-      connect(posfaradayinduc, posfaradaylaw, hs, hs, 270, 270);
+  connect(posfaradayinduc, posfaradaylaw, hs, hs, 270, 270);
   connect(posfaradaylaw, posneumann, hs, hs, 270, 270);
   drawtexarrow (posfaradaylaw shifted (0u,-hs/2)){dir 270}
               ..{dir 180}(posfaradaylaw shifted (0u,-hs/2) shifted (-2u,-2u))
@@ -839,7 +844,7 @@ beginfig(1);
   % Connecting the "no magnetic monopoles" box to the Electromagnetic Wave
   % Propagation block.
   %
-  drawtexarrow (posmagmonopoles shifted (ws/2-rs,-hs/2+rs)
+  drawtexarrow (posmagmonopoles shifted ((ws-0.25ws)/2-rs,-hs/2+rs)
       shifted (.7071(rs,-rs))){dir 315}
     ..{dir 270}(.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 10u){dir 270}
     ..{dir 270}(.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 14u);
