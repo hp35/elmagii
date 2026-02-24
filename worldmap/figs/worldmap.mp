@@ -243,12 +243,16 @@ beginfig(1);
   %
   % Poisson's equation in differential form.
   %
-  posmirrorcharges:=(0u,-7dyb-3u);
+  posmirrorcharges:=(0u,-7dyb-6u);
   drawbox(btex
       \font\textfont=cmss8\textfont
       \hskip-10pt
       \vbox{
         \hbox{- Entydighetsteoremet, extremv{\"a}rden}
+	\vskip-2pt
+        \hbox{- ``Licensen till din fantasi''}
+	\vskip-2pt
+        \hbox{- Faradays bur}
 	\vskip-2pt
         \hbox{- Spegling av laddning i plana ytor}
 	\vskip-2pt
@@ -257,7 +261,7 @@ beginfig(1);
       etex,
       btex \font\labelfont=cmssi8\labelfont
       {Spegelladdningar} etex,
-      posmirrorcharges, ws, hs+6u, rs,
+      posmirrorcharges, ws, hs+12u, rs,
       btex \font\labelfont=cmssi8\labelfont{3} etex);
 
   %
@@ -306,7 +310,7 @@ beginfig(1);
   posvecpot:=(dxb+(0.10/2)*ws,-3dyb);
     drawbox(btex ${\bf B}({\bf x})=\nabla\times{\bf A}({\bf x})$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      \hskip-10pt{Vektorpotential, existens} etex,
+      \hskip-10pt{Existens av vektorpotential A\kern-5.6pt{A}} etex,
       posvecpot, ws-0.10ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
@@ -437,7 +441,7 @@ beginfig(1);
   %
   % Electric polarization density.
   %
-  poselecpoldens:=(0*dxb,-8.5dyb-5u-6u);
+  poselecpoldens:=(0*dxb,-8.5dyb-5u-6u-3u);
     drawbox(btex ${\bf P} \equiv \big\langle{{d{\bf p}}\over{dV}}\big\rangle
       = \varepsilon_0\chi_{\rm e}{\bf E}$ etex,
       btex \font\labelfont=cmssi8\labelfont
@@ -452,7 +456,7 @@ beginfig(1);
   %
   % Electric displacement field.
   %
-  poselecdispfield:=(0*dxb,-9.5dyb-5u-6u);
+  poselecdispfield:=(0*dxb, ypart poselecpoldens - 1dyb);
     drawbox(btex ${\bf D}\equiv\varepsilon_0{\bf E}+{\bf P}
         % =\varepsilon_0(1+\chi_{\rm e}){\bf E}
         =\varepsilon_0\varepsilon_{\rm r}{\bf E}$ etex,
@@ -464,7 +468,7 @@ beginfig(1);
   %
   % Magnetization.
   %
-  posmagnetiz:=(0*dxb,-10.5dyb-5u-6u);
+  posmagnetiz:=(0*dxb, ypart poselecdispfield - 1dyb);
     drawbox(btex ${\bf M}\equiv\big\langle{{d{\bf m}}\over{dV}}\big\rangle
       = {{1}\over{\mu_0}}\Big(1-{{1}\over{\mu_{\rm r}}}\Big){\bf B}$ etex,
       btex \font\labelfont=cmssi8\labelfont
@@ -479,7 +483,7 @@ beginfig(1);
   %
   % Magnetic field strength.
   %
-  posmagfieldstrength:=(0*dxb,-11.5dyb-5u-6u);
+  posmagfieldstrength:=(0*dxb, ypart posmagnetiz - 1dyb);
     drawbox(btex $ {\bf H}\equiv{{\bf B}\over{\mu_0}}-{\bf M}
       % ={{\bf B}\over{\mu_0\mu_{\rm r}}}
       \ \Leftrightarrow\ 
@@ -492,7 +496,7 @@ beginfig(1);
   %
   % Surface and volume currents.
   %
-  possurfcurr:=(0*dxb,-12.5dyb-5u-6u);
+  possurfcurr:=(0*dxb, ypart posmagfieldstrength - 1dyb);
     drawbox(btex ${\bf J}_{\rm b}=\nabla\times{\bf M}$,\quad
                  ${\bf K}_{\rm b}={\bf M}\times{\bf e}_n$ etex,
       btex \font\labelfont=cmssi8\labelfont
@@ -555,7 +559,7 @@ beginfig(1);
         }
       etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Maxwells ekvationer, int.form} etex,
+      \hskip-10pt{Maxwells ekvationer, integralform} etex,
       posmaxwellintegral, ws, 2*hs, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
 
@@ -574,7 +578,7 @@ beginfig(1);
         }
       etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Maxwells ekvationer, diff.form} etex,
+      \hskip-10pt{Maxwells ekvationer, differentialform} etex,
       posmaxwelldifferential, ws, 1.5*hs, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
 
@@ -582,12 +586,12 @@ beginfig(1);
   % The electromagnetic wave equations for the electric (E) and
   % magnetic (B) fields, as derived from Maxwell's equations.
   %
-  poselecwaveeq:=(2dxb, ypart posmaxwelldifferential-dyb-0.85hs);
+  poselecwaveeq:=(2dxb, ypart posmaxwelldifferential-dyb-0.85hs - 2u);
     drawbox(btex
         \vbox{
           \hbox{$\nabla\times\nabla\times{\bf E}
                   +{{1}\over{c^2}}{{\partial^2{\bf E}}\over{\partial t^2}}$}
-          \hbox{\hskip10pt$=-\mu_0{{\partial}\over{\partial t}}
+          \hbox{\hskip14pt$=-\mu_0{{\partial}\over{\partial t}}
                    \big({\bf J}_{\rm f}
                        +{{\partial{\bf P}}\over{\partial t}}
                        +\nabla\times{\bf M}
@@ -595,7 +599,7 @@ beginfig(1);
           \vskip4pt
           \hbox{$\nabla\times\nabla\times{\bf B}
                   +{{1}\over{c^2}}{{\partial^2{\bf B}}\over{\partial t^2}}$}
-          \hbox{\hskip10pt$=\mu_0\nabla\times
+          \hbox{\hskip14pt$=\mu_0\nabla\times
                    \big({\bf J}_{\rm f}
                        +{{\partial{\bf P}}\over{\partial t}}
                        +\nabla\times{\bf M}
@@ -605,13 +609,13 @@ beginfig(1);
       btex \font\labelfont=cmssi8\labelfont
         {Elektromagnetiska v{\aa}gekvationer}
       etex,
-      poselecwaveeq, ws, 2.2*hs, rs,
+      poselecwaveeq, ws, 2.2*hs+4u, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
 
   %
   % D'Alembert solution for traveling waves.
   %
-  posdalembert:=(2*dxb, ypart poselecwaveeq -1dyb-0.6hs);
+  posdalembert:=(2*dxb, ypart poselecwaveeq -1dyb-0.6hs-2u);
     drawbox(btex $E(z,t)=f(z-ct)+g(z+ct)$ etex,
       btex \font\labelfont=cmssi8\labelfont
       {D'Alemberts l{\"o}sningsmetod} etex,
@@ -656,7 +660,7 @@ beginfig(1);
   %
   % The retarded potentials in electrodynamics.
   %
-  posretardedpots:=(1dxb, ypart posgauge -1dyb-0.5hs-2u);
+  posretardedpots:=(1dxb, ypart posgauge -1dyb-0.5hs-2u-1u);
     drawbox(btex
         \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
         \vbox{
@@ -672,7 +676,7 @@ beginfig(1);
       btex \font\labelfont=cmssi8\labelfont
         {Retarderade potentialer}
       etex,
-      posretardedpots, ws, 2.0*hs, rs,
+      posretardedpots, ws, 2.0*hs+2u, rs,
       btex \font\labelfont=cmssi8\labelfont{11} etex);
 
   %
@@ -684,7 +688,7 @@ beginfig(1);
   connect(posscalpot, posgaussintegral, hs, hs, 270, 270);
   connect(posgaussintegral, posgaussdifferential, hs, hs, 270, 270);
   connect(posgaussdifferential, pospoisson, hs, hs, 270, 270);
-  connect(pospoisson, posmirrorcharges, hs, hs+6u, 270, 270);
+  connect(pospoisson, posmirrorcharges, hs, hs+12u, 270, 270);
 
   %
   % Connectors in the Magnetostatics block.
@@ -740,9 +744,9 @@ beginfig(1);
   %
   connect(posmaxwellintegral, posmaxwelldifferential, 2hs, 1.5hs, 270, 270);
   connect(posmaxwelldifferential, posmaxwellintegral, -1.5hs, -2hs, 90, 90);
-  connect(posmaxwelldifferential, poselecwaveeq, 1.5hs, 2.2hs, 270, 270);
+  connect(posmaxwelldifferential, poselecwaveeq, 1.5hs, 2.2hs+4u, 270, 270);
   connect(poselecwaveeq, posmaxwelldifferential, -2.2hs, -1.5hs, 90, 90);
-  connect(poselecwaveeq, posdalembert, 2.2hs, hs, 270, 270);
+  connect(poselecwaveeq, posdalembert, 2.2hs+4u, hs, 270, 270);
   connect(posdalembert, posplanewaveexp, hs, 1.4hs, 270, 270);
 
   %
@@ -753,11 +757,11 @@ beginfig(1);
   %
   % Connectors in the Explicit Solution to Maxwell Equations block.
   %
-  connect(posgauge, posretardedpots, hs+4u, 2.0hs, 270, 270);
+  connect(posgauge, posretardedpots, hs+4u, 2.0hs+2u, 270, 270);
 
   drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Elektrostatik} etex,
-	(0dxb,-3.5dyb-3u), ws+4u, 7dyb+hs+4u+6u, rs);
+	(0dxb,-3.5dyb-6u), ws+4u, 7dyb+hs+4u+12u, rs);
   drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Magnetostatik} etex,
 	(dxb,-3.0dyb), ws+4u, 6dyb+hs+4u, rs);
@@ -766,7 +770,7 @@ beginfig(1);
 	(2dxb,-3.0dyb), ws+4u, 6dyb+hs+4u, rs);
   drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Konstitutiva relationer} etex,
-	(0dxb,-10.5dyb-5u-6u), ws+4u, 4dyb+hs+4u, rs);
+	(0dxb,-10.5dyb-5u-9u), ws+4u, 4dyb+hs+4u, rs);
   drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Multipolutveckling av potentialer} etex,
 	(1dxb,-8.75dyb+0.15hs-2u), ws+4u, 1.5dyb+1.7hs+4u, rs);
@@ -778,7 +782,7 @@ beginfig(1);
 	(2dxb,.5[ywpmin,ywpmax]), ws+4u, ywpmax-ywpmin+4u, rs);
 
   ywpmax := ypart posgauge + 0.5hs;
-  ywpmin := ypart posretardedpots - 1.0hs;
+  ywpmin := ypart posretardedpots - (2.0hs+2u)/2;
   drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Explicit l{\"o}sning till Maxwells ekvationer} etex,
 	(dxb,.5[ywpmin,ywpmax]+1u), ws+4u, ywpmax-ywpmin+4u+2u, rs);
