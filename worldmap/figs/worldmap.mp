@@ -500,7 +500,7 @@ beginfig(1);
     drawbox(btex ${\bf J}_{\rm b}=\nabla\times{\bf M}$,\quad
                  ${\bf K}_{\rm b}={\bf M}\times{\bf e}_n$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Bundnda yt- och volymstr{\"o}mmar} etex,
+      {Bundna yt- och volymstr{\"o}mmar} etex,
       possurfcurr, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{7} etex);
 
@@ -512,9 +512,9 @@ beginfig(1);
         \vbox{
           \hbox{$\phi({\bf x})={{1}\over{4\pi\varepsilon_0}}
             \big({{1}\over{|{\bf x}|}}q+\sum_k{{x_k}\over{|{\bf x}|^3}}p_k$}
-          \hbox{\hskip20pt$+{{1}\over{2}}\sum_j\sum_k
+          \hbox{\hskip16pt$+{{1}\over{2}}\sum_j\sum_k
             {{(3 x_j x_k - \delta_{jk}|{\bf x}|^2)}\over{|{\bf x}|^5}}Q_{jk}$}
-          \hbox{\hskip20pt$+\ldots\big)$}
+          \hbox{\hskip16pt$+\ldots\big)$}
         }
       etex,
       btex \font\labelfont=cmssi8\labelfont
