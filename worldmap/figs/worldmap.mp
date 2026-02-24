@@ -4,6 +4,9 @@
 % interlinked with constitutive relations, result in Maxwell's equations,
 % finally producing the electromagnetic wave equation.
 %
+% Created:     January 3, 2026
+% Last change: February 23, 2026
+%
 % Copyright (C) 2026 under GPL 3.0, Fredrik Jonsson
 %
 % input TEX;
@@ -366,7 +369,11 @@ beginfig(1);
   % Faraday's law of induction.
   %
   posfaradayinduc:=(2*dxb,-2dyb);
-    drawbox(btex ${\cal E}=-{{d\Phi_{\rm M}}/{dt}}$ etex,
+    drawbox(btex
+            \def\iint{\mathop{\int\kern-5pt\int}}
+            ${\cal E}=-{{d\Phi_{\rm M}}/{dt}}
+                     =-{{d}\over{dt}}\iint{\bf B}\cdot d{\bf S}$
+            etex,
       btex \font\labelfont=cmssi8\labelfont
       {Faradays induktionslag} etex,
       posfaradayinduc, ws, hs, rs,
@@ -376,7 +383,7 @@ beginfig(1);
   % Faraday's law.
   %
   posfaradaylaw:=(2*dxb,-3dyb);
-    drawbox(btex $\nabla\times{\bf E}({\bf r},t)
+    drawbox(btex $\nabla\times{\bf E}({\bf x},t)
                    =-{{\partial{\bf B}({\bf x},t)}\over{\partial t}}$ etex,
       btex \font\labelfont=cmssi8\labelfont
       {Faradays lag} etex,
