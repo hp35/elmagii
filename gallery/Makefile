@@ -51,4 +51,5 @@ texchars:
 
 clean:
 	@make -ik clean -C images
+	@make -ik clean -C src
 	@rm -Rf *~ *.aux *.toc *.idx *.ind *.log *.ilg *.dvi *.ps $(ARCHIVE)
