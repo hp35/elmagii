@@ -293,21 +293,21 @@ beginfig(1);
   % The divergence theorem for magnetostatics, allowing us to draw the
   % conclusion that magnetic monopoles do not exist.
   %
-  posmagmonopoles:=(dxb+(0.25/2)*ws,-2dyb);
+  posmagmonopoles:=(dxb+(0.10/2)*ws,-2dyb);
     drawbox(btex $\nabla\cdot{\bf B}({\bf x})=0$ etex,
       btex \font\labelfont=cmssi8\labelfont
       \hskip-10pt{Ingen magnetisk laddning} etex,
-      posmagmonopoles, ws-0.25ws, hs, rs,
+      posmagmonopoles, ws-0.10ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
   %
   % Existence of a vector potential.
   %
-  posvecpot:=(dxb+(0.25/2)*ws,-3dyb);
+  posvecpot:=(dxb+(0.10/2)*ws,-3dyb);
     drawbox(btex ${\bf B}({\bf x})=\nabla\times{\bf A}({\bf x})$ etex,
       btex \font\labelfont=cmssi8\labelfont
       \hskip-10pt{Vektorpotential, existens} etex,
-      posvecpot, ws-0.25ws, hs, rs,
+      posvecpot, ws-0.10ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
   %
@@ -358,11 +358,11 @@ beginfig(1);
   %
   % The Ampere force law on current-carrying loops.
   %
-  posampereforce:=(2*dxb+(0.25/2)*ws,-dyb);
+  posampereforce:=(2*dxb+(0.10/2)*ws,-dyb);
     drawbox(btex ${\bf F}_{\rm mag}=\int({\bf I}\times{\bf B})\,dl$ etex,
       btex \font\labelfont=cmssi8\labelfont
       \hskip-10pt{Amp\`eres kraftlag, slingor} etex,
-      posampereforce, ws-0.25ws, hs, rs,
+      posampereforce, ws-0.10ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
   %
@@ -401,13 +401,13 @@ beginfig(1);
 %      {{\"O}msesidig induktans, Neumann} etex,
 %      posneumann, ws, hs, rs,
 %      btex \font\labelfont=cmssi8\labelfont{5} etex);
-  posneumann:=(2*dxb+(0.25/2)*ws,-4dyb);
+  posneumann:=(2*dxb+(0.10/2)*ws,-4dyb);
     drawbox(btex $M_{\Gamma\Gamma'}={{\mu_0}\over{4\pi}}
           \oint_{\Gamma}\oint_{\Gamma'}
           {{d{\bf l}'\cdot d{\bf l}}\over{|{\bf x}-{\bf x}'|}}$ etex,
       btex \font\labelfont=cmssi8\labelfont
       {{\"O}msesidig induktans} etex,
-      posneumann, ws-0.25ws, hs, rs,
+      posneumann, ws-0.10ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{5} etex);
 
   %
@@ -693,14 +693,14 @@ beginfig(1);
   connect(posbiotsavartj, posmagmonopoles, hs, hs, 270, 270);
   drawtexarrow (posbiotsavartj shifted (0u,-hs/2)){dir 270}
               ..{dir 180}(posbiotsavartj shifted (0u,-hs/2) shifted (-2u,-2u))
-              ..{dir 180}(posbiotsavartj shifted (0u,-hs/2) shifted (-18u,-2u))
-              ..{dir 270}(posbiotsavartj shifted (0u,-hs/2) shifted (-22u,-6u))
-              ..{dir 270}(posampere shifted (0u,hs/2) shifted (-22u,6u))
-              ..{dir 0}(posampere shifted (0u,hs/2) shifted (-18u,2u))
+              ..{dir 180}(posbiotsavartj shifted (0u,-hs/2) shifted (-20u,-2u))
+              ..{dir 270}(posbiotsavartj shifted (0u,-hs/2) shifted (-24u,-6u))
+              ..{dir 270}(posampere shifted (0u,hs/2) shifted (-24u,6u))
+              ..{dir 0}(posampere shifted (0u,hs/2) shifted (-20u,2u))
               ..{dir 0}(posampere shifted (0u,hs/2) shifted (-2u,2u))
               ..{dir 270}(posampere shifted (0u,hs/2));
   connect(posmagmonopoles, posvecpot, hs, hs, 270, 270);
-  connect(posvecpot, posampere, hs, hs, 270, 270);
+%  connect(posvecpot, posampere, hs, hs, 270, 270);
   connect(posampere, posamperepot, hs, hs, 270, 270);
   connect(posamperepot, posamperepotint, hs, hs, 270, 270);
 
@@ -711,20 +711,20 @@ beginfig(1);
   connect(poslorentzforce, posampereforce, hs, hs, 270, 270);
   drawtexarrow (poslorentzforce shifted (0u,-hs/2)){dir 270}
               ..{dir 180}(poslorentzforce shifted (0u,-hs/2) shifted (-2u,-2u))
-              ..{dir 180}(poslorentzforce shifted (0u,-hs/2) shifted (-18u,-2u))
-              ..{dir 270}(poslorentzforce shifted (0u,-hs/2) shifted (-22u,-6u))
-              ..{dir 270}(posfaradayinduc shifted (0u,hs/2) shifted (-22u,6u))
-              ..{dir 0}(posfaradayinduc shifted (0u,hs/2) shifted (-18u,2u))
+              ..{dir 180}(poslorentzforce shifted (0u,-hs/2) shifted (-20u,-2u))
+              ..{dir 270}(poslorentzforce shifted (0u,-hs/2) shifted (-24u,-6u))
+              ..{dir 270}(posfaradayinduc shifted (0u,hs/2) shifted (-24u,6u))
+              ..{dir 0}(posfaradayinduc shifted (0u,hs/2) shifted (-20u,2u))
               ..{dir 0}(posfaradayinduc shifted (0u,hs/2) shifted (-2u,2u))
               ..{dir 270}(posfaradayinduc shifted (0u,hs/2));
   connect(posfaradayinduc, posfaradaylaw, hs, hs, 270, 270);
   connect(posfaradaylaw, posneumann, hs, hs, 270, 270);
   drawtexarrow (posfaradaylaw shifted (0u,-hs/2)){dir 270}
               ..{dir 180}(posfaradaylaw shifted (0u,-hs/2) shifted (-2u,-2u))
-              ..{dir 180}(posfaradaylaw shifted (0u,-hs/2) shifted (-18u,-2u))
-              ..{dir 270}(posfaradaylaw shifted (0u,-hs/2) shifted (-22u,-6u))
-              ..{dir 270}(poscontinuity shifted (0u,hs/2) shifted (-22u,6u))
-              ..{dir 0}(poscontinuity shifted (0u,hs/2) shifted (-18u,2u))
+              ..{dir 180}(posfaradaylaw shifted (0u,-hs/2) shifted (-20u,-2u))
+              ..{dir 270}(posfaradaylaw shifted (0u,-hs/2) shifted (-24u,-6u))
+              ..{dir 270}(poscontinuity shifted (0u,hs/2) shifted (-24u,6u))
+              ..{dir 0}(poscontinuity shifted (0u,hs/2) shifted (-20u,2u))
               ..{dir 0}(poscontinuity shifted (0u,hs/2) shifted (-2u,2u))
               ..{dir 270}(poscontinuity shifted (0u,hs/2));
   connect(poscontinuity, posdispcurr, hs, hs, 270, 270);
@@ -844,7 +844,7 @@ beginfig(1);
   % Connecting the "no magnetic monopoles" box to the Electromagnetic Wave
   % Propagation block.
   %
-  drawtexarrow (posmagmonopoles shifted ((ws-0.25ws)/2-rs,-hs/2+rs)
+  drawtexarrow (posmagmonopoles shifted ((ws-0.10ws)/2-rs,-hs/2+rs)
       shifted (.7071(rs,-rs))){dir 315}
     ..{dir 270}(.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 10u){dir 270}
     ..{dir 270}(.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 14u);
