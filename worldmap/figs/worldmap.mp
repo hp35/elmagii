@@ -151,7 +151,7 @@ beginfig(1);
   %
   poscoulombgen:=(0u,-dyb);
   drawbox(btex $
-      \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+      \def\iiint{\mathop{\int\kern-5.5pt\int\kern-5.5pt\int}}
       {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint%_V
       \rho({\bf x}')
           {{({\bf x}-{\bf x}')}
@@ -182,7 +182,7 @@ beginfig(1);
   %
   posscalpot:=(0u,-3dyb);
   drawbox(btex $
-      \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+      \def\iiint{\mathop{\int\kern-5.5pt\int\kern-5.5pt\int}}
       \phi({\bf x})\equiv{{1}\over{4\pi\varepsilon_0}}\iiint%_V
           {{\rho({\bf x}')}
             \over{|{\bf x}-{\bf x}'|}}\,dV'
@@ -209,10 +209,13 @@ beginfig(1);
   %
   posgaussintegral:=(0u,-4dyb);
   drawbox(btex $
-      \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
-      \def\oiint{\mathop{\int\kern-5pt\int\kern-10.7pt%
-        {\scriptstyle\bigcirc}\kern2pt}}
-      \oiint {\bf E}({\bf x}')\cdot d{\bf S}'
+      \def\iint{\mathop{\int\kern-5.5pt\int}}
+      \def\iiint{\mathop{\int\kern-5.5pt\int\kern-5.5pt\int}}
+%      \def\oiint{\mathop{\int\kern-5.5pt\int\kern-10.7pt%
+%        {\scriptscriptstyle\bigcirc}\kern2pt}}
+      \def\oiint{\mathop{\int\kern-5.5pt\int\kern-10.7pt}%
+        \vbox{\hbox{a}\vskip-30pt\hbox{${\scriptscriptstyle\bigcirc}$}}\kern2pt}
+      \oiint{\bf E}({\bf x}')\cdot d{\bf S}'
          ={{1}\over{\varepsilon_0}}\iiint\rho({\bf x}')\,dV'
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
@@ -283,7 +286,7 @@ beginfig(1);
   %
   posbiotsavartj:=(dxb,-dyb);
     drawbox(btex $
-          \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+          \def\iiint{\mathop{\int\kern-5.5pt\int\kern-5.5pt\int}}
           {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\iiint
           {{{\bf J}({\bf x}')\times({\bf x}-{\bf x}')}
             \over{|{\bf x}-{\bf x}'|^3}}\,dV'
@@ -339,7 +342,7 @@ beginfig(1);
   %
   posamperepotint:=(dxb,-6dyb);
     drawbox(btex $
-            \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+            \def\iiint{\mathop{\int\kern-5.5pt\int\kern-5.5pt\int}}
             {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
 	    \iiint{{{\bf J}_{\rm f}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'$
 	    etex,
@@ -534,9 +537,9 @@ beginfig(1);
   %
   posmaxwellintegral:=(2dxb,-8dyb);
     drawbox(btex
-        \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+        \def\iiint{\mathop{\int\kern-5.5pt\int\kern-5.5pt\int}}
         \def\iint{\mathop{\int\kern-5pt\int}}
-        \def\oiint{\mathop{\int\kern-5pt\int\kern-10.7pt%
+        \def\oiint{\mathop{\int\kern-5.5pt\int\kern-10.7pt%
           {\scriptstyle\bigcirc}\kern2pt}}
         \vbox{
           \hbox{$\oiint{\bf D}\cdot d{\bf S}=\iiint\rho\,dV$}
@@ -651,7 +654,7 @@ beginfig(1);
   %
   posretardedpots:=(1dxb, ypart posgauge -1dyb-0.5hs-2u-1u);
     drawbox(btex
-        \def\iiint{\mathop{\int\kern-5pt\int\kern-5pt\int}}
+        \def\iiint{\mathop{\int\kern-5.5pt\int\kern-5.5pt\int}}
         \vbox{
           \hbox{$\phi({\bf x},t)={{1}\over{4\pi\varepsilon_0}}\iiint
             {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV'$}
