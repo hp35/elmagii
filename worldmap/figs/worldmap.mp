@@ -5,11 +5,10 @@
 % finally producing the electromagnetic wave equation.
 %
 % Created:     January 3, 2026
-% Last change: February 23, 2026
+% Last change: February 28, 2026
 %
 % Copyright (C) 2026 under GPL 3.0, Fredrik Jonsson
 %
-% input TEX;
 u := 1mm;
 
 %
@@ -123,11 +122,11 @@ beginfig(1);
     posplanewaveexp, posdalembert,
     posgaussintegral, posgaussdifferential, pospoisson, posmirrorcharges,
     posretardedpots, posgauge;
-  ws := 52u;  % Standard box width
-  hs := 11u;  % Standard box height % 12u
-  rs := 3u;   % Standard corner rounding, radius
-  dxb:=62u;   % Pitch between boxes along x-axis % 60u
-  dyb:=15u;   % Pitch between boxes along y-axis
+  ws := 52u;   % Standard box width
+  hs := 11u;   % Standard box height
+  rs := 3u;    % Standard corner rounding, radius
+  dxb:=62u;    % Pitch between boxes along x-axis
+  dyb:=15u;    % Pitch between boxes along y-axis
   pickup pencircle scaled 1pt;
 
   %
@@ -195,26 +194,12 @@ beginfig(1);
   %
   % Gauss' law in integral form.
   %
-  %  \def\oiintop{%
-  %    \vcenter{%
-  %      \offinterlineskip
-  %      \halign{##\cr
-  %        \hfil$\scriptscriptstyle\circ$\hfil\cr
-  %        \noalign{\kern-0.6ex}
-  %        $\displaystyle\iint$\cr
-  %      }%
-  %    }%
-  %  }
-  %  \def\oiint{\mathop{\oiintop}\displaylimits}
-  %
   posgaussintegral:=(0u,-4dyb);
   drawbox(btex $
       \def\iint{\mathop{\int\kern-5.5pt\int}}
       \def\iiint{\mathop{\int\kern-5.5pt\int\kern-5.5pt\int}}
-%      \def\oiint{\mathop{\int\kern-5.5pt\int\kern-10.7pt%
-%        {\scriptscriptstyle\bigcirc}\kern2pt}}
-      \def\oiint{\mathop{\int\kern-5.5pt\int\kern-10.7pt}%
-        \vbox{\hbox{a}\vskip-30pt\hbox{${\scriptscriptstyle\bigcirc}$}}\kern2pt}
+      \def\oiint{\mathop{\int\kern-5.5pt\int\kern-9.75pt}%
+        \vbox{\hbox{${\scriptscriptstyle\bigcirc}$}\vskip0.5pt}\kern2pt}
       \oiint{\bf E}({\bf x}')\cdot d{\bf S}'
          ={{1}\over{\varepsilon_0}}\iiint\rho({\bf x}')\,dV'
       $ etex,
@@ -382,7 +367,7 @@ beginfig(1);
                      =-{{d}\over{dt}}\iint{\bf B}\cdot d{\bf S}$
             etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Faradays induktionslag} etex,
+      \hskip-10pt{Faradays induktionslag + Lenz lag} etex,
       posfaradayinduc, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{5} etex);
 
@@ -393,7 +378,7 @@ beginfig(1);
     drawbox(btex $\nabla\times{\bf E}({\bf x},t)
                    =-{{\partial{\bf B}({\bf x},t)}\over{\partial t}}$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Faradays lag} etex,
+      {Faradays lag, differentialform} etex,
       posfaradaylaw, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{5} etex);
 
@@ -539,8 +524,8 @@ beginfig(1);
     drawbox(btex
         \def\iiint{\mathop{\int\kern-5.5pt\int\kern-5.5pt\int}}
         \def\iint{\mathop{\int\kern-5pt\int}}
-        \def\oiint{\mathop{\int\kern-5.5pt\int\kern-10.7pt%
-          {\scriptstyle\bigcirc}\kern2pt}}
+        \def\oiint{\mathop{\int\kern-5.5pt\int\kern-9.75pt}%
+          \vbox{\hbox{${\scriptscriptstyle\bigcirc}$}\vskip0.5pt}\kern2pt}
         \vbox{
           \hbox{$\oiint{\bf D}\cdot d{\bf S}=\iiint\rho\,dV$}
           \hbox{$\oiint{\bf B}\cdot d{\bf S}=0$}
