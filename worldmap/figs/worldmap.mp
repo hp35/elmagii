@@ -418,7 +418,7 @@ beginfig(1);
   %
   % Electric polarization density.
   %
-  poselecpoldens:=(0*dxb,-8.5dyb-5u-6u-3u);
+  poselecpoldens:=(0*dxb,-8.5dyb-5u-6u-1u);
     drawbox(btex ${\bf P} \equiv \big\langle{{d{\bf p}}\over{dV}}\big\rangle
       = \varepsilon_0\chi_{\rm e}{\bf E}$ etex,
       btex \font\labelfont=cmssi8\labelfont
@@ -734,18 +734,27 @@ beginfig(1);
   %
   connect(posgauge, posretardedpots, hs+4u, 2.0hs+2u, 270, 270);
 
-  drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
-        {Elektrostatik} etex,
-	(0dxb,-3.5dyb-6u), ws+4u, 7dyb+hs+4u+12u, rs);
-  drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
-        {Magnetostatik} etex,
-	(dxb,-3.0dyb), ws+4u, 6dyb+hs+4u, rs);
-  drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
-        {Elektrodynamik} etex,
-	(2dxb,-3.0dyb), ws+4u, 6dyb+hs+4u, rs);
+  drawlabeledbox(btex
+        \font\labelfont=cmssbx10 scaled 800
+        \font\tagfont=cmssbx10 scaled 600
+        \labelfont{Elektrostatik${}^{\hbox{\tagfont 1}}$}
+        etex,
+        (0dxb,-3.5dyb-6u), ws+4u, 7dyb+hs+4u+12u, rs);
+  drawlabeledbox(btex
+        \font\labelfont=cmssbx10 scaled 800
+        \font\tagfont=cmssbx10 scaled 600
+        \labelfont{Magnetostatik${}^{\hbox{\tagfont 2}}$}
+        etex,
+        (dxb,-3.0dyb), ws+4u, 6dyb+hs+4u, rs);
+  drawlabeledbox(btex
+        \font\labelfont=cmssbx10 scaled 800
+        \font\tagfont=cmssbx10 scaled 600
+        \labelfont{Elektrodynamik${}^{\hbox{\tagfont 3}}$}
+        etex,
+        (2dxb,-3.0dyb), ws+4u, 6dyb+hs+4u, rs);
   drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Konstitutiva relationer} etex,
-	(0dxb,-10.5dyb-5u-9u), ws+4u, 4dyb+hs+4u, rs);
+	(0dxb,-10.5dyb-5u-7u), ws+4u, 4dyb+hs+4u, rs);
   drawlabeledbox(btex \font\labelfont=cmssbx10 scaled 800\labelfont
         {Multipolutveckling av potentialer} etex,
 	(1dxb,-8.75dyb+0.15hs-2u), ws+4u, 1.5dyb+1.7hs+4u, rs);
@@ -859,5 +868,21 @@ beginfig(1);
               {Koppling till materialegenskaper}
             etex,(dxb,ypart poselecdispfield - hs/2 - 49u - 5u));
 
+%
+% A few final notes on the fundamentals of the $\varepsilon_0$- and
+% $\mu_0$-domains of electromagnetics.
+%
+  label.lrt(btex \font\labelfont=cmssi8\labelfont
+              {$\hbox{${}^{\hbox{\labelfont{1}}}$Elektrostatik}
+	        \to\varepsilon_0$\hbox{-land}}
+            etex,(-ws/2-3u, ypart possurfcurr-hs/2-2.5u));
+  label.lrt(btex \font\labelfont=cmssi8\labelfont
+              {$\hbox{${}^{\hbox{\labelfont{2}}}$Magnetostatik}
+	        \to\mu_0$\hbox{-land}}
+            etex,(-ws/2-3u, ypart possurfcurr-hs/2-2.5u-11pt));
+  label.lrt(btex \font\labelfont=cmssi8\labelfont
+              {$\hbox{${}^{\hbox{\labelfont{3}}}$Elektrodynamik}
+	        \to c=(\mu_0\varepsilon_0)^{-1/2}$\hbox{-land}}
+            etex,(-ws/2-3u, ypart possurfcurr-hs/2-2.5u-22pt));
   endfig;
 end
