@@ -470,6 +470,25 @@ texchars:
 	   echo "Reload $$f to incorporate the changes." ;\
 	done
 
+#
+# Just out of curiosity, compile a frequency count of words present in
+# the entire source for the Lecture Notes.
+#
+wfreq:
+	@echo "Word frequencies in $(PROJECT).tex (as per "`date`"): "
+	@cat $(PROJECT).tex | awk '\
+	BEGIN {\
+	    FS="[^a-zA-Z]+";\
+	}\
+	{\
+	    for (i=1; i<=NF; i++)\
+	        words[ tolower($$i) ]++ \
+	}\
+	END {\
+	    for (i in words)\
+	        print "\""i"\":", words[i], "times" \
+	}' | sort -k 2n | tail -n 40
+
 clean:
 	rm -Rf *~ lect*.tex *.log *.idx *.ilg *.ind *.dvi *.ps $(PROJECT).*
 	make clean -C src
