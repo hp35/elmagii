@@ -880,11 +880,11 @@ beginfig(1);
 %
   label.lrt(btex \font\labelfont=cmssi8\labelfont
               {$\hbox{${}^{\hbox{\labelfont{1}}}$Elektrostatik}
-	        \to\hbox{``}\varepsilon_0$\hbox{-land''}}
+	        \to\hbox{``}\varepsilon_0$\hbox{-land'' (permittivitet)}}
             etex,(-ws/2-3u, ypart possurfcurr-hs/2-2.5u));
   label.lrt(btex \font\labelfont=cmssi8\labelfont
               {$\hbox{${}^{\hbox{\labelfont{2}}}$Magnetostatik}
-	        \to\hbox{``}\mu_0$\hbox{-land''}}
+	        \to\hbox{``}\mu_0$\hbox{-land'' (permeabilitet)}}
             etex,(-ws/2-3u, ypart possurfcurr-hs/2-2.5u-11pt));
   label.lrt(btex \font\labelfont=cmssi8\labelfont
               {$\hbox{${}^{\hbox{\labelfont{3}}}$Elektrodynamik}
