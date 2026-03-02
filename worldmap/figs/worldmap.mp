@@ -869,20 +869,24 @@ beginfig(1);
             etex,(dxb,ypart poselecdispfield - hs/2 - 49u - 5u));
 
 %
-% A few final notes on the fundamentals of the $\varepsilon_0$- and
-% $\mu_0$-domains of electromagnetics.
+% A few final notes on the fundamentals of the $\varepsilon_0$-, $\mu_0$-,
+% and $c_0$-domains of electromagnetics.
 %
+%  label.lrt(btex \font\labelfont=cmssi8\labelfont
+%              {$\hbox{${}^{\hbox{\labelfont{1}}}$Elektrostatik}
+%	        \to\varepsilon_0$\hbox{-land}}
+%            etex,(-ws/2-3u, ypart possurfcurr-hs/2-2.5u));
   label.lrt(btex \font\labelfont=cmssi8\labelfont
               {$\hbox{${}^{\hbox{\labelfont{1}}}$Elektrostatik}
-	        \to\varepsilon_0$\hbox{-land}}
+	        \to\hbox{``}\varepsilon_0$\hbox{-land''}}
             etex,(-ws/2-3u, ypart possurfcurr-hs/2-2.5u));
   label.lrt(btex \font\labelfont=cmssi8\labelfont
               {$\hbox{${}^{\hbox{\labelfont{2}}}$Magnetostatik}
-	        \to\mu_0$\hbox{-land}}
+	        \to\hbox{``}\mu_0$\hbox{-land''}}
             etex,(-ws/2-3u, ypart possurfcurr-hs/2-2.5u-11pt));
   label.lrt(btex \font\labelfont=cmssi8\labelfont
               {$\hbox{${}^{\hbox{\labelfont{3}}}$Elektrodynamik}
-	        \to c=(\mu_0\varepsilon_0)^{-1/2}$\hbox{-land}}
+	        \to\hbox{``}c_0=(\mu_0\varepsilon_0)^{-1/2}$\hbox{-land''}}
             etex,(-ws/2-3u, ypart possurfcurr-hs/2-2.5u-22pt));
   endfig;
 end
