@@ -5,7 +5,7 @@ timeline.py
 Generation of a timeline of the principal scientists who formed the classical
 theory of electrostatics, magnetostatics and electrodynamics.
 
-Copyright (C) 2024, Fredrik Jonsson, under Gnu General Public License
+Copyright (C) 2026, Fredrik Jonsson, under Gnu General Public License
 (GPL) v3. See the enclosed LICENSE for details.
 
 This program is free software: you can redistribute it and/or modify
@@ -67,70 +67,110 @@ people = [
     ("Rickard Wilson", 1930, 2000),
 ]
 
+"""
+Nobel prize years (can be multiple).
+"""
+nobel_prize_years = {
+    "Hendrik Antoon Lorentz": [1902],
+    "John Joseph ``J. J.'' Thomson": [1906],
+    "George Paget Thomson": [1937],
+    "Louis de Broglie": [1929],
+    "Richard Feynman": [1965],
+}
+
 names = [p[0] for p in people]
 births = [p[1] for p in people]
 deaths = [p[2] for p in people]
 durations = [d - b for b, d in zip(births, deaths)]
 
-y_pos = range(len(people))
+def timeline(lang="swedish"):
+    y_pos = range(len(people))
 
-fig, ax = plt.subplots(figsize=(10, 10))
+    fig, ax = plt.subplots(figsize=(10, 10))
 
-ax.barh(
-    y_pos,
-    durations,
-    left=births,
-    color="white",
-    edgecolor="black",
-    linewidth=1
-)
+    ax.barh(
+        y_pos,
+        durations,
+        left=births,
+        color="white",
+        edgecolor="black",
+        linewidth=1
+    )
 
-ax.set_yticks(y_pos)
-ax.set_yticklabels(names)
-ax.set_xlabel("Year")
-# ax.set_title("A brief history of classical electromagnetics")
+    """
+    Add markers (stars) for the years of Nobel Prize awards.
+    """
+    for i, name in enumerate(names):
+        if name in nobel_prize_years:
+            for year in nobel_prize_years[name]:
+                ax.text(year-5.0+2.0, i, r"$\star_{{}^{%d}}$"%year,
+                        ha="left", va="center", fontsize=16)
 
-ax.grid(axis="x", linestyle="--", alpha=0.5)
-ax.invert_yaxis()
+    labeltext = "Nobel Prize"
+    if lang == "swedish":
+        labeltext = "Nobelpris"
+    ax.scatter([], [], marker=r"${~}^{\star}$", s=80, color="black",
+               label=labeltext)
+    ax.legend(loc="upper right", fontsize='medium')
 
-# Add year-span labels
-padding = 5  # years of horizontal padding for labels
+    ax.set_yticks(y_pos)
+    ax.set_yticklabels(names)
+    ax.set_xlabel("Year")
+    ax.grid(axis="x", linestyle="--", alpha=0.5)
+    ax.invert_yaxis()
 
-for i, (b, d) in enumerate(zip(births, deaths)):
-    label = f"({b}–{d})"
-    if i == 0:
-        # First bar: label to the right
-        ax.text(
-            d + padding,
-            i,
-            label,
-            va="center",
-            ha="left"
-        )
+    # Add year-span labels
+    padding = 5  # years of horizontal padding for labels
+
+    for i, (b, d) in enumerate(zip(births, deaths)):
+        label = f"({b}–{d})"
+        if i == 0:
+            # First bar: label to the right
+            ax.text(
+                d + padding,
+                i,
+                label,
+                va="center",
+                ha="left"
+            )
+        else:
+            # Other bars: label to the left
+            ax.text(
+                b - padding,
+                i,
+                label,
+                va="center",
+                ha="right"
+            )
+
+    # Add slight padding to the left of the leftmost bar
+    min_year = min(births)
+    max_year = max(deaths)
+    x_padding = 5  # years
+    ax.set_xlim(min_year - x_padding, max_year + x_padding)
+
+    # Set gridlines every 50 years
+    start_year = (min_year // 50) * 50 + 50
+    end_year = ((max_year // 50) + 1) * 50 - 50
+    ax.set_xticks(np.arange(start_year, end_year + 1, 50))
+    ax.grid(axis="x", linestyle="--", alpha=0.5)
+
+    plt.tight_layout()
+    plt.show()
+    if lang == "swedish":
+        plt.savefig("timeline-swedish.eps", format="eps")
+        plt.savefig("timeline-swedish.svg", format="svg")
+        plt.savefig("timeline-swedish.png", format="png")
     else:
-        # Other bars: label to the left
-        ax.text(
-            b - padding,
-            i,
-            label,
-            va="center",
-            ha="right"
-        )
+        plt.savefig("timeline-english.eps", format="eps")
+        plt.savefig("timeline-english.svg", format="svg")
+        plt.savefig("timeline-english.png", format="png")
+    return
 
-# Add slight padding to the left of the leftmost bar
-min_year = min(births)
-max_year = max(deaths)
-x_padding = 5  # years
-ax.set_xlim(min_year - x_padding, max_year + x_padding)
+def main() -> None:
+    timeline(lang="swedish")
+    timeline(lang="english")
+    return
 
-# Set gridlines every 50 years
-start_year = (min_year // 50) * 50 + 50
-end_year = ((max_year // 50) + 1) * 50 - 50
-ax.set_xticks(np.arange(start_year, end_year + 1, 50))
-ax.grid(axis="x", linestyle="--", alpha=0.5)
-
-plt.tight_layout()
-plt.show()
-plt.savefig("timeline.eps", format="eps")
-plt.savefig("timeline.svg", format="svg")
-
+if __name__ == "__main__":
+    main()
