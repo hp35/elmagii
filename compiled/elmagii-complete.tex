@@ -570,7 +570,7 @@
 %
 ~\vskip-39mm\presection{V{\"a}rldskarta {\"o}ver elektromagnetisk f{\"a}ltteori}
 \vskip-10mm
-\sidx{V{\"a}rldskarta {\"o}ver elektromagnetisk fältteori}
+\sidx{V{\"a}rldskarta {\"o}ver elektromagnetisk f{\"a}ltteori}
 \sidx{Elektrostatik}[V{\"a}rldskarta]
 \sidx{Magnetostatik}[V{\"a}rldskarta]
 \sidx{Elektrodynamik}[V{\"a}rldskarta]
@@ -1157,11 +1157,14 @@ fr{\aa}n ${\bf x}'$ till ${\bf x}$.
 \eqsection{Vektoridentiteter}
 \eqtitle{Notation}
 \halign{#\hfil\ &#\hfil&\quad\hfil(#)\cr
-  $dl$       & Skal{\"a}rt linjeelement l{\"a}ngs kurva & ${\rm m}$\cr
-  $d{\bf l}$ & Riktat linjeelement $d{\bf l}={\bf e}_l dl$
-               l{\"a}ngs kurva& ${\rm m}$\cr
-  $dS$       & Skal{\"a}rt ytelement & ${\rm m}^2$\cr
-  $d{\bf S}$ & Riktat ytelement $d{\bf S}={\bf e}_n dS$ & ${\rm m}^2$\cr
+  $dl$       & Skal{\"a}rt linjeelement l{\"a}ngs kurva
+             & ${\rm m}$\cr
+  $d{\bf l}$ & Riktat linjeelement $d{\bf l}={\bf e}_l dl$ l{\"a}ngs kurva
+             & ${\rm m}$\cr
+  $dS$       & Skal{\"a}rt ytelement
+             & ${\rm m}^2$\cr
+  $d{\bf S}$ & Riktat ytelement $d{\bf S}={\bf e}_n dS$ ut fr{\aa}n yta
+             & ${\rm m}^2$\cr
   $dV$       & Volymelement & ${\rm m}^3$\cr
 }
 \eqtitle{Trippelprodukter}
@@ -2428,7 +2431,7 @@ $$
       J. J. Thomson, {\it in other words, the father showed that electrons
       are particles, and the son showed they behave like waves!}}
     \fi}%
-    \sidx{Thomson, Joseph John (1856--1940)}
+    \sidx{Thomson, George Paget (1892--1975)}
 }
 
 %
@@ -3000,7 +3003,7 @@ oss.\numberedfootnote{Fundera g{\"a}rna igenom argumenten och kom p{\aa}
 \item{$\bullet$}{F{\"a}ltmodellen till{\aa}ter oss att l{\aa}ta en laddnings
   p{\aa}verkan att propagera genom rummet, med en fix hastighet som normalt
   {\"a}r ljushastigheten \sidx{Ljushastighet} eller denna nedskalad med
-  motsvarande brytningsindex \sidx{Brytningsindex} f{\"o}r mediet i rummet.}
+  motsvarande brytningsindex \sidx{Brytningsindex $n$} f{\"o}r mediet i rummet.}
 
 \subsection{\red{Lokalitet och kausalitet}}
 \item{$\bullet$}{Vi kan med f{\"a}ltkonceptet analysera kraften p{\aa} en
@@ -3436,12 +3439,12 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
 %
 % File: teach/elmagii/lect-01/lecture-02.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-02/
-% Last change: November 4, 2025
+% Last change: March 2, 2026
 %
 % Lecture No 2 in the course ``Elektromagnetism II, 1TE626 (2025)'',
 % held November 4, 2025, at Uppsala University, Sweden.
 %
-% Copyright (C) 2022-2025, Fredrik Jonsson, under Gnu General Public
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
 %
 % This program is free software: you can redistribute it and/or modify
@@ -3909,7 +3912,21 @@ en slags ``potentiell energi'' (l{\aa}t oss dock beh{\aa}lla citattecknen
 h{\"a}r, eftersom $\phi$ inte har den fysikaliska dimensionen av energi),
 s{\"a}g f{\"o}r en vandring uppf{\"o}r en kulle, f{\"o}r vilken den negativa
 gradienten $-\nabla\phi$ d{\aa} kan tolkas som ``lutningen ned{\aa}t'' i
-riktningarna runt den punkt d{\"a}r vi befinner oss.
+riktningarna runt den punkt d{\"a}r vi befinner oss.\numberedfootnote{Om vi
+  t{\"a}nker oss en analogi med rummet som en tv{\aa}dimensionell
+  terr{\"a}ngkarta d{\"a}r v{\"a}rdet p{\aa} den skal{\"a}ra potentialen
+  $\phi({\bf x})$ representerar h{\"o}jden {\"o}ver havet, eller om vi
+  s{\aa} vill den {\it potentiella energin} som funktion av h{\"o}jden,
+  s{\aa} g{\"a}ller f{\"o}ljande:\par
+    {\it Riktning}: Gradienten $\nabla\phi({\bf x})$ pekar i den riktning
+      d{\"a}r marken lutar som brantast upp{\aa}t. Om du st{\aa}r i en
+      sluttning och vill g{\aa} den kortaste, brantaste v{\"a}gen mot toppen,
+      ska du g{\aa} i gradientens riktning.\par
+    {\it Magnitud}: Beloppet $|\nabla\phi({\bf x})|$ av gradienten anger
+      hur brant lutningen {\"a}r. Ett stort belopp p{\aa} gradienten betyder
+      en brant backe; en gradient p{\aa} noll betyder att man st{\aa}r p{\aa}
+      en plan yta, som till exempel p{\aa} en topp, i en dal eller en p{\aa}
+      plat{\aa}.}
 \vfill\eject
 
 \section{Arbete och upplagrad energi vid f{\"o}rflyttning av elektriska
@@ -3964,6 +3981,33 @@ automatik leds in till tankebanan att $\phi$ i sig skulle vara en ``potentiell
 energi'', vilket ej {\"a}r fallet. V{\aa}r potential $\phi$ har dock den
 fysikaliska dimensionen av volt (V), och en potentialskillnad l{\aa}ter sig
 sj{\"a}lvfallet uttryckas i denna enhet.
+
+\section{De elektriska f{\"a}ltlinjerna {\"a}r alltid ortogonala mot en
+  ekvipotentialyta}
+\sidx{Ekvipotentialyta}[Ortogonalitet mot elektriska f{\"a}ltlinjer]
+\sidx{Elektrisk f{\"a}ltlinje}[Ortogonalitet mot Ekvipotentialyta]
+Utifr{\aa}n slutsatsen att det enda netto-arbete som kan utf{\"o}ras vid
+f{\"o}rflyttning av en laddning $q$ sker n{\"a}r den f{\"o}rflyttas l{\"a}ngs
+med f{\"a}ltlinjer hos det elektriska f{\"a}ltet, s{\aa} f{\"o}ljer det att
+{\it en f{\"o}rflyttning av laddning i en riktning ortogonalt mot
+f{\"a}ltlinjerna aldrig kan resultera i n{\aa}got utf{\"o}rt arbete}.
+\epsfig{../lect-02/figs/equipot.1}\noindent
+Eftersom vi just har konstaterat att arbete dessutom kan uttryckas som en
+f{\"o}r{\"a}ndring i potential $\phi$, och om vi r{\"o}r oss s{\aa} att inget
+arbete utf{\"o}rs, s{\aa} blir slutsatsen f{\"o}ljande:
+\quote{\red{\it Elektriska f{\"a}ltlinjer {\"a}r alltid ortogonala mot
+  en ekvipotentialyta.}\numberedfootnote{En {\it ekvipotentialyta} {\"a}r
+    kort och gott en yta i rummet d{\"a}r den skal{\"a}ra potentialen $\phi$
+    {\"a}r konstant.}}
+\noindent
+Vi kan {\"a}ven betrakta detta mer matematiskt utifr{\aa}n formen p{\aa} det
+elektriska f{\"a}ltet som ${\bf E}=-\nabla\phi$, d{\"a}r $-\nabla\phi$ {\"a}r
+riktningen f{\"o}r snabbaste minskningen\numberedfootnote{``Steepest descent'';
+  omv{\"a}nt s{\aa} {\"a}r $\nabla\phi$ med positivt tecken trivialt den
+  snabbaste {\it {\"o}kningen} av den skal{\"a}ra potentialen.}
+av den skal{\"a}ra potentialen, med denna riktning alltid varandes ortogonal
+mot en ekvipotentialyta, eller konstant ``h{\"o}jdkurva'' om vi t{\"a}nker oss
+analogin med en topografisk karta.
 
 \section{En paradox f{\"o}r den skal{\"a}ra potentialen}
 En annan m{\"a}rklig egenskap hos den skal{\"a}ra elektrostatiska potentialen
@@ -4087,6 +4131,8 @@ Electrodynamics}.
   $$
   d{\"a}r skillnaden $W_b-W_a$ {\"a}r skillnaden i potentiell energi f{\"o}r
   testladdningen mellan punkterna.}
+\item{$\bullet$}{Elektriska f{\"a}ltlinjer {\"a}r alltid ortogonala mot
+  en ekvipotentialyta.}
 \item{$\bullet$}{Den skal{\"a}ra potentialen $\phi$ lyder {\it Poissons
   ekvation} (f{\"o}rsta ekvationen p{\aa} omslaget p{\aa} Griffiths!),
   $$
@@ -6921,7 +6967,7 @@ med en slags {\it densitet av fl{\"o}de per ytenhet}, eller kort och gott som
 just en {\it magnetisk fl{\"o}dest{\"a}thet}. Vi kan p{\aa} s{\"a}tt och vis
 s{\"a}ga att den magnetiska fl{\"o}dest{\"a}theten ${\bf B}$ {\"a}r ett
 m{\aa}tt p{\aa} hur m{\aa}nga magnetiska f{\"a}ltlinjer
-\sidx{Magnetiska f{\"a}ltlinjer} som sk{\"a}r en yta per ytenhet.
+\sidx{F{\"a}ltlinjer}[Magnetiska] som sk{\"a}r en yta per ytenhet.
 En annan beteckning f{\"o}r ${\bf B}$-f{\"a}ltet {\"a}r {\it magnetstyrka},
 vilken dock {\"a}r betydligt mer intets{\"a}gande, {\"a}ven om det ger en
 parallell association till dess elektriska motsvarighet ${\bf E}$-f{\"a}ltet
@@ -8024,7 +8070,7 @@ discipliner inom fysik, kemi och till{\"a}mpad matematik. N{\aa}gra exempel:
 \medskip
 \item{$\bullet$}{Brytningsindex $n=\varepsilon^{1/2}_{\rm r}$: Linser, teleskop,
                  optiska fibrer, speglar, radar. ``Allt vi kan se.''
-                 \sidx{Brytningsindex}}
+                 \sidx{Brytningsindex $n$}}
 \item{$\bullet$}{Radar, ekolod, skiktr{\"o}ntgen, radiov{\aa}gspropagation
                  {\"o}ver l{\aa}nga distanser.}
 \item{$\bullet$}{Dispersion med v{\aa}gl{\"a}ngdsberoende brytningsindex,
