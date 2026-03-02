@@ -66,12 +66,26 @@ vardef connect(expr posa, posb, ha, hb, da, db) =
     boolean use_texarrows;
     use_texarrows := true;
     if use_texarrows:
-      drawtexarrow (posa shifted (0u,-ha/2)){dir da}
-        ..{dir db}(posb shifted (0u,hb/2));
+      if (ypart posa) > (ypart posb):
+        drawtexarrow (posa shifted (0u,-ha/2)){dir da}
+          ..{dir db}(posb shifted (0u,hb/2+1u))
+          --(posb shifted (0u,hb/2));
+      else:
+        drawtexarrow (posa shifted (0u,-ha/2)){dir da}
+          ..{dir db}(posb shifted (0u,hb/2-1u))
+          --(posb shifted (0u,hb/2));
+      fi
     else:
       pickup pencircle scaled .7pt;
-      drawarrow (posa shifted (0u,-ha/2)){dir da}
-        ..{dir db}(posb shifted (0u,hb/2));
+      if (ypart posa) > (ypart posb):
+        drawarrow (posa shifted (0u,-ha/2)){dir da}
+          ..{dir db}(posb shifted (0u,hb/2+1u))
+          --(posb shifted (0u,hb/2));
+      else:
+        drawarrow (posa shifted (0u,-ha/2)){dir da}
+          ..{dir db}(posb shifted (0u,hb/2-1u))
+          --(posb shifted (0u,hb/2));
+      fi
     fi
     pickup prevpen;
   endgroup
@@ -685,7 +699,8 @@ beginfig(1);
               ..{dir 270}(posampere shifted (0u,hs/2) shifted (-24u,6u))
               ..{dir 0}(posampere shifted (0u,hs/2) shifted (-20u,2u))
               ..{dir 0}(posampere shifted (0u,hs/2) shifted (-2u,2u))
-              ..{dir 270}(posampere shifted (0u,hs/2));
+              ..{dir 270}(posampere shifted (0u,hs/2+0.7u))
+              --(posampere shifted (0u,hs/2));
   connect(posmagmonopoles, posvecpot, hs, hs, 270, 270);
   connect(posampere, posamperepot, hs, hs, 270, 270);
   connect(posamperepot, posamperepotint, hs, hs, 270, 270);
@@ -701,7 +716,8 @@ beginfig(1);
               ..{dir 270}(posfaradayinduc shifted (0u,hs/2) shifted (-24u,6u))
               ..{dir 0}(posfaradayinduc shifted (0u,hs/2) shifted (-20u,2u))
               ..{dir 0}(posfaradayinduc shifted (0u,hs/2) shifted (-2u,2u))
-              ..{dir 270}(posfaradayinduc shifted (0u,hs/2));
+              ..{dir 270}(posfaradayinduc shifted (0u,hs/2+0.7u))
+              --(posfaradayinduc shifted (0u,hs/2));
   connect(posfaradayinduc, posfaradaylaw, hs, hs, 270, 270);
   connect(posfaradaylaw, posneumann, hs, hs, 270, 270);
   drawtexarrow (posfaradaylaw shifted (0u,-hs/2)){dir 270}
@@ -711,7 +727,12 @@ beginfig(1);
               ..{dir 270}(poscontinuity shifted (0u,hs/2) shifted (-24u,6u))
               ..{dir 0}(poscontinuity shifted (0u,hs/2) shifted (-20u,2u))
               ..{dir 0}(poscontinuity shifted (0u,hs/2) shifted (-2u,2u))
-              ..{dir 270}(poscontinuity shifted (0u,hs/2));
+              ..{dir 270}(poscontinuity shifted (0u,hs/2+0.7u))
+              --(poscontinuity shifted (0u,hs/2));
+  drawtexarrow (posfaradaylaw shifted (-ws/2+rs,-hs/2+rs)
+      shifted (.7071(-rs,-rs))){dir 235}
+    ..{dir 270}(.5[dxb,2dxb], ypart posfaradaylaw - hs/2 - 10u)
+    --(.5[dxb,2dxb], ypart posfaradaylaw - hs/2 - 15u);
   connect(poscontinuity, posdispcurr, hs, hs, 270, 270);
 
   %
