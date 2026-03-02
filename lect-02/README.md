@@ -49,11 +49,13 @@ Poissons ekvation ∇<sup>2</sup> φ = −ρ/ε<sub>0</sub>.
 5. Arbete och upplagrad energi vid förflyttning av elektriska
   laddningar
 
-    5.1. En paradox
+6. De elektriska fältlinjerna är alltid ortogonala mot en ekvipotentialyta
 
-6. Poissons ekvation för den skalära potentialen
+7. En paradox för den skalära potentialen
 
-7. Sammanfattning av Föreläsning 2 - <i>Elektrisk potential och
+8. Poissons ekvation för den skalära potentialen
+
+9. Sammanfattning av Föreläsning 2 - <i>Elektrisk potential och
    tillämpningar av Gauss lag</i>
 
 ## Compiling the TeX code and figures
