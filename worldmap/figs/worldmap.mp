@@ -422,12 +422,12 @@ beginfig(1);
   % The displacement current.
   %
   posdispcurr:=(2*dxb,-6dyb);
-    drawbox(btex ${\bf J}_{\rm tot}={\bf J}_{\rm f}
+    drawbox(btex ${\bf J}_{\rm f}\to{\bf J}_{\rm tot}={\bf J}_{\rm f}
                       +{{\partial{\bf D}}\over{\partial t}}$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {F{\"o}rskjutningsstr{\"o}m} etex,
+      {F{\"o}rskjutningsstr{\"o}m (Maxwell)} etex,
       posdispcurr, ws, hs, rs,
-      btex \font\labelfont=cmssi8\labelfont{5} etex);
+      btex \font\labelfont=cmssi8\labelfont{9} etex);
 
   %
   % Electric polarization density.
