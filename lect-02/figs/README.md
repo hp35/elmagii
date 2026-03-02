@@ -11,6 +11,11 @@ are any complaints.
 
 ## List of figures
 
+[`equipot.mp`](equipot.mp)
+    ([`equipot.pdf`](equipot.pdf))
+    <i>MetaPost drawing of electric field lines always being orthogonal
+    to a equipotential surface.</i>
+
 [`linecharge.mp`](linecharge.mp)
     ([`linecharge.pdf`](linecharge.pdf))
     <i>MetaPost drawing of a line charge enclosed by a "gaussian

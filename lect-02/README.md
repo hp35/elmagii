@@ -64,6 +64,11 @@ missing components in case there are any complaints.
 
 ## List of figures
 
+[`figs/equipot.mp`](figs/equipot.mp)
+    ([`figs/equipot.pdf`](figs/equipot.pdf))
+    <i>MetaPost drawing of electric field lines always being orthogonal
+    to a equipotential surface.</i>
+
 [`figs/linecharge.mp`](figs/linecharge.mp)
     ([`figs/linecharge.pdf`](figs/linecharge.pdf))
     <i>MetaPost drawing of a line charge enclosed by a "gaussian
