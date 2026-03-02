@@ -5,7 +5,7 @@
 % finally producing the electromagnetic wave equation.
 %
 % Created:     January 3, 2026
-% Last change: February 28, 2026
+% Last change: March 2, 2026
 %
 % Copyright (C) 2026 under GPL 3.0, Fredrik Jonsson
 %
@@ -588,6 +588,12 @@ beginfig(1);
       etex,
       poselecwaveeq, ws, 2.2*hs+4u, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
+  pickup pencircle scaled .7pt;
+  draw fullcircle scaled 4u shifted poselecwaveeq
+                            shifted (-2.0u,5.0u) withcolor red;
+  draw fullcircle scaled 4u shifted poselecwaveeq
+                            shifted (-1.7u,-6.2u) withcolor red;
+  pickup pencircle scaled 1pt;
 
   %
   % D'Alembert solution for traveling waves.
@@ -872,10 +878,6 @@ beginfig(1);
 % A few final notes on the fundamentals of the $\varepsilon_0$-, $\mu_0$-,
 % and $c_0$-domains of electromagnetics.
 %
-%  label.lrt(btex \font\labelfont=cmssi8\labelfont
-%              {$\hbox{${}^{\hbox{\labelfont{1}}}$Elektrostatik}
-%	        \to\varepsilon_0$\hbox{-land}}
-%            etex,(-ws/2-3u, ypart possurfcurr-hs/2-2.5u));
   label.lrt(btex \font\labelfont=cmssi8\labelfont
               {$\hbox{${}^{\hbox{\labelfont{1}}}$Elektrostatik}
 	        \to\hbox{``}\varepsilon_0$\hbox{-land''}}
