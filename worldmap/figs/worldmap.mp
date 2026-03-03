@@ -5,7 +5,7 @@
 % finally producing the electromagnetic wave equation.
 %
 % Created:     January 3, 2026
-% Last change: March 2, 2026
+% Last change: March 3, 2026
 %
 % Copyright (C) 2026 under GPL 3.0, Fredrik Jonsson
 %
@@ -813,21 +813,19 @@ beginfig(1);
   % Connecting the scalar potential box to the Multipole Expansion block.
   %
   drawtexarrow (posscalpot shifted (ws/2-rs,-hs/2+rs)
-      shifted (.7071(rs,-rs))){dir 315}
-    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 10u){dir 270}
-    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posmultipole + hs + 10u){dir 270}
+        shifted (.7071(rs,-rs))){dir 315}
+    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 14u)
+	--(.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 15u);
+  drawtexarrow (.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 15u)
+    --(.5[0u,dxb]+1.25u, ypart posmultipole + hs + 10u){dir 270}
     ..{dir 315}(posmultipole shifted (-ws/2+rs,hs-rs) shifted (.7071(-rs,rs)));
 
   %
   % Connecting the scalar potential box to the Explicit Solutions to
   % Maxwell's Equations (Retarded Potentials) block.
   %
-  drawtexarrow (posscalpot shifted (ws/2-rs,-hs/2+rs)
-      shifted (.7071(rs,-rs))){dir 315}
-    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 10u){dir 270}
-    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 24u);
-  drawtexarrow (.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 24u){dir 270}
-    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posgauge + hs + 34u);
+  drawtexarrow (.5[0u,dxb]+1.25u, ypart posmultipole + hs + 10u)
+    --(.5[0u,dxb]+1.25u, ypart posgauge + hs + 34u);
   drawtexarrow (.5[0u,dxb]+1.25u, ypart posgauge + hs + 34u){dir 270}
     ..{dir 270}(.5[0u,dxb]+1.25u, ypart posgauge + hs + 10u){dir 270}
     ..{dir 315}(posgauge shifted (-ws/2+rs,hs/2-rs+2u) shifted (.7071(-rs,rs)));
@@ -839,8 +837,8 @@ beginfig(1);
   drawtexarrow (posgaussdifferential shifted (ws/2-rs,-hs/2+rs)
       shifted (.7071(rs,-rs))){dir 315}
     ..{dir 270}(.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-10u){dir 270}
-    ..{dir 270}(.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-24u);
-  drawtexarrow (.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-24u)
+    ..{dir 270}(.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-11u);
+  drawtexarrow (.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-11u)
     --(.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-48.5u);
   drawtexarrow (.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-48.5u)
     --(.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-78u){dir 270}
@@ -877,8 +875,8 @@ beginfig(1);
   drawtexarrow (posmagmonopoles shifted ((ws-0.10ws)/2-rs,-hs/2+rs)
       shifted (.7071(rs,-rs))){dir 315}
     ..{dir 270}(.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 10u){dir 270}
-    ..{dir 270}(.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 14u);
-  drawtexarrow (.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 14u){dir 270}
+    ..{dir 270}(.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 11u);
+  drawtexarrow (.5[dxb,2dxb], ypart posmagmonopoles - hs/2 - 11u){dir 270}
     ..{dir 270}(.5[dxb,2dxb], ypart posmaxwellintegral + hs + 10u){dir 270}
     ..{dir 315}(posmaxwellintegral shifted (-ws/2+rs,hs-rs)
       shifted (.7071(-rs,rs)));
