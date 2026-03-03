@@ -49,7 +49,7 @@ vardef drawbox(expr eqn, labeltext, cpos, w, h, r, lectno) =
     draw box;
     label.bot(labeltext, (xc,yc+hh));
     label(eqn, (xc,yc-1.5u));
-    label(lectno,(xc+wh-r,yc+hh-r));
+    label(lectno,(xc+wh-r-.4pt,yc+hh-r));
     draw fullcircle scaled 3.8u shifted (xc+wh-r,yc+hh-r);
     pickup prevpen;
   endgroup
