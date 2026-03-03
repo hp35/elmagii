@@ -569,7 +569,7 @@ beginfig(1);
         }
       etex,
       btex \font\labelfont=cmssi8\labelfont
-      \hskip-10pt{Maxwells ekvationer, differentialform} etex,
+      \hskip-12pt{Maxwells ekvationer, differentialform} etex,
       posmaxwelldifferential, ws, 1.5*hs, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
 
@@ -598,7 +598,7 @@ beginfig(1);
         }
       etex,
       btex \font\labelfont=cmssi8\labelfont
-        {Elektromagnetiska v{\aa}gekvationer}
+        \hskip-6pt{Elektromagnetiska v{\aa}gekvationer}
       etex,
       poselecwaveeq, ws, 2.2*hs+4u, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
