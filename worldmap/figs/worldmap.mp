@@ -376,7 +376,7 @@ beginfig(1);
   %
   posfaradayinduc:=(2*dxb,-2dyb);
     drawbox(btex
-            \def\iint{\mathop{\int\kern-5pt\int}}
+            \def\iint{\mathop{\int\kern-5.5pt\int}}
             ${\cal E}=-{{d\Phi_{\rm M}}/{dt}}
                      =-{{d}\over{dt}}\iint{\bf B}\cdot d{\bf S}$
             etex,
@@ -537,7 +537,7 @@ beginfig(1);
   posmaxwellintegral:=(2dxb,-8dyb);
     drawbox(btex
         \def\iiint{\mathop{\int\kern-5.5pt\int\kern-5.5pt\int}}
-        \def\iint{\mathop{\int\kern-5pt\int}}
+        \def\iint{\mathop{\int\kern-5.5pt\int}}
         \def\oiint{\mathop{\int\kern-5.5pt\int\kern-9.75pt}%
           \vbox{\hbox{${\scriptscriptstyle\bigcirc}$}\vskip0.5pt}\kern2pt}
         \vbox{
