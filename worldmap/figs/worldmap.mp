@@ -135,7 +135,7 @@ beginfig(1);
     posmaxwelldifferential, posmaxwellintegral, poselecwaveeq,
     posplanewaveexp, posdalembert,
     posgaussintegral, posgaussdifferential, pospoisson, posmirrorcharges,
-    posretardedpots, posgauge;
+    posgauge, posretardedpots;
   ws := 52u;   % Standard box width
   hs := 11u;   % Standard box height
   rs := 3u;    % Standard corner rounding, radius
@@ -814,8 +814,8 @@ beginfig(1);
   %
   drawtexarrow (posscalpot shifted (ws/2-rs,-hs/2+rs)
       shifted (.7071(rs,-rs))){dir 315}
-    ..{dir 270}(.5[0u,dxb], ypart posscalpot - hs/2 - 10u){dir 270}
-    ..{dir 270}(.5[0u,dxb], ypart posmultipole + hs + 10u){dir 270}
+    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 10u){dir 270}
+    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posmultipole + hs + 10u){dir 270}
     ..{dir 315}(posmultipole shifted (-ws/2+rs,hs-rs) shifted (.7071(-rs,rs)));
 
   %
@@ -824,13 +824,28 @@ beginfig(1);
   %
   drawtexarrow (posscalpot shifted (ws/2-rs,-hs/2+rs)
       shifted (.7071(rs,-rs))){dir 315}
-    ..{dir 270}(.5[0u,dxb], ypart posscalpot - hs/2 - 10u){dir 270}
-    ..{dir 270}(.5[0u,dxb], ypart posscalpot - hs/2 - 24u);
-  drawtexarrow (.5[0u,dxb], ypart posscalpot - hs/2 - 24u){dir 270}
-    ..{dir 270}(.5[0u,dxb], ypart posgauge + hs + 34u);
-  drawtexarrow (.5[0u,dxb], ypart posgauge + hs + 34u){dir 270}
-    ..{dir 270}(.5[0u,dxb], ypart posgauge + hs + 10u){dir 270}
+    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 10u){dir 270}
+    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 24u);
+  drawtexarrow (.5[0u,dxb]+1.25u, ypart posscalpot - hs/2 - 24u){dir 270}
+    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posgauge + hs + 34u);
+  drawtexarrow (.5[0u,dxb]+1.25u, ypart posgauge + hs + 34u){dir 270}
+    ..{dir 270}(.5[0u,dxb]+1.25u, ypart posgauge + hs + 10u){dir 270}
     ..{dir 315}(posgauge shifted (-ws/2+rs,hs/2-rs+2u) shifted (.7071(-rs,rs)));
+
+  %
+  % Connecting Gauss' static law on differential form for the electric field
+  % to the block containing Maxwell's equations in integral form.
+  %
+  drawtexarrow (posgaussdifferential shifted (ws/2-rs,-hs/2+rs)
+      shifted (.7071(rs,-rs))){dir 315}
+    ..{dir 270}(.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-10u){dir 270}
+    ..{dir 270}(.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-24u);
+  drawtexarrow (.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-24u)
+    --(.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-48.5u);
+  drawtexarrow (.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-48.5u)
+    --(.5[0u,dxb]-1.25u, ypart posgaussdifferential-hs/2-78u){dir 270}
+    ..{dir 270}(.5[0u,dxb], ypart posgaussdifferential-hs/2-88.5u)
+    --(.5[0u,dxb], ypart posgaussdifferential-hs/2-89.5u);
 
   %
   % Connecting the vector potential box to the Multipole Expansion block.
@@ -880,6 +895,8 @@ beginfig(1);
     ..{dir 0}(.5[0u,dxb]+5u, ypart poselecdispfield - hs/2 - 50u - 4u)
     ..{dir 0}(.5[dxb,2dxb]-5u, ypart poselecdispfield - hs/2 - 50u - 4u)
     ..{dir 90}(.5[dxb,2dxb], ypart poselecdispfield - hs/2 - 50u)
+    --(.5[dxb,2dxb], ypart poselecdispfield - hs/2 + 2u);
+  drawtexarrow (.5[dxb,2dxb], ypart poselecdispfield - hs/2 + 2u)
     ..{dir 90}(.5[dxb,2dxb], ypart posmaxwellintegral + hs/2 - rs - 10u)
     ..{dir 0}(posmaxwellintegral shifted (-ws/2, hs-rs));
   drawtexarrow (posmagfieldstrength shifted (ws/2-rs,-hs/2+rs)
