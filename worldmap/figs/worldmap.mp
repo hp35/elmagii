@@ -183,7 +183,7 @@ beginfig(1);
   % generalized law.
   %
   posscalarpotential:=(0u,-2dyb);
-  drawbox(btex ${\bf E}=-\nabla\phi$ etex,
+  drawbox(btex ${\bf E}({\bf x})=-\nabla\phi({\bf x})$ etex,
       btex \font\labelfont=cmssi8
       \font\eightsy=cmsy8
       \labelfont{Existens av skal{\"a}r potential $\eightsy\phi$} etex,
@@ -381,8 +381,7 @@ beginfig(1);
                      =-{{d}\over{dt}}\iint{\bf B}\cdot d{\bf S}$
             etex,
       btex \font\labelfont=cmssi8\labelfont
-      \hskip-10pt{Faradays induktionslag + Lenz lag} etex,
-      % \hskip-10pt{Faradays induktionslag + Lenz lag (1831)} etex,
+      \hskip-6pt{Faradays induktionslag (1831)} etex,
       posfaradayinduc, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{5} etex);
 
@@ -426,7 +425,7 @@ beginfig(1);
     drawbox(btex ${\bf J}_{\rm f}\to{\bf J}_{\rm tot}={\bf J}_{\rm f}
                       +{{\partial{\bf D}}\over{\partial t}}$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {F{\"o}rskjutningsstr{\"o}m (Maxwell)} etex,
+      {F{\"o}rskjutningsstr{\"o}m (Maxwell, 1861)} etex,
       posdispcurr, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
 
@@ -720,6 +719,9 @@ beginfig(1);
               ..{dir 270}(posfaradayinduc shifted (0u,hs/2+0.7u))
               --(posfaradayinduc shifted (0u,hs/2));
   connect(posfaradayinduc, posfaradaylaw, hs, hs, 270, 270);
+  connect(posfaradaylaw, posfaradayinduc, -hs, -hs, 90, 90);
+  label.rt(btex \font\labelfont=cmssi8\labelfont {Lenz lag (1834)} etex,
+           .5[posfaradayinduc, posfaradaylaw] shifted (2u,0u));
   connect(posfaradaylaw, posneumann, hs, hs, 270, 270);
   drawtexarrow (posfaradaylaw shifted (0u,-hs/2)){dir 270}
               ..{dir 180}(posfaradaylaw shifted (0u,-hs/2) shifted (-2u,-2u))
