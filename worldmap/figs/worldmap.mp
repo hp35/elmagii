@@ -5,7 +5,7 @@
 % finally producing the electromagnetic wave equation.
 %
 % Created:     January 3, 2026
-% Last change: March 3, 2026
+% Last change: March 12, 2026
 %
 % Copyright (C) 2026 under GPL 3.0, Fredrik Jonsson
 %
@@ -152,7 +152,7 @@ beginfig(1);
           {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Coulombs kraftlag} etex,
+      {Coulombs kraftlag (1785)} etex,
       poscoulombforce, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{1} etex);
   pickup pencircle scaled .7pt;
@@ -276,7 +276,7 @@ beginfig(1);
             \over{|{\bf x}-{\bf x}'|^3}}\,dl'
       $ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Biot--Savarts lag} etex,
+      {Biot--Savarts lag (1820)} etex,
       posbiotsavarti, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
@@ -322,7 +322,7 @@ beginfig(1);
   posampere:=(dxb,-4dyb);
     drawbox(btex $\nabla\times{\bf B}({\bf x})=\mu_0{\bf J}_{\rm f}$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Amp\`eres lag} etex,
+      {Amp\`eres lag (1826)} etex,
       posampere, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
@@ -357,7 +357,7 @@ beginfig(1);
   poslorentzforce:=(2*dxb,0u);
     drawbox(btex ${\bf F}=q({\bf E}+{\bf v}\times{\bf B})$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Lorentz kraftlag} etex,
+      {Lorentz kraftlag (1895)} etex,
       poslorentzforce, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{4} etex);
 
@@ -382,6 +382,7 @@ beginfig(1);
             etex,
       btex \font\labelfont=cmssi8\labelfont
       \hskip-10pt{Faradays induktionslag + Lenz lag} etex,
+      % \hskip-10pt{Faradays induktionslag + Lenz lag (1831)} etex,
       posfaradayinduc, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{5} etex);
 
