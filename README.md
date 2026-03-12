@@ -341,13 +341,13 @@ och vektorpotentialen, och exemplifieras slutligen för en tunn dipolantenn.
 [<i>Lecture 8 - The multipole expansion</i>](lect-08):
 The scalar potential and static electric field from a linear electric
 quadrupole, being the simplest construction with a quadrupole moment as
-the first appearing term.
+the first appearing term.<br/>
 ![The scalar potential and static electric field from a linear electric
 quadrupole, being the simplest construction with a quadrupole moment as
 the first appearing term.](lect-08/multipoles/multipoles/linquadrupole-str.png)
 
 [<i>Lecture 8 - The multipole expansion</i>](lect-08): The scalar potential
-and static electric field from a quadratic electric quadrupole.
+and static electric field from a quadratic electric quadrupole.<br/>
 ![The scalar potential and static electric field from a quadratic electric
 quadrupole.](lect-08/multipoles/multipoles/quadquadrupole-str.png)
 
