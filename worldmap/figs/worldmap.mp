@@ -262,7 +262,7 @@ beginfig(1);
       }
       etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Spegelladdningar} etex,
+      \hskip-8pt{Entydighet och spegelladdningar} etex,
       posmirrorcharges, ws, hs+12u, rs,
       btex \font\labelfont=cmssi8\labelfont{3} etex);
 
