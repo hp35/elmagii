@@ -254,7 +254,7 @@ beginfig(1);
 	\vskip-2pt
         \hbox{- ``Licensen till din fantasi''}
 	\vskip-2pt
-        \hbox{- Faradays bur}
+        \hbox{- Ekvipotentialytor och Faradays bur}
 	\vskip-2pt
         \hbox{- Spegling av laddning i plana ytor}
 	\vskip-2pt
