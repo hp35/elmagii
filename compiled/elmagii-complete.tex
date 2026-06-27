@@ -1206,8 +1206,8 @@ $$
     =-\nabla'{{1}\over{|{\bf x}-{\bf x}'|}}
     =-{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
 $$
-\eqtitle{``Tricket II'' (f{\"o}r att visa att $\nabla\cdot B=0$)\sidx{Tricket
-$\displaystyle\nabla{{1}\over{\char124}{\bf x}-{\bf x}'{\char124}}
+\eqtitle{``Tricket II'' -- anv{\"a}nds f{\"o}r att visa att $\nabla\cdot{\bf B}=0$
+\sidx{Tricket $\displaystyle\nabla{{1}\over{\char124}{\bf x}-{\bf x}'{\char124}}
 =-{{({\bf x}-{\bf x}')}\over{{\char124}{\bf x}-{\bf x}'{\char124}^3}}$}}
 $$
 \nabla\times{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}=0
@@ -2666,6 +2666,202 @@ magnetostatics, and electrodynamics.
 }
 \vfill\eject\copyrights
 
+\section{Begreppen elektrostatik, elektro-kvasistatik och elektrodynamik}
+Inom elektromagnetism {\"a}r kan vi i huvudsak dela upp elektriska och
+elektromagnetiska processer i tre olika regimer:
+\medskip
+\item{1.}{elektrostatik,}
+\item{2.}{elektro-kvasistatik, samt}
+\item{3.}{elektrodynamik.}
+\medskip
+\noindent
+Dessa omr{\aa}den beskriver i grunden samma fysik, men {\"a}r giltiga under
+{\it olika antaganden om hur snabbt systemen varierar i tiden och hur stora
+de geometriska dimensionerna {\"a}r i f{\"o}rh{\aa}llande till den
+elektromagnetiska v{\aa}gl{\"a}ngden}.
+En central storhet blir d{\"a}rf{\"o}r relationen mellan systemets
+karakteristiska storlek (s{\"a}g, $L$), den elektromagnetiska
+v{\aa}gl{\"a}ngden ($\lambda$) och ljushastigheten ($c_0$ i vakuum).
+
+F{\"o}r elektromagnetiska v{\aa}gor i vacuum {\"a}r sambandet mellan
+v{\aa}gl{\"a}ngd och frekvens\numberedfootnote{Vi kommer i kursen att
+  h{\"a}rleda fram hur ljushastigheten $c_0$ i ett medium som inte {\"a}r
+  vacuum generellt skalar med elektrisk permittivitet och magnetisk
+  permeabilitet; mer om detta och konceptet {\it brytningsindex} senare.}
+$$
+  \lambda = {{c_0}/{f}}
+$$
+d{\"a}r $f$ {\"a}r frekvensen f{\"o}r den process vi betraktar, samt d{\"a}r
+$$
+  c_0=299\,792\,458\ {\rm m}/{\rm s}\approx 3\times 10^8\ {\rm m}/{\rm s}
+$$
+{\"a}r ljushastigheten i vacuum.
+Detta samband {\"a}r avg{\"o}rande f{\"o}r att avg{\"o}ra vilken approximation
+som kan anv{\"a}ndas.
+
+{\it Elektrostatik} behandlar elektriska f{\"a}lt som {\"a}r {\it statiska}
+och d{\"a}rmed {\it inte varierar med tiden}. Samtliga elektriska laddningar
+betraktas som helt stillast{\aa}ende och inga elektromagnetiska v{\aa}gor
+genereras {\"o}verhuvudtaget.
+Matematiskt inneb{\"a}r detta att alla tidsderivator av de elektriska
+f{\"a}lten {\"a}r identiskt noll. Det elektriska f{\"a}ltet best{\"a}ms d{\aa}
+direkt av laddningsf{\"o}rdelningen genom Coulombs lag och Poissons ekvation,
+vilka vi kommer att studera grundligt i F{\"o}rel{\"a}sning~2 och~3.
+
+Inom elektrostatik antas f{\"o}r{\"a}ndringar ske s{\aa} l{\aa}ngsamt att
+information i praktiken hinner spridas momentant genom systemet vi studerar.
+Detta inneb{\"a}r {\it inte} att ljushastigheten i sig {\"a}r o{\"a}ndlig, utan
+bara att f{\"o}rdr{\"o}jningen genom systemet {\"a}r f{\"o}rsumbar
+j{\"a}mf{\"o}rt med de tidsvariationer som annars f{\"o}rekommer.
+Formellt kan man uttrycka det villkoret f{\"o}r elektrostatisk regim som
+$$
+  L \ll \lambda.
+$$
+I elektrostatisk regim {\"a}r allts{\aa} systemets dimensioner v{\"a}esentligt
+mycket mindre {\"a}n den elektromagnetiska v{\aa}gl{\"a}ngden, som om
+frekvensen $f\approx0$ sj{\"a}lvfallet blir o{\"a}ndlig.
+Om exempelvis en sp{\"a}nning varierar med frekvensen $50\ {\rm Hz}$, som i ett
+vanligt kraftn{\"a}t, s{\aa} blir den elektromagnetiska v{\aa}gl{\"a}ngden som
+skapas i systemet
+$$
+  \lambda = {{3 \times 10^8\ {\rm m}/{\rm s}}\over{50\ {\rm Hz}}}
+    \approx 6\,000\ {\rm km},
+$$
+eller lite knappt avst{\aa}ndet mellan Uppsala och New York!
+En elektrisk apparat som endast {\"a}r n{\aa}gra centimeter eller f{\"o}r den
+delen ett par meter stor {\"a}r d{\aa} extremt liten j{\"a}mf{\"o}rt med
+v{\aa}gl{\"a}ngden, vilket inneb{\"a}r att elektrostatisk eller kvasistatisk
+approximation ofta fungerar mycket v{\"a}l.
+Typiska exempel p{\aa} elektrostatiska problem {\"a}r laddade kondensatorer,
+elektriska f{\"a}lt kring isolatorer samt ber{\"a}kningar av kapacitans.
+{\"A}ven m{\aa}nga h{\"o}gsp{\"a}nningsproblem behandlas elektrostatisk s{\aa}
+l{\"a}nge variationerna {\"a}r l{\aa}ngsamma.
+
+{\it Elektro-kvasistatik} {\"a}r n{\"a}sta niv{\aa}, d{\"a}r de elektriska
+f{\"a}lten i systemet f{\"o}rvisso varierar i tiden, men fortfarande s{\aa}
+l{\aa}ngsamt att v{\aa}gutbredning och str{\aa}lning kan f{\"o}rsummas inom
+systemets dimensioner.
+Det finns d{\aa} tidsberoende str{\"o}mmar och sp{\"a}nningar, men de
+elektromagnetiska f{\"a}lten hinner fortfarande ``anpassa sig'' n{\"a}stan
+omedelbart {\"o}ver hela systemet, och vi kan fortfarande med god approximation
+f{\"o}rsumma eventuella tidsf{\"o}rdr{\"o}jningar.
+
+Villkoret f{\"o}r en elektro-kvasistatisk regim {\"a}r allts{\aa} fortfarande
+``ungef{\"a}r'' att
+$$
+  L \ll \lambda,
+$$
+men nu till{\aa}ts allts{\aa} tidsvariationer. Skillnaden mot ren elektrostatik
+{\"a}r att f{\"o}rskjutningsstr{\"o}mmar och tidsberoende
+laddningsf{\"o}rdelningar kan f{\"o}rekomma.
+D{\"a}remot {\"a}r fasf{\"o}rskjutningar {\"o}ver systemets dimensioner sm{\aa}
+och man beh{\"o}ver normalt inte beskriva fenomenet som en utbredd v{\aa}g.
+
+Elektro-kvasistatik anv{\"a}nds exempelvis i vanlig kretsanalys, samt {\"a}ven
+analys av klassiska generatorer, elmotorer med mera.
+N{\"a}r man exempelvis analyserar klassiska kretsar med resistorer,
+kondensatorer och induktanser med Kirchhoffs lagar, s{\aa} antar man implicit
+och i praktiken att signalerna sprids momentant genom kretsen, vilket {\"a}r
+en mycket god approximation s{\aa} l{\"a}nge kretsens dimensioner {\"a}r
+sm{\aa} j{\"a}mf{\"o}rt med v{\aa}gl{\"a}ngden.
+
+En viktig tumregel inom elektronik {\"a}r att kretsmodeller med diskreta
+``portade'' komponenter\numberedfootnote{Engelska: {\it Lumped circuits}
+  eller {\it lumped-element model}, fr{\aa}n ``lumped'' som ungef{\"a}r
+  betyder ``klumpa ihop'' p{\aa} svenska.}
+fungerar bra om ledningsl{\"a}ngderna {\"a}r mindre {\"a}n ungef{\"a}r en
+tiondel av v{\aa}gl{\"a}ngden, det vill s{\"a}ga att
+$$
+  L \lesssim {{\lambda}/{10}}.
+$$
+Om denna regel inte l{\"a}ngre uppfylls b{\"o}rjar effekter fr{\aa}n
+transmissionsledningar bli viktiga. Exempelvis har en signal med
+frekvensen\numberedfootnote{En bra tumregel att ha i bakhuvudet {\"a}r
+  att en f{\"o}rflyttning med ljushastigheten $c_0$ under en nanosekund
+  motsvarar cirka 30 centimeter, eller en fot -- ``ljusfoten''.}
+en ljushastighet $1\ {\rm GHz}$ v{\aa}gl{\"a}ngden ungef{\"a}r $30\ {\rm cm}$.
+Redan n{\aa}gra centimeters ledningsl{\"a}ngd kan d{\aa} ge m{\"a}rkbara
+fasf{\"o}rskjutningar och reflektioner.
+
+{\it Elektrodynamik} {\"a}r den regim d{\"a}r systemets dimensioner $L$ blir
+j{\"a}mf{\"o}rbara med den elektromagnetiska v{\aa}gl{\"a}ngden $\lambda$ i
+problemet, och vi {\"o}verg{\aa}r d{\aa} fr{\aa}n den elektro-kvasistatiska
+modellen till fullt utvecklad elektrodynamik.
+H{\"a}r m{\aa}ste f{\"a}lten ber{\"a}knas utifr{\aa}n Maxwells ekvationer och
+behandlas utan kvasistatiska approximationer, och f{\"a}lten upptr{\"a}der som
+utbredda elektromagnetiska v{\aa}gor som propagerar med {\"a}ndlig hastighet,
+reflekteras, interfererar och str{\aa}lar energi.
+
+I elektrodynamiken {\"a}r sambandet mellan elektriska och magnetiska f{\"a}lt
+helt centralt, och det {\"a}r d{\"a}rf{\"o}r som vi ibland s{\"a}tter ett
+likhetstecken mellan ``elektrodynamik'' och ``elektromagnetism'', helt enkelt
+d{\"a}rf{\"o}r att de elektriska och magnetiska f{\"a}lten kopplar direkt till
+varandra genom Faradays och Amp\`eres lagar.
+Ett tidsvarierande elektriskt f{\"a}lt genererar ett magnetiskt f{\"a}lt och
+vice versa, vilket leder till sj{\"a}lvuppr{\"a}tth{\aa}llande elektromagnetiska
+v{\aa}gor.\numberedfootnote{Detta {\"a}r s{\aa} centralt att den f{\"o}rsta
+  fr{\aa}gan p{\aa} tentamen kommer att vara h{\"a}rledningen av den
+  elektromagnetiska v{\aa}gekvationen f{\"o}r det elektriska och magnetiska
+  f{\"a}ltet fr{\aa}n Maxwells ekvationer; denna tentamensfr{\aa}ga med
+  tillh{\"o}rande l{\"o}sningsf{\"o}rslag delas ut under f{\"o}rsta
+  f{\"o}rel{\"a}sningen, med hopp om att {\"a}ven en mekanisk inl{\"a}rning
+  av denna h{\"a}rledning kommer att assistera teknologen till att n{\aa}
+  en djupare f{\"o}rst{\aa}else.}
+Radiov{\aa}gor, mikrov{\aa}gor, ljus och r{\"o}ntgenstr{\aa}lning {\"a}r alla
+exempel p{\aa} s{\aa}dana l{\"o}sningar till Maxwells ekvationer.
+
+Ett klassiskt exempel {\"a}r en antenn. Om antennens storlek {\"a}r av samma
+storleksordning som v{\aa}gl{\"a}ngden kan den effektivt str{\aa}la
+elektromagnetisk energi.
+En halvv{\aa}gsdipol f{\"o}r frekvensen $100\ {\rm MHz}$ f{\aa}r exempelvis
+den fysiska l{\"a}ngden
+$$
+  L \approx {{\lambda}\over{2}} = {{c_0}\over{2f}}\approx 1.5\ {\rm m}.
+$$
+H{\"a}r bildar v{\aa}gutbredningseffekterna och den elektromagnetiska
+v{\aa}gl{\"a}ngden sj{\"a}lva grunden f{\"o}r funktionen hos systemet, som i
+och med detta f{\aa}r en fysisk dimension $L\approx\lambda$ som {\"a}r i samma
+storleksordning som v{\aa}gl{\"a}ngden i sig, och n{\aa}gon elektrostatisk
+approximation {\"a}r om{\"o}jlig.
+
+Skillnaden mellan de tre regimerna elektrostatik, elektro-kvasistatik, samt
+elektrodynamik kan d{\"a}rf{\"o}r sammanfattas genom relationen mellan
+tidsvariation (frekvens $f$), systemstorlek (karakteristisk l{\"a}ngd $L$) och
+ljushastighet ($c_0$).
+I {\it elektrostatiken} {\"a}r tidsvariationerna f{\"o}rsumbara, medan vi i
+{\it elektro-kvasistatiken} har tidsvariationer, men att ljusets {\"a}ndliga
+hastighet d{\"a}r fortfarande ger obetydliga f{\"o}rdr{\"o}jningar inom systemet.
+I {\it elektrodynamiken} blir d{\"a}remot den {\"a}ndliga propagations-%
+hastigheten avg{\"o}rande och elektromagnetiska v{\aa}gor m{\aa}ste beskrivas
+explicit.
+
+Man kan ocks{\aa} formulera detta med hj{\"a}lp av den karakteristiska
+propagations­tiden
+$$
+  \tau = {{L}/{c_0}},
+$$
+som anger hur l{\aa}ng tid det tar f{\"o}r elektromagnetisk information att
+f{\"a}rdas genom systemet. Om denna tid {\"a}r mycket mindre {\"a}n tidsskalan
+$1/f$ f{\"o}r variationen hos f{\"a}lten, s{\aa} kan kvasistatiska
+approximationer anv{\"a}ndas. Om tiderna blir j{\"a}mf{\"o}rbara kr{\"a}vs
+full v{\aa}gteori.
+
+Dessa approximationer {\"a}r mycket viktiga inom fysik och m{\"o}jligheten att
+med en viss modell kunna ber{\"a}kna en effekt eller dimensionering.
+Elektrostatik anv{\"a}nds exempelvis inom h{\"o}gsp{\"a}nning och statisk
+elektronik, medan elektro-kvasistatik anv{\"a}nds inom n{\"a}stan all l{\aa}g- och
+medelfrekvent elektronik.
+Elektrodynamik som modell dominerar inom radar, mikrov{\aa}gsteknik, optik,
+antennteori och modern telekommunikation, men {\"a}r on{\"o}digt komplicerad att
+applicera som modell f{\"o}r statiska eller kvasistatiska problem.
+Indelningen mellan omr{\aa}dena {\"a}r allts{\aa} inte absolut utan beror
+p{\aa} skalor och approximationer. F{\"o}r att sammanfatta:
+\quote{{\it Maxwells ekvationer {\"a}r modellen bakom all elektromagnetism,
+  men beroende p{\aa} f{\"o}rh{\aa}llandet mellan den elektromagnetiska
+  v{\aa}gl{\"a}ngd $\lambda$, systemets storlek $L$ och ljushastigheten
+  $c_0$ kan fysiken beskrivas av mycket olika modeller.}}
+\vfill\eject
+
 \section{Introduktion till elektrostatik}
 Vi kommer i denna f{\"o}rsta f{\"o}rel{\"a}sning\numberedfootnote{Detta
   avsnitt har sannolikt ett visst {\"o}verlapp med tidigare kurser;
@@ -2918,7 +3114,7 @@ f{\"o}ljande.
 \item{$\bullet$}{Virtuella fotoner existerar och kan p{\aa}visas inom ramverket
   f{\"o}r kvantf{\"a}ltteori ({\it quantum field theory}). De {\"a}r dock inte
   v{\"a}ldefinierade utanf{\"o}r f{\"a}ltet f{\"o}r v{\"a}xelverkan mellan
-  partiklar, och de kan (i likhet med vanliga fotoner) ``l{\aa}na'' eneri och
+  partiklar, och de kan (i likhet med vanliga fotoner) ``l{\aa}na'' energi och
   moment under korta tidsrymder, helt enligt Heisenbergs os{\"a}kerhetsteori
   i kvantmekaniken.}
 \medskip
@@ -11605,7 +11801,16 @@ p{\aa}.\numberedfootnote{Griffiths v{\"a}ljer tyv{\"a}rr att inte g{\aa}
   igenom d'Alemberts f{\"o}rh{\aa}llandevis enkla f{\"o}rklaring till att
   v{\aa}gekvationen st{\"o}djer godtycklig v{\aa}gform s{\aa} l{\"a}nge som
   vi har argument av formen $z\pm ct$, utan v{\"a}ljer att bara visa att
-  dessa l{\"o}sningar uppfyller v{\aa}gekvationen. Se Griffiths sid.~382--385.}
+  dessa l{\"o}sningar uppfyller v{\aa}gekvationen. Detta {\"a}r lite synd,
+  eftersom man d{\"a}rmed missar en synnerligen illustrativ och nyttig koppling
+  mellan flervariabelanalys och en grundl{\"a}ggande fysikalisk princip.
+  Vi v{\"a}ljer d{\"a}rf{\"o}r att h{\"a}r passa p{\aa} att formellt g{\aa}
+  igenom hur man kommer fram till formen
+  $$
+    E = f(z-ct) + g(z+ct)
+  $$
+  f{\"o}r endimensionell v{\aa}gutbredning i linj{\"a}ra media.
+  Se Griffiths sid.~382--385.}
 F{\"o}rst av allt, byt variabler till\numberedfootnote{Detta
    tillv{\"a}gag{\aa}ngss{\"a}tt f{\"o}ljer i stort sett den h{\"a}rledning av
    den generella l{\"o}sningen till v{\aa}g\-ekva\-tionen som gjordes 1747 av
