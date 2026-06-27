@@ -27,6 +27,23 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 
+\def\coursename{Elektromagnetism II}
+\def\coursecode{1TE626}
+\def\courseyear{2026}
+\def\courserepo{https://github.com/hp35/elmagii/}
+%-------------------- BEGIN OF LOCAL MACROS --------------------
+\font\ninerm=cmr9
+\font\tenssbx=cmssbx10
+\font\twelvesc=cmcsc10 at 12 truept
+\def\initgallery{
+  \noindent~\vskip-30pt\hskip-44pt%
+    {\epsfxsize=90pt\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+  \vskip-64pt\hfill\vbox{
+      \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
+      \hbox{{\it Document Revision \today}}
+      \hbox{{\it \courserepo}}}\vskip 36pt\noindent}
+%--------------------- END OF LOCAL MACROS ---------------------
+
 %
 % Define language constants. We are here only concerned with Swedish or English.
 %
@@ -53,6 +70,7 @@
   \noindent{\font\twelvecmbx=cmbx12\twelvecmbx{#1}}%
   \smallskip\noindent}%
 
+\initgallery
 \input src/portrait.tex
 \input src/gallery-src.tex
 
