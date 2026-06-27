@@ -2546,12 +2546,12 @@ magnetostatics, and electrodynamics.
 %
 % File: teach/elmagii/lect-01/lecture-01.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-01/
-% Last change: November 2, 2025
+% Last change: June 27, 2026
 %
 % Lecture No 1 in the course ``Elektromagnetism II, 1TE626 (2025)'',
 % held November 3, 2025, at Uppsala University, Sweden.
 %
-% Copyright (C) 2022-2025, Fredrik Jonsson, under Gnu General Public
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
 %
 % This program is free software: you can redistribute it and/or modify
@@ -2668,7 +2668,7 @@ magnetostatics, and electrodynamics.
 
 \section{Begreppen elektrostatik, elektro-kvasistatik och elektrodynamik}
 Inom elektromagnetism {\"a}r kan vi i huvudsak dela upp elektriska och
-elektromagnetiska processer i tre olika regimer:
+{\red{elektromagnetiska processer i tre olika regimer}}:
 \medskip
 \item{1.}{elektrostatik,}
 \item{2.}{elektro-kvasistatik, samt}
@@ -2682,50 +2682,52 @@ elektromagnetiska v{\aa}gl{\"a}ngden}.
 En central storhet blir d{\"a}rf{\"o}r relationen mellan systemets
 karakteristiska storlek (s{\"a}g, $L$), den elektromagnetiska
 v{\aa}gl{\"a}ngden ($\lambda$) och ljushastigheten ($c_0$ i vakuum).
+\sidx{Elektromagnetisk v{\aa}gl{\"a}ngd}
 
-F{\"o}r elektromagnetiska v{\aa}gor i vacuum {\"a}r sambandet mellan
-v{\aa}gl{\"a}ngd och frekvens\numberedfootnote{Vi kommer i kursen att
+F{\"o}r elektromagnetiska v{\aa}gor i vakuum {\"a}r {\red{sambandet mellan
+v{\aa}gl{\"a}ngd och frekvens}}\numberedfootnote{Vi kommer i kursen att
   h{\"a}rleda fram hur ljushastigheten $c_0$ i ett medium som inte {\"a}r
-  vacuum generellt skalar med elektrisk permittivitet och magnetisk
+  vakuum generellt skalar med elektrisk permittivitet och magnetisk
   permeabilitet; mer om detta och konceptet {\it brytningsindex} senare.}
 $$
-  \lambda = {{c_0}/{f}}
+  \red{\lambda = {{c_0}/{f}}}
 $$
 d{\"a}r $f$ {\"a}r frekvensen f{\"o}r den process vi betraktar, samt d{\"a}r
 $$
-  c_0=299\,792\,458\ {\rm m}/{\rm s}\approx 3\times 10^8\ {\rm m}/{\rm s}
+  \red{c_0=299\,792\,458\ {\rm m}/{\rm s}\approx 3\times 10^8\ {\rm m}/{\rm s}}
 $$
-{\"a}r ljushastigheten i vacuum.
+{\"a}r ljushastigheten \sidx{Ljushastighet} i vakuum.
 Detta samband {\"a}r avg{\"o}rande f{\"o}r att avg{\"o}ra vilken approximation
 som kan anv{\"a}ndas.
 
-{\it Elektrostatik} behandlar elektriska f{\"a}lt som {\"a}r {\it statiska}
-och d{\"a}rmed {\it inte varierar med tiden}. Samtliga elektriska laddningar
-betraktas som helt stillast{\aa}ende och inga elektromagnetiska v{\aa}gor
-genereras {\"o}verhuvudtaget.
+{\it{\red{Elektrostatik}}} behandlar elektriska f{\"a}lt som {\"a}r
+{\it statiska} och d{\"a}rmed {\it inte varierar med tiden}.
+Samtliga elektriska laddningar betraktas som helt stillast{\aa}ende och inga
+elektromagnetiska v{\aa}gor genereras {\"o}verhuvudtaget.
 Matematiskt inneb{\"a}r detta att alla tidsderivator av de elektriska
 f{\"a}lten {\"a}r identiskt noll. Det elektriska f{\"a}ltet best{\"a}ms d{\aa}
 direkt av laddningsf{\"o}rdelningen genom Coulombs lag och Poissons ekvation,
 vilka vi kommer att studera grundligt i F{\"o}rel{\"a}sning~2 och~3.
+\sidx{Elektrostatik}
 
 Inom elektrostatik antas f{\"o}r{\"a}ndringar ske s{\aa} l{\aa}ngsamt att
 information i praktiken hinner spridas momentant genom systemet vi studerar.
 Detta inneb{\"a}r {\it inte} att ljushastigheten i sig {\"a}r o{\"a}ndlig, utan
 bara att f{\"o}rdr{\"o}jningen genom systemet {\"a}r f{\"o}rsumbar
 j{\"a}mf{\"o}rt med de tidsvariationer som annars f{\"o}rekommer.
-Formellt kan man uttrycka det villkoret f{\"o}r elektrostatisk regim som
+Formellt kan man uttrycka det villkoret f{\"o}r {\red{elektrostatisk regim}} som
 $$
-  L \ll \lambda.
+  \red{L \ll \lambda}.
 $$
 I elektrostatisk regim {\"a}r allts{\aa} systemets dimensioner v{\"a}esentligt
 mycket mindre {\"a}n den elektromagnetiska v{\aa}gl{\"a}ngden, som om
 frekvensen $f\approx0$ sj{\"a}lvfallet blir o{\"a}ndlig.
-Om exempelvis en sp{\"a}nning varierar med frekvensen $50\ {\rm Hz}$, som i ett
-vanligt kraftn{\"a}t, s{\aa} blir den elektromagnetiska v{\aa}gl{\"a}ngden som
-skapas i systemet
+Om exempelvis en sp{\"a}nning varierar med {\red{frekvensen $50\ {\rm Hz}$,
+som i v{\aa}rt vanliga eln{\"a}t}}, s{\aa} blir den elektromagnetiska
+v{\aa}gl{\"a}ngden som skapas i systemet
 $$
-  \lambda = {{3 \times 10^8\ {\rm m}/{\rm s}}\over{50\ {\rm Hz}}}
-    \approx 6\,000\ {\rm km},
+  \red{\lambda = {{3 \times 10^8\ {\rm m}/{\rm s}}\over{50\ {\rm Hz}}}
+    \approx 6\,000\ {\rm km}},
 $$
 eller lite knappt avst{\aa}ndet mellan Uppsala och New York!
 En elektrisk apparat som endast {\"a}r n{\aa}gra centimeter eller f{\"o}r den
@@ -2737,19 +2739,20 @@ elektriska f{\"a}lt kring isolatorer samt ber{\"a}kningar av kapacitans.
 {\"A}ven m{\aa}nga h{\"o}gsp{\"a}nningsproblem behandlas elektrostatisk s{\aa}
 l{\"a}nge variationerna {\"a}r l{\aa}ngsamma.
 
-{\it Elektro-kvasistatik} {\"a}r n{\"a}sta niv{\aa}, d{\"a}r de elektriska
-f{\"a}lten i systemet f{\"o}rvisso varierar i tiden, men fortfarande s{\aa}
-l{\aa}ngsamt att v{\aa}gutbredning och str{\aa}lning kan f{\"o}rsummas inom
-systemets dimensioner.
+{\it{\red{Elektro-kvasistatik}}} {\"a}r n{\"a}sta niv{\aa}, d{\"a}r de
+elektriska f{\"a}lten i systemet f{\"o}rvisso varierar i tiden, men fortfarande
+s{\aa} pass l{\aa}ngsamt att v{\aa}gutbredning och str{\aa}lning helt kan
+f{\"o}rsummas inom systemets dimensioner.
 Det finns d{\aa} tidsberoende str{\"o}mmar och sp{\"a}nningar, men de
 elektromagnetiska f{\"a}lten hinner fortfarande ``anpassa sig'' n{\"a}stan
 omedelbart {\"o}ver hela systemet, och vi kan fortfarande med god approximation
 f{\"o}rsumma eventuella tidsf{\"o}rdr{\"o}jningar.
+\sidx{Elektro-kvasistatik}
 
-Villkoret f{\"o}r en elektro-kvasistatisk regim {\"a}r allts{\aa} fortfarande
-``ungef{\"a}r'' att
+Villkoret f{\"o}r en {\red{elektro-kvasistatisk regim}} {\"a}r allts{\aa}
+fortfarande ``ungef{\"a}r'' att
 $$
-  L \ll \lambda,
+  \red{L \ll \lambda},
 $$
 men nu till{\aa}ts allts{\aa} tidsvariationer. Skillnaden mot ren elektrostatik
 {\"a}r att f{\"o}rskjutningsstr{\"o}mmar och tidsberoende
@@ -2765,38 +2768,45 @@ och i praktiken att signalerna sprids momentant genom kretsen, vilket {\"a}r
 en mycket god approximation s{\aa} l{\"a}nge kretsens dimensioner {\"a}r
 sm{\aa} j{\"a}mf{\"o}rt med v{\aa}gl{\"a}ngden.
 
-En viktig tumregel inom elektronik {\"a}r att kretsmodeller med diskreta
+En viktig {\red{tumregel inom elektronik}} {\"a}r att kretsmodeller med diskreta
 ``portade'' komponenter\numberedfootnote{Engelska: {\it Lumped circuits}
   eller {\it lumped-element model}, fr{\aa}n ``lumped'' som ungef{\"a}r
   betyder ``klumpa ihop'' p{\aa} svenska.}
 fungerar bra om ledningsl{\"a}ngderna {\"a}r mindre {\"a}n ungef{\"a}r en
 tiondel av v{\aa}gl{\"a}ngden, det vill s{\"a}ga att
 $$
-  L \lesssim {{\lambda}/{10}}.
+  \red{L \lesssim {{\lambda}/{10}}}.
 $$
 Om denna regel inte l{\"a}ngre uppfylls b{\"o}rjar effekter fr{\aa}n
 transmissionsledningar bli viktiga. Exempelvis har en signal med
-frekvensen\numberedfootnote{En bra tumregel att ha i bakhuvudet {\"a}r
-  att en f{\"o}rflyttning med ljushastigheten $c_0$ under en nanosekund
-  motsvarar cirka 30 centimeter, eller en fot -- ``ljusfoten''.}
+frekvensen\numberedfootnote{En anv{\"a}ndbar tumregel att ha i bakhuvudet
+  {\"a}r att {\it en f{\"o}rflyttning med ljushastigheten $c_0$ under en
+  nanosekund, eller periodtiden f{\"o}r en v{\aa}g med frekvensen 1~GHz,
+  motsvarar ungef{\"a}r en fot -- ``ljusfoten'' -- eller cirka 30 centimeter}.}
 en ljushastighet $1\ {\rm GHz}$ v{\aa}gl{\"a}ngden ungef{\"a}r $30\ {\rm cm}$.
 Redan n{\aa}gra centimeters ledningsl{\"a}ngd kan d{\aa} ge m{\"a}rkbara
 fasf{\"o}rskjutningar och reflektioner.
 
-{\it Elektrodynamik} {\"a}r den regim d{\"a}r systemets dimensioner $L$ blir
-j{\"a}mf{\"o}rbara med den elektromagnetiska v{\aa}gl{\"a}ngden $\lambda$ i
-problemet, och vi {\"o}verg{\aa}r d{\aa} fr{\aa}n den elektro-kvasistatiska
-modellen till fullt utvecklad elektrodynamik.
+{\it{\red{Elektrodynamik}}} {\"a}r den regim d{\"a}r systemets dimensioner $L$
+blir j{\"a}mf{\"o}rbara med den elektromagnetiska v{\aa}gl{\"a}ngden $\lambda$
+i problemet, frt vill s{\"a}ga att vi inom {\red{elektrodynamisk regim}} har att
+$$
+  \red{L\approx\lambda},
+$$
+och vi {\"o}verg{\aa}r d{\aa} fr{\aa}n den elektro-kvasistatiska modellen till
+fullt utvecklad elektrodynamik.
 H{\"a}r m{\aa}ste f{\"a}lten ber{\"a}knas utifr{\aa}n Maxwells ekvationer och
 behandlas utan kvasistatiska approximationer, och f{\"a}lten upptr{\"a}der som
 utbredda elektromagnetiska v{\aa}gor som propagerar med {\"a}ndlig hastighet,
 reflekteras, interfererar och str{\aa}lar energi.
+\sidx{Elektrodynamik}
 
 I elektrodynamiken {\"a}r sambandet mellan elektriska och magnetiska f{\"a}lt
 helt centralt, och det {\"a}r d{\"a}rf{\"o}r som vi ibland s{\"a}tter ett
 likhetstecken mellan ``elektrodynamik'' och ``elektromagnetism'', helt enkelt
 d{\"a}rf{\"o}r att de elektriska och magnetiska f{\"a}lten kopplar direkt till
 varandra genom Faradays och Amp\`eres lagar.
+\sidx{Elektrodynamik}[och elektromagnetism]
 Ett tidsvarierande elektriskt f{\"a}lt genererar ett magnetiskt f{\"a}lt och
 vice versa, vilket leder till sj{\"a}lvuppr{\"a}tth{\aa}llande elektromagnetiska
 v{\aa}gor.\numberedfootnote{Detta {\"a}r s{\aa} centralt att den f{\"o}rsta
@@ -2809,6 +2819,11 @@ v{\aa}gor.\numberedfootnote{Detta {\"a}r s{\aa} centralt att den f{\"o}rsta
   en djupare f{\"o}rst{\aa}else.}
 Radiov{\aa}gor, mikrov{\aa}gor, ljus och r{\"o}ntgenstr{\aa}lning {\"a}r alla
 exempel p{\aa} s{\aa}dana l{\"o}sningar till Maxwells ekvationer.
+\sidx{Radiov{\aa}gor}
+\sidx{Mikrov{\aa}gor}
+\sidx{Ljus}
+\sidx{R{\"o}ntgenstr{\aa}lning}
+\sidx{Maxwells ekvationer}
 
 Ett klassiskt exempel {\"a}r en antenn. Om antennens storlek {\"a}r av samma
 storleksordning som v{\aa}gl{\"a}ngden kan den effektivt str{\aa}la
@@ -2830,7 +2845,8 @@ tidsvariation (frekvens $f$), systemstorlek (karakteristisk l{\"a}ngd $L$) och
 ljushastighet ($c_0$).
 I {\it elektrostatiken} {\"a}r tidsvariationerna f{\"o}rsumbara, medan vi i
 {\it elektro-kvasistatiken} har tidsvariationer, men att ljusets {\"a}ndliga
-hastighet d{\"a}r fortfarande ger obetydliga f{\"o}rdr{\"o}jningar inom systemet.
+hastighet d{\"a}r fortfarande ger obetydliga f{\"o}rdr{\"o}jningar inom
+systemet.
 I {\it elektrodynamiken} blir d{\"a}remot den {\"a}ndliga propagations-%
 hastigheten avg{\"o}rande och elektromagnetiska v{\aa}gor m{\aa}ste beskrivas
 explicit.
@@ -2845,12 +2861,13 @@ f{\"a}rdas genom systemet. Om denna tid {\"a}r mycket mindre {\"a}n tidsskalan
 $1/f$ f{\"o}r variationen hos f{\"a}lten, s{\aa} kan kvasistatiska
 approximationer anv{\"a}ndas. Om tiderna blir j{\"a}mf{\"o}rbara kr{\"a}vs
 full v{\aa}gteori.
+\sidx{Elektromagnetisk information}[utbredningshastighet]
 
 Dessa approximationer {\"a}r mycket viktiga inom fysik och m{\"o}jligheten att
 med en viss modell kunna ber{\"a}kna en effekt eller dimensionering.
 Elektrostatik anv{\"a}nds exempelvis inom h{\"o}gsp{\"a}nning och statisk
-elektronik, medan elektro-kvasistatik anv{\"a}nds inom n{\"a}stan all l{\aa}g- och
-medelfrekvent elektronik.
+elektronik, medan elektro-kvasistatik anv{\"a}nds inom n{\"a}stan all l{\aa}g-
+och medelfrekvent elektronik.
 Elektrodynamik som modell dominerar inom radar, mikrov{\aa}gsteknik, optik,
 antennteori och modern telekommunikation, men {\"a}r on{\"o}digt komplicerad att
 applicera som modell f{\"o}r statiska eller kvasistatiska problem.

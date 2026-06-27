@@ -1,0 +1,205 @@
+\tocindexentry {\hskip 24pt{F{\"o}rord}}{\penalty \@M }{ix}
+\tocindexentry {\hskip 24pt{V{\"a}rldskarta {\"o}ver elektromagnetisk f{\"a}ltteori}}{\penalty \@M }{xi}
+\tocindexentry {\hskip 24pt{Formelsamling}}{\penalty \@M }{xiii}
+\tocindexentry {\hskip 24pt{Portr{\"a}ttgalleri inom klassisk elektromagnetism}}{\penalty \@M }{xxi}
+\tocchapterentry {F{\"o}rel{\"a}sning 1 -- {Elektrostatik, superpositionsprincipen och Gauss lag}}{1}{1}
+\tocsectionentry {Begreppen elektrostatik, elektro-kvasistatik och elektrodynamik}{1.1}{3}
+\tocsectionentry {Introduktion till elektrostatik}{1.2}{6}
+\tocsectionentry {Historik -- Elektrostatik fr{\aa }n de gamla grekerna till Coulomb}{1.3}{6}
+\tocsectionentry {\red {Coulombs lag f{\"o}r punktladdningar}}{1.4}{7}
+\tocsectionentry {Vad {\"a}r ursprunget f{\"o}r denna v{\"a}xelverkan? Kan vi h{\"a}rleda Coulombs lag?}{1.5}{8}
+\tocsectionentry {\red {Superpositionsprincipen}}{1.6}{10}
+\tocsectionentry {\red {Coulombintegralen - Coulombs generaliserade lag}}{1.7}{10}
+\tocsectionentry {\red {Vad {\"a}r egentligen po{\"a}ngen med att anv{\"a}nda elektriska f{\"a}lt?}}{1.8}{11}
+\tocsubsectionentry {{\red {F{\"a}ltkonceptet eliminerar ``verkan p{\aa } distans''}} (``{\it action at a distance}'')}{1.8.1}{11}
+\tocsubsectionentry {\red {Lokalitet och kausalitet}}{1.8.2}{11}
+\tocsubsectionentry {\red {F{\"o}renkling av m{\aa }ngkropps-problem}}{1.8.3}{11}
+\tocsubsectionentry {\red {F{\"a}lt kan existera oberoende av laddning}}{1.8.4}{11}
+\tocsectionentry {\red {Gauss lag h{\"a}rledd i fyra steg}}{1.9}{12}
+\tocsubsectionentry {Definition: \red {Elektriskt fl{\"o}de}}{1.9.1}{12}
+\tocsubsectionentry {\red {Steg~1: Sf{\"a}risk symmetrisk omslutande yta och punktladdning}}{1.9.2}{13}
+\tocsubsectionentry {\red {Steg~2: Godtycklig omslutande yta och punktladdning}}{1.9.3}{14}
+\tocsubsectionentry {\red {Steg~3: Godtycklig omslutande yta och system av punktladdningar}}{1.9.4}{15}
+\tocsubsectionentry {\red {Steg~4: Godtycklig omslutande yta och kontinuerlig laddningsf{\"o}rdelning}}{1.9.5}{16}
+\tocsectionentry {\red {Kontinuerliga laddningsf{\"o}rdelningar}}{1.10}{17}
+\tocsectionentry {\red {Fr{\aa }n Gauss lag till Coulombs lag}}{1.11}{17}
+\tocsectionentry {\red {Gauss lag p{\aa } differentialform}}{1.12}{18}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~1 -- Elektrostatik, superpositionsprincipen och Gauss lag}{1.13}{19}
+\tocchapterentry {F{\"o}rel{\"a}sning 2 -- {Elektrisk potential och till{\"a}mpningar av Gauss lag}}{2}{21}
+\tocsectionentry {Till{\"a}mpning av Gauss lag - Rak linjeladdning}{2.1}{23}
+\tocsubsectionentry {Alternativ analys f{\"o}r rak linjeladdning}{2.1.1}{24}
+\tocsectionentry {Till{\"a}mpning av Gauss lag - Plan ytladdning}{2.2}{24}
+\tocsectionentry {Rotationen f{\"o}r det statiska elektriska f{\"a}ltet}{2.3}{25}
+\tocsectionentry {Elektrostatisk skal{\"a}r potential}{2.4}{26}
+\tocsubsectionentry {Tolkning av $-\nabla \phi $}{2.4.1}{27}
+\tocsectionentry {Arbete och upplagrad energi vid f{\"o}rflyttning av elektriska laddningar}{2.5}{28}
+\tocsectionentry {De elektriska f{\"a}ltlinjerna {\"a}r alltid ortogonala mot en ekvipotentialyta}{2.6}{28}
+\tocsectionentry {En paradox f{\"o}r den skal{\"a}ra potentialen}{2.7}{29}
+\tocsectionentry {Poissons ekvation f{\"o}r den skal{\"a}ra potentialen}{2.8}{29}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~2 -- Elektrisk potential och till{\"a}mpningar av Gauss lag}{2.9}{30}
+\tocchapterentry {F{\"o}rel{\"a}sning 3 -- {Spegelladdningar, randvillkor och entydighet}}{3}{31}
+\tocsectionentry {Laplaces ekvation f{\"o}r den elektrostatiska (skal{\"a}ra) potentialen}{3.1}{33}
+\tocsubsectionentry {Angreppss{\"a}tt~1 f{\"o}r elektrostatiska problem -- Coulombintegralen}{3.1.1}{33}
+\tocsubsectionentry {Angreppss{\"a}tt~2 f{\"o}r elektrostatiska problem -- Skal{\"a}r potential p{\aa } integralform}{3.1.2}{33}
+\tocsubsectionentry {Angreppss{\"a}tt~3 f{\"o}r elektrostatiska problem -- Laplaces ekvation f{\"o}r skal{\"a}r potential}{3.1.3}{33}
+\tocsectionentry {Entydighet hos l{\"o}sningar till Laplace ekvation}{3.2}{34}
+\tocsubsectionentry {Laplaces ekvation till{\aa }ter bara extrempunkter p{\aa } randen till en dom{\"a}n}{3.2.1}{34}
+\tocsubsectionentry {F{\"o}rsta entydighetsteoremet f{\"o}r den elektrostatiska potentialen}{3.2.2}{36}
+\tocsubsectionentry {Elektriska ledare och andra entydighetsteoremet f{\"o}r den elektrostatiska potentialen}{3.2.3}{37}
+\tocsectionentry {Faradays bur}{3.3}{38}
+\tocsectionentry {Det elektriska f{\"a}ltet {\"a}r identiskt noll i en perfekt ledare, s{\aa } hur kan vi d{\aa } skapa str{\"o}mmar?}{3.4}{39}
+\tocsectionentry {Sammanfattning av vitsen med entydighetsteoremet}{3.5}{39}
+\tocsectionentry {Spegelladdningar i perfekt ledande plan}{3.6}{40}
+\tocsubsectionentry {Problemformulering f{\"o}r elektrostatik ovanf{\"o}r perfekt ledande plan}{3.6.1}{41}
+\tocsubsectionentry {Att l{\"a}gga till virtuell laddning s{\aa } att vi n{\aa }r randvillkoret $\phi =0$ p{\aa } $z=0$}{3.6.2}{41}
+\tocsubsectionentry {Skal{\"a}r potential med det ledande planet ersatt med virtuell spegelladdning}{3.6.3}{42}
+\tocsubsectionentry {Sammanfattning av virtuell spegelladdning i perfekt ledande plan}{3.6.4}{42}
+\tocsubsectionentry {Det resulterande elektriska f{\"a}ltet med den speglade laddningen}{3.6.5}{42}
+\tocsubsectionentry {Laddningsf{\"o}rdelningen i det perfekt ledande planet $z=0$}{3.6.6}{44}
+\tocsectionentry {Spegelladdningar i plana gr{\"a}nsytor mellan dielektrika}{3.7}{45}
+\tocsectionentry {Spegelladdningar i cylindriska perfekt ledande gr{\"a}nsytor}{3.8}{46}
+\tocsubsectionentry {Potential fr{\aa }n en linjeladdning}{3.8.1}{46}
+\tocsubsectionentry {Att l{\"a}gga till virtuell laddning s{\aa } att vi n{\aa }r randvillkoret $\phi =0$ p{\aa } cylinderytan}{3.8.2}{47}
+\tocsubsectionentry {Sammanfattning av virtuell speglad linjeladdning i cylindrisk yta}{3.8.3}{50}
+\tocsectionentry {Spegelladdningar i sf{\"a}riska perfekt ledande gr{\"a}nsytor}{3.9}{51}
+\tocsectionentry {Kan jord ers{\"a}ttas med godtycklig konstant potential?}{3.10}{51}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~3 -- Spegelladdningar, randvillkor och entydighet}{3.11}{52}
+\tocchapterentry {F{\"o}rel{\"a}sning 4 -- {Magnetostatik}}{4}{53}
+\tocsectionentry {Introduktion}{4.1}{55}
+\tocsectionentry {Historik}{4.2}{55}
+\tocsectionentry {Vad {\"a}r ett magnetf{\"a}lt?}{4.3}{56}
+\tocsectionentry {Lorentz-kraften - R{\"o}rliga laddningar i statiska elektriska och magnetiska f{\"a}lt}{4.4}{56}
+\tocsubsectionentry {Magnetisk kraft utf{\"o}r inget arbete}{4.4.1}{56}
+\tocsectionentry {Amp\`eres kraftlag - Kraften p{\aa } str{\"o}mslingor i magnetf{\"a}lt}{4.5}{57}
+\tocsectionentry {Volymstr{\"o}mmar och ``lagen om att laddning inte kan f{\"o}rsvinna''}{4.6}{59}
+\tocsectionentry {Aprop{\aa } detta med magnetostatik vs elektrostatik}{4.7}{59}
+\tocsectionentry {Biot--Savarts lag - Magnetf{\"a}lt fr{\aa }n str{\"o}mslingor}{4.8}{61}
+\tocsubsectionentry {Historiken f{\"o}r Biot--Savarts lag}{4.8.1}{61}
+\tocsubsectionentry {Sv{\aa }righeten med att formellt h{\"a}rleda Biot--Savarts lag}{4.8.2}{61}
+\tocsubsectionentry {Biot--Savarts lag f{\"o}r str{\"o}mslingor}{4.8.3}{61}
+\tocsubsectionentry {Biot--Savarts lag f{\"o}r str{\"o}mt{\"a}theten i volymer}{4.8.4}{62}
+\tocsectionentry {Divergens f{\"o}r magnetf{\"a}ltet - ``Magnetiska monopoler existerar inte''}{4.9}{62}
+\tocsectionentry {Rotationen f{\"o}r magnetf{\"a}ltet}{4.10}{64}
+\tocsubsectionentry {Term~1 i rotationen}{4.10.1}{65}
+\tocsubsectionentry {Term~2 i rotationen}{4.10.2}{65}
+\tocsubsectionentry {Slutligt resultat f{\"o}r rotationen av magnetf{\"a}ltet}{4.10.3}{66}
+\tocsectionentry {Amp\`eres lag}{4.11}{66}
+\tocsectionentry {Vektorpotentialen}{4.12}{67}
+\tocsectionentry {Explicit l{\"o}sning f{\"o}r vektorpotentialen}{4.13}{67}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~4 -- Magnetostatik}{4.14}{69}
+\tocchapterentry {F{\"o}rel{\"a}sning 5 -- {Elektrodynamik -- Elektromagnetisk induktion}}{5}{71}
+\tocsectionentry {Introduktion - Faradays induktionslag}{5.1}{73}
+\tocsectionentry {Grundl{\"a}ggande begrepp inf{\"o}r Faradays induktionslag}{5.2}{73}
+\tocsubsectionentry {Definition: Magnetiskt fl{\"o}de}{5.2.1}{74}
+\tocsubsectionentry {Magnetisk fl{\"o}dest{\"a}thet och lite terminologi}{5.2.2}{74}
+\tocsubsectionentry {Definition: Elektromotorisk ``kraft'' - EMK}{5.2.3}{74}
+\tocsectionentry {Faradays induktionslag h{\"a}rledd f{\"o}r en rektangul{\"a}r slinga med konstant hastighet}{5.3}{76}
+\tocsubsectionentry {Observation~I - Avsaknad av permittivitet och permebilitet}{5.3.1}{78}
+\tocsubsectionentry {Observation~II - Fysisk vs virtuell slinga}{5.3.2}{78}
+\tocsubsectionentry {Observation~III kring Faradays induktionslag - Negativt tecken och Lenz lag}{5.3.3}{78}
+\tocsectionentry {Lenz lag som rimlighetsbed{\"o}mning av l{\"o}sningar till induktionsproblem}{5.4}{79}
+\tocsectionentry {Generell h{\"a}rledning av Faradays induktionslag}{5.5}{80}
+\tocsectionentry {Faradays induktionslag f{\"o}r station{\"a}ra slingor}{5.6}{82}
+\tocsectionentry {Spolar och utv{\"a}xling p{\aa } det magnetiska fl{\"o}det}{5.7}{83}
+\tocsectionentry {Faradays lag p{\aa } differentialform}{5.8}{83}
+\tocsectionentry {Faradays lag p{\aa } integralform}{5.9}{84}
+\tocsectionentry {Tre principiella specialfall f{\"o}r induktion}{5.10}{84}
+\tocsectionentry {{\"O}msesidig induktans}{5.11}{85}
+\tocsectionentry {Neumanns formel f{\"o}r den {\"o}msesidiga induktansen}{5.12}{86}
+\tocsubsectionentry {Ett par observationer kring Neumanns formel}{5.12.1}{87}
+\tocsectionentry {Kontinuitetsekvationen - Teaser inf{\"o}r Maxwell's ekvationer}{5.13}{88}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~5 -- Elektromagnetisk induktion}{5.14}{89}
+\tocchapterentry {F{\"o}rel{\"a}sning 6 -- {Elektriska f\"alt i material}}{6}{91}
+\tocsectionentry {Introduktion}{6.1}{93}
+\tocsectionentry {V{\"a}rldskarta}{6.2}{93}
+\tocsectionentry {Klassisk modell f{\"o}r dipoler}{6.3}{94}
+\tocsectionentry {Varf{\"o}r inte en modell med punktladdningar ist{\"a}llet?}{6.4}{96}
+\tocsectionentry {En intressant f{\"o}ljd av Gauss lag f{\"o}r sf{\"a}risk-symmetriska laddningsf{\"o}rdelningar}{6.5}{97}
+\tocsectionentry {Terminologi}{6.6}{98}
+\tocsectionentry {Anisotropi}{6.7}{98}
+\tocsectionentry {\idx {Elektrisk polarisationsdensitet}}{6.8}{99}
+\tocsectionentry {Gauss teorem f{\"o}r elektriska fl{\"o}dest{\"a}theten {\bf D}}{6.9}{100}
+\tocsectionentry {Randvillkor och {\"o}verg{\aa }ngar mellan olika media}{6.10}{101}
+\tocsubsectionentry {Recap p{\aa } hoppvillkor f{\"o}r elektriska f{\"a}lt i vakuum}{6.10.1}{101}
+\tocsubsectionentry {Hoppvillkor f{\"o}r elektriska f{\"a}lt mellan olika media}{6.10.2}{102}
+\tocsectionentry {Upplagrad elektrisk energi}{6.11}{103}
+\tocsectionentry {Dielektrisk sf{\"a}r i elektriskt f{\"a}lt}{6.12}{103}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~6 -- Elektriska f\"alt i material}{6.13}{104}
+\tocchapterentry {F{\"o}rel{\"a}sning 7 -- {Magnetiska f{\"a}lt i material}}{7}{105}
+\tocsectionentry {Dipolmodellen av magneter}{7.1}{107}
+\tocsectionentry {Krafter och moment p{\aa }\ dipoler}{7.2}{108}
+\tocsectionentry {Magnetisering - ``magnetisk polarisationsdensitet''}{7.3}{108}
+\tocsectionentry {Magnetisering sedd som bundna yt- och volymstr{\"o}mmar}{7.4}{109}
+\tocsectionentry {Upplagrad energi i magnetf{\"a}lt}{7.5}{110}
+\tocsectionentry {Vektorpotential fr{\aa }n ett magnetiserat objekt}{7.6}{111}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~7 -- Magnetiska f{\"a}lt i material}{7.7}{115}
+\tocchapterentry {F{\"o}rel{\"a}sning 8 -- {Multipolutvecklingen}}{8}{117}
+\tocsectionentry {Multipolutveckling av f{\"a}lt}{8.1}{119}
+\tocsectionentry {Multipolutveckling f{\"o}r skal{\"a}r potential f{\"o}r en elektrisk dipol}{8.2}{120}
+\tocsectionentry {Exempel p{\aa } multipoler}{8.3}{123}
+\tocsectionentry {Multipolutveckling f{\"o}r skal{\"a}r potential f{\"o}r en linj{\"a}r elektrisk kvadrupol}{8.4}{123}
+\tocsectionentry {Klassificering av multipolmoment}{8.5}{124}
+\tocsectionentry {Skal{\"a}r potential och elektriskt f{\"a}lt f{\"o}r en linj{\"a}r elektrisk kvadrupol}{8.6}{125}
+\tocsectionentry {Skal{\"a}r potential och elektriskt f{\"a}lt f{\"o}r en kvadratisk elektrisk kvadrupol}{8.7}{126}
+\tocsectionentry {Multipolutveckling av skal{\"a}r potential f{\"o}r generella laddningsf{\"o}rdelningar}{8.8}{126}
+\tocsubsectionentry {Maclaurin-utveckling av den geometriska viktfunktionen}{8.8.1}{127}
+\tocsubsectionentry {Sammanfattning av multipolutvecklingen av den skal{\"a}ra potentialen}{8.8.2}{129}
+\tocsectionentry {Multipolutveckling av vektorpotentialen f{\"o}r generella str{\"o}mt{\"a}theter}{8.9}{130}
+\tocsubsectionentry {Magnetisk monopolterm}{8.9.1}{130}
+\tocsubsectionentry {Fysikalisk tolkning av magnetisk monopolterm}{8.9.2}{131}
+\tocsubsectionentry {Magnetisk dipolterm}{8.9.3}{131}
+\tocsubsectionentry {Magnetisk kvadrupolterm}{8.9.4}{131}
+\tocsectionentry {Kan dynamiska magnetiska monopoler existera?}{8.10}{132}
+\tocsectionentry {Dipolapproximationen f{\"o}r station{\"a}ra laddningsf{\"o}rdelningar och str{\"o}mmar}{8.11}{133}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~8 -- Multipolutvecklingen}{8.12}{134}
+\tocchapterentry {F{\"o}rel{\"a}sning 9 -- {Maxwells ekvationer och v{\aa }gutbredning}}{9}{135}
+\tocsectionentry {Maxwells generalisering av Amp\`eres lag}{9.1}{137}
+\tocsectionentry {Maxwells ekvationer}{9.2}{140}
+\tocsectionentry {Fr{\aa }n Maxwells ekvationer till elektromagnetisk v{\aa }gekvation}{9.3}{141}
+\tocsectionentry {Aprop{\aa } s{\"a}rskiljning av polarisationsdensitet och magnetisering}{9.4}{143}
+\tocsectionentry {V{\aa }gekvation, induktion, elektrostatik, elektrodynamik, vad g{\"a}ller detta egentligen?}{9.5}{144}
+\tocsubsectionentry {Exempel I: Elektrostatik}{9.5.1}{144}
+\tocsubsectionentry {Exempel II: Magnetostatik}{9.5.2}{144}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~8 -- Maxwells ekvationer och v{\aa }gutbredning}{9.6}{145}
+\tocchapterentry {F{\"o}rel{\"a}sning 10 -- {V{\aa }gutbredning i homogena och isotropa dielektrika}}{10}{147}
+\tocsectionentry {Elektromagnetiska v{\aa }gekvationen i homogena dielektrika}{10.1}{149}
+\tocsectionentry {Plana elektromagnetiska f{\"a}lt och d'Alemberts generella l{\"o}sning till v{\aa }gekvationen}{10.2}{150}
+\tocsubsectionentry {d'Alemberts variabelsubstitution}{10.2.1}{151}
+\tocsubsectionentry {Integration of d'Alemberts transformerade v{\aa }gekvation}{10.2.2}{152}
+\tocsubsectionentry {Tolkning av reducerad fashastighet och brytningsindex}{10.2.3}{152}
+\tocsubsectionentry {Initialvillkor}{10.2.4}{152}
+\tocsectionentry {Tidsharmoniska f{\"a}lt och planv{\aa }guppdelning}{10.3}{152}
+\tocsubsectionentry {Komplexv{\"a}rda f{\"a}ltenvelopper}{10.3.1}{153}
+\tocsubsectionentry {Ortogonalitet mellan f{\"a}lt och v{\aa }gvektor}{10.3.2}{153}
+\tocsectionentry {Poynting-vektorn}{10.4}{154}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~10 -- V{\aa }gutbredning i homogena och isotropa dielektrika}{10.5}{155}
+\tocchapterentry {F{\"o}rel{\"a}sning 11 -- {Retarderade potentialer som l{\"o}sningar till Maxwells ekvationer}}{11}{157}
+\tocsectionentry {Elektrodynamiska f{\"a}lt och retarderade potentialer}{11.1}{159}
+\tocsectionentry {Recap p{\aa } vad skal{\"a}ra potentialen och vektorpotentialen {\"a}r bra f{\"o}r}{11.2}{160}
+\tocsectionentry {Konservativa kontra icke-konservativa f{\"a}lt}{11.3}{161}
+\tocsubsectionentry {Fr{\aa }ga 1: Vad {\"a}r ett konservativt f{\"a}lt?}{11.3.1}{161}
+\tocsubsectionentry {Fr{\aa }ga 2: Vad k{\"a}nnetecknar ett konservativt f{\"a}lt?}{11.3.2}{161}
+\tocsubsectionentry {Fr{\aa }ga 3: Vad {\"a}r ett icke-konservativt f{\"a}lt?}{11.3.3}{161}
+\tocsubsectionentry {Fr{\aa }ga 4: Vad k{\"a}nnetecknar ett icke-konservativt f{\"a}lt?}{11.3.4}{161}
+\tocsubsectionentry {Fr{\aa }ga 5: {\"A}r ett elektrostatiskt f{\"a}lt alltid konservativt?}{11.3.5}{161}
+\tocsubsectionentry {Fr{\aa }ga 6: {\"A}r ett magnetostatiskt f{\"a}lt alltid konservativt?}{11.3.6}{161}
+\tocsubsectionentry {Fr{\aa }ga 7: {\"A}r ett elektrodynamiskt f{\"a}lt alltid konservativt?}{11.3.7}{161}
+\tocsectionentry {Finns det absoluta m{\aa }tt p{\aa } en potential?}{11.4}{161}
+\tocsectionentry {Retarderade potentialer och kopplingen till elektromagnetiska f{\"a}lt}{11.5}{161}
+\tocsectionentry {V{\aa }gekvationen f{\"o}r retarderade potentialer}{11.6}{163}
+\tocsubsectionentry {Plan f{\"o}r hur vi angriper problemet med tidsf{\"o}rdr{\"o}jning hos potentialer}{11.6.1}{163}
+\tocsubsectionentry {Den generella formen av v{\aa }gekvationen f{\"o}r vektorpotentialen}{11.6.2}{164}
+\tocsubsectionentry {Den generella formen av v{\aa }gekvationen f{\"o}r skal{\"a}ra potentialen}{11.6.3}{165}
+\tocsubsectionentry {Gauge-transformen}{11.6.4}{165}
+\tocsubsectionentry {Lorenz-villkoret (``Lorenz gauge'')}{11.6.5}{167}
+\tocsubsectionentry {Tre viktiga observationer}{11.6.6}{167}
+\tocsectionentry {[{\"O}verkurs] Gauge-transformen: Lorenz och Coulomb gauge}{11.7}{168}
+\tocsubsectionentry {Lorenz gauge}{11.7.1}{168}
+\tocsubsectionentry {Coulomb gauge}{11.7.2}{168}
+\tocsectionentry {Retarderade potentialer p{\aa } integralform}{11.8}{170}
+\tocsectionentry {Exempel: Halvv{\aa }gsantenn och emitterade elektromagnetiska f{\"a}lt}{11.9}{172}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~11 -- Retarderade potentialer}{11.10}{176}
+\tocchapterentry {F{\"o}rel{\"a}sning 12 -- {Grundl{\"a}ggande antennteori}}{12}{177}
+\tocsectionentry {Retarderade potentialer f{\"o}r antenner}{12.1}{179}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~12 -- Grundl{\"a}ggande antennteori}{12.2}{180}
+\tocindexentry {\hskip 24pt{Index}}{\penalty \@M }{181}
