@@ -48,4 +48,4 @@ $(dvis): $(srcs)
 	@echo "DVI file for $(BASE).mp written to $(BASE).dvi."
 
 clean:
-	-rm -Rf *~ *.log *.dvi *.1 *.tex *.mpx *.eps *-crop.pdf
+	-rm -Rf *~ *.log *.dvi *.1 *.tex *.mpx mpt*tmp.* *.eps *-crop.pdf
