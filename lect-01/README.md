@@ -32,48 +32,50 @@ Slutligen avslutar vi med en härledning av Gauss lag på differentialform.
 
 ## Contents
 
-1. Introduktion till elektrostatik
+1. Begreppen elektrostatik, elektro-kvasistatik och elektrodynamik
 
-2. Historik - Elektrostatik från de gamla grekerna till Coulomb
+2. Introduktion till elektrostatik
 
-3. Coulombs lag för punktladdningar
+3. Historik - Elektrostatik från de gamla grekerna till Coulomb
 
-4. Vad är ursprunget för denna växelverkan? Kan vi härleda Coulombs lag?
+4. Coulombs lag för punktladdningar
 
-5. Superpositionsprincipen
+5. Vad är ursprunget för denna växelverkan? Kan vi härleda Coulombs lag?
 
-6. Coulombintegralen - Coulombs generaliserade lag
+6. Superpositionsprincipen
 
-7. Vad är egentligen poängen med att använda elektriska fält?
+7. Coulombintegralen - Coulombs generaliserade lag
 
-    7.1. Fältkonceptet eliminerar "verkan på distans"
+8. Vad är egentligen poängen med att använda elektriska fält?
+
+    8.1. Fältkonceptet eliminerar "verkan på distans"
          ("<i>action at a distance</i>")
 
-    7.2. Lokalitet och kausalitet
+    8.2. Lokalitet och kausalitet
 
-    7.3. Förenkling av mångkropps-problem
+    8.3. Förenkling av mångkropps-problem
 
-    7.4. Fält kan existera oberoende av laddning
+    8.4. Fält kan existera oberoende av laddning
 
-8. Gauss lag härledd i fyra steg
+9. Gauss lag härledd i fyra steg
 
-    8.1. Definition: Elektriskt flöde
+    9.1. Definition: Elektriskt flöde
 
-    8.2. Steg 1: Sfärisk symmetrisk omslutande yta och punktladdning
+    9.2. Steg 1: Sfärisk symmetrisk omslutande yta och punktladdning
 
-    8.3. Steg 2: Godtycklig omslutande yta och punktladdning
+    9.3. Steg 2: Godtycklig omslutande yta och punktladdning
 
-    8.4. Steg 3: Godtycklig omslutande yta och system av punktladdningar
+    9.4. Steg 3: Godtycklig omslutande yta och system av punktladdningar
 
-    8.5. Steg 4: Godtycklig omslutande yta och kontinuerlig laddningsfördelning
+    9.5. Steg 4: Godtycklig omslutande yta och kontinuerlig laddningsfördelning
 
-9. Kontinuerliga laddningsfördelningar
+10. Kontinuerliga laddningsfördelningar
 
-10. Från Gauss lag till Coulombs lag
+11. Från Gauss lag till Coulombs lag
 
-11. Gauss lag på differentialform
+12. Gauss lag på differentialform
 
-12. Sammanfattning av Föreläsning 1 - <i>Elektrostatik, superpositionsprincipen
+13. Sammanfattning av Föreläsning 1 - <i>Elektrostatik, superpositionsprincipen
     och Gauss lag</i>
 
 ## Compiling the TeX code and figures
