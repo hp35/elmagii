@@ -70,16 +70,17 @@ beginfig(1);
       } etex, (50u,16u));
   draw (48u,20u){dir 200}..{dir 200}(22u,10u);
   
-  label.urt(btex \vbox{
+  label.rt(btex \vbox{
       \hbox{Kraft ${\bf F}_{\rm e}$ p{\aa} k{\"a}rnan}
-      \hbox{fr{\aa}n elektronmolnet}
-      } etex, (50u,-4u));
+      \hbox{fr{\aa}n det f{\"o}rskjutna}
+      \hbox{elektronmolnet}
+      } etex, (50u,0u));
   draw (48u,0u){dir 180}..{dir 180}(1u,-10u);
   
-  label.urt(btex \vbox{
+  label.rt(btex \vbox{
       \hbox{Kraft ${\bf F}_{\rm ext}$ p{\aa} k{\"a}rnan}
-      \hbox{fr{\aa}n externt fält ${\bf E}_{\rm ext}$}
-      } etex, (50u,-20u));
+      \hbox{fr{\aa}n externt f{\"a}lt ${\bf E}_{\rm ext}$}
+      } etex, (50u,-16u));
   draw (48u,-16u){dir 180}..{dir 180}(1u,-21u);
   
 endfig;
