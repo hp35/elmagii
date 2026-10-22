@@ -351,5 +351,16 @@ and static electric field from a quadratic electric quadrupole.<br/>
 ![The scalar potential and static electric field from a quadratic electric
 quadrupole.](lect-08/multipoles/multipoles/quadquadrupole-str.png)
 
+## Richard Feynman's quote on the importance of Maxwell's equations
+
+<em>From a long view of the history of mankind—seen from, say, ten thousand
+years from now—there can be little doubt that the most significant event of
+the 19th century will be judged as Maxwell’s discovery of the laws of
+electrodynamics. The American Civil War will pale into provincial
+insignificance in comparison with this important scientific event of the
+same decade.</em></br>
+&emdash; Richard P. Feynman, <em>Lectures on Physics</em>,
+Volume 2, Chapter I-6.
+
 ## Copyright
 Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
