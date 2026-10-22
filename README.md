@@ -359,7 +359,10 @@ the 19th century will be judged as Maxwell’s discovery of the laws of
 electrodynamics. The American Civil War will pale into provincial
 insignificance in comparison with this important scientific event of the
 same decade.</em></br>
-&emdash; Richard P. Feynman, <em>Lectures on Physics</em>,
+&emdash; Richard P. Feynman,
+<em>
+<a href="https://www.feynmanlectures.caltech.edu/">Lectures on Physics</a>
+</em>,
 Volume 2, Chapter I-6.
 
 ## Copyright
