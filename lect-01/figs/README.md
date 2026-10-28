@@ -65,12 +65,5 @@ are any complaints.
     by a closed surface of arbitrary shape) in the derivation of Gauss' law
     from the basic point-charge form of Coulomb's law.</i>
 
-[`worldmap.mp`](worldmap.mp)
-    ([`worldmap.pdf`](worldmap.pdf))
-    <i>MetaPost drawing of our World Map of electrodynamics, and how
-    Coulomb's law together with Biot-Savart's law interlinked with
-    constitutive relations result in Maxwell's equations, finally
-    producing the electromagnetic wave equation.</i>
-
 ## Copyright
-Copyright (C) 2025, Fredrik Jonsson, under GPL 3.0.
+Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
