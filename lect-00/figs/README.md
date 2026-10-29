@@ -12,6 +12,12 @@ are any complaints.
 
 ## List of figures
 
+[`dirac-pulse.mp`](dirac-pulse.mp)
+    ([`dirac-pulse.pdf`](dirac-pulse.pdf))
+    <i>MetaPost drawing of the Dirac delta function as such, in terms
+    of a top-hat function of pulse duration &epsilon; and pulse height
+    1/&epsilon;.</i>
+
 [`dirac-00.mp`](dirac-00.mp)
     ([`dirac-00.pdf`](dirac-00.pdf))
     <i>MetaPost drawing of the Dirac delta function applied to the formulation
@@ -28,4 +34,4 @@ are any complaints.
     of a charge density consisting of (two-dimensional) surface charges.</i>
 
 ## Copyright
-Copyright (C) 2025, Fredrik Jonsson, under GPL 3.0.
+Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.

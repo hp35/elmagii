@@ -1,7 +1,7 @@
 %
 % MetaPost drawing of the Dirac delta function for surface charges.
 %
-% Copyright (C) 2025 under GPL 3.0, Fredrik Jonsson
+% Copyright (C) 2026 under GPL 3.0, Fredrik Jonsson
 %
 u := 1mm;
 llx:=-20u; lly:=-20u; urx:=20u; ury:=20u;
