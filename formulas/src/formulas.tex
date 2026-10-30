@@ -17,6 +17,9 @@ ${\bf D}$
     & Elektrisk fl{\"o}dest{\"a}thet
       ${\bf D}=\varepsilon_0\varepsilon_{\rm r}{\bf E}$
     & ${\rm C}/{\rm m}^2$\cr
+$\delta$
+    & Diracs delta-distribution $\delta({\bf x}-{\bf x}')$
+    & $1/{\rm m}^{n}$\cr
 $\varepsilon_0$
     & Elektrisk permittivitet i vakuum
     & ${\rm F}/{\rm m}$\cr
@@ -216,6 +219,12 @@ $$
 $$
   {\bf B}\equiv\mu_0({\bf H}+{\bf M})
     =\mu_0\mu_{\rm r}{\bf H}
+$$
+
+\eqsection{Punktladdningar}
+\eqtitle{System av $N$ laddningar $q_k$ placerade i k{\"a}llpunkter ${\bf x}_k$}
+$$
+  \rho({\bf x})=\sum^{N}_{k=1}q_k\delta({\bf x}-{\bf x}'_k)\,dV
 $$
 \vfill\eject
 
@@ -620,6 +629,22 @@ $$
 $$
   \iint_S(\nabla f)\times d{\bf S}=-\oint_{\Gamma}f\,d{\bf l}
 $$
+
+\eqsection{Diracs delta-distribution}
+\eqtitle{Selektionsegenskaper}
+$$
+  \eqalign{
+    \hbox{1D:}&\hskip8pt
+      \int^{\infty}_{-\infty}f(x)\delta(x-x')\,dx
+        =f(x'),
+      \hskip8pt[\delta]={\rm m}^{-1}\cr
+    \hbox{3D:}&\hskip8pt
+      \int_{{\Bbb R}^3}f({\bf x}-{\bf x}')\delta({\bf x}-{\bf x}')\,dV
+        =f({\bf x}'),
+      \hskip8pt[\delta]={\rm m}^{-3}\cr
+  }
+$$
+
 \vfill\eject
 % \eqsection{Ofta anv{\"a}ndbara skal{\"a}ra integraler}
 \eqsection{Skal{\"a}ra integraler}
@@ -674,7 +699,6 @@ $$
   +\ldots\cr
   }
 $$
-\vfill\eject
 
 \eqsection{Koordinatsystem}
 \eqtitle{Kartesiska koordinater ($x,y,z$)}
@@ -708,6 +732,7 @@ $$
         \Big)\cr
   }
 $$
+\vfill\eject
 
 \eqtitle{Cylindriska koordinater ($r,\varphi,z$)}
 \halign{#\hfil\quad & #\hfil\cr
@@ -748,7 +773,6 @@ $$
         \Big)\cr
   }
 $$
-\vfill\eject
 
 \eqtitle{Sf{\"a}riska koordinater ($r,\varphi,\theta$)}
 \halign{#\hfil\quad & #\hfil\cr
