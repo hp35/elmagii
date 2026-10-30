@@ -54,9 +54,14 @@ The repository contains the following subdirectories, one for each lecture:
          (<i>Lecture 11 - Retarded potentials as solutions to Maxwell's
 	 equations</i>)
 
+In addition, the following directories might be of particular interest:
+
 [`examprob`](examprob) <i>Tentamensuppgift 1 - Den elektromagnetiska
          vågekvationen</i>
          (<i>Examination Problem 1 - The electromagnetic wave equation</i>)
+
+[`gallery`](gallery) <i>Porträttgalleri inom klassisk elektromagnetism</i>
+         (<i>Portrait gallery in classical electromagnetism</i>)
 
 [`worldmap`](worldmap) <i>"Världskarta för klassisk elektromagnetism"</i>
          (<i>"World Map of Classical Electromagnetics"</i>)
