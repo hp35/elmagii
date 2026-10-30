@@ -6,6 +6,11 @@ and supporting material as used in my lectures on Electromagnetic Theory II
 
 The repository contains the following subdirectories, one for each lecture:
 
+[`lect-00`](lect-00) <i>Föreläsning 0 - Grundläggande vektoranalys inom
+         elektromagnetisk fältteori</i>
+         (<i>Lecture 0 - Basic vector analysis applied to electromagnetic
+	 theory</i>)
+
 [`lect-01`](lect-01) <i>Föreläsning 1 - Elektrostatik, superpositionsprincipen
          och Gauss lag</i>
          (<i>Lecture 1 - Electrostatics, the superposition principle and
@@ -48,6 +53,13 @@ The repository contains the following subdirectories, one for each lecture:
          till Maxwells ekvationer</i>
          (<i>Lecture 11 - Retarded potentials as solutions to Maxwell's
 	 equations</i>)
+
+[`examprob`](examprob) <i>Tentamensuppgift 1 - Den elektromagnetiska
+         vågekvationen</i>
+         (<i>Examination Problem 1 - The electromagnetic wave equation</i>)
+
+[`worldmap`](worldmap) <i>"Världskarta för klassisk elektromagnetism"</i>
+         (<i>"World Map of Classical Electromagnetics"</i>)
 
 ## Contributing
 
