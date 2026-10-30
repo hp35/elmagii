@@ -64,6 +64,9 @@ In addition, the following directories might be of particular interest:
          vågekvationen</i>
          (<i>Examination Problem 1 - The electromagnetic wave equation</i>)
 
+[`formulas`](formulas) <i>Formelsamling i klassisk elektromagnetisk teori</i>
+         (<i>Collection of formulas in classical electromagnetic theory</i>)
+
 [`gallery`](gallery) <i>Porträttgalleri inom klassisk elektromagnetism</i>
          (<i>Portrait gallery in classical electromagnetism</i>)
 
