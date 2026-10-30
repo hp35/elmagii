@@ -13,6 +13,9 @@ This set of formulas is convenient to have at hand when solving problems.
 [formulas-twocol.pdf](formulas-twocol.pdf) - Compiled document containing
   the compact two-column version of the collection of formulas.
 
+[src/formulas.tex](src/formulas.tex) - Plain TeX source code for the
+  formulas as such.
+
 ## Contributing
 
 Reports on errors, inconsistencies or improvements in general are most welcome!
