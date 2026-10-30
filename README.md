@@ -4,6 +4,8 @@ This repository contains all TeX code (plain TeX, no LaTeX), MetaPost figures
 and supporting material as used in my lectures on Electromagnetic Theory II
 (1TE626) for Engineering Physics (master level) at Uppsala University.
 
+## The Lectures
+
 The repository contains the following subdirectories, one for each lecture:
 
 [`lect-00`](lect-00) <i>Föreläsning 0 - Grundläggande vektoranalys inom
@@ -53,6 +55,8 @@ The repository contains the following subdirectories, one for each lecture:
          till Maxwells ekvationer</i>
          (<i>Lecture 11 - Retarded potentials as solutions to Maxwell's
 	 equations</i>)
+
+## Supplementary material
 
 In addition, the following directories might be of particular interest:
 
