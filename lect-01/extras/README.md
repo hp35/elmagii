@@ -35,14 +35,32 @@ learn in detail. The good thing is that everyone knows that "this will be
 in the exam", and that everyone will have a good opportunity to study the
 details without stress with plenty of time before the exam.
 
-Now there are two ways of studying for this specific problem:
+Now there are two principal ways of studying for this specific problem:
 
 1. Learning the ways that Faraday's, Ampère's and Gauss' laws act together,
-   gaining the full physical understanding how these together with the constitutive relations combine into the general form of the wave equations for the electric and magnetic fields, with the final result as a grand statement on the duality between the electric and magnetic field in electromagnetic wave propagation, OR
+   gaining the full physical understanding how these together with the
+   constitutive relations combine into the general form of the wave equations
+   for the electric and magnetic fields, with the final result as a grand
+   statement on the duality between the electric and magnetic field in
+   electromagnetic wave propagation, OR
 
 2. Simply <em>cramming the derivation into your brain</em>.
 
-In the author's point-of-view, it doesn't really matter which method you choose, since the latter in any case will force you into a certain level of understanding of what is going on "under the hood".
+In the author's point-of-view, it doesn't really matter which method you
+choose, since the latter in any case will force you into a certain level
+of understanding of what is going on "under the hood".
+The idea with the problem is to leave you with a better level of understanding
+of electromagnetic wave propagation, and once you have either completely
+understood the derivation or simply crammed it into your brain, you for sure
+will have this understanding.
+
+## Yes, there is also a suggested solution!
+
+Again as a measure to assist you in understanding the derivation of the
+electromagnetic wave equation, a suggested solution for the derivation is
+included. Please feel free to take an alternative route if you want to!
+The lecturer will in any case be interested in learning about alternative
+takes on this problem.
 
 ## Compiling the TeX code and figures
 
