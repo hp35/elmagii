@@ -59,6 +59,8 @@ beginfig(1);
   label.rt(btex $\nabla\cdot{\bf a}=0$, {\"o}verallt etex,(31u,2dy));
   draw (31u,2dy){dir 190}..{dir 190}(dx,dy);
   dotlabel(btex etex,(dx,dy));
+  label.top(btex Exempel p{\aa} homogent vektorf{\"a}lt etex,
+      (origo shifted (0u,(ny/2)*dx)) shifted (0u,0u));
   
 endfig;
 end
