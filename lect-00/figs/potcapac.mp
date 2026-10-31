@@ -23,7 +23,7 @@ beginfig(1);
   % Draw the coordinate system and origo.
   %
   drawarrow (-20u,-4u)--(40u,-4u);
-  label.urt(btex $x$ etex,(30u,-4u));
+  label.urt(btex $x$ etex,(40u,-4u));
   draw (0u,-6u)--(0u,-2u);     label.bot(btex $x$ etex,(0u,-6u));
   draw (14u,-6u)--(14u,-2u);   label.bot(btex $x+a$ etex,(14u,-6u));
 
