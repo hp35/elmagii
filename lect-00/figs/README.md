@@ -33,5 +33,13 @@ are any complaints.
     <i>MetaPost drawing of the Dirac delta function applied to the formulation
     of a charge density consisting of (two-dimensional) surface charges.</i>
 
+[`potmap.mp`](potmap.mp)
+    ([`potmap.pdf`](potmap.pdf))
+    <i>MetaPost drawing of a two-dimensional map of a potential as height
+    curves, including arrows locally pointing towards the steepest descent
+    in the map. Besides providing an illustration of the gradient operator,
+    this specific figure also provides a rather nice example on the vector
+    character of MetaPost drawings as such.</i>
+
 ## Copyright
 Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
