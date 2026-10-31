@@ -414,7 +414,7 @@ beginfig(1);
   poscontinuity:=(2*dxb,-5dyb);
     drawbox(btex $\nabla\cdot{\bf J}=-{{\partial\rho}\over{\partial t}}$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {Kontinuitetsekvation f{\"o}r laddning} etex,
+      \hskip-12pt{Kontinuitetsekvation f{\"o}r laddning} etex,
       poscontinuity, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{5} etex);
 
@@ -425,7 +425,7 @@ beginfig(1);
     drawbox(btex ${\bf J}_{\rm f}\to{\bf J}_{\rm tot}={\bf J}_{\rm f}
                       +{{\partial{\bf D}}\over{\partial t}}$ etex,
       btex \font\labelfont=cmssi8\labelfont
-      {F{\"o}rskjutningsstr{\"o}m (Maxwell, 1861)} etex,
+      \hskip-12pt{F{\"o}rskjutningsstr{\"o}m (Maxwell, 1861)} etex,
       posdispcurr, ws, hs, rs,
       btex \font\labelfont=cmssi8\labelfont{9} etex);
 
