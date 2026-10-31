@@ -49,5 +49,10 @@ are any complaints.
     <i>MetaPost drawing of a plain parallel-plate capacitor subject to a
     potential difference between the two plates.</i>
 
+[`field-divzero.mp`](field-divzero.mp)
+    ([`field-divzero.pdf`](field-divzero.pdf))
+    <i>MetaPost drawing of a homogeneous vector field, everywhere possessing
+    a zero divergence.</i>
+
 ## Copyright
 Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
