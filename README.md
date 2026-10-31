@@ -89,6 +89,28 @@ just run `make clean` in the `elmagii` root directory.
 
 ## Summaries of the lectures (Swedish)
 
+[<i>Föreläsning 0 - Grundläggande vektoranalys inom elektromagnetisk
+    fältteori</i>](lect-00)
+
+Denna föreläsning är bistår med ett extramaterial som avhandlar de grundläggande
+begrepp inom vektoranalys som vi frekvent kommer att använda oss av i kommande
+föreläsningar. Denna extraföreläsningen hålls i nära anslutning till den första
+föreläsningen i kursen, och avser att fungera som rekapitulation för den
+teknolog som känner sig lite ringrostig i sin vektoranalys.
+
+Begreppen fält, gradient, divergens och rotation gås igenom med praktiska ex-
+empel hämtade från elektrostatik och magnetostatik. Vi inleder med en rekapit-
+ulation kring begreppet delta-distribution i en och tre dimensioner, följt av en
+genomgång av de grundläggande deﬁnitionerna av gradient ∇φ, divergens
+∇ · <b>b</b> och rotation ∇×<b>b</b>.
+
+De grundläggande identiteterna för divergensen av en rotation och rotationen
+av en gradient gås igenom, då dessa är väsentliga för förståelsen av hur vi
+rent matematiskt kan motivera existensen av vektorpotentialen och den skalära
+potentialen. Föreläsningen avslutas med att illustrera vad rotationen av en
+rotation (∇ × ∇ ×) innebär, då detta är centralt för formuleringen av den
+elektromagnetiska vågekvationen.
+
 [<i>Föreläsning 1 - Elektrostatik, superpositionsprincipen och
     Gauss lag</i>](lect-01)
 
