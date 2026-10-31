@@ -377,13 +377,13 @@ quadrupole.](lect-08/multipoles/multipoles/quadquadrupole-str.png)
 
 ## Richard Feynman's quote on the importance of Maxwell's equations
 
-<em>From a long view of the history of mankind—seen from, say, ten thousand
-years from now—there can be little doubt that the most significant event of
-the 19th century will be judged as Maxwell’s discovery of the laws of
-electrodynamics. The American Civil War will pale into provincial
-insignificance in comparison with this important scientific event of the
-same decade.</em></br>
-&emdash; Richard P. Feynman,
+<em>From a long view of the history of mankind &ndash; seen from, say, ten
+thousand years from now &ndash; there can be little doubt that the most
+significant event of the 19th century will be judged as Maxwell’s discovery
+of the laws of electrodynamics. The American Civil War will pale into
+provincial insignificance in comparison with this important scientific
+event of the same decade.</em></br>
+&nbsp;&nbsp;&mdash; Richard P. Feynman,
 <em>
 <a href="https://www.feynmanlectures.caltech.edu/">Lectures on Physics</a>
 </em>,
