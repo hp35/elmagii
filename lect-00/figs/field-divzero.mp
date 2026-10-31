@@ -20,7 +20,7 @@ beginfig(1);
   pickup pencircle scaled 1pt;
   path p;
   pair origo;
-  origo:=(-40u,-20u);
+  origo:=(0u,0u);
 
   %
   % Draw the coordinate system and origo, just as a reference on
@@ -41,12 +41,12 @@ beginfig(1);
   % Draw the homogeneous field.
   %
   arrowlength:=4u;
-  nx:=5;  dx:=10u;
-  ny:=5;  dy:=10u;
+  nx:=6;  dx:=10u;
+  ny:=6;  dy:=10u;
   for kx=0 upto (nx-1):
-    x:=(kx-nx/2)*dx;
+    x:=(kx-(nx-1)/2)*dx;
     for ky=0 upto (ny-1):
-      y:=(ky-ny/2)*dy;
+      y:=(ky-(ny-1)/2)*dy;
       drawtexarrow ((-arrowlength/2,0u)--(arrowlength/2,0u)) shifted (x,y);
     endfor;
   endfor;
@@ -56,9 +56,9 @@ beginfig(1);
   % field.
   %
   label(btex ${\bf a}=a_0{\bf e}_x$ etex,(-dx,-dy));
-  label.rt(btex $\nabla\cdot{\bf a}=0$, {\"o}verallt etex,(30u,16u));
-  draw (30u,16u){dir 190}..{dir 190}(0u,0u);
-  dotlabel(btex etex,(0u,0u));
+  label.rt(btex $\nabla\cdot{\bf a}=0$, {\"o}verallt etex,(31u,2dy));
+  draw (31u,2dy){dir 190}..{dir 190}(dx,dy);
+  dotlabel(btex etex,(dx,dy));
   
 endfig;
 end
