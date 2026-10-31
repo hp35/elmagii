@@ -1,6 +1,10 @@
 %
 % MetaPost drawing of a two-dimensional map of a potential as height curves,
 % including arrows locally pointing towards the steepest descent in the map.
+% As an analogy to the electric field, as defined in terms of a negative
+% gradient of the scalar potential, the arrows are drawn for the negative
+% gradient of the height in the map.
+%
 % Besides providing an illustration of the gradient operator, this specific
 % figure also provides a rather nice example on the vector character of
 % MetaPost drawings as such.
@@ -13,7 +17,7 @@ u:=1mm;
 % Routine for the drawing of an inward-pointing arrow at
 % a given path parameter.
 %
-vardef draw_inward_arrow(expr p, t, arrowlen) =
+vardef draw_outward_arrow(expr p, t, arrowlen) =
 
   save pt, tang, normal;
   pair pt, tang, normal;
@@ -63,7 +67,7 @@ beginfig(1);
     ..{dir 20}(0u,-7u);
   draw p;
   for k=0 upto numarrows:
-    draw_inward_arrow(p, (k/numarrows)*(length p), arrowlen);
+    draw_outward_arrow(p, (k/numarrows)*(length p), arrowlen);
   endfor;
   label.ulft(btex $h_3$ etex,(point 0 of p));
 
@@ -75,7 +79,7 @@ beginfig(1);
     ..{dir 40}(0u,-7u)) shifted (32u,0u);
   draw p;
   for k=0 upto numarrows:
-    draw_inward_arrow(p, (k/numarrows)*(length p), arrowlen);
+    draw_outward_arrow(p, (k/numarrows)*(length p), arrowlen);
   endfor;
   label.ulft(btex $h_3$ etex,(point 0.25 of p));
 
@@ -87,7 +91,7 @@ beginfig(1);
     ..{dir 20}(0u,-16u);
   draw p;
   for k=0 upto numarrows:
-    draw_inward_arrow(p, (k/numarrows)*(length p), arrowlen);
+    draw_outward_arrow(p, (k/numarrows)*(length p), arrowlen);
   endfor;
   label.ulft(btex $h_2$ etex,(point 0 of p));
 
@@ -99,7 +103,7 @@ beginfig(1);
     ..{dir 40}(3u,-11u)) shifted (32u,0u);
   draw p;
   for k=0 upto numarrows:
-    draw_inward_arrow(p, (k/numarrows)*(length p), arrowlen);
+    draw_outward_arrow(p, (k/numarrows)*(length p), arrowlen);
   endfor;
   label.ulft(btex $h_2$ etex,(point 0.25 of p));
 
@@ -111,7 +115,7 @@ beginfig(1);
     ..{dir 30}(3u,-22u));
   draw p;
   for k=0 upto numarrows:
-    draw_inward_arrow(p, (k/numarrows)*(length p), arrowlen);
+    draw_outward_arrow(p, (k/numarrows)*(length p), arrowlen);
   endfor;
   label.ulft(btex $h_1$ etex,(point 0 of p));
 
@@ -123,17 +127,17 @@ beginfig(1);
     ..{dir 30}(3u,-22u)) scaled 1.4 shifted (0u,0u);
   draw p;
   for k=0 upto numarrows:
-    draw_inward_arrow(p, (k/numarrows)*(length p), arrowlen);
+    draw_outward_arrow(p, (k/numarrows)*(length p), arrowlen);
   endfor;
   label.ulft(btex $z=h_0$ etex,(point 0 of p));
 
   %
-  % Add a few labels for the gradient.
+  % Add a few labels for the negative gradient, in analogy with the negative gradient as used for the electric field as defined in terms of the scalar potential.
   %
-  label.rt(btex $\nabla h(x,y)$ etex,(61u,24u));
-  label.rt(btex $\nabla h(x,y)$ etex,(43.5u,18u));
-  label.rt(btex $\nabla h(x,y)$ etex,(62u,-1u));
-  label.top(btex $\nabla h(x,y)$ etex,(-14u,26u));
+  label.rt(btex $-\nabla h(x,y)$ etex,(61u,24u));
+  label.rt(btex $-\nabla h(x,y)$ etex,(43.5u,18u));
+  label.rt(btex $-\nabla h(x,y)$ etex,(62u,-1u));
+  label.top(btex $-\nabla h(x,y)$ etex,(-14u,26u));
 
 endfig;
 end

@@ -37,9 +37,12 @@ are any complaints.
     ([`potmap.pdf`](potmap.pdf))
     <i>MetaPost drawing of a two-dimensional map of a potential as height
     curves, including arrows locally pointing towards the steepest descent
-    in the map. Besides providing an illustration of the gradient operator,
-    this specific figure also provides a rather nice example on the vector
-    character of MetaPost drawings as such.</i>
+    in the map. As an analogy to the electric field, as defined in terms of
+    a negative gradient of the scalar potential, the arrows are drawn for
+    the negative gradient of the height in the map. Besides providing an
+    illustration of the gradient operator, this specific figure also provides
+    a rather nice example on the vector character of MetaPost drawings as
+    such.</i>
 
 ## Copyright
 Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
