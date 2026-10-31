@@ -20,7 +20,7 @@ beginfig(1);
   drawarrow origo--(origo+5u*ez);   label.top(btex $z$ etex,(origo+5u*ez));
   p:=(-4u,10u)
        --((-4u,10u)+22u*ey)
-       --((-4u,10u)+22u*ey+15u*ex)
+       --((-4u,10u)+22u*ey+15u*ex+(1u,-2u))
        --((-4u,10u)+15u*ex)
        --(-4u,10u)--cycle;
   fill p withcolor .95[black,white];
