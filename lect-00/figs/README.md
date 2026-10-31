@@ -44,5 +44,10 @@ are any complaints.
     a rather nice example on the vector character of MetaPost drawings as
     such.</i>
 
+[`potcapac.mp`](potcapac.mp)
+    ([`potcapac.pdf`](potcapac.pdf))
+    <i>MetaPost drawing of a plain parallel-plate capacitor subject to a
+    potential difference between the two plates.</i>
+
 ## Copyright
 Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
