@@ -15,15 +15,15 @@ analysis applied to electromagnetic theory</i>), including all TeX code
 
 Denna föreläsning är bistår med ett extramaterial som avhandlar de grundläggande
 begrepp inom vektoranalys som vi frekvent kommer att använda oss av i kommande
-föreläsningar. Denna extraföreläsningen hålls i nära anslutning till den första
+föreläsningar. Denna extraföreläsning hålls i nära anslutning till den första
 föreläsningen i kursen, och avser att fungera som rekapitulation för den
 teknolog som känner sig lite ringrostig i sin vektoranalys.
 
 Begreppen fält, gradient, divergens och rotation gås igenom med praktiska ex-
-empel hämtade från elektrostatik och magnetostatik. Vi inleder med en rekapit-
-ulation kring begreppet delta-distribution i en och tre dimensioner, följt av en
-genomgång av de grundläggande deﬁnitionerna av gradient ∇φ, divergens
-∇ · <b>b</b> och rotation ∇×<b>b</b>.
+empel hämtade från elektrostatik och magnetostatik.
+Vi inleder med en rekapitulation kring begreppet delta-distribution i en
+och tre dimensioner, följt av en genomgång av de grundläggande deﬁnitionerna
+av gradient ∇φ, divergens ∇ · <b>b</b> och rotation ∇×<b>b</b>.
 
 De grundläggande identiteterna för divergensen av en rotation och rotationen
 av en gradient gås igenom, då dessa är väsentliga för förståelsen av hur vi
