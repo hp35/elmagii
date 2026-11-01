@@ -3,8 +3,8 @@
 % Github: https://github.com/elmagii/lect-02/
 % Last change: March 2, 2026
 %
-% Lecture No 2 in the course ``Elektromagnetism II, 1TE626 (2025)'',
-% held November 4, 2025, at Uppsala University, Sweden.
+% Lecture No 2 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
+% held November 4, 2026, at Uppsala University, Sweden.
 %
 % Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
@@ -24,14 +24,14 @@
 %
 \def\coursename{Elektromagnetism II}
 \def\coursecode{1TE626}
-\def\courseyear{2025}
+\def\courseyear{2026}
 \def\courserepo{https://github.com/hp35/elmagii/}
 \def\lecturenumber{2}
 \def\lecturetitle{Elektrisk potential och till{\"a}mpningar av Gauss lag}
 \def\lecturetitlesub{}
 \def\lectureauthor{Fredrik Jonsson}
 \def\lectureplace{Uppsala Universitet}
-\def\lecturedate{4 november 2025}
+\def\lecturedate{4 november 2026}
 %-------------------- BEGIN OF LOCAL MACROS --------------------
 \input macros/epsf.tex
 \input macros/eplain.tex
@@ -162,11 +162,11 @@
 
 \section{Till{\"a}mpning av Gauss lag - Rak linjeladdning}
 Antag att vi vill ber{\"a}kna den elektriska f{\"a}ltstyrkan
-\sidx{Elektrisk f{\"a}ltstyrka} (``det elektriska f{\"a}ltet'') p{\aa}
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$} (``det elektriska f{\"a}ltet'') p{\aa}
 avst{\aa}ndet $r$ vinkelr{\"a}tt fr{\aa}n fr{\aa}n en laddning f{\"o}rdelad
-p{\aa} en o{\"a}ndlig och rak linje, med
-linjeladdningst{\"a}theten \sidx{Elektrisk laddningst{\"a}thet}[Linjeladdning]
-$\lambda$ (${\rm C}/{\rm m}$).
+p{\aa} en o{\"a}ndlig och rak linje, med linjeladdningst{\"a}theten $\lambda$
+(${\rm C}/{\rm m}$).
+\sidx{Elektrisk laddningst{\"a}thet}[Linjeladdning $\lambda$]
 
 En taktik att angripa detta problem vore att betrakta varje liten del $dl$
 av linjeladdningen som en punktladdning $dq=\lambda dl$ och d{\"a}refter
@@ -242,7 +242,7 @@ N{\"a}sta exempel p{\aa} till{\"a}mpning av Gauss lag
 \sidx{Gauss lag}[Plan geometri] g{\"a}ller att best{\"a}mma det elektriska
 f{\"a}ltet p{\aa} avst{\aa}ndet $a$ fr{\aa}n en o{\"a}ndlig plan yta,
 b{\"a}rande ytladdningst{\"a}theten
-\sidx{Elektrisk laddningst{\"a}thet}[Ytladdning] $\sigma$
+\sidx{Elektrisk laddningst{\"a}thet}[Ytladdning $\sigma$] $\sigma$
 (${\rm C}/{\rm m}^2$). Vi utnyttjar planariteten genom att l{\"a}gga en
 plan-parallell ``Gaussisk burk'' inneslutande en del av ytan.
 Om vi konstruerar burken s{\aa} att de planparallella ytorna omsluter ytan med
@@ -272,15 +272,16 @@ det vill s{\"a}ga, med h{\"a}nsyn tagen till symmetrin $E_z(-z)=-E_z(z)_z$,
 $$
   E_z(z) = {{\sigma}\over{2\varepsilon_0}}\sgn(z).
 $$
-Vi noterar att det elektriska f{\"a}ltet\sidx{Elektrisk f{\"a}ltstyrka} ut
-fr{\aa}n den (i detta exempel) o{\"a}ndliga ytladdningen {\"a}r {\it oberoende
-av avst{\aa}ndet fr{\aa}n ytan}, n{\aa}got som rent fysikaliskt {\"a}r l{\"a}tt
-att inse d{\aa} f{\"a}ltlinjerna \sidx{Elektrisk f{\"a}ltlinje} rent
-geometriskt alla m{\aa}ste vara parallella med varandra, med f{\"o}ljd att
-det elektriska fl{\"o}det $\Phi_{\rm E}$ genom en godtycklig testyta ett
-avst{\aa}nd fr{\aa}n ytladdningen m{\aa}ste vara konstant, med lika m{\aa}nga
-f{\"a}ltlinjer sk{\"a}rande testytan oavsett avst{\aa}nd $a$ fr{\aa}n planet
-som den placerats p{\aa}.
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}
+Vi noterar att det elektriska f{\"a}ltet ut fr{\aa}n den (i detta exempel)
+o{\"a}ndliga ytladdningen {\"a}r {\it oberoende av avst{\aa}ndet fr{\aa}n
+ytan}, n{\aa}got som rent fysikaliskt {\"a}r l{\"a}tt att inse d{\aa}
+f{\"a}ltlinjerna \sidx{Elektrisk f{\"a}ltlinje} rent geometriskt alla
+m{\aa}ste vara parallella med varandra, med f{\"o}ljd att det elektriska
+fl{\"o}det $\Phi_{\rm E}$ genom en godtycklig testyta ett avst{\aa}nd fr{\aa}n
+ytladdningen m{\aa}ste vara konstant, med lika m{\aa}nga f{\"a}ltlinjer
+sk{\"a}rande testytan oavsett avst{\aa}nd $a$ fr{\aa}n planet som den
+placerats p{\aa}.
 
 Sj{\"a}lvfallet {\"a}r det i praktiken ofysikaliskt med ett konstant elektriskt
 f{\"a}lt som str{\"a}cker sig ut mot o{\"a}ndligheten, d{\aa} detta i s{\aa}
@@ -293,7 +294,7 @@ fr{\aa}n randeffekter.
 \section{Rotationen f{\"o}r det statiska elektriska f{\"a}ltet}
 \sidx{Elektrostatiskt f{\"a}lt}[Rotation f{\"o}r]
 Som vi har sett kan det statiska elektriska f{\"a}ltet \sidx{Elektrisk
-f{\"a}ltstyrka} r{\"a}knas fram genom att exempelvis summera upp (eller
+f{\"a}ltstyrka ${\bf E}$} r{\"a}knas fram genom att exempelvis summera upp (eller
 integrera) bidrag fr{\aa}n punktladdningar~$q$ (${\rm C}$),
 linjeladdningar~$\lambda$ (${\rm C}/{\rm m}$),
 ytladdningar~$\sigma$ (${\rm C}/{\rm m}^2$) eller
@@ -387,7 +388,8 @@ n{\"a}stintill trivialt l{\aa}ta oss {\it generalisera speciall{\"o}sningen till
 en godtycklig distribution av elektriska laddningar}.
 
 \section{Elektrostatisk skal{\"a}r potential}
-\sidx{Skal{\"a}r potential}\sidx{Skal{\"a}r potential}[Elektrostatisk]
+\sidx{Skal{\"a}r potential $\phi$}
+\sidx{Skal{\"a}r potential $\phi$}[Elektrostatisk]
 Utifr{\aa}n resonemanget ovan, kring den slutna linjeintegralen som vi kunde
 anv{\"a}nda f{\"o}r att via Stokes teorem p{\aa}visa att rotationen av det
 statiska elektriska f{\"a}ltet m{\aa}ste vara identiskt noll, s{\aa} {\"a}r
@@ -481,7 +483,7 @@ $$
   }
 $$
 d{\"a}r vi {\it definierade} den skal{\"a}ra elektrostatiska potentialen
-\sidx{Skal{\"a}r potential}[Elektrostatisk]
+\sidx{Skal{\"a}r potential $\phi$}[Elektrostatisk]
 $\phi({\bf x})$ som\numberedfootnote{Vi kommer i denna serie av
   f{\"o}rel{\"a}sningar att genomg{\aa}ende anv{\"a}nda $\phi$ f{\"o}r
   att beteckna skal{\"a}r potential, f{\"o}r det statiska s{\aa}v{\"a}l
@@ -493,9 +495,10 @@ $$
   \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V
     {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
 $$
-Notera att formen av det elektriska f{\"a}ltet \sidx{Elektrisk f{\"a}ltstyrka}
-som en gradient \sidx{Gradient} av en skal{\"a}r funktion g{\"o}r att vi
-trivialt och helt enligt f{\"o}rv{\"a}ntan erh{\aa}ller
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}
+Notera att formen av det elektriska f{\"a}ltet som en gradient \sidx{Gradient}
+av en skal{\"a}r funktion g{\"o}r att vi trivialt och helt enligt
+f{\"o}rv{\"a}ntan erh{\aa}ller
 $$
   \nabla\times{\bf E}({\bf x})=-\nabla\times(\nabla\phi({\bf x}))={\bf 0}.
 $$
@@ -574,12 +577,12 @@ f{\"o}rflyttats fr{\aa}n ${\bf x}_a$ till ${\bf x}_b$. Vi har nu allts{\aa} till
 slut anl{\"a}nt till punkten d{\"a}r vi faktiskt kan tala om just ``potentiell
 energi''.
 
-Vi b{\"o}r h{\"a}r passa p{\aa} att erinra oss att sj{\"a}lva ordet ``potential''
-\sidx{Skal{\"a}r potential}[Elektrostatisk] medf{\"o}r en stor risk att man per
-automatik leds in till tankebanan att $\phi$ i sig skulle vara en ``potentiell
-energi'', vilket ej {\"a}r fallet. V{\aa}r potential $\phi$ har dock den
-fysikaliska dimensionen av volt (V), och en potentialskillnad l{\aa}ter sig
-sj{\"a}lvfallet uttryckas i denna enhet.
+Vi b{\"o}r h{\"a}r passa p{\aa} att erinra oss att sj{\"a}lva ordet
+``potential'' medf{\"o}r en stor risk att man per automatik leds in till
+tankebanan att $\phi$ i sig skulle vara en ``potentiell energi'', vilket ej
+{\"a}r fallet. V{\aa}r potential $\phi$ har dock den fysikaliska dimensionen
+av volt (V), och en potentialskillnad l{\aa}ter sig sj{\"a}lvfallet uttryckas
+i denna enhet.\sidx{Skal{\"a}r potential $\phi$}[Elektrostatisk]
 
 \section{De elektriska f{\"a}ltlinjerna {\"a}r alltid ortogonala mot en
   ekvipotentialyta}
