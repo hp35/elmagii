@@ -72,5 +72,11 @@ are any complaints.
     illustrate that the rotation of a field as such can be zero despite
     that the field as such obviously is going circularly around a point.</i>
 
+[`field-rot-parallel.mp`](field-rot-parallel.mp)
+    ([`field-rot-parallel.pdf`](field-rot-parallel.pdf))
+    <i>MetaPost drawing of an inhomogeneous vector field which gives rise
+    to a non-zero rotation everywhere despite that the field lines everywhere
+    are parallel.</i>
+
 ## Copyright
 Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
