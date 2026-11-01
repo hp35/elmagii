@@ -3,8 +3,8 @@
 % Github: https://github.com/elmagii/lect-01/
 % Last change: June 27, 2026
 %
-% Lecture No 1 in the course ``Elektromagnetism II, 1TE626 (2025)'',
-% held November 3, 2025, at Uppsala University, Sweden.
+% Lecture No 1 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
+% held November 3, 2026, at Uppsala University, Sweden.
 %
 % Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
@@ -24,14 +24,14 @@
 %
 \def\coursename{Elektromagnetism II}
 \def\coursecode{1TE626}
-\def\courseyear{2025}
+\def\courseyear{2026}
 \def\courserepo{https://github.com/hp35/elmagii/}
 \def\lecturenumber{1}
 \def\lecturetitle{Elektrostatik, superpositionsprincipen och Gauss lag}
 \def\lecturetitlesub{}
 \def\lectureauthor{Fredrik Jonsson}
 \def\lectureplace{Uppsala Universitet}
-\def\lecturedate{3 november 2025}
+\def\lecturedate{3 november 2026}
 %-------------------- BEGIN OF LOCAL MACROS --------------------
 \input macros/epsf.tex
 \input macros/eplain.tex
@@ -215,7 +215,7 @@ I elektrostatisk regim {\"a}r allts{\aa} systemets dimensioner v{\"a}esentligt
 mycket mindre {\"a}n den elektromagnetiska v{\aa}gl{\"a}ngden, som om
 frekvensen $f\approx0$ sj{\"a}lvfallet blir o{\"a}ndlig.
 Om exempelvis en sp{\"a}nning varierar med {\red{frekvensen $50\ {\rm Hz}$,
-som i vårt vanliga eln{\"a}t}}, s{\aa} blir den elektromagnetiska
+som i v{\aa}rt vanliga eln{\"a}t}}, s{\aa} blir den elektromagnetiska
 v{\aa}gl{\"a}ngden som skapas i systemet
 $$
   \red{\lambda = {{3 \times 10^8\ {\rm m}/{\rm s}}\over{50\ {\rm Hz}}}
@@ -233,8 +233,8 @@ l{\"a}nge variationerna {\"a}r l{\aa}ngsamma.
 
 {\it{\red{Elektro-kvasistatik}}} {\"a}r n{\"a}sta niv{\aa}, d{\"a}r de
 elektriska f{\"a}lten i systemet f{\"o}rvisso varierar i tiden, men fortfarande
-s{\aa} pass l{\aa}ngsamt att v{\aa}gutbredning och str{\aa}lning helt kan
-f{\"o}rsummas inom systemets dimensioner.
+s{\aa} pass l{\aa}ngsamt att {\red{v{\aa}gutbredning och str{\aa}lning helt kan
+f{\"o}rsummas inom systemets dimensioner}}.
 Det finns d{\aa} tidsberoende str{\"o}mmar och sp{\"a}nningar, men de
 elektromagnetiska f{\"a}lten hinner fortfarande ``anpassa sig'' n{\"a}stan
 omedelbart {\"o}ver hela systemet, och vi kan fortfarande med god approximation
@@ -275,13 +275,18 @@ frekvensen\numberedfootnote{En anv{\"a}ndbar tumregel att ha i bakhuvudet
   {\"a}r att {\it en f{\"o}rflyttning med ljushastigheten $c_0$ under en
   nanosekund, eller periodtiden f{\"o}r en v{\aa}g med frekvensen 1~GHz,
   motsvarar ungef{\"a}r en fot -- ``ljusfoten'' -- eller cirka 30 centimeter}.}
-en ljushastighet $1\ {\rm GHz}$ v{\aa}gl{\"a}ngden ungef{\"a}r $30\ {\rm cm}$.
+en ljushastighet $1\ {\rm GHz}$ v{\aa}gl{\"a}ngden ungef{\"a}r
+$30\ {\rm cm}$.\numberedfootnote{Det finns h{\"a}r en mycket underh{\aa}llande
+  demonstration av ``l{\"a}ngden av en nanosekund'' av legendaren Grace Hopper,
+  amerikansk datorpionj{\"a}r och sj{\"o}officer (flottiljamiral) i US Navy,
+  p{\aa} {\tt https://www.youtube.com/watch?v=gYqF6-h9Cvg}
+  Grace Hopper blev 1980 hedersdoktor vid Lin\-k{\"o}pings universitet.}
 Redan n{\aa}gra centimeters ledningsl{\"a}ngd kan d{\aa} ge m{\"a}rkbara
 fasf{\"o}rskjutningar och reflektioner.
 
 {\it{\red{Elektrodynamik}}} {\"a}r den regim d{\"a}r systemets dimensioner $L$
 blir j{\"a}mf{\"o}rbara med den elektromagnetiska v{\aa}gl{\"a}ngden $\lambda$
-i problemet, frt vill säga att vi inom {\red{elektrodynamisk regim}} har att
+i problemet, frt vill s{\"a}ga att vi inom {\red{elektrodynamisk regim}} har att
 $$
   \red{L\approx\lambda},
 $$
@@ -442,13 +447,13 @@ Magn\'etisme (1785)} \sidx{de Coulomb, Charles-Augustin (1736--1806)}[
 I denna publikation, p{\aa} sidan 579, fastst{\"a}lls det f{\"o}r f{\"o}rsta
 g{\aa}ngen att den attraktiva kraften \sidx{Attraktionskraft}[Elektrisk]
 mellan tv{\aa} motsatt laddade sf{\"a}rer {\"a}r proportionell mot produkten av
-laddningarna p{\aa} sf{\"a}rerna, samt inverst proportionell mot kvadraten p{\aa}
-avst{\aa}ndet mellan sf{\"a}rerna;\numberedfootnote{Coulombs lag var
+laddningarna p{\aa} sf{\"a}rerna, samt inverst proportionell mot kvadraten
+p{\aa} avst{\aa}ndet mellan sf{\"a}rerna;\numberedfootnote{Coulombs lag var
   sj{\"a}lvfallet ej uttryckt i moderna enheter i denna tidiga artikel;
   SI-systemet skulle inte komma att tr{\"a}da i kraft f{\"o}rr{\"a}n 1954.}
-med andra ord Coulombs lag \sidx{Coulombs kraftlag} s{\aa} som vi idag k{\"a}nner
-den, och som dessutom {\"a}r den prim{\"a}ra basen f{\"o}r {\"a}mnet f{\"o}r
-denna f{\"o}rel{\"a}sning.
+med andra ord Coulombs lag \sidx{Coulombs kraftlag} s{\aa} som vi idag
+k{\"a}nner den, och som dessutom {\"a}r den prim{\"a}ra basen f{\"o}r
+{\"a}mnet f{\"o}r denna f{\"o}rel{\"a}sning.
 
 Rent historiskt {\"a}r det anm{\"a}rkningsv{\"a}rt att det tog mer {\"a}n hundra
 {\aa}r innan den Brittiska fysikern Joseph John ``J.~J.'' Thomson \sidx{Thomson,
@@ -684,7 +689,7 @@ volymelement $\Delta V_k$ i k{\"a}llpunkterna ${\bf x}'_k$ i rummet uppb{\"a}r
 en laddning som vi kan se som en punktladdning, vilket i ett {\red{kontinuum}}
 {\"o}verg{\aa}r till
 \red{$$
-  q'_k=\rho({\bf x}')\Delta V_k\to\rho({\bf x}')dV'.
+  q'_k=\rho({\bf x}')\Delta V_k\quad\to\quad\rho({\bf x}')dV'.
 $$}
 D{\aa} alla dessa infinitesimala volymelement summeras upp erh{\aa}ller
 vi {\red{{\it Coulombintegralen}}} \sidx{Integral}[Volymintegral]\sidx{Coulombs
@@ -762,7 +767,7 @@ i Coulombs lag, i fyra enkla steg som f{\"o}rhoppningsvis ger oss en djupare
 fysikalisk f{\"o}rst{\aa}else f{\"o}r vad Gauss lag inneb{\"a}r.
 
 \subsection{Definition: \red{Elektriskt fl{\"o}de}}
-\sidx{Elektriskt fl{\"o}de}
+\sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 F{\"o}r att diskutera resultaten i dessa fyra steg kommer vi att anv{\"a}nda
 konceptet {\it elektriskt fl{\"o}de} $\Phi_{\rm E}$
 (enhet: ${\rm V}\cdot{\rm m}$), som definieras som den integrerade
@@ -788,11 +793,10 @@ normalvektor~${\bf n}$.\sidx{Normalvektor}
   punktladdning}}
 \sidx{Gauss lag}[H{\"a}rledning fr{\aa}n Coulombs lag]
 Antag att vi har en punktladdning \sidx{Punktladdning} $q'$ placerad i position
-vid ortsvektorn ${\bf x}'$. D{\aa} vi ber{\"a}knar det elektriska
-fl{\"o}det \sidx{Elektriskt fl{\"o}de} ut fr{\aa}n denna laddning, s{\aa} kan vi
-se det som att fl{\"o}det h{\"a}rr{\"o}r fr{\aa}n en {\it k{\"a}lla}, och vi
-kommer fram{\"o}ver i kursen ofta att relatera till ``k{\"a}lladdningar'' som
-ger upphov till elektriska f{\"a}lt och
+vid ortsvektorn ${\bf x}'$. D{\aa} vi ber{\"a}knar det elektriska fl{\"o}det ut
+fr{\aa}n denna laddning, s{\aa} kan vi se det som att fl{\"o}det h{\"a}rr{\"o}r
+fr{\aa}n en {\it k{\"a}lla}, och vi kommer fram{\"o}ver i kursen ofta att
+relatera till ``k{\"a}lladdningar'' som ger upphov till elektriska f{\"a}lt och
 fl{\"o}den.\numberedfootnote{Genomg{\aa}ende kommer vi i kursen att s{\"a}tta
   ett prim ($'$) p{\aa} de objekt som vi betraktar som k{\"a}llor,
   \sidx{K{\"a}lladdning} som ${\bf x}'$, $dS'$ (ytelement) eller $dV'$
@@ -807,11 +811,12 @@ fl{\"o}den.\numberedfootnote{Genomg{\aa}ende kommer vi i kursen att s{\"a}tta
 Vi l{\"a}gger en hypotetisk sf{\"a}r, eller ``virtuell sf{\"a}r'',
 \sidx{Virtuell sf{\"a}r} $S$ med radien $|{\bf x}-{\bf x}'|=r=\hbox{konstant}$
 runt punktladdningen, med syfte att f{\"o}rs{\"o}ka ber{\"a}kna det totala
-elektriska fl{\"o}det \sidx{Elektriskt fl{\"o}de} ut genom ytan.
+elektriska fl{\"o}det ut genom ytan.
 \epsfig{figs/gauss-step-1.1}\noindent
 Det {\red{elektriska fl{\"o}det}} ut genom den slutna sf{\"a}ren $S$, r{\"a}knat
 gentemot ytans normalvektor ${\bf n}$, ges med utnyttjandet av den sf{\"a}riska
 symmetrin som\sidx{Integral}[Ytintegral]
+\sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 \red{$$
   \eqalign{
     \Phi_{\rm E}&=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}\cr
@@ -877,8 +882,9 @@ Resultatet av detta resonemang {\"a}r att vi {\it fortfarande har exakt samma
 totala elektriska fl{\"o}de} $\Phi_{\rm E}$ ut genom ytan som omsluter
 punktladdningen $q'$. Med andra ord g{\"a}ller det {\"a}ven f{\"o}r en
 {\red{{\it godtycklig} omslutande yta $S$}} att\sidx{Integral}[Ytintegral]
+\sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 \red{$$
-  \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}={{q'}\over{\varepsilon_0}},
+ \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}={{q'}\over{\varepsilon_0}},
 $$}
 det vill s{\"a}ga att {\it det totala elektriska fl{\"o}det ut genom den slutna
 ytan enbart best{\"a}ms av v{\"a}rdet p{\aa} den inneslutna punktladdningen}.
@@ -899,8 +905,7 @@ elektriska fl{\"o}det som $q'_k/\varepsilon_0$.
 
 Rent formellt {\"a}r det totala elektriska fl{\"o}det ut genom den slutna
 generella ytan $S$ enligt superpositionsprincipen \sidx{Superpositionsprincipen}
-given
-som\sidx{Integral}[Ytintegral]
+given som\sidx{Integral}[Ytintegral]\sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 \red{$$
   \eqalign{
     \Phi_{\rm E}&=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}
@@ -915,10 +920,10 @@ som\sidx{Integral}[Ytintegral]
   }
 $$}
 Slutsatsen av detta resultat {\"a}r att {\it det totala elektriska fl{\"o}det
-$\Phi_{\rm E}$ ut genom den slutna ytan fortfarande enbart beror av den inneslutna
-laddningen $q'_{\rm tot}$.} \sidx{Elektriskt fl{\"o}de} I det sista steget kommer
-vi nu att gene\-ra\-li\-sera detta till godtyckliga kontinuerliga
-laddningsf{\"o}rdelningar.
+$\Phi_{\rm E}$ ut genom den slutna ytan fortfarande enbart beror av den
+inneslutna laddningen $q'_{\rm tot}$.}
+I det sista steget kommer vi nu att gene\-ra\-li\-sera detta till godtyckliga
+kontinuerliga laddningsf{\"o}rdelningar.
 \vfill\eject
 
 \subsection{\red{Steg~4: Godtycklig omslutande yta och kontinuerlig
@@ -947,6 +952,7 @@ volymintegralen\numberedfootnote{Notera att Griffiths (sid.~70)
   olyckligtvis anv{\"a}nder den udda och vilseledande notationen
   $Q_{\rm enc}=\int_V\rho\,d\tau$ f{\"o}r volymintegralen. Normalt
   anv{\"a}nder vi $\tau$ som integrationsvariabel i {\it tid}.}
+\sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 \red{$$
   \eqalign{
     \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}
