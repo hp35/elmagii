@@ -59,5 +59,10 @@ are any complaints.
     <i>MetaPost drawing of an inhomogeneous vector field, everywhere
     possessing a non-zero divergence.</i>
 
+[`field-pointcharge.mp`](field-pointcharge.mp)
+    ([`field-pointcharge.pdf`](field-pointcharge.pdf))
+    <i>MetaPost drawing of a the electric field from a positive point
+    charge.</i>
+
 ## Copyright
 Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
