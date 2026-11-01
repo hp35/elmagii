@@ -64,5 +64,13 @@ are any complaints.
     <i>MetaPost drawing of a the electric field from a positive point
     charge.</i>
 
+[`field-biot.mp`](field-biot.mp)
+    ([`field-biot.pdf`](field-biot.pdf))
+    <i>MetaPost drawing of the vector field corresponding to the magnetic
+    field from Biot--Savarts law for a straight current through origo,
+    directed in the positive z-direction. This figure is intended to
+    illustrate that the rotation of a field as such can be zero despite
+    that the field as such obviously is going circularly around a point.</i>
+
 ## Copyright
 Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
