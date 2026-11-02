@@ -64,6 +64,14 @@ are any complaints.
     <i>MetaPost drawing of a the electric field from a positive point
     charge.</i>
 
+[`field-unicharge.mp`](field-unicharge.mp)
+    ([`field-unicharge.pdf`](field-unicharge.pdf))
+    <i>MetaPost drawing of a domain with a homogeneous distribution of
+    positive charge, leading to the divergence of the static electric
+    field to be positive everywhere in the domain. This figure illustrates
+    the paradox that even with this in the continuum limit possesses a zero
+    field.</i>
+
 [`field-biot.mp`](field-biot.mp)
     ([`field-biot.pdf`](field-biot.pdf))
     <i>MetaPost drawing of the vector field corresponding to the magnetic
