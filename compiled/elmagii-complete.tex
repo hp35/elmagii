@@ -1,7 +1,7 @@
 %
-% File: teach/elmagii/compiled/src/main.tex [plain TeX code]
+% File: elmagii/compiled/src/main.tex [plain TeX code]
 % Github: https://github.com/hp35/elmagii/tree/main/compiled/src
-% Last change: February 22, 2026
+% Last change: October 31, 2026
 %
 % Compilation of all Lecture Notes in the course "Elektromagnetism II, 1TE626",
 % held 2022-2026 at Uppsala University, Sweden.
@@ -306,10 +306,36 @@
   \writenumberedtocentry{index}{\hskip24pt{Index}}%
   \nobreak\vskip 48pt\noindent\ignorespaces%
   \readindexfile{i}\cleardoublepage\fi}
+%
+% File: elmagii/compiled/src/copyrights.tex [plain TeX code]
+% Github: https://github.com/hp35/elmagii/tree/main/compiled/src
+% Last change: October 31, 2026
+%
+% The standard copyright and source information which always is present
+% in page two of each lecture when compiled into the complete Lecture
+% Notes in the course "Elektromagnetism II, 1TE626", held 2022-2026 at
+% Uppsala University, Sweden.
+%
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
+% License (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
 \def\copyrights{
   \line{\bf F{\"o}rel{\"a}sningar i Teoretisk Elektroteknik\hfil}
   \line{Elektromagnetism II (1TE626) f{\"o}r Teknisk Fysik\hfil}
-  \line{F{\"o}rel{\"a}sningar givna 2022--2025 vid Uppsala Universitet,\hfil}
+  \line{F{\"o}rel{\"a}sningar givna 2022--2026 vid Uppsala Universitet,\hfil}
   \line{{\AA}ngstr{\"o}mlaboratoriet, Institutionen f{\"o}r Elektroteknik\hfil}
   \line{SE--752\thinspace37, Uppsala, Sverige\hfil}
   \bigskip
@@ -333,7 +359,7 @@
   \line{ISBN 91-XXXX-XXX-X\hfil}
   \line{Printed on \fullmonthname\ \the\day, \the\year\hfil}
   \medskip
-  \line{\TeX\ is a trademark of the American Mathematical Society\hfil}
+  \line{\TeX\ is a trademark of the American Mathematical Society.\hfil}
   \vfil\eject
 }
 \def\frontpage{
@@ -367,6 +393,16 @@
   \nobreak\vskip 24pt\noindent\ignorespaces}
 
 %
+% As the inclusion of the extra lecture on "Basic vector analysis applied to
+% electromagnetic theory" ("Grundläggande vektoranalys inom elektromagnetisk
+% fältteori") as Lecture 0, we will start the chapter counting on zero rather
+% than one. (Also, this makes the appearance more computationally appealing.)
+% The first \advance of this counter appear at the first \initlecture, and
+% will yield zero as the first chapter number.
+%
+\chapno=-1
+
+%
 % Define language constants. We are here only concerned with Swedish
 % or English, and we for this document set the language to be used
 % throughout to Swedish.
@@ -384,7 +420,8 @@
 \pageno=-9\footline{\hfil\folio\hfil}  % Roman pagenumbering for preface
 \preface{{\it First things first}\medskip\noindent
   L{\aa}t oss b{\"o}rja med det viktigaste av allt: Vad av detta kommer p{\aa}
-  tentan? I detta har f{\"o}rfattaren en {\it bra} och en {\it d{\aa}lig} nyhet:
+  tentan? H{\"a}r har f{\"o}rfattaren och f{\"o}rel{\"a}saren en {\it bra} och
+  en {\it d{\aa}lig} nyhet:
   \medskip
   \item{$\bullet$}{Den {\it bra} nyheten {\"a}r att {\it praktiskt taget
                    ingenting} av det som h{\"a}r presenteras kommer p{\aa}
@@ -582,6 +619,33 @@
 %
 % Collection of formulas in electromagnetism.
 %
+%
+% File: teach/elmagii/formulas/src/formulas.tex [plain TeX code]
+% Github: https://github.com/elmagii/formulas/
+% Last change: November 1, 2026
+%
+% This is the primary collection of formulas in the course ``Elektromagnetism
+% II, 1TE626 (2025)'' for Engineering Physics, held 2022-2026, at Uppsala
+% University, Sweden. This is a compilation of the source present at
+% elmagii/formulas/src/formulas.tex, into a compact and handy two-column
+% format.
+%
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
+% License (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
 \font\twelvecmbx=cmbx12
 \input ../lect-01/macros/eplain.tex
 \input amssym % to get the {\Bbb E} font (strikethrough E)
@@ -626,13 +690,39 @@
   \hrule width\hsize\vskip10pt}
 \def\eqtitle#1{\vskip2pt\goodbreak{\it #1}\par}
 \def\versionnumber{1.0}             % Version of this collection of formulas
-\def\versiondate{11 december, 2025} % Timestamp of this collection of formulas
+\def\versiondate{30 oktober, 2026}  % Timestamp of this collection of formulas
 \def\version{v.\versionnumber\ (\versiondate)}
 \vskip4pt
 \centerline{Elektromagnetism II, Uppsala Universitet}
+\centerline{Sammanst{\"a}lld av Fredrik Jonsson}
 \centerline{\version}
 \centerline{{\tt github.com/hp35/elmagii}}
 \vskip10pt
+%
+% File: teach/elmagii/formulas/src/formulas.tex [plain TeX code]
+% Github: https://github.com/elmagii/formulas/
+% Last change: November 1, 2026
+%
+% Source for the primary collection of formulas in ``Elektromagnetism II,
+% 1TE626 (2025)'' for Engineering Physics, held 2022-2026, at Uppsala
+% University, Sweden.
+%
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
+% License (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
 \eqsection{Variabler, konstanter och enheter}
 \eqtitle{Beteckningar och SI-enheter}
 \halign{#\hfil\ &#\hfil&\ \hfil(#)\cr
@@ -652,6 +742,9 @@ ${\bf D}$
     & Elektrisk fl{\"o}dest{\"a}thet
       ${\bf D}=\varepsilon_0\varepsilon_{\rm r}{\bf E}$
     & ${\rm C}/{\rm m}^2$\cr
+$\delta$
+    & Diracs delta-distribution $\delta({\bf x}-{\bf x}')$
+    & $1/{\rm m}^{n}$\cr
 $\varepsilon_0$
     & Elektrisk permittivitet i vakuum
     & ${\rm F}/{\rm m}$\cr
@@ -670,6 +763,9 @@ ${\bf E}$
 ${\cal E}$
     & Elektromotorisk ``kraft'' (EMK)
     & ${\rm V}$\cr
+$\varphi$
+    & Fas hos en v{\aa}g, m{\"a}tt i radianer
+    & ${\rm 1}$\cr
 $\phi$
     & Skal{\"a}r potential
     & ${\rm V}$\cr
@@ -851,6 +947,12 @@ $$
 $$
   {\bf B}\equiv\mu_0({\bf H}+{\bf M})
     =\mu_0\mu_{\rm r}{\bf H}
+$$
+
+\eqsection{Punktladdningar}
+\eqtitle{System av $N$ laddningar $q_k$ placerade i k{\"a}llpunkter ${\bf x}_k$}
+$$
+  \rho({\bf x})=\sum^{N}_{k=1}q_k\delta({\bf x}-{\bf x}'_k)\,dV
 $$
 \vfill\eject
 
@@ -1206,7 +1308,8 @@ $$
     =-\nabla'{{1}\over{|{\bf x}-{\bf x}'|}}
     =-{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
 $$
-\eqtitle{``Tricket II'' -- anv{\"a}nds f{\"o}r att visa att $\nabla\cdot{\bf B}=0$
+\eqtitle{``Tricket II'' -- anv{\"a}nds f{\"o}r att visa att
+  $\nabla\cdot{\bf B}=0$
 \sidx{Tricket $\displaystyle\nabla{{1}\over{\char124}{\bf x}-{\bf x}'{\char124}}
 =-{{({\bf x}-{\bf x}')}\over{{\char124}{\bf x}-{\bf x}'{\char124}^3}}$}}
 $$
@@ -1229,10 +1332,10 @@ $$
 $$
   \iiint_V(\nabla\times{\bf a})\,dV=\oiint_S d{\bf S}\times{\bf a}
 $$
-\eqtitle{Stokes teorem (Kelvin--Stokes teorem, ``rotationsteoremet'')
-  \sidx{Stokes teorem}}
+\eqtitle{Stokes teorem ({\"a}ven kallat Kelvin--Stokes teorem,
+  ``rotationsteoremet'', eller ``cirkulationsteoremet'')\sidx{Stokes teorem}}
 $$
-  \iint_V(\nabla\times{\bf a})\cdot d{\bf S}=\oint_{\Gamma}{\bf a}\cdot d{\bf l}
+  \iint_S(\nabla\times{\bf a})\cdot d{\bf S}=\oint_{\Gamma}{\bf a}\cdot d{\bf l}
 $$
 \eqtitle{Gradient-teoremet (analysens fundamentalsats)}
 $$
@@ -1255,6 +1358,22 @@ $$
 $$
   \iint_S(\nabla f)\times d{\bf S}=-\oint_{\Gamma}f\,d{\bf l}
 $$
+
+\eqsection{Diracs delta-distribution}
+\eqtitle{Selektionsegenskaper}
+$$
+  \eqalign{
+    \hbox{1D:}&\hskip8pt
+      \int^{\infty}_{-\infty}f(x)\delta(x-x')\,dx
+        =f(x'),
+      \hskip8pt[\delta]={\rm m}^{-1}\cr
+    \hbox{3D:}&\hskip8pt
+      \int_{{\Bbb R}^3}f({\bf x}-{\bf x}')\delta({\bf x}-{\bf x}')\,dV
+        =f({\bf x}'),
+      \hskip8pt[\delta]={\rm m}^{-3}\cr
+  }
+$$
+
 \vfill\eject
 % \eqsection{Ofta anv{\"a}ndbara skal{\"a}ra integraler}
 \eqsection{Skal{\"a}ra integraler}
@@ -1309,7 +1428,6 @@ $$
   +\ldots\cr
   }
 $$
-\vfill\eject
 
 \eqsection{Koordinatsystem}
 \eqtitle{Kartesiska koordinater ($x,y,z$)}
@@ -1343,12 +1461,13 @@ $$
         \Big)\cr
   }
 $$
+\vfill\eject
 
 \eqtitle{Cylindriska koordinater ($r,\varphi,z$)}
 \halign{#\hfil\quad & #\hfil\cr
   Ortsvektor    & ${\bf x}={\bf e}_rr+{\bf e}_zz$ \cr
   Enhetsvektorer & ${\bf e}_r={\bf e}_x\cos\varphi+{\bf e}_y\sin\varphi$ \cr
-              & ${\bf e}_{\varphi}=-{\bf e}_x\sin\varphi+{\bf e}_y\cos\varphi$ \cr
+          & ${\bf e}_{\varphi}=-{\bf e}_x\sin\varphi+{\bf e}_y\cos\varphi$ \cr
   Linjeelement  & $d{\bf l}={\bf e}_r\,dr
                      +{\bf e}_{\varphi}r\,d\varphi
                      +{\bf e}_z\,dz$ \cr
@@ -1383,7 +1502,6 @@ $$
         \Big)\cr
   }
 $$
-\vfill\eject
 
 \eqtitle{Sf{\"a}riska koordinater ($r,\varphi,\theta$)}
 \halign{#\hfil\quad & #\hfil\cr
@@ -1445,9 +1563,9 @@ $$
 \vfill
 \supereject
 \if R\lr \null\vfill\eject\fi}
-\cleardoublepage
+% \cleardoublepage
 %%%%%%%%%%%%%% Back to normal single-column %%%%%%%%%%%%%%
-~\cleardoublepage
+%~\cleardoublepage
 
 %
 % Portrait gallery in electromagnetism.
@@ -2120,7 +2238,8 @@ $$
         \belowdisplayskip=3pt
         {\bf F}=q\big({\bf E}+({\bf v}\times{\bf B})\big),
       $$
-      som verkar p{\aa} en r{\"o}rlig laddad partikel.}
+      som verkar p{\aa} en r{\"o}rlig laddad partikel.
+      F{\"o}r\-v{\"a}x\-las ofta med Ludvig Lorenz.}
     \else
       {Dutch theoretical physicist who in 1902 shared the Nobel
       Prize in Physics with Pieter Zeeman for the discovery and theoretical
@@ -2131,7 +2250,8 @@ $$
         \belowdisplayskip=3pt
         {\bf F}=q\big({\bf E}+({\bf v}\times{\bf B})\big),
       $$
-      acting upon a moving charged particle.}
+      acting upon a moving charged particle.
+      Often confused with Ludvig Lorenz.}
     \fi}%
     \sidx{Lorentz, Hendrik Antoon (1853--1928)}
 }
@@ -2155,7 +2275,8 @@ $$
         \belowdisplayskip=3pt
         \nabla\cdot{\bf A}+
           {{1}\over{c^2}}{{\partial\phi}\over{\partial t}} = 0.
-      $$}
+      $$
+      F{\"o}rv{\"a}xlas ofta med Hendrik Antoon Lorentz.}
     \else
       {Danish physicist and mathematician. In 1867, Lorenz gave
       completely general integral solutions to the differential equations of
@@ -2166,7 +2287,8 @@ $$
         \belowdisplayskip=3pt
         \nabla\cdot{\bf A}+
           {{1}\over{c^2}}{{\partial\phi}\over{\partial t}} = 0.
-      $$}
+      $$
+      Often confused with Hendrik Antoon Lorentz.}
     \fi}%
     \sidx{Lorenz, Ludvig (1829--1891)}
 }
@@ -2180,7 +2302,7 @@ $$
     {James Clerk Maxwell}%
     {1831--1879}%
     {\ifnum\lang=\swedish
-      {Skotsk fysiker och matematiker som konsliderade den klassiska teorin
+      {Skotsk fysiker och matematiker som konsoliderade den klassiska teorin
       f{\"o}r elektromagnetisk str{\aa}lning, vilken var den f{\"o}rsta
       teorin som be\-skrev elektricitet, magnetism och ljus som oli\-ka
       manifestationer av samma fenomen. Max\-wells ekvationer f{\"o}r
@@ -2544,14 +2666,14 @@ magnetostatics, and electrodynamics.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% The rest of this document is autoloaded and formatted externally %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Begin of auto-extracted text from ../lect-01/lecture-01.tex %%%
+%%% Begin of auto-extracted text from ../lect-00/lecture-00.tex %%%
 %
-% File: teach/elmagii/lect-01/lecture-01.tex [plain TeX code]
-% Github: https://github.com/elmagii/lect-01/
-% Last change: June 27, 2026
+% File: teach/elmagii/lect-00/lecture-00.tex [plain TeX code]
+% Github: https://github.com/elmagii/lect-00/
+% Last change: October 31, 2026
 %
-% Lecture No 1 in the course ``Elektromagnetism II, 1TE626 (2025)'',
-% held November 3, 2025, at Uppsala University, Sweden.
+% Lecture No 0 in the course ``Elektromagnetism II, 1TE626 (2025)'',
+% held November 3, 2026, at Uppsala University, Sweden.
 %
 % Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
@@ -2571,14 +2693,2271 @@ magnetostatics, and electrodynamics.
 %
 \def\coursename{Elektromagnetism II}
 \def\coursecode{1TE626}
-\def\courseyear{2025}
+\def\courseyear{2026}
+\def\courserepo{https://github.com/hp35/elmagii/}
+\def\lecturenumber{0}
+\def\lecturetitle{Grundl{\"a}ggande vektoranalys inom f{\"a}ltteori}
+\def\lecturesubtitle{}
+\def\lectureauthor{Fredrik Jonsson}
+\def\lectureplace{Uppsala Universitet}
+\def\lecturedate{3 november 2026}
+%-------------------- BEGIN OF LOCAL MACROS --------------------
+\edef\expandedlecturenumber{0}
+\def\ifempty#1{\ifx\relax#1\relax}
+\advance\chapno by 1
+\secno=0
+\footnotenumber=0
+\message{==================== Lecture 0 ====================}
+\writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 0 -- {Grundl{\"a}ggande vektoranalys inom f{\"a}ltteori}}{\thechapno}
+\hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
+\topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
+\ifcolors
+  \voffset=-10.2mm\topskip=0pt
+\fi
+\headline={\ifnum\secno>0\ifodd\pageno\rightheadline\else\leftheadline\fi
+  \else\hfill\fi}
+\def\rightheadline{\tenrm{\it F\"orel\"asning 0}
+  \hfil{\it \coursename, \coursecode\ (\courseyear)}}
+\def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
+  \hfil{\it F\"orel\"asning 0}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-00/../lect-01/macros/UU_logo_color.eps}}
+\vskip-42pt\hfill\vbox{
+    \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
+    \hbox{{\it Lecture Notes, \lectureauthor}}
+    \hbox{{\it Document Revision \today}}
+    \hbox{{\it \courserepo}}}\vskip 36pt
+\centerline{\twelvesc F\"orel\"asning 0}
+\vskip 24pt\noindent
+\centerline{\twelvesc{Grundl{\"a}ggande vektoranalys inom f{\"a}ltteori}}
+\expandafter\ifempty\expandafter{\lecturesubtitle}%
+  \else\centerline{\twelvesc\lecturesubtitle}\fi
+\bigskip
+\centerline{\lectureauthor, \lectureplace, \lecturedate}
+\vskip24pt
+%--------------------- END OF LOCAL MACROS ---------------------
+
+
+
+\plan{Denna f{\"o}rel{\"a}sning {\"a}r bist{\aa}r med ett extramaterial som
+avhandlar de grundl{\"a}ggande begrepp inom vektoranalys som vi frekvent kommer
+att anv{\"a}nda oss av i kommande f{\"o}rel{\"a}sningar.
+Denna extraf{\"o}rel{\"a}sning h{\aa}lls i n{\"a}ra anslutning till den
+f{\"o}rsta f{\"o}rel{\"a}sningen i kursen, och avser att fungera som
+rekapitulation f{\"o}r den teknolog som k{\"a}nner sig lite ringrostig
+i sin vektoranalys.
+
+Begreppen f{\"a}lt, gradient, divergens och rotation g{\aa}s igenom med
+praktiska exempel h{\"a}mtade fr{\aa}n elektrostatik och magnetostatik.
+Vi inleder med en rekapitulation kring begreppet delta-distribution i en
+och tre dimensioner, f{\"o}ljt av en genomg{\aa}ng av de grundl{\"a}ggande
+definitionerna av gradient $\nabla\phi$, divergens $\nabla\cdot{\bf a}$ och
+rotation $\nabla\times{\bf b}$.
+De grundl{\"a}ggande identiteterna f{\"o}r divergensen av en rotation och
+rotationen av en gradient g{\aa}s igenom, d{\aa} dessa {\"a}r v{\"a}sentliga
+f{\"o}r f{\"o}rst{\aa}elsen av hur vi rent matematiskt kan motivera existensen
+av vektorpotentialen och den skal{\"a}ra potentialen.
+F{\"o}rel{\"a}sningen avslutas med att illustrera vad rotationen av en rotation
+($\nabla\times\nabla\times$) inneb{\"a}r, d{\aa} detta {\"a}r centralt f{\"o}r
+formuleringen av den elektromagnetiska v{\aa}gekvationen.}
+
+\threepointsummary{%
+  Delta-funktionen, som kan anv{\"a}ndas som en s{\"a}tt att f{\aa} med punkt,
+  linje- och yt-laddningar i en generell beskrivning i laddningst{\"a}theten
+  $\rho({\bf x})$ eller str{\"o}mt{\"a}theten ${\bf J}({\bf x})$.
+  Exempel:
+    (A) {\it Punktladdning} $q$ i k{\"a}llpunkten ${\bf x}'$, be\-skriven av
+        volymladdningst{\"a}theten $\rho({\bf x})=q\delta({\bf x}-{\bf x}')$,
+    (B) {\it Linjeladdning} med linjeladdningst{\"a}thet $\lambda$ l{\"a}ngs
+        $z$-axeln och genom $(x',y')$, beskriven av $\rho({\bf x})=\lambda
+        \delta(x-x')\delta(y-y')$, samt
+    (C) {\it Ytladdning} med ytladdningst{\"a}theten $\sigma$ i planet $z=0$,
+    beskriven av $\rho({\bf x})=\sigma\delta(z-z')$.
+}{%
+  Tolkningen av gradienten $\nabla\phi$, divergensen $\nabla\cdot{\bf a}$
+  och rotationen $\nabla\times{\bf b}$, samt vad begreppet konservativt
+  f{\"a}lt inneb{\"a}r.
+}{%
+  Tolkningen av vektoridentiteterna
+  $$
+    \eqalign{
+      &\nabla\times(\nabla\phi)=0,\cr
+      &\nabla\cdot(\nabla\times{\bf a})={\bf 0},\cr
+      &\nabla\times(\nabla\times{\bf a})
+         =\nabla(\nabla\cdot{\bf a})-\nabla^2{\bf a},\cr
+    }
+  $$
+  samt hur dessa direkt ger oss ett antal fundamentala relationer inom
+  klassisk elektromagnetism.
+}
+\vfill\eject\copyrights
+
+\section{Introduktion}
+Inom elektromagnetism st{\"o}ter vi p{\aa} n{\aa}gra centrala storheter, som
+elektrisk laddning, elektriskt f{\"a}lt, magnetiskt f{\"a}lt och elektrisk
+potential. Dessa storheter beskriver olika aspekter av hur elektriska och
+magnetiska fenomen fungerar, och formulerar de variabler vi har att arbeta
+med.\sidx{Elektromagnetism}
+
+Vi kan dock fr{\aa}ga oss hur vi p{\aa} b{\"a}sta s{\"a}tt egentligen beskriver
+ett f{\"a}lt som varierar fr{\aa}n punkt till punkt? Hur kan vi till exempel
+matematiskt skilja mellan ett f{\"a}lt som pekar ut fr{\aa}n en punkt och ett
+som cirkulerar runt den? Framf{\"o}r allt, vilka grundl{\"a}ggande matematiska
+operationer kan vi utnyttja som v{\aa}rt ``spr{\aa}k'' f{\"o}r att formulera
+teorin f{\"o}r de fysikaliska lagar som g{\"a}ller f{\"o}r elektromagnetiska
+f{\"a}lt och deras utbredning i rum och tid? Det {\"a}r h{\"a}r vektoranalysen
+kommer till v{\aa}r assistans.\sidx{Vektoranalys}[Introduktion till]
+
+I denna extra f{\"o}rel{\"a}sning kommer vi att i huvudsak introducera fem
+grundl{\"a}ggande begrepp, som successivt genom kursen kommer att s{\"a}ttas
+samman och kombineras:
+\quote{%
+  \item{1.}{{\red{{\it Delta-funktionen} $\delta({\bf x})$}}, {\"a}ven kallad
+            {\it Diracs delta-distribution}, {\"a}r en
+            distribution\numberedfootnote{I denna kurs kan vi lite l{\"o}st
+              s{\"a}ga att en {\it distribution} {\"a}r en generaliserad
+              funktion som {\"a}r definierad av hur den beter sig n{\"a}r
+              den {\"a}r en del av en integrand. Vi kommer strax att se
+              exempel p{\aa} till{\"a}mpningen av denna definition.}
+            som vi kan anv{\"a}nda f{\"o}r ett diskret urval.
+            \sidx{Diracs delta-distribution $\delta({\bf x})$}}
+  \item{1.}{{\red{{\it Gradienten}
+            ${\rm grad}(\phi)\equiv\nabla\phi$}}
+            beskriver hur en skal{\"a}r storhet $\phi$ f{\"o}r{\"a}ndras
+            {\it spatialt}.\sidx{Gradient}\numberedfootnote{%
+            $\hbox{``Spatialt''}=\hbox{i rummet}$;
+            $\hbox{``Temporalt''}=\hbox{i tiden}$.}}
+  \item{2.}{{\red{{\it Divergensen}
+            ${\rm div}({\bf a})\equiv\nabla\cdot{\bf a}$}}
+            av ett vektorf{\"a}lt ${\bf a}$ beskriver ett vektorf{\"a}lts
+            lokala nettofl{\"o}de ut fr{\aa}n en punkt.
+            \sidx{Divergens}[Definition]}
+  \item{3.}{{\red{{\it Rotationen}
+            ${\rm rot}({\bf a})\equiv\nabla\times{\bf a}$}}
+            beskriver ett vektorf{\"a}lts {\it lokala cirkulation}.
+            \sidx{Rotation}[Definition]}
+  \item{4.}{{\red{Ett f{\"a}lt ${\bf F}$ {\"a}r {\it konservativt} om dess
+            linjeintegral $\int^B_A{\bf F}\cdot d{\bf l}$ mellan tv{\aa}
+            punkter inte beror p{\aa} vilken v{\"a}g vi v{\"a}ljer f{\"o}r
+            integralen.}}
+            \sidx{Konservativt f{\"a}lt}[Definition]
+            \sidx{F{\"a}lt}[Konservativt]}
+}
+\noindent
+I denna extra f{\"o}rel{\"a}sning kommer vi att successivt f{\"o}rs{\"o}ka
+knyta de introducerade begreppen inom vektoranalys till v{\aa}rt specifika
+{\"a}mne, elektromagnetism, som praktiskt taget {\"a}r det f{\"a}lt inom
+fysiken som vektoranalysen utvecklades till att ge ett matematiskt spr{\aa}k
+f{\"o}r. M{\aa}let {\"a}r inte bara att l{\"a}ra sig r{\"a}kna med operatorn
+$\nabla$, utan att f{\"o}rst{\aa} vad ber{\"a}kningarna betyder fysikaliskt.
+
+De exempelfall som vi h{\"a}r g{\aa}r igenom {\"a}r sj{\"a}lvfallet mycket
+f{\"o}renklade, f{\"o}r att illustrera de koncept vi rekapitulerar som
+delta-funktioner och differentialoperatorerna grad, div och rot.
+Det {\"a}r dock mycket enkelt att generalisera dessa till godtyckliga
+distributioner {\"o}ver kurvor, ytor och volymer. Med andra ord skall
+materialet i f{\"o}rel{\"a}sningen tas som en bas f{\"o}r vidare utveckling
+av analysen och f{\"a}rdigheter inom probleml{\"o}sande inom elektromagnetism.
+
+\section{\red{Vad {\"a}r ett f{\"a}lt?}}
+\sidx{F{\"a}lt}[Definition]
+Vi b{\"o}rjar med en enkel fr{\aa}ga: {\it Vad menar vi egentligen n{\"a}r vi
+s{\"a}ger att en storhet {\"a}r ett f{\"a}lt?}
+\quote{%
+  {\red{{\bf Definition.} Ett f{\"a}lt {\"a}r en storhet som tilldelar ett
+  v{\"a}rde till varje punkt i ett omr{\aa}de av rummet, och eventuellt
+  ocks{\aa} till varje tidpunkt.}}
+}
+\noindent
+Rent matematiskt beskriver vi ett f{\"a}lt som en funktion av
+positionen\numberedfootnote{Genomg{\aa}ende i denna kurs kommer vi att
+  anv{\"a}nda ${\bf x}$ f{\"o}r {\it ortsvektorn} till en punkt i rummet,
+  och i de fall vi har k{\"a}llpunkter, exempelvis f{\"o}r laddningar
+  eller str{\"o}mmar, s{\aa} kommer vi f{\"o}r dessa att anv{\"a}nda
+  primmade koordinater ${\bf x}'$, s{\aa} att vektorn fr{\aa}n k{\"a}lla
+  till observationspunkt {\"a}r ${\bf x}-{\bf x}'$}
+${\bf x}$ och tiden $t$.
+
+Det finns tv{\aa} grundl{\"a}ggande typer av f{\"a}lt som vi kommer att
+st{\"o}ta p{\aa} i denna kurs:
+\quote{%
+  \item{{\red{1.}}}{{\red{Skal{\"a}rf{\"a}lt}} tilldelar varje punkt ett enda
+    tal, med $\phi=\phi({\bf x},t)$. Typiska exempel {\"a}r temperaturen i
+    ett rum, lufttrycket i atmosf{\"a}ren och den elektriska skal{\"a}ra
+    potentialen.}
+  \item{{\red{2.}}}{{\red{Vektorf{\"a}lt}} tilldelar ist{\"a}llet varje punkt
+    en vektor, ${\bf a}={\bf a}({\bf x},t)$. Typiska exempel {\"a}r
+    vindhastigheten i atmosf{\"a}ren, hastighetsf{\"a}ltet i en
+    v{\"a}tska, det elektriska f{\"a}ltet ${\bf E}$ och det magnetiska
+    f{\"a}ltet ${\bf B}$.}
+}
+\noindent
+Ett vektorf{\"a}lt inneh{\aa}ller allts{\aa} information om b{\aa}de
+{\it riktning och storlek} i varje punkt ${\bf x}$.
+
+Vi kan t{\"a}nka oss att vi placerar en liten pil i varje punkt i rummet.
+Pilens riktning och l{\"a}ngd beskriver vektorf{\"a}ltet d{\"a}r.
+Om vi i st{\"a}llet anger en temperatur med ett tal i varje punkt f{\aa}r
+vi ett skal{\"a}rf{\"a}lt.
+
+\subsection{Varifr{\aa}n kommer ordet ``f{\"a}lt''?}
+Ordet ``f{\"a}lt'' {\"a}r kort och gott bara en rumslig metafor. I v{\aa}rt
+vardagsspr{\aa}k {\"a}r ett f{\"a}lt ett omr{\aa}de som str{\"a}cker sig
+{\"o}ver en viss yta. Inom fysiken har begreppet f{\aa}tt en mer precis
+betydelse: n{\aa}got som {\it har ett v{\"a}rde {\"o}verallt i ett omr{\aa}de},
+och inte bara p{\aa} en enskild plats.
+
+Historiskt blev f{\"a}ltbegreppet s{\"a}rskilt viktigt under 1800-talet, bland
+annat genom Michael Faradays\numberedfootnote{Vi kommer frekvent att
+  {\aa}terkomma till Michael Faraday under kommand f{\"o}rel{\"a}sningar i
+  denna kurs.} \sidx{Faraday, Michael (1791--1867)}
+arbete med elektriska och magnetiska fenomen. Faraday anv{\"a}nde
+f{\"o}rest{\"a}llningen om kraftlinjer f{\"o}r att beskriva hur elektriska
+och magnetiska krafter f{\"o}rdelar sig i rummet.
+James Clerk Maxwell\sidx{Maxwell, James Clerk (1831--1879)}, som vi kommer att
+{\aa}terkomma till i F{\"o}rel{\"a}sning~9 d{\aa} vi introducerar den s{\aa}
+kallade {\it f{\"o}rskjutningsstr{\"o}mmen}, utvecklade senare en matematisk
+teori d{\"a}r f{\"a}lten blev centrala fysikaliska storheter.
+
+En viktig po{\"a}ng {\"a}r att ett elektromagnetiskt f{\"a}lt inte bara {\"a}r
+ett s{\"a}tt att rita kraftlinjer. F{\"a}ltet {\"a}r en fysikalisk storhet som
+kan b{\"a}ra energi och r{\"o}relsem{\"a}ngd och som kan fortplanta sig genom
+rummet i form av elektromagnetiska v{\aa}gor.
+
+\subsection{Elektriskt och magnetiskt f{\"a}lt}
+I denna kurs kommer vi prim{\"a}rt att arbeta med tre vektorf{\"a}lt:
+\quote{%
+  \item{1.}{{\it Det elektriska f{\"a}ltet} ${\bf E}$, som kan definieras genom
+    den elektriska kraft ${\bf F}=q{\bf E}$ som genom Coulomb-v{\"a}xelverkan
+    verkar p{\aa} en testladdning $q$.
+    I denna kurs betraktar vi det elektriska f{\"a}ltet som definierat genom
+    ${\bf E}={\bf F}/q$, d{\"a}r vi t{\"a}nker oss att testladdningen $q$
+    {\"a}r tillr{\"a}ckligt liten f{\"o}r att inte p{\aa}verka det ursprungliga
+    f{\"a}ltet p{\aa} n{\aa}got v{\"a}sentligt s{\"a}tt.
+    Det elektriska f{\"a}ltet beskriver kraften per laddningsenhet.
+    Enheten {\"a}r newton per coulomb, vilket {\"a}r ekvivalent med volt
+    per meter.\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}[Dynamisk, tidsberoende]}
+  \item{2.}{{\it Det magnetiska f{\"a}ltet} ${\bf B}$ kan p{\aa} motsvarande
+    s{\"a}tt kopplas till den magnetiska delen av Lorentz-kraften p{\aa}
+    en laddning i r{\"o}relse med hastigneten ${\bf v}$ genom
+    ${\bf F}_{\rm m}=q\,{\bf v}\times{\bf B}$, vilken {\"a}r vinkelr{\"a}t
+    mot b{\aa}de hastigheten och magnetf{\"a}ltet.\numberedfootnote{Om
+      vi skall vara riktigt petiga, s{\aa} skall ${\bf B}$ betecknas
+      {\it magnetisk fl{\"o}dest{\"a}thet}.}
+    {\it Till skillnad fr{\aa}n det elektriska f{\"a}ltet kan det magnetiska
+    f{\"a}ltet inte generellt best{\"a}mmas genom att dividera en kraft med
+    laddningen utan att ocks{\aa} ta h{\"a}nsyn till laddningens hastighet
+    och r{\"o}relseriktning.}
+    \sidx{Lorentz-kraften ${\bf F}_{\rm m}=q\,{\bf v}\times{\bf B}$}}
+}
+
+\subsection{Skal{\"a}r potential och vektorpotential}
+Inom elektromagnetism anv{\"a}nder vi {\"a}ven tv{\aa} andra f{\"a}lt, kallade
+den {\it skal{\"a}ra potentialen}\numberedfootnote{Ofta lite slappt kallad
+  ``den elektriska skal{\"a}ra potentialen''} $\phi({\bf x},t)$ och
+{\it vektorpotentialen}\numberedfootnote{{\AA}terigen, ofta lite slappt kallad
+  ``den magnetiska vektorpotentialen''}
+${\bf A}({\bf x},t)$.
+
+I {\it elektrostatiska} problem kan vi det uttrycka elektriska f{\"a}ltet som
+$$
+  {\bf E}=-\nabla\phi,
+$$
+d{\"a}r den {\it skal{\"a}ra potentialen} $\phi$ {\"a}r ett {\it skal{\"a}rt
+f{\"a}lt} d{\"a}r varje punkt har ett skal{\"a}rt v{\"a}rde f{\"o}r potentialen,
+m{\"a}tt i enheten volt. Gradienten $\nabla\phi$ beskriver hur potentialen
+f{\"o}r{\"a}ndras i rummet, och minustecknet inneb{\"a}r att det
+{\it elektriska f{\"a}ltet pekar i riktningen f{\"o}r den snabbaste minskning
+av potentialen}.
+
+F{\"o}r magnetf{\"a}ltet, eller mer korrekt den {\it magnetiska
+fl{\"o}dest{\"a}theten}, har vi motsvarande relation som
+$$
+  {\bf B}=\nabla\times{\bf A},
+$$
+d{\"a}r den underliggande {\it vektorpotentialen} ${\bf A}$ {\"a}r ett
+{\it vektorf{\"a}lt}, och d{\"a}r rotationen av detta vektorf{\"a}lt ger
+det magnetiska f{\"a}ltet ${\bf B}$.
+Vektorpotentialen ${\bf A}$ ligger som grund f{\"o}r beskrivningen ``under
+huven'' av statiska magnetiska f{\"a}lt\numberedfootnote{Som vi kommer in
+  p{\aa} i detalj i F{\"o}rel{\"a}sning~5 och~7.}~${\bf B}$ och f{\"o}r
+tidsveroende elektriska f{\"a}lt\numberedfootnote{Som vi kommer in p{\aa}
+  i detalj i F{\"o}rel{\"a}sning~10 och~11.}~${\bf E}$.
+Vektorpotentialen {\"a}r dock av den naturen att vi inte kan m{\"a}ta den med
+ett m{\"a}tinstrument, utan att vi enbart kan m{\"a}ta dess {\it observabler}
+i form av~${\bf E}$ och~${\bf B}$. Trots detta har dock vektorpotentialen en
+fysikalisk enhet, som volt-sekunder per meter (${\rm V}\cdot{\rm s}/{\rm m}$).
+\sidx{Vektorpotential ${\bf A}$}
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}[Dynamisk, tidsberoende]
+\sidx{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}[Statisk]
+
+Vi kommer i kommande f{\"o}rel{\"a}sningar att frekvent n{\"a}mna ursprunget
+till hur det kommer sig att vektorpotentialen existerar som det f{\"a}lt som
+ligger bakom magnetiska f{\"a}lt, men l{\aa}t oss trots detta redan nu
+klarg{\"o}ra hur det kommer sig att vektorpotentialen och det magnetiska
+f{\"a}ltet {\"a}r kopplade p{\aa} detta s{\"a}tt.
+
+Maxwells ekvationer ger oss bland annat Gauss lag f{\"o}r magnetiska
+fl{\"o}dest{\"a}theten som $\nabla\cdot{\bf B}=0$, och i ett ``vanligt
+omr{\aa}de'' av rummet utan singulariteter\numberedfootnote{Med
+  ``singulariteter'' menar vi h{\"a}r skarpa v{\"a}ggar, diskreta
+  {\"o}verg{\aa}ngar mellan media med olika magnetiska permeabiliteter
+  i form av randv{\"a}rden, och s{\aa} vidare.}
+inneb{\"a}r detta att magnetf{\"a}ltet {\"a}r divergensfritt. Under l{\"a}mpliga
+matematiska f{\"o}ruts{\"a}ttningar kan ett s{\aa}dant f{\"a}lt representeras
+som rotationen av en vektorpotential.\numberedfootnote{Notera att de
+  elektromagnetiska potentialerna $\phi$ och ${\bf A}$ inte {\"a}r
+  unika. Vi kan exempelvis {\"a}ndra vektorpotentialen enligt
+  ${\bf A}'={\bf A}+\nabla\chi$ f{\"o}r en godtyckligt vald funktion
+  $\chi({\bf x})$ utan att {\"a}ndra magnetf{\"a}ltet ${\bf B}$, eftersom
+  rotationen av en gradient {\"a}r noll. Detta kallas {\it gaugefrihet}
+  under {\it gaugetransformation}, och {\"a}r n{\aa}got som vi {\"o}versiktligt
+  kommer att g{\aa} in p{\aa} i F{\"o}rel{\"a}sning~11.}
+I den h{\"a}r f{\"o}rel{\"a}sningen kommer vi att se att gradient, divergens
+och rotation {\"a}r de tre centrala verktygen som g{\"o}r dessa samband
+begripliga.
+
+\section{Diracs delta-distribution och punktformiga k{\"a}llor}
+Innan vi b{\"o}rjar beskriva elektriska och magnetiska f{\"a}lt med gradient,
+divergens och rotation, som alla {\"a}r operatorer som rent principiellt
+arbetar p{\aa} ``sl{\"a}ta'' funktioner och f{\"a}lt, s{\aa} beh{\"o}ver vi
+ett matematiskt verktyg f{\"o}r att beskriva n{\aa}got som {\"a}r mycket
+koncentrerat till en viss punkt i rummet. Dessa ``koncentrat'' kan exempelvis
+vara en diskret punktladdning,\numberedfootnote{I denna
+  f{\"o}rel{\"a}sningsserie betecknar vi ofta punktladdningen
+  som en idealiserad ``punktk{\"a}lla'', Vi {\aa}terkommer strax
+  till varf{\"o}r en punktladdning kan ses som en k{\"a}lla inom
+  elektromagnetiska problem.}
+ett system av diskreta punktladdningar, eller en rent av en impuls av ett
+f{\"a}lt som verkar under ett mycket kort tidsintervall. Detta matematiska
+verktyg {\"a}r den s{\aa} kallade {\it Diracs delta-distribution}, ofta kort och
+gott kallad ``delta-puls''.\numberedfootnote{Vi kommer i denna kurs att
+  f{\"o}rs{\"o}ka h{\aa}lla oss till att genomg{\aa}ende s{\"a}ga
+  {\it delta-distribution} och inte ``delta-funktion''; det {\"a}r
+  dock h{\"o}gst sannolikt att f{\"o}rel{\"a}saren vid ett flertal
+  tillf{\"a}llen oavsiktligt kommer att s{\"a}ga just ``delta-funktion'',
+  och det {\"a}r d{\aa} helt okej att korrigera under p{\aa}g{\aa}ende
+  f{\"o}rel{\"a}sning!}\sidx{Diracs delta-distribution $\delta({\bf x})$}
+
+Denna distribution {\"a}r s{\"a}rskilt viktig inom elektromagnetismen, eftersom
+vi ofta vill beskriva laddningar och str{\"o}mmar som {\"a}r koncentrerade till
+mycket sm{\aa} omr{\aa}den, men samtidigt vill anv{\"a}nda de generella
+differentialekvationer som g{\"a}ller i hela rummet och som alltsom oftast
+{\"a}r definierade via integraler.
+Genom att anv{\"a}nda Diracs delta-distribution ges vi m{\"o}jlighet att
+inkludera just diskreta laddningar definierade i punkter, linjer eller ytor,
+trots att differentialoperatorerna opererar p{\aa} kontinuerliga
+distributioner, som vi nu skall se.
+\vfill\eject
+
+\subsection{Delta-distributionen i en dimension -- En mycket smal puls}
+Vi f{\"o}rest{\"a}ller oss en puls l{\"a}ngs $x$-axeln, exempelvis en
+rektangul{\"a}r puls som {\"a}r noll {\"o}verallt utom i ett litet intervall
+kring $x=0$.
+Om vi g{\"o}r pulsen allt smalare, men samtidigt allt h{\"o}gre, s{\aa} att
+arean under kurvan f{\"o}rblir lika stor, och l{\aa}ter pulsebredden vara
+$\Delta x=\epsilon$ och h{\"o}jden $1/\epsilon$, s{\aa} blir naturligtvis
+pulsens area trivialt
+$$
+  \hbox{area}=\epsilon\cdot{{1}\over{\epsilon}}=1.
+$$
+D{\aa} vi l{\aa}ter pulsbredden $\epsilon$ g{\aa} mot noll och h{\"o}jden
+$1/\epsilon$ d{\"a}rmed mot o{\"a}ndligheten, s{\aa} f{\aa}r vi en idealiserad
+gr{\"a}ns d{\"a}r pulsen {\it praktiskt taget endast existerar i en punkt}, och
+det {\"a}r denna {\it distribution} som vi betecknar som {\it delta-funktionen}
+$\delta(x)$ i en dimension.
+\medskip
+\epsfig{../lect-00/figs/dirac-pulse.1}\noindent
+\medskip
+\noindent
+Vi kan sammanfatta delta-distributionens egenskaper med att den {\"a}r noll
+{\"o}verallt f{\"o}rutom i origo,
+$$
+  \delta(x)=0,\quad\hbox{f{\"o}r $x\ne0$},
+$$
+samt att varje integral som t{\"a}cker in origo kommer att ge ett enhetsbidrag,
+d{\aa} pulsen {\"a}r normaliserad som
+$$
+  \int^{\infty}_{-\infty}\delta(x)\,dx=1.
+$$
+F{\"o}r att sammanfatta delta-distributionen s{\aa} {\"a}r den allts{\aa}
+koncentrerad till $x=0$, samt att den {\"a}r noll {\"o}verallt utom i en
+enda punkt.\sidx{Diracs delta-distribution $\delta({\bf x})$}[En dimension]
+
+H{\"a}r m{\aa}ste vi dock g{\"o}ra en viktig matematisk reservation. Diracs
+delta-distribution {\"a}r definitivt inte en ``vanlig funktion'' i samma mening
+som exempelvis $\sin(x)$ eller $\exp(-x^2)$. Den {\"a}r som namnet s{\"a}ger en
+{\it distribution}, definierad genom hur den verkar n{\"a}r den anv{\"a}nds
+i integranden i en integral.
+F{\"o}rest{\"a}llningen om en o{\"a}ndligt h{\"o}g och o{\"a}ndligt smal puls
+{\"a}r h{\"a}r en anv{\"a}ndbar bild, men inte en fullst{\"a}ndig matematisk
+definition, eftersom {\"a}ven en ``kantig'' distribution st{\"a}ller till det
+i vissa aspekter av differentierbarhet.
+I denna f{\"o}rel{\"a}sningsserie beh{\"o}ver vi dock inte bry oss om dessa
+aspekter, d{\aa} vi enbart kommer att anv{\"a}nda oss av delta-distributionen
+just som ing{\aa}ende som integrand.
+\vfill\eject
+
+\subsection{Den viktigaste egenskapen hos delta-distributionen {\"a}r
+  urvalsegenskapen}
+Den verkliga styrkan hos Diracs delta-funktion ligger i att den kan selektera
+(``plocka ut'') v{\"a}rdet p{\aa} en annan funktion i en best{\"a}md punkt,
+s{\"a}g vid $x=a$ i ett endimensionellt fall. Om $f(x)$ {\"a}r en
+tillr{\"a}ckligt v{\"a}lbeteende funktion s{\aa} g{\"a}ller det att integralen
+av funktionen, n{\"a}r den multipliceras med delta-distributionen med en
+offset $a$, till att ha argumentet $(x-a)$, blir
+$$
+  \int^{\infty}_{-\infty}f(x)\delta(x-a)\,dx=f(a),
+$$
+vilket kan s{\"a}gas just {\it selektera} v{\"a}rdet $f(a)$ via anv{\"a}ndandet
+av delta-distributionen. Detta fungerar genom att delta-distributionen, i
+gr{\"a}nsen d{\aa} dess bredd $\epsilon\to0$, {\"a}r koncentrerad till just
+punkten $x=a$, och integralen bidrar d{\"a}rf{\"o}r endast v{\"a}rdet av $f(x)$
+i just punkten $x=a$.
+Det {\"a}r denna egenskap, snarare {\"a}n den o{\"a}ndliga h{\"o}jden, som
+{\"a}r central f{\"o}r alla till{\"a}mpningar.\numberedfootnote{Tv{\aa}
+  exempel p{\aa} till{\"a}mpningen av denna selektion {\"a}r
+  $$
+    \int^{\infty}_{-\infty}x^2\delta(x-3)\,dx=9,
+    \quad\hbox{och}\quad
+    \int^{\infty}_{-\infty}\sin(x)\delta(x-\pi/2)\,dx=1.
+  $$}
+Delta-funktionen beh{\"o}ver allts{\aa} inte sj{\"a}lv vara en fysisk puls.
+Den fungerar som ett generellt matematiskt instrument f{\"o}r att representera
+en lokaliserad k{\"a}lla.
+\sidx{Diracs delta-distribution $\delta({\bf x})$}[Selektionsegenskap]
+
+\subsection{Delta-funktionen med en annan total styrka}
+Antag att vi vill beskriva en puls med en total integral $q$, till exempel
+m{\aa}ttet p{\aa} en elektrisk punktladdning, i st{\"a}llet f{\"o}r $1$.
+I detta fall kan vi sj{\"a}lvfallet ist{\"a}llet anv{\"a}nda
+$$
+  f(x)=q\delta(x-a)\qquad\Rightarrow\qquad\int^{\infty}_{-\infty}f(x)\,dx=q,
+$$
+d{\"a}r faktorn $q$ anger pulsens {\it totala styrka}, och d{\"a}r
+delta-distributionen i sig anger var den {\"a}r {\it lokaliserad}.
+Detta {\"a}r en metod som vi direkt i F{\"o}rel{\"a}sning~1 kommer att
+anv{\"a}nda oss av f{\"o}r att beskriva punktladdningar.
+
+\subsection{Fr{\aa}n en dimension till tre dimensioner}
+I en dimension lokaliserar, eller snarare {\it koncentrerar}, vi
+delta-distributionen till en punkt p{\aa} en {\it linje}. I tre dimensioner,
+d{\"a}r vi ist{\"a}llet beh{\"o}ver lokalisera n{\aa}got till en enda punkt i
+{\it rummet}, exempelvis en k{\"a}llpunkt ${\bf x}'=(x',y',z')$,
+kan vi anv{\"a}nda den tredimensionella delta-distributionen, vilken uttryckt
+i kartesiska koordinater lyder\numberedfootnote{Alltsom oftast kommer vi att
+  i denna serie av f{\"o}rel{\"a}sningar att skippa ``${}^{(3)}$'' i notationen,
+  d{\aa} det utifr{\aa}n argumentet {\"a}nd{\aa} kommer att vara helt klart
+  huruvida distributionen har ett endimensionellt (skal{\"a}rt) eller
+  tredimensionellt (vektor) argument.}
+  \sidx{Diracs delta-distribution $\delta({\bf x})$}[Tre dimensioner]
+$$
+  \delta^{(3)}({\bf x}-{\bf x}')=\delta(x-x')\delta(y-y')\delta(z-z').
+$$
+Denna distribution {\"a}r koncentrerad till den tredimensionella punkten
+${\bf x}'$, och helt analogt med det endimensionella fallet g{\"a}ller
+selektionssegenskapen p{\aa} samma s{\"a}tt, med enda skillnaden att den
+tredimensionella delta-funktionen anv{\"a}nds i en {\it volymintegral} enligt
+$$
+  \iiint_{{\Bbb R}^3}f({\bf x})\delta^{(3)}({\bf x}-{\bf x}')\,dV = f({\bf x}')
+$$
+d{\"a}r $dV=dx\,dy\,dz$ {\"a}r volymelementet i koordinatsystemet
+${\bf x}=(x,y,z)$.\sidx{Volymintegral}[Av Diracs delta-distribution]
+Liksom f{\"o}r det skal{\"a}ra, endimensionella fallet {\"a}r
+delta-distributionen {\"a}ven i tre dimensioner normaliserad, med
+$$
+  \int_{{\Bbb R}^3}\delta^{(3)}({\bf x}-{\bf x}')\,dV=1.
+$$
+En viktig detalj {\"a}r att delta-funktionen i tre dimensioner har den
+fysikaliska dimensionen av {\it invers volym} ($1/{\rm m}^3$), om koordinaterna
+m{\"a}ts i meter. I en dimension har den p{\aa} motsvarande s{\"a}tt den
+fysikaliska dimensionen av {\it invers l{\"a}ngd} ($1/{\rm m}$).
+Detta f{\"o}ljer helt naturligt av att integralen av delta-funktionen {\"o}ver
+det omr{\aa}de d{\"a}r den {\"a}r koncentrerad skall vara dimensionsl{\"o}s,
+och dessutom ut{\"o}ver detta normaliserad- (Volymselementet $dV$ har ju den
+fysikaliska dimensionen av just volym (${\rm m}^3$.)
+
+\subsection{En punktladdning}
+Antag nu att vi har placerat en elektrisk punktladdning $q$ i k{\"a}llpunkten
+${\bf x}'$. Vanligtvis beskriver vi inom ramverket f{\"o}r elektromagnetisk
+f{\"a}ltteori en laddningsf{\"o}rdelning i rummet med den kontinuerliga
+laddningst{\"a}theten $\rho({\bf x})$, med enheten coulomb per kubikmeter
+(${\rm C}/{\rm m}^3$). Laddningen i ett infinitesimalt litet volymelement
+$dV'$ vid k{\"a}llpunkten ${\bf x}'$ {\"a}r d{\aa} $dq=\rho({\bf x}')\,dV$.
+
+Om vi ist{\"a}llet f{\"o}r en kontinuerlig laddningst{\"a}thet vill beskriva
+en idealiserad punktladdning, som matematiskt verkligen {\"a}r placerad i en
+``noll-dimensionell punkt'' ${\bf x}'$, s{\aa} kan vi anv{\"a}nda
+delta-distributionen f{\"o}r att beskriva denna punktladdning med hj{\"a}lp
+av {\it distributionen av laddningst{\"a}thet i rummet} som
+$$
+  \rho({\bf x})=q\delta^{(3)}({\bf x}-{\bf x}').
+$$
+Detta kan f{\"o}rst verka m{\"a}rkligt. Hur kan en laddningst{\"a}thet, via
+delta-distributionen $\delta^{(3)}({\bf x}-{\bf x}')$, vara noll n{\"a}stan
+{\"o}verallt, men {\"a}nd{\aa} ge en total laddning $q$?
+
+Svaret p{\aa} denna paradox\numberedfootnote{En {\it paradox} {\"a}r ett p{\aa}st{\aa}ende,
+  en tanke eller en situation som vid f{\"o}rsta anblicken verkar mots{\"a}gelsefull
+  eller orimlig, men som {\"a}nd{\aa} kan rymma en djupare sanning.}
+ges av att vi definierat punktladdningen via en distribution, som i sig saknar
+egentlig analytisk mening fram till den punkt d{\"a}r den s{\"a}tts i sitt
+sammanhang i form av en integral, i detta fall en integral {\"o}ver alla
+rumskordinater som ing{\aa}r i dom{\"a}nen f{\"o}r problembeskrivningen.
+
+Vi ber{\"a}knar den totala laddningen $q_{\rm tot}$ genom att integrera
+laddningst{\"a}theten $\rho({\bf x})$ {\"o}ver hela rummet i
+fr{\aa}ga,\numberedfootnote{Att ``integrera {\"o}ver hela rummet'' {\"a}r
+  h{\"a}r som vanligt en omskrivning av att ``integrera {\"o}ver den del
+  av rummet som r{\"o}r v{\aa}rt specifika problem och i den approximation
+  som vi identifierat''.}
+$$
+  q_{\rm tot}
+    =\iiint_{{\Bbb R}^3}\rho({\bf x})\,dV
+    =q\underbrace{
+         \iiint_{{\Bbb R}^3}
+           \underbrace{
+             \delta({\bf x}-{\bf x}')
+           }_{=0,\ {\bf x}\ne{\bf x}'}
+           \,dV
+       }_{=1}
+    =q
+$$
+Delta-distributionen g{\"o}r h{\"a}r exakt det vi {\"o}nskar, n{\"a}mligen att
+{\it lokalisera laddningen till en punkt}, medan faktorn $q$ best{\"a}mmer
+v{\aa}r laddnings styrka.
+
+Denna modell {\"a}r sj{\"a}lvfallet i grund och botten endast en bekv{\"a}m
+men synnerligen anv{\"a}ndbar idealisering. En verklig elektrisk laddning kan
+vara associerad med ett objekt som har en {\"a}ndlig utstr{\"a}ckning, men om
+objektet {\"a}r litet j{\"a}mf{\"o}rt med de avst{\aa}nd vi studerar i v{\aa}rt
+specifika problem, s{\aa} kan punktladdningsmodellen vara mycket anv{\"a}ndbar.
+
+\subsection{Hur kommer delta-distributionen in i Gauss lag?}
+Vi har tidigare sett att Gauss lag f{\"o}r elektrostatiska f{\"a}lt i
+differentialform, i omr{\aa}det f{\"o}r en laddningst{\"a}thet
+$\rho=\rho({\bf x})$, {\"a}r
+$$
+  \nabla\cdot{\bf E}=\rho/\varepsilon_0,
+$$
+och om laddningen i problemet ist{\"a}llet f{\"o}r en kontinuerlig
+laddningsf{\"o}rdelning $\rho$ ytg{\"o}rs av en punktladdning $q$ placerad
+vid punkten ${\bf x}'$, s{\aa} f{\aa}r vi att
+$$
+  \nabla\cdot{\bf E}
+    =\underbrace{
+        q\delta({\bf x}-{\bf x}')
+     }_{=\rho({\bf x})}/\varepsilon_0.
+$$
+Denna synnerligen enkla relation i elektrostatik s{\"a}ger oss direkt ett par
+intressanta saker:
+\quote{%
+  \item{1.}{Vid punkten ${\bf x}'$ finns en lokaliserad {\it k{\"a}lla}
+    med total styrka $q/\varepsilon_0$.}
+  \item{2.}{{\"O}verallt utom vid k{\"a}llpunkten ${\bf x}'$ {\"a}r
+    divergensen f{\"o}r det elektrostatiska f{\"a}ltet noll.}
+  \item{3.}{Om vi integrerar divergensen $\nabla\cdot{\bf E}$ {\"o}ver en
+    volym som inneh{\aa}ller punkten ${\bf x}'$ erh{\aa}ller vi
+    $q/\varepsilon_0$.}
+}
+\noindent
+Med hj{\"a}lp av Gauss teorem (divergensteoremet) f{\"o}ljer d{\"a}rmed direkt
+att f{\"o}r varje sluten yta $S$ som omsluter punktladdningen $q$ och som inte
+omsluter n{\aa}gon annan laddning, s{\aa} g{\"a}ller det att
+$$
+  \oiint_S{\bf E}\cdot d{\bf S} = {{q}\over{\varepsilon_0}}.
+$$
+Det {\"a}r allts{\aa} m{\"o}jligt f{\"o}r ett f{\"a}lt att ha noll divergens i
+varje punkt utanf{\"o}r k{\"a}llpunkten, samtidigt som det har ett {\"a}ndligt
+totalt fl{\"o}de genom en sluten yta som omsluter k{\"a}llan.
+Diracs delta-distribution beskriver rent matematiskt hur detta g{\aa}r ihop
+med hj{\"a}lp av konceptet f{\"o}r distributioner.
+
+\subsection{Laddningsf{\"o}rdelningar i en, tv{\aa} och tre dimensioner}
+Punktladdningen {\"a}r naturligtvis bara ett av flera exempel p{\aa} hur
+delta-funktionen kan anv{\"a}ndas f{\"o}r att beskriva laddningar som {\"a}r
+lokaliserade p{\aa} olika s{\"a}tt.
+\medskip
+\centerline{%
+  \epsfbox{../lect-00/figs/dirac-00.1}%
+  \hskip 30pt
+  \epsfbox{../lect-00/figs/dirac-01.1}%
+  \hskip 30pt
+  \epsfbox{../lect-00/figs/dirac-02.1}%
+}
+\medskip
+\noindent
+Vi kan i huvudsak skilja mellan tre idealiserade fall:
+\quote{%
+  \item{1.}{{\it Punktladdning}, f{\"o}r vilken laddningen $q$ {\"a}r
+    koncentrerad till k{\"a}llpunkten ${\bf x}'$ i tre dimensioner, med
+    $$
+      \rho({\bf x})=q\delta({\bf x}-{\bf x}')
+        =q\delta(x-x')\delta(y-y')\delta(z-z').
+    $$
+    Den totala laddningen {\"a}r $q$.}
+\item{2.}{{\it Linjeladdning}, f{\"o}r vilken laddningen {\"a}r lokaliserad
+  till en linje eller kurva. F{\"o}r en rak linje, exempelvis l{\"a}ngs
+  $z$-axeln, med linjeladdningst{\"a}thet $\lambda$ (${\rm C}/{\rm m}$),
+  har vi laddningst{\"a}theten $\rho({\bf x})=\lambda\delta(x-x')\delta(y-y')$.
+  Den totala laddningen {\"a}r $\lambda\times\hbox{linjens l{\"a}ngd}$.
+  Integrerar vi {\"o}ver en tv{\"a}rsnittsyta som sk{\"a}r linjen s{\aa}
+  erh{\aa}ller vi laddningen per l{\"a}ngdenhet.}
+\item{3.}{{\it Ytladdning}, f{\"o}r vilken laddningen {\"a}r koncentrerad till
+  en yta. F{\"o}r ett plan, exempelvis $z=0$, med ytladdningst{\"a}theten
+  $\sigma$ (${\rm C}/{\rm m}^2$) har vi laddningst{\"a}theten
+  $\rho({\bf x})=\sigma\delta(z-z')$. Den totala laddningen {\"a}r
+  $\sigma\times\hbox{(planets area)}$. Integrerar vi {\"o}ver en tunn volym
+  som omfattar en del av planet f{\aa}r vi laddningen p{\aa} den del av planet
+  som volymen omfattar.}
+}
+\vfill\eject
+\noindent
+L{\"a}gg m{\"a}rke till m{\"o}nstret f{\"o}r hur laddningst{\"a}theten
+$\rho({\bf x})$ med hj{\"a}lp av delta-distributionen kan konstrueras
+f{\"o}r punkt-, linje-, och yt-laddningar, med
+\medskip
+\item{$\bullet$}{Punktladdning: tre delta-distributioner som faktorer, en
+  f{\"o}r varje kartesisk koordinat.}
+\item{$\bullet$}{Linjeladdning: tv{\aa} delta-distributioner som faktorer,
+  eftersom laddningen {\"a}r lokaliserad i tv{\aa} tv{\"a}rg{\aa}ende
+  riktningar men kan str{\"a}cka sig l{\"a}ngs den tredje.}
+\item{$\bullet$}{Ytladdning: en delta-distribution som faktor, eftersom
+  laddningen {\"a}r lokaliserad till ett plan som str{\"a}cker sig i tv{\aa}
+  oberoende riktningar.}
+\medskip
+\noindent
+Detta {\"a}r ett mycket anv{\"a}ndbart s{\"a}tt att t{\"a}nka. Antalet
+delta-distributioner som ing{\aa}r som faktorer talar om hur m{\aa}nga
+riktningar laddningen {\"a}r koncentrerad i. Observera att linjeladdningen
+$\lambda$ och ytladdningen $\sigma$ sj{\"a}lvallet kan {\it variera} l{\"a}ngs
+linjen respektive {\"o}ver ytan. Uttrycken ovan beskriver endast geometrin
+hos laddningsf{\"o}rdelningen i sig, inte n{\"o}dv{\"a}ndigtvis en konstant
+laddningst{\"a}thet.
+
+\subsection{Str{\"o}mmar beskrivna med delta-distributioner}
+Hittills har vi anv{\"a}nt delta-distributionen f{\"o}r att beskriva elektriska
+laddningar, dock kan den lika v{\"a}l anv{\"a}ndas f{\"o}r att beskriva
+elektriska str{\"o}mmar.
+Str{\"o}mt{\"a}theten ${\bf J}$ anger str{\"o}m per tv{\"a}rsnittsarea och har
+enheten ${\rm A}/{\rm m}^2$, samt f{\"o}rekommer i bland annat Amp{\`e}res
+magnetostatiska lag\sidx{Amp{\`e}res lag}[Magnetostatik]
+$$
+  \nabla\times{\bf B}=\mu_0{\bf J}
+$$
+och, om vi l{\"a}gger till f{\"o}rskjutningsstr{\"o}mmen som vi kommer att
+behandla i detalj i F{\"o}rel{\"a}sning~9, i Amp{\`e}re--Maxwells
+elektrodynamiska lag
+$$
+  \nabla\times{\bf B}=\mu_0{\bf J}
+    +\mu_0\varepsilon_0{{\partial{\bf E}}\over{\partial t}}
+$$\sidx{Amp{\`e}res lag}[Amp{\`e}re--Maxwells elektrodynamiska lag]
+Antag nu att en tunn ledare l{\"o}per l{\"a}ngs $z$-axeln och att str{\"o}mmen
+$I$ flyter i positiv $z$-riktning i ledaren. Om den tunna ledaren {\"a}r
+placerad i koordinaten $(x',y')$, bara f{\"o}r att h{\aa}lla oss till v{\aa}r
+konvention med primmade k{\"a}llkoordinater, s{\aa} kan vi beskriva denna
+ledare som b{\"a}randes en str{\"o}mt{\"a}thet beskriven i delta-distributioner
+$$
+  {\bf J}({\bf x}) =I\delta(x-x')\delta(y-y'){\bf e}_z.
+$$
+Str{\"o}mmen {\"a}r i detta uttryck koncentrerad till punkten $(x,y)=(x',y')$
+i tv{\"a}rsnittet $z=\hbox{konstant}$, men str{\"a}cker sig l{\"a}ngs hela
+$z$-axeln.\sidx{Str{\"o}mt{\"a}thet ${\bf J}$}
+I detta fall beh{\"o}ver vi med andra ord tv{\aa} delta-distributioner f{\"o}r
+att s{\aa} att s{\"a}ga ``h{\aa}lla ihop'' str{\"o}mmen, f{\"o}r de tv{\aa}
+tv{\"a}rg{\aa}ende koordinaterna $x$ och $y$.
+\sidx{Str{\"o}mslinga}
+\sidx{Str{\"o}mslinga}[Delta-distribution och str{\"o}mt{\"a}thet]
+
+F{\"o}r att kontrollera uttrycket f{\"o}r str{\"o}mmen l{\"a}ngs en linje
+enligt ovan, s{\aa} kan vi integrera str{\"o}mt{\"a}theten {\"o}ver en
+tv{\"a}rsnittsyta som {\"a}r vinkelr{\"a}t mot $z$-axeln, enligt
+$$
+  \eqalign{
+    I_{\rm tot}=\iint_{{\Bbb R}^2}{\bf J}({\bf x})\cdot{\bf e}_z\,dy\,dx
+      =I\underbrace{\int\delta(x-x')\,dx}_{=1}
+        \underbrace{\int\delta(y-y')\,dy}_{=1}
+      =I,
+  }
+$$
+med andra ord f{\aa}r vi allts{\aa} tillbaka den totala str{\"o}mmen $I$,
+precis som v{\"a}ntat. Detta f{\"o}ljer exakt samma princip som tidigare
+f{\"o}r punktladdningen, men att vi nu st{\"a}llet beskriver en str{\"o}m
+som {\"a}r koncentrerad till en linje.
+
+\subsection{En pulsad str{\"o}m}
+Vi kan ocks{\aa} beskriva en str{\"o}m som {\"a}r koncentrerad till en viss
+punkt i tiden, i form av en idealiserad impuls. Om vi som vanligt l{\aa}ter
+$t$ beteckna tiden, och l{\aa}ter str{\"o}mmen $I(t)$ beskrivas av en puls
+vid tiden $t=t'$ som\sidx{Str{\"o}m}[Pulsad]
+\sidx{Str{\"o}m}[Transporterad laddning]
+$$
+  I(t)=q\delta(t-t'),
+$$
+s{\aa} g{\"a}ller, i analogi med tidigare problemformulering i spatial
+dom{\"a}n, att den temporala\numberedfootnote{$\hbox{``Spatialt''}
+  =\hbox{i rummet}$; $\hbox{``Temporalt''}=\hbox{i tiden}$.}
+pulsen transporterar den totala laddningen
+$$
+  \int^{\infty}_{-\infty}I(t)\,dt=q\int^{\infty}_{-\infty}\delta(t-t')\,dt=q,
+$$
+d{\"a}r $I(t)$ har enheten ampere och $\delta(t-t')$ ist{\"a}llet enheten
+$1/{\rm s}$. Detta {\"a}r en idealiserad str{\"o}mpuls med o{\"a}ndligt kort
+varaktighet men {\"a}ndlig {\"o}verf{\"o}rd laddning. En verklig str{\"o}mpuls
+har naturligtvis en {\"a}ndlig varaktighet och en begr{\"a}nsad toppstr{\"o}m.
+
+\subsection{Kontinuitetsekvationen f{\"o}r elektrisk laddning}
+Det finns en viktig fysikalisk begr{\"a}nsning n{\"a}r vi v{\"a}ljer laddnings-
+och str{\"o}mf{\"o}rdelningar, n{\"a}mligen att {\it elektrisk laddning alltid
+bevaras.} \sidx{Kontinuitetsekvationen} Detta centrala begrepp ligger bland
+annat bakom den f{\"o}rskjut\-nings\-str{\"o}m\numberedfootnote{Mer om
+  f{\"o}rskjutningsstr{\"o}mmen och dess ursprung som term i
+  Amp\`ere--Maxwells ekvation i F{\"o}rel{\"a}sning~9, d{\aa}
+  vi g{\aa}r igenom Maxwells ekvationer.}
+som formulerades av James Clerk Maxwell \sidx{Maxwell, James Clerk (1831--1879)}
+som bas f{\"o}r den teori som beskriver elektromagnetisk v{\aa}gutbredning, och
+som uttrycks av kontinuitetsekvationen f{\"o}r laddning,
+$$
+  {{\partial\rho}\over{\partial t}}+\nabla\cdot{\bf J}=0.
+$$
+Kontinuitetsekvationen s{\"a}ger oss att {\it nettoladdningen i ett omr{\aa}de
+endast kan minska om det finns ett nettofl{\"o}de av laddning ut genom
+omr{\aa}dets rand, och omv{\"a}nt.}
+Detta inneb{\"a}r i sin tur att vi inte kan v{\"a}lja laddningst{\"a}theten
+$\rho$ och str{\"o}mt{\"a}theten ${\bf J}$ helt oberoende av varandra.
+Om laddningst{\"a}theten f{\"o}r{\"a}ndras med tiden s{\aa} m{\aa}ste
+str{\"o}mmen vara f{\"o}renlig med denna f{\"o}r{\"a}ndring.
+Ett brott mot kontinuitetsekvationen {\"a}r ocks{\aa} ett brott mot (den
+klassiska) fysiken, och skulle i s{\aa} fall inneb{\"a}ra att laddning
+pl{\"o}tsligt skapas eller f{\"o}rintas.
+
+Exempelvis kan en punktladdning som r{\"o}r sig beskrivas med
+laddningst{\"a}theten\numberedfootnote{I detta fall har vi att g{\"o}ra
+  med en delta-distribution av ett argument i tre dimensioner (en vektor
+  i rummet), som d{\"a}rmed har enheten $1/{\rm m}^3$; med andra ord har
+  produkten $q\delta^{(3)}$ enheten ${\rm C}/{\rm m}^3$, precis som v{\"a}ntat.}
+$$
+  \rho({\bf x},t)=q\delta^{(3)}({\bf x}-{\bf x}_q(t))
+$$
+d{\"a}r ${\bf x}_q(t))$ {\"a}r laddningens r{\"o}rliga position. Den motsvarande
+str{\"o}mt{\"a}theten blir i detta fall
+$$
+  {\bf J}({\bf x},t)=q{\bf v}_q(t) \delta^{(3)}\big({\bf x}-{\bf x}_q(t)\big)
+$$
+d{\"a}r ${\bf v}_q(t)=d{\bf x}_q/dt$ {\"a}r laddningens hastighet. Som vi ser
+i detta exempel, s{\aa} {\"a}r laddningst{\"a}theten och str{\"o}mt{\"a}theten
+koncentrerade till samma r{\"o}rliga punkt. Dessa uttryck uppfyller
+kontinuitetsekvationen i distributionell mening, och utg{\"o}r ett exempel
+p{\aa} hur delta-distributionen l{\aa}ter oss beskriva en idealiserad fysisk
+k{\"a}lla p{\aa} ett matematiskt konsekvent s{\"a}tt.\numberedfootnote{Det
+  finns dock ett grundl{\"a}ggande problem med detta exempel, som g{\"o}r
+  att vi m{\aa}ste vara f{\"o}rsiktiga i att dra n{\aa}gra djupare
+  slutsatser fr{\aa}n resonemang kring transporten av en enda punktladdning,
+  n{\"a}mligen att detta inte p{\aa} n{\aa}got s{\"a}tt utg{\"o}r en
+  kontinuerlig str{\"o}m i den bem{\"a}rkelse som vi normalt anv{\"a}nder
+  inom elektromagnetisk teori. En punktladdning som r{\"o}r sig {\"a}r
+  till sin natur s{\aa}dan att den ena {\"o}gonblicket befinner sig p{\aa}
+  en position, och {\"o}gonblicket d{\"a}refter {\"a}r borta.
+  Detta {\"a}r inte en grund som exempelvis Amp{\`e}res eller Biot-Savarts
+  lagar kan formuleras utifr{\aa}n, och det {\"a}r ocks{\aa} en
+  inv{\"a}ndning som Griffiths formulerar i {\it Introduction to
+  Electrodynamics}. Mer om detta i avsnittet om Biot--Savarts lag
+  i F{\"o}rel{\"a}sning~5.}
+\vfill\eject
+
+\subsection{Att ta med sig fr{\aa}n delta-distributionen}
+Innan vi g{\aa}r vidare till vektoranalysen och begrepp som gradient, divergens
+och rotation, s{\aa} kan vi passa p{\aa} att sammanfatta tre grundl{\"a}ggande
+begrepp kring delta-distributionen.
+\quote{%
+  \item{1.}{Diracs delta-distribution beskriver i rummet en {\it idealiserad
+    lokal k{\"a}lla}. Denna k{\"a}lla {\"a}r koncentrerad till en punkt, en
+    linje, en yta eller en tidpunkt, beroende p{\aa} hur den definieras
+    utifr{\aa}n kombinationer av delta-distributioner.
+    \sidx{Diracs delta-distribution $\delta({\bf x})$}}
+  \item{2.}{Delta-distributionens {\it styrka best{\"a}ms av faktorn
+    framf{\"o}r den}. F{\"o}r en punktladdning {\"a}r denna faktor $q$
+    (laddningen i sig), medan faktorn f{\"o}r en linjeladdning {\"a}r
+    $\lambda$ (laddning per l{\"a}ngdenhet) och f{\"o}r en ytladdning
+    $\sigma$ (laddning per ytenhet). Genom att integrera {\"o}ver
+    l{\"a}mplig dom{\"a}n f{\aa}r vi tillbaka den totalt inneslutna
+    laddningen eller str{\"o}mmen genom en yta.}
+  \item{3.}{Delta-distributionen {\"a}r {\it s{\"a}rskilt anv{\"a}ndbar
+    n{\"a}r vi vill beskriva f{\"a}lt med lokaliserade k{\"a}llor}.
+    Gauss lag kan exempelvis skrivas som
+    $$
+      \nabla\cdot{\bf E}
+        =\underbrace{
+            q\,\delta^{(3)}({\bf x}-{\bf x}')
+         }_{=\rho({\bf x})}/\varepsilon_0
+    $$
+    {\"a}ven f{\"o}r en punktladdning placerad i k{\"a}llpunkten ${\bf x}'$.
+    H{\"a}r blir kopplingen mellan divergensen $\nabla\cdot{\bf E}$ och
+    k{\"a}llan $q\,\delta^{(3)}({\bf x})/\varepsilon_0$ uppenbar.}
+}
+\noindent
+Delta-distributionen $\delta({\bf x})$ kan allts{\aa} ses som {\it bryggan
+mellan en idealiserad k{\"a}lla och de differentialekvationer som beskriver
+dess f{\"a}lt}.
+
+N{\"a}r vi nu g{\aa}r vidare till vektoranalysen kan vi fr{\aa}ga oss hur
+f{\"a}ltet ser ut i omgivningen av en s{\aa}dan k{\"a}lla, var divergensen
+{\"a}r noll, och var eventuella singulariteter finns? Vidare, hur kan vi
+beskriva f{\"a}ltets riktning och variation med gradient och rotation, och
+hur kommer vi fram till kopplingar mellan f{\"a}lt?
+Kort och gott, det {\"a}r nu den egentliga vektoranalysen och byggandet av
+v{\aa}r ``matematiska verktygsl{\aa}da'' b{\"o}rjar.
+\vfill\eject
+
+\section{{\red{Gradienten $\nabla\phi$}}}
+\subsection{Tolkning av gradienten i ett landskap best{\aa}ende av
+  kullar och dalar}
+F{\"o}rest{\"a}ll dig att du st{\aa}r i ett kuperat landskap, d{\"a}r
+h{\"o}jden {\"o}ver havet varierar fr{\aa}n punkt till punkt.
+Vi kan beskriva h{\"o}jden med ett skal{\"a}rf{\"a}lt $h=h({\bf x})$,
+d{\"a}r vi f{\"o}r enkelhets skull kan se ${\bf x}=(x,y)$ som de sedvanliga
+tv{\aa}-dimensionella kartkoordinaterna i l{\"a}mpligt valt koordinatsystem.
+\epsfig{../lect-00/figs/potmap.1}
+\noindent
+Om vi {\"o}nskar ta reda p{\aa} hur h{\"o}jden f{\"o}r{\"a}ndras allt eftersom
+vi r{\"o}r oss i landskapet i en viss riktning, s{\aa} kan vi ber{\"a}kna en
+riktningsderivata, exempelvis som $\partial/\partial x$ om vi {\"o}nskar finna
+f{\"o}r{\"a}ndringen l{\"a}ngs den $x$-axel som vi definierat enligt v{\aa}r
+karta.
+Om vi ist{\"a}llet {\"o}nskar ta reda p{\aa} i vilken riktning h{\"o}jden
+{\it {\"o}kar allra snabbast}, och {\it hur snabbt} den {\"o}kar, s{\aa}
+kan vi anv{\"a}nda gradienten av denna ``potential'' $h({\bf x})$, som
+$$
+  \nabla h={{\partial h}\over{\partial x}}{\bf e}_x
+    +{{\partial h}\over{\partial y}}{\bf e}_y,
+$$
+som allts{\aa} ger oss en vektor som pekar i riktningen f{\"o}r den snabbaste
+{\it {\"o}kningen} av h{\"o}jden, och d{\"a}r dess belopp anger den maximala
+h{\"o}jd{\"o}kningen per l{\"a}ngdenhet.
+Om vi st{\aa}r p{\aa} en sluttning pekar gradienten uppf{\"o}r sluttningen
+mot den brantaste stigningen, och omv{\"a}nt g{\"a}ller att samma vektor med
+omv{\"a}nt tecken, $-\nabla h$, pekar {\it nedf{\"o}r} den brantaste
+sluttningen.
+
+Vi kan ocks{\aa} t{\"a}nka oss h{\"o}jdkurvor p{\aa} en karta. L{\"a}ngs en
+h{\"o}jdkurva {\"a}r h{\"o}jden konstant, medan vektorn f{\"o}r gradienten
+alltid {\"a}r riktad ortogonalt mot h{\"o}jdkurvan eftersom den pekar i den
+riktning d{\"a}r h{\"o}jden {\"a}ndras snabbast.
+Detta bist{\aa}r oss med en mycket anv{\"a}ndbar geometrisk tolkning,
+n{\"a}mligen att
+\quote{%
+  {\it gradienten {\"a}r riktad vinkelr{\"a}tt mot ytor eller kurvor
+  d{\"a}r skal{\"a}rf{\"a}ltet {\"a}r konstant.}
+}
+
+\subsection{Gradientens matematiska definition}
+Bilden av gradienten i tv{\aa} dimensioner som den vektor som lokalt pekar ut
+den brantaste sluttningen {\aa}t oss {\"a}r en bra sinnebild som vi kan ta med
+oss. I fallet med elektrodynamik s{\aa} har vi dock alltsom oftast att g{\"o}ra
+med problem i tre dimensioner, och vi beh{\"o}ver i och med detta en g{\aa}ng
+f{\"o}r alla formalisera gradienten.
+
+I kartesiska koordinater definierar vi gradienten i tre dimensioner av ett
+skal{\"a}rf{\"a}lt $\phi({\bf x})$ som
+$$
+  \red{
+  \nabla\phi
+    \equiv{\bf e}_x{{\partial\phi}\over{\partial x}}
+        +{\bf e}_y{{\partial\phi}\over{\partial y}}
+        +{\bf e}_z{{\partial\phi}\over{\partial z}}
+        }
+    =\Big(
+       {{\partial\phi}\over{\partial x}},
+       {{\partial\phi}\over{\partial y}},
+       {{\partial\phi}\over{\partial z}}
+     \Big)
+$$
+Operatorn $\nabla$, som uttalas ``nabla'' eller ``dell'', {\"a}r kort och gott
+ingenting annat {\"a}n en vektor av partiella derivator. N{\"a}r vi applicerar
+nabla-operatorn $\nabla$ p{\aa} ett skal{\"a}rt f{\"a}lt $\phi$ erh{\aa}ller
+vi en vektor best{\aa}ende av gradienten ${\rm grad}\phi$ av f{\"a}ltet.
+
+\subsection{Exempel: elektrisk potential och elektriskt f{\"a}lt}
+L{\aa}t oss nu byta ut landskapets h{\"o}jd mot den elektriska potential i
+tre dimensioner, ekvivalent med den skal{\"a}ra potentialen $\phi({\bf x})$.
+Antag att potentialen mellan, s{\"a}g, tv{\aa} elektroder varierar med
+positionen mellan dem. Om vi k{\"a}nner hur den skal{\"a}ra potentialen
+$\phi({\bf x})$ varierar i rummet, s{\aa} inneb{\"a}r det att vi direkt kan
+best{\"a}mma det elektrostatiska f{\"a}ltet genom
+$$
+  {\bf E}=-\nabla\phi.
+$$
+I ord betyder detta att det {\it elektriska f{\"a}ltet pekar i riktningen
+f{\"o}r den snabbaste minskningen av den skal{\"a}ra potentialen}.
+\epsfig{../lect-00/figs/potcapac.1}
+\noindent
+F{\"o}r att ta ett enkelt exempel, betrakta en skal{\"a}r potential som endast
+varierar l{\"a}ngs en enda riktning, vilken vi h{\"a}r kan definiera som
+$x$-axeln, med
+$$
+  \phi(x)=\phi_0-({{U_0}/{a}})x
+$$
+d{\"a}r $U_0$ och $a$ {\"a}r positiva konstanter som betecknar skillnad i
+elektrisk potential (${\rm V}$) och elektrodavst{\aa}nd (${\rm m}$).
+Ett typiskt exempel f{\"o}r denna linj{\"a}ra variation i potential {\"a}r
+omr{\aa}det mellan plattorna i en vanlig plattkondensator, d{\"a}r vi ignorerar
+randeffekter.
+I detta exempel erh{\aa}ller vi direkt att det elektriska f{\"a}ltet {\"a}r
+$$
+  {\bf E}
+    =-\nabla\phi
+    =-{\bf e}_x{{\partial}\over{\partial x}}
+        \underbrace{\big(\phi_0-({{U_0}/{a}})x\big)}_{=\phi(x)}
+    ={\bf e}_xU_0/a,
+$$
+med andra ord har vi allts{\aa} att g{\"o}ra med ett {\it homogent} elektriskt
+f{\"a}lt som pekar i positiv $x$-riktning, och som v{\"a}ntat f{\"o}r ett
+f{\"a}lt mellan tv{\aa} plattor med potentialskillnad $U_0$, separerade med
+ett avst{\aa}nd $a$, s{\aa} blir ocks{\aa} beloppet av det elektriska
+f{\"a}ltet just $E=U_0/a$.
+Den skal{\"a}ra potentialen minskar i f{\"a}ltets riktning, helt i analogi med
+v{\aa}rt tidigare exempel med h{\"o}jdkurvor i ett landskap, d{\"a}r h{\"o}jden
+(potentialen) minskar n{\"a}r vi g{\aa}r nedf{\"o}r den brantaste sluttningen
+om vi f{\"o}ljer $-\nabla h$.
+\quote{%
+  {\it Notera att f{\"o}r en konstant skal{\"a}r potential $\phi$ {\"a}r
+  det elektriska f{\"a}ltet alltid identiskt noll!}\numberedfootnote{Detta
+    {\"a}r grunden f{\"o}r den s{\aa} kallade ``Faradays bur'', som vi
+    kommer att g{\aa} igenom i detalj i F{\"o}rel{\"a}sning~3.}
+  {\it Utan en variation i skal{\"a}r potential kan vi inte ha ett nollskilt
+  elektrostatiskt f{\"a}lt.}
+}
+\noindent
+F{\"o}r en positiv testladdning $q$ minskar den potentiella energin n{\"a}r
+laddningen r{\"o}r sig i det elektriska f{\"a}ltets riktning. Eftersom den
+elektriska potentiella energin {\"a}r $U=q\phi$, s{\aa} g{\"a}ller det att
+en f{\"o}r{\"a}ndring av den skal{\"a}ra potentialen direkt proportionellt
+motsvaras av en f{\"o}r{\"a}ndring av den elektrostatiskt upplagrade energin
+hos laddningen,
+$$
+  \Delta U=q\,\Delta \phi,
+$$
+det vill s{\"a}ga att f{\"o}r en positiv laddning $q$ s{\aa} inneb{\"a}r en
+minskning $\Delta\phi$ av den skal{\"a}ra potentialen ocks{\aa} en minskning
+$\Delta U$ av den potentiella energin.
+
+Rent ``f{\"a}ltm{\"a}ssigt'' {\"a}r det h{\"a}r viktigt att skilja mellan
+potentialen $\phi$ i sig och det associerade elektrostatiska f{\"a}ltet
+${\bf E}$, d{\"a}r potentialen {\"a}r ett {\it skal{\"a}rf{\"a}lt}, medan
+det elektriska f{\"a}ltet {\"a}r ett {\it vektorf{\"a}lt} som beskriver
+kraften per laddningsenhet f{\"o}r en hypotetisk testladdning.
+Notera att det {\"a}ven {\"a}r mycket l{\"a}tt att l{\"a}ngs med resans
+g{\aa}ng f{\"o}rv{\"a}xla den skal{\"a}ra potentialen $\phi$, som m{\"a}ts
+i Volt, med potentiell energi, som m{\"a}ts i Joule.
+
+\section{{\red{Divergensen $\nabla\cdot{\bf a}$}}}
+\subsection{Vad beskriver divergensen?}
+Vi l{\"a}mnar nu skal{\"a}ra f{\"a}lt och g{\aa}r {\"o}ver till vektorf{\"a}lt.
+F{\"o}rest{\"a}ll dig att du st{\aa}r mitt i en str{\"o}mmande v{\"a}tska,
+d{\"a}r v{\"a}tskan kan str{\"o}mma in mot en punkt, ut fr{\aa}n en punkt
+eller passera f{\"o}rbi utan att det sker n{\aa}gon lokal ansamling eller
+uttunning.
+\quote{%
+  {\it Divergensen {\"a}r ett m{\aa}tt p{\aa} det lokala nettofl{\"o}det
+  ut fr{\aa}n en punkt.}
+}
+\noindent
+F{\"o}r ett vektorf{\"a}lt ${\bf a}$ definieras divergensen som
+$$
+  {\rm div}({\bf a})\equiv\nabla\cdot{\bf a}.
+$$
+I kartesiska koordinater {\"a}r divergensen allts{\aa} given som
+$$
+  \eqalign{
+  \red{\nabla\cdot{\bf a}}&\red{\equiv
+    {{\partial a_x}\over{\partial x}}
+        +{{\partial a_y}\over{\partial y}}
+        +{{\partial a_z}\over{\partial z}}}\cr
+    &=\Big(
+        {\bf e}_x{{\partial}\over{\partial x}}
+          +{\bf e}_y{{\partial}\over{\partial y}}
+          +{\bf e}_z{{\partial}\over{\partial z}}
+      \Big)\cdot\Big({\bf e}_xa_x+{\bf e}_ya_y+{\bf e}_za_z\Big).\cr
+  }
+$$
+Observera att divergensen {\"a}r ett skal{\"a}rt m{\aa}tt som funktion {\"o}ver
+rummet, och att divergensen utg{\"o}r ett skal{\"a}rt f{\"a}lt i sig.
+Vi b{\"o}rjar med en vektor ${\bf a}$ och erh{\aa}ller fr{\aa}n divergensen
+ett tal i varje punkt, d{\"a}r detta tal kan tolkas enligt f{\"o}ljande, med
+analogi till v{\"a}tskefl{\"o}det,
+\quote{%
+  \item{\red{$\bullet$}}{\red{{\it Positiv divergens} inneb{\"a}r att
+    det lokalt finns ett {\it nettofl{\"o}de ut{\aa}t}. Vektorf{\"a}ltet
+    ${\bf a}$ beter sig som att det i punkten finns en {\it k{\"a}lla}.}}
+  \item{\red{$\bullet$}}{\red{{\it Negativ divergens} inneb{\"a}r att
+    det lokalt finns ett {\it nettofl{\"o}de in{\aa}t}. Vektorf{\"a}ltet
+    ${\bf a}$ beter sig som att det i punkten finns en {\it s{\"a}nka}.}}
+  \item{\red{$\bullet$}}{\red{Noll divergens inneb{\"a}r att nettofl{\"o}det
+    in{\aa}t och ut{\aa}t fr{\aa}n punkten {\"a}r noll.
+    Detta betyder {\it inte} n{\"o}dv{\"a}ndigtvis att inget fl{\"o}de
+    finns, utan att infl{\"o}de och utfl{\"o}de balanserar varandra.}%
+    \numberedfootnote{Exempelvis om vi t{\"a}nker oss att vi
+      st{\aa}r i en v{\"a}tskestr{\"o}m i en {\aa}, d{\"a}r vattnet
+      str{\"o}mmar f{\"o}rbi oss utan att det finns n{\aa}gra lokala
+      vattenk{\"a}llor eller s{\"a}nkor. Divergensen i punkten vi
+      st{\aa}r i {\"a}r noll, trots ett h{\"o}gst n{\"a}rvarande fl{\"o}de.}}
+}
+\noindent
+\epsfig{../lect-00/figs/field-divzero.1}
+\noindent
+Ett enkelt exempel p{\aa} ett vektorf{\"a}lt med noll divergens {\"a}r ett
+homogent vektorf{\"a}lt, med
+$$
+  {\bf a}=a_0{\bf e}_x,
+$$
+f{\"o}r vilket komponenterna {\"a}r konstanta och d{\"a}rmed har att alla
+derivator {\"a}r identiskt noll. D{\"a}rf{\"o}r g{\"a}ller f{\"o}r ett homogent
+vektorf{\"a}lt att
+$$
+  \nabla\cdot{\bf a}=0.
+$$
+Pilarna i det homogena vektorf{\"a}ltet {\"a}r lika l{\aa}nga och lika riktade
+{\"o}verallt. Inget lokalt omr{\aa}de har ett nettofl{\"o}de ut{\aa}t eller
+in{\aa}t.
+\epsfig{../lect-00/figs/field-div-nonzero.1}
+\noindent
+J{\"a}mf{\"o}r detta homogena exempel med det {\it inhomogena} vektorf{\"a}ltet
+$$
+  {\bf a}=x{\bf e}_x+y{\bf e}_y+z{\bf e}_z,
+$$
+f{\"o}r vilket vi ist{\"a}llet erh{\aa}ller att
+$$
+  \nabla\cdot{\bf a}=1+1+1=3.
+$$
+F{\"a}ltet pekar i detta inhomogena fall radiellt ut{\aa}t fr{\aa}n origo och
+v{\"a}xer dessutom med avst{\aa}ndet. {\it Divergensen {\"a}r i detta exempel
+positiv {\"o}verallt, och notera speciellt att detta {\"a}ven g{\"a}ller i
+origo, trots att f{\"a}ltet d{\"a}r {\"a}r noll!}
+
+\subsection{Divergens och fl{\"o}de genom en sluten yta}
+Vi kan f{\"o}rst{\aa} konceptet med divergensen {\"a}nnu b{\"a}ttre genom att
+betrakta ett litet omr{\aa}de som omges av en sluten yta, ut genom vilken vi
+nu kommer att studera det s{\aa} kallade {\it fl{\"o}det}.
+{\red{Fl{\"o}det av ett vektorf{\"a}lt}} ut genom en sluten yta $S$ definieras
+som\numberedfootnote{Notera den subtila skillnaden i notation h{\"a}r,
+  d{\"a}r vi genomg{\aa}ende i f{\"o}rel{\"a}sningsserien l{\aa}ter
+  ``$\Phi$'' beteckna ett {\it fl{\"o}de}, medan ``$\phi$'' betecknar
+  den {\it skal{\"a}ra potentialen}. F{\"o}r att ytterligare riskera
+  att {\"o}ka f{\"o}rvirringen kommer vi dessutom att senare l{\aa}ta
+  ``$\varphi$'' beteckna fasen hos en v{\aa}g.}
+$$
+  \red{\Phi=\oiint{\bf a}_S\cdot d{\bf S}},
+$$
+d{\"a}r $d{\bf S}$ {\"a}r ett ut{\aa}triktat ytelement, med en riktning som
+lokalt {\"a}r normal mot ytan $S$.
+
+Gauss lag, {\"a}ven kallad {\it divergensteoremet}, s{\"a}ger att det totala
+ut{\aa}triktade fl{\"o}det genom en sluten yta {\"a}r lika med volymintegralen
+av divergensen innanf{\"o}r ytan, eller
+$$
+  \oiint_S{\bf a}\cdot d{\bf S}=\iiint_V(\nabla\cdot{\bf a})\,dV.
+$$
+Vi kommer i denna kurs att mycket flitigt anv{\"a}nda oss av Gauss lag, och
+detta {\"a}r en grundbult inom elektromagnetisk f{\"a}ltteori som {\"a}r
+v{\"a}l v{\"a}rd att l{\"a}ra sig utantill.
+
+Ut{\"o}ver att Gauss lag bist{\aa}r oss med assistans i rent praktiskt
+probleml{\"o}sande, s{\aa} {\"a}r det dessutom utifr{\aa}n denna lag som
+kopplingen mellan divergens och s{\aa} kallade {\it k{\"a}llor}, eller
+{\it k{\"a}lltermer}, inom elektromagnetism kommer, i analogi med det tidigare
+tanke-experimentet kring v{\"a}tskefl{\"o}de och divergens.
+{\it Om den totala divergensen i ett omr{\aa}de {\"a}r positivt m{\aa}ste det
+finnas ett nettofl{\"o}de ut genom omr{\aa}dets rand}, och det {\"a}r genom
+ytintegralen ovan som vi tolkar ett s{\aa}dant ``fl{\"o}de $\Phi$ av
+f{\"a}ltlijer'' av, exempelvis, eletriska och magnetiska f{\"a}lt.
+
+Det skall h{\"a}r dock po{\"a}ngteras att divergensen inte
+n{\"o}dv{\"a}ndigtvis beskiver en fysisk k{\"a}lla i form av ett
+f{\"o}rem{\aa}l. Divergensen beskriver i grund och botten endast en lokal
+matematisk egenskap hos f{\"a}ltet i sig. I elektromagnetism kopplar
+v{\aa}ra ekvationer denna egenskap till elektrisk laddning.
+
+\subsection{Divergensen hos det elektriska f{\"a}ltet}
+En av ekvationerna inom elektromagnetism {\"a}r Gauss lag f{\"o}r det
+elektriska f{\"a}ltet,\numberedfootnote{Gauss lag {\"a}r i denna form
+  giltig f{\"o}r statiska (tidsoberoende) s{\aa}v{\"a}l som dynamiska
+  (tidsvarie\-rande) elektriska f{\"a}lt.}
+som p{\aa} differentialform lyder
+$$
+  \nabla\cdot{\bf E}=\rho/\varepsilon_0,
+$$
+d{\"a}r $\rho$ {\"a}r den elektriska laddningst{\"a}theten och $\varepsilon_0$
+den elektriska permittiviteten i vakuum, eller kort och gott
+{\it vakuumpermittiviteten}.
+Denna ekvation s{\"a}ger oss att det elektriska f{\"a}ltets divergens
+best{\"a}ms av laddningst{\"a}theten, som i sin tur ger oss tre principiella
+fall:
+\quote{%
+  \item{1.}{Om $\rho>0$, s{\aa} {\"a}r divergensen $\nabla\cdot{\bf E}$
+    f{\"o}r det elektriska f{\"a}ltet positiv. Vi kan se det som att
+    {\it en positiv laddningst{\"a}thet} $\rho$ skapar ett {\it positivt
+    fl{\"o}de}, riktat ut{\aa}t, som i sin tur kan tolkas som att en
+    positiv laddning svarar mot en {\it k{\"a}lla}.}
+  \item{2.}{Om ist{\"a}llet $\rho<0$, s{\aa} {\"a}r divergensen negativ.
+    I detta fall kan vi ist{\"a}llet se det som att {it en negativ
+    laddningst{\"a}thet} $\rho$ skapar ett {\it negativt fl{\"o}de},
+    riktat in{\aa}t, som i sin tur kan tolkas som att en negativ
+    laddning svarar mot en {\it s{\"a}nka}.}
+  \item{3.}{Om $\rho=0$, s{\aa} {\"a}r divergensen noll.}
+}
+\noindent
+Det tredje fallet kr{\"a}ver en viktig precisering, n{\"a}mligen att ett
+elektriskt f{\"a}lt alltid {\"a}r divergensfritt i ett omr{\aa}de som
+saknar elektrisk laddningst{\"a}thet,\numberedfootnote{Notera att
+  relationen $\nabla\cdot{\bf E}=\rho/\varepsilon_0$ g{\"a}ller
+  {\it punktvis}, det vill s{\"a}ga att vi inte n{\"o}dv{\"a}ndigtvis
+  beh{\"o}ver innesluta en laddning via en sluten yta $S$. Vi kan precis
+  lika g{\"a}rna l{\aa}ta den omslutande ytan $S$ i Gauss lag p{\aa}
+  integralform g{\aa} mot noll (en punkt), och i gr{\"a}nsen evaluera
+  Gauss lag p{\aa} differentialformen som h{\"a}r anv{\"a}nds.}
+till exempel f{\"a}ltet fr{\aa}n en positiv punktladdning $q$ placerad
+i k{\"a}llpunkten ${\bf x}'$, d{\"a}r f{\"a}ltlinjerna alla pekar ut{\aa}t.
+\epsfig{../lect-00/figs/field-pointcharge.1}
+\noindent
+Det {\"a}r h{\"a}r l{\"a}tt att f{\"o}rledas att t{\"a}nka att ``eftersom
+f{\"a}ltlinjerna utanf{\"o}r laddningen ju faktiskt {\it divergerar}, s{\aa}
+borde vi ju ha en divergens''. Detta resonemang {\"a}r dock felaktigt, och vi
+rekapitulerar att {\it divergensen talar om f{\"o}r oss var k{\"a}llor och
+s{\"a}nkor finns}.
+Detta resonemang kring Gauss lag f{\"o}r elektriska f{\"a}lt g{\"a}ller
+b{\aa}de i elektrostatik och i elektrodynamik, s{\aa} l{\"a}nge vi
+anv{\"a}nder Maxwells klassiska makroskopiska eller mikroskopiska formulering
+med motsvarande laddningst{\"a}thet och f{\"a}lt.
+
+Utanf{\"o}r sj{\"a}lva k{\"a}llpunkten ${\bf x}'$ {\"a}r divergensen noll,
+medan punktladdningen ger en singularitet i origo. Matematiskt beskriver vi
+enligt tidigare detta med en delta-distribution som
+$$
+  \nabla\cdot{\bf E} ={{q}\over{\varepsilon_0}}\delta^{(3)}({\bf x}).
+$$
+Detta illustrerar en viktig skillnad mellan ett f{\"a}lt som {\"a}r
+divergensfritt i varje punkt i ett omr{\aa}de och ett f{\"a}lt som har
+en singular k{\"a}lla i omr{\aa}det.
+
+\subsection{Divergensen hos det magnetiska f{\"a}ltet}
+F{\"o}r magnetf{\"a}ltet\numberedfootnote{{\AA}terigen, om vi skall vara
+petiga, den {\it magnetiska fl{\"o}dest{\"a}theten} ${\bf B}$.} ${\bf B}$
+har vi en annan av Maxwells ekvationer som vi ofta kommer att {\aa}terkomma
+till i denna kurs, n{\"a}mligen att {\it divergensen f{\"o}r det magnetiska
+f{\"a}ltet, alltid {\"a}r identiskt noll},
+$$
+  \nabla\cdot{\bf B}=0.
+$$
+Denna lag kallas kort och gott f{\"o}r {\it Gauss lag f{\"o}r det magnetiska
+f{\"a}ltet}.\numberedfootnote{Vi kommer att rent formellt h{\"a}rleda
+  divergensen f{\"o}r magnetiska f{\"a}lt utifr{\aa}n Biot--Savarts
+  lag i F{\"o}rel{\"a}sning~4.}
+
+Till skillnad fr{\aa}n det elektriska f{\"a}ltet existerar det i den klassiska
+teorin f{\"o}r elektromagnetism inga isolerade magnetiska laddningar, eller
+{\it magnetiska monopoler}, och divergensen f{\"o}r magnetf{\"a}ltet {\"a}r
+d{\"a}rf{\"o}r alltid identiskt noll {\"o}verallt, {\"a}ven i omr{\aa}den
+d{\"a}r det finns elektriska str{\"o}mmar eller magnetiska material.
+F{\"a}ltlinjerna f{\"o}r magnetf{\"a}ltet har allts{\aa} inga start- eller
+{\"a}ndpunkter i form av isolerade magnetiska k{\"a}llor eller s{\"a}nkor.
+F{\"a}ltlinjerna f{\"o}r magnetf{\"a}lt bildar alltid slutna slingor och
+l{\"o}per genom rummet utan att b{\"o}rja eller sluta i n{\aa}gon
+monopolladdning.
+Det betyder {\it inte} att magnetf{\"a}ltet saknar struktur eller att det
+m{\aa}ste vara homogent. {\it Ett f{\"a}lt kan vara kraftigt varierande och
+{\"a}nd{\aa} ha noll divergens.}
+
+\subsection{Konkret exempel p{\aa} att divergensen f{\"o}r f{\"a}ltet
+  utanf{\"o}r en punktladdning {\"a}r noll}
+Vi vet att det elektriska f{\"a}ltet fr{\aa}n en punktladdning $q$, vilken vi
+f{\"o}r enkelhets skull kan definiera som v{\aa}rt origo, {\"a}r ett radiellt
+ut{\aa}triktat f{\"a}lt som har ett belopp som g{\aa}r som $1/|{\bf x}|^2$.
+Det kan intuitivt k{\"a}nnas lite konstigt att tro att en ``derivata'' av en
+s{\aa}dan kontinuerligt varierande och i {\"o}vrigt sn{\"a}ll funktion
+verkligen skulle ge noll {\"o}verallt, eller hur?
+Att funktionen har en singularitet i origo (placeringen av v{\aa}r
+punktladdning) kan vi ignorera s{\aa} l{\"a}nge som vi utvecklar v{\aa}r
+``derivata'' utanf{\"o}r singulariteten, s{\aa} faktum kvarst{\aa}r:
+Hur kan en ``derivata'' av  $1/|{\bf x}|^2$ {\"o}verallt bli noll?
+
+F{\"o}r den som fortfarande tvivlar p{\aa} att divergensen (v{\aa}r
+``derivata'') f{\"o}r det elektriska f{\"a}ltet fr{\aa}n en punktladdning
+{\"a}r noll, l{\aa}t oss derivera den spatiala variationen f{\"o}r det
+ut{\aa}triktade f{\"a}ltet, som har formen
+$$
+  \eqalign{
+   {\bf a}={\bf x}/|{\bf x}|^3\cr
+    \quad\Rightarrow\quad
+    \nabla\cdot{\bf a}
+    &\equiv\Big(
+        {{\partial}\over{\partial x}},
+        {{\partial}\over{\partial y}},
+        {{\partial}\over{\partial z}}
+     \Big)\cdot{{(x,y,z)}\over{(x^2+y^2+z^2)^{3/2}}}\cr
+    &={{1}\over{(x^2+y^2+z^2)^{3/2}}}
+    \Big(
+        {{\partial}\over{\partial x}},
+        {{\partial}\over{\partial y}},
+        {{\partial}\over{\partial z}}
+     \Big)\cdot(x,y,z)
+    +\Big(
+        x{{\partial}\over{\partial x}},
+        y{{\partial}\over{\partial y}},
+        z{{\partial}\over{\partial z}}
+     \Big)\cdot{{(1,1,1)}\over{(x^2+y^2+z^2)^{3/2}}}\cr
+    &={{(1+1+1)}\over{(x^2+y^2+z^2)^{3/2}}}
+        -{{3}\over{2}}(x,y,z)\cdot{{(2x,2y,2z)}\over{(x^2+y^2+z^3)^{5/2}}}\cr
+    &={{3}\over{(x^2+y^2+z^3)^{3/2}}}
+        -{{3}\over{2}}{{(2x^2+2y^2+2z^2)}\over{(x^2+y^2+z^3)^{5/2}}}\cr
+    &={{3}\over{(x^2+y^2+z^3)^{3/2}}}
+        -3{{3}\over{(x^2+y^2+z^3)^{3/2}}}\cr
+    &=0,\cr
+  }
+$$
+det vill s{\"a}ga att divergensen {\it {\"o}verallt {\"a}r noll}, med undantag
+f{\"o}r origo ${\bf x}={\bf 0}$ d{\"a}r divergensen {\"a}r odefinierad d{\aa}
+n{\"a}mnaren d{\"a}r blir noll. Detta fall motsvarar det elektrostatiska
+f{\"a}ltet fr{\aa}n en punktladdning placerad i origo.
+
+\subsection{{\red{En paradox f{\"o}r det elektrostatiska f{\"a}ltet i en homogen
+  laddningst{\"a}thet}}}
+Den f{\"o}reg{\aa}ende diskussionen kan l{\"a}tt ge intryck av att divergensen
+av den elektriska f{\"a}ltet {\"a}r noll praktiskt taget {\"o}verallt, och att
+vi i princip endast har att g{\"o}ra med delta-distributioner som k{\"a}llor.
+Vi kommer d{\"a}rf{\"o}r att nu illustrera en situation d{\"a}r hela
+dom{\"a}nen {\"a}r homogent fylld med elektrisk laddning, med andra ord att
+vi har {\it k{\"a}llor {\"o}verallt}.
+\epsfig{../lect-00/figs/field-unicharge.1}
+\noindent
+F{\"o}r fallet d{\aa} hela dom{\"a}nen {\"a}r homogent fylld med elektrisk
+laddning har vi laddningst{\"a}theten $\rho({\bf x})=\rho_0=\hbox{konstant}$,
+och divergensen f{\"o}r det statiska elektriska f{\"a}ltet {\"a}r d{\"a}rmed
+{\"o}verallt noll-skild, som
+$$
+  \red{\nabla\cdot{\bf E}({\bf x})=\rho_0/\varepsilon_0}.
+$$
+Samtidigt s{\aa} inser vi att vi i detta fall {\red{av symmetrisk{\"a}l
+m{\aa}ste ha att {\it det statiska elektriska f{\"a}ltet {\"o}verallt i
+dom{\"a}nen med homogen laddning m{\aa}ste vara noll}}},
+$$
+  \red{{\bf E}({\bf x})={\bf 0}}.
+$$
+{\it Man inser dock direkt att detta ser mycket m{\"a}rkligt ut, d{\aa} en
+konstant funktion, och allra helst en funktion som {\"a}r identiskt noll,
+inte kan ha en nollskild derivata.} Kort och gott, {\red{hur g{\aa}r denna
+paradox ihop?}} Det tycks ju onekligen vara s{\aa} att detta konstruerade (och
+synnerligen enkla) exempel mots{\"a}ger Gauss lag f{\"o}r elektriska f{\"a}lt.
+
+Svaret ligger i att vi m{\aa}ste vara f{\"o}rsiktiga i att anv{\"a}nda
+symmetriargumentet, d{\"a}r vi f{\"o}r en {\"a}ndlig och symmetrisk
+laddningsf{\"o}rdelning f{\"o}rvisso kan ha ett f{\"a}lt som {\"a}r noll i
+centrum, men d{\"a}r f{\"a}ltet inte kan vara noll {\"o}verallt.
+F{\"o}r en o{\"a}ndlig laddningsf{\"o}rdelning, som problemformuleringen ovan
+implicit antar, uppst{\aa}r problem med randvillkor och fundamentet f{\"o}r
+det elektriska f{\"a}ltets definition. Med andra ord kan vi inte anv{\"a}nda
+symmetriargumentet f{\"o}r en {\"a}ndlig dom{\"a}n.
+
+Sant {\"a}r dock att f{\"o}r en homogen laddningst{\"a}thet $\rho({\bf x})=
+\rho_0$ s{\aa} {\"a}r alltid divergensen nollskild och beskriven av Gauss lag
+$\nabla\cdot{\bf E}({\bf x})=\rho_0/\varepsilon_0$.
+Om vi i en {\it {\"a}ndlig} och symmetrisk dom{\"a}n, exempelvis en homogent
+laddad sf{\"a}r, betraktar det elektriska f{\"a}ltet, s{\aa} b{\"o}r
+naturligtvis det elektriska f{\"a}ltet i centrum av sf{\"a}ren vara exakt noll,
+men detta inneb{\"a}r ingen paradox, d{\aa} vi kan se detta helt analogt med,
+s{\"a}g, en linj{\"a}r funktions nollgenomg{\aa}ng $f(x)=0$, med en konstant
+derivata $df/dx=\hbox{konstant}$.
+
+{\red{\it Vi kan se just detta problem som ett typexempel p{\aa} en situation
+d{\"a}r idealiserad fysikalisk situation inte alltid har en l{\"o}sning
+som uppfyller alla antaganden!}}
+
+\section{{\red{Rotationen $\nabla\times{\bf b}$}}}
+\subsection{Vad beskriver rotationen?}
+Vi har sett att divergensen beskriver nettofl{\"o}det ut fr{\aa}n eller in mot
+en punkt. {\it Rotationen} handlar ist{\"a}llet om hur ett vektorf{\"a}lt
+lokalt {\it cirkulerar}.
+
+F{\"o}rest{\"a}ll dig att du placerar ett litet, fritt roterande hjul eller en
+paddel i en str{\"o}mmande v{\"a}tska. Om str{\"o}mningen f{\"o}rs{\"o}ker
+vrida hjulet beskriver vi helt naturligt fl{\"o}det som {\it roterande i den
+punkten}.
+Denna analogi ger en intuitiv bild av rotationen, men vi m{\aa}ste h{\"a}r
+skilja mellan ett vektorf{\"a}lts rotation och en enskild partikels r{\"o}relse.
+Viktigt att notera {\"a}r att {\it ett vektorf{\"a}lt kan ha en noll-skild
+rotation {\"a}ven om en partikel som f{\"o}ljer f{\"a}ltet inte r{\"o}r sig
+l{\"a}ngs en cirkel.}
+
+F{\"o}r ett vektorf{\"a}lt ${\bf b}$ definieras rotationen som
+$$
+  \red{{\rm rot}({\bf b})\equiv\nabla\times{\bf b}},
+$$
+vilket vi i kartesiska koordinater kan uttrycka som
+$$
+  \nabla\times{\bf b}
+    =\left|\matrix{
+       {\bf e}_x & {\bf e}_y & {\bf e}_z\cr
+       {{\partial}\over{\partial x}}
+           & {{\partial}\over{\partial y}}
+           & {{\partial}\over{\partial z}}\cr
+       b_x & b_y & b_z\cr
+     }\right|,
+$$
+eller utvecklat i komponenter,
+$$
+  \nabla\times{\bf b}
+    ={\bf e}_x\Big(
+      {{\partial b_z}\over{\partial y}}-{{\partial b_y}\over{\partial z}}
+     \Big)
+    +{\bf e}_y\Big(
+      {{\partial b_x}\over{\partial z}}-{{\partial b_z}\over{\partial x}}
+     \Big)
+    +{\bf e}_z\Big(
+      {{\partial b_y}\over{\partial x}}-{{\partial b_x}\over{\partial y}}
+     \Big)
+$$
+Rotationen {\"a}r allts{\aa} i sig ett vektorf{\"a}lt. F{\"a}ltets riktning
+anger rotationsaxeln enligt den vanliga h{\"o}gerhandsregeln, och dess belopp
+anger den lokala rotationens styrka.
+
+\subsection{Cirkulation och Stokes sats}
+Den lokala rotationen {\"a}r kopplad till {\it cirkulationen av ett f{\"a}lt}
+l{\"a}ngs en sluten kurva $\Gamma$, som definieras som
+$$
+  \oint_{\Gamma}{\bf b}\cdot d{\bf l}.
+$$
+Stokes teorem s{\"a}ger att cirkulationen l{\"a}ngs en sluten kurva lika med
+fl{\"o}det av rotationen genom den yta som kurvan omsluter, vilket uttryckt
+i vektoranalysens spr{\aa}k lyder
+$$
+  \oint_{\Gamma}{\bf b}\cdot d{\bf l}=\iint_S(\nabla\times{\bf b})\cdot d{\bf S},
+$$
+d{\"a}r $\Gamma$ {\"a}r randen (en sluten kurva) till ytan $S$, med orientering
+av ytelementets riktning $d{\bf S}$ f{\"o}ljande h{\"o}gerhandsregeln.
+Om rotationen $\nabla\times{\bf b}$ {\"a}r noll {\"o}verallt p{\aa} en
+s{\aa}dan yta, blir ocks{\aa} cirkulationen noll l{\"a}ngs dess rand.
+
+Det {\"a}r h{\"a}r viktigt att notera att rotationen inte {\"a}r samma sak som
+att f{\"a}ltlinjerna visuellt ``ser b{\"o}jda ut''.
+Ett f{\"a}lt kan ha kr{\"o}kta f{\"a}ltlinjer utan att ha n{\aa}gon rotation,
+och omv{\"a}nt s{\aa} kan parallella f{\"a}ltlinjer fortfarande definiera ett
+f{\"a}lt som har en nollskild rotation. Det avg{\"o}rande {\"a}r hur
+f{\"a}ltets riktning och storlek varierar lokalt.
+
+\subsection{Rotation hos det elektrostatiska f{\"a}ltet}
+I elektro{\it statik} {\"a}r det elektriska f{\"a}ltet tidsoberoende och skapas
+av station{\"a}ra laddningar. F{\"o}r detta station{\"a}ra fall g{\"a}ller
+Faradays induktionslag i dess elektrostatiska form
+$$
+  \nabla\times{\bf E}={\bf 0}.
+$$
+Det elektro{\it statiska}\numberedfootnote{Notera att detta allts{\aa}
+  g{\"a}ller ett elektro{\it statiskt} (tidsoberoende) f{\"a}lt; f{\"o}r ett
+  elektro{\it dynamiskt} (tidsberoende) f{\"a}lt g{\"a}ller Faradays
+  generella induktionslag
+  $$
+    \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}},
+  $$
+  som vi kommer att studera i detalj och h{\"a}rleda i F{\"o}rel{\"a}sning~5.}
+f{\"a}ltet {\"a}r allts{\aa} rotationsfritt. Detta betyder att linjeintegralen
+av f{\"a}ltet mellan tv{\aa} punkter inte {\"a}r beroende av vilken v{\"a}g vi
+v{\"a}ljer att utf{\"o}ra integralen l{\"a}ngs, f{\"o}rutsatt att vi r{\"o}r
+oss inom ett l{\"a}mpligt omr{\aa}de d{\"a}r potentialen {\"a}r
+v{\"a}ldefinierad.
+
+Det {\"a}r just d{\"a}rf{\"o}r vi kan skriva det elektrostatiska f{\"a}ltet
+som den negativa gradienten av den skal{\"a}ra elektrostatiska potentialen som
+$$
+  {\bf E}=-\nabla\phi.
+$$
+Vi erinrar oss att det {\it negativa tecknet f{\"o}r gradienten bara {\"a}r en
+konvention} som vi genomg{\aa}ende anv{\"a}nder oss av, som s{\"a}ger att det
+elektriska f{\"a}ltet definieras s{\aa} att f{\"a}ltlinjerna riktas fr{\aa}n
+h{\"o}gre till l{\"a}gre potential.
+H{\"a}r noterar vi att rotationen $\nabla\times{\bf E}$ {\"a}r noll {\"a}ven
+i omr{\aa}den d{\"a}r det finns elektriska laddningar, s{\aa} l{\"a}nge vi
+betraktar det elektrostatiska f{\"a}ltet p{\aa} ett s{\"a}tt som g{\"o}r det
+definierat\numberedfootnote{Det vill s{\"a}ga att vi exkluderar eventuella
+  singulariteter och gr{\"a}ns{\"o}verg{\aa}ngar mellan dom{\"a}ner med,
+  s{\"a}g, olika elektrisk permittivitet.}
+Vi kan konstatera att {\it ger laddningar i vila upphov till divergens, men
+aldrig rotation}, n{\aa}got som direkt f{\"o}ljer av vektoridentiteten
+$$
+  \nabla\times(\nabla\phi)\equiv{\bf 0}.
+$$
+Det {\"a}r endast d{\aa} elektriska laddningar s{\"a}tts i r{\"o}relse och
+d{\"a}rmed genererar en str{\"o}m som de kan ge upphov till en nollskild
+rotation f{\"o}r det elektriska f{\"a}ltet, och d{\aa} via Faradays lag
+enligt ovan.
+
+\subsection{Rotation hos det magnetostatiska f{\"a}ltet}
+F{\"o}r magnetf{\"a}ltet {\"a}r situationen annorlunda, och vi har f{\"o}r
+dessa f{\"a}lt Amp{\`e}res lag\numberedfootnote{Eller om man s{\aa} vill,
+{\it Amp{\`e}re--Maxwells lag}} f{\"o}r vakuum som
+$$
+  \nabla\times{\bf B}
+    =\mu_0{\bf J}+\mu_0\varepsilon_0{{\partial{\bf E}}\over{\partial t}}
+$$
+d{\"a}r ${\bf J}$ {\"a}r str{\"o}mt{\"a}theten (${\rm A}/{\rm m}^2$).
+I magnetostatik {\"a}r f{\"a}lten tidsoberoende, s{\aa} att
+$\partial{\bf E}/\partial t=0$, och vi f{\aa}r f{\"o}r det
+magneto{\it statiska} fallet att
+$$
+  \nabla\times{\bf B}=\mu_0{\bf J}.
+$$
+Detta inneb{\"a}r att det statiska magnetf{\"a}ltet i allm{\"a}nhet inte {\"a}r
+rotationsfritt, eftersom n{\"a}rvaro av elektrisk str{\"o}m ger att rotationen
+av ${\bf B}$ i allm{\"a}nhet {\"a}r skild fr{\aa}n noll.
+
+I ett {\it str{\"o}mfritt omr{\aa}de} g{\"a}ller det d{\"a}remot alltid att
+$$
+  \nabla\times{\bf B}=0.
+$$
+Observera att detta endast s{\"a}ger att f{\"a}ltet {\"a}r rotationsfritt i det
+aktuella omr{\aa}det, och inneb{\"a}r inte n{\"o}dv{\"a}ndigtvis att f{\"a}ltet
+{\"a}r noll d{\"a}r. Ett magnetf{\"a}lt kan finnas i ett omr{\aa}de d{\"a}r
+ingen str{\"o}m flyter, samtidigt som dess rotation {\"a}r noll i det
+omr{\aa}det.
+
+Ett klassiskt exempel {\"a}r omr{\aa}det utanf{\"o}r en l{\aa}ng, rak ledare
+d{\"a}r magnetf{\"a}ltet {\"a}r riktat cirkul{\"a}rt runt ledaren.
+F{\"a}ltet har i detta fall {\"a}nd{\aa} noll rotation i varje punkt
+utanf{\"o}r ledaren, men den slutna linjeintegralen runt ledaren kan
+{\"a}nd{\aa} vara skild fr{\aa}n noll eftersom det omr{\aa}de som den
+omslutande kurvan sp{\"a}nner upp inneh{\aa}ller str{\"o}mmen och inte
+{\"a}r ett helt str{\"o}mfritt, enkelt sammanh{\"a}ngande omr{\aa}de.
+
+Detta exempel visar varf{\"o}r man m{\aa}ste vara f{\"o}rsiktig n{\"a}r man
+anv{\"a}nder lokala differentialegenskaper f{\"o}r att tolka och dra slutsatser
+om integraler l{\"a}ngs slutna kurvor.
+
+\subsection{{\red{Biot--Savarts lag och rotationen hos magnetf{\"a}ltet}}}
+Enligt Biot–Savarts lag ges magnetf{\"a}ltet fr{\aa}n en o{\"a}ndligt l{\aa}ng,
+rak str{\"o}mf{\"o}rande ledare, b{\"a}rande str{\"o}mmen $I$ l{\"a}ngs
+$z$-axeln genom origo, som
+$$
+  \red{{\bf B}({\bf x})={{\mu_0I}\over{2\pi r}}{\bf e}_{\varphi}},
+$$
+d{\"a}r {\red{$r=(x^2+y^2)^{1/2}$}} {\"a}r det vinkelr{\"a}ta avst{\aa}ndet till
+$z$-axeln och ${\bf e}_{\varphi}$ {\"a}r den pol{\"a}ra riktningen i cylindriska
+koordinater.
+\epsfig{../lect-00/figs/field-biot.1}
+\noindent
+I kartesiska koordinater har vi detta uttryckt som
+$$
+  \red{{\bf e}_{\varphi}=
+    -{\bf e}_x{{y}\over{(x^2+y^2)^{1/2}}}
+    +{\bf e}_x{{x}\over{(x^2+y^2)^{1/2}}}},
+$$
+och fr{\aa}n dessa identiteter erh{\aa}ller vi d{\"a}rmed att
+$$
+  \red{{\bf B}({\bf x})={{\mu_0I}\over{2\pi(x^2+y^2)}}
+    \big(-y{\bf e}_x+x{\bf e}_y\big)}.
+$$
+Rotationen av magnetf{\"a}ltet f{\aa}r vi d{\aa} som
+$$
+  \eqalign{
+    \red{\nabla\times{\bf B}({\bf x})}&\red{={{\mu_0I}\over{2\pi}}
+    \bigg(
+      {\bf e}_x{{\partial}\over{\partial x}}
+        +{\bf e}_y{{\partial}\over{\partial y}}
+        +\underbrace{{\bf e}_z{{\partial}\over{\partial z}}}_{\to0}
+    \bigg)
+    \times
+    \bigg(
+      -{{y}\over{(x^2+y^2)}}{\bf e}_x+{{x}\over{(x^2+y^2)}}{\bf e}_y
+    \bigg)}\cr
+    &\red{={{\mu_0I}\over{2\pi}}
+    {\bf e}_z
+    \bigg(
+      {{\partial}\over{\partial x}}\bigg({{x}\over{x^2+y^2}}\bigg)
+        +{{\partial}\over{\partial y}}\bigg({{y}\over{x^2+y^2}}\bigg)
+    \bigg)}\cr
+    &\red{={{\mu_0I}\over{2\pi}}
+    {\bf e}_z
+    \bigg(
+      \bigg({{1}\over{x^2+y^2}}-{{x\cdot2x}\over{(x^2+y^2)^2}}\bigg)
+        +\bigg({{1}\over{x^2+y^2}}-{{y\cdot2y}\over{(x^2+y^2)^2}}\bigg)
+    \bigg)}\cr
+    &\red{={{\mu_0I}\over{2\pi}}
+    {\bf e}_z\bigg({{2(x^2+y^2)-2(x^2+y^2)}\over{(x^2+y^2)^2}}\bigg)}\cr
+    &\red{={\bf 0}}.\cr
+  }
+$$
+Med andra ord har vi en liknande situation som tidigare f{\"o}r divergensen,
+n{\"a}mligen att rotationen {\"o}verallt {\"a}r noll, f{\"o}rutom i origo,
+trots att det kontinuerliga uttrycket f{\"o}r magnetf{\"a}ltet onekligen ser
+ut att ha en nollskild ``derivata''.
+
+Det centrala {\"a}r h{\"a}r att divergensen och rotationen m{\"a}ter olika
+saker. Divergensen beskriver nettofl{\"o}de ut fr{\aa}n eller in mot en punkt,
+medan rotationen beskriver lokal cirkulation. Ett f{\"a}lt kan mycket v{\"a}l
+ha noll av den ena men inte av den andra.
+
+\subsection{{\red{Kan parallella f{\"a}ltlinjer ge upphov till en rotation?}}}
+Vid en f{\"o}rsta anblick verkar ju denna fr{\aa}ga ganska konstig.
+Om rotationen i n{\aa}gon bem{\"a}rkelse {\"a}r ett m{\aa}tt p{\aa} hur mycket
+f{\"a}ltet ``snurrar runt'' lokalt, s{\aa} m{\aa}ste v{\"a}l {\"a}nd{\aa}
+f{\"a}ltlinjerna p{\aa} n{\aa}got vis kr{\"o}kas, eller har vi p{\aa} n{\aa}got
+s{\"a}tt missf{\"o}rst{\aa}tt fr{\aa}gan?
+\epsfig{../lect-00/figs/field-rot-parallel.1}
+\noindent
+F{\"o}r att illustrera po{\"a}ngen, l{\aa}t oss konstruera ett artificiellt
+inhomogent vektorf{\"a}lt ${\bf a}({\bf x})$ riktat l{\"a}ngs $x$-axeln och
+varierande i $y$-led enligt
+$$
+  \red{{\bf a}({\bf x})=(a_0-a_1y){\bf e}_x}.
+$$
+F{\"o}r detta vektorf{\"a}lt, som helt uppenbarligen har alla f{\"a}ltlinjer
+parallella med varandra, blir rotationen av f{\"a}ltet
+$$
+  \eqalign{
+    \red{\nabla\times{\bf a}({\bf x})}&=\red{
+    \bigg(
+      \underbrace{{\bf e}_x{{\partial}\over{\partial x}}}_{\to0}
+        +{\bf e}_y{{\partial}\over{\partial y}}
+        +\underbrace{{\bf e}_z{{\partial}\over{\partial z}}}_{\to0}
+    \bigg)\times\Big((a_0-a_1y){\bf e}_x\Big)}\cr
+    &=\red{\underbrace{{\bf e}_y\times{\bf e}_x}_{=-{\bf e}_z}
+        {{\partial}\over{\partial y}}(a_0-a_1y)}\cr
+    &=\red{a_1{\bf e}_z},\cr
+  }
+$$
+det vill s{\"a}ga att rotationen av f{\"a}ltet {\"o}verallt {\"a}r nollskild,
+trots att samtliga f{\"a}ltlinjer {\"a}r parallella!
+
+F{\"o}r att visualisera vad som f{\"o}rsigg{\aa}r h{\"a}r kan vi ta till
+v{\aa}rt ``mentala paddel'' som vi t{\"a}nker oss att vi stoppar ner i en
+inhomogent men parallellt flytande str{\"o}m av v{\"a}tska. Kommer v{\aa}r
+``virtuella paddel'' att b{\"o}rja rotera i det inhomogena fl{\"o}det som
+beskrivs i uppgiften?
+Ja, det inser vi naturligtvis att den kommer att g{\"o}ra, och vi inser
+f{\"o}rhoppningsvis att {\red{\it en nollskild rotation inte
+n{\"o}dv{\"a}ndigtvis beh{\"o}ver h{\"a}nga samman med att f{\"a}ltet
+kr{\"o}ker sig}}.
+\vfill\eject
+
+\subsection{{\red{Exempel p{\aa} f{\"a}lt med en homogen rotation}}}
+Vi avslutar avsnittet om rotationen med att konstatera att det naturligtvis
+inte bara {\"a}r fr{\aa}ga om att rotationen av ett magnetf{\"a}lt, enligt
+Biot--Savarts lag, i princip alltid {\"a}r noll {\"o}verallt och att k{\"a}llor
+till magnetf{\"a}lt i princip alltid skulle vara givna av delta-distributioner.
+\epsfig{../lect-00/figs/field-unicurrent.1}
+\noindent
+Om vi exempelvis har en dom{\"a}n som genoml{\"o}ps av en homogen
+str{\"o}mt{\"a}thet ${\bf J}({\bf x})=J_0{\bf e}_z$, s{\aa} s{\"a}ger
+Amp{\`e}res statiska lag f{\"o}r magnetf{\"a}lt att rotationen av
+magnetf{\"a}ltet {\"o}verallt {\"a}r konstant och riktat l{\"a}ngs
+$z$-axeln, som
+$$
+  \red{\nabla\times{\bf B}=\mu_0{\bf J}=\mu_0J_0{\bf e}_z}.
+$$
+Liksom tidigare, i analysen av paradoxen f{\"o}r divergensen
+$\nabla\cdot{\bf E}$ av ett elektrostatiskt f{\"a}lt i fallet med en homogen
+laddningst{\"a}thet, s{\aa} tycks vi h{\"a}r av symmetrisk{\"a}l ha att
+magnetf{\"a}ltet {\"o}verallt {\"a}r noll, d{\aa} ``intilliggande virvlar
+av f{\"a}ltlinjer'' ju {\"o}verallt kancellerar varandra.
+{\AA}terigen, s{\aa} ligger l{\"o}sning f{\"o}r denna paradox i att vi inte kan
+anta en o{\"a}ndlig dom{\"a}n utan att bryta mot grundl{\"a}ggande randvillkor,
+denna g{\aa}ng f{\"o}r magnetf{\"a}ltets definition.
+
+{\red{\it {\AA}terigen kan vi se detta problem som ett typexempel p{\aa} en
+situation d{\"a}r idealiserad fysikalisk situation inte alltid har en
+l{\"o}sning som uppfyller alla antaganden!}}
+
+\subsection{Kan en ytstr{\"o}m ge rotation skild fr{\aa}n noll?}
+En ytstr{\"o}m {\"a}r ett annat intressant exempel som anknyter till v{\aa}r
+f{\"o}rsta diskussion kring Diracs delta-distribution, eftersom en ytstr{\"o}m
+{\"a}r koncentrerad till en yta snarare {\"a}n som i f{\"o}reg{\aa}ende exempel
+utspridd {\"o}ver en volym.
+
+Antag att vi har en o{\"a}ndlig str{\"o}mskiv i planet $z=0$, med
+ytstr{\"o}mt{\"a}theten
+$$
+  {\bf K}=K_0{\bf e}_x,
+$$
+d{\"a}r ytstr{\"o}mt{\"a}theten ${\bf K}$ har enheten ${\rm A}/{\rm m}$,
+f{\"o}r vilken den motsvarande volymstr{\"o}mt{\"a}theten kan uttryckas med
+en deltafunktion som
+$$
+  {\bf J}=K_0\delta(z){\bf e}_x.
+$$
+Amp{\`e}res statiska lag ger d{\aa} direkt att
+$$
+  \nabla\times{\bf B}({\bf x})=\mu_0{\bf J}=\mu_0K_0\delta(z){\bf e}_x.
+$$
+Rotationen {\"a}r noll p{\aa} vardera sidan om skivan, men har ett
+infinitesimalt utstr{\"a}ckt bidrag fr{\aa}n delta-distributionen i $z$-planet,
+vilket beskriver hur magnetf{\"a}ltet ${\bf B}({\bf x})$ {\"a}ndrar sig
+spr{\aa}ngvis {\"o}ver ytstr{\"o}mmen. Detta kan vi se som ett exempel p{\aa}
+skillnaden mellan en rotation som {\"a}r skild fr{\aa}n noll i ett helt
+volymomr{\aa}de och en rotation som {\"a}r koncentrerad till en idealiserad
+yta.
+
+\section{Konservativa f{\"a}lt}
+\subsection{Vad {\"a}r ett konservativt f{\"a}lt?}
+Vi har nu analyserat tv{\aa} s{\"a}tt att beskriva ett vektorf{\"a}lts lokala
+egenskaper, geonom divergens och rotation, och vi kommer nu att introducera
+ett begrepp som knyter an till b{\aa}da dessa operatorer, n{\"a}mligen
+{\it konservativa f{\"a}lt}.
+\quote{%
+  {\red{{\bf Definition:} Ett vektorf{\"a}lt ${\bf F}$ {\"a}r {\it konservativt}
+  i ett omr{\aa}de om dess {\it linjeintegral mellan tv{\aa} punkter endast
+  beror p{\aa} startpunkten och slutpunkten}, och inte p{\aa} vilken v{\"a}g
+  vi tar d{\"a}remellan.}}
+}
+\noindent
+L{\aa}t oss beteckna startpunkten med ${\bf x}_A$ och slutpunkten med
+${\bf x}_B$. F{\"o}r ett konservativt f{\"a}lt g{\"a}ller d{\aa} att
+$$
+  \int^{{\bf x}_B}_{{\bf x}_A}{\bf F}\cdot d{\bf l}=\phi({\bf x}_A)-\phi({\bf x}_B)
+$$
+f{\"o}r n{\aa}gon skal{\"a}r potential $\phi$, om vi v{\"a}ljer
+konventionen\numberedfootnote{Det {\"a}r h{\"a}r viktigt att h{\aa}lla
+  i minnet vilken konvention f{\"o}r potential som vi anv{\"a}nder.
+  Vi anv{\"a}nder ju h{\"a}r den elektrostatiska definitionen med ett
+  minustecken framf{\"o}r gradienten, och detta {\"a}r anledningen till
+  att ordningen p{\aa} termerna i h{\"o}gerledet kan se lite udda ut, om
+  vi j{\"a}mf{\"o}r med den rent visuellt liknande {\it integralkalkylens
+  huvudsats} ({\"a}ven kallad {\it analysens fundamentalsats}),
+  $$
+    \int^b_a f(x)\,dx=F(b)-F(a).
+  $$}
+$$
+  {\bf F}=-\nabla\phi.
+$$
+Det finns allts{\aa} en skal{\"a}r potential vars negativa gradient ger det
+konservativa f{\"a}ltet.
+
+En ekvivalent egenskap {\"a}r att linjeintegralen l{\"a}ngs varje sluten kurva
+{\"a}r noll,
+$$
+  \oint_{\Gamma}{\bf F}\cdot d{\bf l}=0,
+$$
+vilket {\"a}r ett mycket anv{\"a}ndbart kriterium f{\"o}r konservativa f{\"a}lt.
+Om vi g{\aa}r runt en sluten slinga $\Gamma$ och kommer tillbaka till
+utg{\aa}ngspunkten kan ett konservativt f{\"a}lt inte ge n{\aa}gon
+nettointegral l{\"a}ngs slingan. J{\"a}mf{\"o}r g{\"a}rna med v{\aa}r mentala
+bild av en skal{\"a}r potential som varande en ``h{\"o}jd i ett landskap'',
+enligt tidigare.
+
+S{\aa} varf{\"o}r {\"a}r d{\aa} konservativa f{\"a}lt s{\aa} fundamentalt
+intressanta inom elektromagnetism? Svaret p{\aa} denna fr{\aa}ga {\"a}r i
+grund och botten att konservativa f{\"a}lt per automatik inneb{\"a}r att vi
+kan anv{\"a}nda potentialen f{\"o}r att f{\"o}renkla ber{\"a}kningar.
+Ist{\"a}llet f{\"o}r att integrera f{\"a}ltet l{\"a}ngs en komplicerad v{\"a}g
+kan vi best{\"a}mma potentialen i tv{\aa} punkter och ta skillnaden, helt i
+analogi med klassiska mekaniska problem d{\"a}r vi ofta kan f{\"o}renkla
+problem om vi kan identifiera en potential.
+
+\subsection{Exempel fr{\aa}n elektrostatik}
+Det elektrostatiska f{\"a}ltet {\"a}r ett klassiskt exempel p{\aa} ett
+konservativt f{\"a}lt, f{\"o}r att inte s{\"a}ga {\it det} klassiska
+exemplet. Eftersom vi f{\"o}r ett elektro\-statiskt f{\"a}lt har att
+$$
+  {\bf E}=-\nabla\phi,
+$$
+s{\aa} f{\aa}r vi med hj{\"a}lp av linjeintegralen f{\"o}r gradienten att
+$$
+  \int^{{\bf x}_B}_{{\bf x}_A}{\bf E}\cdot d{\bf l}
+    =-\int^{{\bf x}_B}_{{\bf x}_A}\nabla\phi\cdot d{\bf l}.
+$$
+Integralen av en gradient l{\"a}ngs en kurva {\"a}r potentialens
+f{\"o}r{\"a}ndring mellan {\"a}ndpunkterna, och d{\"a}rf{\"o}r g{\"a}ller
+det att
+$$
+  \int^{{\bf x}_B}_{{\bf x}_A}{\bf E}\cdot d{\bf l}=\phi({\bf x}_A)-\phi({\bf x}_B).
+$$
+Den elektriska potentialskillnaden (volt) mellan punkterna ${\bf x}_A$ och
+${\bf x}_B$ {\"a}r s{\aa}ledes oberoende av vilken v{\"a}g vi v{\"a}ljer i
+ett elektrostatiskt f{\"a}lt. Denna observation utg{\"o}r i sj{\"a}lva verket
+grunden f{\"o}r begreppet {\it sp{\"a}nning}, som kort och gott definieras som
+{\it potentialskillnaden mellan tv{\aa} punkter}.
+
+F{\"o}r en positiv testladdning $q$ {\"a}r arbetet som det elektriska
+f{\"a}ltet utf{\"o}r n{\"a}r laddningen f{\"o}rflyttas fr{\aa}n ${\bf x}_A$
+till ${\bf x}_B$
+$$
+  \Delta W({\bf x}_A\to{\bf x}_B)=q\int^{{\bf x}_B}_{{\bf x}_A}
+    {\bf E}\cdot d{\bf l} =q\big(\phi({\bf x}_A)-\phi({\bf x}_A)\big).
+$$
+Arbetet beror allts{\aa} endast p{\aa} {\"a}ndpunkterna, och om laddningen
+f{\"o}rs tillbaka till utg{\aa}ngspunkten utf{\"o}r f{\"a}ltet inget
+nettoarbete. Detta {\"a}r den fysikaliska inneb{\"o}rden av att f{\"a}ltet
+{\"a}r konservativt, i bem{\"a}rkelsen att den totala energin bevaras utan
+att {\"o}verg{\aa} till v{\"a}rme.
+
+\subsection{{\"A}r magnetf{\"a}ltet konservativt?}
+H{\"a}r beh{\"o}ver vi g{\"o}ra en distinktion mellan magnetf{\"a}ltet%
+\numberedfootnote{{\AA}terigen, om vi skall vara petiga, den
+  {\it magnetiska fl{\"o}dest{\"a}theten} ${\bf B}$.}
+${\bf B}$, den magnetiska kraften och den magnetiska vektorpotentialen
+${\bf A}$. I magnetostatik g{\"a}ller Amp{\`e}res lag
+$$
+  \nabla\times{\bf B}=\mu_0{\bf J},
+$$
+och om str{\"o}mt{\"a}theten {\"a}r noll har vi d{\"a}rf{\"o}r
+$$
+  \nabla\times{\bf B}=0.
+$$
+Man kan tyckas att detta borde inneb{\"a}ra att magnetf{\"a}ltet {\"a}r
+konservativt. Lokalt, i ett enkelt sammanh{\"a}ngande och str{\"o}mfritt
+omr{\aa}de, kan vi faktiskt representera det statiska magnetiska f{\"a}ltet
+som en gradient
+$$
+  {\bf B}=-\nabla\psi,
+$$
+d{\"a}r $\psi$ {\"a}r en skal{\"a}r potential f{\"o}r det statiska
+magnetf{\"a}ltet. Detta samband g{\"a}ller dock {\it inte} generellt,
+och vi kommer ej heller i kursen att anv{\"a}nda begreppet magnetisk potential.
+
+Betrakta {\aa}terigen magnetf{\"a}ltet kring en l{\aa}ng, rak
+str{\"o}mf{\"o}rande ledare, d{\"a}r Biot--Savarts lag,
+$$
+  {\bf B}({\bf x})={{\mu_0I}\over{2\pi r}}{\bf e}_{\varphi},
+$$
+s{\"a}ger oss att magnetf{\"a}ltet g{\aa}r i cirklar runt ledaren. En sluten
+kurva $\Gamma$ som omsluter ledaren, d{\"a}r vi l{\"a}mpligen kan v{\"a}lja
+den slutna kurvan som en cirkel centrerad vid ledaren och med radie $r$, ger
+oss direkt att den slutna linjeintegralen runt denna blir
+$$
+  \oint_{\Gamma}{\bf B}({\bf x})\cdot d{\bf l}
+    ={{\mu_0I}\over{2\pi r}}2\pi r
+    =\mu_0 I.
+$$
+Om str{\"o}mmen $I$ {\"a}r skild fr{\aa}n noll blir integralen allts{\aa}
+{\it inte} noll, och magnetf{\"a}ltet {\"a}r d{\"a}rf{\"o}r {\it inte
+konservativt} i ett omr{\aa}de som inneh{\aa}ller en s{\aa}dan slinga och
+d{\"a}r den omslutna str{\"o}mmen {\"a}r skild fr{\aa}n noll.
+
+Det viktiga i detta resonemang {\"a}r att ett f{\"a}lt kan vara rotationsfritt
+i varje punkt i ett visst omr{\aa}de, men {\"a}nd{\aa} sakna en globalt entydig
+skal{\"a}rpotential om omr{\aa}det inte {\"a}r enkelt sammanh{\"a}ngande.
+
+\subsection{Konservativa f{\"a}lt i elektrodynamik}
+I elektro{\it dynamik} varierar f{\"a}lten med tiden, och Faradays
+induktionslag ger d{\aa} vid hand att
+$$
+  \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}}.
+$$
+Om magnetf{\"a}ltet varierar med tiden kan det elektriska f{\"a}ltet f{\aa} en
+rotation som inte {\"a}r noll, och vi har d{\aa} i allm{\"a}nhet {\it inte} att
+det elektriska f{\"a}ltet kan skrivas som enbart beroende av den skal{\"a}ra
+potentialen med ${\bf E}=-\nabla\phi$ f{\"o}r hela det elektriska f{\"a}ltet.
+I detta fall anv{\"a}nder vi ist{\"a}llet det fullst{\"a}ndiga sambandet%
+\numberedfootnote{Denna form och kopplingen till den elektromagnetiska
+  v{\aa}gekvationen g{\aa}s igenom i F{\"o}rel{\"a}sning~9.}
+$$
+  {\bf E}=-\nabla\phi-{{\partial{\bf A}}\over{\partial t}},
+$$
+vilket delar upp det elektriska f{\"a}ltet i en del fr{\aa}n den gradienten
+av den skal{\"a}ra potentialen $\phi$ och en del fr{\aa}n tidsderivatan av
+vektorpotentialen ${\bf A}$. Detta inneb{\"a}r att det totala elektrodynamiska
+f{\"a}ltet ${\bf E}({\bf x},t)$ inte generellt {\"a}r konservativt; dock, om
+det magnetiska f{\"a}ltet ${\bf B}$ {\"a}r tidsoberoende i det aktuella
+omr{\aa}det, s{\aa} att
+$$
+  {{\partial{\bf B}}\over{\partial t}}=0,
+$$
+{\"a}r det elektriska f{\"a}ltet rotationsfritt d{\"a}r. Under l{\"a}mpliga
+topologiska f{\"o}ruts{\"a}ttningar kan det d{\aa} beskrivas med en skal{\"a}r
+potential.
+\bigskip
+\noindent
+{\bf Tabell 1}. N{\aa}gra typfall f{\"o}r konservativa respektive
+  icke-konservativa f{\"a}lt.
+\smallskip
+{
+\newdimen\hcellpad
+\newdimen\vcellpad
+\hcellpad=4pt
+\vcellpad=4pt
+\offinterlineskip
+%\centerline{%
+%\noindent{{\bf Tabell 1.} Egenskaper hos ........}
+\halign{%
+  \vrule
+  \hbox to 120pt{\hskip\hcellpad
+    \vbox{\vskip\vcellpad\hbox to 100pt{\hss#\hss}\vskip\vcellpad}%
+    \hskip\hcellpad}
+  \vrule&
+  \hbox to 86pt{\hskip\hcellpad
+    \vbox{\vskip\vcellpad\hbox to 78pt{\hss#\hss}\vskip\vcellpad}%
+    \hskip\hcellpad}
+  \vrule&
+  \hbox to 220pt{\hskip\hcellpad
+    \vbox{\vskip\vcellpad\hbox to 203pt{\hss#\hss}\vskip\vcellpad}%
+    \hskip\hcellpad}
+  \vrule\cr
+  \noalign{\hrule}
+  {\bf F{\"a}lt och situation}
+    & {\bf Rotation}
+    & {\bf Konservativt f{\"a}lt?} \cr
+  \noalign{\hrule}
+  Elektrostatiskt ${\bf E}$
+    & $\nabla\times{\bf E}={\bf 0}$
+    & Ja, i ett l{\"a}mpligt sammanh{\"a}ngande omr{\aa}de\cr
+  \noalign{\hrule}
+  \vbox{\hbox{Elektrodynamiskt ${\bf E}$,}\hbox{varierande ${\bf B}$}}
+    & $\displaystyle\nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}}$
+    & Inte generellt \cr
+  \noalign{\hrule}
+  \vbox{\hbox{Magnetostatiskt ${\bf B}$,}\hbox{str{\"o}mfritt omr{\aa}de}}
+    & $\nabla\times{\bf B}={\bf 0}$
+    & Ja lokalt, om omr{\aa}det har l{\"a}mplig topologi \cr
+  \noalign{\hrule}
+  \vbox{\hbox{Magnetostatiskt ${\bf B}$,}\hbox{omr{\aa}de med str{\"o}m}}
+    & $\nabla\times{\bf B}=\mu_0{\bf J}$
+    & Inte generellt \cr
+  \noalign{\hrule}
+}
+%}
+}
+\bigskip
+
+\subsection{Under vilka villkor {\"a}r ett f{\"a}lt konservativt?}
+Det finns ett viktigt matematiskt samband mellan konservativa f{\"a}lt och
+rotationsfria f{\"a}lt. Om ett f{\"a}lt kan skrivas som en gradient av
+n{\aa}gon skal{\"a}r potential,
+$$
+  {\bf F}=\nabla\psi,
+$$
+s{\aa} {\"a}r f{\"a}ltet {\it alltid rotationsfritt} som en f{\"o}ljd av
+vektoridentiteten\numberedfootnote{Detsamma g{\"a}ller sj{\"a}lvfallet {\"a}ven
+  om vi anv{\"a}nder ``minus-konventionen'' (som inom elektrostatiken) och
+  skriver ${\bf F}=-\nabla\phi$.}
+$$
+  \nabla\times(\nabla\psi)=0.
+$$
+Omv{\"a}nt g{\"a}ller att ett kontinuerligt och tillr{\"a}ckligt glatt f{\"a}lt
+med noll rotation kan skrivas som en gradient i ett enkelt sammanh{\"a}ngande
+omr{\aa}de. Ett enkelt sammanh{\"a}ngande omr{\aa}de {\"a}r, informellt, ett
+omr{\aa}de utan h{\aa}l som hindrar oss fr{\aa}n att kontinuerligt dra ihop
+varje sluten kurva till en punkt.
+
+Med andra ord,
+$$
+  \nabla\times{\bf F}=0 \qquad\Rightarrow\qquad {\bf F}=-\nabla\phi
+$$
+under l{\"a}mpliga f{\"o}ruts{\"a}ttningar p{\aa} omr{\aa}det som f{\"a}ltet
+${\bf F}$ {\"a}r definierat p{\aa}. Noll rotation r{\"a}cker inte alltid
+f{\"o}r att garantera att det existerar en global potential $\phi$ om
+omr{\aa}det har h{\aa}l eller andra topologiska hinder.
+
+\section{{\red{Tolkningen av $\nabla\times(\nabla\phi)$}}}
+Vi kommer nu att g{\aa} igenom tre vektoridentiteter som {\"a}r av fundamentalt
+intresse inom elektromagnetiska problem. Den f{\"o}rsta identiteten s{\"a}ger
+oss att {\it rotationen av en gradient alltid {\"a}r identiskt noll,}
+$$
+  \nabla\times(\nabla\phi)={\bf 0}.
+$$\sidx{Vektoridentitet}[$\nabla\times(\nabla\phi)={\bf 0}$]
+F{\"o}r att illustrera vad denna vektoridentitet betyder, b{\"o}rjar vi med en
+skal{\"a}r funktion $\phi$. D{\aa} vi tar gradienten av denna funktion, eller
+skal{\"a}ra {\it f{\"a}lt}, f{\"o}r att anknyta till b{\"o}rjan av denna extra
+f{\"o}rel{\"a}sning, s{\aa} omvandlar vi den till ett vektorf{\"a}lt
+$\phi\rightarrow\nabla\phi$. Om vi d{\"a}refter tar rotationen av detta
+vektorf{\"a}lt f{\aa}r vi alltid noll, f{\"o}rutsatt att $\phi$ {\"a}r
+``tillr{\"a}ckligt glatt'' s{\aa} att de blandade andraderivatorna {\"a}r lika
+n{\"a}r vi byter ordning f{\"o}r differentieringen.
+
+F{\"o}r att se varf{\"o}r kan vi skriva ut rotationen i komponenter, d{\"a}r
+exempelvis $z$-komponenten {\"a}r given som
+$$
+   (\nabla\times\nabla\phi)_z
+      ={{\partial}\over{\partial x}}
+          \bigg({{\partial\phi}\over{\partial y}}\bigg)
+          -{{\partial}\over{\partial y}}
+               \bigg({{\partial\phi}\over{\partial x}}\bigg)
+      ={{\partial^2\phi}\over{\partial x\,\partial y}}
+        -{{\partial^2\phi}\over{\partial y\,\partial x}}
+      =0.
+$$
+Den sista likheten f{\"o}ljer av att blandade andraderivator {\"a}r lika
+f{\"o}r en ``tillr{\"a}ckligt glatt'' funktion, och alla {\"o}vriga komponenter
+blir noll p{\aa} samma s{\"a}tt. {\it Den geometriska tolkningen {\"a}r att
+ett gradientf{\"a}lt aldrig kan ha n{\aa}gon lokal rotation}, vilket i sin tur
+f{\"o}rklarar varf{\"o}r elektrostatiska f{\"a}lt, som kan skrivas som
+$-\nabla\phi$, alltid {\"a}r rotationsfria.
+
+Vektoridentiteten $\nabla\times(\nabla\phi)={\bf 0}$ f{\"o}rklarar ocks{\aa}
+varf{\"o}r vi kan g{\"o}ra en s{\aa} kallad {\it gaugetransformation} av
+vektorpotentialen som
+$$
+  {\bf A}'={\bf A}+\nabla\chi,
+$$
+detta eftersom magnetf{\"a}ltet ${\bf B}=\nabla\times{\bf A}$ definieras genom
+rotationen av vektorpotentialen, med f{\"o}ljden att f{\"a}ltet inte
+p{\aa}verkas av en transformation d{\"a}r vi l{\"a}gger till en gradient,
+$$
+  \nabla\times{\bf A}'
+    =\nabla\times{\bf A}+\underbrace{\nabla\times(\nabla\chi)}_{=0}
+    =\nabla\times{\bf A}.
+$$
+Gradienten av en deriverbar men i {\"o}vrigt godtycklig skal{\"a}r funktion
+$\chi$ kan med andra ord f{\"o}r{\"a}ndra vektorpotentialen utan att
+f{\"o}r{\"a}ndra det magnetf{\"a}lt som den representerar. Vi g{\aa}r igenom
+gaugetransformationen och hur den {\"a}r anv{\"a}ndbar f{\"o}r att ta fram
+v{\aa}gekvationer f{\"o}r den s{\aa} kallade {\it retarderade potentialen}
+i F{\"o}rel{\"a}sning~11.
+
+\section{{\red{Tolkningen av $\nabla\cdot(\nabla\times{\bf a})$}}}
+Den andra identiteten s{\"a}ger oss att {\it divergensen av en rotation alltid
+{\"a}r identiskt noll,}
+$$
+  \nabla\cdot(\nabla\times{\bf a})=0.
+$$\sidx{Vektoridentitet}[$\nabla\cdot(\nabla\times{\bf a})=0$]
+Vi tar f{\"o}rst rotationen av vektorf{\"a}ltet ${\bf a}$ och f{\aa}r ett
+nytt vektorf{\"a}lt ${\bf a}\rightarrow\nabla\times{\bf a}$, varefter vi tar
+divergensen av detta f{\"a}lt, med resultatet att denna divergens alltid {\"a}r
+identiskt noll om ${\bf a}$ {\"a}r ``tillr{\"a}ckligt glatt''.
+
+F{\"o}r att se hur denna identitet uppkommer, kan vi utveckla divergensen av
+rotationen av ett generellt vekt{\"o}rf{\"a}lt ${\bf a}$ som
+$$
+  \eqalign{
+    \nabla\cdot(\nabla\times{\bf a})
+      &={{\partial}\over{\partial x}}
+        \bigg(
+          {{\partial a_z}\over{\partial y}}-{{\partial a_y}\over{\partial z}}
+        \bigg)
+       +{{\partial}\over{\partial y}}
+        \bigg(
+          {{\partial a_x}\over{\partial z}}-{{\partial a_z}\over{\partial x}}
+        \bigg)
+       +{{\partial}\over{\partial z}}
+        \bigg(
+          {{\partial a_y}\over{\partial x}}-{{\partial a_x}\over{\partial y}}
+        \bigg)\cr
+      &=\bigg(
+          {{\partial^2 a_z}\over{\partial x\partial y}}
+             -{{\partial^2 a_y}\over{\partial x\partial z}}
+        \bigg)
+       +\bigg(
+          {{\partial^2 a_x}\over{\partial y\partial z}}
+             -{{\partial^2 a_z}\over{\partial y\partial x}}
+        \bigg)
+       +\bigg(
+          {{\partial^2 a_y}\over{\partial z\partial x}}
+             -{{\partial^2 a_x}\over{\partial z\partial y}}
+        \bigg)\cr
+      &=\bigg(
+          {{\partial^2}\over{\partial y\partial z}}
+             -{{\partial^2}\over{\partial z\partial y}}
+        \bigg)a_x
+       +\bigg(
+          {{\partial^2}\over{\partial z\partial x}}
+             -{{\partial^2}\over{\partial x\partial z}}
+        \bigg)a_y
+       +\bigg(
+          {{\partial^2}\over{\partial x\partial y}}
+             -{{\partial^2}\over{\partial y\partial x}}
+        \bigg)a_z\cr
+      &=0.\cr
+  }
+$$
+Med andra ord, n{\"a}r vi utvecklar parenteserna f{\"o}rekommer varje blandad
+andraderivata tv{\aa} g{\aa}nger med motsatt tecken, vilket via kancellering
+resulterar i att divergensen av en rotation alltid {\"a}r identiskt noll.
+
+Den fysikaliska tolkningen {\"a}r att ett f{\"a}lt som representeras som
+rotationen av ett ``tillr{\"a}ckligt glatt'' vektorf{\"a}lt automatiskt {\"a}r
+divergensfritt, vilket ocks{\aa} {\"a}r precis vad vi ser f{\"o}r, till
+exempel, det magnetiska f{\"a}ltet, d{\"a}r vi ser att Gauss lag,
+$$
+  \nabla\cdot{\bf B}=0,
+$$
+ger att vi alltid m{\aa}ste kunna formulera f{\"a}ltet f{\"o}r ${\bf B}$ som en
+rotation av en vektorfuktion, den s{\aa} kallade vektorpotentialen ${\bf A}$,
+som
+$$
+  {\bf B}=\nabla\times{\bf A}.
+$$
+Vektoridentiteten $\nabla\cdot(\nabla\times{\bf a})=0$ s{\"a}ger oss
+allts{\aa} att vi alltid representera magnetf{\"a}ltet ${\bf B}$ med en
+vektorpotential ${\bf A}$ p{\aa} ett s{\aa}dant s{\"a}tt att magnetf{\"a}ltet
+per automatik uppfyller Gauss lag f{\"o}r magnetism.
+Detta {\"a}r inte en slumpm{\"a}ssig algebraisk f{\"o}renkling, utan {\"a}r en
+direkt koppling mellan den matematiska strukturen hos rotationen och den
+fysikaliska egenskapen att magnetf{\"a}ltet saknar isolerade k{\"a}llor och
+s{\"a}nkor.\numberedfootnote{Att magnetf{\"a}ltet saknar isolerade k{\"a}llor
+  och s{\"a}nkor {\"a}r vad vi genomg{\aa}ende i kursen kommer att iterera
+  som faktumet att {\it magnetiska monopoler inte existerar}.}
+
+Identiteten har dock samma krav p{\aa} regularitet som tidigare, och om
+f{\"a}ltet har singulariteter eller inte {\"a}r ``tillr{\"a}ckligt glatt'',
+s{\aa} m{\aa}ste man behandla dessa noggrant, exempelvis med distributioner.
+
+\section{{\red{Tolkningen av $\nabla\times(\nabla\times{\bf a})$}}}
+Den tredje identiteten skiljer sig fr{\aa}n de tv{\aa} f{\"o}reg{\aa}ende,
+i det att den inte producerar ett resultat som {\"a}r identiskt noll, utan
+ist{\"a}llet formulerar en anv{\"a}ndbar relation mellan differentialoperatorer.
+D{\aa} rotationsoperatorn $\nabla\times$ appliceras tv{\aa} g{\aa}nger p{\aa}
+ett vektorf{\"a}lt ${\bf a}$, s{\aa} erh{\aa}ller vi
+identiteten\numberedfootnote{Notera att vi h{\"a}r v{\"a}ljer att explicit
+  beh{\aa}lla parentesen i ``$\nabla\times(\nabla\times{\bf a})$'' f{\"o}r
+  de tv{\aa} p{\aa} varandra f{\"o}ljande rotationerna. Eftersom rotationen
+  {\"a}r en operator som verkar p{\aa} det som st{\aa}r omedelbart till
+  h{\"o}ger, s{\aa} utf{\"o}rs operationerna fr{\aa}n h{\"o}ger till
+  v{\"a}nster, det vill s{\"a}ga att vi implicit alltid ser dessa
+  operatorer som verkandes enligt
+  $$
+    \nabla\times\underbrace{(\nabla\times{\bf a})}_{\hbox{1:a rot.}}.
+  $$
+  Detta {\"a}r precis samma konvention som vi anv{\"a}nder f{\"o}r sammansatta
+  funktioner och operatorer i matematiken, exempelvis ``$f(g(x))$'' utan att
+  vi inf{\"o}ra n{\aa}gon ytterligare notation varje g{\aa}ng en funktion
+  verkar p{\aa} resultatet av en annan funktion. I vektoranalys {\"a}r det
+  emellertid en vedertagen praxis att vi lika g{\"a}rna gan skriva detta som
+  $$
+    \nabla\times\underbrace{\nabla\times{\bf a}}_{\hbox{1:a rot.}}.
+  $$
+  utan n{\aa}gra explicita parenteser.
+  Det {\"a}r allts{\aa} inte n{\aa}gon s{\"a}rskild algebraisk egenskap hos
+  rotationen som g{\"o}r parenteserna {\"o}verfl{\"o}diga, utan snarare att
+  vi har en etablerad operatornotation och konvention att operatorerna verkar
+  fr{\aa}n h{\"o}ger till v{\"a}nster.
+  Notera att
+  $$
+    \nabla\times(\nabla\times{\bf a})\ne(\nabla\times\nabla)\times{\bf a},
+  $$
+  d{\"a}r uttrycket i h{\"o}gerledet saknar vedertagen betydelse. Det {\"a}r
+  h{\"a}r viktigt att inse att $\nabla$ {\it inte} {\"a}r en vanlig vektor,
+  utan en {\it differentialoperator}.}
+$$
+  \nabla\times(\nabla\times{\bf a})
+    =\nabla(\nabla\cdot{\bf a})-\nabla^2{\bf a}.
+$$\sidx{Vektoridentitet}[$\nabla\times(\nabla\times{\bf a})
+    =\nabla(\nabla\cdot{\bf a})-\nabla^2{\bf a}$]
+H{\"a}r {\"a}r den skal{\"a}ra operatorn
+$$
+  \nabla^2
+    ={{\partial^2}\over{\partial x^2}}
+       +{{\partial^2}\over{\partial y^2}}
+       +{{\partial^2}\over{\partial z^2}}.
+$$
+den s{\aa} kallade {\it Laplaceoperatorn}, vilken vi kommer att studera i
+detalj i F{\"o}rel{\"a}sningarna~2 och~3, samt {\aa}terkomma till i
+F{\"o}rel{\"a}sning~9 n{\"a}r vi kommer in p{\aa} den elektromagnetiska
+v{\aa}gekvationen.\numberedfootnote{Ut{\"o}ver detta s{\aa} {\"a}r
+  operatorn $\nabla\times\nabla\times$ central i den f{\"o}rsta
+  tentamensuppgiften! Denna tentamensuppgift finns tillsammans med
+  ett l{\"o}sningsf{\"o}rslag att h{\"a}mta p{\aa} GitHub-repositoriet
+  f{\"o}r kursen, p{\aa}
+  {\tt https://github.com/hp35/elmagii/tree/main/examprob}}
+D{\aa} den skal{\"a}ra Laplaceoperatorn verkar p{\aa} ett vektorf{\"a}lt
+till{\"a}mpas den komponentvis
+$$
+  \nabla^2{\bf a}={\bf e}_x\nabla^2a_x+{\bf e}_y\nabla^2a_y+{\bf e}_z\nabla^2a_z.
+$$
+Ett s{\"a}tt att geometriskt tolka uttrycket $\nabla\times\nabla\times{\bf a}$,
+som till skillnad fr{\aa}n de tv{\aa} tidigare identiteterna allts{\aa} inte
+generellt ger resultatet noll, {\"a}r att betrakta det som en {\it operation
+som m{\"a}ter hur det lokala rotationsf{\"a}ltet varierar i rummet}.
+Det finns dock en djupare geometrisk tolkning {\"a}n att bara s{\"a}ga att vi
+tar rotationen tv{\aa} g{\aa}nger.
+
+\subsection{{\red{Tolkning 1: ``Cirkulationen av en cirkulation''}}}
+Geometriskt inneb{\"a}r uttrycket  $\nabla\times\nabla\times{\bf a}$ att vi
+unders{\"o}ker hur rotationsf{\"a}ltet $\nabla\times{\bf a}$ cirkulerar kring
+infinitesimala slutna kurvor.
+Med andra ord,
+\quote{%
+  \item{1.}{Den f{\"o}rsta rotationen m{\"a}ter cirkulationen hos det
+    ursprungliga f{\"a}ltet ${\bf a}$.}
+\item{2.}{Den andra rotationen m{\"a}ter i sin tur cirkulationen hos det
+    f{\"o}rsta rotationsf{\"a}ltet $\nabla\times{\bf a}$. Denna andra
+    rotationen s{\"a}ger inte bara n{\aa}got om hur mycket det f{\"o}rsta
+    rotationsf{\"a}ltet f{\"o}r{\"a}ndras, utan {\"a}ven hur dess variation
+    {\"a}r orienterad i rummet.}
+}
+Fr{\aa}gan {\"a}r dock om vi blir s{\aa} v{\"a}rst mycket klokare av vad detta
+{\"a}r, d{\aa} ``cirkulationen av en cirkulation'' {\aa}tminstone f{\"o}r
+f{\"o}rfattaren och f{\"o}rel{\"a}saren inte {\"a}r n{\aa}got som ger en
+direkt bild av vad som f{\"o}rsigg{\aa}r.
+
+\subsection{{\red{Tolkning 2: Variation i k{\"a}llstyrka samt utj{\"a}mning
+  i rummet}}}
+Vi kan g{\"o}ra en alternativ tolkning utifr{\aa}n identiteten
+$$
+  \nabla\times(\nabla\times{\bf a})=\nabla(\nabla\cdot{\bf a})-\nabla^2{\bf a},
+$$
+vilken kan f{\"o}rst{\aa}s som en uppdelning i tv{\aa} geometriskt olika bidrag,
+$$
+  \underbrace{
+    \nabla(\nabla\cdot{\bf a})
+  }_{
+    \vbox{
+      \hbox{variation i}
+      \hbox{k{\"a}llstyrka}
+    }
+  }
+  -
+  \underbrace{
+    \vphantom{\nabla(\nabla\cdot{\bf a})}
+    \nabla^2{\bf a}
+  }_{
+    \vbox{
+      \hbox{utj{\"a}mning}
+      \hbox{av f{\"a}ltet}
+    }
+  }
+$$
+Det f{\"o}rsta bidraget kommer fr{\aa}n hur f{\"a}ltets divergens varierar i
+rummet, n{\"a}rmare best{\"a}mt {\it gradienten av det skal{\"a}rf{\"a}lt som
+utg{\"o}rs av k{\"a}llor}. Om vi till exempel betraktar divergensen av det
+elektriska f{\"a}ltet, s{\aa} kan vi se denna divergens som ``k{\"a}llan''.
+
+Det andra bidraget beskriver hur varje komponent av f{\"a}ltet skiljer sig
+fr{\aa}n sitt lokala medel\-v{\"a}rde,\numberedfootnote{I F{\"o}rel{\"a}sning~2
+  och~3 kommer vi successivt att komma in p{\aa} hur Laplace-operatorn har
+  en central betydelse i studiet av elektrostatiska problem, i och med att
+  denna operator ligger som grund f{\"o}r {\it Laplace differentialekvation
+  f{\"o}r den skal{\"a}ra potentialen}. Vi kommer i ramverket f{\"o}r denna
+  ekvation in p{\aa} de medelv{\"a}rdesbildande egenskaperna hos $\nabla^2$
+  i och med att vi kommer att h{\"a}rleda {\it entydighetsteoremet f{\"o}r
+  den elektrostatiska potentialen}.}
+genom Laplace-operatorn $\nabla^2$.
+I korthet, s{\aa} kan vi tolka Laplace-operatorn som en ``andra-derivata i
+rummet'', d{\"a}r v{\"a}rdet p{\aa} operatorn n{\"a}r den verkar p{\aa} en
+funktion beskriver hur funtionsv{\"a}rdet i en omedelbar omgivning av en punkt
+{\"a}r, enligt
+\quote{%
+  \item{1.}{$\nabla^2 f({\bf x})>0\quad\rightarrow\quad$ medelv{\"a}rdet i
+    den n{\"a}rmaste omgivningen {\"a}r st{\"o}rre {\"a}n funktionsv{\"a}rdet
+    i centrum, och punkten befinner sig i n{\aa}gon mening i en ``lokal dal''.}
+  \item{2.}{$\nabla^2 f({\bf x})<0\quad\rightarrow\quad$ medelv{\"a}rdet i
+    omgivningen {\"a}r mindre {\"a}n funktionsv{\"a}rdet i centrum, och
+    punkten befinner sig i n{\aa}gon mening p{\aa} en ``lokal kulle''.}
+  \item{3.}{$\nabla^2 f({\bf x})=0\quad\rightarrow\quad$ medelv{\"a}rdet
+    i den n{\"a}rmaste omgivningen sammanfaller, i gr{\"a}nsen, med
+    funktionsv{\"a}rdet i centrum.}
+}
+Detta bist{\aa}r oss med observationen att om f{\"a}ltet {\"a}r divergensfritt,
+vilket det exempelvis {\"a}r vid frirymdspropagation av elektromagnetiska
+v{\aa}gor eller i {\"o}vrigt laddningsfria omr{\aa}den ({\"a}ven i omgivningar
+utanf{\"o}r direkta str{\"o}mmar), det vill s{\"a}ga
+$$
+  \nabla\cdot{\bf a}=0,
+$$
+s{\aa} erh{\aa}ller vi att
+$$
+  \nabla\times(\nabla\times{\bf a})=-\nabla^2{\bf a}.
+$$
+{\it I k{\"a}llfria problem kan vi d{\"a}rf{\"o}r tolka den dubbla rotationen
+som den negativa Laplaceoperatorn av vektorf{\"a}ltet}, vilket {\"a}r en
+synnerligen anv{\"a}ndbar omtolkning d{\aa} detta  g{\"o}r att vi kan omvandla
+differentialekvationer med dubbla rotationer till uttryck som {\"a}r
+signifikant enklare att hantera.
+Ett tydligt exempel p{\aa} detta utnyttjande av vektoridentiteten f{\"o}r den
+dubbla rotationen {\"a}r den elektromagnetiska v{\aa}gekvationen som vi g{\aa}r
+igenom i F{\"o}rel{\"a}sning~9.
+\vfill\eject
+
+\section{Sammanfattning av F{\"o}rel{\"a}sning~0 -- Grundl{\"a}ggande
+  vektoranalys inom f{\"a}ltteori}
+\item{$\bullet$}{Ett {\it f{\"a}lt} {\"a}r en storhet som tilldelar ett
+  v{\"a}rde till varje punkt i ett omr{\aa}de av rummet, och eventuellt
+  ocks{\aa} till varje tidpunkt. {\it Skal{\"a}ra f{\"a}lt} tilldelar
+  varje punkt ett enda tal, s{\"a}g $\phi=\phi({\bf x},t)$, medan
+  {\it vektorf{\"a}lt} ist{\"a}llet tilldelar varje punkt en vektor,
+  s{\"a}g ${\bf A}={\bf A}({\bf x},t)$.}
+\item{$\bullet$}{I {\it elektrostatiska} problem uttrycks det elektriska
+  f{\"a}ltet i den {\it skal{\"a}ra potentialen} $\phi$ som
+  ${\bf E}=-\nabla\phi$, medan statiska magnetf{\"a}lt har motsvarande
+  relation till {\it vektorpotentialen} ${\bf A}$ som
+  ${\bf B}=\nabla\times{\bf A}$.}
+\item{$\bullet$}{Diracs delta-distribution har i en dimension
+  {\it urvalsegenskapen}
+  $$
+    \delta(x)=0,\ x\ne0,\quad
+    \int^{\infty}_{-\infty}\delta(x)\,dx=1,\quad\Rightarrow\quad
+    \int^{\infty}_{-\infty}f(x)\delta(x-a)\,dx=f(a),
+  $$
+  och motsvarande i tre dimensioner
+  $$
+    \delta^{((3))}({\bf x})=0,\ {\bf x}\ne{\bf x},\quad
+    \iiint_{{\Bbb R}^3}\delta^{(3)}({\bf x})\,dV=1,\quad\Rightarrow\quad
+    \iiint_{{\Bbb R}^3}f({\bf x})\delta^{(3)}({\bf x}-{\bf x}')\,dV
+      =f({\bf x}').
+  $$}
+\item{$\bullet$}{Gradienten $\nabla\phi({\bf x})$ beskriver
+  {\it f{\"o}r{\"a}ndring av ett skal{\"a}rt f{\"a}lt} $\phi({\bf x})$,
+  och talar om i vilken riktning det skal{\"a}ra f{\"a}ltet {\"o}kar
+  snabbast. I elektrostatik ger den elektriska potentialens negativa
+  gradient det elektriska f{\"a}ltet ${\bf E}=-\nabla\phi$.}
+\item{$\bullet$}{Divergensen $\nabla\cdot{\bf a}({\bf x})$ {\it beskriver
+  k{\"a}llor och s{\"a}nkor} f{\"o}r ett vektorf{\"a}lt ${\bf a}(x)$.
+  Elektrisk laddning ger divergens hos det elektriska f{\"a}ltet enligt
+  Gauss lag $\nabla\cdot{\bf E}=\rho/\varepsilon_0$, medan det magnetiska
+  f{\"a}ltet alltid {\"a}r divergensfritt i den klassiska elektromagnetiska
+  teorin, med $\nabla\cdot{\bf B}=0$.}
+\item{$\bullet$}{Rotationen $\nabla\times{\bf a}({\bf x})$ beskriver lokal
+  cirkulation f{\"o}r ett vektorf{\"a}lt ${\bf a}(x)$. Elektro{\it statiska}
+  f{\"a}lt {\"a}r rotationsfria, men ett tidsvarierande magnetf{\"a}lt kan
+  ge ett elektriskt f{\"a}lt med nollskild rotation. Magnetf{\"a}ltet har en
+  nollskild rotation d{\"a}r det finns elektrisk str{\"o}m i magnetostatik.}
+\item{$\bullet$}{{\it Konservativa f{\"a}lt} har potentialer, vilket i sin
+  tur inneb{\"a}r att linjeintegralen av ett f{\"a}lt mellan tv{\aa} punkter
+  {\it endast beror p{\aa} dess {\"a}ndpunkter}. Konservativa f{\"a}lt och
+  dess potentialer bist{\aa}r med ett kraftfullt teoretiskt verktyg inom
+  elektromagnetism.}
+\item{$\bullet$}{Tre mycket anv{\"a}ndbara vektoridentieter med b{\"a}ring
+  p{\aa} elektromagnetism {\"a}r
+  $$
+    \eqalign{
+      &\nabla\times(\nabla\phi)=0,\cr
+      &\nabla\cdot(\nabla\times{\bf a})={\bf 0},\cr
+      &\nabla\times(\nabla\times{\bf a})
+         =\nabla(\nabla\cdot{\bf a})-\nabla^2{\bf a}.\cr
+    }
+  $$
+  \sidx{Vektoridentitet}[$\nabla\times(\nabla\phi)={\bf 0}$]
+  \sidx{Vektoridentitet}[$\nabla\cdot(\nabla\times{\bf a})=0$]
+  \sidx{Vektoridentitet}[$\nabla\times(\nabla\times{\bf a})
+      =\nabla(\nabla\cdot{\bf a})-\nabla^2{\bf a}$]
+\item{$\bullet$}{Vektoranalysens identiteter har praktisk och fysikalisk
+  betydelse, d{\aa} de hj{\"a}lper oss att f{\"o}rst{\aa} hur potentialer
+  uppst{\aa}r och fungerar, varf{\"o}r exempelvis magnetf{\"a}ltet {\"a}r
+  divergensfritt och hur elektromagnetiska v{\aa}gor uppst{\aa}r.}
+\item{$\bullet$}{Vektoranalys {\"a}r inte bara ett s{\"a}tt att r{\"a}kna
+  med vektorer, utan {\"a}r v{\aa}rt ``spr{\aa}k'' f{\"o}r att beskriva
+  hur f{\"a}lt varierar, samverkar och propagerar.}
+
+\cleardoublepage
+%%% End of auto-extracted text from ../lect-00/lecture-00.tex %%%
+%%% Begin of auto-extracted text from ../lect-01/lecture-01.tex %%%
+%
+% File: teach/elmagii/lect-01/lecture-01.tex [plain TeX code]
+% Github: https://github.com/elmagii/lect-01/
+% Last change: June 27, 2026
+%
+% Lecture No 1 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
+% held November 3, 2026, at Uppsala University, Sweden.
+%
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
+% License (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
+\def\coursename{Elektromagnetism II}
+\def\coursecode{1TE626}
+\def\courseyear{2026}
 \def\courserepo{https://github.com/hp35/elmagii/}
 \def\lecturenumber{1}
 \def\lecturetitle{Elektrostatik, superpositionsprincipen och Gauss lag}
 \def\lecturesubtitle{}
 \def\lectureauthor{Fredrik Jonsson}
 \def\lectureplace{Uppsala Universitet}
-\def\lecturedate{3 november 2025}
+\def\lecturedate{3 november 2026}
 %-------------------- BEGIN OF LOCAL MACROS --------------------
 \edef\expandedlecturenumber{1}
 \def\ifempty#1{\ifx\relax#1\relax}
@@ -2598,7 +4977,7 @@ magnetostatics, and electrodynamics.
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 1}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -2743,8 +5122,8 @@ l{\"a}nge variationerna {\"a}r l{\aa}ngsamma.
 
 {\it{\red{Elektro-kvasistatik}}} {\"a}r n{\"a}sta niv{\aa}, d{\"a}r de
 elektriska f{\"a}lten i systemet f{\"o}rvisso varierar i tiden, men fortfarande
-s{\aa} pass l{\aa}ngsamt att v{\aa}gutbredning och str{\aa}lning helt kan
-f{\"o}rsummas inom systemets dimensioner.
+s{\aa} pass l{\aa}ngsamt att {\red{v{\aa}gutbredning och str{\aa}lning helt kan
+f{\"o}rsummas inom systemets dimensioner}}.
 Det finns d{\aa} tidsberoende str{\"o}mmar och sp{\"a}nningar, men de
 elektromagnetiska f{\"a}lten hinner fortfarande ``anpassa sig'' n{\"a}stan
 omedelbart {\"o}ver hela systemet, och vi kan fortfarande med god approximation
@@ -2785,7 +5164,12 @@ frekvensen\numberedfootnote{En anv{\"a}ndbar tumregel att ha i bakhuvudet
   {\"a}r att {\it en f{\"o}rflyttning med ljushastigheten $c_0$ under en
   nanosekund, eller periodtiden f{\"o}r en v{\aa}g med frekvensen 1~GHz,
   motsvarar ungef{\"a}r en fot -- ``ljusfoten'' -- eller cirka 30 centimeter}.}
-en ljushastighet $1\ {\rm GHz}$ v{\aa}gl{\"a}ngden ungef{\"a}r $30\ {\rm cm}$.
+en ljushastighet $1\ {\rm GHz}$ v{\aa}gl{\"a}ngden ungef{\"a}r
+$30\ {\rm cm}$.\numberedfootnote{Det finns h{\"a}r en mycket underh{\aa}llande
+  demonstration av ``l{\"a}ngden av en nanosekund'' av legendaren Grace Hopper,
+  amerikansk datorpionj{\"a}r och sj{\"o}officer (flottiljamiral) i US Navy,
+  p{\aa} {\tt https://www.youtube.com/watch?v=gYqF6-h9Cvg}
+  Grace Hopper blev 1980 hedersdoktor vid Lin\-k{\"o}pings universitet.}
 Redan n{\aa}gra centimeters ledningsl{\"a}ngd kan d{\aa} ge m{\"a}rkbara
 fasf{\"o}rskjutningar och reflektioner.
 
@@ -2952,13 +5336,13 @@ Magn\'etisme (1785)} \sidx{de Coulomb, Charles-Augustin (1736--1806)}[
 I denna publikation, p{\aa} sidan 579, fastst{\"a}lls det f{\"o}r f{\"o}rsta
 g{\aa}ngen att den attraktiva kraften \sidx{Attraktionskraft}[Elektrisk]
 mellan tv{\aa} motsatt laddade sf{\"a}rer {\"a}r proportionell mot produkten av
-laddningarna p{\aa} sf{\"a}rerna, samt inverst proportionell mot kvadraten p{\aa}
-avst{\aa}ndet mellan sf{\"a}rerna;\numberedfootnote{Coulombs lag var
+laddningarna p{\aa} sf{\"a}rerna, samt inverst proportionell mot kvadraten
+p{\aa} avst{\aa}ndet mellan sf{\"a}rerna;\numberedfootnote{Coulombs lag var
   sj{\"a}lvfallet ej uttryckt i moderna enheter i denna tidiga artikel;
   SI-systemet skulle inte komma att tr{\"a}da i kraft f{\"o}rr{\"a}n 1954.}
-med andra ord Coulombs lag \sidx{Coulombs kraftlag} s{\aa} som vi idag k{\"a}nner
-den, och som dessutom {\"a}r den prim{\"a}ra basen f{\"o}r {\"a}mnet f{\"o}r
-denna f{\"o}rel{\"a}sning.
+med andra ord Coulombs lag \sidx{Coulombs kraftlag} s{\aa} som vi idag
+k{\"a}nner den, och som dessutom {\"a}r den prim{\"a}ra basen f{\"o}r
+{\"a}mnet f{\"o}r denna f{\"o}rel{\"a}sning.
 
 Rent historiskt {\"a}r det anm{\"a}rkningsv{\"a}rt att det tog mer {\"a}n hundra
 {\aa}r innan den Brittiska fysikern Joseph John ``J.~J.'' Thomson \sidx{Thomson,
@@ -3194,7 +5578,7 @@ volymelement $\Delta V_k$ i k{\"a}llpunkterna ${\bf x}'_k$ i rummet uppb{\"a}r
 en laddning som vi kan se som en punktladdning, vilket i ett {\red{kontinuum}}
 {\"o}verg{\aa}r till
 \red{$$
-  q'_k=\rho({\bf x}')\Delta V_k\to\rho({\bf x}')dV'.
+  q'_k=\rho({\bf x}')\Delta V_k\quad\to\quad\rho({\bf x}')dV'.
 $$}
 D{\aa} alla dessa infinitesimala volymelement summeras upp erh{\aa}ller
 vi {\red{{\it Coulombintegralen}}} \sidx{Integral}[Volymintegral]\sidx{Coulombs
@@ -3272,7 +5656,7 @@ i Coulombs lag, i fyra enkla steg som f{\"o}rhoppningsvis ger oss en djupare
 fysikalisk f{\"o}rst{\aa}else f{\"o}r vad Gauss lag inneb{\"a}r.
 
 \subsection{Definition: \red{Elektriskt fl{\"o}de}}
-\sidx{Elektriskt fl{\"o}de}
+\sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 F{\"o}r att diskutera resultaten i dessa fyra steg kommer vi att anv{\"a}nda
 konceptet {\it elektriskt fl{\"o}de} $\Phi_{\rm E}$
 (enhet: ${\rm V}\cdot{\rm m}$), som definieras som den integrerade
@@ -3298,11 +5682,10 @@ normalvektor~${\bf n}$.\sidx{Normalvektor}
   punktladdning}}
 \sidx{Gauss lag}[H{\"a}rledning fr{\aa}n Coulombs lag]
 Antag att vi har en punktladdning \sidx{Punktladdning} $q'$ placerad i position
-vid ortsvektorn ${\bf x}'$. D{\aa} vi ber{\"a}knar det elektriska
-fl{\"o}det \sidx{Elektriskt fl{\"o}de} ut fr{\aa}n denna laddning, s{\aa} kan vi
-se det som att fl{\"o}det h{\"a}rr{\"o}r fr{\aa}n en {\it k{\"a}lla}, och vi
-kommer fram{\"o}ver i kursen ofta att relatera till ``k{\"a}lladdningar'' som
-ger upphov till elektriska f{\"a}lt och
+vid ortsvektorn ${\bf x}'$. D{\aa} vi ber{\"a}knar det elektriska fl{\"o}det ut
+fr{\aa}n denna laddning, s{\aa} kan vi se det som att fl{\"o}det h{\"a}rr{\"o}r
+fr{\aa}n en {\it k{\"a}lla}, och vi kommer fram{\"o}ver i kursen ofta att
+relatera till ``k{\"a}lladdningar'' som ger upphov till elektriska f{\"a}lt och
 fl{\"o}den.\numberedfootnote{Genomg{\aa}ende kommer vi i kursen att s{\"a}tta
   ett prim ($'$) p{\aa} de objekt som vi betraktar som k{\"a}llor,
   \sidx{K{\"a}lladdning} som ${\bf x}'$, $dS'$ (ytelement) eller $dV'$
@@ -3317,11 +5700,12 @@ fl{\"o}den.\numberedfootnote{Genomg{\aa}ende kommer vi i kursen att s{\"a}tta
 Vi l{\"a}gger en hypotetisk sf{\"a}r, eller ``virtuell sf{\"a}r'',
 \sidx{Virtuell sf{\"a}r} $S$ med radien $|{\bf x}-{\bf x}'|=r=\hbox{konstant}$
 runt punktladdningen, med syfte att f{\"o}rs{\"o}ka ber{\"a}kna det totala
-elektriska fl{\"o}det \sidx{Elektriskt fl{\"o}de} ut genom ytan.
+elektriska fl{\"o}det ut genom ytan.
 \epsfig{../lect-01/figs/gauss-step-1.1}\noindent
 Det {\red{elektriska fl{\"o}det}} ut genom den slutna sf{\"a}ren $S$, r{\"a}knat
 gentemot ytans normalvektor ${\bf n}$, ges med utnyttjandet av den sf{\"a}riska
 symmetrin som\sidx{Integral}[Ytintegral]
+\sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 \red{$$
   \eqalign{
     \Phi_{\rm E}&=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}\cr
@@ -3387,8 +5771,9 @@ Resultatet av detta resonemang {\"a}r att vi {\it fortfarande har exakt samma
 totala elektriska fl{\"o}de} $\Phi_{\rm E}$ ut genom ytan som omsluter
 punktladdningen $q'$. Med andra ord g{\"a}ller det {\"a}ven f{\"o}r en
 {\red{{\it godtycklig} omslutande yta $S$}} att\sidx{Integral}[Ytintegral]
+\sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 \red{$$
-  \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}={{q'}\over{\varepsilon_0}},
+ \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}={{q'}\over{\varepsilon_0}},
 $$}
 det vill s{\"a}ga att {\it det totala elektriska fl{\"o}det ut genom den slutna
 ytan enbart best{\"a}ms av v{\"a}rdet p{\aa} den inneslutna punktladdningen}.
@@ -3409,8 +5794,7 @@ elektriska fl{\"o}det som $q'_k/\varepsilon_0$.
 
 Rent formellt {\"a}r det totala elektriska fl{\"o}det ut genom den slutna
 generella ytan $S$ enligt superpositionsprincipen \sidx{Superpositionsprincipen}
-given
-som\sidx{Integral}[Ytintegral]
+given som\sidx{Integral}[Ytintegral]\sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 \red{$$
   \eqalign{
     \Phi_{\rm E}&=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}
@@ -3425,10 +5809,10 @@ som\sidx{Integral}[Ytintegral]
   }
 $$}
 Slutsatsen av detta resultat {\"a}r att {\it det totala elektriska fl{\"o}det
-$\Phi_{\rm E}$ ut genom den slutna ytan fortfarande enbart beror av den inneslutna
-laddningen $q'_{\rm tot}$.} \sidx{Elektriskt fl{\"o}de} I det sista steget kommer
-vi nu att gene\-ra\-li\-sera detta till godtyckliga kontinuerliga
-laddningsf{\"o}rdelningar.
+$\Phi_{\rm E}$ ut genom den slutna ytan fortfarande enbart beror av den
+inneslutna laddningen $q'_{\rm tot}$.}
+I det sista steget kommer vi nu att gene\-ra\-li\-sera detta till godtyckliga
+kontinuerliga laddningsf{\"o}rdelningar.
 \vfill\eject
 
 \subsection{\red{Steg~4: Godtycklig omslutande yta och kontinuerlig
@@ -3457,6 +5841,7 @@ volymintegralen\numberedfootnote{Notera att Griffiths (sid.~70)
   olyckligtvis anv{\"a}nder den udda och vilseledande notationen
   $Q_{\rm enc}=\int_V\rho\,d\tau$ f{\"o}r volymintegralen. Normalt
   anv{\"a}nder vi $\tau$ som integrationsvariabel i {\it tid}.}
+\sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 \red{$$
   \eqalign{
     \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}
@@ -3670,8 +6055,8 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
 % Github: https://github.com/elmagii/lect-02/
 % Last change: March 2, 2026
 %
-% Lecture No 2 in the course ``Elektromagnetism II, 1TE626 (2025)'',
-% held November 4, 2025, at Uppsala University, Sweden.
+% Lecture No 2 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
+% held November 4, 2026, at Uppsala University, Sweden.
 %
 % Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
@@ -3691,14 +6076,14 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
 %
 \def\coursename{Elektromagnetism II}
 \def\coursecode{1TE626}
-\def\courseyear{2025}
+\def\courseyear{2026}
 \def\courserepo{https://github.com/hp35/elmagii/}
 \def\lecturenumber{2}
 \def\lecturetitle{Elektrisk potential och till{\"a}mpningar av Gauss lag}
 \def\lecturesubtitle{}
 \def\lectureauthor{Fredrik Jonsson}
 \def\lectureplace{Uppsala Universitet}
-\def\lecturedate{4 november 2025}
+\def\lecturedate{4 november 2026}
 %-------------------- BEGIN OF LOCAL MACROS --------------------
 \edef\expandedlecturenumber{2}
 \def\ifempty#1{\ifx\relax#1\relax}
@@ -3718,7 +6103,7 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 2}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-02/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -3792,11 +6177,11 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
 
 \section{Till{\"a}mpning av Gauss lag - Rak linjeladdning}
 Antag att vi vill ber{\"a}kna den elektriska f{\"a}ltstyrkan
-\sidx{Elektrisk f{\"a}ltstyrka} (``det elektriska f{\"a}ltet'') p{\aa}
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$} (``det elektriska f{\"a}ltet'') p{\aa}
 avst{\aa}ndet $r$ vinkelr{\"a}tt fr{\aa}n fr{\aa}n en laddning f{\"o}rdelad
-p{\aa} en o{\"a}ndlig och rak linje, med
-linjeladdningst{\"a}theten \sidx{Elektrisk laddningst{\"a}thet}[Linjeladdning]
-$\lambda$ (${\rm C}/{\rm m}$).
+p{\aa} en o{\"a}ndlig och rak linje, med linjeladdningst{\"a}theten $\lambda$
+(${\rm C}/{\rm m}$).
+\sidx{Elektrisk laddningst{\"a}thet}[Linjeladdning $\lambda$]
 
 En taktik att angripa detta problem vore att betrakta varje liten del $dl$
 av linjeladdningen som en punktladdning $dq=\lambda dl$ och d{\"a}refter
@@ -3872,7 +6257,7 @@ N{\"a}sta exempel p{\aa} till{\"a}mpning av Gauss lag
 \sidx{Gauss lag}[Plan geometri] g{\"a}ller att best{\"a}mma det elektriska
 f{\"a}ltet p{\aa} avst{\aa}ndet $a$ fr{\aa}n en o{\"a}ndlig plan yta,
 b{\"a}rande ytladdningst{\"a}theten
-\sidx{Elektrisk laddningst{\"a}thet}[Ytladdning] $\sigma$
+\sidx{Elektrisk laddningst{\"a}thet}[Ytladdning $\sigma$] $\sigma$
 (${\rm C}/{\rm m}^2$). Vi utnyttjar planariteten genom att l{\"a}gga en
 plan-parallell ``Gaussisk burk'' inneslutande en del av ytan.
 Om vi konstruerar burken s{\aa} att de planparallella ytorna omsluter ytan med
@@ -3902,15 +6287,16 @@ det vill s{\"a}ga, med h{\"a}nsyn tagen till symmetrin $E_z(-z)=-E_z(z)_z$,
 $$
   E_z(z) = {{\sigma}\over{2\varepsilon_0}}\sgn(z).
 $$
-Vi noterar att det elektriska f{\"a}ltet\sidx{Elektrisk f{\"a}ltstyrka} ut
-fr{\aa}n den (i detta exempel) o{\"a}ndliga ytladdningen {\"a}r {\it oberoende
-av avst{\aa}ndet fr{\aa}n ytan}, n{\aa}got som rent fysikaliskt {\"a}r l{\"a}tt
-att inse d{\aa} f{\"a}ltlinjerna \sidx{Elektrisk f{\"a}ltlinje} rent
-geometriskt alla m{\aa}ste vara parallella med varandra, med f{\"o}ljd att
-det elektriska fl{\"o}det $\Phi_{\rm E}$ genom en godtycklig testyta ett
-avst{\aa}nd fr{\aa}n ytladdningen m{\aa}ste vara konstant, med lika m{\aa}nga
-f{\"a}ltlinjer sk{\"a}rande testytan oavsett avst{\aa}nd $a$ fr{\aa}n planet
-som den placerats p{\aa}.
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}
+Vi noterar att det elektriska f{\"a}ltet ut fr{\aa}n den (i detta exempel)
+o{\"a}ndliga ytladdningen {\"a}r {\it oberoende av avst{\aa}ndet fr{\aa}n
+ytan}, n{\aa}got som rent fysikaliskt {\"a}r l{\"a}tt att inse d{\aa}
+f{\"a}ltlinjerna \sidx{Elektrisk f{\"a}ltlinje} rent geometriskt alla
+m{\aa}ste vara parallella med varandra, med f{\"o}ljd att det elektriska
+fl{\"o}det $\Phi_{\rm E}$ genom en godtycklig testyta ett avst{\aa}nd fr{\aa}n
+ytladdningen m{\aa}ste vara konstant, med lika m{\aa}nga f{\"a}ltlinjer
+sk{\"a}rande testytan oavsett avst{\aa}nd $a$ fr{\aa}n planet som den
+placerats p{\aa}.
 
 Sj{\"a}lvfallet {\"a}r det i praktiken ofysikaliskt med ett konstant elektriskt
 f{\"a}lt som str{\"a}cker sig ut mot o{\"a}ndligheten, d{\aa} detta i s{\aa}
@@ -3923,7 +6309,7 @@ fr{\aa}n randeffekter.
 \section{Rotationen f{\"o}r det statiska elektriska f{\"a}ltet}
 \sidx{Elektrostatiskt f{\"a}lt}[Rotation f{\"o}r]
 Som vi har sett kan det statiska elektriska f{\"a}ltet \sidx{Elektrisk
-f{\"a}ltstyrka} r{\"a}knas fram genom att exempelvis summera upp (eller
+f{\"a}ltstyrka ${\bf E}$} r{\"a}knas fram genom att exempelvis summera upp (eller
 integrera) bidrag fr{\aa}n punktladdningar~$q$ (${\rm C}$),
 linjeladdningar~$\lambda$ (${\rm C}/{\rm m}$),
 ytladdningar~$\sigma$ (${\rm C}/{\rm m}^2$) eller
@@ -4017,7 +6403,8 @@ n{\"a}stintill trivialt l{\aa}ta oss {\it generalisera speciall{\"o}sningen till
 en godtycklig distribution av elektriska laddningar}.
 
 \section{Elektrostatisk skal{\"a}r potential}
-\sidx{Skal{\"a}r potential}\sidx{Skal{\"a}r potential}[Elektrostatisk]
+\sidx{Skal{\"a}r potential $\phi$}
+\sidx{Skal{\"a}r potential $\phi$}[Elektrostatisk]
 Utifr{\aa}n resonemanget ovan, kring den slutna linjeintegralen som vi kunde
 anv{\"a}nda f{\"o}r att via Stokes teorem p{\aa}visa att rotationen av det
 statiska elektriska f{\"a}ltet m{\aa}ste vara identiskt noll, s{\aa} {\"a}r
@@ -4111,7 +6498,7 @@ $$
   }
 $$
 d{\"a}r vi {\it definierade} den skal{\"a}ra elektrostatiska potentialen
-\sidx{Skal{\"a}r potential}[Elektrostatisk]
+\sidx{Skal{\"a}r potential $\phi$}[Elektrostatisk]
 $\phi({\bf x})$ som\numberedfootnote{Vi kommer i denna serie av
   f{\"o}rel{\"a}sningar att genomg{\aa}ende anv{\"a}nda $\phi$ f{\"o}r
   att beteckna skal{\"a}r potential, f{\"o}r det statiska s{\aa}v{\"a}l
@@ -4123,9 +6510,10 @@ $$
   \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V
     {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
 $$
-Notera att formen av det elektriska f{\"a}ltet \sidx{Elektrisk f{\"a}ltstyrka}
-som en gradient \sidx{Gradient} av en skal{\"a}r funktion g{\"o}r att vi
-trivialt och helt enligt f{\"o}rv{\"a}ntan erh{\aa}ller
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}
+Notera att formen av det elektriska f{\"a}ltet som en gradient \sidx{Gradient}
+av en skal{\"a}r funktion g{\"o}r att vi trivialt och helt enligt
+f{\"o}rv{\"a}ntan erh{\aa}ller
 $$
   \nabla\times{\bf E}({\bf x})=-\nabla\times(\nabla\phi({\bf x}))={\bf 0}.
 $$
@@ -4204,12 +6592,12 @@ f{\"o}rflyttats fr{\aa}n ${\bf x}_a$ till ${\bf x}_b$. Vi har nu allts{\aa} till
 slut anl{\"a}nt till punkten d{\"a}r vi faktiskt kan tala om just ``potentiell
 energi''.
 
-Vi b{\"o}r h{\"a}r passa p{\aa} att erinra oss att sj{\"a}lva ordet ``potential''
-\sidx{Skal{\"a}r potential}[Elektrostatisk] medf{\"o}r en stor risk att man per
-automatik leds in till tankebanan att $\phi$ i sig skulle vara en ``potentiell
-energi'', vilket ej {\"a}r fallet. V{\aa}r potential $\phi$ har dock den
-fysikaliska dimensionen av volt (V), och en potentialskillnad l{\aa}ter sig
-sj{\"a}lvfallet uttryckas i denna enhet.
+Vi b{\"o}r h{\"a}r passa p{\aa} att erinra oss att sj{\"a}lva ordet
+``potential'' medf{\"o}r en stor risk att man per automatik leds in till
+tankebanan att $\phi$ i sig skulle vara en ``potentiell energi'', vilket ej
+{\"a}r fallet. V{\aa}r potential $\phi$ har dock den fysikaliska dimensionen
+av volt (V), och en potentialskillnad l{\aa}ter sig sj{\"a}lvfallet uttryckas
+i denna enhet.\sidx{Skal{\"a}r potential $\phi$}[Elektrostatisk]
 
 \section{De elektriska f{\"a}ltlinjerna {\"a}r alltid ortogonala mot en
   ekvipotentialyta}
@@ -4424,7 +6812,7 @@ Electrodynamics}.
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 3}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-03/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -5744,7 +8132,7 @@ $\phi_0=\hbox{konstant}$?
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 4}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-04/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -6984,7 +9372,7 @@ $$\sidx{Amp\`eres lag}[F{\"or}r statiska magnetiska f{\"a}lt]}
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 5}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-05/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -8108,12 +10496,12 @@ p{\aa} differentialform.\numberedfootnote{Vilket f{\"o}r {\"o}vrigt
 %
 % File: teach/elmagii/lect-06/lecture-06.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-06/
-% Last change: November 18, 2024
+% Last change: August 18, 2026
 %
 % Lecture No 6 in the course ``Elektromagnetism II, 1TE626 (2025)'',
 % held November 18, 2025, at Uppsala University, Sweden.
 %
-% Copyright (C) 2022-2025, Fredrik Jonsson, under Gnu General Public
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
 %
 % This program is free software: you can redistribute it and/or modify
@@ -8158,7 +10546,7 @@ p{\aa} differentialform.\numberedfootnote{Vilket f{\"o}r {\"o}vrigt
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 6}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-06/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -8367,7 +10755,8 @@ $$
   {\bf F}_{\rm ext}=(+q){\bf E}_{\rm ext}.
 $$
 Den elektrostatiska kraften \sidx{Elektrostatisk kraft} ${\bf F}_{\rm e}$ p{\aa}
-k{\"a}rnan fr{\aa}n det omgivande elektronmolnet, \sidx{Elektronmoln} som
+k{\"a}rnan fr{\aa}n det f{\"o}rskjutna omgivande elektronmolnet,
+\sidx{Elektronmoln} som effek\-tivt
 str{\"a}var mot att centrera k{\"a}rnan \sidx{Atomk{\"a}rna} och elektronmolnen
 mot varandra, {\"a}r
 $$
@@ -9055,7 +11444,7 @@ $$
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 7}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-07/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -9730,7 +12119,7 @@ $$}
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 8}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-08/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -10675,7 +13064,7 @@ just vektorpotentialen.
 %
 % File: teach/elmagii/lect-09/lecture-09.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-09/
-% Last change: November 21, 2024
+% Last change: October 22, 2024
 %
 % Lecture No 9 in the course ``Elektromagnetism II, 1TE626 (2023)'',
 % held November 25, 2025, at Uppsala University, Sweden.
@@ -10725,7 +13114,7 @@ just vektorpotentialen.
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 9}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-09/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -10826,6 +13215,18 @@ $$
   till den statiska eller dynamiska situation man {\"o}nskar analysera.
 }
 \vfill\eject\copyrights
+
+~\bigskip
+\quote{{\it From a long view of the history of mankind—seen from, say,
+  ten thousand years from now—there can be little doubt that the most
+  significant event of the 19th century will be judged as Maxwell’s
+  discovery of the laws of electrodynamics. The American Civil War will
+  pale into provincial insignificance in comparison with this important
+  scientific event of the same decade.}}
+\hskip80pt --Richard P. Feynman, {\it Lectures on Physics}\numberedfootnote{
+Caltech's Division of Physics, Mathematics and Astronomy, {\it The Feynman Lectures on Physics}, {\tt https://www.feynmanlectures.caltech.edu}, 
+}, Volume 2, Chapter I-6.
+\bigskip
 
 \section{Maxwells generalisering av Amp\`eres lag}
 \sidx{Amp\`eres lag}[Maxwells generalisering av]
@@ -11541,7 +13942,7 @@ generella v{\aa}gekvationerna ovan.
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 10}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-10/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -12275,7 +14676,7 @@ med enheten ${\rm W}/{\rm m}^2$.
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 11}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-11/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
@@ -13629,7 +16030,7 @@ $$
   \hfil{\it \coursename, \coursecode\ (\courseyear)}}
 \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
   \hfil{\it F\"orel\"asning 12}}
-\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-01/macros/UU_logo_color.eps}}
+\noindent~\vskip-60pt\hskip-40pt{\epsfbox{../lect-12/../lect-01/macros/UU_logo_color.eps}}
 \vskip-42pt\hfill\vbox{
     \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
     \hbox{{\it Lecture Notes, \lectureauthor}}
