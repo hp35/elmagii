@@ -70,8 +70,8 @@ beginfig(1);
   endfor;
 
   %
-  % Draw a simple label indicating the non-zero divergence of the
-  % inhomogeneous field.
+  % Draw a simple label indicating the non-zero divergence everywhere
+  % in the domain.
   %
   label.rt(btex $\rho({\bf x})=\rho_0=\hbox{konstant}$ etex,(34u,25u));
   draw (34u,2.5dy){dir 190}..{dir 190}(dx,dy);
@@ -79,7 +79,7 @@ beginfig(1);
   label.rt(btex $\Downarrow$ etex,(43u,18u));
   label.rt(btex $\nabla\cdot{\bf E}=\rho_0/\varepsilon_0$, {\"o}verallt etex,
       (34u,11u));
-  label.rt(btex Samtidigt {\"a}r ${\bf E}={\bf 0}$ {\"o}verallt! etex,
+  label.rt(btex Samtidigt tycks ${\bf E}={\bf 0}$ {\"o}verallt! etex,
       (34u,4u));
   label.top(btex Dom{\"a}n med homogen laddningst{\"a}thet $\rho({\bf x})$ etex,
       (origo shifted (0u,(ny/2)*dx)) shifted (0u,0u));
