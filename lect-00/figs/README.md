@@ -86,5 +86,11 @@ are any complaints.
     to a non-zero rotation everywhere despite that the field lines everywhere
     are parallel.</i>
 
+[`field-unicurrent.mp`](field-unicurrent.mp)
+    ([`field-unicurrent.pdf`](field-unicurrent.pdf))
+    <i>MetaPost drawing of a domain with a homogeneous distribution of
+    current density, leading to the rotation of the static magnetic field
+    being positive everywhere in the domain.</i>
+
 ## Copyright
 Copyright (C) 2026, Fredrik Jonsson, under GPL 3.0.
