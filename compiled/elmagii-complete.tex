@@ -4927,7 +4927,7 @@ igenom i F{\"o}rel{\"a}sning~9.
 %
 % File: teach/elmagii/lect-01/lecture-01.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-01/
-% Last change: June 27, 2026
+% Last change: November 3, 2026
 %
 % Lecture No 1 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
 % held November 3, 2026, at Uppsala University, Sweden.
@@ -5050,11 +5050,11 @@ igenom i F{\"o}rel{\"a}sning~9.
 \section{\red{Begreppen elektrostatik, elektro-kvasistatik och elektrodynamik}}
 Inom elektromagnetism {\"a}r kan vi i huvudsak dela upp elektriska och
 {\red{elektromagnetiska processer i tre olika regimer}}:
-\medskip
-\item{1.}{elektrostatik,}
-\item{2.}{elektro-kvasistatik, samt}
-\item{3.}{elektrodynamik.}
-\medskip
+\quote{%
+  \item{1.}{\red{Elektrostatik},}
+  \item{2.}{\red{Elektro-kvasistatik}, samt}
+  \item{3.}{\red{Elektrodynamik}.}
+}
 \noindent
 Dessa omr{\aa}den beskriver i grunden samma fysik, men {\"a}r giltiga under
 {\it olika antaganden om hur snabbt systemen varierar i tiden och hur stora
@@ -5096,7 +5096,13 @@ information i praktiken hinner spridas momentant genom systemet vi studerar.
 Detta inneb{\"a}r {\it inte} att ljushastigheten i sig {\"a}r o{\"a}ndlig, utan
 bara att f{\"o}rdr{\"o}jningen genom systemet {\"a}r f{\"o}rsumbar
 j{\"a}mf{\"o}rt med de tidsvariationer som annars f{\"o}rekommer.
-Formellt kan man uttrycka det villkoret f{\"o}r {\red{elektrostatisk regim}} som
+Formellt kan man uttrycka det villkoret f{\"o}r {\red{elektrostatisk regim}}
+som att systemets\numberedfootnote{Med ``system'' menar vi h{\"a}r
+  ungef{\"a}rliga dimesioner och l{\"a}ngder p{\aa} ledare, komponenter,
+  och s{\aa} vidare. Vi har h{\"a}r ingen exakt definition, utan formulerar
+  snarare en riktlinje och tumregel. Gr{\"a}nserna mellan statiska,
+  kvasistatiska och dynamiska problem kan i praktiken vara t{\"a}mligen
+  flytande.}
 $$
   \red{L \ll \lambda}.
 $$
@@ -5135,8 +5141,8 @@ fortfarande ``ungef{\"a}r'' att
 $$
   \red{L \ll \lambda},
 $$
-men nu till{\aa}ts allts{\aa} tidsvariationer. Skillnaden mot ren elektrostatik
-{\"a}r att f{\"o}rskjutningsstr{\"o}mmar och tidsberoende
+men {\red{nu till{\aa}ts allts{\aa} tidsvariationer}}. Skillnaden mot ren
+elektrostatik {\"a}r att f{\"o}rskjutningsstr{\"o}mmar och tidsberoende
 laddningsf{\"o}rdelningar kan f{\"o}rekomma.
 D{\"a}remot {\"a}r fasf{\"o}rskjutningar {\"o}ver systemets dimensioner sm{\aa}
 och man beh{\"o}ver normalt inte beskriva fenomenet som en utbredd v{\aa}g.
@@ -5149,10 +5155,10 @@ och i praktiken att signalerna sprids momentant genom kretsen, vilket {\"a}r
 en mycket god approximation s{\aa} l{\"a}nge kretsens dimensioner {\"a}r
 sm{\aa} j{\"a}mf{\"o}rt med v{\aa}gl{\"a}ngden.
 
-En viktig {\red{tumregel inom elektronik}} {\"a}r att kretsmodeller med diskreta
-``portade'' komponenter\numberedfootnote{Engelska: {\it Lumped circuits}
-  eller {\it lumped-element model}, fr{\aa}n ``lumped'' som ungef{\"a}r
-  betyder ``klumpa ihop'' p{\aa} svenska.}
+En {\red{tumregel inom elektronik}} {\"a}r att klassiska kretsmodeller med
+diskreta ``portade'' komponenter\numberedfootnote{Engelska: {\it Lumped
+  circuits} eller {\it lumped-element model}, fr{\aa}n ``lumped'' som
+  ungef{\"a}r betyder ``klumpa ihop'' p{\aa} svenska.}
 fungerar bra om ledningsl{\"a}ngderna {\"a}r mindre {\"a}n ungef{\"a}r en
 tiondel av v{\aa}gl{\"a}ngden, det vill s{\"a}ga att
 $$
@@ -5175,7 +5181,7 @@ fasf{\"o}rskjutningar och reflektioner.
 
 {\it{\red{Elektrodynamik}}} {\"a}r den regim d{\"a}r systemets dimensioner $L$
 blir j{\"a}mf{\"o}rbara med den elektromagnetiska v{\aa}gl{\"a}ngden $\lambda$
-i problemet, frt vill s{\"a}ga att vi inom {\red{elektrodynamisk regim}} har att
+i problemet, det vill s{\"a}ga att vi inom {\red{elektrodynamisk regim}} har att
 $$
   \red{L\approx\lambda},
 $$
@@ -5212,10 +5218,10 @@ exempel p{\aa} s{\aa}dana l{\"o}sningar till Maxwells ekvationer.
 \sidx{Maxwells ekvationer}
 
 Ett klassiskt exempel {\"a}r en antenn. Om antennens storlek {\"a}r av samma
-storleksordning som v{\aa}gl{\"a}ngden kan den effektivt str{\aa}la
-elektromagnetisk energi.
-En halvv{\aa}gsdipol f{\"o}r frekvensen $100\ {\rm MHz}$ f{\aa}r exempelvis
-den fysiska l{\"a}ngden
+storleksordning som v{\aa}gl{\"a}ngden kan den effektivt str{\aa}la ut eller
+ta emot elektromagnetiska v{\aa}gor.
+En {\it halvv{\aa}gsdipol} f{\"o}r frekvensen $100\ {\rm MHz}$ skall till
+exempel designas s{\aa} att den ungef{\"a}r f{\aa}r  den fysiska l{\"a}ngden
 $$
   L \approx {{\lambda}\over{2}} = {{c_0}\over{2f}}\approx 1.5\ {\rm m}.
 $$
@@ -5259,10 +5265,10 @@ antennteori och modern telekommunikation, men {\"a}r on{\"o}digt komplicerad att
 applicera som modell f{\"o}r statiska eller kvasistatiska problem.
 Indelningen mellan omr{\aa}dena {\"a}r allts{\aa} inte absolut utan beror
 p{\aa} skalor och approximationer. F{\"o}r att sammanfatta:
-\quote{{\it Maxwells ekvationer {\"a}r modellen bakom all elektromagnetism,
+\quote{{\red{\it Maxwells ekvationer {\"a}r modellen bakom all elektromagnetism,
   men beroende p{\aa} f{\"o}rh{\aa}llandet mellan den elektromagnetiska
   v{\aa}gl{\"a}ngd $\lambda$, systemets storlek $L$ och ljushastigheten
-  $c_0$ kan fysiken beskrivas av mycket olika modeller.}}
+  $c_0$ kan fysiken beskrivas av mycket olika modeller.}}}
 \vfill\eject
 
 \section{Introduktion till elektrostatik}
@@ -5279,9 +5285,11 @@ Vi passar redan nu p{\aa} att sammanfatta begreppen elektrostatik och
 magnetostatik enligt f{\"o}ljande:
 \medskip
 \item{$\bullet$}{Station{\"a}ra, tidsoberoende laddningar
-  $\Rightarrow$ Konstanta elektriska f{\"a}lt (elektro{\it statik})}
+  $\quad\Rightarrow\quad$
+  Konstanta elektriska f{\"a}lt (elektro{\it statik})}
 \item{$\bullet$}{Station{\"a}ra, tidsoberoende str{\"o}mmar
-  $\Rightarrow$ Konstanta magnetiska f{\"a}lt (magneto{\it statik})}
+  $\quad\Rightarrow\quad$
+  Konstanta magnetiska f{\"a}lt (magneto{\it statik})}
 
 \section{Historik -- Elektrostatik fr{\aa}n de gamla grekerna till Coulomb}
 \sidx{Elektrostatik}
@@ -5423,20 +5431,23 @@ konsekvent notation f{\"o}r k{\"a}llpunkter), {\"a}r den totala kraften som
 verkar p{\aa} laddningen $q$ vid observationspunkten uppenbarligen
 \red{$$
   \eqalign{
-  {\bf F}&=\sum^N_{k=1} {\bf F}_k\cr
+  {\bf F}({\bf x})&=\sum^N_{k=1} {\bf F}_k\cr
     &={{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
      q q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}}\cr
-    &=q\bigg({{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
-     q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}}\bigg)\cr
-     &=q{\bf E}({\bf x}),
+    &=q\underbrace{\bigg({{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
+     q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}}\bigg)
+     }_{\hbox{$\equiv{\bf E}({\bf x})\leftarrow$ definition!}}
+     =q{\bf E}({\bf x}),
   }
 $$}
 d{\"a}r vi {\it definierade} det elektriska f{\"a}ltet \sidx{Elektrisk
 f{\"a}ltstyrka} ${\bf E}({\bf x})$ fr{\aa}n de $N$ punktladdningarna
-som\numberedfootnote{Griffiths Ekv.~(2.4), sid.~61.}
+som\numberedfootnote{Griffiths Ekv.~(2.4), sid.~61.} {\it kraften verkande
+p{\aa} testladdningen dividerad med laddningen i sig}, som
 \red{$$
   \hbox{Definition:}\quad
-  {\bf E}({\bf x})\equiv{{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
+  {\bf E}({\bf x})\equiv{\bf F}({\bf x})/q
+  ={{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
      q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}}.
   \hphantom{\hbox{Definition:}\quad}
 $$}
@@ -5523,7 +5534,44 @@ f{\"o}ljande.
 \medskip
 \noindent
 Med detta sagt, s{\aa} kommer vi fram{\"o}ver i kursen helt och h{\aa}llet att
-betrakta Coulombs lag \sidx{Coulombs kraftlag} som en axiomatiskt given naturlag.
+betrakta Coulombs lag \sidx{Coulombs kraftlag} som en axiomatiskt given
+naturlag.
+
+\section{Upphovet till varf{\"o}r vi s{\"a}ger att elektronens laddning
+  {\"a}r ”negativ”?}
+\sidx{Elektrisk laddning}[Konvention f{\"o}r tecken]
+\sidx{Elektrisk laddning}[Elementarladdning]
+Som n{\"a}mndes i introduktionen till denna f{\"o}rel{\"a}sning, s{\aa} {\"a}r
+Benjamin Franklins \sidx{Franklin, Benjamin (1706--1790)} (1706--1790)
+beteckning av {\"o}verskott och underskott av det som d{\aa}tiden kallade
+``elektrisk v{\"a}tska'' upphovet till v{\aa}r ben{\"a}mning av positiv
+respektive negativ laddning.
+
+Just detta faktum {\"a}r en ganska intressant historisk tillf{\"a}llighet,
+d{\"a}r en historisk ben{\"a}mning genom historien och den successiva
+utvecklingen av teori {\"a}nd{\aa} har h{\aa}llit fast vid en konvention,
+som enbart {\"a}r just en konvention.
+
+Benjamin Franklin k{\"a}nde sj{\"a}lvfallet inte till att elektronenen
+{\"o}verhuvud taget existerade n{\"a}r han inf{\"o}rde
+begreppsskillnaden,\numberedfootnote{Som tidigare n{\"a}mnt s{\aa} var det
+  den Brittiska fysikern Joseph John ``J.~J.'' Thomson \sidx{Thomson,
+  Joseph John (1856--1940)} (1856--1940, Nobelpris i fysik 1906) som
+  visade p{\aa} existensen av elektroner \sidx{Elektron} 1897, genom
+  experiment med elektroner i katodstr{\aa}ler{\"o}r.}
+och det vi idag kallar f{\"o}r ``negativ'' laddning {\"a}r enbart en
+konvention, och vi skulle idag precis lika g{\"a}rna kunna ha haft
+konventionen att exempelvis elektronen (och elementarladdningen) skulle ha
+ett positivt tecken p{\aa} sin laddning. Kontrafaktisk historia kan vara
+r{\"a}tt intressant, och att g{\aa} igenom de elektromagnetiska lagarna som
+vi tar f{\"o}r givna, med ing{\aa}ngen att vi v{\"a}ljer att byta
+teckenkonventionen f{\"o}r elektrisk laddning, {\"a}r en r{\"a}tt intressant
+uppgift!
+
+{\red{\it Det viktiga h{\"a}r {\"a}r att inse att tecknet f{\"o}r negativ
+eller positiv laddning enbart {\"a}r en historisk konvention, som vi
+h{\aa}llit fast vid sedan Benjamin Franklins dagar, och att det {\"a}r en
+ren slump att vi inte idag har en diametralt motsatt konvention!}}
 \vfill\eject
 
 \section{\red{Superpositionsprincipen}}
@@ -5551,7 +5599,7 @@ med tv{\aa} separata grupper av de $N$ k{\"a}lladdningarna,
      {{1}\over{4\pi\varepsilon_0}}\sum^{N}_{k=M+1}
      q'_k {{({\bf x}-{\bf x}'_k)}\over{|{\bf x}-{\bf x}'_k|^3}}
    }_{\vbox{\hbox{Grupp 2 $\rightarrow\ {\bf E}_2({\bf x})$}\hbox{($N-M$ laddningar)}}}
-   ={\bf E}_1({\bf x})+{\bf E}_2({\bf x}).
+   =\underbrace{{\bf E}_1({\bf x})+{\bf E}_2({\bf x})}_{\hbox{superposition}}.
 $$}
 \epsfig{../lect-01/figs/coulombsyspart.1}\noindent
 Med andra ord, s{\aa} l{\"a}nge som inte de inb{\"o}rdes positionerna eller
@@ -5641,7 +5689,8 @@ oss.\numberedfootnote{Fundera g{\"a}rna igenom argumenten och kom p{\aa}
   n{\"a}rvaro av laddning, till exempel elektromagnetiska v{\aa}gor.}
 \item{$\bullet$}{Detta visar p{\aa} att f{\"a}lt {\"a}r inte bara ett
   bekv{\"a}mt matematiskt verktyg, de har en fysikalisk realitet bortom
-  enbart varandes ett s{\"a}tt att dela upp \sidx{Coulombs kraftlag} i faktorer.}
+  enbart varandes ett s{\"a}tt att dela upp \sidx{Coulombs kraftlag} i
+  faktorer.}
 \vfill\eject
 
 \section{\red{Gauss lag h{\"a}rledd i fyra steg}}
@@ -5649,8 +5698,8 @@ Vi skulle h{\"a}r i princip bara kunna h{\"a}nvisa till den generella formen
 av Gauss\numberedfootnote{Efter Carl Friedrich Gauss (1777--1855) \sidx{Gauss,
   Carl Friedrich (1777--1855)}, tysk matematiker och naturvetare, ofta kallad
   {\it Princeps Mathematicorum} (``matematikernas furste'').}
-lag, \sidx{Gauss lag}[F{\"o}r elektrisk f{\"a}ltstyrka] men skulle d{\aa} riskera
-att missa n{\aa}gra intressanta po{\"a}nger.
+lag, \sidx{Gauss lag}[F{\"o}r elektrisk f{\"a}ltstyrka] men skulle d{\aa}
+riskera att missa n{\aa}gra intressanta po{\"a}nger.
 L{\aa}t oss d{\"a}rf{\"o}r ta detta fr{\aa}n grunden, med ut\-g{\aa}ngs\-punkt
 i Coulombs lag, i fyra enkla steg som f{\"o}rhoppningsvis ger oss en djupare
 fysikalisk f{\"o}rst{\aa}else f{\"o}r vad Gauss lag inneb{\"a}r.
@@ -5776,8 +5825,8 @@ punktladdningen $q'$. Med andra ord g{\"a}ller det {\"a}ven f{\"o}r en
  \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}={{q'}\over{\varepsilon_0}},
 $$}
 det vill s{\"a}ga att {\it det totala elektriska fl{\"o}det ut genom den slutna
-ytan enbart best{\"a}ms av v{\"a}rdet p{\aa} den inneslutna punktladdningen}.
-Vi kommer nu att anv{\"a}nda detta resultat i Steg~3.
+ytan fortfarande enbart best{\"a}ms av v{\"a}rdet p{\aa} den inneslutna
+punktladdningen}. Vi kommer nu att anv{\"a}nda detta resultat i Steg~3.
 \vfill\eject
 
 \subsection{\red{Steg~3: Godtycklig omslutande yta och system av
@@ -5839,8 +5888,8 @@ att den tidigare summan {\"o}ver diskreta laddningar i rummet ers{\"a}tts av
 \sidx{Integral}[Volymintegral]\sidx{Integral}[Ytintegral]
 volymintegralen\numberedfootnote{Notera att Griffiths (sid.~70)
   olyckligtvis anv{\"a}nder den udda och vilseledande notationen
-  $Q_{\rm enc}=\int_V\rho\,d\tau$ f{\"o}r volymintegralen. Normalt
-  anv{\"a}nder vi $\tau$ som integrationsvariabel i {\it tid}.}
+  $Q_{\rm enc}=\int_V\rho\,d\tau$ f{\"o}r volymintegralen. {\it Normalt
+  anv{\"a}nder vi $\tau$ som integrationsvariabel i {\it tid}.}}
 \sidx{Elektriskt fl{\"o}de $\Phi_{\rm E}$}
 \red{$$
   \eqalign{
@@ -5874,13 +5923,15 @@ olika grad av avklingande.
 \vfill\eject
 
 \section{\red{Kontinuerliga laddningsf{\"o}rdelningar}}
-\sidx{Elektrisk laddningst{\"a}thet}[Volym-, yt-, linje-, punkt-]
+\sidx{Elektrisk laddningst{\"a}thet}[Volymladdning $\rho$]
+\sidx{Elektrisk laddningst{\"a}thet}[Ytladdning $\sigma$]
+\sidx{Elektrisk laddningst{\"a}thet}[Linjeladdning $\lambda$]
 Konceptet kontinuerlig laddningsf{\"o}rdelning kan sj{\"a}lvfallet appliceras
 p{\aa} {\"a}ven trajektorior i rummet (linjeladdningar), ytor (ytladdningar).
 I de fall d{\"a}r man har att g{\"o}ra med punktladdningar p{\aa} linjer, ytor
 eller i volymer, s{\aa} kan dessa modelleras som spatiala delta-pulser
 $\delta({\bf x}-{\bf x}')$ d{\"a}r ${\bf x}'$ {\"a}r positionen f{\"o}r
-punktladdningen.
+punktladdningen. \sidx{Diracs delta-distribution $\delta$}
 \epsfig{../lect-01/figs/chargetypes.1}
 
 \section{\red{Fr{\aa}n Gauss lag till Coulombs lag}}
@@ -5898,7 +5949,7 @@ laddningst{\"a}theten\numberedfootnote{Griffiths anv{\"a}nder notationen
   handlar om just tre dimensioner.}
 \red{$$
   \rho({\bf x})=q'\delta({\bf x}-{\bf x}').
-$$}
+$$}\sidx{Diracs delta-distribution $\delta$}
 Antag vidare att vi l{\"a}gger en hypotetisk sf{\"a}r, vilket vi {\"a}ven kan
 beteckna som en {\red{``virtuell sf{\"a}r''}} \sidx{Virtuell sf{\"a}r} i detta
 tankeexperiment, {\red{med radien $r$}} centrerad runt denna punktladdning.
@@ -5967,7 +6018,15 @@ h{\"o}gerledet m{\aa}ste vara identiska, det vill s{\"a}ga att
 \red{$$
   \nabla\cdot{\bf E}={{\rho({\bf x})}\over{\varepsilon_0}},
 $$}
-vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.
+vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.%
+\numberedfootnote{N{\"a}r vi s{\"a}ger att ett uttryck {\"a}r givet i
+  {\it differentialform} s{\aa} menar vi att vi har uttryckt ett samband
+  mellan fysikaliska storheter i termer av deras lokala variationer, det
+  vill s{\"a}ga med hj{\"a}lp av differentialoperatorer som gradient
+  ($\nabla$), divergens ($\nabla\cdot$) och rotation ($\nabla\times$).
+  Differentialformen inneb{\"a}r i praktiken att vi beskriver vad som
+  h{\"a}nder i en godtyckligt liten omgivning av en punkt, snarare {\"a}n
+  att betrakta ett {\"a}ndligt omr{\aa}de eller en sluten yta som helhet.}
 \sidx{Gauss lag}[Differentialform]
 \vfill\eject
 
@@ -14626,12 +14685,12 @@ med enheten ${\rm W}/{\rm m}^2$.
 %
 % File: teach/elmagii/lect-11/lecture-11.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-11/
-% Last change: December 15, 2025
+% Last change: November 3, 2026
 %
 % Lecture No 11 in the course ``Elektromagnetism II, 1TE626 (2023)'',
-% held December 1, 2025, at Uppsala University, Sweden.
+% held December 1, 2026, at Uppsala University, Sweden.
 %
-% Copyright (C) 2022-2025, Fredrik Jonsson, under Gnu General Public License
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public License
 % (GPL) v3. See the enclosed LICENSE for details.
 %
 % This program is free software: you can redistribute it and/or modify
@@ -14649,14 +14708,14 @@ med enheten ${\rm W}/{\rm m}^2$.
 %
 \def\coursename{Elektromagnetism II}
 \def\coursecode{1TE626}
-\def\courseyear{2025}
+\def\courseyear{2026}
 \def\courserepo{https://github.com/hp35/elmagii/}
 \def\lecturenumber{11}
 \def\lecturetitle{Retarderade potentialer som l{\"o}sningar till Maxwells ekvationer}
 \def\lecturesubtitle{}
 \def\lectureauthor{Fredrik Jonsson}
 \def\lectureplace{Uppsala Universitet}
-\def\lecturedate{1 december 2025}
+\def\lecturedate{1 december 2026}
 %-------------------- BEGIN OF LOCAL MACROS --------------------
 \edef\expandedlecturenumber{11}
 \def\ifempty#1{\ifx\relax#1\relax}
@@ -14889,44 +14948,6 @@ laddningars {\it dynamik} (r{\"o}relse), har vi ist{\"a}llet vektorpotentialen
 ${\bf A}$, fr{\aa}n vilken vi ist{\"a}llet f{\aa}r den magnetiska
 fl{\"o}dest{\"a}theten som ${\bf B}=\nabla\times{\bf A}$.
 \vfill\eject
-
-\section{Konservativa kontra icke-konservativa f{\"a}lt}
-\sidx{Skal{\"a}r potential $\phi$}[Konservativa f{\"a}lt]
-\sidx{Vektorpotential ${\bf A}$}[Icke-konservativa f{\"a}lt]
-Vi ser hur begreppet potential {\"a}r synnerligen anv{\"a}ndbart i s{\aa} kallade {\it konservativa f{\"a}lt}, som exempelvis gravitation och elektrostatik. L{\aa}t oss med en handfull enkla fr{\aa}gor reda ut n{\aa}gra begrepp som kan vara aningen f{\"o}rvirrande i sammanhanget.
-
-\subsection{Fr{\aa}ga 1: Vad {\"a}r ett konservativt f{\"a}lt?}
-\sidx{Konservativt f{\"a}lt}
-Ett {\it konservativt f{\"a}lt}\numberedfootnote{Eller om vi skall vara petnoga,
-  {\it konservativt vektorf{\"a}lt}.}
-{\"a}r ett f{\"a}lt d{\"a}r arbetet mellan tv{\aa} punkter inte beror p{\aa} v{\"a}gen, bara p{\aa} start- och slutpunkt. Rent matematiskt {\"a}r arbetet
-$$
-  W=-\int^{{\bf x}_b}_{{\bf x}_a}{\bf F}\cdot d{\bf l}
-$$
-i ett konservativt f{\"a}lt detsamma oavsett vilken v{\"a}g vi v{\"a}ljer att ta mellan
-${\bf x}_a$ och ${\bf x}_b$. Vi kan h{\"a}r typiskt f{\"o}rest{\"a}lla oss att ${\bf F}=m{\bf G}$ (som i gravitation) eller ${\bf F}=q{\bf E}$ (som i elektrostatik). Lite l{\"o}st kan vi s{\"a}ga att ``allt som str{\aa}lar ut fr{\aa}n en punktk{\"a}lla'' (typ elektriska f{\"a}ltlinjer fr{\aa}n en statisk laddning) kommer att beskriva ett konservativt f{\"a}lt.
-
-\subsection{Fr{\aa}ga 2: Vad k{\"a}nnetecknar ett konservativt f{\"a}lt?}
-Definitionen enligt ovan {\"a}r f{\"o}rvisso tillr{\"a}cklig, men rent praktiskt vore det bra om vi kunde k{\"a}nna igen ett konservativt f{\"a}lt utifr{\aa}n sin form. Det absolut enklaste n{\"o}dv{\"a}ndiga och tillr{\"a}ckliga villkoret f{\"o}r att ett f{\"a}lt skall vara konservativt {\"a}r att dess rotation {\"a}r noll, exempelvis som f{\"o}r s{\aa}v{\"a}l elektrostatiska f{\"a}lt ${\bf E}$ med $\nabla\times{\bf E}={\bf 0}$ som f{\"o}r gravitationsf{\"a}ltet ${\bf G}$ med $\nabla\times{\bf G}={\bf 0}$.
-Vi kan erinra oss att detta i grunden ju var sj{\"a}lva {\it anledningen} att vi i F{\"o}rel{\"a}sning~2 kunde utnyttja vektorteoremet $\nabla\times(\nabla f)={\bf 0}$ till att dra slutsatsen om existens av en skal{\"a}r potential\numberedfootnote{Rekapitulera att vi v{\"a}ljer att {\it definiera} denna potential med negativt tecken s{\aa} att vi f{\aa}r den elektrostatiska kraften ${\bf F}=q{\bf E}$ i samma riktning som f{\"a}ltet ${\bf E}$ f{\"o}r positiva laddningar $q$.} ${\bf E}=-\nabla\phi$.
-
-\subsection{Fr{\aa}ga 3: Vad {\"a}r ett icke-konservativt f{\"a}lt?}
-\sidx{Icke-konservativt f{\"a}lt}
-
-\subsection{Fr{\aa}ga 4: Vad k{\"a}nnetecknar ett icke-konservativt f{\"a}lt?}
-
-
-\subsection{Fr{\aa}ga 5: {\"A}r ett elektrostatiskt f{\"a}lt alltid konservativt?}
-
-\subsection{Fr{\aa}ga 6: {\"A}r ett magnetostatiskt f{\"a}lt alltid konservativt?}
-
-\subsection{Fr{\aa}ga 7: {\"A}r ett elektrodynamiskt f{\"a}lt alltid konservativt?}
-
-
-\section{Finns det absoluta m{\aa}tt p{\aa} en potential?}
-\sidx{Skal{\"a}r potential $\phi$}[Absolut m{\aa}tt f{\"o}r]
-\sidx{Vektorpotential ${\bf A}$}[Absolut m{\aa}tt f{\"o}r]
-
 
 \section{Retarderade potentialer och kopplingen till elektromagnetiska f{\"a}lt}
 \sidx{Retarderad potential}[Tidsf{\"o}rdr{\"o}jd potential]
