@@ -622,7 +622,7 @@
 %
 % File: teach/elmagii/formulas/src/formulas.tex [plain TeX code]
 % Github: https://github.com/elmagii/formulas/
-% Last change: November 1, 2026
+% Last change: November 4, 2026
 %
 % This is the primary collection of formulas in the course ``Elektromagnetism
 % II, 1TE626 (2025)'' for Engineering Physics, held 2022-2026, at Uppsala
@@ -647,7 +647,7 @@
 % along with this program.  If not, see <https://www.gnu.org/licenses/>.
 %
 \font\twelvecmbx=cmbx12
-\input ../lect-01/macros/eplain.tex
+\input macros/eplain.tex
 \input amssym % to get the {\Bbb E} font (strikethrough E)
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
@@ -1359,7 +1359,7 @@ $$
   \iint_S(\nabla f)\times d{\bf S}=-\oint_{\Gamma}f\,d{\bf l}
 $$
 
-\eqsection{Diracs delta-distribution}
+\eqsection{Diracs delta-distribution (``delta-puls'')}
 \eqtitle{Selektionsegenskaper}
 $$
   \eqalign{
@@ -1368,9 +1368,20 @@ $$
         =f(x'),
       \hskip8pt[\delta]={\rm m}^{-1}\cr
     \hbox{3D:}&\hskip8pt
-      \int_{{\Bbb R}^3}f({\bf x}-{\bf x}')\delta({\bf x}-{\bf x}')\,dV
+      \iiint_{{\Bbb R}^3}f({\bf x})\delta({\bf x}-{\bf x}')\,dV
         =f({\bf x}'),
       \hskip8pt[\delta]={\rm m}^{-3}\cr
+  }
+$$
+\eqtitle{Normalisering}
+$$
+  \eqalign{
+    \hbox{1D:}&\hskip8pt
+      \int^{\infty}_{-\infty}\delta(x-x')\,dx=1,\quad
+      \delta(x-x')=0,\ x\ne x'\cr
+    \hbox{3D:}&\hskip8pt
+      \iiint_{{\Bbb R}^3}\delta({\bf x}-{\bf x}')\,dV=1,\quad
+      \delta({\bf x}-{\bf x}')=0,\ x\ne x'\cr
   }
 $$
 
@@ -2670,9 +2681,9 @@ magnetostatics, and electrodynamics.
 %
 % File: teach/elmagii/lect-00/lecture-00.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-00/
-% Last change: October 31, 2026
+% Last change: November 4, 2026
 %
-% Lecture No 0 in the course ``Elektromagnetism II, 1TE626 (2025)'',
+% Lecture No 0 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
 % held November 3, 2026, at Uppsala University, Sweden.
 %
 % Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
@@ -2761,14 +2772,15 @@ F{\"o}rel{\"a}sningen avslutas med att illustrera vad rotationen av en rotation
 formuleringen av den elektromagnetiska v{\aa}gekvationen.}
 
 \threepointsummary{%
-  Delta-funktionen, som kan anv{\"a}ndas som en s{\"a}tt att f{\aa} med punkt,
-  linje- och yt-laddningar i en generell beskrivning i laddningst{\"a}theten
-  $\rho({\bf x})$ eller str{\"o}mt{\"a}theten ${\bf J}({\bf x})$.
+  Diracs delta-distribution $\delta({\bf x})$, som kan anv{\"a}ndas som en
+  s{\"a}tt att f{\aa} med punkt, linje- och yt-laddningar i en generell
+  beskrivning i laddningst{\"a}theten $\rho({\bf x})$ eller
+  str{\"o}mt{\"a}theten ${\bf J}({\bf x})$.
   Exempel:
     (A) {\it Punktladdning} $q$ i k{\"a}llpunkten ${\bf x}'$, be\-skriven av
         volymladdningst{\"a}theten $\rho({\bf x})=q\delta({\bf x}-{\bf x}')$,
     (B) {\it Linjeladdning} med linjeladdningst{\"a}thet $\lambda$ l{\"a}ngs
-        $z$-axeln och genom $(x',y')$, beskriven av $\rho({\bf x})=\lambda
+        $z$-axeln och genom $(x',y')$, be\-skriven av $\rho({\bf x})=\lambda
         \delta(x-x')\delta(y-y')$, samt
     (C) {\it Ytladdning} med ytladdningst{\"a}theten $\sigma$ i planet $z=0$,
     beskriven av $\rho({\bf x})=\sigma\delta(z-z')$.
@@ -2811,8 +2823,8 @@ I denna extra f{\"o}rel{\"a}sning kommer vi att i huvudsak introducera fem
 grundl{\"a}ggande begrepp, som successivt genom kursen kommer att s{\"a}ttas
 samman och kombineras:
 \quote{%
-  \item{1.}{{\red{{\it Delta-funktionen} $\delta({\bf x})$}}, {\"a}ven kallad
-            {\it Diracs delta-distribution}, {\"a}r en
+  \item{1.}{{\red{{\it Delta-funktionen} $\delta({\bf x})$}}, {\"a}ven mer
+            formellt kallad {\red{\it Diracs delta-distribution}}, {\"a}r en
             distribution\numberedfootnote{I denna kurs kan vi lite l{\"o}st
               s{\"a}ga att en {\it distribution} {\"a}r en generaliserad
               funktion som {\"a}r definierad av hur den beter sig n{\"a}r
@@ -3121,12 +3133,12 @@ Det {\"a}r denna egenskap, snarare {\"a}n den o{\"a}ndliga h{\"o}jden, som
     \quad\hbox{och}\quad
     \int^{\infty}_{-\infty}\sin(x)\delta(x-\pi/2)\,dx=1.
   $$}
-Delta-funktionen beh{\"o}ver allts{\aa} inte sj{\"a}lv vara en fysisk puls.
+Delta-distributionen beh{\"o}ver allts{\aa} inte sj{\"a}lv vara en fysisk puls.
 Den fungerar som ett generellt matematiskt instrument f{\"o}r att representera
 en lokaliserad k{\"a}lla.
 \sidx{Diracs delta-distribution $\delta({\bf x})$}[Selektionsegenskap]
 
-\subsection{Delta-funktionen med en annan total styrka}
+\subsection{Delta-distributionen med en annan total styrka}
 Antag att vi vill beskriva en puls med en total integral $q$, till exempel
 m{\aa}ttet p{\aa} en elektrisk punktladdning, i st{\"a}llet f{\"o}r $1$.
 I detta fall kan vi sj{\"a}lvfallet ist{\"a}llet anv{\"a}nda
@@ -3909,7 +3921,7 @@ $$
     &={{3}\over{(x^2+y^2+z^3)^{3/2}}}
         -{{3}\over{2}}{{(2x^2+2y^2+2z^2)}\over{(x^2+y^2+z^3)^{5/2}}}\cr
     &={{3}\over{(x^2+y^2+z^3)^{3/2}}}
-        -3{{3}\over{(x^2+y^2+z^3)^{3/2}}}\cr
+        -{{3}\over{(x^2+y^2+z^3)^{3/2}}}\cr
     &=0,\cr
   }
 $$
