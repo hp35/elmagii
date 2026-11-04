@@ -199,7 +199,9 @@ genom {\"a}ndytorna av cylindern, med andra ord att vi ignorerar randeffekter
 i problemet. Gauss lag ger d{\aa} direkt, utan att beh{\"o}va l{\"o}sa
 n{\aa}gon integral, att
 $$
-  \oiint_S {\bf E}\cdot d{\bf S}
+  \underbrace{
+    \oiint_S {\bf E}\cdot d{\bf S}
+  }_{\vbox{\hbox{Fl{\"o}de ut}\hbox{genom}\hbox{cylindern}}}
      ={{1}\over{\varepsilon_0}}
        \underbrace{
          \iiint_V\rho({\bf x})\,dV
@@ -209,7 +211,6 @@ $$
   \qquad\Leftrightarrow\qquad
   E_r(r) = {{\lambda}\over{2\pi \varepsilon_0 r}}.
 $$
-\vfill\eject
 
 \subsection{Alternativ analys f{\"o}r rak linjeladdning}
 Det finns sj{\"a}lvfallet alltid ett alternativ till anv{\"a}ndandet av Gauss
@@ -243,6 +244,7 @@ $$
        }_{=E_r(r)}.\cr
   }
 $$
+\vfill\eject
 
 \section{Till{\"a}mpning av Gauss lag - Plan ytladdning}
 N{\"a}sta exempel p{\aa} till{\"a}mpning av Gauss lag
@@ -263,7 +265,9 @@ planparallella mot ytan.\numberedfootnote{Griffiths anv{\"a}nder i Exempel~2.5,
 P{\aa} samma s{\"a}tt som f{\"o}r linjeladdningen i f{\"o}reg{\aa}ende exempel
 ger Gauss lag direkt, utan att beh{\"o}va l{\"o}sa n{\aa}gon integral, att
 $$
-  \oiint_S {\bf E}\cdot d{\bf S}
+  \underbrace{
+    \oiint_S {\bf E}\cdot d{\bf S}
+  }_{\vbox{\hbox{Fl{\"o}de ut}\hbox{genom}\hbox{burken}}}
      ={{1}\over{\varepsilon_0}}
        \underbrace{
          \iiint_V\rho({\bf x})\,dV
@@ -316,8 +320,9 @@ Av ren nyfikenhet, l{\aa}t oss d{\"a}rf{\"o}r se vad {\it rotationen} hos det
 statiska elektriska f{\"a}ltet kan uttryckas som.\numberedfootnote{Se
   Griffiths sid.~77--78.}
 
-Betrakta en punktladdning $q'$, som vi f{\"o}r enkelhets skull nu placerar i
-origo ${\bf x}'={\bf 0}$ f{\"o}r observationssystemet.\sidx{Observationspunkt}
+Betrakta en punktladdning $q'$, som i denna uppst{\"a}llning utg{\"o}r v{\aa}r
+{\it k{\"a}lla} och som vi f{\"o}r enkelhets skull nu placerar i origo
+${\bf x}'={\bf 0}$ f{\"o}r observationssystemet.\sidx{Observationspunkt}
 Vi kommer i denna analys att utnytta Stokes teorem \sidx{Stokes teorem}
 applicerat p{\aa} en linjeintegral\sidx{Integral}[Linjeintegral] f{\"o}r en
 godtycklig trajektoria runt om i det statiska elektriska f{\"a}lt som omger
@@ -325,8 +330,8 @@ punktladdningen. Redan nu kan vi passa p{\aa} att mentalt associera denna
 situation med en analogi med massa och gravitation.\sidx{Gravitation}
 \epsfig{figs/lineintegral.1}\noindent
 Med punktladdningen $q'$ placerad i origo har vi det statiska elektriska
-f{\"a}ltet uttryckt i sf{\"a}riska koordinater \sidx{Sf{\"a}riska koordinater}
-som
+f{\"a}ltet vid observationspunkten ${\bf x}$ uttryckt i sf{\"a}riska
+koordinater \sidx{Sf{\"a}riska koordinater} som
 $$
   {\bf E}(r) % ={{q}\over{4\pi\varepsilon_0}}{{{\bf x}}\over{|{\bf x}|^3}}
     =\underbrace{
@@ -641,6 +646,7 @@ $$
 
 \section{Poissons ekvation f{\"o}r den skal{\"a}ra potentialen}
 \sidx{Poissons ekvation}
+\sidx{Elektrostatiskt f{\"a}lt}[Divergens f{\"o}r]
 Som en avslutning p{\aa} denna f{\"o}rel{\"a}sning vi passar vi p{\aa} att
 konstatera att Gauss lag p{\aa} differentialform, $\nabla\cdot{\bf E}
 =\rho/\varepsilon_0$, sammantaget med sj{\"a}lva definitionen f{\"o}r den
