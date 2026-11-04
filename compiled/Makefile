@@ -11,7 +11,7 @@ MKIDX  = makeindex
 DVIPS  = dvips
 PS2PDF = ps2pdf
 
-LECTNUMS := $(shell printf "%02d " $$(seq 1 12))
+LECTNUMS := $(shell printf "%02d " $$(seq 0 12))
 LECTURES := $(foreach n,$(LECTNUMS),../lect-$(n)/lecture-$(n).tex)
 STRIPPED := $(notdir $(LECTURES:.tex=-strip.tex))
 
@@ -164,6 +164,9 @@ replace-figure-paths:
 	   output=lecture-$$n-tmp.tex; \
 	   echo "Replacing figure paths in $$input → $$output"; \
 	   sed 's|\\epsfig{|\\epsfig{../lect-'$$n'/|g'\
+	      $$input > $$output ;\
+	   mv $$output $$input; \
+	   sed 's|\\epsfbox{|\\epsfbox{../lect-'$$n'/|g'\
 	      $$input > $$output ;\
 	   mv $$output $$input; \
 	   sed 's|\\epsfbox{potentials/|\\epsfbox{../lect-'$$n'/potentials/|g'\

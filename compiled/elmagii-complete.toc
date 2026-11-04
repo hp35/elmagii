@@ -11,7 +11,7 @@
 \tocsectionentry {Diracs delta-distribution och punktformiga k{\"a}llor}{0.3}{5}
 \tocsubsectionentry {Delta-distributionen i en dimension -- En mycket smal puls}{0.3.1}{6}
 \tocsubsectionentry {Den viktigaste egenskapen hos delta-distributionen {\"a}r urvalsegenskapen}{0.3.2}{7}
-\tocsubsectionentry {Delta-funktionen med en annan total styrka}{0.3.3}{7}
+\tocsubsectionentry {Delta-distributionen med en annan total styrka}{0.3.3}{7}
 \tocsubsectionentry {Fr{\aa }n en dimension till tre dimensioner}{0.3.4}{7}
 \tocsubsectionentry {En punktladdning}{0.3.5}{8}
 \tocsubsectionentry {Hur kommer delta-distributionen in i Gauss lag?}{0.3.6}{8}
@@ -58,23 +58,24 @@
 \tocsectionentry {Historik -- Elektrostatik fr{\aa }n de gamla grekerna till Coulomb}{1.3}{38}
 \tocsectionentry {\red {Coulombs lag f{\"o}r punktladdningar}}{1.4}{39}
 \tocsectionentry {Vad {\"a}r ursprunget f{\"o}r denna v{\"a}xelverkan? Kan vi h{\"a}rleda Coulombs lag?}{1.5}{40}
-\tocsectionentry {\red {Superpositionsprincipen}}{1.6}{42}
-\tocsectionentry {\red {Coulombintegralen - Coulombs generaliserade lag}}{1.7}{42}
-\tocsectionentry {\red {Vad {\"a}r egentligen po{\"a}ngen med att anv{\"a}nda elektriska f{\"a}lt?}}{1.8}{43}
-\tocsubsectionentry {{\red {F{\"a}ltkonceptet eliminerar ``verkan p{\aa } distans''}} (``{\it action at a distance}'')}{1.8.1}{43}
-\tocsubsectionentry {\red {Lokalitet och kausalitet}}{1.8.2}{43}
-\tocsubsectionentry {\red {F{\"o}renkling av m{\aa }ngkropps-problem}}{1.8.3}{43}
-\tocsubsectionentry {\red {F{\"a}lt kan existera oberoende av laddning}}{1.8.4}{43}
-\tocsectionentry {\red {Gauss lag h{\"a}rledd i fyra steg}}{1.9}{44}
-\tocsubsectionentry {Definition: \red {Elektriskt fl{\"o}de}}{1.9.1}{44}
-\tocsubsectionentry {\red {Steg~1: Sf{\"a}risk symmetrisk omslutande yta och punktladdning}}{1.9.2}{45}
-\tocsubsectionentry {\red {Steg~2: Godtycklig omslutande yta och punktladdning}}{1.9.3}{46}
-\tocsubsectionentry {\red {Steg~3: Godtycklig omslutande yta och system av punktladdningar}}{1.9.4}{47}
-\tocsubsectionentry {\red {Steg~4: Godtycklig omslutande yta och kontinuerlig laddningsf{\"o}rdelning}}{1.9.5}{48}
-\tocsectionentry {\red {Kontinuerliga laddningsf{\"o}rdelningar}}{1.10}{49}
-\tocsectionentry {\red {Fr{\aa }n Gauss lag till Coulombs lag}}{1.11}{49}
-\tocsectionentry {\red {Gauss lag p{\aa } differentialform}}{1.12}{50}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~1 -- Elektrostatik, superpositionsprincipen och Gauss lag}{1.13}{51}
+\tocsectionentry {Upphovet till varf{\"o}r vi s{\"a}ger att elektronens laddning {\"a}r ^^e2^^80^^9dnegativ^^e2^^80^^9d?}{1.6}{41}
+\tocsectionentry {\red {Superpositionsprincipen}}{1.7}{42}
+\tocsectionentry {\red {Coulombintegralen - Coulombs generaliserade lag}}{1.8}{42}
+\tocsectionentry {\red {Vad {\"a}r egentligen po{\"a}ngen med att anv{\"a}nda elektriska f{\"a}lt?}}{1.9}{43}
+\tocsubsectionentry {{\red {F{\"a}ltkonceptet eliminerar ``verkan p{\aa } distans''}} (``{\it action at a distance}'')}{1.9.1}{43}
+\tocsubsectionentry {\red {Lokalitet och kausalitet}}{1.9.2}{43}
+\tocsubsectionentry {\red {F{\"o}renkling av m{\aa }ngkropps-problem}}{1.9.3}{43}
+\tocsubsectionentry {\red {F{\"a}lt kan existera oberoende av laddning}}{1.9.4}{43}
+\tocsectionentry {\red {Gauss lag h{\"a}rledd i fyra steg}}{1.10}{44}
+\tocsubsectionentry {Definition: \red {Elektriskt fl{\"o}de}}{1.10.1}{44}
+\tocsubsectionentry {\red {Steg~1: Sf{\"a}risk symmetrisk omslutande yta och punktladdning}}{1.10.2}{45}
+\tocsubsectionentry {\red {Steg~2: Godtycklig omslutande yta och punktladdning}}{1.10.3}{46}
+\tocsubsectionentry {\red {Steg~3: Godtycklig omslutande yta och system av punktladdningar}}{1.10.4}{47}
+\tocsubsectionentry {\red {Steg~4: Godtycklig omslutande yta och kontinuerlig laddningsf{\"o}rdelning}}{1.10.5}{48}
+\tocsectionentry {\red {Kontinuerliga laddningsf{\"o}rdelningar}}{1.11}{49}
+\tocsectionentry {\red {Fr{\aa }n Gauss lag till Coulombs lag}}{1.12}{49}
+\tocsectionentry {\red {Gauss lag p{\aa } differentialform}}{1.13}{50}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~1 -- Elektrostatik, superpositionsprincipen och Gauss lag}{1.14}{51}
 \tocchapterentry {F{\"o}rel{\"a}sning 2 -- {Elektrisk potential och till{\"a}mpningar av Gauss lag}}{2}{53}
 \tocsectionentry {Till{\"a}mpning av Gauss lag - Rak linjeladdning}{2.1}{55}
 \tocsubsectionentry {Alternativ analys f{\"o}r rak linjeladdning}{2.1.1}{56}
@@ -226,29 +227,20 @@
 \tocchapterentry {F{\"o}rel{\"a}sning 11 -- {Retarderade potentialer som l{\"o}sningar till Maxwells ekvationer}}{11}{189}
 \tocsectionentry {Elektrodynamiska f{\"a}lt och retarderade potentialer}{11.1}{191}
 \tocsectionentry {Recap p{\aa } vad skal{\"a}ra potentialen och vektorpotentialen {\"a}r bra f{\"o}r}{11.2}{192}
-\tocsectionentry {Konservativa kontra icke-konservativa f{\"a}lt}{11.3}{193}
-\tocsubsectionentry {Fr{\aa }ga 1: Vad {\"a}r ett konservativt f{\"a}lt?}{11.3.1}{193}
-\tocsubsectionentry {Fr{\aa }ga 2: Vad k{\"a}nnetecknar ett konservativt f{\"a}lt?}{11.3.2}{193}
-\tocsubsectionentry {Fr{\aa }ga 3: Vad {\"a}r ett icke-konservativt f{\"a}lt?}{11.3.3}{193}
-\tocsubsectionentry {Fr{\aa }ga 4: Vad k{\"a}nnetecknar ett icke-konservativt f{\"a}lt?}{11.3.4}{193}
-\tocsubsectionentry {Fr{\aa }ga 5: {\"A}r ett elektrostatiskt f{\"a}lt alltid konservativt?}{11.3.5}{193}
-\tocsubsectionentry {Fr{\aa }ga 6: {\"A}r ett magnetostatiskt f{\"a}lt alltid konservativt?}{11.3.6}{193}
-\tocsubsectionentry {Fr{\aa }ga 7: {\"A}r ett elektrodynamiskt f{\"a}lt alltid konservativt?}{11.3.7}{193}
-\tocsectionentry {Finns det absoluta m{\aa }tt p{\aa } en potential?}{11.4}{193}
-\tocsectionentry {Retarderade potentialer och kopplingen till elektromagnetiska f{\"a}lt}{11.5}{193}
-\tocsectionentry {V{\aa }gekvationen f{\"o}r retarderade potentialer}{11.6}{195}
-\tocsubsectionentry {Plan f{\"o}r hur vi angriper problemet med tidsf{\"o}rdr{\"o}jning hos potentialer}{11.6.1}{195}
-\tocsubsectionentry {Den generella formen av v{\aa }gekvationen f{\"o}r vektorpotentialen}{11.6.2}{196}
-\tocsubsectionentry {Den generella formen av v{\aa }gekvationen f{\"o}r skal{\"a}ra potentialen}{11.6.3}{197}
-\tocsubsectionentry {Gauge-transformen}{11.6.4}{197}
-\tocsubsectionentry {Lorenz-villkoret (``Lorenz gauge'')}{11.6.5}{199}
-\tocsubsectionentry {Tre viktiga observationer}{11.6.6}{199}
-\tocsectionentry {[{\"O}verkurs] Gauge-transformen: Lorenz och Coulomb gauge}{11.7}{200}
-\tocsubsectionentry {Lorenz gauge}{11.7.1}{200}
-\tocsubsectionentry {Coulomb gauge}{11.7.2}{200}
-\tocsectionentry {Retarderade potentialer p{\aa } integralform}{11.8}{202}
-\tocsectionentry {Exempel: Halvv{\aa }gsantenn och emitterade elektromagnetiska f{\"a}lt}{11.9}{204}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~11 -- Retarderade potentialer}{11.10}{208}
+\tocsectionentry {Retarderade potentialer och kopplingen till elektromagnetiska f{\"a}lt}{11.3}{193}
+\tocsectionentry {V{\aa }gekvationen f{\"o}r retarderade potentialer}{11.4}{194}
+\tocsubsectionentry {Plan f{\"o}r hur vi angriper problemet med tidsf{\"o}rdr{\"o}jning hos potentialer}{11.4.1}{194}
+\tocsubsectionentry {Den generella formen av v{\aa }gekvationen f{\"o}r vektorpotentialen}{11.4.2}{195}
+\tocsubsectionentry {Den generella formen av v{\aa }gekvationen f{\"o}r skal{\"a}ra potentialen}{11.4.3}{196}
+\tocsubsectionentry {Gauge-transformen}{11.4.4}{196}
+\tocsubsectionentry {Lorenz-villkoret (``Lorenz gauge'')}{11.4.5}{198}
+\tocsubsectionentry {Tre viktiga observationer}{11.4.6}{198}
+\tocsectionentry {[{\"O}verkurs] Gauge-transformen: Lorenz och Coulomb gauge}{11.5}{199}
+\tocsubsectionentry {Lorenz gauge}{11.5.1}{199}
+\tocsubsectionentry {Coulomb gauge}{11.5.2}{199}
+\tocsectionentry {Retarderade potentialer p{\aa } integralform}{11.6}{201}
+\tocsectionentry {Exempel: Halvv{\aa }gsantenn och emitterade elektromagnetiska f{\"a}lt}{11.7}{203}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~11 -- Retarderade potentialer}{11.8}{207}
 \tocchapterentry {F{\"o}rel{\"a}sning 12 -- {Grundl{\"a}ggande antennteori}}{12}{209}
 \tocsectionentry {Retarderade potentialer f{\"o}r antenner}{12.1}{211}
 \tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~12 -- Grundl{\"a}ggande antennteori}{12.2}{212}
