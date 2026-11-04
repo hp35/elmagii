@@ -333,10 +333,11 @@ Med punktladdningen $q'$ placerad i origo har vi det statiska elektriska
 f{\"a}ltet vid observationspunkten ${\bf x}$ uttryckt i sf{\"a}riska
 koordinater \sidx{Sf{\"a}riska koordinater} som
 $$
-  {\bf E}(r) % ={{q}\over{4\pi\varepsilon_0}}{{{\bf x}}\over{|{\bf x}|^3}}
+  {\bf E}({\bf x}) % ={{q}\over{4\pi\varepsilon_0}}{{{\bf x}}\over{|{\bf x}|^3}}
+    =E_r(r) {\bf e}_r
     =\underbrace{
-    {{q'}\over{4\pi\varepsilon_0 r^2}}
-    }_{=E_r(r)} {\bf e}_r.
+       {{q'}\over{4\pi\varepsilon_0 r^2}}
+     }_{=E_r(r)} {\bf e}_r.
 $$
 Om vi analyserar linjeintegralen f{\"o}r en godtycklig trajektoria $\Gamma$
 mellan tv{\aa} godtyckliga punkter ${\bf x}_a$ och ${\bf x}_b$ i rummet, s{\aa}
@@ -348,8 +349,13 @@ $$
         {\bf e}_rE_r+{\bf e}_{\varphi}\underbrace{E_{\varphi}}_{0}
             +{\bf e}_{\vartheta}\underbrace{E_{\vartheta}}_{0}
       )\cdot\underbrace{(
-        {\bf e}_r dr+{\bf e}_{\varphi}r\sin(\vartheta)d\varphi
-          +{\bf e}_{\vartheta}r d\vartheta
+        {\bf e}_r dr
+          +\overbrace{{\bf e}_{\varphi}r\sin(\vartheta)d\varphi}^{
+              {\bf e}_r\cdot{\bf e}_{\varphi}=0
+           }
+          +\overbrace{{\bf e}_{\vartheta}r d\vartheta}^{
+             {\bf e}_r\cdot{\bf e}_{\vartheta}=0
+           }
       )}_{\hbox{$d{\bf l}$ i sf{\"a}riska koordinater}}\cr
     &=\int^{r_b}_{r_a} {{q'}\over{4\pi\varepsilon_0 r^2}}\,dr\cr
     &={{q'}\over{4\pi\varepsilon_0}}
