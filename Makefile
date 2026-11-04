@@ -5,8 +5,9 @@
 #
 # Copyright (C) 2025 under GPL 3.0, Fredrik Jonsson
 #
-LECTURES = lect-01 lect-02 lect-03 lect-04 lect-05 lect-06 \
-		lect-07 lect-08 lect-09 lect-10 lect-11
+LECTURES = lect-00 lect-01 lect-02 lect-03 lect-04 lect-05 lect-06 \
+		lect-07 lect-08 lect-09 lect-10 lect-11 lect-12
+FORMULAS = formulas
 GALLERY  = gallery
 WORLDMAP = worldmap
 COMPILED = compiled
@@ -15,6 +16,7 @@ all:
 	for lecture in $(LECTURES) ; do\
 	   make -C $$lecture ;\
 	done
+	make -C $(FORMULAS)
 	make -C $(GALLERY)
 	make -C $(WORLDMAP)
 	make -C $(COMPILED)
@@ -28,6 +30,7 @@ clean:
 	for lecture in $(LECTURES) ; do\
 	   make -ik clean -C $$lecture ;\
 	done
+	make clean -C $(FORMULAS)
 	make clean -C $(GALLERY)
 	make clean -C $(WORLDMAP)
 	make clean -C $(COMPILED)

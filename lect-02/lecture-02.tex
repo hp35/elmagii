@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-01/lecture-02.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-02/
-% Last change: March 2, 2026
+% Last change: November 4, 2026
 %
 % Lecture No 2 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
 % held November 4, 2026, at Uppsala University, Sweden.
@@ -41,23 +41,15 @@
 \font\twelvesc=cmcsc10 at 12 truept
 
 %
-% Define a macro for the highlighting of tex in color (red). In this,
+% Define a macro for the highlighting of text in color (red). In this macro,
 % the \newif\ifcolors call creates \ifcolors, \colorstrue, \colorsfalse,
 % where \colorstrue turns colors on, \colorsfalse turns them off.
 %
 \newif\ifcolors
-\ifx\colorsenabled\undefined
-  \colorsfalse
-\else
-  \colorstrue
-\fi
+\ifx\colorsenabled\undefined \colorsfalse \else \colorstrue \fi
 \ifcolors\input color\fi
 \def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 
-% \newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
-% \colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
-% \ifcolors\input color\fi  % to get colored text output
-% \def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm

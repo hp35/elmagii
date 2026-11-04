@@ -27,23 +27,40 @@ figures:
 
 $(pdfs): $(pss)
 	@$(eval BASE = $(shell basename $@ .pdf))
-	@echo "Converting PS file $< to PDF (target $@)."
+	@echo "======= Generating plain document (PDF) ============="
+	@echo "Converting plain PS file $< to PDF (target $@)."
 	@$(PS2PDF) $(BASE).ps $(BASE).pdf
 	@echo "PDF file for $(BASE).ps written to $(BASE).pdf."
+	@echo "======= Generating highlighted document (PDF) ======="
+	@echo "Converting plain PS file $< to PDF (target $@)."
+	@$(PS2PDF) $(BASE)-hl.ps $(BASE)-hl.pdf
+	@echo "PDF file for $(BASE)-hl.ps written to $(BASE)-hl.pdf."
 
 $(pss): $(dvis)
 	@$(eval BASE = $(shell basename $@ .ps))
-	@echo "Converting DVI file $< to PostScript (target $@)."
+	@echo "======= Generating plain document (PS) =============="
+	@echo "Converting plain DVI file $< to PostScript (target $@)."
 	@$(DVIPS) -D1200 -ta4 $(BASE).dvi -o $(BASE).ps
+	@echo "PostScript file for $< written to $@."
+	@echo "======= Generating highlighted document (PS) ========"
+	@echo "Converting highlighted DVI file $< to PostScript (target $@)."
+	@$(DVIPS) -D1200 -ta4 $(BASE)-hl.dvi -o $(BASE)-hl.ps
 	@echo "PostScript file for $< written to $@."
 
 $(dvis): $(srcs)
 	@$(eval BASE = $(shell basename $@ .dvi))
-	@echo "Compiling source file $(BASE).tex to DVI (target $(BASE).dvi)."
+	@echo "======= Generating plain document (DVI) ============="
+	@echo "Compiling source $(BASE).tex to plain DVI (target $(BASE).dvi)."
 	@$(TEX) $(BASE).tex
 	@$(MKIDX) $(BASE).idx
 	@$(TEX) $(BASE).tex
 	@echo "DVI file for $(BASE).tex written to $(BASE).dvi."
+	@echo "======= Generating highlighted document (DVI) ======="
+	@echo "Compiling $(BASE).tex to highlighted DVI ($(BASE)-hl.dvi)."
+	@$(TEX) -jobname=$(BASE)-hl '\def\colorsenabled{1}\input $(BASE).tex'
+	@$(MKIDX) $(BASE)-hl.idx
+	@$(TEX) -jobname=$(BASE)-hl '\def\colorsenabled{1}\input $(BASE).tex'
+	@echo "Highlighted DVI file for $(BASE).tex written to $(BASE)-hl.dvi."
 
 texchars:
 	@echo "Converting Swedish Unicode chars in $(TEXFILE) to TeX codes."
