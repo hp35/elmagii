@@ -39,10 +39,25 @@
 \font\ninerm=cmr9
 \font\tenssbx=cmssbx10
 \font\twelvesc=cmcsc10 at 12 truept
-\newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
-\colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
-\ifcolors\input color\fi  % to get colored text output
+
+%
+% Define a macro for the highlighting of tex in color (red). In this,
+% the \newif\ifcolors call creates \ifcolors, \colorstrue, \colorsfalse,
+% where \colorstrue turns colors on, \colorsfalse turns them off.
+%
+\newif\ifcolors
+\ifx\colorsenabled\undefined
+  \colorsfalse
+\else
+  \colorstrue
+\fi
+\ifcolors\input color\fi
 \def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
+
+% \newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
+% \colorstrue     % \colorstrue turns colors on, \colorsfalse turns them off
+% \ifcolors\input color\fi  % to get colored text output
+% \def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{
   \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
