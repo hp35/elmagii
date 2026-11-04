@@ -659,7 +659,7 @@ $$
   \iint_S(\nabla f)\times d{\bf S}=-\oint_{\Gamma}f\,d{\bf l}
 $$
 
-\eqsection{Diracs delta-distribution}
+\eqsection{Diracs delta-distribution (``delta-puls'')}
 \eqtitle{Selektionsegenskaper}
 $$
   \eqalign{
@@ -668,9 +668,20 @@ $$
         =f(x'),
       \hskip8pt[\delta]={\rm m}^{-1}\cr
     \hbox{3D:}&\hskip8pt
-      \int_{{\Bbb R}^3}f({\bf x}-{\bf x}')\delta({\bf x}-{\bf x}')\,dV
+      \iiint_{{\Bbb R}^3}f({\bf x})\delta({\bf x}-{\bf x}')\,dV
         =f({\bf x}'),
       \hskip8pt[\delta]={\rm m}^{-3}\cr
+  }
+$$
+\eqtitle{Normalisering}
+$$
+  \eqalign{
+    \hbox{1D:}&\hskip8pt
+      \int^{\infty}_{-\infty}\delta(x-x')\,dx=1,\quad
+      \delta(x-x')=0,\ x\ne x'\cr
+    \hbox{3D:}&\hskip8pt
+      \iiint_{{\Bbb R}^3}\delta({\bf x}-{\bf x}')\,dV=1,\quad
+      \delta({\bf x}-{\bf x}')=0,\ x\ne x'\cr
   }
 $$
 
