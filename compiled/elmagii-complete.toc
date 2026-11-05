@@ -78,7 +78,7 @@
 \tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~1 -- Elektrostatik, superpositionsprincipen och Gauss lag}{1.14}{51}
 \tocchapterentry {F{\"o}rel{\"a}sning 2 -- {Elektrisk potential och till{\"a}mpningar av Gauss lag}}{2}{53}
 \tocsectionentry {Till{\"a}mpning av Gauss lag - Rak linjeladdning}{2.1}{55}
-\tocsubsectionentry {Alternativ analys f{\"o}r rak linjeladdning}{2.1.1}{56}
+\tocsubsectionentry {Alternativ analys f{\"o}r rak linjeladdning}{2.1.1}{55}
 \tocsectionentry {Till{\"a}mpning av Gauss lag - Plan ytladdning}{2.2}{56}
 \tocsectionentry {Rotationen f{\"o}r det statiska elektriska f{\"a}ltet}{2.3}{57}
 \tocsectionentry {Elektrostatisk skal{\"a}r potential}{2.4}{58}
@@ -243,5 +243,5 @@
 \tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~11 -- Retarderade potentialer}{11.8}{207}
 \tocchapterentry {F{\"o}rel{\"a}sning 12 -- {Grundl{\"a}ggande antennteori}}{12}{209}
 \tocsectionentry {Retarderade potentialer f{\"o}r antenner}{12.1}{211}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~12 -- Grundl{\"a}ggande antennteori}{12.2}{212}
-\tocindexentry {\hskip 24pt{Index}}{\penalty \@M }{213}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~12 -- Grundl{\"a}ggande antennteori}{12.2}{213}
+\tocindexentry {\hskip 24pt{Index}}{\penalty \@M }{215}

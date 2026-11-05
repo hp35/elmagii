@@ -725,6 +725,7 @@
 %
 \eqsection{Variabler, konstanter och enheter}
 \eqtitle{Beteckningar och SI-enheter}
+\sidx{Beteckningar och SI-enheter}
 \halign{#\hfil\ &#\hfil&\ \hfil(#)\cr
 ${\bf A}$
     & Vektorpotential
@@ -913,6 +914,7 @@ $\chi_{\rm m}$
 }
 
 \eqsection{Naturkonstanter}
+\sidx{Naturkonstanter}
 \halign{#\hfil\cr
   $\varepsilon_0=8.8541878188(14)\times10^{12}\ {\rm F}/{\rm m}$\cr
   $\mu_0=1.25663706127(20)\times10^{-6}\ {\rm N}/{\rm A}^2$\cr
@@ -923,33 +925,35 @@ $\chi_{\rm m}$
 }
 
 \eqsection{Konstitutiva relationer}
-% \eqtitle{Elektrisk polarisationsdensitet ${\bf P}$}
+\sidx{Konstitutiva relationer}
 \eqtitle{Elektrisk polarisationsdensitet}
+\sidx{Elektrisk polarisationsdensitet ${\bf P}$}
 $$
   {\bf P} \equiv \Big\langle{{d{\bf p}}\over{dV}}\Big\rangle
     = \varepsilon_0\chi_{\rm e}{\bf E},\qquad
   \nabla\cdot{\bf P}=-\rho_{\rm b}
 $$
-% \eqtitle{Elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}
 \eqtitle{Elektrisk fl{\"o}dest{\"a}thet}
+\sidx{Elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}
 $$
   {\bf D}\equiv\varepsilon_0{\bf E}+{\bf P}
     =\varepsilon_0\varepsilon_{\rm r}{\bf E}
 $$
-% \eqtitle{Magnetisering ${\bf M}$}
 \eqtitle{Magnetisering}
+\sidx{Magnetisering ${\bf M}$}
 $$
   {\bf M} \equiv \Big\langle{{d{\bf m}}\over{dV}}\Big\rangle
     = {{1}\over{\mu_0}}\Big(1-{{1}\over{\mu_{\rm r}}}\Big){\bf B}
 $$
-% \eqtitle{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}
 \eqtitle{Magnetisk fl{\"o}dest{\"a}thet}
+\sidx{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}
 $$
   {\bf B}\equiv\mu_0({\bf H}+{\bf M})
     =\mu_0\mu_{\rm r}{\bf H}
 $$
 
 \eqsection{Punktladdningar}
+\sidx{Punktladdningar}
 \eqtitle{System av $N$ laddningar $q_k$ placerade i k{\"a}llpunkter ${\bf x}_k$}
 $$
   \rho({\bf x})=\sum^{N}_{k=1}q_k\delta({\bf x}-{\bf x}'_k)\,dV
@@ -957,24 +961,30 @@ $$
 \vfill\eject
 
 \eqsection{Elektrostatik}
+\sidx{Elektrostatik}
 \eqtitle{Coulombs kraftlag}
+\sidx{Coulombs kraftlag}
 $$
   {\bf F}({\bf x})={{qq'}\over{4\pi\varepsilon_0}}
      {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
      =q{\bf E}({\bf x})
 $$
 \eqtitle{Elektrisk f{\"a}ltstyrka fr{\aa}n punktladdning $q'$}
+\sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}
 $$
   {\bf E}({\bf x})={{q'}\over{4\pi\varepsilon_0}}
     {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}
       ={{q'}\over{4\pi\varepsilon_0 r^2}}{\bf e}_r
 $$
 \eqtitle{Coulombs generaliserade lag -- ``Coulombintegralen''}
+\sidx{Coulombs generaliserade lag}[Coulombintegralen]
 $$
   {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
     {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'
 $$
 \eqtitle{Existens av skal{\"a}r elektrostatisk potential}
+\sidx{Skal{\"a}r potential $\phi$}[Elektrostatisk]
+\sidx{Skal{\"a}r potential $\phi$}[Existens f{\"o}r]
 Ur Coulombs generaliserade lag f{\"o}r elektrostatiska f{\"a}lt erh{\aa}lls
 $\nabla\times{\bf E}={\bf 0}$, vilket visar att den elektriska f{\"a}ltstyrkan
 alltid kan skrivas som en gradient av en skal{\"a}r funktion, den skal{\"a}ra
@@ -983,26 +993,32 @@ $$
   {\bf E}=-\nabla\phi.
 $$
 \eqtitle{Elektriskt fl{\"o}de}
+\sidx{Elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}
 $$
   \Phi_{\rm E}=\oiint_S {\bf E}({\bf x})\cdot d{\bf S}
      ={{1}\over{\varepsilon_0}}\iiint_V\rho({\bf x})\,dV
      ={{q_{\rm tot}}\over{\varepsilon_0}}
 $$
 \eqtitle{Gauss lag f{\"o}r elektrisk fl{\"o}dest{\"a}thet}
+\sidx{Gauss lag}[F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$]
 $$
   \oiint{\bf D}\cdot d{\bf S}=\iiint\rho\,dV
 $$
-\eqtitle{Poissons ekvation (Coulombs lag) for skal{\"a}r potential}
+\eqtitle{Poissons ekvation (Coulombs lag) f{\"o}r skal{\"a}r potential}
+\sidx{Poissons ekvation}[F{\"or} skal{\"a}r potential $\phi$]
 $$
   \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0
 $$
 \eqtitle{Skal{\"a}r potential, explicit l{\"o}sning till Poissons ekvation}
+\sidx{Skal{\"a}r potential $\phi$}[Explicit l{\"o}sning till Poissons ekvation]
 $$
   \phi({\bf x})\equiv{{1}\over{4\pi\varepsilon_0}}\iiint_V
       {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
   %  \ \Rightarrow\ {\bf E}({\bf x})=-\nabla\phi({\bf x})
 $$
 \eqtitle{Skal{\"a}r elektrostatisk potential fr{\aa}n punktladdning $q'$}
+\sidx{Skal{\"a}r potential $\phi$}[Elektrostatisk potential]
+\sidx{Skal{\"a}r potential $\phi$}[Fr{\aa}n punktladdning $q'$]
 $$
   \phi({\bf x})
     ={{1}\over{4\pi\varepsilon_0}}{{q'}\over{|{\bf x}-{\bf x}'|}},
@@ -1010,55 +1026,71 @@ $$
 $$
 \eqtitle{Arbete som tillf{\"o}rs punktladdning $q$ vid f{\"o}rflyttning fr{\aa}n
          $a$ till $b$}
+\sidx{Arbete och upplagrad energi}[Elektrostatisk laddning]
+\sidx{Arbete och upplagrad energi}[Skal{\"a}r potential $\phi$]
 $$
   W_{\rm e}=-\int^{{\bf x}_b}_{{\bf x}_a}{\bf F}({\bf x})\cdot d{\bf l}
           =q\big(\phi({{\bf x}_b})-\phi({{\bf x}_a})\big) % =W_b-W_a
 $$
 
 \eqsection{Magnetostatik}
+\sidx{Magnetostatik}
 \eqtitle{Lorentz-kraften p{\aa} fri laddning $q$}
+\sidx{Lorentz-kraften ${\bf F}_{\rm m}=q\,{\bf v}\times{\bf B}$}
 $$
   {\bf F}=q\big({\bf E}+{\bf v}\times{\bf B}\big)
 $$
 \eqtitle{Amp\`eres kraftlag p{\aa} str{\"o}mslinga b{\"a}rande
   str{\"o}mmen $I$}
+\sidx{Amp{\`e}res kraftlag}
 $$
   {\bf F}_{\rm mag}=\int^{{\bf x}_b}_{{\bf x}_a} ({\bf I}\times{\bf B})\,dl
 $$
 \eqtitle{Str{\"o}mmen $I$ genom en yta $S$ med str{\"o}mt{\"a}thet}
+\sidx{Elektrisk str{\"o}m $I$}
+\sidx{Elektrisk str{\"o}mt{\"a}thet ${\bf J}$}
 $$
   I=\iint_S {\bf J}\cdot d{\bf S}
 $$
 \eqtitle{Str{\"o}mt{\"a}thet i medium med konduktivitet $\sigma$}
+\sidx{Str{\"o}mt{\"a}thet ${\bf J}$}[I medium med konduktivitet $\sigma$]
+\sidx{Elektrisk konduktivitet $\sigma$}
 $$
   {\bf J}=\sigma{\bf E}
 $$
 \eqtitle{Lagen om att elektrisk laddning inte kan f{\"o}rsvinna --
          kontinuitetsekvationen}
+\sidx{Kontinuitetsekvationen}
 $$
   \nabla\cdot{\bf J}=-{{d\rho}\over{dt}}.
 $$
 \eqtitle{Statiska problem}
+\sidx{Elektrostatik}[Krav f{\"o}r statiska f{\"a}lt]
+\sidx{Magnetostatik}[Krav f{\"o}r statiska f{\"a}lt]
 $$
   {{d\rho}\over{dt}}=0\quad\underline{\hbox{och}}\quad{{d{\bf J}}\over{dt}}=0.
 $$
 \eqtitle{Divergens av str{\"o}mt{\"a}theten i statiska problem}
+\sidx{Str{\"o}mt{\"a}thet ${\bf J}$}[Divergens i statiska problem]
 $$
   {{d\rho}\over{dt}}=0\quad\Leftrightarrow\quad\nabla\cdot{\bf J}=0
 $$
 \eqtitle{Biot--Savarts lag f{\"o}r str{\"o}mslingor}
+\sidx{Biot--Savarts lag}[F{\"o}r str{\"o}mslinga]
 $$
   {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\int^{{\bf x}_b}_{{\bf x}_a}
       {{{\bf I}({\bf x}')\times({\bf x}-{\bf x}')}
         \over{|{\bf x}-{\bf x}'|^3}}\,dl'
 $$
 \eqtitle{Biot--Savarts generella lag}
+\sidx{Biot--Savarts lag}
 $$
   {\bf B}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
       {{{\bf J}({\bf x}')\times({\bf x}-{\bf x}')}
         \over{|{\bf x}-{\bf x}'|^3}}\,dV'
 $$
 \eqtitle{Existens av magnetostatisk vektorpotential}
+\sidx{Vektorpotential ${\bf A}$}[Magnetostatisk]
 Ur Biot--Savarts generalla lag f{\"o}r magnetostatiska f{\"a}lt erh{\aa}lls
 $\nabla\cdot{\bf B}={\bf 0}$, vilket visar att den magnetiska
 fl{\"o}dest{\"a}theten alltid kan skrivas som en rotation av en vektorfunktion,
@@ -1068,10 +1100,14 @@ $$
 $$
 \eqtitle{Gauss lag f{\"o}r magnetisk fl{\"o}dest{\"a}thet --
          icke-existens f{\"o}r magnetiska mono\-poler} % existerar inte}
+\sidx{Gauss lag}[F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$]
+\sidx{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}[Gauss lag]
+\sidx{Magnetisk monopol}
 $$
   \nabla\cdot{\bf B}=0\qquad\hbox{(alltid)}
 $$
 \eqtitle{Amp\`eres statiska lag}
+\sidx{Amp\`eres lag}[F{\"o}r statiska magnetiska f{\"a}lt]
 $$
   \oint_{\Gamma}{\bf B}\cdot d{\bf l}
     =\mu_0\iint_S{\bf J}\cdot d{\bf S}
@@ -1080,53 +1116,67 @@ $$
   \nabla\times{\bf B}=\mu_0{\bf J}
 $$
 \eqtitle{Bunden elektrisk str{\"o}mt{\"a}thet}
+\sidx{Elektrisk str{\"o}mt{\"a}thet ${\bf J}$}[Bunden]
 $$
   {\bf J}_{\rm b}=\nabla\times{\bf M}
 $$
 \eqtitle{Bunden ytstr{\"o}mt{\"a}thet}
+\sidx{Ytstr{\"o}mt{\"a}thet ${\bf K}$}[Bunden,
+  ${\bf K}_{\rm b}={\bf M}\times{\bf e}_n$]
 $$
   {\bf K}_{\rm b}={\bf M}\times{\bf e}_n
 $$
 \eqtitle{Poissons ekvation (Amp\`eres lag) f{\"o}r vektorpotentialen}
+\sidx{Poissons ekvation}
+\sidx{Poissons ekvation}[F{\"o}r vektorpotentialen ${\bf A}$]
 $$
   \nabla^2{\bf A}=-\mu_0{\bf J},
 $$
 \eqtitle{Vektorpotential, explicit l{\"o}sning till Poissons ekvation}
+\sidx{Vektorpotential ${\bf A}$}[Explicit l{\"o}sning till Poissons ekvation]
 $$
   {\bf A}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
     {{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
 $$
 
 \eqsection{Elektrodynamik}
+\sidx{Elektrodynamik}
 \eqtitle{Magnetiskt fl{\"o}de}
+\sidx{Magnetiskt fl{\"o}de $\Phi_{\rm m}$}
 $$
   \Phi_{\rm M}=\iint_S{\bf B}\cdot d{\bf S}
 $$
 \eqtitle{Elektromotorisk ``kraft'' runt en sluten slinga $\Gamma$}
+\sidx{Elektromotorisk ``kraft'' ${\cal E}$}
 $$
   {\cal E}=\oint_{\Gamma}\bigg({{{\bf F}}\over{q}}\bigg)\cdot d{\bf l}
     =\oint_{\Gamma}[{\bf E}+({\bf v}\times{\bf B})\big]\cdot d{\bf l}
 $$
 \eqtitle{Faradays induktionslag}
+\sidx{Faradays induktionslag}
 $$
   {\cal E}=-{{d\Phi_{\rm M}}\over{dt}}
 $$
 \eqtitle{Lenz lag}
+\sidx{Lenz lag}
 En inducerad str{\"o}m har en riktning som motverkar orsaken till att den
 uppkom. Detta inneb{\"a}r att om magnetf{\"a}ltet genom en ledande slinga
 {\"o}kar, s{\aa} kommer den i slingan inducerade str{\"o}mmen att ha en
 riktning som skapar ett magnetf{\"a}lt som motverkar {\"o}kningen, och vice
 versa.
 \eqtitle{Faradays induktionslag f{\"o}r spole med $N$ varv}
+\sidx{Faradays induktionslag}[F{\"o}r spole]
 $$
   {\cal E}=-N{{d\Phi_{\rm M}}\over{dt}}
 $$
 \eqtitle{Faradays lag p{\aa} differentialform}
+\sidx{Faradays lag}[Differentialform]
 $$
   \nabla\times{\bf E}({\bf r},t)
     =-{{\partial{\bf B}({\bf x},t)}\over{\partial t}}
 $$
 \eqtitle{Faradays lag p{\aa} integralform}
+\sidx{Faradays lag}[Integralform]
 $$
   \oint_{\Gamma}{\bf E}({\bf r},t)\cdot d{\bf l}
     =-{{d}\over{dt}}\iint_S{\bf B}({\bf x},t)\cdot d{\bf S}
@@ -1134,16 +1184,19 @@ $$
 \eqtitle{{\"O}msesidig induktans beskrivs av det magnetiska fl{\"o}de
 som genereras i en sekund{\"a}rslinga $\Gamma$ fr{\aa}n en
 str{\"o}m $I'(t)$ som drivs genom en prim{\"a}rslinga $\Gamma'$,}
+\sidx{{\"O}msesidig induktans}
 $$
   \Phi_{\rm M}=M_{\Gamma\Gamma'} I'(t)
 $$
 \eqtitle{Neumanns formel f{\"o}r {\"o}msesidig induktans}
+\sidx{{\"O}msesidig induktans}[Neumanns formel]
 $$
   M_{\Gamma\Gamma'}={{\mu_0}\over{4\pi}}\oint_{\Gamma}\oint_{\Gamma'}
         {{d{\bf l}'\cdot d{\bf l}}\over{|{\bf x}-{\bf x}'|}},
   \qquad M_{\Gamma\Gamma'}=M_{\Gamma'\Gamma}
 $$
 \eqtitle{Maxwells ekvationer p{\aa} differentialform}
+\sidx{Maxwells ekvationer}[Differentialform]
 $$
   \eqalign{
     \nabla\times{\bf E}
@@ -1155,6 +1208,7 @@ $$
   }
 $$
 \eqtitle{Maxwells ekvationer p{\aa} integralform}
+\sidx{Maxwells ekvationer}[Integralform]
 $$
   \eqalign{
     \oint_{\Gamma}{\bf E}\cdot d{\bf l}
@@ -1166,6 +1220,8 @@ $$
   }
 $$
 \eqtitle{De elektromagnetiska v{\aa}gekvationerna}
+\sidx{Elektromagnetiska v{\aa}gekvationer}
+\sidx{Str{\"o}mt{\"a}thet ${\bf J}$}[Elektromagnetiska v{\aa}gekvationer]
 $$
   \eqalign{
     \nabla\times\nabla\times{\bf E}
@@ -1193,6 +1249,8 @@ polarisationsdensi\-teten ${\bf P}$ samt magnetiseringen ${\bf M}$.
 
 \eqsection{Elektrodynamik och potentialer}
 \eqtitle{Elektrodynamiska potentialer}
+\sidx{Vektorpotentialen ${\bf A}$}[Elektrodynamiska potentialer]
+\sidx{Skal{\"a}r potential $\phi$}[Elektrodynamiska potentialer]
 $$
   \eqalign{
     {\bf E}({\bf x},t)
@@ -1202,7 +1260,8 @@ $$
       &=\nabla\times{\bf A}({\bf x},t).\cr
   }
 $$
-\eqtitle{Gauge-transformen}
+\eqtitle{Gauge-transformation}
+\sidx{Gauge-transformation}
 Med den godtyckliga och tv{\aa} g{\aa}nger i rum och tid kontinuerligt
 differentierbara gauge-funktionen $\psi({\bf x},t)$, {\"a}r
 gauge-transformationen definierad som
@@ -1216,12 +1275,14 @@ $$
 $$
 vilken l{\"a}mnar de elektromagnetiska f{\"a}lten invarianta.
 \eqtitle{Lorenz-villkoret}
+\sidx{Lorenz-villkoret}
 Under Lorenz-villkoret v{\"a}ljs gauge-funktionen $\psi$ s{\aa} att
 $$
   \nabla\cdot{\bf A}'({\bf x},t)+
     {{1}\over{c^2}}{{\partial\phi'({\bf x},t)}\over{\partial t}} = 0
 $$
 \eqtitle{Lorenz-villkoret -- V{\aa}gekvationer f{\"o}r potentialer}
+\sidx{Lorenz-villkoret}[V{\aa}gekvationer f{\"o}r potentialer]
 Under Lorenz-villkoret frikopplas v{\aa}gekvationerna f{\"o}r den skal{\"a}ra
 potentialen och vektorpotentialen, till
 $$
@@ -1237,6 +1298,7 @@ $$
   }
 $$
 \eqtitle{Lorenz-villkoret -- Retarderade potentialer}
+\sidx{Lorenz-villkoret}[Retarderade potentialer]
 Under Lorenz-villkoret erh{\aa}lls l{\"o}sningar till v{\aa}g\-ekva\-tion\-erna
 f{\"o}r potentialerna som de retarderade potentialerna
 $$
@@ -1251,13 +1313,16 @@ d{\"a}r $t'=t-|{\bf x}-{\bf x}'|/c$ {\"a}r den {\it retarderade tiden}
 fr{\aa}n ${\bf x}'$ till ${\bf x}$.
 
 \eqtitle{Coulomb-villkoret}
+\sidx{Coulomb-villkoret}
 
 
 
 \vfill\eject
 
 \eqsection{Vektoridentiteter}
+\sidx{Vektoridentiteter}
 \eqtitle{Notation}
+\sidx{Vektoridentiteter}[Notation]
 \halign{#\hfil\ &#\hfil&\quad\hfil(#)\cr
   $dl$       & Skal{\"a}rt linjeelement l{\"a}ngs kurva
              & ${\rm m}$\cr
@@ -1270,6 +1335,7 @@ fr{\aa}n ${\bf x}'$ till ${\bf x}$.
   $dV$       & Volymelement & ${\rm m}^3$\cr
 }
 \eqtitle{Trippelprodukter}
+\sidx{Vektoridentiteter}[Trippelprodukter]
 $$
   \eqalign{
     {\bf a}\cdot({\bf b}\times{\bf c})&=
@@ -1281,6 +1347,7 @@ $$
   }
 $$
 \eqtitle{Produktregler}
+\sidx{Vektoridentiteter}[Produktregler]
 $$
   \eqalign{
     \nabla(fg) &= f\nabla g + g\nabla f\cr
@@ -1303,19 +1370,24 @@ $$
   }
 $$
 \eqtitle{``Tricket''}
+\sidx[see]{Vektoridentiteter}[``Tricket'']{``Tricket''}
+\sidx{Tricket
+$\displaystyle\nabla{{1}\over{\char124}{\bf x}-{\bf x}'{\char124}}
+=-{{({\bf x}-{\bf x}')}\over{{\char124}{\bf x}-{\bf x}'{\char124}^3}}$}
 $$
   \nabla{{1}\over{|{\bf x}-{\bf x}'|}}
     =-\nabla'{{1}\over{|{\bf x}-{\bf x}'|}}
     =-{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
 $$
 \eqtitle{``Tricket II'' -- anv{\"a}nds f{\"o}r att visa att
-  $\nabla\cdot{\bf B}=0$
-\sidx{Tricket $\displaystyle\nabla{{1}\over{\char124}{\bf x}-{\bf x}'{\char124}}
-=-{{({\bf x}-{\bf x}')}\over{{\char124}{\bf x}-{\bf x}'{\char124}^3}}$}}
+  $\nabla\cdot{\bf B}=0$}
+\sidx{Tricket II
+$\displaystyle\nabla{{1}\over{\char124}{\bf x}-{\bf x}'{\char124}}
+=-{{({\bf x}-{\bf x}')}\over{{\char124}{\bf x}-{\bf x}'{\char124}^3}}$}
 $$
 \nabla\times{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}=0
 $$
-\eqtitle{Andraderivator}
+\sidx{Vektoridentiteter}[Andraderivator]
 $$
   \eqalign{
     \nabla\cdot(\nabla\times{\bf a})&=0\cr
@@ -1325,33 +1397,46 @@ $$
   }
 $$
 \eqtitle{Gauss teorem (``divergensteoremet'')\sidx{Gauss lag}}
+\sidx{Vektoridentiteter}[Divergensteoremet]
+\sidx{Vektoridentiteter}[Gauss teorem]
 $$
   \int_V(\nabla\cdot{\bf a})\,dV=\oiint_S{\bf a}\cdot d{\bf S}
 $$
 \eqtitle{Gauss teorem (rotations-versionen)}
+\sidx{Vektoridentiteter}[Gauss teorem, ``rotationsversionen'']
 $$
   \iiint_V(\nabla\times{\bf a})\,dV=\oiint_S d{\bf S}\times{\bf a}
 $$
 \eqtitle{Stokes teorem ({\"a}ven kallat Kelvin--Stokes teorem,
   ``rotationsteoremet'', eller ``cirkulationsteoremet'')\sidx{Stokes teorem}}
+\sidx{Stokes teorem}
+\sidx{Stokes teorem}[Kelvin--Stokes teorem]
+\sidx{Kelvin--Stokes teorem}[Stokes teorem]
 $$
   \iint_S(\nabla\times{\bf a})\cdot d{\bf S}=\oint_{\Gamma}{\bf a}\cdot d{\bf l}
 $$
 \eqtitle{Gradient-teoremet (analysens fundamentalsats)}
+\sidx{Gradient-teoremet}
+\sidx{Gradient-teoremet}[Analysens fundamentalsats]
+\sidx{Analysens fundamentalsats}[F{\"o}r gradienter]
 $$
   \int^{{\bf x}_b}_{{\bf x}_a}(\nabla f)\cdot d{\bf l}=f({\bf x}_b)-f({\bf x}_a)
 $$
 \eqtitle{Greens teorem}
+\sidx{Greens teorem}
+\sidx{Greens teorem}[F{\"o}rsta teoremet]
 $$
   \iiint_V(f\nabla^2g+(\nabla f)\cdot(\nabla g))\,dV
     =\oiint_S(f\nabla g)\cdot d{\bf S}
 $$
 \eqtitle{Greens andra teorem}
+\sidx{Greens teorem}[Andra teoremet]
 $$
   \iiint_V(f\nabla^2g-g\nabla^2f)\,dV
     =\oiint_S(f\nabla g-g\nabla f)\cdot d{\bf S}
 $$
 \eqtitle{Diverse anv{\"a}ndbara integraler i vektoranalys}
+\sidx{Vektoranalys}[Anv{\"a}ndbara integraler]
 $$
   \iiint_V(\nabla f)\,dV=\oiint_S f d{\bf S}
 $$
@@ -1360,7 +1445,9 @@ $$
 $$
 
 \eqsection{Diracs delta-distribution (``delta-puls'')}
+\sidx{Diracs delta-distribution $\delta$}
 \eqtitle{Selektionsegenskaper}
+\sidx{Diracs delta-distribution $\delta$}[Selektionsegenskaper]
 $$
   \eqalign{
     \hbox{1D:}&\hskip8pt
@@ -1374,6 +1461,7 @@ $$
   }
 $$
 \eqtitle{Normalisering}
+\sidx{Diracs delta-distribution $\delta$}[Normalisering]
 $$
   \eqalign{
     \hbox{1D:}&\hskip8pt
@@ -1386,8 +1474,8 @@ $$
 $$
 
 \vfill\eject
-% \eqsection{Ofta anv{\"a}ndbara skal{\"a}ra integraler}
 \eqsection{Skal{\"a}ra integraler}
+\sidx{Integraler}[Skal{\"a}ra]
 $$
   \eqalign{
     \int&x^n\,dx={{1}\over{(n+1)}}x^{n+1},\quad n\ne-1\cr
@@ -1406,7 +1494,9 @@ $$
 \vfill\eject
 
 \eqsection{Serieutvecklingar}
+\sidx{Serieutvecklingar}
 \eqtitle{Endimensionella Maclaurin-utvecklingar}
+\sidx{Serieutvecklingar}[Endimensionella Maclaurin-utvecklingar]
 $$
   \eqalign{
     \sin(x)&=x-{{x^3}\over{3!}}+{{x^5}\over{5!}}-{{x^7}\over{7!}}+\ldots\cr
@@ -1419,6 +1509,7 @@ $$
   }
 $$
 \eqtitle{Tredimensionell Taylor-utveckling runt ${\bf x}={\bf x}_0$}
+\sidx{Serieutvecklingar}[Tredimensionella Taylor-utveckling]
 $$
   \eqalign{
   f({\bf x}) &= \sum^{\infty}_0 {{1}\over{n!}}
@@ -1426,6 +1517,7 @@ $$
   }
 $$
 \eqtitle{Tredimensionell Maclaurin-utveckling}
+\sidx{Serieutvecklingar}[Tredimensionell Maclaurin-utveckling]
 $$
   \eqalign{
   f({\bf x}) &= f({\bf 0})
@@ -1441,7 +1533,9 @@ $$
 $$
 
 \eqsection{Koordinatsystem}
+\sidx{Koordinatsystem}
 \eqtitle{Kartesiska koordinater ($x,y,z$)}
+\sidx{Koordinatsystem}[Kartesiska koordinater ($x,y,z$)]
 \halign{#\hfil\quad & #\hfil\cr
   Ortsvektor   & ${\bf x}={\bf e}_xx+{\bf e}_yy+{\bf e}_zz$ \cr
   Linjeelement & $d{\bf l}={\bf e}_xdx+{\bf e}_ydy+{\bf e}_zdz$ \cr
@@ -1475,6 +1569,7 @@ $$
 \vfill\eject
 
 \eqtitle{Cylindriska koordinater ($r,\varphi,z$)}
+\sidx{Koordinatsystem}[Cylindriska koordinater ($r,\varphi,z$)]
 \halign{#\hfil\quad & #\hfil\cr
   Ortsvektor    & ${\bf x}={\bf e}_rr+{\bf e}_zz$ \cr
   Enhetsvektorer & ${\bf e}_r={\bf e}_x\cos\varphi+{\bf e}_y\sin\varphi$ \cr
@@ -1515,6 +1610,7 @@ $$
 $$
 
 \eqtitle{Sf{\"a}riska koordinater ($r,\varphi,\theta$)}
+\sidx{Koordinatsystem}[Sf{\"a}riska koordinater ($r,\varphi,\theta$)]
 \halign{#\hfil\quad & #\hfil\cr
   Ortsvektor    & ${\bf x}={\bf e}_rr$ \cr
 }
@@ -5317,7 +5413,8 @@ fr{\aa}n det gammalgrekiska (klassiskt grekiska) ordet f{\"o}r b{\"a}rnsten,
   $\eta\lambda\varepsilon\kern-.4pt\kappa\tau\kern-1.4pt\rho o$;
   fr{\aa}n klassisk grekiska
   $\eta\lambda\varepsilon\kern-.4pt\kappa\tau\kern-1.4pt\rho o\nu$
-  (elektron, ``b{\"a}rnsten'').}
+  (elektron, ``b{\"a}rnsten'').}\sidx{Elektron}[Fr{\aa}n gammalgrekiska
+  $\eta\lambda\varepsilon\kern-.4pt\kappa\tau\kern-1.4pt\rho o\nu$]
 Under 1600- och 1700-talen gjordes framsteg prim{\"a}rt i och med William
 Gilberts \sidx{Gilbert, William (1544--1603)} (1544--1603)
 {\it On Magnetism} \sidx{Gilbert, William (1544--1603)}[{{\it On Magnetism}}]
@@ -6029,7 +6126,7 @@ $\rho({\bf x})$, s{\aa} betyder detta att integranderna i v{\"a}nster- och
 h{\"o}gerledet m{\aa}ste vara identiska, det vill s{\"a}ga att
 \red{$$
   \nabla\cdot{\bf E}={{\rho({\bf x})}\over{\varepsilon_0}},
-$$}
+$$}\sidx{Elektrostatiskt f{\"a}lt}[Divergens f{\"o}r]
 vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.%
 \numberedfootnote{N{\"a}r vi s{\"a}ger att ett uttryck {\"a}r givet i
   {\it differentialform} s{\aa} menar vi att vi har uttryckt ett samband
@@ -6278,7 +6375,9 @@ genom {\"a}ndytorna av cylindern, med andra ord att vi ignorerar randeffekter
 i problemet. Gauss lag ger d{\aa} direkt, utan att beh{\"o}va l{\"o}sa
 n{\aa}gon integral, att
 $$
-  \oiint_S {\bf E}\cdot d{\bf S}
+  \underbrace{
+    \oiint_S {\bf E}\cdot d{\bf S}
+  }_{\vbox{\hbox{Fl{\"o}de ut}\hbox{genom}\hbox{cylindern}}}
      ={{1}\over{\varepsilon_0}}
        \underbrace{
          \iiint_V\rho({\bf x})\,dV
@@ -6288,7 +6387,6 @@ $$
   \qquad\Leftrightarrow\qquad
   E_r(r) = {{\lambda}\over{2\pi \varepsilon_0 r}}.
 $$
-\vfill\eject
 
 \subsection{Alternativ analys f{\"o}r rak linjeladdning}
 Det finns sj{\"a}lvfallet alltid ett alternativ till anv{\"a}ndandet av Gauss
@@ -6322,6 +6420,7 @@ $$
        }_{=E_r(r)}.\cr
   }
 $$
+\vfill\eject
 
 \section{Till{\"a}mpning av Gauss lag - Plan ytladdning}
 N{\"a}sta exempel p{\aa} till{\"a}mpning av Gauss lag
@@ -6342,7 +6441,9 @@ planparallella mot ytan.\numberedfootnote{Griffiths anv{\"a}nder i Exempel~2.5,
 P{\aa} samma s{\"a}tt som f{\"o}r linjeladdningen i f{\"o}reg{\aa}ende exempel
 ger Gauss lag direkt, utan att beh{\"o}va l{\"o}sa n{\aa}gon integral, att
 $$
-  \oiint_S {\bf E}\cdot d{\bf S}
+  \underbrace{
+    \oiint_S {\bf E}\cdot d{\bf S}
+  }_{\vbox{\hbox{Fl{\"o}de ut}\hbox{genom}\hbox{burken}}}
      ={{1}\over{\varepsilon_0}}
        \underbrace{
          \iiint_V\rho({\bf x})\,dV
@@ -6395,8 +6496,9 @@ Av ren nyfikenhet, l{\aa}t oss d{\"a}rf{\"o}r se vad {\it rotationen} hos det
 statiska elektriska f{\"a}ltet kan uttryckas som.\numberedfootnote{Se
   Griffiths sid.~77--78.}
 
-Betrakta en punktladdning $q'$, som vi f{\"o}r enkelhets skull nu placerar i
-origo ${\bf x}'={\bf 0}$ f{\"o}r observationssystemet.\sidx{Observationspunkt}
+Betrakta en punktladdning $q'$, som i denna uppst{\"a}llning utg{\"o}r v{\aa}r
+{\it k{\"a}lla} och som vi f{\"o}r enkelhets skull nu placerar i origo
+${\bf x}'={\bf 0}$ f{\"o}r observationssystemet.\sidx{Observationspunkt}
 Vi kommer i denna analys att utnytta Stokes teorem \sidx{Stokes teorem}
 applicerat p{\aa} en linjeintegral\sidx{Integral}[Linjeintegral] f{\"o}r en
 godtycklig trajektoria runt om i det statiska elektriska f{\"a}lt som omger
@@ -6404,13 +6506,14 @@ punktladdningen. Redan nu kan vi passa p{\aa} att mentalt associera denna
 situation med en analogi med massa och gravitation.\sidx{Gravitation}
 \epsfig{../lect-02/figs/lineintegral.1}\noindent
 Med punktladdningen $q'$ placerad i origo har vi det statiska elektriska
-f{\"a}ltet uttryckt i sf{\"a}riska koordinater \sidx{Sf{\"a}riska koordinater}
-som
+f{\"a}ltet vid observationspunkten ${\bf x}$ uttryckt i sf{\"a}riska
+koordinater \sidx{Sf{\"a}riska koordinater} som
 $$
-  {\bf E}(r) % ={{q}\over{4\pi\varepsilon_0}}{{{\bf x}}\over{|{\bf x}|^3}}
+  {\bf E}({\bf x}) % ={{q}\over{4\pi\varepsilon_0}}{{{\bf x}}\over{|{\bf x}|^3}}
+    =E_r(r) {\bf e}_r
     =\underbrace{
-    {{q'}\over{4\pi\varepsilon_0 r^2}}
-    }_{=E_r(r)} {\bf e}_r.
+       {{q'}\over{4\pi\varepsilon_0 r^2}}
+     }_{=E_r(r)} {\bf e}_r.
 $$
 Om vi analyserar linjeintegralen f{\"o}r en godtycklig trajektoria $\Gamma$
 mellan tv{\aa} godtyckliga punkter ${\bf x}_a$ och ${\bf x}_b$ i rummet, s{\aa}
@@ -6422,8 +6525,13 @@ $$
         {\bf e}_rE_r+{\bf e}_{\varphi}\underbrace{E_{\varphi}}_{0}
             +{\bf e}_{\vartheta}\underbrace{E_{\vartheta}}_{0}
       )\cdot\underbrace{(
-        {\bf e}_r dr+{\bf e}_{\varphi}r\sin(\vartheta)d\varphi
-          +{\bf e}_{\vartheta}r d\vartheta
+        {\bf e}_r dr
+          +\overbrace{{\bf e}_{\varphi}r\sin(\vartheta)d\varphi}^{
+              {\bf e}_r\cdot{\bf e}_{\varphi}=0
+           }
+          +\overbrace{{\bf e}_{\vartheta}r d\vartheta}^{
+             {\bf e}_r\cdot{\bf e}_{\vartheta}=0
+           }
       )}_{\hbox{$d{\bf l}$ i sf{\"a}riska koordinater}}\cr
     &=\int^{r_b}_{r_a} {{q'}\over{4\pi\varepsilon_0 r^2}}\,dr\cr
     &={{q'}\over{4\pi\varepsilon_0}}
@@ -6720,6 +6828,7 @@ $$
 
 \section{Poissons ekvation f{\"o}r den skal{\"a}ra potentialen}
 \sidx{Poissons ekvation}
+\sidx{Elektrostatiskt f{\"a}lt}[Divergens f{\"o}r]
 Som en avslutning p{\aa} denna f{\"o}rel{\"a}sning vi passar vi p{\aa} att
 konstatera att Gauss lag p{\aa} differentialform, $\nabla\cdot{\bf E}
 =\rho/\varepsilon_0$, sammantaget med sj{\"a}lva definitionen f{\"o}r den
@@ -15505,11 +15614,21 @@ Fr{\aa}n dessa tv{\aa} {\it v{\aa}gekvationer} ser vi direkt tv{\aa} saker:
     fr{\aa}n ekvationerna!}
 \medskip
 \noindent
-Det b{\"o}r h{\"a}r understrykas att {\it utbredningshastigheten f{\"o}r potentialerna {\"a}r beroende av vilken gauge vi v{\"a}ljer att behandla dem i}, och att vi i Coulomb-gauge ist{\"a}llet betraktar potentialerna som instantana (samtidiga) {\"o}verallt!
+Det b{\"o}r h{\"a}r understrykas att {\it utbredningshastigheten f{\"o}r
+potentialerna {\"a}r beroende av vilken gauge vi v{\"a}ljer att behandla
+dem i}, och att vi i Coulomb-gauge ist{\"a}llet betraktar potentialerna
+som instantana (samtidiga) {\"o}verallt!
 
-Den som t{\"a}nker n{\aa}gorlunda kritiskt b{\"o}r h{\"a}r st{\"a}lla sig fr{\aa}gan: Hur i hela friden h{\"a}nger detta ihop? Vi kan v{\"a}l inte godtyckligt, bara s{\aa}d{\"a}r, v{\"a}lja utbredningshastigheten f{\"o}r elektromagnetiska f{\"a}lt genom att v{\"a}lja n{\aa}gon l{\"a}mplig gauge-funktion $\psi$? En matematisk konstruktion kan ju inte g{\"o}ra v{\aa}ld p{\aa} fysiken i sig!
+Den som t{\"a}nker n{\aa}gorlunda kritiskt b{\"o}r h{\"a}r st{\"a}lla sig
+fr{\aa}gan: Hur i hela friden h{\"a}nger detta ihop? Vi kan v{\"a}l inte
+godtyckligt, bara s{\aa}d{\"a}r, v{\"a}lja utbredningshastigheten f{\"o}r
+elektromagnetiska f{\"a}lt genom att v{\"a}lja n{\aa}gon l{\"a}mplig
+gauge-funktion $\psi$? En matematisk konstruktion kan ju inte g{\"o}ra
+v{\aa}ld p{\aa} fysiken i sig!
 
-Gaugeteori {\"a}r onekligen ett av de mer sv{\aa}rgreppbara koncepten inom elektrodynamik s{\aa} snart vi b{\"o}rjar granska fundamenta f{\"o}r det elektromagnetiska f{\"a}ltet. Som 
+Gaugeteori {\"a}r onekligen ett av de mer sv{\aa}rgreppbara koncepten inom
+elektrodynamik s{\aa} snart vi b{\"o}rjar granska fundamenta f{\"o}r det
+elektromagnetiska f{\"a}ltet. Som [..........]
 
 
 
@@ -16013,7 +16132,7 @@ $$
 %
 % File: teach/elmagii/lect-12/lecture-12.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-12/
-% Last change: January 1, 2026
+% Last change: November 5, 2026
 %
 % Lecture No 12 in the course ``Elektromagnetism II, 1TE626 (2023)'',
 % held December 12, 2025, at Uppsala University, Sweden.
@@ -16081,7 +16200,11 @@ $$
 
 
 
-\plan{I denna f{\"o}rel{\"a}sning knyter vi ihop den potentialteori som vi under kursens g{\aa}ng utvecklat, och applicerar den p{\aa} ett konkret exempel i form av en antenn.}
+\plan{I denna f{\"o}rel{\"a}sning knyter vi ihop den potentialteori som vi
+under kursens g{\aa}ng utvecklat, och applicerar den p{\aa} ett konkret
+exempel i form av en dipolantenn. F{\"o}rel{\"a}sningen {\"a}r helt och
+h{\aa}llet dedicerad till till{\"a}mpningen av den tori som utvecklats
+under kursens g{\aa}ng, och ingen ny fysik i sig introduceras.}
 
 \threepointsummary{%
 }{%
@@ -16103,8 +16226,31 @@ fr{\aa}n elementens plana {\"a}ndytor kan f{\"o}rsummas.
 I detta avseende kan vi d{\"a}rf{\"o}r modellera antennen som best{\aa}ende av
 tv{\aa} cylindriska r{\"o}r, var och ett b{\"a}rande en str{\"o}mt{\"a}thet som
 {\"a}r homogen i varje tv{\"a}rsnitt $z$ av antennen.
-\epsfig{../lect-12/figs/dipole-antenna.1}\noindent
-\sidx{Dipolantenn}
+\epsfig{../lect-12/figs/dipole-antenna.1}\noindent\sidx{Dipolantenn}
+Planen fram{\"o}ver {\"a}r att ber{\"a}kna den skal{\"a}ra potentialen $\phi=\phi({\bf x},t)$ och vektorpotentialen ${\bf A}={\bf A}({\bf x},t)$ som resulterar fr{\aa}n den tidsberoende str{\"o}mmen i antennen, och med detta som utg{\aa}ngspunkt ber{\"a}kna det oscillerande emitterade elektromagnetiska f{\"a}ltet via
+$$
+  \eqalign{
+    {\bf E}({\bf x},t)
+      &=-\nabla\phi({\bf x},t)
+          -{{\partial{\bf A}({\bf x},t)}\over{\partial t}},\cr
+    {\bf B}({\bf x},t)
+      &=\nabla\times{\bf A}({\bf x},t).\cr
+  }
+$$
+D{\aa} antennen har en l{\"a}ngd som {\"a}r i samma storkelsordning som den emitterade v{\aa}gl{\"a}ngden, s{\aa} {\"a}r vi i en klart {\it elektrodynamisk} dom{\"a}n, och eftersom vi d{\"a}rmed inte kan f{\"o}rsumma fasskillnader i str{\"o}mf{\"o}rdelningen l{\"a}ngs med antennen, s{\aa} m{\aa}ste vi ta h{\"a}nsyn till denna genom de {\it retarderade potentialerna} fr{\aa}n F{\"o}rel{\"a}sning~11. Inom ramen f{\"o}r Lorenz-villkoret\numberedfootnote{Ekvivalent med potentialerna i den s{\aa} kallade {\it Lorenz-gauge}.} kan dessa sammanfattas med motsvarigheten till Biot--Savarts lag f{\"o}r potentialer som
+$$
+  \eqalign{
+    \phi({\bf x},t)&={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
+      {{\rho({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\cr
+    {\bf A}({\bf x},t)&={{\mu_0}\over{4\pi}}\iiint_{{\Bbb R}^3}
+      {{{\bf J}({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\cr
+  }
+$$
+d{\"a}r $t'=t-|{\bf x}-{\bf x}'|/c$ {\"a}r den {\it retarderade tiden}
+fr{\aa}n ${\bf x}'$ till ${\bf x}$.
+
+
+
 
 \vfill\eject
 
