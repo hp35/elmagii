@@ -37,9 +37,10 @@ $(dvis): $(srcs)
 
 texchars:
 	@echo "Converting Swedish Unicode chars in formulas.tex to TeX codes."
-	@../lect-01/macros/se-texchars.sh formulas.tex > tmp.tex
-	@mv tmp.tex formulas.tex
-	@echo "Reload formulas.tex to incorporate the changes."
+	@macros/se-texchars.sh formulas-twocol.tex > tmp.tex
+	@mv tmp.tex formulas-twocol.tex
+	@echo "Reload formulas-twocol.tex to incorporate the changes."
+	make texchars -C src
 
 clean:
 	@rm -Rf *~ *.aux *.toc *.idx *.log *.dvi *.ps *.pdf
