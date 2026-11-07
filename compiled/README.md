@@ -3,28 +3,28 @@
 This repository contains a compiled complete set of lectures on Electromagnetic
 Theory II (1TE626) for Engineering Physics (master level) at Uppsala University.
 
-This directory contains a [`Makefile`](Makefile) and a set of supportive TeX
-macros and definitions, including a preface, in the  [`src`](./src/)
-subdirectory, which extracts text from all individual lectures and extra
-material such as the preface, [`gallery`](../gallery/),
-[`world map of electromagnetics`](../worldmap/),
-and [`collection of formulas`](../formulas/) into a complete "book" containing
-all material in a single file [`elmagii-complete.pdf`](elmagii-complete.pdf).
-In other words, the source [`elmagii-complete.tex`](elmagii-complete.tex) is
-completely auto-generated and should hence never be altered.
+This directory contains a `Makefile` and a set of supportive TeX macros and
+definitions including a preface, which extract text from all individual
+lectures and extra material such as the preface, "gallery", "World Map of
+Electromagnetics", and "Collection of formulas" into a complete "book"
+containing all material in a single file
+[`elmagii-complete.pdf`](elmagii-complete.pdf).
 
 ## Primary files of interest
-
-[elmagii-complete.tex](elmagii-complete.tex) - Plain TeX source code for
-   the complete set of lectures. This file is auto-generated from the
-   TeX sources of the individual lectures and should never be edited.
 
 [elmagii-complete.pdf](elmagii-complete.pdf) - "The Book". Compiled
    document containing all Lecture Notes in a single document.
 
+[elmagii-complete.tex](elmagii-complete.tex) - Plain TeX source code for
+   the complete set of lectures. This file is auto-generated from the
+   TeX sources of the individual lectures, using the enclosed
+   [Makefile](Makefile), and should never be edited.
+
 [elmagii-complete.toc](elmagii-complete.toc) - Table of Contents.
 
 [elmagii-complete.ind](elmagii-complete.ind) - Index of terms.
+
+[Makefile](Makefile) - Makefile for the compilation of the complete document.
 
 ## Contributing
 
