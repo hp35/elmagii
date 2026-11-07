@@ -1,12 +1,12 @@
 %
 % File: teach/elmagii/lect-08/lecture-08.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-08/
-% Last change: December 20, 2025
+% Last change: November 7, 2026
 %
-% Lecture No 8 in the course ``Elektromagnetism II, 1TE626 (2023)'',
-% held November 24, 2025, at Uppsala University, Sweden.
+% Lecture No 8 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
+% held November 23, 2026, at Uppsala University, Sweden.
 %
-% Copyright (C) 2022-2025, Fredrik Jonsson, under Gnu General Public
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
 %
 % This program is free software: you can redistribute it and/or modify
@@ -24,14 +24,14 @@
 %
 \def\coursename{Elektromagnetism II}
 \def\coursecode{1TE626}
-\def\courseyear{2025}
+\def\courseyear{2026}
 \def\courserepo{https://github.com/hp35/elmagii/}
 \def\lecturenumber{8}
 \def\lecturetitle{Multipolutvecklingen}
 \def\lecturetitlesub{}
 \def\lectureauthor{Fredrik Jonsson}
 \def\lectureplace{Uppsala Universitet}
-\def\lecturedate{24 november 2025}
+\def\lecturedate{23 november 2026}
 %-------------------- BEGIN OF LOCAL MACROS --------------------
 \input macros/epsf.tex
 \input macros/eplain.tex
@@ -172,7 +172,7 @@
         {{{\bf m}\times{\bf x}}\over{|{\bf x}|^3}},
   $$
   d{\"a}r $q$ {\"a}r nettoladdningen och ${\bf p}$ dipolmomentet hos en
-  magnetisk dipol samt ${\bf m}$ det magnetiska dipolmomentet.
+  elektrisk dipol samt ${\bf m}$ det magnetiska dipolmomentet.
   \sidx{Dipolmoment}[Elektriskt]\sidx{Dipolmoment}[Magnetiskt]
 }
 %----------------------- END OF PREAMBLE -----------------------
@@ -589,7 +589,7 @@ $$
 F{\"o}r koefficienterna i Maclaurin-utvecklingen av den skal{\"a}ra potentialen
 inneb{\"a}r detta specifikt att
 $$
-    f({\bf 0})
+    f({\bf x}')\Big|_{{\bf x}'={\bf 0}}
       ={{1}\over{|{\bf x}|}},\qquad\qquad
     {{\partial f({\bf x}')}
       \over{\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}
@@ -679,26 +679,37 @@ ${\bf J}({\bf x})$.
   str{\"o}mt{\"a}theter}
 \sidx{Multipolutveckling}[F{\"o}r vektorpotential]
 \sidx{Multipolutveckling}[Generell str{\"o}mt{\"a}thet]
-Motsvarande serieutveckling f{\"o}r vektorpotentialen f{\"o}ljer direkt fr{\aa}n
-exakt samma serietveckling av ``viktfunktionen'' $f({\bf x}')$ i
-k{\"a}llkoordinater som f{\"o}r den skal{\"a}ra potentialen, med den enda
-skillnaden att vi nu tar fram vektorpotentialen ${\bf A}({\bf x})$ i
-observationspunkten komponentvis fr{\aa}n str{\"o}mt{\"a}theten (k{\"a}llan)
-${\bf J}({\bf x}')$, som
+Motsvarande serieutveckling f{\"o}r vektorpotentialen f{\"o}ljer direkt
+fr{\aa}n exakt samma serietveckling av ``viktfunktionen'' $f({\bf x}')$ i
+k{\"a}llkoordinater som f{\"o}r den skal{\"a}ra potentialen, d{\"a}r
+startpunkten nu ges i integralformen av Biot--Savarts lag%
+\numberedfootnote{Eller Amp{\`e}res lag, hur man nu v{\"a}ljer att se det.}
+f{\"o}r vektorpotentialen som
+$$
+  {\bf A}({\bf x})={{\mu_0}\over{4\pi}}\iiint_{V}
+    {{{\bf J}_{\rm f}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
+$$
+Rent matematiskt {\"a}r den enda skillnaden egentligen bara att vi nu tar fram
+vektorpotentialen ${\bf A}({\bf x})$ i observationspunkten komponentvis
+fr{\aa}n {\it str{\"o}mt{\"a}theten} (k{\"a}llan) ${\bf J}({\bf x}')$, som
 \sidx{Taylor-utveckling}\sidx{Maclaurin-utveckling}
 \sidx{Vektorpotential ${\bf A}$}[Multipolutveckling]
 $$
   \eqalign{
     {\bf A}({\bf x})
       &={{\mu_0}\over{4\pi}}
-        \iiint_{V} 
+        \iiint_{V}
+        \underbrace{
         \bigg(
           {{1}\over{|{\bf x}|}}
             +\sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}} x'_k
             +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
               {{3 x_j x_k - \delta_{jk}|{\bf x}|^2}\over{|{\bf x}|^5}} x'_j x'_k
             +\ldots
-        \bigg) {\bf J}({\bf x}')\,dV'\cr
+        \bigg)
+        }_{\hbox{Maclaurin-utveckling av $f({\bf x}')=1/|{\bf x}-{\bf x}'|$
+                kring ${\bf x}\approx{\bf x}'$}}
+        {\bf J}({\bf x}')\,dV'\cr
       &={{\mu_0}\over{4\pi}}
         \Bigg(
         {{1}\over{|{\bf x}|}}
@@ -723,6 +734,16 @@ Tolkningen av de ing{\aa}ende magnetiska momenten, som nu involverar
 str{\"o}mt{\"a}theten ${\bf J}$ snarare {\"a}n den statiska
 laddningst{\"a}theten $\rho$ som f{\"o}r den skal{\"a}ra potentialen,
 blir dock lite annorlunda som vi nu skall se.
+
+En f{\"o}rsta observation vi kan g{\"o}ra {\"a}r att samtliga bidrag fr{\aa}n
+str{\"o}mt{\"a}thetem ${\bf J}$ till vektorpotentialen ${\bf A}$ g{\"o}rs
+s{\aa} att bidragen {\"a}r parallella med just str{\"o}mt{\"a}theten.
+Om till exempel str{\"o}mt{\"a}theten {\"o}verallt pekar i samma riktning,
+s{\"a}g l{\"a}ngs med $z$-axeln, s{\aa} kommer {\"a}ven vektorpotentialen
+${\bf A}$ fr{\aa}n denna str{\"o}mt{\"a}thet ocks{\aa} att peka i samma
+riktning. Denna egenskap bygger enbart p{\aa} riktningen i sig, och {\"a}r
+giltig oavsett om str{\"o}mt{\"a}thetens belopp $|{\bf J}|$ r{\aa}kar vara
+inhomogen, det vill s{\"a}ga varierande i rummet.
 
 Ett antagande som vi beh{\"o}ver g{\"o}ra {\"a}r att str{\"o}mt{\"a}theten
 ${\bf J}$, likt den statiska laddnings\-f{\"o}r\-delningen $\rho$ i fallet
@@ -816,6 +837,7 @@ och positiv magnetisk laddning'', vilket i sin tur betyder att ingen isolerad
 magnetisk laddning kan existera. Med andra ord, {\it inga magnetiska monopoler
 kan existera}, och den magnetiska monopoltermen m{\aa}ste vara identiskt noll
 {\"o}verallt.
+\vfill\eject
 
 \subsection{Magnetisk dipolterm}
 \sidx{Magnetiskt dipolmoment}[Fr{\aa}n multipolutveckling av vektorpotential]
