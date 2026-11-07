@@ -1,10 +1,10 @@
 %
 % File: teach/elmagii/formulas/src/formulas.tex [plain TeX code]
 % Github: https://github.com/elmagii/formulas/
-% Last change: November 1, 2026
+% Last change: November 7, 2026
 %
 % Source for the primary collection of formulas in ``Elektromagnetism II,
-% 1TE626 (2025)'' for Engineering Physics, held 2022-2026, at Uppsala
+% 1TE626 (2022-2026)'' for Engineering Physics, held 2022-2026, at Uppsala
 % University, Sweden.
 %
 % Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
@@ -55,6 +55,9 @@ $\varepsilon_{\rm r}$
 $e$
     & Elementarladdning
     & ${\rm C}$\cr
+${\bf e}_k$
+    & Enhetsvektor, $|{\bf e}_k|=1$
+    & $1$\cr
 ${\bf e}_r$
     & Riktning ${\bf e}_r=({\bf x}-{\bf x}')/|{\bf x}-{\bf x}'|$
     & $1$\cr
@@ -134,7 +137,7 @@ $m_{\rm p}$
     & Protonens vilomassa
     & ${\rm kg}$\cr
 ${\bf m}$
-    & Magnetiskt dipolmoment
+    & Magnetiskt dipolmoment $\sum m_k {\bf e}_k$
     & ${\rm A}\cdot{\rm m}^2$\cr
 ${\bf M}$
     & Magnetisering
@@ -146,7 +149,7 @@ $\psi$
     & Gauge-funktion $\psi=\psi({\bf x},t)$
     & ${\rm V}\cdot{\rm s}$\cr
 ${\bf p}$
-    & Elektriskt dipolmoment
+    & Elektriskt dipolmoment $\sum m_k {\bf e}_k$
     & ${\rm C}\cdot{\rm m}$\cr
 ${\bf P}$
     & Elektrisk polarisationsdensitet
@@ -203,7 +206,7 @@ ${\bf x}$
     & Ortsvektor till observationspunkt
     & ${\rm m}$\cr
 ${\bf x}'$
-    & Ortsvektor till k{\"a}llpunkt
+    & Ortsvektor till k{\"a}llpunkt ($\rho$, ${\bf J}$, ${\bf I}$)
     & ${\rm m}$\cr
 $\chi_{\rm e}$
     & Elektrisk susceptibilitet, $\varepsilon_{\rm r}=1+\chi_{\rm e}$
@@ -251,17 +254,16 @@ $$
   {\bf B}\equiv\mu_0({\bf H}+{\bf M})
     =\mu_0\mu_{\rm r}{\bf H}
 $$
+\vfill\eject
 
-\eqsection{Punktladdningar}
+\eqsection{Elektrostatik}
+\sidx{Elektrostatik}
+%\eqsection{Punktladdningar}
 \sidx{Punktladdningar}
 \eqtitle{System av $N$ laddningar $q_k$ placerade i k{\"a}llpunkter ${\bf x}_k$}
 $$
   \rho({\bf x})=\sum^{N}_{k=1}q_k\delta({\bf x}-{\bf x}'_k)\,dV
 $$
-\vfill\eject
-
-\eqsection{Elektrostatik}
-\sidx{Elektrostatik}
 \eqtitle{Coulombs kraftlag}
 \sidx{Coulombs kraftlag}
 $$
@@ -391,7 +393,7 @@ $$
 $$
 \eqtitle{Existens av magnetostatisk vektorpotential}
 \sidx{Vektorpotential ${\bf A}$}[Magnetostatisk]
-Ur Biot--Savarts generalla lag f{\"o}r magnetostatiska f{\"a}lt erh{\aa}lls
+Ur Biot--Savarts generella lag f{\"o}r magnetostatiska f{\"a}lt erh{\aa}lls
 $\nabla\cdot{\bf B}={\bf 0}$, vilket visar att den magnetiska
 fl{\"o}dest{\"a}theten alltid kan skrivas som en rotation av en vektorfunktion,
 vektorpotentialen ${\bf A}$, definierad som
@@ -438,6 +440,155 @@ $$
   {\bf A}({\bf x})={{\mu_0}\over{4\pi}}\iiint_V
     {{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
 $$
+
+\eqsection{Multipolutveckling av statiska potentialer}
+\sidx{Multipolutveckling}[Skal{\"a}r potential $\phi$]
+\sidx{Multipolutveckling}[Vektorpotential ${\bf A}$]
+
+\eqtitle{Klassificering av multipolmoment}
+\sidx{Multipolutveckling}[Klassificering av moment]
+Multipolutvecklingen klassificeras term f{\"o}r term uti\-fr{\aa}n hur
+beroendet av avst{\aa}ndet $r=|{\bf x}-{\bf x}'|$ mellan k{\"a}llpunkt
+${\bf x}'$ och f{\"a}ltpunkt ${\bf x}$ ser ut, som\par
+\line{\hbox to 20pt{\hfil}{\hbox to110pt{Monopol (1-pol):\hfil}
+    \sidx{Monopol}$\phi({\bf x})\sim 1/r$}\hfil}
+\line{\hbox to 20pt{\hfil}{\hbox to110pt{Dipol (2-pol):\hfil}
+    \sidx{Dipol}$\phi({\bf x})\sim 1/r^2$}\hfil}
+\line{\hbox to 20pt{\hfil}{\hbox to110pt{Kvadrupol (4-pol):\hfil}
+    \sidx{Kvadrupol}$\phi({\bf x})\sim 1/r^3$}\hfil}
+\line{\hbox to 20pt{\hfil}{\hbox to110pt{Oktopol (8-pol):\hfil}
+    \sidx{Oktopol}$\phi({\bf x})\sim 1/r^4$}\hfil}
+\line{\hbox to 20pt{\hfil}{\hbox to110pt{Hexadecapol (16-pol):\hfil}
+    \sidx{Hexadecapol}$\phi({\bf x})\sim 1/r^5$}\hfil}
+\line{\hbox to 20pt{\hfil}{\hbox to110pt{Dotriacontapol (32-pol):\hfil}
+    \sidx{Dotriacontapol}$\phi({\bf x})\sim 1/r^6$}\hfil}
+
+\eqtitle{Maclaurin-utveckling av laddnings- och str{\"o}mt{\"a}thet}
+\sidx{Maclaurin-utveckling}[Av laddningst{\"a}thet $\phi$]
+\sidx{Maclaurin-utveckling}[Av str{\"o}mt{\"a}thet ${\bf J}$]
+\sidx{Skal{\"a}r potential $\phi$}
+\sidx{Vektorpotential ${\bf A}$}
+$$
+  \eqalign{
+    \rho({\bf x}') &= \rho({\bf 0})
+    +\sum^{3}_{k=1} x'_k
+       {{\partial \rho({\bf x}')}
+         \over{\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}\cr
+    &\hskip50pt
+    +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1} x'_j x'_k
+       {{\partial^2 \rho({\bf x}')}
+         \over{\partial x'_j\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}
+    +\ldots\cr
+    {\bf J}({\bf x}') &= {\bf J}({\bf 0})
+    +\sum^{3}_{k=1} x'_k
+       {{\partial {\bf J}({\bf x}')}
+         \over{\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}\cr
+    &\hskip50pt
+    +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1} x'_j x'_k
+       {{\partial^2 {\bf J}({\bf x}')}
+         \over{\partial x'_j\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}
+    +\ldots\cr
+  }
+$$
+
+\eqtitle{Multipolmoment f{\"o}r system av punktladdningar}
+\sidx{Multipolutveckling}[System av punktladdningar]
+F{\"o}r ett system av $N$ punktladdningar $q'_k$ placerade vid k{\"a}llpunkterna
+${\bf x}'_k$ {\"a}r den statiska multipolutvecklingen av skal{\"a}ra potentialen
+$$
+  \eqalign{
+    \phi({\bf x})
+      &={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
+         {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
+       ={{1}\over{4\pi\varepsilon_0}}\sum^N_{k=1}
+         {{q'_k}\over{|{\bf x}-{\bf x}'_k|}}.\cr
+  }
+$$
+
+\eqtitle{Multipolmoment f{\"o}r kontinuum av laddning}
+\sidx{Multipolutveckling}[Generell av laddningst{\"a}thet $\rho$]
+F{\"o}r en kontinuerlig statisk laddningst{\"a}thet $\rho({\bf x})$ {\"a}r den
+statiska multipolutvecklingen av skal{\"a}ra potentialen
+$$
+  \eqalign{
+    \phi({\bf x})
+      &={{1}\over{4\pi\varepsilon_0}}
+        \bigg(
+        {{1}\over{|{\bf x}|}}q
+      +\sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}}p_k
+      \cr&\hskip26pt
+      +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
+          {{(3 x_j x_k - \delta_{jk}|{\bf x}|^2)}\over{|{\bf x}|^5}}Q_{jk}
+      +\ldots
+        \bigg),
+  }
+$$
+d{\"a}r\par
+\line{%
+  {\hbox to14pt{\hfil}}%
+  {\hbox to120pt{%
+    $\displaystyle q=\iiint_{V} \rho({\bf x}')\,dV'$,\hfil}}%
+  {\hbox to98pt{(elektrisk monopol)\hfil}}}
+\line{%
+  {\hbox to14pt{\hfil}}%
+  {\hbox to120pt{%
+    $\displaystyle p_k=\iiint_{V} x'_k \rho({\bf x}')\,dV'$,\hfil}}%
+  {\hbox to98pt{(dipolmoment)\hfil}}}
+\line{%
+  {\hbox to14pt{\hfil}}%
+  {\hbox to120pt{%
+    $\displaystyle Q_{jk}=\iiint_{V} x'_j x'_k \rho({\bf x}')\,dV'$.\hfil}}%
+  {\hbox to98pt{(kvadrupolmoment)\hfil}}}
+
+\eqtitle{Multipolmoment f{\"o}r kontinuum av str{\"o}mt{\"a}thet}
+\sidx{Multipolutveckling}[F{\"o}r kontinuum av str{\"o}mt{\"a}thet ${\bf J}$]
+\sidx{Multipolutveckling}[F{\"o}r vektorpotential]
+\sidx{Multipolutveckling}[Generell str{\"o}mt{\"a}thet ${\bf J}$]
+F{\"o}r en kontinuerlig statisk str{\"o}mt{\"a}thet ${\bf J}({\bf x})$ {\"a}r
+den statiska multipolutvecklingen av vektorpotentialen
+$$
+  \eqalign{
+    {\bf A}({\bf x})
+      &={{\mu_0}\over{4\pi}}\bigg(
+      \sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}}{\bf m}
+        \cr&\hskip26pt
+      +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1}
+          {{3 x_j x_k - \delta_{jk}|{\bf x}|^2}\over{|{\bf x}|^5}} m_{jk}
+      +\ldots
+        \bigg),\cr
+  }
+$$
+d{\"a}r\par
+\line{%
+  {\hbox to14pt{\hfil}}%
+  {\hbox to120pt{%
+    $\displaystyle m_k=\iiint_{V} x'_k {\bf J}({\bf x}')\,dV'$,\hfil}}%
+  {\hbox to98pt{(magnetisk dipol)\hfil}}}
+\line{%
+  {\hbox to14pt{\hfil}}%
+  {\hbox to120pt{%
+    $\displaystyle m_{jk}=\iiint_{V} x'_j x'_k {\bf J}({\bf x}')\,dV'$.\hfil}}%
+  {\hbox to98pt{(magnetisk kvadrupol)\hfil}}}
+\smallskip\noindent
+F{\"o}r vektorpotentialen finns ingen monopolterm, eftersom magnetiska
+monopoler inte existerar.
+
+\eqtitle{Dipolapproximation f{\"o}r statiska f{\"a}lt}
+\sidx{Dipolapproximationen}
+\sidx{Dipolmoment}[Elektriskt]
+\sidx{Dipolmoment}[Magnetiskt]
+F{\"o}r statiska f{\"a}lt p{\aa} l{\aa}ngt avst{\aa}nd {\"a}r potentialerna
+$$
+  \phi({\bf x})\approx{{1}\over{4\pi\varepsilon_0}}\bigg(
+      {{q}\over{|{\bf x}|}} + {{{\bf p}\cdot{\bf x}}\over{|{\bf x}|^3}}
+    \bigg),\quad
+  {\bf A}({\bf x})\approx{{\mu_0}\over{4\pi}}
+      {{{\bf m}\times{\bf x}}\over{|{\bf x}|^3}},
+$$
+d{\"a}r $q$ {\"a}r nettoladdningen, ${\bf p}$ det elektriska dipolmomentet,
+samt ${\bf m}$ det magnetiska dipolmomentet.
+
+\vfill\eject
 
 \eqsection{Elektrodynamik}
 \sidx{Elektrodynamik}
@@ -542,10 +693,10 @@ $$
 {\"a}r den effektiva str{\"o}mt{\"a}theten, inkluderande den fria
 str{\"o}mt{\"a}theten ${\bf J}_{\rm f}$, den elektriska
 polarisationsdensi\-teten ${\bf P}$ samt magnetiseringen ${\bf M}$.
-% Fr{\aa}n de elektromagnetiska v{\aa}gekvationerna kan samt\-liga
-% elektrostatiska, magnetostatiska eller elektrodynamiska fall h{\"a}rledas,
-% beroende p{\aa} vilka termer som kan s{\"a}ttas till noll.
-\vfill\eject
+Fr{\aa}n de elektromagnetiska v{\aa}gekvationerna kan samtliga
+elektro\-stat\-iska, magnetostatiska eller elektrodynamiska fall extraheras,
+beroende p{\aa} vilka termer som kan ignoreras.
+%\vfill\eject
 
 \eqsection{Elektrodynamik och potentialer}
 \eqtitle{Elektrodynamiska potentialer}
@@ -560,6 +711,29 @@ $$
       &=\nabla\times{\bf A}({\bf x},t).\cr
   }
 $$
+\eqtitle{Generella elektrodynamiska v{\aa}gekvationer}
+\sidx{Vektorpotential ${\bf A}$}[V{\aa}gekvation, generell]
+\sidx{Skal{\"a}r potential $\phi$}[V{\aa}gekvation, generell]
+F{\"o}r de elektrodynamiska potentialerna g{\"a}ller de gene\-rella
+v{\aa}gekvationerna
+$$
+  \eqalign{
+    &\nabla^2\phi({\bf x},t)
+      +{{\partial}\over{\partial t}}\nabla\cdot{\bf A}({\bf x},t)
+        =-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}}\cr
+  &\bigg(
+    \nabla^2-{{1}\over{c^2}}
+      {{\partial^2}\over{\partial t^2}}
+  \bigg)
+  {\bf A}({\bf x},t)\cr
+  &\hskip20pt-\nabla\bigg(
+    \nabla\cdot{\bf A}({\bf x},t)+
+    {{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}}
+  \bigg)
+    =-\mu_0{\bf J}_{\rm f}({\bf x},t)\cr
+  }
+$$
+
 \eqtitle{Gauge-transformation}
 \sidx{Gauge-transformation}
 Med den godtyckliga och tv{\aa} g{\aa}nger i rum och tid kontinuerligt
@@ -573,18 +747,35 @@ $$
       &=\phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}},\cr
   }
 $$
-vilken l{\"a}mnar de elektromagnetiska f{\"a}lten invarianta.
-\eqtitle{Lorenz-villkoret}
+vilken l{\"a}mnar de elektromagnetiska f{\"a}lten invarianta under
+vektoridentiteten $\nabla\times\nabla\phi={\bf 0}$.
+
+\eqsection{Lorenz-villkoret -- Lorenz gauge}
+\eqtitle{Gauge-transformation under Lorenz-villkoret}
 \sidx{Lorenz-villkoret}
+\sidx{Lorenz-villkoret}[Gauge-transformation]
 Under Lorenz-villkoret v{\"a}ljs gauge-funktionen $\psi$ s{\aa} att
 $$
-  \nabla\cdot{\bf A}'({\bf x},t)+
-    {{1}\over{c^2}}{{\partial\phi'({\bf x},t)}\over{\partial t}} = 0
+  \nabla^2\psi({\bf x},t)
+    -{{1}\over{c^2}}{{\partial^2\psi({\bf x},t)}\over{\partial t^2}}
+  =-\nabla\cdot{\bf A}({\bf x},t)
+        -{{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}},
 $$
+vilket leder till att
+$$
+  \nabla\cdot{\bf A}'({\bf x},t)+
+    {{1}\over{c^2}}{{\partial\phi'({\bf x},t)}\over{\partial t}} = 0.
+$$
+Lorenz-villkoret {\"a}r uppkallat efter
+den danske fysikern {\it Ludvig Lorenz} (1829--1891), inte Hendrik Antoon
+Lorentz (1853--1928).
+\sidx{Lorentz, Hendrik Antoon (1853--1928)}
+\sidx{Lorenz, Ludvig (1829--1891)}
+
 \eqtitle{Lorenz-villkoret -- V{\aa}gekvationer f{\"o}r potentialer}
 \sidx{Lorenz-villkoret}[V{\aa}gekvationer f{\"o}r potentialer]
-Under Lorenz-villkoret frikopplas v{\aa}gekvationerna f{\"o}r den skal{\"a}ra
-potentialen och vektorpotentialen, till
+V{\aa}gekvationerna frikopplas f{\"o}r den skal{\"a}ra potenti\-alen och
+vektorpotentialen, till
 $$
   \eqalign{
     \Big(
@@ -594,13 +785,17 @@ $$
     \Big(
       \nabla^2-{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}
     \Big){\bf A}({\bf x},t)
-        &=-\mu_0{\bf J}_{\rm f}({\bf x},t).\cr
+        &=-\mu_0{\bf J}_{\rm f}({\bf x},t),\cr
   }
 $$
+d{\"a}r v{\aa}gutbredningshastigheten f{\"o}r b{\aa}de skal{\"a}ra potentialen
+och vektorpotentialen {\"a}r $c^2$, det vill s{\"a}ga att b{\aa}da potentialerna
+uppvisar en explicit kausal v{\aa}gut\-bredning med ljushastigheten.
+
 \eqtitle{Lorenz-villkoret -- Retarderade potentialer}
 \sidx{Lorenz-villkoret}[Retarderade potentialer]
-Under Lorenz-villkoret erh{\aa}lls l{\"o}sningar till v{\aa}g\-ekva\-tion\-erna
-f{\"o}r potentialerna som de retarderade potentialerna
+L{\"o}sningar till v{\aa}gekvationerna erh{\aa}lls som de retarde\-rade
+potentialerna
 $$
   \eqalign{
     \phi({\bf x},t)&={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
@@ -611,12 +806,67 @@ $$
 $$
 d{\"a}r $t'=t-|{\bf x}-{\bf x}'|/c$ {\"a}r den {\it retarderade tiden}
 fr{\aa}n ${\bf x}'$ till ${\bf x}$.
+\vfill\eject
 
-\eqtitle{Coulomb-villkoret}
-\sidx{Coulomb-villkoret}
+\eqsection{Coulomb-villkoret -- Coulomb gauge}
+\eqtitle{Gauge-transformation under Coulomb-villkoret}
+\sidx{de Coulomb, Charles-Augustin (1736--1806)}
+\sidx{Coulomb-villkoret}[Gauge-transformation]
+Under Coulomb-villkoret, {\"a}ven kallat {\it transverse gauge} eller
+{\it radiation gauge}, v{\"a}ljs gauge-funktionen $\psi$ s{\aa} att
+$$
+  \nabla^2\psi({\bf x},t)
+    -{{1}\over{c^2}}{{\partial^2\psi({\bf x},t)}\over{\partial t^2}}
+  =-{{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}},
+$$
+vilket leder till att
+$$
+  \nabla\cdot{\bf A}'({\bf x},t)=0.
+$$
 
+\eqtitle{Coulomb-villkoret -- V{\aa}gekvationer f{\"o}r potentialer}
+\sidx{Coulomb-villkoret}[V{\aa}gekvationer f{\"o}r potentialer]
+V{\aa}gekvationerna f{\"o}r den skal{\"a}ra potentialen och vektorpotentialen
+antar formen
+$$
+  \eqalign{
+    \nabla^2\phi({\bf x},t)
+      &=-{{\rho({\bf x},t)}\over{\varepsilon_0\varepsilon_{\rm r}}},\cr
+    \bigg(
+       \nabla^2-{{1}\over{c^2}}{{\partial^2}\over{\partial t^2}}
+     \bigg){\bf A}({\bf x},t)
+      &=-\mu_0{\bf J}_{\rm f}({\bf x},t)
+      \cr&\hskip30pt
+        +{{1}\over{c^2}}\nabla{{\partial\phi({\bf x},t)}\over{\partial t}},\cr
+  }
+$$
+d{\"a}r den skal{\"a}ra potentialen $\phi$ uppfyller den statiska Poissons
+ekvation utan tidsderivata, medan vektorpotentialen ${\bf A}$ uppfyller
+v{\aa}gekvationen med den skal{\"a}ra potentialen som extra k{\"a}llterm.
 
-
+\eqtitle{Coulomb-villkoret -- Instantan skal{\"a}r potential}
+\sidx{Coulomb-villkoret}[Instantan skal{\"a}r potential]
+L{\"o}sningar till v{\aa}g\-ekva\-tion\-erna erh{\aa}lls som
+$$
+  \eqalign{
+    \phi({\bf x},t)&={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
+      {{\rho({\bf x}',t)}\over{|{\bf x}-{\bf x}'|}}\,dV',\cr
+    {\bf A}({\bf x},t)&={{\mu_0}\over{4\pi}}\iiint_{{\Bbb R}^3}
+      {{{\bf J}_{\rm T}({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\cr
+  }
+$$
+d{\"a}r nu integralen f{\"o}r den skal{\"a}ra potentialen $\phi$ inte
+l{\"a}ngre involverar n{\aa}gon retarderad tid, utan responderar momentant
+vid den aktuella tiden $t$, men d{\"a}r integralen f{\"o}r vektorpotentialen
+involverar den {\it retarderade tiden} $t'=t-|{\bf x}-{\bf x}'|/c$ fr{\aa}n
+${\bf x}'$ till ${\bf x}$. H{\"a}r {\"a}r ${\bf J}_{\rm T}$ {\"a}r den
+transversella str{\"o}mt{\"a}theten
+$$
+  {\bf J}_{\rm T}={\bf J}_{\rm f}
+    -{{1}\over{4\pi}}\nabla\iiint_{{\Bbb R}^3}
+     {{\nabla'\cdot{\bf J}_{\rm f}({\bf x}',t)}\over{|{\bf x}-{\bf x}'|}}\,dV'
+$$
+med $\nabla'$ opererande p{\aa} k{\"a}llkoordinaterna ${\bf x}'$.
 \vfill\eject
 
 \eqsection{Vektoridentiteter}
@@ -687,6 +937,7 @@ $\displaystyle\nabla{{1}\over{\char124}{\bf x}-{\bf x}'{\char124}}
 $$
 \nabla\times{{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}=0
 $$
+\eqtitle{Andraderivator}
 \sidx{Vektoridentiteter}[Andraderivator]
 $$
   \eqalign{
@@ -791,7 +1042,7 @@ $$
     \int&\ln x\,dx=x\ln x - x\cr
   }
 $$
-\vfill\eject
+% \vfill\eject
 
 \eqsection{Serieutvecklingar}
 \sidx{Serieutvecklingar}
@@ -866,7 +1117,7 @@ $$
         \Big)\cr
   }
 $$
-\vfill\eject
+% \vfill\eject
 
 \eqtitle{Cylindriska koordinater ($r,\varphi,z$)}
 \sidx{Koordinatsystem}[Cylindriska koordinater ($r,\varphi,z$)]
