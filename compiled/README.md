@@ -43,7 +43,7 @@ directories, just run `make clean` in the `elmagii` root directory.
 ## Summaries of the lectures (Swedish)
 
 [<i>Föreläsning 0 - Grundläggande vektoranalys inom elektromagnetisk
-    fältteori</i>](lect-00)
+    fältteori</i>](../lect-00)
 
 Denna föreläsning är bistår med ett extramaterial som avhandlar de grundläggande
 begrepp inom vektoranalys som vi frekvent kommer att använda oss av i kommande
@@ -65,7 +65,7 @@ rotation (∇ × ∇ ×) innebär, då detta är centralt för formuleringen av 
 elektromagnetiska vågekvationen.
 
 [<i>Föreläsning 1 - Elektrostatik, superpositionsprincipen och
-    Gauss lag</i>](lect-01)
+    Gauss lag</i>](../lect-01)
 
 Med en kort sammanfattning av historiken bakom elektrostatik och upptäckten
 av elektronen som elementarladdning går vi direkt in på Coulombs lag för
@@ -85,7 +85,7 @@ laddningsfördelningar i form av punkt- linje- yt- eller volymladdningar.
 Slutligen avslutar vi med en härledning av Gauss lag på differentialform.
 
 [<i>Föreläsning 2 - Elektrostatisk potential och tillämpningar av Gauss
-    lag</i>](lect-02)
+    lag</i>](../lect-02)
 
 Ett par enkla exempel på utnyttjande av symmetrier inom elektrostatik med Gauss
 lag gås igenom. Vi bevisar att i elektrostatiska problem är alltid
@@ -107,7 +107,7 @@ på differentialform omformulera denna i termer av den skalära potentialen som
 Poissons ekvation ∇<sup>2</sup> φ = −ρ/ε<sub>0</sub>.
 
 [<i>Föreläsning 3 - Spegelladdningar, randvillkor och
-    entydighet för lösningar till potentialproblem</i>](lect-03)
+    entydighet för lösningar till potentialproblem</i>](../lect-03)
 
 Genom att visa på att Laplaces ekvation ∇<sup>2</sup> φ = 0 saknar lokala
 extrempunkter, och har samtliga extrempunkter i randvärden till domänen där
@@ -130,7 +130,7 @@ samt cylinderytor och sfärer.
 Slutligen så tar vi fram en metod för hur den resulterande laddningstätheten
 på en yta av ledande material kan tas fram med de virtuella spegelladdningarna.
 
-[<i>Föreläsning 4 - Magnetostatik</i>](lect-04)
+[<i>Föreläsning 4 - Magnetostatik</i>](../lect-04)
 
 Med en kort sammanfattning av historiken bakom upptäckandet av magnetiska
 fält går vi in på själva definitionen av ett magnetiskt fält som den kraft
@@ -160,7 +160,7 @@ vi kan tolka det magnetiska fältet som härrörande från en vektorpotential
 Ampères lag kan tolkas i termer av denna vektorpotential som Poissons ekvation
 ∇<sup>2</sup> <b>A</b> = −µ<sub>0</sub> <b>J</b> med strömtätheten som källterm.
 
-[<i>Föreläsning 5 - Elektromagnetisk induktion</i>](lect-05)
+[<i>Föreläsning 5 - Elektromagnetisk induktion</i>](../lect-05)
 
 Ämnet för föreläsningen beskrivs kort och koncist med Michael Faradays egna
 ord (1831), fritt tolkade som “Ett varierande magnetfält inducerar ett
@@ -198,7 +198,7 @@ att det magnetiska flöde som uppfångas av en slinga från en ström i den andr
 slingan exakt motsvaras av det magnetiska flöde som den andra slingan skulle
 uppfånga om istället den första slingan drevs med exakt samma ström.
 
-[<i>Föreläsning 6 - Elektriska fält i material</i>](lect-06)
+[<i>Föreläsning 6 - Elektriska fält i material</i>](../lect-06)
 
 I och med denna föreläsning lämnar vi vakuumbeskrivningen av fält och gå in på
 växelverkan mellan elektriska eller magnetiska fält och materia. Vi börjar med
@@ -222,7 +222,7 @@ fältstyrkan <b>E</b> och den elektriska flödestätheten <b>D</b>, för deras
 normal- och tangentialkomponenter. Slutligen formulerar vi måttet på upplagrad
 elektrisk energi i ett dielektrikum.
 
-[<i>Föreläsning 7 - Magnetiska fält i material</i>](lect-07)
+[<i>Föreläsning 7 - Magnetiska fält i material</i>](../lect-07)
 
 I denna föreläsning analyserar vi vad som händer då det magnetiska spinnet hos
 material linjeras och magnetiserar materialet, antingen genom ett externt
@@ -243,7 +243,7 @@ om det magnetiserade objektet istället hade varit konstruerat som ekvivalenta
 volyms- och ytströmmar <b>J</b><sub>b</sub> och <b>K</b><sub>b</sub> av bundna
 laddningar.
 
-[<i>Föreläsning 8 - Multipolutvecklingen</i>](lect-08)
+[<i>Föreläsning 8 - Multipolutvecklingen</i>](../lect-08)
 
 Vi lämnar för denna föreläsning dipolmodellen för ett tag, och visar på att
 andra konstruktioner av laddningsfördelningar, exempelvis kvadrupoler och
@@ -261,7 +261,7 @@ Föreläsningen avslutas med att demonstrera multipolutvecklingen för generella
 laddningsfördelningar i termer av skalär potential, samt fastställande av
 dipolapproximationen för elektrostatiska och magnetostatiska fält.
 
-[<i>Föreläsning 9 - Maxwells ekvationer och vågutbredning</i>](lect-09)
+[<i>Föreläsning 9 - Maxwells ekvationer och vågutbredning</i>](../lect-09)
 
 Faradays och Ampères lagar sys tillsammans med Gauss lag för det elektriska
 och magnetiska fältet slutligen ihop till Maxwells ekvationer. Nyckeln till
@@ -277,7 +277,7 @@ Vi sammanfattar Maxwells ekvationer en gång för alla, och visar hur dessa kan
 omformuleras till två vågekvationer för de elektriska och magnetiska fälten.
 
 [<i>Föreläsning 10 - Vågutbredning i homogena och isotropa
-    dielektrika</i>](lect-10)
+    dielektrika</i>](../lect-10)
 
 Maxwells ekvationer och den elektromagnetiska vågekvationen sammanfattas och
 vi introducerar fyra tämligen allmänt giltiga approximationer:
@@ -317,7 +317,7 @@ leder till en ortogonal koppling mellan det elektriska och magnetiska fältet
 som <b>B</b><sub><i>k</i></sub> = <b>k</b> × <b>E</b><sub><i>k</i></sub>/ω.
 
 [<i>Föreläsning 11 - Retarderade potentialer som lösningar
-    till Maxwells ekvationer</i>](lect-11)
+    till Maxwells ekvationer</i>](../lect-11)
 
 Vi inleder med en rekapitulation av den generella formen på den
 elektromagnetiska vågekvationen för elektriska och magnetiska fält, följt
