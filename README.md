@@ -4,6 +4,15 @@ This repository contains all TeX code (plain TeX, no LaTeX), MetaPost figures
 and supporting material as used in my lectures on Electromagnetic Theory II
 (1TE626) for Engineering Physics (master level) at Uppsala University.
 
+## The compiled complete set of The Lectures
+
+The entire set of lectures is available as a single compiled PDF file, also
+containing extra material such as the preface, "Portrait gallery in classical
+electromagnetism", "World Map of Electromagnetics", and "Collection of
+formulas" into a complete "book" containing all material in the single
+file [`elmagii-complete.pdf`](../elmagii-complete.pdf) in directory
+[`../compiled/`](../compiled).
+
 ## The Lectures
 
 The repository contains the following subdirectories, one for each lecture:

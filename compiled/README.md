@@ -5,9 +5,9 @@ Theory II (1TE626) for Engineering Physics (master level) at Uppsala University.
 
 This directory contains a `Makefile` and a set of supportive TeX macros and
 definitions including a preface, which extract text from all individual
-lectures and extra material such as the preface, "gallery", "World Map of
-Electromagnetics", and "Collection of formulas" into a complete "book"
-containing all material in a single file
+lectures and extra material such as the preface, "Portrait gallery in classical
+electromagnetism", "World Map of Electromagnetics", and "Collection of formulas"
+into a complete "book" containing all material in the single file
 [`elmagii-complete.pdf`](elmagii-complete.pdf).
 
 ## Primary files of interest
