@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/formulas/src/formulas.tex [plain TeX code]
 % Github: https://github.com/elmagii/formulas/
-% Last change: November 4, 2026
+% Last change: November 6, 2026
 %
 % This is the primary collection of formulas in the course ``Elektromagnetism
 % II, 1TE626 (2025)'' for Engineering Physics, held 2022-2026, at Uppsala
@@ -25,9 +25,14 @@
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <https://www.gnu.org/licenses/>.
 %
-\font\twelvecmbx=cmbx12
+\input macros/epsf.tex
 \input macros/eplain.tex
 \input amssym % to get the {\Bbb E} font (strikethrough E)
+\abovedisplayskip=4pt plus 2pt minus 2pt      % Vertical padding of $$...$$
+\belowdisplayskip=4pt plus 2pt minus 2pt      % Vertical padding of $$...$$
+\abovedisplayshortskip=2pt plus 2pt minus 2pt % Vertical padding of $$...$$
+\belowdisplayshortskip=2pt plus 2pt minus 2pt % Vertical padding of $$...$$
+\font\twelvecmbx=cmbx12
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
 \def\oiint{\mathop{\int\kern-8pt\int\kern-13.2pt{\bigcirc}}}
@@ -38,7 +43,9 @@
 \def\cleardoublepage{\ifodd\pageno\vfill\eject~\vskip260pt%
   \centerline{[Page intentionally left blank]} ~\vfill\eject%
   \else\vfill\eject\fi}
-\vskip 0pc\goodbreak\noindent{\twelvecmbx{Formelsamling}}%
+\noindent{~\vskip -46pt\hskip-46pt{\epsfxsize=72pt\epsfbox{macros/UU_logo_color.eps}}}
+\vskip-46pt\hskip46pt%\vskip-20pt
+{\twelvecmbx{Formelsamling}}%
   \writenumberedtocentry{index}{\hskip24pt{Formelsamling}}%
   \nobreak\vskip 0pt\noindent\ignorespaces
 %%%%%%%%%%%%%%%%% Begin two-column mode %%%%%%%%%%%%%%%%%%
@@ -68,14 +75,16 @@
   \hrule width\hsize\vskip1pt%
   \hrule width\hsize\vskip10pt}
 \def\eqtitle#1{\vskip2pt\goodbreak{\it #1}\par}
-\def\versionnumber{1.0}             % Version of this collection of formulas
-\def\versiondate{30 oktober, 2026}  % Timestamp of this collection of formulas
+\def\versionnumber{1.1}             % Version of this collection of formulas
+\def\versiondate{5 november, 2026}  % Timestamp of this collection of formulas
 \def\version{v.\versionnumber\ (\versiondate)}
-\vskip4pt
-\centerline{Elektromagnetism II, Uppsala Universitet}
+\vskip-4pt
+% \centerline{Elektromagnetism II, Uppsala Universitet}
+\centerline{Uppsala Universitet}
+\centerline{Elektromagnetism II, 1TE626}
 \centerline{Sammanst{\"a}lld av Fredrik Jonsson}
-\centerline{\version}
 \centerline{{\tt github.com/hp35/elmagii}}
+\centerline{\version}
 \vskip10pt
 \input ../formulas/src/formulas.tex
 \vfill
