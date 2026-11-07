@@ -1,9 +1,9 @@
 #
 # Makefile for compilation of a single PDF of the entire series of
 # Lecture Notes in Electromagnetic Theory II, Uppsala University,
-# 2022--2025.
+# 2022--2026.
 #
-# Copyright (C) 2025 under GPL 3.0, Fredrik Jonsson
+# Copyright (C) 2026 under GPL 3.0, Fredrik Jonsson
 #
 PROJECT = elmagii-complete
 TEX    = tex
@@ -23,6 +23,7 @@ all:
 	make replace-lecturenumbers
 	make replace-lecturesubtitles
 	make replace-lecturetitles
+	make unhighlight-lectures
 	make replace-figure-paths
 	make insert-copyright-pages
 	make compile-booksrc
@@ -153,6 +154,34 @@ replace-lecturetitles:
 	       -e 's/Ö/{\\"O}/g' \
 	       "$$input" > "$$output"; \
 	   mv "$$output" "$$input"; \
+	done
+
+#
+# Replace any switches enabling the highlighting of text in red. These markers
+# are primarily used as my guidance during lectures, and should not be part of
+# the compiled collection.
+#
+unhighlight-lectures:
+	@for n in $(LECTNUMS); do \
+	   input=lecture-$$n-strip.tex; \
+	   output=lecture-$$n-tmp.tex; \
+	   echo "Replacing \\newif\\ifcolors with \\newif\\ifcolors\\colorsenabled{0} in $$input → $$output"; \
+	   sed 's/\\newif\\ifcolors/\\newif\\ifcolors\\colorsenabled{0}/g' $$input > $$output; \
+	   mv $$output $$input; \
+	done
+	@for n in $(LECTNUMS); do \
+	   input=lecture-$$n-strip.tex; \
+	   output=lecture-$$n-tmp.tex; \
+	   echo "Replacing \\colorstrue with \\colorsfalse in $$input → $$output"; \
+	   sed 's/\\colorstrue/\\colorsfalse/g' $$input > $$output; \
+	   mv $$output $$input; \
+	done
+	@for n in $(LECTNUMS); do \
+	   input=lecture-$$n-strip.tex; \
+	   output=lecture-$$n-tmp.tex; \
+	   echo "Replacing red with black in $$input → $$output"; \
+	   sed 's/\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}/\def\red#1{\ifcolors{\color{black}#1}\else#1\fi\ignorespaces}/g' $$input > $$output; \
+	   mv $$output $$input; \
 	done
 
 #
@@ -341,6 +370,9 @@ inline-misc:
 	   } \
 	   { print } \
 	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT";\
+	echo "Replacing red with black in $$INPUT → $$OUTPUT"; \
+	sed 's/\\color{red}/\\color{black}/g' "$$INPUT" > "$$OUTPUT"; \
 	mv "$$OUTPUT" "$$INPUT"
 
 #
