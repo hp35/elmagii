@@ -10,8 +10,8 @@ The entire set of lectures is available as a single compiled PDF file, also
 containing extra material such as the preface, "Portrait gallery in classical
 electromagnetism", "World Map of Electromagnetics", and "Collection of
 formulas" into a complete "book" containing all material in the single
-file [`elmagii-complete.pdf`](../elmagii-complete.pdf) in directory
-[`../compiled/`](../compiled).
+file [`elmagii-complete.pdf`](./compiled/elmagii-complete.pdf) in directory
+[`./compiled/`](./compiled).
 
 ## The Lectures
 
