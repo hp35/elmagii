@@ -1,7 +1,7 @@
 \tocindexentry {\hskip 24pt{F{\"o}rord}}{\penalty \@M }{ix}
 \tocindexentry {\hskip 24pt{V{\"a}rldskarta {\"o}ver elektromagnetisk f{\"a}ltteori}}{\penalty \@M }{xi}
 \tocindexentry {\hskip 24pt{Formelsamling}}{\penalty \@M }{xiii}
-\tocindexentry {\hskip 24pt{Portr{\"a}ttgalleri inom klassisk elektromagnetism}}{\penalty \@M }{xix}
+\tocindexentry {\hskip 24pt{Portr{\"a}ttgalleri inom klassisk elektromagnetism}}{\penalty \@M }{xxi}
 \tocchapterentry {F{\"o}rel{\"a}sning 0 -- {Grundl{\"a}ggande vektoranalys inom f{\"a}ltteori}}{0}{1}
 \tocsectionentry {Introduktion}{0.1}{3}
 \tocsectionentry {\red {Vad {\"a}r ett f{\"a}lt?}}{0.2}{3}
@@ -13,7 +13,7 @@
 \tocsubsectionentry {Den viktigaste egenskapen hos delta-distributionen {\"a}r urvalsegenskapen}{0.3.2}{7}
 \tocsubsectionentry {Delta-distributionen med en annan total styrka}{0.3.3}{7}
 \tocsubsectionentry {Fr{\aa }n en dimension till tre dimensioner}{0.3.4}{7}
-\tocsubsectionentry {En punktladdning}{0.3.5}{8}
+\tocsubsectionentry {En punktladdning}{0.3.5}{7}
 \tocsubsectionentry {Hur kommer delta-distributionen in i Gauss lag?}{0.3.6}{8}
 \tocsubsectionentry {Laddningsf{\"o}rdelningar i en, tv{\aa } och tre dimensioner}{0.3.7}{9}
 \tocsubsectionentry {Str{\"o}mmar beskrivna med delta-distributioner}{0.3.8}{10}
@@ -27,31 +27,31 @@
 \tocsectionentry {{\red {Divergensen $\nabla \cdot {\bf a}$}}}{0.5}{15}
 \tocsubsectionentry {Vad beskriver divergensen?}{0.5.1}{15}
 \tocsubsectionentry {Divergens och fl{\"o}de genom en sluten yta}{0.5.2}{16}
-\tocsubsectionentry {Divergensen hos det elektriska f{\"a}ltet}{0.5.3}{17}
-\tocsubsectionentry {Divergensen hos det magnetiska f{\"a}ltet}{0.5.4}{18}
+\tocsubsectionentry {Divergensen hos det elektriska f{\"a}ltet}{0.5.3}{16}
+\tocsubsectionentry {Divergensen hos det magnetiska f{\"a}ltet}{0.5.4}{17}
 \tocsubsectionentry {Konkret exempel p{\aa } att divergensen f{\"o}r f{\"a}ltet utanf{\"o}r en punktladdning {\"a}r noll}{0.5.5}{18}
 \tocsubsectionentry {{\red {En paradox f{\"o}r det elektrostatiska f{\"a}ltet i en homogen laddningst{\"a}thet}}}{0.5.6}{18}
 \tocsectionentry {{\red {Rotationen $\nabla \times {\bf b}$}}}{0.6}{19}
 \tocsubsectionentry {Vad beskriver rotationen?}{0.6.1}{19}
 \tocsubsectionentry {Cirkulation och Stokes sats}{0.6.2}{20}
 \tocsubsectionentry {Rotation hos det elektrostatiska f{\"a}ltet}{0.6.3}{20}
-\tocsubsectionentry {Rotation hos det magnetostatiska f{\"a}ltet}{0.6.4}{21}
+\tocsubsectionentry {Rotation hos det magnetostatiska f{\"a}ltet}{0.6.4}{20}
 \tocsubsectionentry {{\red {Biot--Savarts lag och rotationen hos magnetf{\"a}ltet}}}{0.6.5}{21}
 \tocsubsectionentry {{\red {Kan parallella f{\"a}ltlinjer ge upphov till en rotation?}}}{0.6.6}{22}
 \tocsubsectionentry {{\red {Exempel p{\aa } f{\"a}lt med en homogen rotation}}}{0.6.7}{24}
 \tocsubsectionentry {Kan en ytstr{\"o}m ge rotation skild fr{\aa }n noll?}{0.6.8}{24}
-\tocsectionentry {Konservativa f{\"a}lt}{0.7}{24}
-\tocsubsectionentry {Vad {\"a}r ett konservativt f{\"a}lt?}{0.7.1}{24}
+\tocsectionentry {Konservativa f{\"a}lt}{0.7}{25}
+\tocsubsectionentry {Vad {\"a}r ett konservativt f{\"a}lt?}{0.7.1}{25}
 \tocsubsectionentry {Exempel fr{\aa }n elektrostatik}{0.7.2}{25}
 \tocsubsectionentry {{\"A}r magnetf{\"a}ltet konservativt?}{0.7.3}{26}
 \tocsubsectionentry {Konservativa f{\"a}lt i elektrodynamik}{0.7.4}{26}
 \tocsubsectionentry {Under vilka villkor {\"a}r ett f{\"a}lt konservativt?}{0.7.5}{27}
 \tocsectionentry {{\red {Tolkningen av $\nabla \times (\nabla \phi )$}}}{0.8}{27}
 \tocsectionentry {{\red {Tolkningen av $\nabla \cdot (\nabla \times {\bf a})$}}}{0.9}{28}
-\tocsectionentry {{\red {Tolkningen av $\nabla \times (\nabla \times {\bf a})$}}}{0.10}{29}
-\tocsubsectionentry {{\red {Tolkning 1: ``Cirkulationen av en cirkulation''}}}{0.10.1}{30}
-\tocsubsectionentry {{\red {Tolkning 2: Variation i k{\"a}llstyrka samt utj{\"a}mning i rummet}}}{0.10.2}{30}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~0 -- Grundl{\"a}ggande vektoranalys inom f{\"a}ltteori}{0.11}{32}
+\tocsectionentry {{\red {Tolkningen av $\nabla \times (\nabla \times {\bf a})$}}}{0.10}{28}
+\tocsubsectionentry {{\red {Tolkning 1: ``Cirkulationen av en cirkulation''}}}{0.10.1}{29}
+\tocsubsectionentry {{\red {Tolkning 2: Variation i k{\"a}llstyrka samt utj{\"a}mning i rummet}}}{0.10.2}{29}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~0 -- Grundl{\"a}ggande vektoranalys inom f{\"a}ltteori}{0.11}{31}
 \tocchapterentry {F{\"o}rel{\"a}sning 1 -- {Elektrostatik, superpositionsprincipen och Gauss lag}}{1}{33}
 \tocsectionentry {\red {Begreppen elektrostatik, elektro-kvasistatik och elektrodynamik}}{1.1}{35}
 \tocsectionentry {Introduktion till elektrostatik}{1.2}{38}
