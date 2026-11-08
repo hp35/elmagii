@@ -696,8 +696,8 @@
   \hrule width\hsize\vskip1pt%
   \hrule width\hsize\vskip10pt}
 \def\eqtitle#1{\vskip2pt\goodbreak{\it #1}\par}
-\def\versionnumber{1.2}             % Version of this collection of formulas
-\def\versiondate{7 november, 2026}  % Timestamp of this collection of formulas
+\def\versionnumber{1.3}             % Version of this collection of formulas
+\def\versiondate{8 november, 2026}  % Timestamp of this collection of formulas
 \def\version{v.\versionnumber\ (\versiondate)}
 \vskip-4pt
 % \centerline{Elektromagnetism II, Uppsala Universitet}
@@ -1662,7 +1662,7 @@ $$
 $$
   \int_V(\nabla\cdot{\bf a})\,dV=\oiint_S{\bf a}\cdot d{\bf S}
 $$
-\eqtitle{Gauss teorem (rotations-versionen)}
+\eqtitle{Gauss teorem (``rotations-versionen'')}
 \sidx{Vektoridentiteter}[Gauss teorem, ``rotationsversionen'']
 $$
   \iiint_V(\nabla\times{\bf a})\,dV=\oiint_S d{\bf S}\times{\bf a}
@@ -1740,18 +1740,23 @@ $$
   \eqalign{
     \int&x^n\,dx={{1}\over{(n+1)}}x^{n+1},\quad n\ne-1\cr
     \int&{{dx}\over{x}}=\ln x\cr
-    \int&\sqrt{x^2+a^2}\,dx={{1}\over{2}}
-         [x\sqrt{x^2+a^2}\cr & \hskip80pt+a^2\ln(x+\sqrt{x^2+a^2})]\cr
-    \int&{{dx}\over{\sqrt{x^2+a^2}}}=\ln(x+\sqrt{x^2+a^2})\cr
-    \int&{{dx}\over{(x^2+a^2)^{3/2}}}={{x}\over{a^2\sqrt{x^2+a^2}}}\cr
-    \int&{{dx}\over{\sqrt{a^2-x^2}}}=\arcsin(x/a)\cr
+    \int&\ln x\,dx=x\ln x - x\cr
     \int&{{dx}\over{x^2+a^2}}={{1}\over{a}}\arctan(x/a)\cr
+    \int&\sqrt{x^2+a^2}\,dx={{1}\over{2}}
+         [x\sqrt{x^2+a^2}\cr & \hskip100pt+a^2\ln(x+\sqrt{x^2+a^2})]\cr
+    \int&{{dx}\over{\sqrt{x^2+a^2}}}=\ln|x+\sqrt{x^2+a^2}|\cr
+    \int&{{dx}\over{\sqrt{a^2-x^2}}}=\arcsin(x/a)\cr
+    \int&{{dx}\over{(x^2\pm a^2)^{3/2}}}=\pm{{x}\over{a^2\sqrt{x^2\pm a^2}}}\cr
+    \int&{{x\,dx}\over{(x^2\pm a^2)^{3/2}}}=-{{1}\over{\sqrt{x^2\pm a^2}}}\cr
+    \int&{{x^2\,dx}\over{(x^2\pm a^2)^{3/2}}}=-{{x}\over{\sqrt{x^2\pm a^2}}}
+         +\ln\big|x+\sqrt{x^2\pm a^2}\big|\cr
+    \int&{{dx}\over{x(x^2+a^2)^{3/2}}}={{1}\over{a^2\sqrt{x^2+a^2}}}
+         -\ln\bigg|{{a+\sqrt{x^2+a^2}}\over{x}}\bigg|\cr
     \int&{{dx}\over{\cos^2x}}=\tan(x)\cr
     \int&{{dx}\over{\sin x}}=\ln|\tan(x/2)|\cr
-    \int&\ln x\,dx=x\ln x - x\cr
   }
 $$
-% \vfill\eject
+\vfill\eject
 
 \eqsection{Serieutvecklingar}
 \sidx{Serieutvecklingar}
@@ -1759,12 +1764,21 @@ $$
 \sidx{Serieutvecklingar}[Endimensionella Maclaurin-utvecklingar]
 $$
   \eqalign{
+    \exp(x)&=1+x+{{x^2}\over{2}}+{{x^3}\over{3}}+\ldots\cr
     \sin(x)&=x-{{x^3}\over{3!}}+{{x^5}\over{5!}}-{{x^7}\over{7!}}+\ldots\cr
-%            =\sum^{\infty}_{n=0}(-1)^n{{x^{2n+1}}\over{(2n+1)!}}\cr
     \cos(x)&=1-{{x^2}\over{2!}}+{{x^4}\over{4!}}-{{x^6}\over{6!}}+\ldots\cr
+    \arcsin(x)&=x-{{x^3}\over{6}}+{{3x^5}\over{40}}-{{15x^7}\over{336}}
+       +\ldots\cr
+    \arccos(x)&=x-{{x^3}\over{6}}+{{3x^5}\over{40}}-{{15x^7}\over{336}}
+       +\ldots\cr
+    \arctan(x)&=x+{{x^3}\over{3}}+{{x^5}\over{5}}+{{x^7}\over{7}}+\ldots\cr
+    \sinh(x)&=x+{{x^3}\over{3!}}+{{x^5}\over{5!}}+{{x^7}\over{7!}}+\ldots\cr
+    \cosh(x)&=1+{{x^2}\over{2!}}+{{x^4}\over{4!}}+{{x^6}\over{6!}}+\ldots\cr
     {{1}\over{1+x}}&=1-x+x^2-x^3+\ldots\cr
     {{1}\over{1-x}}&=1+x+x^2+x^3+\ldots\cr
-    \exp(x)&=1+x+{{x^2}\over{2}}+{{x^3}\over{3}}+\ldots\cr
+    \sqrt{1+x}&=1+{{x}\over{2}}-{{x^2}\over{8}}+{{x^3}\over{16}}+\ldots\cr
+    {{1}\over{\sqrt{1+x}}}&=1-{{x}\over{2}}+{{3x^2}\over{8}}-{{5x^3}\over{16}}
+       +\ldots\cr
     \ln(1+x)&=x-{{x^2}\over{2}}+{{x^3}\over{3}}-{{x^4}\over{4}}+\ldots\cr
   }
 $$
@@ -1784,13 +1798,18 @@ $$
   +\sum^{3}_{k=1} x'_k
      {{\partial f({\bf x}')}
        \over{\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}\cr
-       &\qquad
-  +{{1}\over{2}}\sum^{3}_{j=1}\sum^{3}_{k=1} x'_j x'_k
+       &\quad
+  +{{1}\over{2!}}\sum^{3}_{j=1}\sum^{3}_{k=1} x'_j x'_k
      {{\partial^2 f({\bf x}')}
-       \over{\partial x'_j\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}
+       \over{\partial x'_j\partial x'_k}}\bigg|_{{\bf x}'={\bf 0}}\cr
+       &\quad
+  +{{1}\over{3!}}\sum^{3}_{j=1}\sum^{3}_{k=1}\sum^{3}_{l=1} x'_j x'_k x'_l
+     {{\partial^3 f({\bf x}')}
+       \over{\partial x'_j\partial x'_k\partial x'_l}}\bigg|_{{\bf x}'={\bf 0}}
   +\ldots\cr
   }
 $$
+\vfill\eject
 
 \eqsection{Koordinatsystem}
 \sidx{Koordinatsystem}
@@ -16528,10 +16547,15 @@ dom{\"a}n, och eftersom vi d{\"a}rmed inte kan f{\"o}rsumma fasskillnader i
 str{\"o}mf{\"o}rdelningen l{\"a}ngs med antennen, s{\aa} m{\aa}ste vi ta
 h{\"a}nsyn till denna genom de {\it retarderade potentialerna} fr{\aa}n
 F{\"o}rel{\"a}sning~11.
+
 Inom ramen f{\"o}r Lorenz-villkoret\numberedfootnote{Ekvivalent med
-  potentialerna i den s{\aa} kallade {\it Lorenz-gauge}.}
-kan dessa sammanfattas med motsvarigheten till Biot--Savarts lag f{\"o}r
-potentialer som
+  potentialerna i den s{\aa} kallade {\it Lorenz-gauge}, med retarderade
+  potentialer.}, vilket vi genomg{\aa}ende i denna analys kommer att
+anv{\"a}nda oss av, s{\aa} kan dessa sammanfattas med integralformerna f{\"o}r
+de elektromagnetiska potentialerna\numberedfootnote{D{\"a}r den skal{\"a}ra
+  potentialen direkt motsvarar den retarderade formen av Coulombs
+  generaliserade lag, eller ``Coulomb-integralen''.}
+som
 $$
   \eqalign{
     \phi({\bf x},t)&={{1}\over{4\pi\varepsilon_0}}\iiint_{{\Bbb R}^3}
@@ -16540,10 +16564,12 @@ $$
       {{{\bf J}_{\rm f}({\bf x}',t')}\over{|{\bf x}-{\bf x}'|}}\,dV',\cr
   }
 $$
-d{\"a}r $t'=t-|{\bf x}-{\bf x}'|/c$ {\"a}r den {\it retarderade tiden}
-fr{\aa}n ${\bf x}'$ till ${\bf x}$.
-
-
+d{\"a}r $t'=t-|{\bf x}-{\bf x}'|/c$ {\"a}r den {\it retarderade tiden} f{\"o}r
+att en f{\"o}r{\"a}ndring vid k{\"a}llpunkten ${\bf x}'$ skall observeras vid
+${\bf x}$. Notera att eftersom vi i detta problem antagit att all elektrisk
+str{\"o}mt{\"a}thet ${\bf J}$ {\"a}r riktad l{\"a}ngs med $z$-axeln, s{\aa}
+kommer {\"a}ven samtliga delbidrag till vektorpotentialen ${\bf A}$ att ge
+bidrag endast l{\"a}ngs $z$-axeln.
 
 
 \vfill\eject
