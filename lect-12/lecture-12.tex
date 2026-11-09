@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-12/lecture-12.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-12/
-% Last change: November 5, 2026
+% Last change: November 9, 2026
 %
 % Lecture No 12 in the course ``Elektromagnetism II, 1TE626 (2023)'',
 % held December 12, 2025, at Uppsala University, Sweden.
@@ -165,9 +165,24 @@ str{\"o}mf{\"o}rdelningen l{\"a}ngs med antennen, s{\aa} m{\aa}ste vi ta
 h{\"a}nsyn till denna genom de {\it retarderade potentialerna} fr{\aa}n
 F{\"o}rel{\"a}sning~11.
 
-Inom ramen f{\"o}r Lorenz-villkoret\numberedfootnote{Ekvivalent med
-  potentialerna i den s{\aa} kallade {\it Lorenz-gauge}, med retarderade
-  potentialer.}, vilket vi genomg{\aa}ende i denna analys kommer att
+\section{Val av potentialer}
+Inom ramen f{\"o}r {\it Lorenz-villkoret}\numberedfootnote{Ekvivalent med
+  potentialerna i den s{\aa} kallade {\it Lorenz-villkoret}, eller
+  {\it Lorenz-gauge}, med retarderade potentialer. Detta villkor analyserade
+  vi i F{\"o}rel{\"a}sning~11, d{\"a}r vi kom fram till att gauge-funktionen
+  $\psi$ kan v{\"a}ljas s{\aa} att
+  $$
+    \nabla\cdot{\bf A}'({\bf x},t)+
+      {{1}\over{c^2}}{{\partial\phi'({\bf x},t)}\over{\partial t}} = 0,
+  $$
+  vilket i sin tur leder till att ekvationerna f{\"o}r den transformerade
+  skal{\"a}ra potentialen $\phi'$ och vektorpotentialen ${\bf A}'$ kopplas
+  fria fr{\aa}n varandra. Lorenz-villkoret {\"a}r uppkallat efter den danske
+  fysikern {\it Ludvig Lorenz} (1829--1891) ({\it inte} Hendrik Antoon
+  {\it Lorentz} (1853--1928), som ofta f{\"o}rv{\"a}xlas med {\it Lorenz}).
+  \sidx{Lorentz, Hendrik Antoon (1853--1928)}
+  \sidx{Lorenz, Ludvig (1829--1891)}},
+vilket vi genomg{\aa}ende i denna analys kommer att
 anv{\"a}nda oss av, s{\aa} kan dessa sammanfattas med integralformerna f{\"o}r
 de elektromagnetiska potentialerna\numberedfootnote{D{\"a}r den skal{\"a}ra
   potentialen direkt motsvarar den retarderade formen av Coulombs
@@ -183,10 +198,57 @@ $$
 $$
 d{\"a}r $t'=t-|{\bf x}-{\bf x}'|/c$ {\"a}r den {\it retarderade tiden} f{\"o}r
 att en f{\"o}r{\"a}ndring vid k{\"a}llpunkten ${\bf x}'$ skall observeras vid
-${\bf x}$. Notera att eftersom vi i detta problem antagit att all elektrisk
-str{\"o}mt{\"a}thet ${\bf J}$ {\"a}r riktad l{\"a}ngs med $z$-axeln, s{\aa}
-kommer {\"a}ven samtliga delbidrag till vektorpotentialen ${\bf A}$ att ge
-bidrag endast l{\"a}ngs $z$-axeln.
+${\bf x}$.
+
+Vi antar vidare att antennen {\"a}r perfekt elektriskt ledande, att all
+laddningstransport sker l{\"a}ngs med $z$-axeln, och att antennen {\"a}r
+tunn i f{\"o}rh{\aa}llande till sin l{\"a}ngd, med
+$$
+  a\ll L,
+$$
+Eftersom vi i detta problem antar att all elektrisk str{\"o}mt{\"a}thet
+${\bf J}$ {\"a}r riktad l{\"a}ngs med $z$-axeln, med
+$$
+  {\bf J}={\bf e}_zJ_z(z)
+$$
+s{\aa} kommer {\"a}ven samtliga delbidrag till vektorpotentialen ${\bf A}$
+att ge bidrag endast l{\"a}ngs $z$-axeln.
+
+Som alltid i denna typ av tidsharmoniska problem kommer vi f{\"o}rr eller senare
+att beh{\"o}va best{\"a}mma oss f{\"o}r vilken konvention vi skall anv{\"a}nda
+f{\"o}r komplexv{\"a}rda envelopper och oscillerande f{\"a}lt.
+H{\"a}r kommer vi genomg{\aa}ende att anv{\"a}nda oss av tidskonventionen
+d{\"a}r de reella storheterna extraheras ur komplexa tidsenvelopper med
+``negativ tidskonvention'', som
+$$
+  U(t)=\Re[U_{\omega}\exp(-i\omega t)],\qquad
+  {\bf A}({\bf x},t)=\Re[{\bf A}_{\omega}({\bf x},t)\exp(-i\omega t)],
+$$
+och s{\aa} vidare.
+
+\section{Symmetrier och randvillkor}
+
+Utifr{\aa}n symmetrin i problemet kommer str{\"o}mf{\"o}rdelningen att vara
+j{\"a}mn med avseende p{\aa} matningspunkten, med
+$$
+  J_z(z)=J_z(-z).
+$$
+Detta kan vi se som att n{\"a}r exempelvis matningspunkten vid $z=g$ f{\"o}r
+den {\"o}vre halvan av dipolen har en positiv potential, s{\aa} ``trycker''
+denna matningspunkt in laddning med en positiv str{\"o}m i positiv $z$-led.
+Vid samma tidpunkt har matningspunkten vid $z=-g$ negativ potential, vilket
+inneb{\"a}r att denna matningspunkt ``suger'' ur laddning ur denna del av
+dipolen, {\"a}ven denna med en str{\"o}m som {\"a}r positiv i $z$-led.
+
+V{\aa}ra andra randvillkor {\"a}r att str{\"o}mt{\"a}theten dessutom m{\aa}ste
+bli noll vid antennens {\"a}ndar,
+$$
+  J_z(L+g/2)=0,\qquad J_z(-(L+g/2)),
+$$
+eftersom ingen str{\"o}m kan g{\aa} ut eller in i antennens {\"a}ndpunkter.
+Dessa randvillkor kommer att vara centrala i v{\aa}r fortatta analys.
+
+
 
 
 \vfill\eject
