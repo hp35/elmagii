@@ -226,8 +226,7 @@ $$
 $$
 och s{\aa} vidare.
 
-\section{Symmetrier och randvillkor}
-
+\section{Symmetrier och randvillkor f{\"o}r matning av antennen}
 Utifr{\aa}n symmetrin i problemet kommer str{\"o}mf{\"o}rdelningen att vara
 j{\"a}mn med avseende p{\aa} matningspunkten, med
 $$
@@ -247,6 +246,54 @@ $$
 $$
 eftersom ingen str{\"o}m kan g{\aa} ut eller in i antennens {\"a}ndpunkter.
 Dessa randvillkor kommer att vara centrala i v{\aa}r fortatta analys.
+
+\section{Vektorpotential f{\"o}r en tidsharmonisk str{\"o}mt{\"a}thet}
+F{\"o}r en tidsharmonisk str{\"o}mt{\"a}thet
+$$
+  {\bf J}_{\rm f}({\bf x},t)=\Re[{\bf J}_{\omega}({\bf x})\exp(-i\omega t)]
+$$
+d{\"a}r vi m{\aa}ste h{\aa}lla i minnet att denna n{\"a}r den s{\"a}tts i sitt
+sammanhang av retarderade potentialer skall anv{\"a}nda den {\it retarderade
+tiden}, s{\aa} erh{\aa}ller vi retarderade vektorpotentialen som
+$$
+  \eqalign{
+    \underbrace{
+      \Re[{\bf A}_{\omega}({\bf x})\exp(-i\omega t)]
+    }_{={\bf A}({\bf x},t)}
+      &=
+          {{\mu_0}\over{4\pi}}\iiint_{{\Bbb R}^3}
+            {{
+              \overbrace{
+                \Re\big[{\bf J}_{\omega}({\bf x}')\exp(-i\omega t')\big]
+              }^{\hbox{Retarderad tid}}
+            }
+              \over{|{\bf x}-{\bf x}'|}}\,dV'\cr
+      &=\big\{\ \hbox{Definition av retarderad tid
+                      $t'=t-|{\bf x}-{\bf x}'|/c$}\ \big\}\cr
+      &=\Re\bigg[
+          {{\mu_0}\over{4\pi}}\iiint_{{\Bbb R}^3}
+            {{{\bf J}_{\omega}({\bf x}')
+                \exp\big(-i\omega(t-|{\bf x}-{\bf x}'|/c)\big)}
+              \over{|{\bf x}-{\bf x}'|}}\,dV'
+        \bigg]\cr
+      &=\Re\bigg[
+          {{\mu_0}\over{4\pi}}\iiint_{{\Bbb R}^3}
+            {{{\bf J}_{\omega}({\bf x}')\exp(i\omega(|{\bf x}-{\bf x}'|/c)}
+              \over{|{\bf x}-{\bf x}'|}}\,dV'
+              \exp(-i\omega t)
+        \bigg],\cr
+  }
+$$
+det vill s{\"a}ga att den komplexv{\"a}rda {\it temporala enveloppen} av
+vektorpotentialen erh{\aa}lls som
+$$
+  \eqalign{
+    {\bf A}_{\omega}({\bf x})
+      &={{\mu_0}\over{4\pi}}\iiint_{{\Bbb R}^3}
+            {{{\bf J}_{\omega}({\bf x}')\exp(i\omega|{\bf x}-{\bf x}'|/c)}
+              \over{|{\bf x}-{\bf x}'|}}\,dV'.\cr
+  }
+$$
 
 
 
