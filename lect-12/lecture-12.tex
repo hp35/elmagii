@@ -295,6 +295,83 @@ $$
   }
 $$
 
+\section{Lorenz-villkoret och kopplingen till den skal{\"a}ra potentialen}
+V{\"a}n av ordning fr{\aa}gar sig h{\"a}r varf{\"o}r vi s{\aa} l{\aa}ngt inte
+har brytt oss om att ta med den skal{\"a}ra potentialen $\phi({\bf x},t)$.
+Trots allt, s{\aa} vet vi ju att dynamiska elektriska f{\"a}lt inte bara
+kopplar till vektorpotentialen, utan {\"a}ven till den skal{\"a}ra potentialen,
+som ju vid ett statiskt fall {\"a}r den enda potentialen som det elektriska
+f{\"a}ltet kopplar till. Svaret {\"a}r att den skal{\"a}ra potentialen alltid
+{\"a}r kopplad till vektorpotentialen, specifikt under Lorenz-villkoret som
+$$
+  \nabla\cdot{\bf A}({\bf x},t)+
+    {{1}\over{c^2}}{{\partial\phi({\bf x},t)}\over{\partial t}} = 0,
+$$
+d{\"a}r vi tog oss friheten att droppa den primmade notationen%
+\numberedfootnote{Fr{\aa}n F{\"o}rel{\"a}sning~11, d{\"a}r vi anv{\"a}nde
+  notationen f{\"o}r de gauge-transformerade potentialerna
+  $$
+    \eqalign{
+      {\bf A}'({\bf x},t)
+        &={\bf A}({\bf x},t)+\nabla\psi({\bf x},t),\cr
+      \phi'({\bf x},t)
+        &=\phi({\bf x},t)-{{\partial\psi({\bf x},t)}\over{\partial t}},\cr
+    }
+  $$\sidx{Gauge-transformation}}
+f{\"o}r den gauge-transformerade skal{\"a}ra potentialen och vektorpotentialen,
+eftersom det {\"a}r ju trots allt i denna analys {\"a}r uppenbart att det
+r{\"o}r sig om potentialer som {\"a}r transformerade under Lorenz-villkoret.
+
+Uttryckt i tidsharmoniska f{\"a}lt med den konvention av ``negativ tid''
+som vi h{\"a}r anv{\"a}nder, s{\aa} uttrycks detta i komplexv{\"a}rda
+{\it temporala envelopper} ${\bf A}_{\omega}({\bf x})$ och
+$\phi_{\omega}({\bf x})$ som
+$$
+  \eqalign{
+    &\Re\bigg[\nabla\cdot{\bf A}_{\omega}({\bf x})\exp(-i\omega t)+
+       {{1}\over{c^2}}{{\partial}\over{\partial t}}
+         \phi_{\omega}({\bf x})\exp(-i\omega t)
+     \bigg] = 0\cr
+    &\qquad\Leftrightarrow\quad
+    \nabla\cdot{\bf A}_{\omega}({\bf x})
+      -i{{\omega}\over{c^2}}\phi_{\omega}({\bf x}) = 0\cr
+    &\qquad\Leftrightarrow\quad
+%      \phi_{\omega}({\bf x})
+%        =-i{{c^2}\over{\omega}}\nabla\cdot{\bf A}_{\omega}({\bf x})\cr
+      \phi_{\omega}({\bf x})
+        ={{1}\over{i\omega/c^2}}\nabla\cdot{\bf A}_{\omega}({\bf x}).\cr
+  }
+$$
+Med andra ord, s{\aa} r{\"a}cker det med att vi en g{\aa}ng f{\"o}r alla
+ber{\"a}knar vektorpotentialen, varefter den skal{\"a}ra potentialen enkelt
+kan extraheras som divergensen av vektorpotentialen.
+Enveloppen f{\"o}r det tidsharmoniska men i {\"o}vrigt station{\"a}ra
+elektriska f{\"a}ltet ges enligt v{\aa}ra resultat fr{\aa}n
+F{\"o}rel{\"a}sning~11 som\numberedfootnote{Sj{\"a}lvfallet har vi
+  fortfarande att det magnetiska f{\"a}ltet eller, om man skall vara
+  petig, {\it den magnetiska fl{\"o}dest{\"a}theten} ges som
+  $$
+    {\bf B}({\bf x},t)\equiv\nabla\times{\bf A}({\bf x},t)
+    \qquad\Leftrightarrow\qquad
+    {\bf B}_{\omega}({\bf x})=\nabla\times{\bf A}_{\omega}({\bf x}).
+  $$}
+$$
+  \eqalign{
+    {\bf E}({\bf x},t)
+      &\equiv-\nabla\phi({\bf x},t)
+          -{{\partial{\bf A}({\bf x},t)}\over{\partial t}}
+    \qquad\Leftrightarrow\qquad
+    {\bf E}_{\omega}({\bf x})=-\nabla\phi_{\omega}({\bf x})
+      +i\omega{\bf A}_{\omega}({\bf x}),\cr
+  }
+$$
+vilket n{\"a}r vi s{\"a}tter in den skal{\"a}ra potentialen fr{\aa}n
+Lorenz-villkoret ovan lyder
+$$
+  {\bf E}_{\omega}({\bf x})
+    =-{{1}\over{i\omega/c^2}}\nabla(\nabla\cdot{\bf A}_{\omega}({\bf x}))
+      +i\omega{\bf A}_{\omega}({\bf x}).
+$$
 
 
 
