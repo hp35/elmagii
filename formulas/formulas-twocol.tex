@@ -28,10 +28,6 @@
 \input macros/epsf.tex
 \input macros/eplain.tex
 \input amssym % to get the {\Bbb E} font (strikethrough E)
-\abovedisplayskip=4pt plus 2pt minus 2pt      % Vertical padding of $$...$$
-\belowdisplayskip=4pt plus 2pt minus 2pt      % Vertical padding of $$...$$
-\abovedisplayshortskip=2pt plus 2pt minus 2pt % Vertical padding of $$...$$
-\belowdisplayshortskip=2pt plus 2pt minus 2pt % Vertical padding of $$...$$
 \font\twelvecmbx=cmbx12
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
@@ -75,7 +71,42 @@
   \vskip4pt%
   \hrule width\hsize\vskip1pt%
   \hrule width\hsize\vskip10pt}
+\parskip=0pt
 \def\eqtitle#1{\vskip2pt\goodbreak{\it #1}\par}
+%\def\trimspacing#1{%
+%  \begingroup%
+%    \parskip=-10pt%
+%%    \displaylines{#1}%
+%    #1%
+%  \endgroup%
+%}
+
+%
+% Definition of the vertical padding to use for displayed equations.
+% In plain TeX, the syntax <dimension> plus <stretch> minus <shrink> defines
+% a "glue" (which is TeX's term for flexible spacing). This "glue" specifies
+% three quantities:
+%     1. Natural size: the default spacing TeX tries to use.
+%     2. Stretch: how much TeX is allowed to increase the spacing.
+%     3. Shrink: how much TeX is allowed to decrease the spacing.
+%
+% For example, "\abovedisplayskip=4pt plus 2pt minus 2pt" means a natural
+% spacing of 4 pt, a maximum stretch of 2 pt (up to 6 pt), and a maximum
+% shrink of 2 pt (down to 2 pt).
+%
+% Here, \abovedisplayskip and \belowdisplayskip are used when the preceding
+% text line is sufficiently long, while \abovedisplayshortskip and
+% \belowdisplayshortskip are used when the preceding line is short enough
+% that the equation can be positioned closer to it.
+%
+\abovedisplayskip=2pt plus 3pt minus 1pt      % Vertical padding of $$...$$
+\belowdisplayskip=2pt plus 3pt minus 1pt      % Vertical padding of $$...$$
+\abovedisplayshortskip=0pt plus 2pt minus 2pt % Vertical padding of $$...$$
+\belowdisplayshortskip=2pt plus 2pt minus 2pt % Vertical padding of $$...$$
+
+%
+% Header of the compiled collection of formulas.
+%
 \def\versionnumber{1.3}             % Version of this collection of formulas
 \def\versiondate{8 november, 2026}  % Timestamp of this collection of formulas
 \def\version{v.\versionnumber\ (\versiondate)}
