@@ -49,6 +49,7 @@
 \ifx\colorsenabled\undefined \colorsfalse \else \colorstrue \fi
 \ifcolors\input color\fi
 \def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
+\def\black#1{\ifcolors{\color{black}#1}\else#1\fi\ignorespaces}
 
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
@@ -378,26 +379,27 @@ approach.
 \noindent
 L{\aa}t oss {\"a}ven g{\aa} igenom ett alternativt, aningen mer fysikaliskt
 fokuserat bevis.
-\quote{{\bf ``Fysikaliskt'' bevis.} Vi har att $\phi$ {\"a}r en l{\"o}sning
-  till Laplaces ekvation f{\"o}r den elektrostatiska potentialen, en ekvation
-  vilken vi rekapitulerar per definition beskriver en {\it laddningsfri region},
-  med $\rho({\bf x})=0$ f{\"o}r alla punkter ${\bf x}$ i volymen $V$.
-  Detta betyder att f{\"o}r {\it godtyckligt vald punkt} ${\bf x}$ i
-  volymen $V$, s{\aa} {\"a}r potentialen given som ett {\it medelv{\"a}rde}
-  av potentialen i en omgivning av observationspunkten, s{\"a}g i form av
-  en ``tillr{\"a}ckligt liten'' sf{\"a}r $S=\{{\bf x}:|{\bf x}-{\bf x}'|=r\}$
+\quote{{\red{{\bf ``Fysikaliskt'' bevis.}}} Vi har att $\phi$ {\"a}r en
+  l{\"o}sning till Laplaces ekvation f{\"o}r den elektrostatiska potentialen,
+  en ekvation vilken vi rekapitulerar per definition beskriver en
+  {\it laddningsfri region}, med $\rho({\bf x})=0$ f{\"o}r alla punkter
+  ${\bf x}$ i volymen $V$.
+  Detta betyder att f{\"o}r {\it godtyckligt vald punkt} ${\bf x}$ i volymen
+  $V$, s{\aa} {\"a}r potentialen given som ett {\red{\it medelv{\"a}rde} av
+  potentialen} i en omgivning av observationspunkten, s{\"a}g i form av en
+  ``tillr{\"a}ckligt liten'' sf{\"a}r $S=\{{\bf x}:|{\bf x}-{\bf x}'|=r\}$
   med radien $r$ centrerad i punkten ${\bf x}$ som
   \sidx{Extrempunkter}[F{\"o}r l{\"o}sningar till Laplaces ekvation]
-  $$
+  \red{$$
     \phi({\bf x})={{1}\over{4\pi r^2}}\oiint_{S}\phi({\bf x}')\,dS'.
-  $$
+  $$}
   Med andra ord {\"a}r v{\"a}rdet f{\"o}r potentialen vid ${\bf x}$ ett
   medelv{\"a}rde av potentialen i alla n{\"a}rliggande punkter p{\aa} den
-  omgivande sf{\"a}ren. Ett medelv{\"a}rde kan dock aldrig vara st{\"o}rre
-  {\"a}n det maximala v{\"a}rdet eller mindre {\"a}n det minimala v{\"a}rdet
-  f{\"o}r potentialen p{\aa} denna sf{\"a}r, med andra ord kan inga lokala
-  extremv{\"a}rden finnas f{\"o}r $\phi$ i dom{\"a}nen d{\"a}r den uppfyller
-  Laplaces ekvation $\nabla^2\phi=0$.}
+  omgivande sf{\"a}ren. {\red{\it Ett medelv{\"a}rde kan dock aldrig vara
+  st{\"o}rre {\"a}n det maximala v{\"a}rdet eller mindre {\"a}n det minimala
+  v{\"a}rdet f{\"o}r potentialen p{\aa} denna sf{\"a}r, med andra ord kan
+  inga lokala extremv{\"a}rden finnas f{\"o}r $\phi$ i dom{\"a}nen d{\"a}r
+  den uppfyller Laplaces ekvation $\nabla^2\phi=0$.}}}
 \bigskip
 \noindent
 Intuitiv fysikalisk tolkning: Att $\nabla^2\phi=0$ i volymen $V$ betyder att det
@@ -411,12 +413,13 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
 \subsection{F{\"o}rsta entydighetsteoremet f{\"o}r den elektrostatiska
   potentialen}
 \sidx{Entydighetsteoremet}[F{\"o}r Laplaces ekvation]
-\quote{{\bf Teorem~II.} [{\it First uniqueness theorem} enligt Griffiths]
-  L{\"o}sningen till {\it Laplaces ekvation} $\nabla^2\phi=0$ i en godtycklig
-  volym $V$ {\"a}r entydigt (unikt) best{\"a}md om potentialen $\phi$ {\"a}r
-  specificerad p{\aa} randen $S$ till volymen. [Griffiths, sid.~119]}
+\quote{{\red{{\bf Teorem~II.}}} [{\it First uniqueness theorem} enligt Griffiths]
+  {\red{L{\"o}sningen till {\it Laplaces ekvation} $\nabla^2\phi=0$ i en
+  godtycklig volym $V$ {\"a}r entydigt (unikt) best{\"a}md om potentialen
+  $\phi$ {\"a}r specificerad p{\aa} randen $S$}} till volymen.
+  [Griffiths, sid.~119]}
 \epsfig{figs/unique.1}\noindent
-\quote{{\bf Bevis.}\numberedfootnote{Ett alternativt bevis g{\aa}s
+\quote{{\bf Bevis.}\numberedfootnote{{\black{Ett alternativt bevis g{\aa}s
     igenom av exempelvis J.~D.~Jackson, {\it Classical Electrodynamics},
     \sidx{Jackson, John David (1925--2016)}[{{\it Classical Electrodynamics}}]
     med anv{\"a}ndandet av Greens f{\"o}rsta teorem,
@@ -448,21 +451,22 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
     betyder detta att {\"o}verallt i $V$ {\"a}r $\phi_1=\phi_2$, vilket i
     sin tur visar att en l{\"o}sning till Laplaces ekvation i $V$ alltid
     {\"a}r unik. Greens teorem och Greensfunktioner\sidx{Greensfunktion}
-    {\"a}r dock utanf{\"o}r vad denna kurs omfattar.}
-  Antag att vi har {\it tv{\aa}} av varandra oberoende l{\"o}sningar $\phi_1$
-  och $\phi_2$ till Laplaces ekvation i en volym $V$, uppfyllande
-  $\nabla^2\phi_1=0$ och $\nabla^2\phi_2=0$, och med {\it b{\"a}gge
-  l{\"o}sningarna antagande samma v{\"a}rden p{\aa} randen} $S$ till $V$.
+    {\"a}r dock utanf{\"o}r vad denna kurs omfattar.}}}
+  Antag att vi har {\it tv{\aa}} av varandra {\red{oberoende l{\"o}sningar
+  $\phi_1$ och $\phi_2$ till Laplaces ekvation}} i en volym $V$, uppfyllande
+  {\red{$\nabla^2\phi_1=0$}} och {\red{$\nabla^2\phi_2=0$}}, och med
+  {\it b{\"a}gge l{\"o}sningarna antagande {\red{samma v{\"a}rden p{\aa}
+  randen}}} $S$ till $V$.
   Vi kan i detta {\"a}ven inkludera ett godtyckligt antal av eventuella
-  interna randytor $S'$. Vi definierar differensen mellan de tv{\aa}
+  interna randytor $S'$. Vi definierar {\red{differensen}} mellan de tv{\aa}
   hypotetiska oberoende l{\"o}sningarna som
-  $$
+  \red{$$
     U\equiv\phi_2-\phi_1,
-  $$
-  som trivialt {\"a}ven den satisfierar Laplaces ekvation
-  $$
+  $$}
+  som trivialt {\"a}ven den {\red{satisfierar Laplaces ekvation}}
+  \red{$$
     \nabla^2 U=\underbrace{\nabla^2\phi_2}_{=0}-\underbrace{\nabla^2\phi_1}_{=0}=0
-  $$
+  $$}
   {\"o}verallt i volymen $V$. Specifikt har differensen v{\"a}rdet $U=0$ p{\aa}
   alla punkter som tillh{\"o}r randen $S$ (eller f{\"o}r den delen p{\aa}
   interna randytor $S'$) till $V$,
