@@ -470,61 +470,66 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
   {\"o}verallt i volymen $V$. Specifikt har differensen v{\"a}rdet $U=0$ p{\aa}
   alla punkter som tillh{\"o}r randen $S$ (eller f{\"o}r den delen p{\aa}
   interna randytor $S'$) till $V$,
-  $$
+  \red{$$
     U({\bf x})=0,\qquad{\bf x}\in S.
-  $$
-  Som vi just sett i Teorem~I ovan till{\aa}ter dock Laplaces ekvation inga
-  lokala extrempunkter inuti $V$ (specifikt f{\"o}r differensen $U$ som ju
+  $$}
+  Som vi just sett i Teorem~I ovan till{\aa}ter dock Laplaces ekvation {\red{inga
+  lokala extrempunkter}} inuti $V$ (specifikt f{\"o}r differensen $U$ som ju
   lyder Laplace ekvation) och med andra ord {\"a}r
-  $$
+  \red{$$
     \min(U({\bf x}))=\max(U({\bf x}))=0
     \quad\Leftrightarrow\quad
     U({\bf x})\equiv0
     \quad\Leftrightarrow\quad
     \phi_1({\bf x})=\phi_2({\bf x}),
-  $$
-  vilket d{\"a}rmed leder till slutsatsen att enda m{\"o}jligheten {\"a}r att
-  det endast finns en enda unik (entydig) l{\"o}sning f{\"o}r den skal{\"a}ra
-  potentialen $\phi$.}
+  $$}
+  vilket d{\"a}rmed leder till slutsatsen att {\red{enda m{\"o}jligheten}}
+  {\"a}r att det endast finns en enda {\red{unik (entydig) l{\"o}sning f{\"o}r
+  den skal{\"a}ra potentialen $\phi$.}}}
 
-\quote{{\bf F{\"o}ljdsats} [Inkludering av laddning i volymen $V$]
-  L{\"o}sningen till {\it Poissons ekvation}\numberedfootnote{``Laplaces
+\quote{{\red{\bf F{\"o}ljdsats}} [Inkludering av laddning i volymen $V$]
+  {\red{L{\"o}sningen till {\it Poissons ekvation}\numberedfootnote{``Laplaces
     ekvation fast med en k{\"a}lla i h{\"o}gerledet.''}
   $\nabla^2\phi=-\rho/\varepsilon_0$ i en godtycklig volym $V$ {\"a}r unikt
   best{\"a}md om (I) potentialen $\phi$ {\"a}r specificerad p{\aa} randen $S$
   till volymen samt (II) laddningst{\"a}theten $\rho$ i dom{\"a}nen {\"a}r
-  specificerad. [Griffiths, sid.~121]
+  specificerad.}} [Griffiths, sid.~121]
   \sidx{Entydighetsteoremet}[F{\"o}r Poissons ekvation]}
-\quote{{\bf Bevis} Vi har just visat att i en dom{\"a}n d{\"a}r inga laddningar
-  finns, s{\aa} {\"a}r en l{\"o}sning till {\it Laplaces} ekvation entydig.
+\quote{{\red{\bf Bevis}} Vi har just visat att i en dom{\"a}n d{\"a}r inga
+  laddningar finns, s{\aa} {\"a}r en l{\"o}sning till {\it Laplaces} ekvation
+  entydig.
   Vad h{\"a}nder d{\aa} om vi l{\"a}gger till en godtycklig laddningst{\"a}thet
   $\rho({\bf x})$ i volymen, s{\aa} att vi i sj{\"a}lva verket har att g{\"o}ra
   med {\it Poissons} ekvation?
   I detta fall f{\"o}ljer vi samma argument som tidigare, med en differens
   $U=\phi_2-\phi_1$, men d{\"a}r de tv{\aa} potentialerna ist{\"a}llet
   f{\"o}ljer\sidx{Entydighetsteoremet}[F{\"o}r Poissons ekvation]
-  $$
+  \red{$$
     \nabla^2\phi_1=-\rho/\varepsilon_0,\qquad
     \nabla^2\phi_2=-\rho/\varepsilon_0,
-  $$
-  s{\aa} att differensen $U$ i dom{\"a}nen $V$ liksom tidigare blir
-  $$
+  $$}
+  s{\aa} att {\red{differensen}} $U$ i dom{\"a}nen $V$ liksom tidigare blir
+  \red{$$
     \nabla^2U
       =\nabla^2\phi_2-\nabla^2\phi_1
       =-\rho/\varepsilon_0-(-\rho/\varepsilon_0)=0.
-  $$
+  $$}
   {\AA}terigen satisfierar $U({\bf x})$ Laplaces ekvation och har liksom
   tidigare v{\"a}rdet noll f{\"o}r alla punkter p{\aa} randen,
-  $$
-    U({\bf x})=0,\qquad{\bf x}\in S.
-  $$
+  \red{$$
+    U({\bf x}\in S)=0,
+    \qquad\Leftrightarrow\qquad
+    U({\bf x}\in V)=0.
+  $$}
   Med exakt samma argument kring $\min(U)=\max(U)=0$ som tidigare, s{\aa} drar
   vi d{\"a}rmed slutsatsen att {\"a}ven n{\"a}r laddningar {\"a}r n{\"a}rvarande
-  i dom{\"a}nen, s{\aa} g{\"a}ller entydighetsteoremet. Notera att ``n{\"a}rvaro
-  av laddningar'' h{\"a}r m{\aa}ste tolkas som ``n{\"a}rvaron av laddningar som
-  {\"a}r station{\"a}ra i rummet'', det vill s{\"a}ga att eventuella laddningar
-  som {\"a}r r{\"o}rliga i metaller eller liknande m{\aa}ste ha uppn{\aa}tt
-  j{\"a}mvikt med det omgivande elektrostatiska f{\"a}ltet.}
+  i dom{\"a}nen (volymen) $V$, s{\aa} g{\"a}ller entydighetsteoremet f{\"o}r den
+  skal{\"a}ra potentialen $\phi$.
+  Notera att ``n{\"a}rvaro av laddningar'' h{\"a}r m{\aa}ste tolkas som
+  ``n{\"a}rvaron av laddningar som {\"a}r station{\"a}ra i rummet'', det vill
+  s{\"a}ga att eventuella laddningar som {\"a}r r{\"o}rliga i metaller eller
+  liknande m{\aa}ste ha uppn{\aa}tt j{\"a}mvikt med det omgivande elektrostatiska
+  f{\"a}ltet.}
 
 \subsection{Elektriska ledare och andra entydighetsteoremet f{\"o}r
   den elektrostatiska potentialen}
@@ -538,23 +543,23 @@ n{\aa}gra toppar eller dalar inom dom{\"a}nen annat {\"a}n p{\aa} randen $S$.
   Se Griffiths sid.~121--123.}]}
 \par\vfill\eject
 
-\section{Faradays bur}
+\section{{\red{Faradays bur}}}
 \sidx{Faradays bur}
 Som en direkt f{\"o}ljd av Teorem~II -- g{\"a}llande att l{\"o}sningen till
 Laplaces ekvation $\nabla^2\phi=0$ i en godtycklig volym $V$ {\"a}r unikt
 best{\"a}md om potentialen $\phi$ {\"a}r specificerad p{\aa} randen $S$ till
 volymen -- s{\aa} f{\"o}ljer det att om en perfekt ledare omsluter en dom{\"a}n
-$V$, med andra ord att den omslutande ytan {\"o}verallt {\"a}r knuten till samma
-konstanta potential $\phi=\phi_0$, {\it s{\aa} {\"a}r den elektriska potentialen
-konstant {\"o}verallt inuti volymen}, givet att ingen laddning omsluts.
+$V$, med andra ord att {\red{om den omslutande ytan {\"o}verallt {\"a}r knuten
+till samma konstanta potential $\phi=\phi_0$, {\it s{\aa} {\"a}r den elektriska
+potentialen konstant {\"o}verallt inuti volymen}}}, givet att ingen laddning
+omsluts.
 \epsfig{figs/faradaycage.1}\noindent
-Av detta f{\"o}ljer trivialt att det elektriska f{\"a}ltet i hela volymen {\"a}r
-identiskt noll, eftersom vi f{\"o}r $\phi=\phi_0=\hbox{konstant}$ p{\aa} $S$ har
-att
-$$
+{\red{Av detta f{\"o}ljer trivialt att det elektriska f{\"a}ltet i hela volymen
+{\"a}r identiskt noll}}, eftersom vi f{\"o}r $\phi=\phi_0=\hbox{konstant}$ p{\aa}
+$S$ har att
+\red{$$
   {\bf E}=-\nabla\phi_0=0
-$$
-
+$$}
 {\it Exempel~I:} Luckan till en mikrov{\aa}gsugn fungerar som d{\"o}rr till en
 Faraday-bur, d{\"a}r det elektriskt ledande n{\"a}tet i luckan har h{\aa}l
 som {\"a}r v{\"a}sentligt mindre {\"a}n v{\aa}gl{\"a}ngden f{\"o}r det
@@ -655,22 +660,22 @@ vi f{\"o}rvisso en laddningsf{\"o}rdelning som skapar just ${\bf E}={\bf 0}$,
 men vi har under detta f{\"o}rlopp ocks{\aa} ocks{\aa} en str{\"o}m som i sig
 g{\"o}r att vi {\it l{\"a}mnat antagandet om elektrostatik}.
 
-\section{Sammanfattning av vitsen med entydighetsteoremet}
+\section{{\red{Sammanfattning av vitsen med entydighetsteoremet}}}
 Griffiths sammanfattar p{\aa} sid.~120 (sektion 3.1.5) vitsen med hela denna
 exercis kring entydighet mycket precist:\numberedfootnote{``The uniqueness
   theorem is a license to your imagination. It doesn't matter {\it how} you
   come by your solution; if (a) it satisfies Laplace's equation and (b) it
   has the correct value on the boundaries, then it's {\it right}.''}
-\quote{``Entydighetsteoremet {\"a}r en licens till din fantasi. Det spelar
-  ingen roll {\it hur} du finner din l{\"o}sning; om den (a) uppfyller
-  Laplaces ekvation och (b) har korrekt v{\"a}rde p{\aa} randen, s{\aa}
-  {\"a}r den {\it korrekt}.''}
+\quote{{\red{``Entydighetsteoremet {\"a}r en licens till din fantasi.
+  Det spelar ingen roll {\it hur} du finner din l{\"o}sning; om den
+  (a) uppfyller Laplaces ekvation och (b) har korrekt v{\"a}rde p{\aa}
+  randen, s{\aa} {\"a}r den {\it korrekt}.''}}}
 \noindent
 Vi kommer nu att utnyttja v{\aa}r erh{\aa}llna licens p{\aa} l{\"o}sandet av
 problem med hj{\"a}lp av s{\aa} kallade {\it spegelladdningar}.
 \vfill\eject
 
-\section{Spegelladdningar i perfekt ledande plan}
+\section{{\red{Spegelladdningar i perfekt ledande plan}}}
 \sidx{Spegelladdning}\sidx{Spegelladdning}[Perfekt ledande plan]
 S{\aa} l{\aa}ngt har vi haft att g{\"o}ra med givna laddningar och
 laddningsf{\"o}rdelningar, fixt placerade i rummet. Vad h{\"a}nder om
@@ -697,20 +702,23 @@ eller repelleras fr{\aa}n den netto-negativa laddningen; vi kan se detta som
 att vi har en tv{\aa}dimensionell ``gas'' av fria elektroner i ytan.
 \vfill\eject
 
-\subsection{Problemformulering f{\"o}r elektrostatik ovanf{\"o}r perfekt
+\subsection{{\red{Problemformulering}} f{\"o}r elektrostatik ovanf{\"o}r perfekt
   ledande plan}
 \sidx{Spegelladdning}[Perfekt ledande plan]
 Rent matematiskt formuleras detta problem enligt f{\"o}ljande:
 \smallskip
-\item{1.}{Vi har laddningst{\"a}theten $\rho=q\delta({\bf x}-h{\bf e}_z)$
-  i rummet $z>0$. (K{\"a}llpunkten {\"a}r vid ${\bf x}'=h{\bf e}_z$.)}
-\item{2.}{Den skal{\"a}ra potentialen {\it uppfyller Laplaces ekvation}
-  $\nabla^2\phi=0$ {\"o}verallt i $z>0$ utom just i
+\item{{\red{1.}}}{Vi har {\red{laddningst{\"a}theten
+  $\rho=q\delta({\bf x}-h{\bf e}_z)$ i rummet $z>0$}}.
+  (K{\"a}llpunkten {\"a}r vid ${\bf x}'=h{\bf e}_z$.)}
+\item{{\red{2.}}}{Den skal{\"a}ra potentialen {\it uppfyller
+  {\red{Laplaces ekvation}}}
+  {\red{$\nabla^2\phi=0$ {\"o}verallt i $z>0$}} utom just i
   ${\bf x}'=h{\bf e}_z$ f{\"o}r punktladdningen.}
-\item{3.}{P{\aa} randen $z=0$ m{\aa}ste potentialen {\it uppfylla
-  randvillkoret $\phi=0$}.}
-\item{4.}{P{\aa} ett avst{\aa}nd l{\aa}ngt fr{\aa}n laddningen
-  f{\"o}rv{\"a}ntar vi oss $\phi({\bf x})\to0$, f{\"o}r $|{\bf x}|\to\infty$.}
+\item{{\red{3.}}}{{\red{P{\aa} randen $z=0$ m{\aa}ste potentialen
+  {\it uppfylla randvillkoret $\phi=0$}}}.}
+\item{{\red{4.}}}{P{\aa} ett avst{\aa}nd {\red{l{\aa}ngt fr{\aa}n
+  laddningen f{\"o}rv{\"a}ntar vi oss $\phi({\bf x})\to0$, f{\"o}r
+  $|{\bf x}|\to\infty$}}.}
 \smallskip
 \noindent
 Utifr{\aa}n f{\"o}ljdsatsen till entydighetsteoremet f{\"o}r Laplaces och
@@ -719,8 +727,8 @@ till problemet ovan, s{\aa} {\"a}r det den korrekta l{\"o}sningen, oavsett
 hur vi kommit fram till den.} S{\aa}, hur skall vi resonera h{\"a}r f{\"o}r
 att finna denna l{\"o}sning?
 
-\subsection{Att l{\"a}gga till virtuell laddning s{\aa} att vi n{\aa}r
-  randvillkoret $\phi=0$ p{\aa} $z=0$}
+\subsection{Att {\red{l{\"a}gga till virtuell laddning s{\aa} att vi n{\aa}r
+  randvillkoret $\phi=0$ p{\aa} $z=0$}}}
 Om vi utf{\"o}r ett litet {\it gedankenexperiment} kring hur vi till att
 b{\"o}rja med skulle {\it skapa} en l{\"o}sning som satisfierar $\phi=0$ p{\aa}
 ytan $z=0$, s{\aa} kan vi se laddningen i $h{\bf e}_z$ som en k{\"a}lla till
@@ -767,16 +775,16 @@ som\numberedfootnote{Recap: Med en punktladdning placerad i
     \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}{{q}\over{|{\bf x}-{\bf x}'|}},
         \quad\hbox{f{\"o}r}\quad{\bf x}\ne{\bf x}'.
   $$}
-$$
+\red{$$
   \phi(x,y,z=0)={{1}\over{4\pi\varepsilon_0}}\bigg(
     {{q}\over{\sqrt{x^2+y^2+h^2}}}+{{(-q)}\over{\sqrt{x^2+y^2+h^2}}}
   \bigg)=0,
-$$
-med andra ord har vi nu {\it visat att randvillkoret vid $z=0$ {\"a}r
-uppfyllt.}
+$$}
+med andra ord har vi nu {\it visat att {\red{randvillkoret vid $z=0$ {\"a}r
+uppfyllt}}.}
 
-\subsection{Skal{\"a}r potential med det ledande planet ersatt med virtuell
-  spegelladdning}
+\subsection{{\red{Skal{\"a}r potential med det ledande planet ersatt med virtuell
+  spegelladdning}}}
 \sidx{Spegelladdning}[Perfekt ledande plan]
 \epsfig{figs/mirrorplane-gedanken-general.1}\noindent
 V{\aa}rt antagande att vi kan {\it konstruera} en l{\"o}sning genom att
@@ -786,11 +794,11 @@ ledaren\numberedfootnote{Rekapitulera att en spegel faktiskt {\"a}r just
 har d{\"a}rmed markant f{\"o}rst{\"a}rkts, och vi kan redan nu gissa att
 l{\"o}sningen skall formuleras som den potential i rummet som motsvaras av
 de tv{\aa} laddningarna, som
-$$
+\red{$$
   \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\bigg(
   {{q}\over{\sqrt{x^2+y^2+(z-h)^2}}}+{{(-q)}\over{\sqrt{x^2+y^2+(z+h)^2}}}
   \bigg),\qquad z\ge0.
-$$
+$$}
 Med denna konstruktion {\it uppfylls {\"a}ven randvillkoret d{\aa}
 ${\bf x}\to\infty$ trivialt}, s{\aa} slutsatsen blir att potentialen
 enligt ovan faktiskt {\"a}r den korrekta l{\"o}sningen.
@@ -808,19 +816,20 @@ Det {\"a}r v{\"a}rt att notera hur fundamentalt entydighetsteoremet (f{\"o}r
 Laplaces ekvation med $\rho=0$) och dess f{\"o}ljdsats (f{\"o}r Poissons
 ekvation med $\rho\ne0$) {\"a}r f{\"o}r konstruktionen med spegelladdningar.
 
-\subsection{Det resulterande elektriska f{\"a}ltet med den speglade laddningen}
+\subsection{{\red{Det resulterande elektriska f{\"a}ltet med den speglade
+  laddningen}}}
 \sidx{Spegelladdning}[Perfekt ledande plan]
 \sidx{Ekvipotential}\sidx{Dipol}[Elektrisk]
 Vi ser direkt att f{\"o}r det ekvivalenta problemet med en spegelladdning $-q$
 placerad i $-h{\bf e}_z$ s{\aa} {\"a}r den resulterande potentialen $\phi$ och
 elektriska f{\"a}ltet ${\bf E}$ givet som det fr{\aa}n en {\it elektrisk dipol}
-med dipolmoment
-$$
+med {\red{dipolmoment}}
+\red{$$
   {\bf p}=2qh{\bf e}_z
-$$
-placerad i origo. Det elektriska f{\"a}ltet f{\aa}s direkt fr{\aa}n den
+$$}
+placerad {\red{i origo}}. Det elektriska f{\"a}ltet f{\aa}s direkt fr{\aa}n den
 skal{\"a}ra potentialen som
-$$
+\red{$$
   \eqalign{
     {\bf E}({\bf x})
       &=-\nabla\phi({\bf x})\cr
@@ -828,14 +837,15 @@ $$
         \nabla\bigg(
           {{q}\over{|{\bf x}-h{\bf e}_z|}}
           +{{(-q)}\over{|{\bf x}-(-h{\bf e}_z)|}}
-        \bigg)=\ldots\cr
+        \bigg)\cr
+      &=\big\{\ \hbox{``Tricket'' fr{\aa}n F{\"o}rel{\"a}sning 2}\ \big\}\cr
       &={{q}\over{4\pi\varepsilon_0}}
         \bigg(
           {{{\bf x}-h{\bf e}_z}\over{|{\bf x}-h{\bf e}_z|^3}}
           -{{{\bf x}+h{\bf e}_z}\over{|{\bf x}+h{\bf e}_z|^3}}
         \bigg),\cr
   }
-$$
+$$}
 vilket vi fr{\aa}n F{\"o}rel{\"a}sning~1 kan erinra oss beskriver det elektriska
 f{\"a}ltet i fri rymd fr{\aa}n de tv{\aa} laddningarna. Som av en h{\"a}ndelse
 har vi d{\"a}rmed {\"a}ven tagit fram den vektoriella beskrivningen av det
@@ -853,7 +863,7 @@ F{\"o}rel{\"a}sning~8.
   det perfekt ledande planet ortogonalt mot denna.}
 \vfill\eject
 
-\subsection{Laddningsf{\"o}rdelningen i det perfekt ledande planet $z=0$}
+\subsection{{\red{Laddningsf{\"o}rdelningen i det perfekt ledande planet $z=0$}}}
 \sidx{Laddningst{\"a}thet}[Ytladdning i perfekt ledande plan]
 Vi kommer nu att visa p{\aa} hur vi utifr{\aa}n den skal{\"a}ra elektrostatiska
 potentialen kan ber{\"a}kna laddningst{\"a}theten $\sigma$ p{\aa} ytan.
@@ -861,18 +871,18 @@ potentialen kan ber{\"a}kna laddningst{\"a}theten $\sigma$ p{\aa} ytan.
 Potentialen $\phi$ {\"a}r kontinuerlig {\"o}ver en godtycklig gr{\"a}nsyta,
 specifikt har vi alltid att potentialskillnaden mellan tv{\aa} punkter
 ${\bf x}_a$ och ${\bf x}_b$ kan tas fram genom linjeintegralen
-$$
+\red{$$
   \phi({\bf x}_b)-\phi({\bf x}_a)=-\int^{{\bf x}_b}_{{\bf x}_a}{\bf E}({\bf x})\,dl,
-$$
+$$}
 och om vi l{\aa}ter punkterna g{\aa} mot varandra fr{\aa}n motsatta sidor av
 gr{\"a}nsytan $z=0$ s{\aa} f{\aa}r vi att
-$$
+\red{$$
   \phi(z=0^+)=\phi(z=0^-).
-$$
-Dock {\"a}r {\it gradienten} av potentialen diskontinuerlig, vilket vi intuitivt
-kan se direkt fr{\aa}n att f{\"a}lt\-linjerna s{\aa} att s{\"a}ga ``str{\aa}lar
-ut'' {\aa}t motsatta h{\aa}ll fr{\aa}n en yta som uppb{\"a}r laddningar, helt i
-analogi med Gauss lag f{\"o}r punktladdningar.
+$$}
+{\red{Dock {\"a}r {\it gradienten} av potentialen diskontinuerlig}}, vilket vi
+intuitivt kan se direkt fr{\aa}n att f{\"a}lt\-linjerna s{\aa} att s{\"a}ga
+``str{\aa}lar ut'' {\aa}t motsatta h{\aa}ll fr{\aa}n en yta som uppb{\"a}r
+laddningar, helt i analogi med Gauss lag f{\"o}r punktladdningar.
 Eftersom ${\bf E}=-\nabla\phi$, s{\aa} har vi fr{\aa}n F{\"o}rel{\"a}sning~2
 att\numberedfootnote{Recap: Det elektriska f{\"a}ltet fr{\aa}n en plan och
   perfekt ledande o{\"a}ndlig yta, uppb{\"a}rande laddningen $\sigma$
@@ -882,20 +892,20 @@ att\numberedfootnote{Recap: Det elektriska f{\"a}ltet fr{\aa}n en plan och
       =-{{\partial\phi}\over{\partial z}}
       ={{\sigma}\over{2\varepsilon_0}}\sgn(z).
   $$}
-$$
+\red{$$
   {\bf E}({\bf x})={{\sigma({\bf x})}\over{\varepsilon_0}}{\bf e}_z,
-$$
+$$}
 d{\"a}r ${\bf x}$ {\"a}r i en omgivning n{\"a}ra ytan $z=0$. Att det elektriska
 f{\"a}ltet {\"a}r ortogonalt mot ytan f{\"o}ljer av att ytan antas vara perfekt
 ledande. Vi kan v{\"a}nda p{\aa} detta resonemang och ist{\"a}llet betrakta
 detta som ett samband som ger laddningst{\"a}theten i planet som funktion av
 det elektriska f{\"a}ltet, som
-$$
+\red{$$
   \sigma({\bf x})
     =\varepsilon_0 E_z({\bf x})
     =-\varepsilon_0 [\nabla\phi]_z
     =-\varepsilon_0 {{\partial\phi({\bf x})}\over{\partial z}}.
-$$
+$$}
 Vi har dock redan r{\"a}knat fram det elektriska f{\"a}ltet ovan, och vi kan
 sammanfatta detta med att ytladdnings\-t{\"a}t\-heten $\sigma({\bf x})$ i
 planet $z=0$ erh{\aa}lls som
@@ -934,7 +944,7 @@ ett v{\"a}rde som vi nog egentligen faktiskt kunde ha gissat oss till p{\aa}
 grund av symmetrin i konstruktionen av spegelladdningen f{\"o}r att uppfylla
 potentialen $\phi=0$ p{\aa} ytan $z=0$.
 
-\section{Spegelladdningar i plana gr{\"a}nsytor mellan dielektrika}
+\section{{\red{Spegelladdningar i plana gr{\"a}nsytor mellan dielektrika}}}
 \sidx{Spegelladdning}[Gr{\"a}nsytor mellan dielektrika]
 Spegling av laddning i gr{\"a}nsytor mellan tv{\aa}
 dielektrika\numberedfootnote{Vi g{\aa}r h{\"a}r h{\"a}ndelserna i
@@ -949,10 +959,10 @@ $\varepsilon'_{\rm r}$, s{\aa} kommer {\it bundna} laddningar (till skillnad
 fr{\aa}n de fria laddningarna i fallet med ett perfekt ledande plan) att
 fortfarande motsvara en spegelladdning $q'$ symmetriskt placerad vid $z=-h$
 men ist{\"a}llet ha v{\"a}rdet
-$$
+\red{$$
   q'=\bigg({{\varepsilon_{\rm r}-\varepsilon'_{\rm r}}
        \over{\varepsilon_{\rm r}+\varepsilon'_{\rm r}}}\bigg) q.
-$$
+$$}
 \vfill\eject
 
 \section{Spegelladdningar i cylindriska perfekt ledande gr{\"a}nsytor}
