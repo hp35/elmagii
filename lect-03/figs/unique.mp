@@ -23,9 +23,9 @@ beginfig(1);
       \vbox{
       \hbox{Randyta $S$ med}
       \hbox{skal{\"a}r potential}
-      \hbox{$\phi$ f{\"o}reskriven}}
+      \hbox{$\phi({\bf x}\in S)$ f{\"o}reskriven}}
       etex, (-38u,36u));
-  draw (-38u,36u){dir -20}..{dir -20}(point 3.4 of p shifted (-1u,0u));
+  draw (-42u,36u){dir -5}..{dir -20}(point 3.4 of p shifted (-1u,0u));
   label(btex Typiskt s{\"o}kt: $\phi({\bf x})$, ${\bf x}\in V$ etex, (-14u,12u));
   label(btex {\it Men $\ldots$ {\"a}r $\phi({\bf x})$ unik?} etex, (-14u,6u));
 
@@ -36,7 +36,7 @@ beginfig(1);
   label.top(btex
       \vbox{
       \hbox{Eventuell inre randyta $S'$ med}
-      \hbox{skal{\"a}r potential $\phi'$ f{\"o}reskriven}}
+      \hbox{potential $\phi({\bf x}\in S')$ f{\"o}reskriven}}
       etex, (32u,30u));
   draw (32u,30u){dir 260}..{dir 260}(point 2.2 of p shifted (0u,.8u));
 
