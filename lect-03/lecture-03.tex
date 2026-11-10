@@ -164,8 +164,8 @@
 }
 %----------------------- END OF PREAMBLE -----------------------
 
-\section{Laplaces ekvation f{\"o}r den elektrostatiska (skal{\"a}ra)
-  potentialen}
+\section{{\red{Laplaces ekvation f{\"o}r den elektrostatiska (skal{\"a}ra)
+  potentialen}}}
 \sidx{Laplaces ekvation}\sidx{Skal{\"a}r potential}[Elektrostatisk]
 Det kan tyckas aningen {\"o}verdrivet att ge sig in p{\aa} mer matematiskt
 betingade sp{\"o}rsm{\aa}l kring huruvida l{\"o}sningar till problem inom
@@ -182,13 +182,13 @@ f{\"a}ltstyrkan ${\bf E}$ eller en magnetisering som beror ickelinj{\"a}rt
 p{\aa} den magnetiska fl{\"o}dest{\"a}theten ${\bf B}$, s{\aa} finns det gott
 om bistabila l{\"o}sningar med olika f{\"a}ltf{\"o}rdelningar som kan uppfylla
 samma ekvationer och randvillkor. Inom ramen f{\"o}r elektrostatiken i denna
-f{\"o}rel{\"a}sningsserie behandlar vi dock uteslutande linj{\"a}ra problem i
-det elektriska f{\"a}ltet, men som vi skall se finns det icke desto mindre
-mycket att h{\"a}mta i praktiskt probleml{\"o}sande med bas i entydighet
+f{\"o}rel{\"a}sningsserie behandlar vi dock uteslutande {\it linj{\"a}ra}
+problem i det elektriska f{\"a}ltet, men som vi skall se finns det icke desto
+mindre mycket att h{\"a}mta i praktiskt probleml{\"o}sande med bas i entydighet
 f{\"o}r l{\"o}sningar till den elektrostatiska potentialen.
 
-\subsection{Angreppss{\"a}tt~1 f{\"o}r elektrostatiska problem
-  -- Coulombintegralen}
+\subsection{{\red{Angreppss{\"a}tt~1 f{\"o}r elektrostatiska problem
+  -- Coulombintegralen}}}
 \sidx{Coulombs generaliserade lag}[Coulombintegralen]
 \sidx{Skal{\"a}r potential}[Elektrostatisk]
 Vi kan b{\"o}rja med att konstatera att vi i elektrostatiska problem alltsom
@@ -197,26 +197,26 @@ fr{\aa}n den f{\"o}rsta f{\"o}rel{\"a}sningen vet kan ber{\"a}knas genom
 Coulombs generaliserade lag, eller {\it Coulombintegralen}\numberedfootnote{Vi
   f{\"o}ljer h{\"a}r i huvudsak Griffiths sid.~113--124.}\sidx{Elektrisk
 f{\"a}ltstyrka}
-$$
+\red{$$
   {\bf E}({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V\rho({\bf x}')
     {{({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}\,dV'.
-$$
+$$}
 Oturligt nog f{\"o}r oss {\"a}r denna explicita form inte s{\"a}rskilt v{\"a}l
 l{\"a}mpad vare sig f{\"o}r ber{\"a}kning med papper och penna eller med
-numeriska metoder. En del av detta problem ligger i redundansen hos det
+numeriska metoder. {\it En del av detta problem ligger i redundansen hos det
 elektriska f{\"a}ltet\numberedfootnote{Vi visade f{\"o}rra
   f{\"o}rel{\"a}sningen p{\aa} kopplingen mellan komponenterna hos det
   elektriska f{\"a}ltet via $\nabla\times{\bf E}={\bf 0}$, resulterande
   i kopplingen ${{\partial E_x}/{\partial y}}={{\partial E_y}/{\partial x}}$,
   etc.},
 d{\"a}r vi alltid har en implicit koppling mellan komponenterna hos det
-elektriska f{\"a}ltet, och vi kan d{\"a}rf{\"o}r redan i detta f{\"o}rsta
+elektriska f{\"a}ltet}, och vi kan d{\"a}rf{\"o}r redan i detta f{\"o}rsta
 stadie konstatera att det nog {\"a}r l{\"a}mpligare att ist{\"a}llet ``g{\aa}
 till pudelns k{\"a}rna'' och ist{\"a}llet s{\"o}ka ber{\"a}kna den skal{\"a}ra
 potentialen $\phi$.
 
-\subsection{Angreppss{\"a}tt~2 f{\"o}r elektrostatiska problem
-  -- Skal{\"a}r potential p{\aa} integralform}
+\subsection{{\red{Angreppss{\"a}tt~2 f{\"o}r elektrostatiska problem
+  -- Skal{\"a}r potential p{\aa} integralform}}}
 Under F{\"o}rel{\"a}sning~2 fann vi att det elektriska f{\"a}ltet kunde tolkas
 som en (negativ) gradient\numberedfootnote{Vi erinrar oss fr{\aa}n
   F{\"o}rel{\"a}sning~2 att tolkningen av det elektriska f{\"a}ltet som
@@ -230,38 +230,39 @@ som en (negativ) gradient\numberedfootnote{Vi erinrar oss fr{\aa}n
         {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
       =-\nabla\phi({\bf x}),
   $$}
-$$
+{\red{$$
   {\bf E}({\bf x})=-\nabla\phi({\bf x}),
-$$
+$$}
 d{\"a}r vi definierade den {\it skal{\"a}ra potentialen} $\phi({\bf x})$
 explicit som integralen
-$$
+\red{$$
   \phi({\bf x})={{1}\over{4\pi\varepsilon_0}}\iiint_V
     {{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'.
-$$
+$$}
 {\AA}terigen, tyv{\"a}rr, {\"a}r denna explicita form inte s{\aa} v{\"a}ldigt
 mycket b{\"a}ttre i analytiskt h{\"a}nseende annat {\"a}n f{\"o}r att
 ber{\"a}kna potentialen i mycket enkla geometrier. Vidare, s{\aa} {\"a}r
 integralformerna ovan prim{\"a}rt l{\"a}mpade f{\"o}r att ber{\"a}kna
 resulterande f{\"a}lt och potentialer fr{\aa}n fixa, givna
-laddnings\-f{\"o}r\-del\-ningar.
-I en verklig situation kommer laddningsf{\"o}rdelningen att geometriskt flytta
-sig i rummet s{\aa} snart som vi har n{\"a}rvaro av ledare med fria elektroner.
+laddnings\-f{\"o}r\-del\-ningar. {\it Som ett exempel, s{\aa} kommer vi i en
+verklig situation ha att laddningsf{\"o}rdelningen kommer att flytta sig
+geometriskt i rummet s{\aa} snart som vi har n{\"a}rvaro av ledare med fria
+elektroner.}
 Med andra ord s{\aa} beh{\"o}ver vi g{\aa} ytterligare ett sn{\"a}pp innan vi
 har n{\aa}got som handfast kan utnyttjas i fall d{\aa} laddningarna har frihet
 att r{\"o}ra p{\aa} sig.
 
-\subsection{Angreppss{\"a}tt~3 f{\"o}r elektrostatiska problem
-  -- Laplaces ekvation f{\"o}r skal{\"a}r potential}
+\subsection{{\red{Angreppss{\"a}tt~3 f{\"o}r elektrostatiska problem
+  -- Laplaces ekvation f{\"o}r skal{\"a}r potential}}}
 \sidx{Poissons ekvation}\sidx{Laplaces ekvation}
 Som en intressant slutkl{\"a}m p{\aa} f{\"o}rra f{\"o}rel{\"a}sningen
 konstaterade vi att Gauss lag p{\aa} differentialform,
-$\nabla\cdot{\bf E}=\rho/\varepsilon_0$, trivialt kunde omformuleras till
-Poissons ekvation f{\"o}r den skal{\"a}ra potentialen genom identiteten
-${\bf E}=-\nabla\phi$, som
-$$
+{\red{$\nabla\cdot{\bf E}=\rho/\varepsilon_0$}}, trivialt kunde omformuleras
+till Poissons ekvation f{\"o}r den skal{\"a}ra potentialen genom identiteten
+{\red{${\bf E}=-\nabla\phi$}}, som
+\red{$$
   \nabla^2\phi({\bf x})=-\rho({\bf x})/\varepsilon_0.
-$$
+$$}
 Evaluerad med l{\"a}mpliga randvillkor {\"a}r denna partiella
 differentialekvation f{\"o}r $\phi$ ekvivalent med integralekvationen ovan.
 Dessutom {\"a}r Poissons ekvation f{\"o}r $\phi$ synnerligen v{\"a}l l{\"a}mpad
@@ -279,9 +280,9 @@ om man s{\aa} vill {\it potentialbeskrivningen}, till
   \sidx{Laplace, Pierre-Simon (1749--1827)} L{\"o}sningen till Laplaces ekvation
   $\nabla^2\phi=0$ kallas ofta ``harmonisk funktion'' ({\it harmonic function}).}
 f{\"o}r $\phi$,
-$$
+\red{$$
   \nabla^2\phi({\bf x})=0.
-$$
+$$}
 Griffiths g{\aa}r s{\aa} l{\aa}ngt att beskriva Laplaces ekvation som s{\aa}
 fundamental att l{\"a}ran om elektrostatik\sidx{Elektrostatik} praktiskt taget
 {\it {\"a}r} studiet av just Laplaces ekvation, som ut{\"o}ver till{\"a}mpningen
@@ -290,7 +291,7 @@ mekanik.\numberedfootnote{Se
   {\tt https://www.robots.ox.ac.uk/{\char'176}jmb/lectures/pdelecture5.pdf}
   f{\"o}r detta sido\-sp{\aa}r.}
 
-\section{Entydighet hos l{\"o}sningar till Laplace ekvation}
+\section{{\red{Entydighet hos l{\"o}sningar till Laplace ekvation}}}
 \sidx{Entydighetsteoremet}
 Vi har s{\aa} l{\"a}ngt reducerat det elektrostatiska problemet till Laplaces
 ekvation, m{\"o}jligen med brasklappen att vi i dom{\"a}ner d{\"a}r laddning
@@ -327,8 +328,8 @@ Med andra ord:\numberedfootnote{Vi hoppar h{\"a}r direkt in i fallet
   i internationell litteratur ofta som {\it Maximum (or minimum)
   principle for harmonic functions}.}
 \sidx{Extrempunkter}[F{\"o}r l{\"o}sningar till Laplaces ekvation]
-\quote{{\bf Teorem~I.}
-  L{\"o}sningar till Laplaces ekvation saknar lokala extrempunkter.}
+\quote{{\red{{\bf Teorem~I.}
+  L{\"o}sningar till Laplaces ekvation saknar lokala extrempunkter.}}}
 \noindent
 Vi kommer nu att bevisa detta p{\aa}st{\aa}ende p{\aa} ett lite annorlunda
 s{\"a}tt {\"a}n i Griffiths, d{\"a}r man ist{\"a}llet fokuserar p{\aa}
@@ -337,33 +338,33 @@ via Coulombs lag. H{\"a}r kommer vi ist{\"a}llet att anta en mer matematisk
 approach.
 \vfill\eject
 
-\quote{{\bf Matematiskt bevis.} [Motbevis] Antag att den skal{\"a}ra
-  potentialen $\phi$ {\it uppfyller Laplaces ekvation} $\nabla\phi^2=0$ och
-  att den har ett lokalt {\it maximum} i punkten ${\bf x}'$.
-  I denna punkt har vi d{\"a}rmed att:
+\quote{{\red{{\bf Matematiskt bevis.}}} [Motbevis] Antag att den skal{\"a}ra
+  potentialen {\red{$\phi$ {\it uppfyller Laplaces ekvation} $\nabla\phi^2=0$}}
+  och att den har ett lokalt {\it maximum} i punkten ${\bf x}'$. I denna punkt
+  har vi d{\"a}rmed att:
   (1)~Alla f{\"o}rstaderivator f{\"o}rsvinner, det vill s{\"a}ga att
-  $$
+  {\red{$$
     \hbox{Extrempunkt }\quad\Rightarrow\quad
     \nabla\phi({\bf x}')={\bf 0},
-  $$
+  $$}}
   samt (2) att alla andraderivator {\"a}r negativa i en omgivning
   till ${\bf x}'$,
-  $$
+  {\red{$$
     \hbox{Maximum }\quad\Rightarrow\quad
     {{\partial^2\phi}\over{\partial x^2_k}}<0,\quad k=1,2,3,
-  $$
+  $$}}
   detta eftersom vi har att g{\"o}ra med ett {\it maximum} och att
   funktionen $\phi$ d{\"a}rmed m{\aa}ste ``halka ned{\aa}t'' i alla
   riktningar runt ${\bf x}'$.
   Genom att summera upp alla andraderivator erh{\aa}ller vi
   \sidx{Extrempunkter}[F{\"o}r l{\"o}sningar till Laplaces ekvation]
-  $$
+  \red{$$
     \hbox{Laplace }\quad\Rightarrow\quad
     \sum^3_{k=1}{{\partial^2\phi}\over{\partial x^2_k}}=\nabla^2\phi<0.
-  $$
-  Laplace ekvation s{\"a}ger dock att $\nabla^2\phi=0$, vilket endast
+  $$}
+  {\red{Laplace ekvation s{\"a}ger dock att $\nabla^2\phi=0$, vilket endast
   kan vara uppfyllt om {\it samtliga} andraderivator {\"a}r noll,
-  vilket ger en mots{\"a}gelse.\numberedfootnote{Notera att om vi skulle
+  vilket ger en mots{\"a}gelse.}}\numberedfootnote{Notera att om vi skulle
     r{\aa}ka ha situationen att vissa andraderivator {\"a}r negativa och andra
     positiva, s{\aa} kan vi ju fortfarande ha att $\nabla^2\phi({\bf x}')=0$
     vid en punkt d{\"a}r $\nabla\phi({\bf x}')={\bf 0}$.
@@ -373,7 +374,7 @@ approach.
     att vi skall ha att g{\"o}ra med en extrempunkt.}
   {\it Den enda m{\"o}jligheten {\"a}r d{\"a}rmed att $\phi$ inte kan ha ett
   lokalt maximum i en dom{\"a}n d{\"a}r $\nabla^2\phi=0$.} Det motsvarande
-  motbeviset f{\"o}r lokala minima f{\"o}ljer analogt ur detta.}
+  {\red{motbeviset f{\"o}r lokala minima f{\"o}ljer analogt}} ur detta.}
 \noindent
 L{\aa}t oss {\"a}ven g{\aa} igenom ett alternativt, aningen mer fysikaliskt
 fokuserat bevis.
