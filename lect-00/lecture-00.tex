@@ -48,7 +48,7 @@
 \newif\ifcolors
 \ifx\colorsenabled\undefined \colorsfalse \else \colorstrue \fi
 \ifcolors\input color\fi
-\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
+\def\hl#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{
@@ -187,8 +187,8 @@ I denna extra f{\"o}rel{\"a}sning kommer vi att i huvudsak introducera fem
 grundl{\"a}ggande begrepp, som successivt genom kursen kommer att s{\"a}ttas
 samman och kombineras:
 \quote{%
-  \item{1.}{{\red{{\it Delta-funktionen} $\delta({\bf x})$}}, {\"a}ven mer
-            formellt kallad {\red{\it Diracs delta-distribution}}, {\"a}r en
+  \item{1.}{{\hl{{\it Delta-funktionen} $\delta({\bf x})$}}, {\"a}ven mer
+            formellt kallad {\hl{\it Diracs delta-distribution}}, {\"a}r en
             distribution\numberedfootnote{I denna kurs kan vi lite l{\"o}st
               s{\"a}ga att en {\it distribution} {\"a}r en generaliserad
               funktion som {\"a}r definierad av hur den beter sig n{\"a}r
@@ -196,22 +196,22 @@ samman och kombineras:
               exempel p{\aa} till{\"a}mpningen av denna definition.}
             som vi kan anv{\"a}nda f{\"o}r ett diskret urval.
             \sidx{Diracs delta-distribution $\delta({\bf x})$}}
-  \item{1.}{{\red{{\it Gradienten}
+  \item{1.}{{\hl{{\it Gradienten}
             ${\rm grad}(\phi)\equiv\nabla\phi$}}
             beskriver hur en skal{\"a}r storhet $\phi$ f{\"o}r{\"a}ndras
             {\it spatialt}.\sidx{Gradient}\numberedfootnote{%
             $\hbox{``Spatialt''}=\hbox{i rummet}$;
             $\hbox{``Temporalt''}=\hbox{i tiden}$.}}
-  \item{2.}{{\red{{\it Divergensen}
+  \item{2.}{{\hl{{\it Divergensen}
             ${\rm div}({\bf a})\equiv\nabla\cdot{\bf a}$}}
             av ett vektorf{\"a}lt ${\bf a}$ beskriver ett vektorf{\"a}lts
             lokala nettofl{\"o}de ut fr{\aa}n en punkt.
             \sidx{Divergens}[Definition]}
-  \item{3.}{{\red{{\it Rotationen}
+  \item{3.}{{\hl{{\it Rotationen}
             ${\rm rot}({\bf a})\equiv\nabla\times{\bf a}$}}
             beskriver ett vektorf{\"a}lts {\it lokala cirkulation}.
             \sidx{Rotation}[Definition]}
-  \item{4.}{{\red{Ett f{\"a}lt ${\bf F}$ {\"a}r {\it konservativt} om dess
+  \item{4.}{{\hl{Ett f{\"a}lt ${\bf F}$ {\"a}r {\it konservativt} om dess
             linjeintegral $\int^B_A{\bf F}\cdot d{\bf l}$ mellan tv{\aa}
             punkter inte beror p{\aa} vilken v{\"a}g vi v{\"a}ljer f{\"o}r
             integralen.}}
@@ -234,12 +234,12 @@ distributioner {\"o}ver kurvor, ytor och volymer. Med andra ord skall
 materialet i f{\"o}rel{\"a}sningen tas som en bas f{\"o}r vidare utveckling
 av analysen och f{\"a}rdigheter inom probleml{\"o}sande inom elektromagnetism.
 
-\section{\red{Vad {\"a}r ett f{\"a}lt?}}
+\section{\hl{Vad {\"a}r ett f{\"a}lt?}}
 \sidx{F{\"a}lt}[Definition]
 Vi b{\"o}rjar med en enkel fr{\aa}ga: {\it Vad menar vi egentligen n{\"a}r vi
 s{\"a}ger att en storhet {\"a}r ett f{\"a}lt?}
 \quote{%
-  {\red{{\bf Definition.} Ett f{\"a}lt {\"a}r en storhet som tilldelar ett
+  {\hl{{\bf Definition.} Ett f{\"a}lt {\"a}r en storhet som tilldelar ett
   v{\"a}rde till varje punkt i ett omr{\aa}de av rummet, och eventuellt
   ocks{\aa} till varje tidpunkt.}}
 }
@@ -256,11 +256,11 @@ ${\bf x}$ och tiden $t$.
 Det finns tv{\aa} grundl{\"a}ggande typer av f{\"a}lt som vi kommer att
 st{\"o}ta p{\aa} i denna kurs:
 \quote{%
-  \item{{\red{1.}}}{{\red{Skal{\"a}rf{\"a}lt}} tilldelar varje punkt ett enda
+  \item{{\hl{1.}}}{{\hl{Skal{\"a}rf{\"a}lt}} tilldelar varje punkt ett enda
     tal, med $\phi=\phi({\bf x},t)$. Typiska exempel {\"a}r temperaturen i
     ett rum, lufttrycket i atmosf{\"a}ren och den elektriska skal{\"a}ra
     potentialen.}
-  \item{{\red{2.}}}{{\red{Vektorf{\"a}lt}} tilldelar ist{\"a}llet varje punkt
+  \item{{\hl{2.}}}{{\hl{Vektorf{\"a}lt}} tilldelar ist{\"a}llet varje punkt
     en vektor, ${\bf a}={\bf a}({\bf x},t)$. Typiska exempel {\"a}r
     vindhastigheten i atmosf{\"a}ren, hastighetsf{\"a}ltet i en
     v{\"a}tska, det elektriska f{\"a}ltet ${\bf E}$ och det magnetiska
@@ -884,7 +884,7 @@ Kort och gott, det {\"a}r nu den egentliga vektoranalysen och byggandet av
 v{\aa}r ``matematiska verktygsl{\aa}da'' b{\"o}rjar.
 \vfill\eject
 
-\section{{\red{Gradienten $\nabla\phi$}}}
+\section{{\hl{Gradienten $\nabla\phi$}}}
 \subsection{Tolkning av gradienten i ett landskap best{\aa}ende av
   kullar och dalar}
 F{\"o}rest{\"a}ll dig att du st{\aa}r i ett kuperat landskap, d{\"a}r
@@ -935,7 +935,7 @@ f{\"o}r alla formalisera gradienten.
 I kartesiska koordinater definierar vi gradienten i tre dimensioner av ett
 skal{\"a}rf{\"a}lt $\phi({\bf x})$ som
 $$
-  \red{
+  \hl{
   \nabla\phi
     \equiv{\bf e}_x{{\partial\phi}\over{\partial x}}
         +{\bf e}_y{{\partial\phi}\over{\partial y}}
@@ -1025,7 +1025,7 @@ Notera att det {\"a}ven {\"a}r mycket l{\"a}tt att l{\"a}ngs med resans
 g{\aa}ng f{\"o}rv{\"a}xla den skal{\"a}ra potentialen $\phi$, som m{\"a}ts
 i Volt, med potentiell energi, som m{\"a}ts i Joule.
 
-\section{{\red{Divergensen $\nabla\cdot{\bf a}$}}}
+\section{{\hl{Divergensen $\nabla\cdot{\bf a}$}}}
 \subsection{Vad beskriver divergensen?}
 Vi l{\"a}mnar nu skal{\"a}ra f{\"a}lt och g{\aa}r {\"o}ver till vektorf{\"a}lt.
 F{\"o}rest{\"a}ll dig att du st{\aa}r mitt i en str{\"o}mmande v{\"a}tska,
@@ -1044,7 +1044,7 @@ $$
 I kartesiska koordinater {\"a}r divergensen allts{\aa} given som
 $$
   \eqalign{
-  \red{\nabla\cdot{\bf a}}&\red{\equiv
+  \hl{\nabla\cdot{\bf a}}&\hl{\equiv
     {{\partial a_x}\over{\partial x}}
         +{{\partial a_y}\over{\partial y}}
         +{{\partial a_z}\over{\partial z}}}\cr
@@ -1061,13 +1061,13 @@ Vi b{\"o}rjar med en vektor ${\bf a}$ och erh{\aa}ller fr{\aa}n divergensen
 ett tal i varje punkt, d{\"a}r detta tal kan tolkas enligt f{\"o}ljande, med
 analogi till v{\"a}tskefl{\"o}det,
 \quote{%
-  \item{\red{$\bullet$}}{\red{{\it Positiv divergens} inneb{\"a}r att
+  \item{\hl{$\bullet$}}{\hl{{\it Positiv divergens} inneb{\"a}r att
     det lokalt finns ett {\it nettofl{\"o}de ut{\aa}t}. Vektorf{\"a}ltet
     ${\bf a}$ beter sig som att det i punkten finns en {\it k{\"a}lla}.}}
-  \item{\red{$\bullet$}}{\red{{\it Negativ divergens} inneb{\"a}r att
+  \item{\hl{$\bullet$}}{\hl{{\it Negativ divergens} inneb{\"a}r att
     det lokalt finns ett {\it nettofl{\"o}de in{\aa}t}. Vektorf{\"a}ltet
     ${\bf a}$ beter sig som att det i punkten finns en {\it s{\"a}nka}.}}
-  \item{\red{$\bullet$}}{\red{Noll divergens inneb{\"a}r att nettofl{\"o}det
+  \item{\hl{$\bullet$}}{\hl{Noll divergens inneb{\"a}r att nettofl{\"o}det
     in{\aa}t och ut{\aa}t fr{\aa}n punkten {\"a}r noll.
     Detta betyder {\it inte} n{\"o}dv{\"a}ndigtvis att inget fl{\"o}de
     finns, utan att infl{\"o}de och utfl{\"o}de balanserar varandra.}%
@@ -1113,7 +1113,7 @@ origo, trots att f{\"a}ltet d{\"a}r {\"a}r noll!}
 Vi kan f{\"o}rst{\aa} konceptet med divergensen {\"a}nnu b{\"a}ttre genom att
 betrakta ett litet omr{\aa}de som omges av en sluten yta, ut genom vilken vi
 nu kommer att studera det s{\aa} kallade {\it fl{\"o}det}.
-{\red{Fl{\"o}det av ett vektorf{\"a}lt}} ut genom en sluten yta $S$ definieras
+{\hl{Fl{\"o}det av ett vektorf{\"a}lt}} ut genom en sluten yta $S$ definieras
 som\numberedfootnote{Notera den subtila skillnaden i notation h{\"a}r,
   d{\"a}r vi genomg{\aa}ende i f{\"o}rel{\"a}sningsserien l{\aa}ter
   ``$\Phi$'' beteckna ett {\it fl{\"o}de}, medan ``$\phi$'' betecknar
@@ -1121,7 +1121,7 @@ som\numberedfootnote{Notera den subtila skillnaden i notation h{\"a}r,
   att {\"o}ka f{\"o}rvirringen kommer vi dessutom att senare l{\aa}ta
   ``$\varphi$'' beteckna fasen hos en v{\aa}g.}
 $$
-  \red{\Phi=\oiint{\bf a}_S\cdot d{\bf S}},
+  \hl{\Phi=\oiint{\bf a}_S\cdot d{\bf S}},
 $$
 d{\"a}r $d{\bf S}$ {\"a}r ett ut{\aa}triktat ytelement, med en riktning som
 lokalt {\"a}r normal mot ytan $S$.
@@ -1294,7 +1294,7 @@ f{\"o}r origo ${\bf x}={\bf 0}$ d{\"a}r divergensen {\"a}r odefinierad d{\aa}
 n{\"a}mnaren d{\"a}r blir noll. Detta fall motsvarar det elektrostatiska
 f{\"a}ltet fr{\aa}n en punktladdning placerad i origo.
 
-\subsection{{\red{En paradox f{\"o}r det elektrostatiska f{\"a}ltet i en homogen
+\subsection{{\hl{En paradox f{\"o}r det elektrostatiska f{\"a}ltet i en homogen
   laddningst{\"a}thet}}}
 Den f{\"o}reg{\aa}ende diskussionen kan l{\"a}tt ge intryck av att divergensen
 av den elektriska f{\"a}ltet {\"a}r noll praktiskt taget {\"o}verallt, och att
@@ -1309,17 +1309,17 @@ laddning har vi laddningst{\"a}theten $\rho({\bf x})=\rho_0=\hbox{konstant}$,
 och divergensen f{\"o}r det statiska elektriska f{\"a}ltet {\"a}r d{\"a}rmed
 {\"o}verallt noll-skild, som
 $$
-  \red{\nabla\cdot{\bf E}({\bf x})=\rho_0/\varepsilon_0}.
+  \hl{\nabla\cdot{\bf E}({\bf x})=\rho_0/\varepsilon_0}.
 $$
-Samtidigt s{\aa} inser vi att vi i detta fall {\red{av symmetrisk{\"a}l
+Samtidigt s{\aa} inser vi att vi i detta fall {\hl{av symmetrisk{\"a}l
 m{\aa}ste ha att {\it det statiska elektriska f{\"a}ltet {\"o}verallt i
 dom{\"a}nen med homogen laddning m{\aa}ste vara noll}}},
 $$
-  \red{{\bf E}({\bf x})={\bf 0}}.
+  \hl{{\bf E}({\bf x})={\bf 0}}.
 $$
 {\it Man inser dock direkt att detta ser mycket m{\"a}rkligt ut, d{\aa} en
 konstant funktion, och allra helst en funktion som {\"a}r identiskt noll,
-inte kan ha en nollskild derivata.} Kort och gott, {\red{hur g{\aa}r denna
+inte kan ha en nollskild derivata.} Kort och gott, {\hl{hur g{\aa}r denna
 paradox ihop?}} Det tycks ju onekligen vara s{\aa} att detta konstruerade (och
 synnerligen enkla) exempel mots{\"a}ger Gauss lag f{\"o}r elektriska f{\"a}lt.
 
@@ -1342,11 +1342,11 @@ men detta inneb{\"a}r ingen paradox, d{\aa} vi kan se detta helt analogt med,
 s{\"a}g, en linj{\"a}r funktions nollgenomg{\aa}ng $f(x)=0$, med en konstant
 derivata $df/dx=\hbox{konstant}$.
 
-{\red{\it Vi kan se just detta problem som ett typexempel p{\aa} en situation
+{\hl{\it Vi kan se just detta problem som ett typexempel p{\aa} en situation
 d{\"a}r idealiserad fysikalisk situation inte alltid har en l{\"o}sning
 som uppfyller alla antaganden!}}
 
-\section{{\red{Rotationen $\nabla\times{\bf b}$}}}
+\section{{\hl{Rotationen $\nabla\times{\bf b}$}}}
 \subsection{Vad beskriver rotationen?}
 Vi har sett att divergensen beskriver nettofl{\"o}det ut fr{\aa}n eller in mot
 en punkt. {\it Rotationen} handlar ist{\"a}llet om hur ett vektorf{\"a}lt
@@ -1364,7 +1364,7 @@ l{\"a}ngs en cirkel.}
 
 F{\"o}r ett vektorf{\"a}lt ${\bf b}$ definieras rotationen som
 $$
-  \red{{\rm rot}({\bf b})\equiv\nabla\times{\bf b}},
+  \hl{{\rm rot}({\bf b})\equiv\nabla\times{\bf b}},
 $$
 vilket vi i kartesiska koordinater kan uttrycka som
 $$
@@ -1505,33 +1505,33 @@ Detta exempel visar varf{\"o}r man m{\aa}ste vara f{\"o}rsiktig n{\"a}r man
 anv{\"a}nder lokala differentialegenskaper f{\"o}r att tolka och dra slutsatser
 om integraler l{\"a}ngs slutna kurvor.
 
-\subsection{{\red{Biot--Savarts lag och rotationen hos magnetf{\"a}ltet}}}
+\subsection{{\hl{Biot--Savarts lag och rotationen hos magnetf{\"a}ltet}}}
 Enligt Biot–Savarts lag ges magnetf{\"a}ltet fr{\aa}n en o{\"a}ndligt l{\aa}ng,
 rak str{\"o}mf{\"o}rande ledare, b{\"a}rande str{\"o}mmen $I$ l{\"a}ngs
 $z$-axeln genom origo, som
 $$
-  \red{{\bf B}({\bf x})={{\mu_0I}\over{2\pi r}}{\bf e}_{\varphi}},
+  \hl{{\bf B}({\bf x})={{\mu_0I}\over{2\pi r}}{\bf e}_{\varphi}},
 $$
-d{\"a}r {\red{$r=(x^2+y^2)^{1/2}$}} {\"a}r det vinkelr{\"a}ta avst{\aa}ndet till
+d{\"a}r {\hl{$r=(x^2+y^2)^{1/2}$}} {\"a}r det vinkelr{\"a}ta avst{\aa}ndet till
 $z$-axeln och ${\bf e}_{\varphi}$ {\"a}r den pol{\"a}ra riktningen i cylindriska
 koordinater.
 \epsfig{figs/field-biot.1}
 \noindent
 I kartesiska koordinater har vi detta uttryckt som
 $$
-  \red{{\bf e}_{\varphi}=
+  \hl{{\bf e}_{\varphi}=
     -{\bf e}_x{{y}\over{(x^2+y^2)^{1/2}}}
     +{\bf e}_x{{x}\over{(x^2+y^2)^{1/2}}}},
 $$
 och fr{\aa}n dessa identiteter erh{\aa}ller vi d{\"a}rmed att
 $$
-  \red{{\bf B}({\bf x})={{\mu_0I}\over{2\pi(x^2+y^2)}}
+  \hl{{\bf B}({\bf x})={{\mu_0I}\over{2\pi(x^2+y^2)}}
     \big(-y{\bf e}_x+x{\bf e}_y\big)}.
 $$
 Rotationen av magnetf{\"a}ltet f{\aa}r vi d{\aa} som
 $$
   \eqalign{
-    \red{\nabla\times{\bf B}({\bf x})}&\red{={{\mu_0I}\over{2\pi}}
+    \hl{\nabla\times{\bf B}({\bf x})}&\hl{={{\mu_0I}\over{2\pi}}
     \bigg(
       {\bf e}_x{{\partial}\over{\partial x}}
         +{\bf e}_y{{\partial}\over{\partial y}}
@@ -1541,21 +1541,21 @@ $$
     \bigg(
       -{{y}\over{(x^2+y^2)}}{\bf e}_x+{{x}\over{(x^2+y^2)}}{\bf e}_y
     \bigg)}\cr
-    &\red{={{\mu_0I}\over{2\pi}}
+    &\hl{={{\mu_0I}\over{2\pi}}
     {\bf e}_z
     \bigg(
       {{\partial}\over{\partial x}}\bigg({{x}\over{x^2+y^2}}\bigg)
         +{{\partial}\over{\partial y}}\bigg({{y}\over{x^2+y^2}}\bigg)
     \bigg)}\cr
-    &\red{={{\mu_0I}\over{2\pi}}
+    &\hl{={{\mu_0I}\over{2\pi}}
     {\bf e}_z
     \bigg(
       \bigg({{1}\over{x^2+y^2}}-{{x\cdot2x}\over{(x^2+y^2)^2}}\bigg)
         +\bigg({{1}\over{x^2+y^2}}-{{y\cdot2y}\over{(x^2+y^2)^2}}\bigg)
     \bigg)}\cr
-    &\red{={{\mu_0I}\over{2\pi}}
+    &\hl{={{\mu_0I}\over{2\pi}}
     {\bf e}_z\bigg({{2(x^2+y^2)-2(x^2+y^2)}\over{(x^2+y^2)^2}}\bigg)}\cr
-    &\red{={\bf 0}}.\cr
+    &\hl{={\bf 0}}.\cr
   }
 $$
 Med andra ord har vi en liknande situation som tidigare f{\"o}r divergensen,
@@ -1568,7 +1568,7 @@ saker. Divergensen beskriver nettofl{\"o}de ut fr{\aa}n eller in mot en punkt,
 medan rotationen beskriver lokal cirkulation. Ett f{\"a}lt kan mycket v{\"a}l
 ha noll av den ena men inte av den andra.
 
-\subsection{{\red{Kan parallella f{\"a}ltlinjer ge upphov till en rotation?}}}
+\subsection{{\hl{Kan parallella f{\"a}ltlinjer ge upphov till en rotation?}}}
 Vid en f{\"o}rsta anblick verkar ju denna fr{\aa}ga ganska konstig.
 Om rotationen i n{\aa}gon bem{\"a}rkelse {\"a}r ett m{\aa}tt p{\aa} hur mycket
 f{\"a}ltet ``snurrar runt'' lokalt, s{\aa} m{\aa}ste v{\"a}l {\"a}nd{\aa}
@@ -1580,21 +1580,21 @@ F{\"o}r att illustrera po{\"a}ngen, l{\aa}t oss konstruera ett artificiellt
 inhomogent vektorf{\"a}lt ${\bf a}({\bf x})$ riktat l{\"a}ngs $x$-axeln och
 varierande i $y$-led enligt
 $$
-  \red{{\bf a}({\bf x})=(a_0-a_1y){\bf e}_x}.
+  \hl{{\bf a}({\bf x})=(a_0-a_1y){\bf e}_x}.
 $$
 F{\"o}r detta vektorf{\"a}lt, som helt uppenbarligen har alla f{\"a}ltlinjer
 parallella med varandra, blir rotationen av f{\"a}ltet
 $$
   \eqalign{
-    \red{\nabla\times{\bf a}({\bf x})}&=\red{
+    \hl{\nabla\times{\bf a}({\bf x})}&=\hl{
     \bigg(
       \underbrace{{\bf e}_x{{\partial}\over{\partial x}}}_{\to0}
         +{\bf e}_y{{\partial}\over{\partial y}}
         +\underbrace{{\bf e}_z{{\partial}\over{\partial z}}}_{\to0}
     \bigg)\times\Big((a_0-a_1y){\bf e}_x\Big)}\cr
-    &=\red{\underbrace{{\bf e}_y\times{\bf e}_x}_{=-{\bf e}_z}
+    &=\hl{\underbrace{{\bf e}_y\times{\bf e}_x}_{=-{\bf e}_z}
         {{\partial}\over{\partial y}}(a_0-a_1y)}\cr
-    &=\red{a_1{\bf e}_z},\cr
+    &=\hl{a_1{\bf e}_z},\cr
   }
 $$
 det vill s{\"a}ga att rotationen av f{\"a}ltet {\"o}verallt {\"a}r nollskild,
@@ -1606,12 +1606,12 @@ inhomogent men parallellt flytande str{\"o}m av v{\"a}tska. Kommer v{\aa}r
 ``virtuella paddel'' att b{\"o}rja rotera i det inhomogena fl{\"o}det som
 beskrivs i uppgiften?
 Ja, det inser vi naturligtvis att den kommer att g{\"o}ra, och vi inser
-f{\"o}rhoppningsvis att {\red{\it en nollskild rotation inte
+f{\"o}rhoppningsvis att {\hl{\it en nollskild rotation inte
 n{\"o}dv{\"a}ndigtvis beh{\"o}ver h{\"a}nga samman med att f{\"a}ltet
 kr{\"o}ker sig}}.
 \vfill\eject
 
-\subsection{{\red{Exempel p{\aa} f{\"a}lt med en homogen rotation}}}
+\subsection{{\hl{Exempel p{\aa} f{\"a}lt med en homogen rotation}}}
 Vi avslutar avsnittet om rotationen med att konstatera att det naturligtvis
 inte bara {\"a}r fr{\aa}ga om att rotationen av ett magnetf{\"a}lt, enligt
 Biot--Savarts lag, i princip alltid {\"a}r noll {\"o}verallt och att k{\"a}llor
@@ -1624,7 +1624,7 @@ Amp{\`e}res statiska lag f{\"o}r magnetf{\"a}lt att rotationen av
 magnetf{\"a}ltet {\"o}verallt {\"a}r konstant och riktat l{\"a}ngs
 $z$-axeln, som
 $$
-  \red{\nabla\times{\bf B}=\mu_0{\bf J}=\mu_0J_0{\bf e}_z}.
+  \hl{\nabla\times{\bf B}=\mu_0{\bf J}=\mu_0J_0{\bf e}_z}.
 $$
 Liksom tidigare, i analysen av paradoxen f{\"o}r divergensen
 $\nabla\cdot{\bf E}$ av ett elektrostatiskt f{\"a}lt i fallet med en homogen
@@ -1635,7 +1635,7 @@ av f{\"a}ltlinjer'' ju {\"o}verallt kancellerar varandra.
 anta en o{\"a}ndlig dom{\"a}n utan att bryta mot grundl{\"a}ggande randvillkor,
 denna g{\aa}ng f{\"o}r magnetf{\"a}ltets definition.
 
-{\red{\it {\AA}terigen kan vi se detta problem som ett typexempel p{\aa} en
+{\hl{\it {\AA}terigen kan vi se detta problem som ett typexempel p{\aa} en
 situation d{\"a}r idealiserad fysikalisk situation inte alltid har en
 l{\"o}sning som uppfyller alla antaganden!}}
 
@@ -1676,7 +1676,7 @@ egenskaper, geonom divergens och rotation, och vi kommer nu att introducera
 ett begrepp som knyter an till b{\aa}da dessa operatorer, n{\"a}mligen
 {\it konservativa f{\"a}lt}.
 \quote{%
-  {\red{{\bf Definition:} Ett vektorf{\"a}lt ${\bf F}$ {\"a}r {\it konservativt}
+  {\hl{{\bf Definition:} Ett vektorf{\"a}lt ${\bf F}$ {\"a}r {\it konservativt}
   i ett omr{\aa}de om dess {\it linjeintegral mellan tv{\aa} punkter endast
   beror p{\aa} startpunkten och slutpunkten}, och inte p{\aa} vilken v{\"a}g
   vi tar d{\"a}remellan.}}
@@ -1919,7 +1919,7 @@ ${\bf F}$ {\"a}r definierat p{\aa}. Noll rotation r{\"a}cker inte alltid
 f{\"o}r att garantera att det existerar en global potential $\phi$ om
 omr{\aa}det har h{\aa}l eller andra topologiska hinder.
 
-\section{{\red{Tolkningen av $\nabla\times(\nabla\phi)$}}}
+\section{{\hl{Tolkningen av $\nabla\times(\nabla\phi)$}}}
 Vi kommer nu att g{\aa} igenom tre vektoridentiteter som {\"a}r av fundamentalt
 intresse inom elektromagnetiska problem. Den f{\"o}rsta identiteten s{\"a}ger
 oss att {\it rotationen av en gradient alltid {\"a}r identiskt noll,}
@@ -1975,7 +1975,7 @@ gaugetransformationen och hur den {\"a}r anv{\"a}ndbar f{\"o}r att ta fram
 v{\aa}gekvationer f{\"o}r den s{\aa} kallade {\it retarderade potentialen}
 i F{\"o}rel{\"a}sning~11.
 
-\section{{\red{Tolkningen av $\nabla\cdot(\nabla\times{\bf a})$}}}
+\section{{\hl{Tolkningen av $\nabla\cdot(\nabla\times{\bf a})$}}}
 Den andra identiteten s{\"a}ger oss att {\it divergensen av en rotation alltid
 {\"a}r identiskt noll,}
 $$
@@ -2062,7 +2062,7 @@ Identiteten har dock samma krav p{\aa} regularitet som tidigare, och om
 f{\"a}ltet har singulariteter eller inte {\"a}r ``tillr{\"a}ckligt glatt'',
 s{\aa} m{\aa}ste man behandla dessa noggrant, exempelvis med distributioner.
 
-\section{{\red{Tolkningen av $\nabla\times(\nabla\times{\bf a})$}}}
+\section{{\hl{Tolkningen av $\nabla\times(\nabla\times{\bf a})$}}}
 Den tredje identiteten skiljer sig fr{\aa}n de tv{\aa} f{\"o}reg{\aa}ende,
 i det att den inte producerar ett resultat som {\"a}r identiskt noll, utan
 ist{\"a}llet formulerar en anv{\"a}ndbar relation mellan differentialoperatorer.
@@ -2131,7 +2131,7 @@ som m{\"a}ter hur det lokala rotationsf{\"a}ltet varierar i rummet}.
 Det finns dock en djupare geometrisk tolkning {\"a}n att bara s{\"a}ga att vi
 tar rotationen tv{\aa} g{\aa}nger.
 
-\subsection{{\red{Tolkning 1: ``Cirkulationen av en cirkulation''}}}
+\subsection{{\hl{Tolkning 1: ``Cirkulationen av en cirkulation''}}}
 Geometriskt inneb{\"a}r uttrycket  $\nabla\times\nabla\times{\bf a}$ att vi
 unders{\"o}ker hur rotationsf{\"a}ltet $\nabla\times{\bf a}$ cirkulerar kring
 infinitesimala slutna kurvor.
@@ -2150,7 +2150,7 @@ Fr{\aa}gan {\"a}r dock om vi blir s{\aa} v{\"a}rst mycket klokare av vad detta
 f{\"o}rfattaren och f{\"o}rel{\"a}saren inte {\"a}r n{\aa}got som ger en
 direkt bild av vad som f{\"o}rsigg{\aa}r.
 
-\subsection{{\red{Tolkning 2: Variation i k{\"a}llstyrka samt utj{\"a}mning
+\subsection{{\hl{Tolkning 2: Variation i k{\"a}llstyrka samt utj{\"a}mning
   i rummet}}}
 Vi kan g{\"o}ra en alternativ tolkning utifr{\aa}n identiteten
 $$

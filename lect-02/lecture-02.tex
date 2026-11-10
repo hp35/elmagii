@@ -48,7 +48,7 @@
 \newif\ifcolors
 \ifx\colorsenabled\undefined \colorsfalse \else \colorstrue \fi
 \ifcolors\input color\fi
-\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
+\def\hl#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{
@@ -615,7 +615,7 @@ f{\"a}ltlinjerna aldrig kan resultera i n{\aa}got utf{\"o}rt arbete}.
 Eftersom vi just har konstaterat att arbete dessutom kan uttryckas som en
 f{\"o}r{\"a}ndring i potential $\phi$, och om vi r{\"o}r oss s{\aa} att inget
 arbete utf{\"o}rs, s{\aa} blir slutsatsen f{\"o}ljande:
-\quote{\red{\it Elektriska f{\"a}ltlinjer {\"a}r alltid ortogonala mot
+\quote{\hl{\it Elektriska f{\"a}ltlinjer {\"a}r alltid ortogonala mot
   en ekvipotentialyta.}\numberedfootnote{En {\it ekvipotentialyta} {\"a}r
     kort och gott en yta i rummet d{\"a}r den skal{\"a}ra potentialen $\phi$
     {\"a}r konstant.}}

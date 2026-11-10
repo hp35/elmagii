@@ -48,7 +48,7 @@
 \newif\ifcolors
 \ifx\colorsenabled\undefined \colorsfalse \else \colorstrue \fi
 \ifcolors\input color\fi
-\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
+\def\hl#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{

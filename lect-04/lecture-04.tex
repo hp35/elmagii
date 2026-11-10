@@ -1,12 +1,12 @@
 %
 % File: teach/elmagii/lect-04/lecture-04.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-04/
-% Last change: November 10, 2025
+% Last change: November 10, 2026
 %
-% Lecture No 4 in the course ``Elektromagnetism II, 1TE626 (2025)'',
-% held November 11, 2025, at Uppsala University, Sweden.
+% Lecture No 4 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
+% held November 11, 2026, at Uppsala University, Sweden.
 %
-% Copyright (C) 2022-2025, Fredrik Jonsson, under Gnu General Public
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
 %
 % This program is free software: you can redistribute it and/or modify
@@ -24,14 +24,14 @@
 %
 \def\coursename{Elektromagnetism II}
 \def\coursecode{1TE626}
-\def\courseyear{2025}
+\def\courseyear{2026}
 \def\courserepo{https://github.com/hp35/elmagii/}
 \def\lecturenumber{4}
 \def\lecturetitle{Magnetostatik}
 \def\lecturetitlesub{}
 \def\lectureauthor{Fredrik Jonsson}
 \def\lectureplace{Uppsala Universitet}
-\def\lecturedate{11 november 2025}
+\def\lecturedate{11 november 2026}
 %-------------------- BEGIN OF LOCAL MACROS --------------------
 \input macros/epsf.tex
 \input macros/eplain.tex
@@ -48,7 +48,7 @@
 \newif\ifcolors
 \ifx\colorsenabled\undefined \colorsfalse \else \colorstrue \fi
 \ifcolors\input color\fi
-\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
+\def\hl#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 
 \def\ifempty#1{\ifx\relax#1\relax}
 \def\initlecture{
@@ -197,13 +197,13 @@ m{\aa}ste g{\"o}ras under f{\"o}ruts{\"a}ttningen att f{\"o}rloppen {\"a}r
 l{\aa}ngsamma nog att f{\"o}r att den elektromagnetiska v{\aa}gl{\"a}ngden
 \sidx{Elektromagnetisk v{\aa}gl{\"a}ngd} i problemet rej{\"a}lt {\"o}verstiger
 storleken p{\aa} dom{\"a}nen som analyseras.
-Till exempel kan vanliga elektriska generatorer och motorer, exempelvis
-startmotorn i en bil eller generatorn i ett vindkraftverk, med mycket god
-approximation behandlas som just magnetostatiska problem, trots den uppenbara
-r{\"o}relsen och tidsberoendet. Nyckeln {\"a}r att det {\"a}r de {\it olika
-tidsskalorna} mellan den mekaniska r{\"o}relsen och f{\"o}r utbredningen av
-elektromagnetiska v{\aa}gor som avg{\"o}r om vi kan betrakta problemet som
-magnetostatiskt eller ej.
+Till exempel kan vanliga elektriska generatorer och motorer, som startmotorn
+i en bil eller generatorn i ett vindkraftverk, med mycket god approximation
+behandlas som just magnetostatiska problem, trots den uppenbara r{\"o}relsen
+och tidsberoendet. Nyckeln {\"a}r att det {\"a}r de {\it olika tidsskalorna}
+mellan den mekaniska r{\"o}relsen och f{\"o}r utbredningen av elektromagnetiska
+v{\aa}gor som avg{\"o}r om vi kan betrakta problemet som magnetostatiskt eller
+ej.
 
 \section{Historik}
 Magnetostatiken kan s{\"a}gas ha uppt{\"a}ckts 1269 av fransmannen Petrus
@@ -236,7 +236,7 @@ magnetisk laddning (monopoler)},\sidx{Magnetisk monopol} detta som en markant
 skillnad gentemot elektrisk laddning.\sidx{Elektrisk monopol}
 
 Den som r{\"a}knas som uppt{\"a}ckaren av att elektriska str{\"o}mmar genererar
-magnetiska f{\"a}lt {\"a}r Hans Christian {\OE}rsted,\sidx{{\OE}rsted, Hans
+magnetiska f{\"a}lt {\"a}r Hans Christian {\OE}rsted, \sidx{{\OE}rsted, Hans
 Christian (1777--1851)} som 1820 publicerade sin uppt{\"a}ckt att orienteringen
 hos en kompassn{\aa}l p{\aa}verkas av en elektrisk str{\"o}m i n{\"a}rheten av
 n{\aa}len.
@@ -245,15 +245,17 @@ England med Copley-medaljen, samt att den \idx{Franska Akademien} bel{\"o}nade
 honom med $3\,000$ franc.
 {\OE}rsteds uppt{\"a}ckt kan s{\"a}gas vara startskottet f{\"o}r arbetet med
 att formulera den moderna elektromagnetismen, speciellt inspirerade detta den
-franske fysikern Andr\'e-Marie Amp\`ere\sidx{Amp\`ere, Andr\'e-Marie
+franske fysikern Andr\'e-Marie Amp\`ere \sidx{Amp\`ere, Andr\'e-Marie
 (1775--1836)} till att formulera en matematisk formel f{\"o}r att beskriva den
 magnetiska kraften mellan str{\"o}mslingor.
 \vfill\eject
 
 \section{Vad {\"a}r ett magnetf{\"a}lt?}
-\sidx{Magnetf{\"a}lt}\sidx{Magnetisk fl{\"o}dest{\"a}thet}
+\sidx{Magnetf{\"a}lt}
+\sidx{Magnetisk fl{\"o}dest{\"a}thet}
 \sidx{Elektrisk str{\"o}m}
-\quote{{\bf Definition.} Vi definierar ett magnetf{\"a}lt\numberedfootnote{I
+\quote{{\hl{{\bf Definition.} Vi definierar ett magnetf{\"a}lt%
+  \numberedfootnote{I
     denna kurs betecknar vi magnetf{\"a}ltet ocks{\aa} som $B$-f{\"a}lt,
     men i andra sammanhang betecknas f{\"a}ltet {\"a}ven som $H$-f{\"a}lt,
     beroende vilken ing{\aa}ng och historisk konvention man r{\aa}kar ha.
@@ -261,21 +263,21 @@ magnetiska kraften mellan str{\"o}mslingor.
     {\it magnetisk fl{\"o}dest{\"a}thet}.}
   som ett {\it fysiskt f{\"a}lt som beskriver magnetisk p{\aa}verkan p{\aa}
   r{\"o}rliga elektriska laddningar, elektriska str{\"o}mmar och magnetiska
-  material.}}
+  material.}}}}
 \noindent
 I n{\aa}gon m{\aa}n kan vi s{\"a}ga att dessa tre m{\"o}jligheter egentligen
 kokar ner till en enda sak, n{\"a}mligen p{\aa}verkan av r{\"o}rliga elektriska
-laddningar,\sidx{Elektrisk laddning}  eftersom elektrisk str{\"o}m utg{\"o}rs
+laddningar, \sidx{Elektrisk laddning}  eftersom elektrisk str{\"o}m utg{\"o}rs
 av r{\"o}rliga laddningar samt att magnetiska material handlar om hur
 materialet p{\aa} en mikroskopisk niv{\aa}, eller snarare kvantmekanisk
 niv{\aa}, beter sig i linjering av spinn och magnetiska moment som kan ses
-som mikroskopiska slutna str{\"o}mslingor.\sidx{Str{\"o}mslinga}[Sluten]
-Den kvantmekaniska\sidx{Kvantmekanik} behandlingen av spinn och magnetiska
-moment\sidx{Magnetiskt dipolmoment} ligger dock utanf{\"o}r omfattningen av
+som mikroskopiska slutna str{\"o}mslingor. \sidx{Str{\"o}mslinga}[Sluten]
+Den kvantmekaniska \sidx{Kvantmekanik} behandlingen av spinn och magnetiska
+moment \sidx{Magnetiskt dipolmoment} ligger dock utanf{\"o}r omfattningen av
 denna kurs.
 
-\section{Lorentz-kraften - R{\"o}rliga laddningar i statiska elektriska och
-  magnetiska f{\"a}lt}
+\section{{\hl{Lorentz-kraften}} - R{\"o}rliga laddningar i statiska elektriska
+  och magnetiska f{\"a}lt}
 \sidx{Lorentz-kraften}
 \epsfig{figs/lorentz.1}\noindent
 Problemet med magnetiska f{\"a}lt {\"a}r att det fr{\aa}n ett klassiskt
@@ -295,9 +297,9 @@ och inte bara till dess belopp.
 Om vi l{\"a}gger till kraften p{\aa} laddningen fr{\aa}n ett statiskt elektriskt
 f{\"a}lt, s{\aa} erh{\aa}ller vi {\it Lorentz-kraften}\numberedfootnote{Som,
   liksom Griffiths korrekt p{\aa}pekar, ursprungligen formulerades av
-  Oliver Heaviside,\sidx{Heaviside, Oliver (1850--1925)} som senare kom att
+  Oliver Heaviside, \sidx{Heaviside, Oliver (1850--1925)} som senare kom att
   ha en instrumentell del i formulerandet av den moderna formen av
-  {\it Maxwell's ekvationer}\sidx{Maxwells ekvationer} s{\aa} som vi idag
+  {\it Maxwell's ekvationer} \sidx{Maxwells ekvationer} s{\aa} som vi idag
   k{\"a}nner dem. F{\"o}r en intressant sammanfattning
   av Heavisides arbete med att sl{\aa} samman de fr{\aa}n b{\"o}rjan tjugo
   ekvationerna beskrivande elektrodynamik till de fyra som utg{\"o}r den
@@ -305,15 +307,15 @@ f{\"a}lt, s{\aa} erh{\aa}ller vi {\it Lorentz-kraften}\numberedfootnote{Som,
   {\it A derivation of Maxwell's equations using the Heaviside notation},
   Phil. Trans. Royal Society A {\bf 376}, 20170447 (2017).
   {\tt https://royalsocietypublishing.org/doi/10.1098/rsta.2017.0447}}
-$$
+\hl{$$
   {\bf F}=q\big({\bf E}+{\bf v}\times{\bf B}\big).
-$$
+$$}
 {\AA}terigen, vi h{\"a}vdar h{\"a}r inte att vi i denna kurs p{\aa} n{\aa}got
 vis kommer att h{\"a}rleda denna relation; vi kommer h{\"a}r ist{\"a}llet att
 helt luta oss mot att denna form {\"a}r experimentellt verifierad efter alla
 konstens regler och d{\"a}rmed n{\"o}ja oss med det.
 
-\subsection{Magnetisk kraft utf{\"o}r inget arbete}
+\subsection{{\hl{Magnetisk kraft utf{\"o}r inget arbete}}}
 \sidx{Magnetisk kraft utf{\"o}r inget arbete}
 Utifr{\aa}n formen p{\aa} Lorentz-kraften, som {\"a}r ortogonal mot
 s{\aa}v{\"a}l det magnetiska f{\"a}ltet ${\bf B}$ som hastigheten ${\bf v}$,
@@ -329,13 +331,13 @@ inte utf{\"o}ra n{\aa}got arbete?
 Argumentet h{\"a}r g{\"a}ller dock att {\it magnetiska krafter} faktiskt inte
 utf{\"o}r arbete p{\aa} {\it fri} elektrisk laddning, eftersom om laddningen
 $q$ f{\"o}rflyttas en str{\"a}cka
-$$
+\hl{$$
   d{\bf l}={\bf v}dt
   \qquad\Rightarrow\qquad\hbox{Utf{\"o}rt arbete:}\quad
   dW={\bf F}\cdot d{\bf l}
     =q\underbrace{({\bf v}\times{\bf B})}_{\perp{\bf v}}\cdot{\bf v}dt
     =0,
-$$
+$$}
 det vill s{\"a}ga att hur vi {\"a}n f{\"o}rflyttar laddningen i ett magnetiskt
 f{\"a}lt, s{\aa} kommer den resulterande Lorentz-kraften att vara ortogonal mot
 f{\"o}rflyttningen och det resulterande {\it magnetiska} arbetet kommer att
