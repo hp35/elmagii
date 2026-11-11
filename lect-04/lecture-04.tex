@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/lect-04/lecture-04.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-04/
-% Last change: November 10, 2026
+% Last change: November 11, 2026
 %
 % Lecture No 4 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
 % held November 11, 2026, at Uppsala University, Sweden.
@@ -1111,6 +1111,7 @@ experiment.\numberedfootnote{Oneliner f{\"o}r magnetf{\"a}lt runt
       =\mu_0 I\quad\Rightarrow\quad
     B_{\varphi}(r)={{\mu_0 I}\over{2\pi r}}.
   $$}
+\vfill\eject
 
 \section{{\hl{Vektorpotentialen}}}
 \sidx{Vektorpotential}\sidx{Vektorpotential}[Amp\`eres lag]
@@ -1131,7 +1132,27 @@ $$}
 Om vi substituerar denna potential f{\"o}r magnetf{\"a}ltet ${\bf B}$ i
 Amp\`eres lag p{\aa} differentialform, s{\aa} erh{\aa}ller vi f{\"o}r
 v{\"a}nsterledet\numberedfootnote{Se exempelvis innerp{\"a}rmen p{\aa}
-  Griffiths, {\it Second derivatives (11)}.}
+  Griffiths, {\it Second derivatives (11)}. Att vi h{\"a}r {\it postulerar} att
+  $$
+    \nabla\cdot{\bf A}=0
+  $$
+  {\"a}r inte p{\aa} n{\aa}got s{\"a}tt sj{\"a}lvklart, utan f{\"o}ljer av
+  att vi i n{\aa}gon m{\aa}n har friheten att v{\"a}lja ${\bf A}$, detta
+  eftersom definitionen
+  $$
+    {\bf B}=\nabla\times{\bf A}
+  $$
+  betyder att vi via vektoridentiteten $\nabla\times(\nabla\phi)\equiv{\bf 0}$,
+  f{\"o}r n{\aa}gon godtycklig tv{\aa} g{\aa}nger deriverbar funktion $\psi$,
+  kan addera en gradient $\nabla\psi$, transformerande vektorpotentialen som
+  $$
+    {\bf A}\quad\to\quad{\bf A}'={\bf A}+\nabla\psi,
+  $$
+  utan att magnetf{\"a}ltet ${\bf B}$ {\"a}ndras. Denna godtycklighet kallas
+  {\it gauge} och {\"a}r n{\aa}got vi kommer att g{\aa} in p{\aa} i detalj i
+  F{\"o}rel{\"a}sning~11 f{\"o}r generella och dynamiska elektromagnetiska
+  f{\"a}lt; {\it h{\"a}r n{\"o}jer vi oss kort och gott med att konstatera
+  att vi har full frihet att v{\"a}lja att s{\"a}tta $\nabla\cdot{\bf A}=0$.}}
 \hl{$$
   \nabla\times{\bf B}=\nabla\times(\nabla\times{\bf A})
     =\nabla\underbrace{(\nabla\cdot{\bf A})}_{=0}-\nabla^2{\bf A}
@@ -1149,6 +1170,7 @@ vektorpotentialen}} som\numberedfootnote{Griffiths Ekv.~(5.64), sid.~244.
 \hl{$$
   \nabla^2{\bf A}=-\mu_0{\bf J}.
 $$}
+\vfill\eject
 
 \section{{\hl{Explicit l{\"o}sning f{\"o}r vektorpotentialen}}}
 \sidx{Vektorpotential}[Explicit l{\"o}sning]
@@ -1204,6 +1226,100 @@ Vi kommer i F{\"o}rel{\"a}sning~8 att studera hur denna form f{\"o}r den
 skal{\"a}ra potentialen $\phi$ s{\aa}v{\"a}l som vektorpotentialen ${\bf A}$
 kan utvecklas i serier i det inversa avst{\aa}ndet $1/|{\bf x}-{\bf x}'|$ mellan
 k{\"a}lla och observationspunkt, i den s{\aa} kallade {\it multipolutvecklingen}.
+\vfill\eject
+
+\section{{\hl{Tolkning av vektorpotentialen}}}
+\sidx{Vektorpotential}[Tolkning]
+En naturlig fr{\aa}ga som uppst{\aa}r h{\"a}r {\"a}r naturligtvis hur vi skall
+{\it tolka} vektorpotentialen rent fysika\-liskt? Den skal{\"a}ra potentialen
+$\phi$ har vi sannolikt en ganska bra k{\"a}nsla f{\"o}r redan, d{\"a}r
+Laplaces och Poissons ekvationer intuitivt kan tolkas i form av, till exempel,
+diffusion av v{\"a}rme och hur k{\"a}llor och s{\"a}nkor tillsammans med
+randvillkor i form av temperaturer f{\"o}reskrivna p{\aa} ytor i en omgivning
+ger oss l{\"o}sningar.
+Laplaces och Poissons ekvationer bist{\aa}r oss dessutom med teorem kring
+avsaknaden av lokala extrempunkter, och som en direkt f{\"o}ljd av detta
+entydighetsteoremet, som vi s{\aa}g i F{\"o}rel{\"a}sning~3.
+I analogin med den skal{\"a}ra potentialen som en temperatur, s{\aa} har vi
+dessutom en direkt f{\"o}rst{\aa}else av vad den negative gradienten av denna
+{\"a}r, i analogi med ${\bf E}=-\nabla\phi$, i form av riktningen f{\"o}r den
+snabbast minskande temperaturen.
+Fr{\aa}gan om hur vektorpotentialen skall tolkas, och om det finns n{\aa}gra
+analogier att ta till f{\"o}r att f{\aa} v{\aa}r mentala bild av denna p{\aa}
+plats?
+
+Ett s{\"a}tt {\"a}r att rent {\it riktningsm{\"a}ssigt} betrakta relationen
+mellan vektorpotentialen och str{\"o}m\-t{\"a}theten som att den senare pekar
+ut riktningen f{\"o}r den f{\"o}rra, i och med att den explicita l{\"o}sningen,
+i form av integralen f{\"o}r vektorpotentialen,\numberedfootnote{Liksom
+  alltid i denna f{\"o}rel{\"a}sningsserie f{\"o}rs{\"o}ker vi h{\aa}lla
+  oss p{\aa} den smala stigen i notation, d{\"a}r vi konsekvent h{\aa}ller
+  oss till ${\bf x}$ som v{\aa}r {\it observationspunkt}, associerad med
+  derivator i rummet med mera, medan ${\bf x}'$ betecknar de
+  {\it k{\"a}llpunkter} {\"o}ver vilka vi summerar upp bidrag.}
+kopplar samman ${\bf A}({\bf x})$ i observationspunkten ${\bf x}$ med alla
+delbidrag till str{\"o}mt{\"a}theten ${\bf J}({\bf x}')$ fr{\aa}n samtliga
+k{\"a}llpunkter ${\bf x}'$.
+Vi kan som ett exempel t{\"a}nka oss ett f{\"a}lt\numberedfootnote{Vi erinrar
+  oss att praktiskt taget allt vi diskuterar i denna kurs {\"a}r att betrakta
+  som {\it f{\"a}lt}, vilket inte {\"a}r n{\aa}got annat {\"a}n en storhet
+  (``en funktion av n{\aa}got'') som tilldelar ett v{\"a}rde till varje punkt
+  i ett omr{\aa}de av rummet, och eventuellt ocks{\aa} till varje tidpunkt.}
+av str{\"o}mt{\"a}theten som {\"a}r homogent och pekar i, s{\"a}g,
+$z$-riktningen. Detta kommer direkt via den explicita l{\"o}sningen att ge
+oss en vektorpotential som ocks{\aa} den {\"o}verallt pekar i $z$-riktningen,
+f{\"o}rvisso med ett belopp som kommer att bero p{\aa} avst{\aa}ndet fr{\aa}n
+de k{\"a}llpunkter ${\bf x}'$, d{\"a}r vi summerar upp samtliga bidrag, till
+den k{\"a}llpunkt ${\bf x}$ d{\"a}r vi ``observerar'' vektorpotentialen
+${\bf A}({\bf x})$.\numberedfootnote{Vi skriver h{\"a}r ``observerar''
+  inom citat-tecken, eftersom vare sig den skal{\"a}ra potentialen eller
+  vektorpotentialen {\"a}r egentliga {\it observabler}, utan alltid bara
+  {\"a}r v{\aa}ra verktyg f{\"o}r att ta fram de egentliga m{\"a}tbara
+  storheterna, eller de ``riktiga observablerna'' som elektriska och
+  magnetiska f{\"a}lt.}
+
+I n{\aa}gon m{\aa}n kan vi allts{\aa} se analogin med den skal{\"a}ra
+potentialen, som ju f{\"o}ljer exakt samma beroende p{\aa} avst{\aa}nd
+fr{\aa}n delbidragen som skalningsfaktorn $1/r=1/|{\bf x}-{\bf x}'|$ i
+uttrycket f{\"o}r den explicita l{\"o}sningen f{\"o}r vektorpotentialen,
+som att
+\medskip
+\quote{%
+  \item{$\bullet$}{Den skal{\"a}ra potentialen $\phi({\bf x})$ byggs upp av
+    {\it k{\"a}llor} i rummet, i form av infinitesimala laddningar $q$
+    som summeras upp med sina respektive laddningar.
+    Sett som en {\it distribution} av dessa k{\"a}llor, s{\aa} {\"a}r
+    den skal{\"a}ra {\it laddningst{\"a}theten} $\rho({\bf x}')$ vid
+    k{\"a}llpunkterna ${\bf x}'$ den fysikaliska k{\"a}lla som bidrar
+    till den skal{\"a}ra potentialen.}
+  \smallskip
+  \item{$\bullet$}{Vektorpotentialen ${\bf J}({\bf x})$ byggs {\"a}ven den
+    upp av {\it k{\"a}llor} i rummet, men nu i form av infinitesimala
+    str{\"o}mbidrag $I$ som summeras upp med sina respektive
+    str{\"o}m\-styrkor.
+    Sett som en {\it distribution} av dessa k{\"a}llor, s{\aa} {\"a}r
+    str{\"o}mt{\"a}theten ${\bf J}({\bf x}')$ vid k{\"a}llpunkterna
+    ${\bf x}'$ den fysikaliska k{\"a}lla som bidrar till vektorpotentialen.}
+}
+\medskip\noindent
+Tolkningen av det magnetiska f{\"a}ltet som rotationen av denna vektorpotential
+faller sig d{\"a}refter ganska naturligt fr{\aa}n v{\aa}r sedvanliga tolkning
+av Biot--Savarts lag fr{\aa}n, s{\"a}g, gymnasiet, under anv{\"a}ndande av
+``h{\"o}gerhandsregeln'' och magnetf{\"a}ltets roterande karakt{\"a}r runt en
+rak str{\"o}mledare b{\"a}rande en str{\"o}m $I$.
+
+Utifr{\aa}n denna bild kan vi se str{\"o}mt{\"a}theten ${\bf J}({\bf x}')$
+runt om i rummet som den definierande storheten f{\"o}r vektorpotentialen
+${\bf A}({\bf x})$, vilken i sin tur agerar som en slags ``generaliserad
+str{\"o}m'' som lokalt skapar ett magnetf{\"a}lt, {\"a}ven {\it utanf{\"o}r}
+det omr{\aa}de som direkt traverseras av str{\"o}mt{\"a}theten.
+
+I likhet med den skal{\"a}ra potentialen $\phi$ kan vi allts{\aa} se
+vektorpotentialen ${\bf J}({\bf x})$ som uppbyggd av ett antal infinitesimala
+k{\"a}llor, bara det att dessa k{\"a}llor f{\"o}r den skal{\"a}ra potentialen
+{\"a}r laddningar, beskrivna av en laddningst{\"a}thet $\rho({\bf x}')$, medan
+k{\"a}llorna f{\"o}r vektorpotentialen ist{\"a}llet {\"a}r {\it lokala
+str{\"o}mmar av laddning}, beskrivna av en str{\"o}mt{\"a}thet ${\bf J}({\bf x}')$.
 \vfill\eject
 
 \section{Sammanfattning av F{\"o}rel{\"a}sning~4 -- Magnetostatik}
