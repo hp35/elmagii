@@ -1,6 +1,6 @@
 \begin{theindex}
 
-  \item {\"O}msesidig induktans, xvi, 117--119
+  \item {\"O}msesidig induktans, xvi, 119--121
     \subitem Neumanns formel, xvi
   \item {\OE }rsted, Hans Christian (1777--1851), xxvi, 87
 
@@ -9,13 +9,13 @@
   \item Amp\`ere, Andr\'e-Marie (1775--1836), xxii, 87
   \item Amp\`ere, enhet f{\"o}r str{\"o}m, 89
   \item Amp\`eres kraftlag, 89, 90
-  \item Amp\`eres lag, 169, 174, 175, 179, 196, 197
-    \subitem F{\"or}r statiska magnetiska f{\"a}lt, xxii, 99, 101
+  \item Amp\`eres lag, 171, 176, 177, 181, 198, 199
+    \subitem F{\"or}r statiska magnetiska f{\"a}lt, xxii, 99, 104
     \subitem F{\"o}r statiska magnetiska f{\"a}lt, xv
-    \subitem Maxwells generalisering av, 171
-    \subitem Uttryckt i vektorpotentialen, 99
+    \subitem Maxwells generalisering av, 173
+    \subitem Uttryckt i vektorpotentialen, 100
   \item Amp\`eres lag[F{\"or}r statiska magnetiska f{\"a}lt], 85
-  \item Amp\`eres modell f{\"o}r magneter, 139
+  \item Amp\`eres modell f{\"o}r magneter, 141
   \item Amp{\`e}res kraftlag, xiv
   \item Amp{\`e}res lag
     \subitem Amp{\`e}re--Maxwells elektrodynamiska lag, 10
@@ -23,17 +23,17 @@
   \item Analysens fundamentalsats
     \subitem F{\"o}r gradienter, xviii
   \item Anaxagoras (500--428~BC), 87
-  \item Anisotropt medium, 130
+  \item Anisotropt medium, 132
   \item Antenn
-    \subitem Halvv{\aa }gsantenn, 205
-  \item Antenner, 151
+    \subitem Halvv{\aa }gsantenn, 207
+  \item Antenner, 153
   \item Arbete och upplagrad energi
     \subitem Elektrostatisk laddning, xiv, 60
     \subitem Skal{\"a}r potential $\phi $, xiv
   \item Aristoteles (384--322~BC), 87
-  \item Atomk{\"a}rna, 126, 127, 131
-  \item Atomnummer, 128
-  \item Atom{\"a}r polarisabilitet $\alpha $, 128, 131, 135
+  \item Atomk{\"a}rna, 128, 129, 133
+  \item Atomnummer, 130
+  \item Atom{\"a}r polarisabilitet $\alpha $, 130, 133, 137
   \item Attraktionskraft
     \subitem Elektrisk, 38, 39, 41
 
@@ -41,41 +41,41 @@
 
   \item Beteckningar och SI-enheter, xiii
   \item Biot, Jean-Baptiste (1774--1862), xxii, 93
-  \item Biot--Savarts lag, xiv, xxii, xxvii, 93, 105, 115, 117, 196
+  \item Biot--Savarts lag, xiv, xxii, xxvii, 93, 107, 117, 119, 198
     \subitem F{\"o}r str{\"o}mslinga, xiv, 94
     \subitem F{\"o}r str{\"o}mt{\"a}thet, 94
   \item Bohr, Niels (1885--1962), 38
-  \item Brytningsindex $n$, 43, 125, 186, 196
-  \item Bunden laddningst{\"a}thet $\rho _{\rm b}$, 132
-  \item Bunden volymstr{\"o}m ${\bf J}_{\rm b}$, 141, 146
-  \item Bunden ytstr{\"o}m ${\bf K}_{\rm b}$, 141, 146
-  \item Bundna laddningar, 132
+  \item Brytningsindex $n$, 43, 127, 188, 198
+  \item Bunden laddningst{\"a}thet $\rho _{\rm b}$, 134
+  \item Bunden volymstr{\"o}m ${\bf J}_{\rm b}$, 143, 148
+  \item Bunden ytstr{\"o}m ${\bf K}_{\rm b}$, 143, 148
+  \item Bundna laddningar, 134
 
   \indexspace
 
-  \item ChatGPT, 105
-  \item Clausius, Rudolf (1822--1888), 135
-  \item Clausius--Mossotti-relationen, 135
+  \item ChatGPT, 108
+  \item Clausius, Rudolf (1822--1888), 137
+  \item Clausius--Mossotti-relationen, 137
   \item Coulomb, enhet f{\"o}r laddning, 39, 89
   \item Coulomb-villkoret
-    \subitem {\it Coulomb gauge}, 201
+    \subitem {\it Coulomb gauge}, 204
     \subitem Gauge-transformation, xvii
     \subitem Instantan skal{\"a}r potential, xvii
     \subitem V{\aa }gekvationer f{\"o}r potentialer, xvii
   \item Coulombs generaliserade lag
     \subitem Coulombintegralen, xiv, 42, 55, 58, 65
-  \item Coulombs kraftlag, xiv, xxiii, 38, 39, 41, 43, 55, 94, 105, 115, 
-		128
+  \item Coulombs kraftlag, xiv, xxiii, 38, 39, 41, 43, 55, 94, 107, 117, 
+		130
     \subitem H{\"a}rledd fr{\aa }n Gauss lag, 49
-  \item Curietemperatur, 141
+  \item Curietemperatur, 143
 
   \indexspace
 
   \item d'Alembert, Jean le Rond (1717--1783), xxii
-    \subitem d'Alembert-operator, 185
-    \subitem d'Alemberts l{\"o}sningsmetod (1747), 181, 184
+    \subitem d'Alembert-operator, 187
+    \subitem d'Alemberts l{\"o}sningsmetod (1747), 183, 186
     \subitem Integration of d'Alemberts transformerade v{\aa }gekvation, 
-		186
+		188
   \item de Broglie, Louis (1892--1987), xxii
   \item de Cisternay du Fay, Fran\c {c}ois (1698--1739), xxiii
     \subitem {\it Sixi\`eme m\'emoire sur l'\'electricit\'e (1734)}, 
@@ -84,18 +84,18 @@
     \subitem  {{\it Second M\'emoire sur l'\'Electricit\'e\break et le Magn\'etisme}}, 
 		38
   \item de Maricourt, Petrus Peregrinus, 87
-  \item Diamagnetism, 141
-  \item Dielektrikum, 125
-    \subitem {\"O}verg{\aa }ng mellan olika, 133
-  \item Dielektrisk sf{\"a}r, 135
-  \item Dipol, xv, 149, 153, 156
-    \subitem Elektrisk, 75, 152, 154, 156
-  \item Dipolantenn, 213
-  \item Dipolapproximationen, xv, 149, 166
-  \item Dipolmodellen av magneter, 139
+  \item Diamagnetism, 143
+  \item Dielektrikum, 127
+    \subitem {\"O}verg{\aa }ng mellan olika, 135
+  \item Dielektrisk sf{\"a}r, 137
+  \item Dipol, xv, 151, 155, 158
+    \subitem Elektrisk, 75, 154, 156, 158
+  \item Dipolantenn, 215
+  \item Dipolapproximationen, xv, 151, 168
+  \item Dipolmodellen av magneter, 141
   \item Dipolmoment
-    \subitem Elektriskt, xv, 127, 128, 149
-    \subitem Magnetiskt, xv, 140, 141, 143, 149
+    \subitem Elektriskt, xv, 129, 130, 151
+    \subitem Magnetiskt, xv, 142, 143, 145, 151
   \item Diracs delta-distribution $\delta $, xviii, 48, 49
     \subitem Normalisering, xviii
     \subitem Selektionsegenskaper, xviii
@@ -103,40 +103,40 @@
     \subitem En dimension, 6
     \subitem Selektionsegenskap, 7
     \subitem Tre dimensioner, 7
-  \item Dispersion, 125, 128, 130
+  \item Dispersion, 127, 130, 132
   \item Divergens
     \subitem Definition, 3
-  \item Dotriacontapol, xv, 149, 153, 156
-  \item Dubbelbrytning, 125
+  \item Dotriacontapol, xv, 151, 155, 158
+  \item Dubbelbrytning, 127
 
   \indexspace
 
   \item Ekvipotential, 75
   \item Ekvipotentialyta
-    \subitem Ortogonalitet mot elektriska f{\"a}ltlinjer, 60
-  \item Elektrisk dipol, 125, 126
-    \subitem Klassisk modell f{\"o}r, 126
-  \item Elektrisk dipol ${\bf p}$, 139
-    \subitem Kraft ${\bf F}_{\rm e}$ verkande p{\aa }, 140
-    \subitem Upplagrad energi $W_{\rm e}$, 140
-    \subitem Vridmoment $\tau _{\rm e}$ verkande p{\aa }, 140
-  \item Elektrisk fl{\"o}dest{\"a}thet, 125, 131, 132, 134
-  \item Elektrisk fl{\"o}dest{\"a}thet ${\bf D}$, xiii, xiv, 172, 174
+    \subitem Ortogonalitet mot elektriska f{\"a}ltlinjer, 61
+  \item Elektrisk dipol, 127, 128
+    \subitem Klassisk modell f{\"o}r, 128
+  \item Elektrisk dipol ${\bf p}$, 141
+    \subitem Kraft ${\bf F}_{\rm e}$ verkande p{\aa }, 142
+    \subitem Upplagrad energi $W_{\rm e}$, 142
+    \subitem Vridmoment $\tau _{\rm e}$ verkande p{\aa }, 142
+  \item Elektrisk fl{\"o}dest{\"a}thet, 127, 133, 134, 136
+  \item Elektrisk fl{\"o}dest{\"a}thet ${\bf D}$, xiii, xiv, 175, 176
   \item Elektrisk f{\"a}ltlinje, 45, 56
-    \subitem Ortogonalitet mot Ekvipotentialyta, 60
-  \item Elektrisk f{\"a}ltstyrka, 40, 65, 106, 125, 127, 131
-  \item Elektrisk f{\"a}ltstyrka ${\bf E}$, xiv, 55--57, 59, 151, 166, 
-		169, 174, 193
-    \subitem Analogi med gravitation, 129
-    \subitem Divergens f{\"o}r, 183
+    \subitem Ortogonalitet mot Ekvipotentialyta, 61
+  \item Elektrisk f{\"a}ltstyrka, 40, 65, 108, 127, 129, 133
+  \item Elektrisk f{\"a}ltstyrka ${\bf E}$, xiv, 55--57, 59, 153, 168, 
+		171, 176, 195
+    \subitem Analogi med gravitation, 131
+    \subitem Divergens f{\"o}r, 185
     \subitem Dynamisk, tidsberoende, 4, 5
-    \subitem Ekvivalent punktladdning, 129
-    \subitem Komplexv{\"a}rd envelopp, 187
-    \subitem V{\aa }gekvation f{\"o}r, 176
+    \subitem Ekvivalent punktladdning, 131
+    \subitem Komplexv{\"a}rd envelopp, 189
+    \subitem V{\aa }gekvation f{\"o}r, 178
   \item Elektrisk konduktivitet $\sigma $, xiv
   \item Elektrisk laddning, 39, 88, 91
     \subitem Elementarladdning, 41
-    \subitem I r{\"o}relse, 139
+    \subitem I r{\"o}relse, 141
     \subitem Konvention f{\"o}r tecken, 41
     \subitem Polaritet, 38, 39
   \item Elektrisk laddningst{\"a}thet, 42, 48
@@ -146,57 +146,57 @@
     \subitem Ytladdning $\sigma $, 49, 56
   \item Elektrisk monopol, 87
   \item Elektrisk permittivitet
-    \subitem Relativ permittivitet $\varepsilon $, 186
-    \subitem Relativ permittivitet $\varepsilon _{\rm r}$, 131, 134, 
-		174, 175
-    \subitem Vakuumpermittivitet $\varepsilon _0$, 39, 45, 51, 94, 114, 
-		131, 172, 186
-  \item Elektrisk polarisationsdensitet, 125, 131, 132
-  \item Elektrisk polarisationsdensitet ${\bf P}$, xiii, 140, 172, 174, 
-		176, 181, 183, 193
-    \subitem Kontra magnetisering, 177
-    \subitem Linearitet, 183
+    \subitem Relativ permittivitet $\varepsilon $, 188
+    \subitem Relativ permittivitet $\varepsilon _{\rm r}$, 133, 136, 
+		176, 177
+    \subitem Vakuumpermittivitet $\varepsilon _0$, 39, 45, 51, 94, 116, 
+		133, 174, 188
+  \item Elektrisk polarisationsdensitet, 127, 133, 134
+  \item Elektrisk polarisationsdensitet ${\bf P}$, xiii, 142, 174, 176, 
+		178, 183, 185, 195
+    \subitem Kontra magnetisering, 179
+    \subitem Linearitet, 185
   \item Elektrisk str{\"o}m, 88
   \item Elektrisk str{\"o}m $I$, xiv
   \item Elektrisk str{\"o}mt{\"a}thet ${\bf J}$, xiv
     \subitem Bunden, xv
-  \item Elektrisk susceptibilitet $\chi _{\rm e}$, 125, 131
+  \item Elektrisk susceptibilitet $\chi _{\rm e}$, 127, 133
   \item Elektriskt fl{\"o}de $\Phi _{\rm E}$, 44--48
-  \item Elektro-kvasistatik, 35
-  \item Elektrodynamik, xvi, 36, 206
+  \item Elektro-kvasistatik, 36
+  \item Elektrodynamik, xvi, 36, 209
     \subitem Kvantelektrodynamik, xxiii
     \subitem och elektromagnetism, 36
     \subitem V{\"a}rldskarta, xi
   \item Elektromagnetisk information
     \subitem utbredningshastighet, 37
-  \item Elektromagnetisk v{\aa }gekvation, 181, 183, 193
-    \subitem f{\"o}r retarderade potentialer, 196
-    \subitem Gemensam k{\"a}llterm, 193
-    \subitem I homogent dielektrikum, 183
+  \item Elektromagnetisk v{\aa }gekvation, 183, 185, 195
+    \subitem f{\"o}r retarderade potentialer, 198
+    \subitem Gemensam k{\"a}llterm, 195
+    \subitem I homogent dielektrikum, 185
   \item Elektromagnetisk v{\aa }gl{\"a}ngd, 35, 70, 87
   \item Elektromagnetisk v{\aa }gutbredning
     \subitem V{\"a}rldskarta, xi
-  \item Elektromagnetiska v{\aa }gekvationer, xvi, 169
-    \subitem Gemensam k{\"a}llterm, 176
-    \subitem H{\"a}rledning fr{\aa }n Maxwells ekvationer, 175, 176
+  \item Elektromagnetiska v{\aa }gekvationer, xvi, 171
+    \subitem Gemensam k{\"a}llterm, 178
+    \subitem H{\"a}rledning fr{\aa }n Maxwells ekvationer, 177, 178
   \item Elektromagnetiskt sl{\"a}kttr{\"a}d, 94
   \item Elektromagnetism, 3
     \subitem V{\"a}rldskarta, xi
-  \item Elektromotorisk ``kraft'' ${\cal E}$, xvi, 106, 107, 114, 121
+  \item Elektromotorisk ``kraft'' ${\cal E}$, xvi, 109, 116, 123
   \item Elektron, 38, 41, 87
     \subitem Fr{\aa }n gammalgrekiska $\eta \lambda \varepsilon \kern -.4pt\kappa \tau \kern -1.4pt\rho o\nu $, 
 		38
-  \item Elektronmoln, 126, 127, 131
-  \item Elektrostatik, xiv, 35, 38, 66, 87, 91, 105
-    \subitem Fr{\aa }n elektromagnetisk v{\aa }gekvation, 178
+  \item Elektronmoln, 128, 129, 133
+  \item Elektrostatik, xiv, 35, 38, 66, 87, 92, 107
+    \subitem Fr{\aa }n elektromagnetisk v{\aa }gekvation, 180
     \subitem Krav f{\"o}r statiska f{\"a}lt, xiv
     \subitem Tidig historik, 38
     \subitem V{\"a}rldskarta, xi
-  \item Elektrostatisk kraft, 127
+  \item Elektrostatisk kraft, 129
   \item Elektrostatiskt f{\"a}lt
-    \subitem Analogi med gravitationsf{\"a}lt, 194
+    \subitem Analogi med gravitationsf{\"a}lt, 196
     \subitem Divergens f{\"o}r, 50, 61
-    \subitem Rotation f{\"o}r, 57, 105, 114
+    \subitem Rotation f{\"o}r, 57, 107, 116
   \item Elementarladdning $e$, 38
   \item Empedocles (494--434~BC), 87
   \item Entydighetsteoremet, 66
@@ -207,107 +207,107 @@
 
   \indexspace
 
-  \item Faraday, Michael (1791--1867), xxiii, 4, 103, 105
-  \item Faraday-rotation, 130
+  \item Faraday, Michael (1791--1867), xxiii, 4, 105, 107
+  \item Faraday-rotation, 132
   \item Faradays bur, 70
-  \item Faradays induktionslag, xvi, xxiii, 105
+  \item Faradays induktionslag, xvi, xxiii, 107
     \subitem F{\"o}r spole, xvi
-    \subitem Generell h{\"a}rledning, 112, 114
-    \subitem Slinga med konstant hastighet, 108
-    \subitem Station{\"a}r slinga, 114
-  \item Faradays lag, 141, 169, 174, 175, 179
-    \subitem Differentialform, xvi, xxiii, 115
-    \subitem Integralform, xvi, 116
-  \item Ferromagnetism, 141
+    \subitem Generell h{\"a}rledning, 114, 116
+    \subitem Slinga med konstant hastighet, 110
+    \subitem Station{\"a}r slinga, 116
+  \item Faradays lag, 143, 171, 176, 177, 181
+    \subitem Differentialform, xvi, xxiii, 117
+    \subitem Integralform, xvi, 118
+  \item Ferromagnetism, 143
   \item Feynman, Richard (1918--1988), xxiii
   \item Franklin, Benjamin (1706--1790), xxiv, 38, 41
   \item Franska Akademien, 87
-  \item Fri laddningst{\"a}thet $\rho _{\rm f}$, 132
+  \item Fri laddningst{\"a}thet $\rho _{\rm f}$, 134
   \item F{\"a}lt
     \subitem Definition, 3
     \subitem Konservativt, 3
   \item F{\"a}ltlinjer
-    \subitem Elektriska, 131
-    \subitem Magnetiska, 106
+    \subitem Elektriska, 133
+    \subitem Magnetiska, 108
   \item F{\"a}ltteori, 43
-  \item F{\"o}rskjutningsstr{\"o}m, 172
+  \item F{\"o}rskjutningsstr{\"o}m, 174
 
   \indexspace
 
-  \item Gauge-funktion, 209
-  \item Gauge-funktion $\psi $, 200
-  \item Gauge-transform, 198, 209
-  \item Gauge-transformation, xvi, 199
-  \item Gauss lag, xviii, 55, 91, 127, 129, 134, 145
+  \item Gauge-funktion, 211
+  \item Gauge-funktion $\psi $, 202
+  \item Gauge-transform, 200, 211
+  \item Gauge-transformation, xvi, 201, 217
+  \item Gauss lag, xviii, 55, 91, 129, 131, 136, 147
     \subitem Cylindrisk geometri, 55
     \subitem Differentialform, 50, 51, 57
-    \subitem F{\"o}r elektrisk fl{\"o}dest{\"a}thet, 132
-    \subitem F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$, xiv, 169, 
-		174, 175, 179, 197
-    \subitem F{\"o}r elektrisk f{\"a}ltstyrka, 44, 133
-    \subitem F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$, xiv, 169, 
-		174, 175, 179
+    \subitem F{\"o}r elektrisk fl{\"o}dest{\"a}thet, 134
+    \subitem F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$, xiv, 171, 
+		176, 177, 181, 199
+    \subitem F{\"o}r elektrisk f{\"a}ltstyrka, 44, 135
+    \subitem F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$, xv, 171, 
+		176, 177, 181
     \subitem H{\"a}rledning fr{\aa }n Coulombs lag, 45
     \subitem Integralform, 48, 49, 51
     \subitem Plan geometri, 56
   \item Gauss teorem, xxiv
   \item Gauss, Carl Friedrich (1777--1855), xxiv, 44
-  \item Gibbs, Josiah Willard (1839--1903), 174
+  \item Gibbs, Josiah Willard (1839--1903), 176
   \item Gilbert, William (1544--1603), xxiv, 38
     \subitem {\it On Magnetism}, 38
     \subitem {\it On Magnetism} (1600), xxiv
-  \item Gilberts modell f{\"o}r magneter, 139
+  \item Gilberts modell f{\"o}r magneter, 141
   \item Gradient, 3, 59
     \subitem Gradient-teoremet, 60
   \item Gradient-teoremet, xviii, 60
     \subitem Analysens fundamentalsats, xviii
   \item Gravitation, 57, 58
-    \subitem Analogi med laddningsf{\"o}rdelning, 129
-    \subitem Ekvivalent punktladdning, 129
+    \subitem Analogi med laddningsf{\"o}rdelning, 131
+    \subitem Ekvivalent punktladdning, 131
   \item Greens f{\"o}rsta teorem, 68
   \item Greens teorem, xviii
     \subitem Andra teoremet, xviii
     \subitem F{\"o}rsta teoremet, xviii
   \item Greensfunktion, 68
-  \item Grok, 105
+  \item Grok, 108
 
   \indexspace
 
-  \item Halvv{\aa }gsantenn, 205
-  \item Heaviside, Oliver (1850--1925), xxiv, 88, 174
-  \item Hertz, Heinrich (1857--1894), 174
-  \item Hexacontatetrapol, 156
-  \item Hexadecapol, xv, 149, 156
-  \item Homogent medium, 130, 183
-  \item Hoppvillkor, 133
-    \subitem F{\"o}r elektriska f{\"a}lt i vakuum, 133
-  \item Hysteres, 142
+  \item Halvv{\aa }gsantenn, 207
+  \item Heaviside, Oliver (1850--1925), xxiv, 88, 176
+  \item Hertz, Heinrich (1857--1894), 176
+  \item Hexacontatetrapol, 158
+  \item Hexadecapol, xv, 151, 158
+  \item Homogent medium, 132, 185
+  \item Hoppvillkor, 135
+    \subitem F{\"o}r elektriska f{\"a}lt i vakuum, 135
+  \item Hysteres, 144
 
   \indexspace
 
   \item Induktionslagen
-    \subitem Faradays induktionslag, 105
-  \item Inhomogent medium, 130
-  \item Initialvillkor f{\"o}r v{\aa }gpropagation, 186
+    \subitem Faradays induktionslag, 107
+  \item Inhomogent medium, 132
+  \item Initialvillkor f{\"o}r v{\aa }gpropagation, 188
   \item Integral
-    \subitem Linje-, 119
+    \subitem Linje-, 121
     \subitem Linjeintegral, 57
-    \subitem Sluten yt-, 127
+    \subitem Sluten yt-, 129
     \subitem Sluten ytintegral, 50
-    \subitem Volym-, 127, 153
+    \subitem Volym-, 129, 155
     \subitem Volymintegral, 42, 48
-    \subitem Yt-, 127
+    \subitem Yt-, 129
     \subitem Ytintegral, 45--48
   \item Integraler
     \subitem Skal{\"a}ra, xix
-  \item Isotropt medium, 128, 130
+  \item Isotropt medium, 130, 132
 
   \indexspace
 
   \item Jackson, John David (1925--2016)
-    \subitem {\it Classical Electrodynamics}, 58, 68, 78, 119
+    \subitem {\it Classical Electrodynamics}, 58, 68, 78, 121
   \item Jord, 78, 83
-  \item J{\"a}rnk{\"a}rna, 115
+  \item J{\"a}rnk{\"a}rna, 117
 
   \indexspace
 
@@ -318,134 +318,133 @@
     \subitem Stokes teorem, xviii
   \item Klassisk elektromagnetism
     \subitem Portr{\"a}ttgalleri, xxi
-  \item Komplexv{\"a}rda f{\"a}ltenvelopper, 187, 188
+  \item Komplexv{\"a}rda f{\"a}ltenvelopper, 189, 190
   \item Konservativt f{\"a}lt
     \subitem Definition, 3
-  \item Konstitutiva relationer, xiii, 174, 179, 197
-  \item Kontinuitetsekvationen, xiv, 11, 169
+  \item Konstitutiva relationer, xiii, 176, 181, 199
+  \item Kontinuitetsekvationen, xiv, 11, 171
   \item Koordinatsystem, xx
     \subitem Cylindriska koordinater ($r,\varphi ,z$), xx
     \subitem Kartesiska koordinater ($x,y,z$), xx
     \subitem Sf{\"a}riska koordinater ($r,\varphi ,\theta $), xx
   \item Korpuskler, 38
-  \item Kvadrupol, xv, 149, 156
+  \item Kvadrupol, xv, 151, 158
   \item Kvantmekanik, 88
-    \subitem Dipoloperator, 126
-    \subitem V{\aa }gfunktion, 125
+    \subitem Dipoloperator, 128
+    \subitem V{\aa }gfunktion, 127
   \item K{\"a}lladdning, 39, 42, 45, 55, 59
   \item K{\"a}llpunkt, 39, 40
-  \item K{\"a}llpunkt ${\bf x}'$, 143
+  \item K{\"a}llpunkt ${\bf x}'$, 145
 
   \indexspace
 
   \item Labbsystem, 59
   \item Laddningsf{\"o}rdelning
-    \subitem Distribution f{\"o}r punktladdning, 152
-  \item Laddningst{\"a}thet, 127
-    \subitem Bunden, $\rho _{\rm b}$, 132
-    \subitem Fri, $\rho _{\rm f}$, 132
-    \subitem Fria laddningar $\rho _{\rm f}$, 181, 183
+    \subitem Distribution f{\"o}r punktladdning, 154
+  \item Laddningst{\"a}thet, 129
+    \subitem Bunden, $\rho _{\rm b}$, 134
+    \subitem Fri, $\rho _{\rm f}$, 134
+    \subitem Fria laddningar $\rho _{\rm f}$, 183, 185
     \subitem Linjeladdning, 79
-    \subitem Yt-, 134
+    \subitem Yt-, 136
     \subitem Ytladdning i perfekt ledande plan, 76
-  \item Lagen om att laddning inte kan f{\"o}rsvinna, 91, 162, 169, 
-		171, 172
+  \item Lagen om att laddning inte kan f{\"o}rsvinna, 91, 164, 171, 174
   \item Laplace, Pierre-Simon (1749--1827), xxv, 66
   \item Laplace-operatorn
-    \subitem Egenv{\"a}rdesproblem f{\"o}r, 187
+    \subitem Egenv{\"a}rdesproblem f{\"o}r, 189
   \item Laplace-operatorn $\nabla ^2$, xxv
   \item Laplaces ekvation, xxv, 65, 66
-  \item Leibniz integralregel, 112
+  \item Leibniz integralregel, 114
   \item Leibniz, Gottfried Wilhelm (1646--1716), 45
-  \item Lenz lag, xvi, xxv, 110, 111
+  \item Lenz lag, xvi, xxv, 112, 113
   \item Lenz, Emil (1804--1865), xxv
-  \item Linj{\"a}rt system, 128
+  \item Linj{\"a}rt system, 130
   \item Ljus, 36
   \item Ljushastighet, 35, 43
-    \subitem I dielektrikum, $c$, 186, 196
-    \subitem I vakuum, $c_0$, 186, 196
-  \item Lorentz, Hendrik Antoon (1853--1928), xvii, xxv, 106
-  \item Lorentz-kraften, 88, 105, 106, 114
+    \subitem I dielektrikum, $c$, 188, 198
+    \subitem I vakuum, $c_0$, 188, 198
+  \item Lorentz, Hendrik Antoon (1853--1928), xvii, xxv, 109, 216
+  \item Lorentz-kraften, 88, 107, 109, 116
   \item Lorentz-kraften ${\bf F}_{\rm m}=q\,{\bf v}\times {\bf B}$, xiv, 
 		4
-  \item Lorenz, Ludvig (1829--1891), xvii, xxvi
-  \item Lorenz-villkoret, xvii, 191, 209
-    \subitem {\it Lorenz gauge}, 191, 200, 201
+  \item Lorenz, Ludvig (1829--1891), xvii, xxvi, 216
+  \item Lorenz-villkoret, xvii, 193, 211
+    \subitem {\it Lorenz gauge}, 193, 202, 203
     \subitem Gauge-transformation, xvii
     \subitem Retarderade potentialer, xvii
     \subitem V{\aa }gekvationer f{\"o}r potentialer, xvii
 
   \indexspace
 
-  \item Maclaurin-utveckling, 159, 160, 162
+  \item Maclaurin-utveckling, 161, 162, 164
     \subitem Av laddningst{\"a}thet $\phi $, xv
     \subitem Av str{\"o}mt{\"a}thet ${\bf J}$, xv
-  \item Magnetf{\"a}lt, 88, 106
-  \item Magnetisering ${\bf M}$, xiii, 140, 143, 174, 176, 181, 183, 
-		193
-    \subitem ``Magnetisk polarisationsdensitet'', 140
-    \subitem Kontra elektrisk polarisationsdensitet, 177
-    \subitem Som bundna yt- och volymstr{\"o}mmar, 141
-    \subitem Statisk, 143
-  \item Magnetiseringsstyrka ${\bf H}$, 141
+  \item Magnetf{\"a}lt, 88, 108
+  \item Magnetisering ${\bf M}$, xiii, 142, 145, 176, 178, 183, 185, 
+		195
+    \subitem ``Magnetisk polarisationsdensitet'', 142
+    \subitem Kontra elektrisk polarisationsdensitet, 179
+    \subitem Som bundna yt- och volymstr{\"o}mmar, 143
+    \subitem Statisk, 145
+  \item Magnetiseringsstyrka ${\bf H}$, 143
   \item Magnetisk dipol ${\bf m}$
-    \subitem Kraft ${\bf F}_{\rm m}$ verkande p{\aa }, 140
-    \subitem Upplagrad energi $W_{\rm m}$, 140
-    \subitem Vridmoment $\tau _{\rm m}$ verkande p{\aa }, 140
-  \item Magnetisk fl{\"o}dest{\"a}thet, 88, 106
+    \subitem Kraft ${\bf F}_{\rm m}$ verkande p{\aa }, 142
+    \subitem Upplagrad energi $W_{\rm m}$, 142
+    \subitem Vridmoment $\tau _{\rm m}$ verkande p{\aa }, 142
+  \item Magnetisk fl{\"o}dest{\"a}thet, 88, 108
     \subitem Divergens f{\"o}r, 95
     \subitem Rotation f{\"o}r, 96
-  \item Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$, xiii, 141, 151, 166, 
-		169, 174, 193
-    \subitem Gauss lag, xiv
-    \subitem Komplexv{\"a}rd envelopp, 187
+  \item Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$, xiii, 143, 153, 168, 
+		171, 176, 195
+    \subitem Gauss lag, xv
+    \subitem Komplexv{\"a}rd envelopp, 189
     \subitem Statisk, 5
-    \subitem V{\aa }gekvation f{\"o}r, 176
-  \item Magnetisk f{\"a}ltstyrka ${\bf H}$, 174
+    \subitem V{\aa }gekvation f{\"o}r, 178
+  \item Magnetisk f{\"a}ltstyrka ${\bf H}$, 176
     \subitem {\OE }rsted, xxvi
   \item Magnetisk kraft utf{\"o}r inget arbete, 89
-  \item Magnetisk monopol, xiv, 87
+  \item Magnetisk monopol, xv, 87
   \item Magnetisk permeabilitet
-    \subitem Relativ permeabilitet $\mu _{\rm r}$, 141, 151, 174, 175
-    \subitem Vakuumpermeabilitet $\mu _0$, 94, 114, 119, 141, 151, 186
+    \subitem Relativ permeabilitet $\mu _{\rm r}$, 143, 153, 176, 177
+    \subitem Vakuumpermeabilitet $\mu _0$, 94, 116, 121, 143, 153, 188
   \item Magnetiska monopoler
-    \subitem Fr{\aa }n multipolutveckling av vektorpotential, 162
-    \subitem Icke-existens av, 95, 139, 195
-    \subitem Icke-existens av, dynamiskt, 165
-    \subitem Icke-existens av, statiskt, 162, 166
+    \subitem Fr{\aa }n multipolutveckling av vektorpotential, 164
+    \subitem Icke-existens av, 95, 96, 141, 197
+    \subitem Icke-existens av, dynamiskt, 167
+    \subitem Icke-existens av, statiskt, 164, 168
   \item Magnetiska poler, 87
   \item Magnetiskt dipolmoment, 88
-    \subitem Fr{\aa }n multipolutveckling av vektorpotential, 164
-  \item Magnetiskt fl{\"o}de $\Phi _{\rm M}$, 105, 106, 113, 118, 119, 
-		121
-    \subitem Tidsberoende, 106, 112
+    \subitem Fr{\aa }n multipolutveckling av vektorpotential, 166
+  \item Magnetiskt fl{\"o}de $\Phi _{\rm M}$, 107, 108, 115, 120, 121, 
+		123
+    \subitem Tidsberoende, 108, 114
   \item Magnetiskt fl{\"o}de $\Phi _{\rm m}$, xvi
   \item Magnetiskt kvadrupolmoment
-    \subitem Fr{\aa }n multipolutveckling av vektorpotential, 164
-  \item Magnetostatik, xiv, 87, 91
-    \subitem Fr{\aa }n elektromagnetisk v{\aa }gekvation, 178
+    \subitem Fr{\aa }n multipolutveckling av vektorpotential, 166
+  \item Magnetostatik, xiv, 87, 92
+    \subitem Fr{\aa }n elektromagnetisk v{\aa }gekvation, 180
     \subitem Krav f{\"o}r statiska f{\"a}lt, xiv
     \subitem V{\"a}rldskarta, xi
-  \item Maxwell, James Clerk (1831--1879), xxvi, 4, 11, 172
-    \subitem {\it The Law of Total Currents}, 173
-  \item Maxwells ekvationer, xxiv, xxvi, 36, 88, 174
-    \subitem Differentialform, xvi, 169, 174, 179
-    \subitem Integralform, xvi, 169, 174, 179
+  \item Maxwell, James Clerk (1831--1879), xxvi, 4, 11, 174
+    \subitem {\it The Law of Total Currents}, 175
+  \item Maxwells ekvationer, xxiv, xxvi, 36, 88, 176
+    \subitem Differentialform, xvi, 171, 176, 181
+    \subitem Integralform, xvi, 171, 176, 181
   \item Mikrov{\aa }gor, 36
-  \item Molekyler, 151
-  \item Monopol, xv, 149, 156
-  \item Mossotti, Ottaviano-Fabrizio (1791--1863), 135
-  \item Motpropagerande v{\aa }gor, 186
-  \item Multipolmoment, 126
-  \item Multipolutveckling, 151
+  \item Molekyler, 153
+  \item Monopol, xv, 151, 158
+  \item Mossotti, Ottaviano-Fabrizio (1791--1863), 137
+  \item Motpropagerande v{\aa }gor, 188
+  \item Multipolmoment, 128
+  \item Multipolutveckling, 153
     \subitem F{\"o}r kontinuum av str{\"o}mt{\"a}thet ${\bf J}$, xv
-    \subitem F{\"o}r skal{\"a}r potential, 159
-    \subitem F{\"o}r vektorpotential, xv, 162
+    \subitem F{\"o}r skal{\"a}r potential, 161
+    \subitem F{\"o}r vektorpotential, xv, 164
     \subitem Generell av laddningst{\"a}thet $\rho $, xv
-    \subitem Generell laddnings\-f{\"o}r\-del\-ning, 159
-    \subitem Generell str{\"o}mt{\"a}thet, 162
+    \subitem Generell laddnings\-f{\"o}r\-del\-ning, 161
+    \subitem Generell str{\"o}mt{\"a}thet, 164
     \subitem Generell str{\"o}mt{\"a}thet ${\bf J}$, xv
-    \subitem Klassificering av moment, xv, 149, 156
+    \subitem Klassificering av moment, xv, 151, 158
     \subitem Skal{\"a}r potential $\phi $, xv
     \subitem System av punktladdningar, xv
     \subitem Vektorpotential ${\bf A}$, xv
@@ -453,60 +452,60 @@
   \indexspace
 
   \item Naturkonstanter, xiii
-  \item Neumann, Franz Ernst (1798--1895), xxvi, 119
+  \item Neumann, Franz Ernst (1798--1895), xxvi, 121
   \item Neumanns formel
-    \subitem {\"O}msesidig induktans, xxvi, 103, 118, 119, 121
+    \subitem {\"O}msesidig induktans, xxvi, 105, 120, 121, 123
   \item Normalvektor, 44
 
   \indexspace
 
-  \item Observationspunkt, 39, 42, 57
-  \item Observationspunkt ${\bf x}$, 143
-  \item Oktopol, xv, 149, 153, 156
-  \item Optisk aktivitet, 130
-  \item Ortogonalitet mellan f{\"a}lt och v{\aa }gvektor, 188
+  \item Observationspunkt, 39, 43, 57
+  \item Observationspunkt ${\bf x}$, 145
+  \item Oktopol, xv, 151, 155, 158
+  \item Optisk aktivitet, 132
+  \item Ortogonalitet mellan f{\"a}lt och v{\aa }gvektor, 190
 
   \indexspace
 
-  \item Paramagnetism, 141
-  \item Partiell integration, 144
+  \item Paramagnetism, 143
+  \item Partiell integration, 146
   \item Perfekt ledare, 71
   \item Permanentmagnet, 87
-  \item Plana elektromagnetiska f{\"a}lt, 184
-  \item Planv{\aa }guppdelning, 181, 187
+  \item Plana elektromagnetiska f{\"a}lt, 186
+  \item Planv{\aa }guppdelning, 183, 189
   \item Poisson, Sim\'eon Denis (1781--1840), xxvii
-  \item Poissons ekvation, xv, xxvii, 61, 66, 118, 196
+  \item Poissons ekvation, xv, xxvii, 61, 66, 120, 198
     \subitem F{\"or} skal{\"a}r potential $\phi $, xiv
     \subitem F{\"o}r vektorpotentialen ${\bf A}$, xv
-    \subitem L{\"o}sningar p{\aa } integralform, 196
+    \subitem L{\"o}sningar p{\aa } integralform, 198
   \item Polarisationsdensitet {\bf P}
-    \subitem Elektrisk, 183
-  \item Potentialskillnad, 107
+    \subitem Elektrisk, 185
+  \item Potentialskillnad, 109
   \item Potentiell energi
-    \subitem Elektrostatisk, 60, 194
+    \subitem Elektrostatisk, 60, 196
   \item Poynting-vektorn ${\bf S}$
-    \subitem Effekt transporterat av elektromagnetiskt f{\"a}lt, 188
+    \subitem Effekt transporterat av elektromagnetiskt f{\"a}lt, 190
   \item Proton, 41
-  \item Punktladdning, 39, 45, 106, 129, 152
+  \item Punktladdning, 39, 45, 109, 131, 154
     \subitem System av punktladdningar, 40
   \item Punktladdningar, xiv
 
   \indexspace
 
   \item Radiov{\aa }gor, 36
-  \item Randvillkor, 133
+  \item Randvillkor, 135
     \subitem F{\"o}r Laplaces ekvation, 66
-  \item Reciprocitet, 119
-  \item Relativ elektrisk permittivitet $\varepsilon _{\rm r}$, 131
+  \item Reciprocitet, 121
+  \item Relativ elektrisk permittivitet $\varepsilon _{\rm r}$, 133
   \item Relativitetsteori, 43
   \item Retarderad potential
-    \subitem Tidsf{\"o}rdr{\"o}jd potential, 191, 193, 195, 201, 207, 
-		209
-    \subitem Tidsf{\"o}rdr{\"o}jd potential p{\aa } integralform, 203
+    \subitem Tidsf{\"o}rdr{\"o}jd potential, 193, 195, 197, 203, 209, 
+		211
+    \subitem Tidsf{\"o}rdr{\"o}jd potential p{\aa } integralform, 205
   \item Retarderad tid
-    \subitem Tidsf{\"o}rdr{\"o}jning, 196, 209
+    \subitem Tidsf{\"o}rdr{\"o}jning, 198, 211
   \item Retarderade potentialer
-    \subitem f{\"o}r cylindrisk rak antenn, 213
+    \subitem f{\"o}r cylindrisk rak antenn, 215
   \item Rotation
     \subitem Definition, 3
   \item Rutherford, Ernest (1871--1937), 38
@@ -519,31 +518,32 @@
     \subitem Endimensionella Maclaurin-utvecklingar, xix
     \subitem Tredimensionell Maclaurin-utveckling, xix
     \subitem Tredimensionella Taylor-utveckling, xix
-  \item Sf{\"a}risk symmetri, 127, 129
+  \item Sf{\"a}risk symmetri, 129, 131
   \item Sf{\"a}riska koordinater, 57
-  \item SI-enheter, 174
-  \item Skal{\"a}r potential, 118
+  \item SI-enheter, 176
+  \item Skal{\"a}r potential, 120
     \subitem Elektrostatisk, 65
-  \item Skal{\"a}r potential $\phi $, xv, 58, 125, 151, 153, 154, 
-		159, 160, 166
-    \subitem Analogi med gravitation, 194
-    \subitem Elektrodynamisk, 191, 195, 209
+  \item Skal{\"a}r potential $\phi $, xv, 58, 127, 153, 155, 156, 
+		161, 162, 168
+    \subitem Analogi med gravitation, 196
+    \subitem Elektrodynamisk, 193, 197, 211
     \subitem Elektrodynamiska potentialer, xvi
     \subitem Elektrostatisk, xiv, 58--60
     \subitem Elektrostatisk potential, xiv
     \subitem Existens f{\"o}r, xiv
     \subitem Explicit l{\"o}sning till Poissons ekvation, xiv
     \subitem Fr{\aa }n punktladdning $q'$, xiv
-    \subitem Multipolutveckling, 160
-    \subitem V{\aa }gekvation f{\"o}r, 198
+    \subitem Multipolutveckling, 162
+    \subitem V{\aa }gekvation f{\"o}r, 200
     \subitem V{\aa }gekvation, generell, xvi
   \item Spegelladdning, 72
     \subitem Cylindriska perfekt ledande gr{\"a}nsytor, 78--82
     \subitem Gr{\"a}nsytor mellan dielektrika, 77
     \subitem Perfekt ledande plan, 72--75
     \subitem Sf{\"a}riska perfekt ledande gr{\"a}nsytor, 83
-  \item Spole, 115
-  \item Stokes teorem, xviii, xxvii, 57, 58, 105, 115, 116, 133, 145
+  \item Spole, 117
+  \item Stokes teorem, xviii, xxvii, 57, 58, 99, 107, 117, 118, 135, 
+		147
     \subitem Kelvin--Stokes teorem, xviii
   \item Stokes, George (1819--1902), xxvii
   \item Str{\"o}m, 87, 89
@@ -551,14 +551,14 @@
     \subitem Transporterad laddning, 10
   \item Str{\"o}mslinga, 10, 89, 90
     \subitem Delta-distribution och str{\"o}mt{\"a}thet, 10
-    \subitem R{\"o}rlig, 116
-    \subitem Sluten, 88, 106, 114, 121, 140, 141
-    \subitem Station{\"a}r, 114, 116
-    \subitem Varierande magnetiskt fl{\"o}de genom, 116
+    \subitem R{\"o}rlig, 118
+    \subitem Sluten, 88, 109, 116, 123, 142, 143
+    \subitem Station{\"a}r, 116, 118
+    \subitem Varierande magnetiskt fl{\"o}de genom, 118
   \item Str{\"o}mt{\"a}thet, 90, 91
-    \subitem Bundna laddningar, 173
-    \subitem Fria laddningar, 172, 181, 183
-    \subitem Fria laddningar, ${\bf J}_{\rm f}$, 193
+    \subitem Bundna laddningar, 175
+    \subitem Fria laddningar, 174, 183, 185
+    \subitem Fria laddningar, ${\bf J}_{\rm f}$, 195
   \item Str{\"o}mt{\"a}thet ${\bf J}$, 10
     \subitem Divergens i statiska problem, xiv
     \subitem Elektromagnetiska v{\aa }gekvationer, xvi
@@ -567,23 +567,23 @@
 
   \indexspace
 
-  \item Taylor-utveckling, 159, 160, 162
-  \item Tensor, 130
+  \item Taylor-utveckling, 161, 162, 164
+  \item Tensor, 132
   \item Tesla, Nikola (1856--1943), xxvii
   \item Testladdning, 40
   \item Thomson, George Paget (1892--1975), xxviii
   \item Thomson, Joseph John (1856--1940), xxviii, 38, 41
-  \item Tidsharmoniska f{\"a}lt, 187
+  \item Tidsharmoniska f{\"a}lt, 189
   \item Tricket $\displaystyle \nabla {{1}\over {\char 124}{\bf x}-{\bf x}'{\char 124}} =-{{({\bf x}-{\bf x}')}\over {{\char 124}{\bf x}-{\bf x}'{\char 124}^3}}$, 
-		xviii, 59, 95, 144
+		xviii, 59, 95, 146
   \item Tricket II $\displaystyle \nabla {{1}\over {\char 124}{\bf x}-{\bf x}'{\char 124}} =-{{({\bf x}-{\bf x}')}\over {{\char 124}{\bf x}-{\bf x}'{\char 124}^3}}$, 
 		xviii
 
   \indexspace
 
   \item Upplagrad energi
-    \subitem I elektriskt f{\"a}lt, 135
-    \subitem I magnetf{\"a}lt, 142
+    \subitem I elektriskt f{\"a}lt, 137
+    \subitem I magnetf{\"a}lt, 144
 
   \indexspace
 
@@ -591,10 +591,10 @@
     \subitem Anv{\"a}ndbara integraler, xviii
     \subitem Introduktion till, 3
   \item Vektoridentitet
-    \subitem $\nabla \cdot (\nabla \times {\bf a})=0$, 28, 31
-    \subitem $\nabla \times (\nabla \phi )={\bf 0}$, 27, 31
+    \subitem $\nabla \cdot (\nabla \times {\bf a})=0$, 28, 32
+    \subitem $\nabla \times (\nabla \phi )={\bf 0}$, 28, 32
     \subitem $\nabla \times (\nabla \times {\bf a}) =\nabla (\nabla \cdot {\bf a})-\nabla ^2{\bf a}$, 
-		29, 31
+		29, 32
   \item Vektoridentiteter, xviii
     \subitem ``Tricket'', \indexsee{``Tricket''}{99999}
     \subitem Andraderivator, xviii
@@ -604,30 +604,31 @@
     \subitem Notation, xviii
     \subitem Produktregler, xviii
     \subitem Trippelprodukter, xviii
-  \item Vektorpotential, 99, 118
-    \subitem Amp\`eres lag, 99
-    \subitem Explicit l{\"o}sning, 100
-  \item Vektorpotential ${\bf A}$, xv, 5, 143, 145, 151, 166, 198
-    \subitem Ekvivalenta volym- och ytstr{\"o}mmar, 146
-    \subitem Elektrodynamisk, 191, 195, 209
+  \item Vektorpotential, 100, 120
+    \subitem Amp\`eres lag, 100
+    \subitem Explicit l{\"o}sning, 101
+    \subitem Tolkning, 102
+  \item Vektorpotential ${\bf A}$, xv, 5, 145, 147, 153, 168, 200
+    \subitem Ekvivalenta volym- och ytstr{\"o}mmar, 148
+    \subitem Elektrodynamisk, 193, 197, 211
     \subitem Explicit l{\"o}sning till Poissons ekvation, xv
-    \subitem Magnetisk monopolterm, 162
-    \subitem Magnetiska monopolterm, 163
-    \subitem Magnetiskt dipolmoment, 164
-    \subitem Magnetiskt kvadrupolmoment, 164
+    \subitem Magnetisk monopolterm, 164
+    \subitem Magnetiska monopolterm, 165
+    \subitem Magnetiskt dipolmoment, 166
+    \subitem Magnetiskt kvadrupolmoment, 166
     \subitem Magnetostatisk, xiv
-    \subitem Multipolutveckling, 162
+    \subitem Multipolutveckling, 164
     \subitem V{\aa }gekvation, generell, xvi
   \item Vektorpotentialen ${\bf A}$
     \subitem Elektrodynamiska potentialer, xvi
   \item Virtuell sf{\"a}r, 45, 49
-  \item Virtuell slinga, 110
+  \item Virtuell slinga, 112
   \item Virtuella fotoner, 41
   \item Volymintegral
     \subitem Av Diracs delta-distribution, 7
-  \item von Helmholtz, Hermann (1821--1894), 187
+  \item von Helmholtz, Hermann (1821--1894), 189
   \item V{\"a}rldskarta {\"o}ver elektromagnetisk f{\"a}ltteori, xi
-  \item V{\aa }gvektor ${\bf k}$, 187, 188
+  \item V{\aa }gvektor ${\bf k}$, 189, 190
 
   \indexspace
 
@@ -636,7 +637,7 @@
 
   \indexspace
 
-  \item Ytladdningst{\"a}thet, 134
+  \item Ytladdningst{\"a}thet, 136
   \item Ytstr{\"o}mt{\"a}thet ${\bf K}$
     \subitem Bunden, ${\bf K}_{\rm b}={\bf M}\times {\bf e}_n$, xv
 
