@@ -1,0 +1,988 @@
+\indexentry{Elektrisk polarisationsdensitet}{vi}
+\indexentry{V{\"a}rldskarta {\"o}ver elektromagnetisk f{\"a}ltteori}{xi}
+\indexentry{Elektrostatik!V{\"a}rldskarta}{xi}
+\indexentry{Magnetostatik!V{\"a}rldskarta}{xi}
+\indexentry{Elektrodynamik!V{\"a}rldskarta}{xi}
+\indexentry{Elektromagnetism!V{\"a}rldskarta}{xi}
+\indexentry{Elektromagnetisk v{\aa }gutbredning!V{\"a}rldskarta}{xi}
+\indexentry{Beteckningar och SI-enheter}{xiii}
+\indexentry{Naturkonstanter}{xiii}
+\indexentry{Konstitutiva relationer}{xiii}
+\indexentry{Elektrisk polarisationsdensitet ${\bf P}$}{xiii}
+\indexentry{Elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{xiii}
+\indexentry{Magnetisering ${\bf M}$}{xiii}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{xiii}
+\indexentry{Elektrostatik}{xiv}
+\indexentry{Punktladdningar}{xiv}
+\indexentry{Coulombs kraftlag}{xiv}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{xiv}
+\indexentry{Coulombs generaliserade lag!Coulombintegralen}{xiv}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{xiv}
+\indexentry{Skal{\"a}r potential $\phi $!Existens f{\"o}r}{xiv}
+\indexentry{Elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{xiv}
+\indexentry{Gauss lag!F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{xiv}
+\indexentry{Poissons ekvation!F{\"or} skal{\"a}r potential $\phi $}{xiv}
+\indexentry{Skal{\"a}r potential $\phi $!Explicit l{\"o}sning till Poissons ekvation}{xiv}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{xiv}
+\indexentry{Skal{\"a}r potential $\phi $!Fr{\aa }n punktladdning $q'$}{xiv}
+\indexentry{Arbete och upplagrad energi!Elektrostatisk laddning}{xiv}
+\indexentry{Arbete och upplagrad energi!Skal{\"a}r potential $\phi $}{xiv}
+\indexentry{Magnetostatik}{xiv}
+\indexentry{Lorentz-kraften ${\bf F}_{\rm m}=q\,{\bf v}\times {\bf B}$}{xiv}
+\indexentry{Amp{\`e}res kraftlag}{xiv}
+\indexentry{Elektrisk str{\"o}m $I$}{xiv}
+\indexentry{Elektrisk str{\"o}mt{\"a}thet ${\bf J}$}{xiv}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$!I medium med konduktivitet $\sigma $}{xiv}
+\indexentry{Elektrisk konduktivitet $\sigma $}{xiv}
+\indexentry{Kontinuitetsekvationen}{xiv}
+\indexentry{Elektrostatik!Krav f{\"o}r statiska f{\"a}lt}{xiv}
+\indexentry{Magnetostatik!Krav f{\"o}r statiska f{\"a}lt}{xiv}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$!Divergens i statiska problem}{xiv}
+\indexentry{Biot--Savarts lag!F{\"o}r str{\"o}mslinga}{xiv}
+\indexentry{Biot--Savarts lag}{xiv}
+\indexentry{Vektorpotential ${\bf A}$!Magnetostatisk}{xiv}
+\indexentry{Gauss lag!F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{xv}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$!Gauss lag}{xv}
+\indexentry{Magnetisk monopol}{xv}
+\indexentry{Amp\`eres lag!F{\"o}r statiska magnetiska f{\"a}lt}{xv}
+\indexentry{Elektrisk str{\"o}mt{\"a}thet ${\bf J}$!Bunden}{xv}
+\indexentry{Ytstr{\"o}mt{\"a}thet ${\bf K}$!Bunden, ${\bf K}_{\rm b}={\bf M}\times {\bf e}_n$}{xv}
+\indexentry{Poissons ekvation}{xv}
+\indexentry{Poissons ekvation!F{\"o}r vektorpotentialen ${\bf A}$}{xv}
+\indexentry{Vektorpotential ${\bf A}$!Explicit l{\"o}sning till Poissons ekvation}{xv}
+\indexentry{Multipolutveckling!F{\"o}r skal{\"a}r potential $\phi $}{xv}
+\indexentry{Multipolutveckling!F{\"o}r vektorpotential ${\bf A}$}{xv}
+\indexentry{Multipolutveckling!Klassificering av moment}{xv}
+\indexentry{Monopol}{xv}
+\indexentry{Dipol}{xv}
+\indexentry{Kvadrupol}{xv}
+\indexentry{Oktopol}{xv}
+\indexentry{Hexadecapol}{xv}
+\indexentry{Dotriacontapol}{xv}
+\indexentry{Maclaurin-utveckling!Av laddningst{\"a}thet $\phi $}{xv}
+\indexentry{Maclaurin-utveckling!Av str{\"o}mt{\"a}thet ${\bf J}$}{xv}
+\indexentry{Skal{\"a}r potential $\phi $}{xv}
+\indexentry{Vektorpotential ${\bf A}$}{xv}
+\indexentry{Multipolutveckling!F{\"o}r system av punktladdningar $q'_k$}{xv}
+\indexentry{Multipolutveckling!Av laddningst{\"a}thet $\rho $}{xv}
+\indexentry{Multipolutveckling!Av str{\"o}mt{\"a}thet ${\bf J}$}{xv}
+\indexentry{Multipolutveckling!F{\"o}r vektorpotential ${\bf A}$}{xv}
+\indexentry{Dipolapproximationen}{xv}
+\indexentry{Dipolmoment!Elektriskt}{xv}
+\indexentry{Dipolmoment!Magnetiskt}{xv}
+\indexentry{Elektrodynamik}{xvi}
+\indexentry{Magnetiskt fl{\"o}de $\Phi _{\rm m}$}{xvi}
+\indexentry{Elektromotorisk ``kraft'' ${\cal E}$}{xvi}
+\indexentry{Faradays induktionslag}{xvi}
+\indexentry{Lenz lag}{xvi}
+\indexentry{Faradays induktionslag!F{\"o}r spole}{xvi}
+\indexentry{Faradays lag!Differentialform}{xvi}
+\indexentry{Faradays lag!Integralform}{xvi}
+\indexentry{{\"O}msesidig induktans}{xvi}
+\indexentry{{\"O}msesidig induktans!Neumanns formel}{xvi}
+\indexentry{Maxwells ekvationer!Differentialform}{xvi}
+\indexentry{Maxwells ekvationer!Integralform}{xvi}
+\indexentry{Elektromagnetiska v{\aa }gekvationer}{xvi}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$!Elektromagnetiska v{\aa }gekvationer}{xvi}
+\indexentry{Vektorpotential ${\bf A}$!Elektrodynamisk}{xvi}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrodynamisk}{xvi}
+\indexentry{Vektorpotential ${\bf A}$!V{\aa }gekvation}{xvi}
+\indexentry{Skal{\"a}r potential $\phi $!V{\aa }gekvation}{xvi}
+\indexentry{Gauge-transformation}{xvi}
+\indexentry{Lorenz-villkoret}{xvii}
+\indexentry{Lorenz-villkoret!Gauge-transformation}{xvii}
+\indexentry{Lorentz, Hendrik Antoon (1853--1928)}{xvii}
+\indexentry{Lorenz, Ludvig (1829--1891)}{xvii}
+\indexentry{Lorenz-villkoret!V{\aa }gekvationer f{\"o}r potentialer}{xvii}
+\indexentry{Lorenz-villkoret!Retarderade potentialer}{xvii}
+\indexentry{de Coulomb, Charles-Augustin (1736--1806)}{xvii}
+\indexentry{Coulomb-villkoret!Gauge-transformation}{xvii}
+\indexentry{Coulomb-villkoret!V{\aa }gekvationer f{\"o}r potentialer}{xvii}
+\indexentry{Coulomb-villkoret!Instantan skal{\"a}r potential}{xvii}
+\indexentry{Vektoridentiteter}{xviii}
+\indexentry{Vektoridentiteter!Notation}{xviii}
+\indexentry{Vektoridentiteter!Trippelprodukter}{xviii}
+\indexentry{Vektoridentiteter!Produktregler}{xviii}
+\indexentry{Vektoridentiteter!``Tricket''|indexsee{``Tricket''}}{99999}
+\indexentry{Tricket $\displaystyle \nabla {{1}\over {\char 124}{\bf x}-{\bf x}'{\char 124}} =-{{({\bf x}-{\bf x}')}\over {{\char 124}{\bf x}-{\bf x}'{\char 124}^3}}$}{xviii}
+\indexentry{Tricket II $\displaystyle \nabla {{1}\over {\char 124}{\bf x}-{\bf x}'{\char 124}} =-{{({\bf x}-{\bf x}')}\over {{\char 124}{\bf x}-{\bf x}'{\char 124}^3}}$}{xviii}
+\indexentry{Vektoridentiteter!Andraderivator}{xviii}
+\indexentry{Gauss lag}{xviii}
+\indexentry{Vektoridentiteter!Divergensteoremet}{xviii}
+\indexentry{Vektoridentiteter!Gauss teorem}{xviii}
+\indexentry{Vektoridentiteter!Gauss teorem, ``rotationsversionen''}{xviii}
+\indexentry{Stokes teorem}{xviii}
+\indexentry{Stokes teorem}{xviii}
+\indexentry{Stokes teorem!Kelvin--Stokes teorem}{xviii}
+\indexentry{Kelvin--Stokes teorem!Stokes teorem}{xviii}
+\indexentry{Gradient-teoremet}{xviii}
+\indexentry{Gradient-teoremet!Analysens fundamentalsats}{xviii}
+\indexentry{Analysens fundamentalsats!F{\"o}r gradienter}{xviii}
+\indexentry{Greens teorem}{xviii}
+\indexentry{Greens teorem!F{\"o}rsta teoremet}{xviii}
+\indexentry{Greens teorem!Andra teoremet}{xviii}
+\indexentry{Vektoranalys!Anv{\"a}ndbara integraler}{xviii}
+\indexentry{Diracs delta-distribution $\delta $}{xviii}
+\indexentry{Diracs delta-distribution $\delta $!Selektionsegenskaper}{xviii}
+\indexentry{Diracs delta-distribution $\delta $!Normalisering}{xviii}
+\indexentry{Integraler!Skal{\"a}ra}{xix}
+\indexentry{Serieutvecklingar}{xix}
+\indexentry{Serieutvecklingar!Endimensionella Maclaurin-utvecklingar}{xix}
+\indexentry{Serieutvecklingar!Tredimensionella Taylor-utveckling}{xix}
+\indexentry{Serieutvecklingar!Tredimensionell Maclaurin-utveckling}{xix}
+\indexentry{Koordinatsystem}{xx}
+\indexentry{Koordinatsystem!Kartesiska koordinater ($x,y,z$)}{xx}
+\indexentry{Koordinatsystem!Cylindriska koordinater ($r,\varphi ,z$)}{xx}
+\indexentry{Koordinatsystem!Sf{\"a}riska koordinater ($r,\varphi ,\theta $)}{xx}
+\indexentry{Klassisk elektromagnetism!Portr{\"a}ttgalleri}{xxi}
+\indexentry{Portr{\"a}ttgalleri!Klassisk elektromagnetism}{xxi}
+\indexentry{d'Alembert, Jean le Rond (1717--1783)}{xxii}
+\indexentry{Amp\`ere, Andr\'e-Marie (1775--1836)}{xxii}
+\indexentry{Amp\`eres lag!F{\"or}r statiska magnetiska f{\"a}lt}{xxii}
+\indexentry{Biot, Jean-Baptiste (1774--1862)}{xxii}
+\indexentry{Biot--Savarts lag}{xxii}
+\indexentry{de Broglie, Louis (1892--1987)}{xxii}
+\indexentry{de Coulomb, Charles-Augustin (1736--1806)}{xxiii}
+\indexentry{Coulombs kraftlag}{xxiii}
+\indexentry{Faraday, Michael (1791--1867)}{xxiii}
+\indexentry{Faradays induktionslag}{xxiii}
+\indexentry{Faradays lag!Differentialform}{xxiii}
+\indexentry{de Cisternay du Fay, Fran\c {c}ois (1698--1739)}{xxiii}
+\indexentry{de Cisternay du Fay, Fran\c {c}ois (1698--1739)!{\it Sixi\`eme m\'emoire sur l'\'electricit\'e (1734)}}{xxiii}
+\indexentry{Feynman, Richard (1918--1988)}{xxiii}
+\indexentry{Elektrodynamik!Kvantelektrodynamik}{xxiii}
+\indexentry{Franklin, Benjamin (1706--1790)}{xxiv}
+\indexentry{Gauss, Carl Friedrich (1777--1855)}{xxiv}
+\indexentry{Gauss teorem}{xxiv}
+\indexentry{Gilbert, William (1544--1603)}{xxiv}
+\indexentry{Gilbert, William (1544--1603)!{\it On Magnetism} (1600)}{xxiv}
+\indexentry{Heaviside, Oliver (1850--1925)}{xxiv}
+\indexentry{Maxwells ekvationer}{xxiv}
+\indexentry{Kelvin, Lord (1824--1907)!William Thomson, 1st Baron Kelvin}{xxv}
+\indexentry{Kelvin--Stokes teorem!Se Stokes teorem}{xxv}
+\indexentry{Laplace, Pierre-Simon (1749--1827)}{xxv}
+\indexentry{Laplaces ekvation}{xxv}
+\indexentry{Laplace-operatorn $\nabla ^2$}{xxv}
+\indexentry{Lenz, Emil (1804--1865)}{xxv}
+\indexentry{Lenz lag}{xxv}
+\indexentry{Lorentz, Hendrik Antoon (1853--1928)}{xxv}
+\indexentry{Lorenz, Ludvig (1829--1891)}{xxvi}
+\indexentry{Maxwell, James Clerk (1831--1879)}{xxvi}
+\indexentry{Maxwells ekvationer}{xxvi}
+\indexentry{Neumann, Franz Ernst (1798--1895)}{xxvi}
+\indexentry{Neumanns formel!{\"O}msesidig induktans}{xxvi}
+\indexentry{{\OE }rsted, Hans Christian (1777--1851)}{xxvi}
+\indexentry{Magnetisk f{\"a}ltstyrka ${\bf H}$!{\OE }rsted}{xxvi}
+\indexentry{Poisson, Sim\'eon Denis (1781--1840)}{xxvii}
+\indexentry{Poissons ekvation}{xxvii}
+\indexentry{Savart, F\'elix (1791--1841)}{xxvii}
+\indexentry{Biot--Savarts lag}{xxvii}
+\indexentry{Stokes, George (1819--1902)}{xxvii}
+\indexentry{Stokes teorem}{xxvii}
+\indexentry{Kelvin--Stokes teorem!Se Stokes teorem}{xxvii}
+\indexentry{Tesla, Nikola (1856--1943)}{xxvii}
+\indexentry{Thomson, Joseph John (1856--1940)}{xxviii}
+\indexentry{Thomson, George Paget (1892--1975)}{xxviii}
+\indexentry{Weber, Wilhelm Eduard (1804--1891)}{xxviii}
+\indexentry{Wilson, Rickard (1930--2000)}{xxviii}
+\indexentry{Tentamensuppgift 1!Elektromagnetisk v{\aa }gekvation}{xxix}
+\indexentry{Elektromagnetisk v{\aa }gekvation!Tentamensuppgift 1}{xxix}
+\indexentry{Tentamensuppgift 1!L{\"o}sningsf{\"o}rslag}{xxx}
+\indexentry{Elektrisk f{\"a}ltstyrka {\bf E}}{xxx}
+\indexentry{Elektrisk fl{\"o}dest{\"a}thet {\bf D}}{xxx}
+\indexentry{Elektrisk polarisationsdensitet {\bf P}}{xxx}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet {\bf B}}{xxx}
+\indexentry{Magnetisk f{\"a}ltstyrka {\bf H}}{xxx}
+\indexentry{Magnetisering {\bf M}}{xxx}
+\indexentry{Amp{\`e}res lag}{xxx}
+\indexentry{Faradays induktionslag}{xxx}
+\indexentry{Elektromagnetism}{3}
+\indexentry{Vektoranalys!Introduktion till}{3}
+\indexentry{Diracs delta-distribution $\delta ({\bf x})$}{3}
+\indexentry{Gradient}{3}
+\indexentry{Divergens!Definition}{3}
+\indexentry{Rotation!Definition}{3}
+\indexentry{Konservativt f{\"a}lt!Definition}{3}
+\indexentry{F{\"a}lt!Konservativt}{3}
+\indexentry{F{\"a}lt!Definition}{3}
+\indexentry{Faraday, Michael (1791--1867)}{4}
+\indexentry{Maxwell, James Clerk (1831--1879)}{4}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$!Dynamisk, tidsberoende}{4}
+\indexentry{Lorentz-kraften ${\bf F}_{\rm m}=q\,{\bf v}\times {\bf B}$}{4}
+\indexentry{Vektorpotential ${\bf A}$}{5}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$!Dynamisk, tidsberoende}{5}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$!Statisk}{5}
+\indexentry{Diracs delta-distribution $\delta ({\bf x})$}{5}
+\indexentry{Diracs delta-distribution $\delta ({\bf x})$!En dimension}{6}
+\indexentry{Diracs delta-distribution $\delta ({\bf x})$!Selektionsegenskap}{7}
+\indexentry{Diracs delta-distribution $\delta ({\bf x})$!Tre dimensioner}{7}
+\indexentry{Volymintegral!Av Diracs delta-distribution}{7}
+\indexentry{Amp{\`e}res lag!Magnetostatik}{10}
+\indexentry{Amp{\`e}res lag!Amp{\`e}re--Maxwells elektrodynamiska lag}{10}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$}{10}
+\indexentry{Str{\"o}mslinga}{10}
+\indexentry{Str{\"o}mslinga!Delta-distribution och str{\"o}mt{\"a}thet}{10}
+\indexentry{Str{\"o}m!Pulsad}{10}
+\indexentry{Str{\"o}m!Transporterad laddning}{10}
+\indexentry{Kontinuitetsekvationen}{11}
+\indexentry{Maxwell, James Clerk (1831--1879)}{11}
+\indexentry{Diracs delta-distribution $\delta ({\bf x})$}{12}
+\indexentry{Vektoridentitet!$\nabla \times (\nabla \phi )={\bf 0}$}{28}
+\indexentry{Vektoridentitet!$\nabla \cdot (\nabla \times {\bf a})=0$}{28}
+\indexentry{Vektoridentitet!$\nabla \times (\nabla \times {\bf a}) =\nabla (\nabla \cdot {\bf a})-\nabla ^2{\bf a}$}{29}
+\indexentry{Vektoridentitet!$\nabla \times (\nabla \phi )={\bf 0}$}{32}
+\indexentry{Vektoridentitet!$\nabla \cdot (\nabla \times {\bf a})=0$}{32}
+\indexentry{Vektoridentitet!$\nabla \times (\nabla \times {\bf a}) =\nabla (\nabla \cdot {\bf a})-\nabla ^2{\bf a}$}{32}
+\indexentry{Elektromagnetisk v{\aa }gl{\"a}ngd}{35}
+\indexentry{Ljushastighet}{35}
+\indexentry{Elektrostatik}{35}
+\indexentry{Elektro-kvasistatik}{36}
+\indexentry{Elektrodynamik}{36}
+\indexentry{Elektrodynamik!och elektromagnetism}{36}
+\indexentry{Radiov{\aa }gor}{36}
+\indexentry{Mikrov{\aa }gor}{36}
+\indexentry{Ljus}{36}
+\indexentry{R{\"o}ntgenstr{\aa }lning}{36}
+\indexentry{Maxwells ekvationer}{36}
+\indexentry{Elektromagnetisk information!utbredningshastighet}{37}
+\indexentry{Elektrostatik}{38}
+\indexentry{Elektrostatik!Tidig historik}{38}
+\indexentry{Elektron!Fr{\aa }n gammalgrekiska $\eta \lambda \varepsilon \kern -.4pt\kappa \tau \kern -1.4pt\rho o\nu $}{38}
+\indexentry{Gilbert, William (1544--1603)}{38}
+\indexentry{Gilbert, William (1544--1603)!{\it On Magnetism}}{38}
+\indexentry{Attraktionskraft!Elektrisk}{38}
+\indexentry{de Cisternay du Fay, Fran\c {c}ois (1698--1739)!{\it Sixi\`eme m\'emoire sur l'\'electricit\'e (1734)}}{38}
+\indexentry{Franklin, Benjamin (1706--1790)}{38}
+\indexentry{Elektrisk laddning!Polaritet}{38}
+\indexentry{de Coulomb, Charles-Augustin (1736--1806)}{38}
+\indexentry{de Coulomb, Charles-Augustin (1736--1806)! {{\it Second M\'emoire sur l'\'Electricit\'e\break et le Magn\'etisme}}}{38}
+\indexentry{Attraktionskraft!Elektrisk}{38}
+\indexentry{Coulombs kraftlag}{38}
+\indexentry{Thomson, Joseph John (1856--1940)}{38}
+\indexentry{Elektron}{38}
+\indexentry{Korpuskler}{38}
+\indexentry{Elementarladdning $e$}{38}
+\indexentry{Rutherford, Ernest (1871--1937)}{38}
+\indexentry{Bohr, Niels (1885--1962)}{38}
+\indexentry{Coulombs kraftlag}{39}
+\indexentry{Punktladdning}{39}
+\indexentry{Elektrisk laddning}{39}
+\indexentry{Elektrisk laddning!Polaritet}{39}
+\indexentry{Coulomb, enhet f{\"o}r laddning}{39}
+\indexentry{Observationspunkt}{39}
+\indexentry{K{\"a}llpunkt ${\bf x}'$}{39}
+\indexentry{Attraktionskraft!Elektrisk}{39}
+\indexentry{Elektrisk permittivitet!Vakuumpermittivitet $\varepsilon _0$}{39}
+\indexentry{K{\"a}lladdning $q'$}{39}
+\indexentry{Coulombs kraftlag}{39}
+\indexentry{K{\"a}llpunkt ${\bf x}'$}{40}
+\indexentry{Punktladdning!System av punktladdningar}{40}
+\indexentry{Elektrisk f{\"a}ltstyrka}{40}
+\indexentry{Testladdning}{40}
+\indexentry{Superpositionsprincipen}{40}
+\indexentry{Coulombs kraftlag}{41}
+\indexentry{Virtuella fotoner}{41}
+\indexentry{Elektron}{41}
+\indexentry{Proton}{41}
+\indexentry{Attraktionskraft!Elektrisk}{41}
+\indexentry{Coulombs kraftlag}{41}
+\indexentry{Elektrisk laddning!Konvention f{\"o}r tecken}{41}
+\indexentry{Elektrisk laddning!Elementarladdning}{41}
+\indexentry{Franklin, Benjamin (1706--1790)}{41}
+\indexentry{Thomson, Joseph John (1856--1940)}{41}
+\indexentry{Elektron}{41}
+\indexentry{Superpositionsprincipen}{42}
+\indexentry{K{\"a}lladdning $q'$}{42}
+\indexentry{Coulombs generaliserade lag!Coulombintegralen}{42}
+\indexentry{Elektrisk laddningst{\"a}thet}{42}
+\indexentry{Integral!Volymintegral}{42}
+\indexentry{Coulombs generaliserade lag!Coulombintegralen}{42}
+\indexentry{Observationspunkt}{43}
+\indexentry{Coulombs kraftlag}{43}
+\indexentry{Ljushastighet}{43}
+\indexentry{Brytningsindex $n$}{43}
+\indexentry{Relativitetsteori}{43}
+\indexentry{F{\"a}ltteori}{43}
+\indexentry{Coulombs kraftlag}{43}
+\indexentry{Gauss lag!F{\"o}r elektrisk f{\"a}ltstyrka}{44}
+\indexentry{Elektriskt fl{\"o}de $\Phi _{\rm E}$}{44}
+\indexentry{Normalvektor}{44}
+\indexentry{Gauss, Carl Friedrich (1777--1855)}{44}
+\indexentry{Gauss lag!H{\"a}rledning fr{\aa }n Coulombs lag}{45}
+\indexentry{Punktladdning}{45}
+\indexentry{Virtuell sf{\"a}r}{45}
+\indexentry{Integral!Ytintegral}{45}
+\indexentry{Elektriskt fl{\"o}de $\Phi _{\rm E}$}{45}
+\indexentry{Elektrisk f{\"a}ltlinje}{45}
+\indexentry{Elektrisk permittivitet!Vakuumpermittivitet $\varepsilon _0$}{45}
+\indexentry{K{\"a}lladdning $q'$}{45}
+\indexentry{Leibniz, Gottfried Wilhelm (1646--1716)}{45}
+\indexentry{Integral!Ytintegral}{46}
+\indexentry{Elektriskt fl{\"o}de $\Phi _{\rm E}$}{46}
+\indexentry{Superpositionsprincipen}{47}
+\indexentry{Integral!Ytintegral}{47}
+\indexentry{Elektriskt fl{\"o}de $\Phi _{\rm E}$}{47}
+\indexentry{Elektrisk laddningst{\"a}thet}{48}
+\indexentry{Diracs delta-distribution $\delta $}{48}
+\indexentry{Integral!Volymintegral}{48}
+\indexentry{Integral!Ytintegral}{48}
+\indexentry{Elektriskt fl{\"o}de $\Phi _{\rm E}$}{48}
+\indexentry{Gauss lag!Integralform}{48}
+\indexentry{Elektrisk laddningst{\"a}thet!Volymladdning $\rho $}{49}
+\indexentry{Elektrisk laddningst{\"a}thet!Ytladdning $\sigma $}{49}
+\indexentry{Elektrisk laddningst{\"a}thet!Linjeladdning $\lambda $}{49}
+\indexentry{Diracs delta-distribution $\delta $}{49}
+\indexentry{Coulombs kraftlag!H{\"a}rledd fr{\aa }n Gauss lag}{49}
+\indexentry{Diracs delta-distribution $\delta $}{49}
+\indexentry{Virtuell sf{\"a}r}{49}
+\indexentry{Gauss lag!Integralform}{49}
+\indexentry{Integral!Sluten ytintegral}{50}
+\indexentry{Elektrostatiskt f{\"a}lt!Divergens f{\"o}r}{50}
+\indexentry{Gauss lag!Differentialform}{50}
+\indexentry{Elektrisk permittivitet!Vakuumpermittivitet $\varepsilon _0$}{51}
+\indexentry{Gauss lag!Integralform}{51}
+\indexentry{Gauss lag!Differentialform}{51}
+\indexentry{Elektrisk permittivitet!Vakuumpermittivitet $\varepsilon _0$}{51}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{55}
+\indexentry{Elektrisk laddningst{\"a}thet!Linjeladdning $\lambda $}{55}
+\indexentry{Coulombs kraftlag}{55}
+\indexentry{Gauss lag}{55}
+\indexentry{Gauss lag!Cylindrisk geometri}{55}
+\indexentry{Coulombs generaliserade lag!Coulombintegralen}{55}
+\indexentry{K{\"a}lladdning $q'$}{55}
+\indexentry{Gauss lag!Plan geometri}{56}
+\indexentry{Elektrisk laddningst{\"a}thet!Ytladdning $\sigma $}{56}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{56}
+\indexentry{Elektrisk f{\"a}ltlinje}{56}
+\indexentry{Elektrostatiskt f{\"a}lt!Rotation f{\"o}r}{57}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{57}
+\indexentry{Elektrisk laddningst{\"a}thet!Volym-, yt-, linje-, punkt-}{57}
+\indexentry{Superpositionsprincipen}{57}
+\indexentry{Gauss lag!Differentialform}{57}
+\indexentry{Observationspunkt}{57}
+\indexentry{Stokes teorem}{57}
+\indexentry{Integral!Linjeintegral}{57}
+\indexentry{Gravitation}{57}
+\indexentry{Sf{\"a}riska koordinater}{57}
+\indexentry{Stokes teorem}{58}
+\indexentry{Superpositionsprincipen}{58}
+\indexentry{Skal{\"a}r potential $\phi $}{58}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{58}
+\indexentry{Gravitation}{58}
+\indexentry{Coulombs generaliserade lag!Coulombintegralen}{58}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{58}
+\indexentry{Jackson, John David (1925--2016)!{\it Classical Electrodynamics}}{58}
+\indexentry{Tricket $\displaystyle \nabla {{1}\over {\char 124}{\bf x}-{\bf x}'{\char 124}} =-{{({\bf x}-{\bf x}')}\over {{\char 124}{\bf x}-{\bf x}'{\char 124}^3}}$}{59}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{59}
+\indexentry{Labbsystem}{59}
+\indexentry{K{\"a}lladdning $q'$}{59}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{59}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{59}
+\indexentry{Gradient}{59}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{59}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{59}
+\indexentry{Arbete och upplagrad energi!Elektrostatisk laddning}{60}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{60}
+\indexentry{Gradient-teoremet}{60}
+\indexentry{Gradient!Gradient-teoremet}{60}
+\indexentry{Potentiell energi!Elektrostatisk}{60}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{60}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{61}
+\indexentry{Ekvipotentialyta!Ortogonalitet mot elektriska f{\"a}ltlinjer}{61}
+\indexentry{Elektrisk f{\"a}ltlinje!Ortogonalitet mot Ekvipotentialyta}{61}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{61}
+\indexentry{Poissons ekvation}{61}
+\indexentry{Elektrostatiskt f{\"a}lt!Divergens f{\"o}r}{61}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{61}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{62}
+\indexentry{Laplaces ekvation}{65}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{65}
+\indexentry{Coulombs generaliserade lag!Coulombintegralen}{65}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{65}
+\indexentry{Elektrisk f{\"a}ltstyrka}{65}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{65}
+\indexentry{Poissons ekvation}{66}
+\indexentry{Laplaces ekvation}{66}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{66}
+\indexentry{Elektrostatik}{66}
+\indexentry{Entydighetsteoremet}{66}
+\indexentry{Randvillkor!F{\"o}r Laplaces ekvation}{66}
+\indexentry{Randvillkor!F{\"o}r Laplaces ekvation}{66}
+\indexentry{Extrempunkter!F{\"o}r l{\"o}sningar till Laplaces ekvation}{66}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{66}
+\indexentry{Laplace, Pierre-Simon (1749--1827)}{66}
+\indexentry{Extrempunkter!F{\"o}r l{\"o}sningar till Laplaces ekvation}{67}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{67}
+\indexentry{Extrempunkter!F{\"o}r l{\"o}sningar till Laplaces ekvation}{67}
+\indexentry{Entydighetsteoremet!F{\"o}r Laplaces ekvation}{68}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{68}
+\indexentry{Jackson, John David (1925--2016)!{\it Classical Electrodynamics}}{68}
+\indexentry{Greens f{\"o}rsta teorem}{68}
+\indexentry{Greensfunktion}{68}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{69}
+\indexentry{Entydighetsteoremet!F{\"o}r Poissons ekvation}{69}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{69}
+\indexentry{Entydighetsteoremet!F{\"o}r Poissons ekvation}{69}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{69}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{69}
+\indexentry{Faradays bur}{70}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{70}
+\indexentry{Elektromagnetisk v{\aa }gl{\"a}ngd}{70}
+\indexentry{Elektromagnetisk v{\aa }gl{\"a}ngd}{70}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{70}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{71}
+\indexentry{Perfekt ledare}{71}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{71}
+\indexentry{Spegelladdning}{72}
+\indexentry{Spegelladdning!Perfekt ledande plan}{72}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{73}
+\indexentry{Spegelladdning!Perfekt ledande plan}{73}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{74}
+\indexentry{Spegelladdning!Perfekt ledande plan}{74}
+\indexentry{Spegelladdning!Perfekt ledande plan}{74}
+\indexentry{Spegelladdning!Perfekt ledande plan}{75}
+\indexentry{Ekvipotential}{75}
+\indexentry{Dipol!Elektrisk}{75}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{75}
+\indexentry{Laddningst{\"a}thet!Ytladdning i perfekt ledande plan}{76}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrostatisk}{76}
+\indexentry{Spegelladdning!Gr{\"a}nsytor mellan dielektrika}{77}
+\indexentry{Spegelladdning!Cylindriska perfekt ledande gr{\"a}nsytor}{78}
+\indexentry{Jord}{78}
+\indexentry{Jackson, John David (1925--2016)!{\it Classical Electrodynamics}}{78}
+\indexentry{Spegelladdning!Cylindriska perfekt ledande gr{\"a}nsytor}{79}
+\indexentry{Laddningst{\"a}thet!Linjeladdning}{79}
+\indexentry{Spegelladdning!Cylindriska perfekt ledande gr{\"a}nsytor}{79}
+\indexentry{Spegelladdning!Cylindriska perfekt ledande gr{\"a}nsytor}{80}
+\indexentry{Spegelladdning!Cylindriska perfekt ledande gr{\"a}nsytor}{81}
+\indexentry{Spegelladdning!Cylindriska perfekt ledande gr{\"a}nsytor}{81}
+\indexentry{Spegelladdning!Cylindriska perfekt ledande gr{\"a}nsytor}{82}
+\indexentry{Spegelladdning!Sf{\"a}riska perfekt ledande gr{\"a}nsytor}{83}
+\indexentry{Jord}{83}
+\indexentry{Amp\`eres lag[F{\"or}r statiska magnetiska f{\"a}lt]}{85}
+\indexentry{Elektrostatik}{87}
+\indexentry{Magnetostatik}{87}
+\indexentry{Elektron}{87}
+\indexentry{Str{\"o}m}{87}
+\indexentry{Elektromagnetisk v{\aa }gl{\"a}ngd}{87}
+\indexentry{de Maricourt, Petrus Peregrinus}{87}
+\indexentry{Permanentmagnet}{87}
+\indexentry{Magnetiska poler}{87}
+\indexentry{Magnetisk monopol}{87}
+\indexentry{Elektrisk monopol}{87}
+\indexentry{{\OE }rsted, Hans Christian (1777--1851)}{87}
+\indexentry{Franska Akademien}{87}
+\indexentry{Amp\`ere, Andr\'e-Marie (1775--1836)}{87}
+\indexentry{Empedocles (494--434~BC)}{87}
+\indexentry{Anaxagoras (500--428~BC)}{87}
+\indexentry{Aristoteles (384--322~BC)}{87}
+\indexentry{Magnetf{\"a}lt}{88}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet}{88}
+\indexentry{Elektrisk str{\"o}m}{88}
+\indexentry{Elektrisk laddning}{88}
+\indexentry{Str{\"o}mslinga!Sluten}{88}
+\indexentry{Kvantmekanik}{88}
+\indexentry{Magnetiskt dipolmoment}{88}
+\indexentry{Lorentz-kraften}{88}
+\indexentry{Heaviside, Oliver (1850--1925)}{88}
+\indexentry{Maxwells ekvationer}{88}
+\indexentry{Magnetisk kraft utf{\"o}r inget arbete}{89}
+\indexentry{Amp\`eres kraftlag}{89}
+\indexentry{Str{\"o}mslinga}{89}
+\indexentry{Str{\"o}m}{89}
+\indexentry{Amp\`ere, enhet f{\"o}r str{\"o}m}{89}
+\indexentry{Coulomb, enhet f{\"o}r laddning}{89}
+\indexentry{Amp\`eres kraftlag}{90}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$}{90}
+\indexentry{Str{\"o}mslinga}{90}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$}{91}
+\indexentry{Lagen om att laddning inte kan f{\"o}rsvinna}{91}
+\indexentry{Elektrisk laddning}{91}
+\indexentry{Gauss lag}{91}
+\indexentry{Magnetostatik}{92}
+\indexentry{Elektrostatik}{92}
+\indexentry{Biot--Savarts lag}{93}
+\indexentry{Biot, Jean-Baptiste (1774--1862)}{93}
+\indexentry{Savart, F\'elix (1791--1841)}{93}
+\indexentry{Biot--Savarts lag}{93}
+\indexentry{Magnetisk permeabilitet!Vakuumpermeabilitet $\mu _0$}{94}
+\indexentry{Elektrisk permittivitet!Vakuumpermittivitet $\varepsilon _0$}{94}
+\indexentry{Coulombs kraftlag}{94}
+\indexentry{Elektromagnetiskt sl{\"a}kttr{\"a}d}{94}
+\indexentry{Biot--Savarts lag!F{\"o}r str{\"o}mslinga}{94}
+\indexentry{Biot--Savarts lag!F{\"o}r str{\"o}mt{\"a}thet}{94}
+\indexentry{Magnetiska monopoler!Icke-existens av}{95}
+\indexentry{Tricket $\displaystyle \nabla {{1}\over {\char 124}{\bf x}-{\bf x}'{\char 124}} =-{{({\bf x}-{\bf x}')}\over {{\char 124}{\bf x}-{\bf x}'{\char 124}^3}}$}{95}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet!Divergens f{\"o}r}{95}
+\indexentry{Magnetiska monopoler!Icke-existens av}{96}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet!Rotation f{\"o}r}{96}
+\indexentry{Amp\`eres lag!F{\"or}r statiska magnetiska f{\"a}lt}{99}
+\indexentry{Stokes teorem}{99}
+\indexentry{Vektorpotential ${\bf A}$}{100}
+\indexentry{Vektorpotential ${\bf A}$!Amp\`eres lag}{100}
+\indexentry{Amp\`eres lag!Uttryckt i vektorpotentialen}{100}
+\indexentry{Vektorpotential ${\bf A}$!Explicit l{\"o}sning}{101}
+\indexentry{Vektorpotential ${\bf A}$!Tolkning}{102}
+\indexentry{Amp\`eres lag!F{\"or}r statiska magnetiska f{\"a}lt}{104}
+\indexentry{Faraday, Michael (1791--1867)}{105}
+\indexentry{Neumanns formel!{\"O}msesidig induktans}{105}
+\indexentry{Faraday, Michael (1791--1867)}{107}
+\indexentry{Elektrostatik}{107}
+\indexentry{Elektrostatiskt f{\"a}lt!Rotation f{\"o}r}{107}
+\indexentry{Stokes teorem}{107}
+\indexentry{Magnetiskt fl{\"o}de $\Phi _{\rm M}$}{107}
+\indexentry{Induktionslagen!Faradays induktionslag}{107}
+\indexentry{Coulombs kraftlag}{107}
+\indexentry{Biot--Savarts lag}{107}
+\indexentry{Lorentz-kraften}{107}
+\indexentry{Faradays induktionslag}{107}
+\indexentry{Magnetiskt fl{\"o}de $\Phi _{\rm M}$}{108}
+\indexentry{Magnetiskt fl{\"o}de $\Phi _{\rm M}$!Tidsberoende}{108}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet}{108}
+\indexentry{Magnetf{\"a}lt}{108}
+\indexentry{Magnetiskt fl{\"o}de $\Phi _{\rm M}$}{108}
+\indexentry{F{\"a}ltlinjer!Magnetiska}{108}
+\indexentry{Elektrisk f{\"a}ltstyrka}{108}
+\indexentry{ChatGPT}{108}
+\indexentry{Grok}{108}
+\indexentry{Elektromotorisk ``kraft'' ${\cal E}$}{109}
+\indexentry{Str{\"o}mslinga!Sluten}{109}
+\indexentry{Lorentz-kraften}{109}
+\indexentry{Punktladdning}{109}
+\indexentry{Elektromotorisk ``kraft'' ${\cal E}$}{109}
+\indexentry{Potentialskillnad}{109}
+\indexentry{Lorentz, Hendrik Antoon (1853--1928)}{109}
+\indexentry{Faradays induktionslag!Slinga med konstant hastighet}{110}
+\indexentry{Virtuell slinga}{112}
+\indexentry{Lenz lag}{112}
+\indexentry{Lenz lag}{113}
+\indexentry{Faradays induktionslag!Generell h{\"a}rledning}{114}
+\indexentry{Magnetiskt fl{\"o}de $\Phi _{\rm M}$!Tidsberoende}{114}
+\indexentry{Leibniz integralregel}{114}
+\indexentry{Magnetiskt fl{\"o}de $\Phi _{\rm M}$}{115}
+\indexentry{Lorentz-kraften}{116}
+\indexentry{Elektromotorisk ``kraft'' ${\cal E}$}{116}
+\indexentry{Str{\"o}mslinga!Sluten}{116}
+\indexentry{Faradays induktionslag!Generell h{\"a}rledning}{116}
+\indexentry{Lorentz-kraften}{116}
+\indexentry{Elektrisk permittivitet!Vakuumpermittivitet $\varepsilon _0$}{116}
+\indexentry{Magnetisk permeabilitet!Vakuumpermeabilitet $\mu _0$}{116}
+\indexentry{Elektrostatiskt f{\"a}lt!Rotation f{\"o}r}{116}
+\indexentry{Faradays induktionslag!Station{\"a}r slinga}{116}
+\indexentry{Str{\"o}mslinga!Sluten}{116}
+\indexentry{Str{\"o}mslinga!Station{\"a}r}{116}
+\indexentry{Spole}{117}
+\indexentry{J{\"a}rnk{\"a}rna}{117}
+\indexentry{Faradays lag!Differentialform}{117}
+\indexentry{Coulombs kraftlag}{117}
+\indexentry{Biot--Savarts lag}{117}
+\indexentry{Stokes teorem}{117}
+\indexentry{Faradays lag!Integralform}{118}
+\indexentry{Stokes teorem}{118}
+\indexentry{Str{\"o}mslinga!R{\"o}rlig}{118}
+\indexentry{Str{\"o}mslinga!Station{\"a}r}{118}
+\indexentry{Str{\"o}mslinga!Varierande magnetiskt fl{\"o}de genom}{118}
+\indexentry{{\"O}msesidig induktans}{119}
+\indexentry{Biot--Savarts lag}{119}
+\indexentry{Magnetiskt fl{\"o}de $\Phi _{\rm M}$}{120}
+\indexentry{{\"O}msesidig induktans}{120}
+\indexentry{Neumanns formel!{\"O}msesidig induktans}{120}
+\indexentry{Vektorpotential ${\bf A}$}{120}
+\indexentry{Poissons ekvation}{120}
+\indexentry{Skal{\"a}r potential $\phi $}{120}
+\indexentry{Magnetiskt fl{\"o}de $\Phi _{\rm M}$}{121}
+\indexentry{Integral!Linje-}{121}
+\indexentry{Neumanns formel!{\"O}msesidig induktans}{121}
+\indexentry{{\"O}msesidig induktans}{121}
+\indexentry{Magnetisk permeabilitet!Vakuumpermeabilitet $\mu _0$}{121}
+\indexentry{Reciprocitet}{121}
+\indexentry{Neumann, Franz Ernst (1798--1895)}{121}
+\indexentry{Jackson, John David (1925--2016)!{\it Classical Electrodynamics}}{121}
+\indexentry{Magnetiskt fl{\"o}de $\Phi _{\rm M}$}{123}
+\indexentry{Elektromotorisk ``kraft'' ${\cal E}$}{123}
+\indexentry{Str{\"o}mslinga!Sluten}{123}
+\indexentry{Neumanns formel!{\"O}msesidig induktans}{123}
+\indexentry{Dielektrikum}{127}
+\indexentry{Elektrisk f{\"a}ltstyrka}{127}
+\indexentry{Elektrisk dipol}{127}
+\indexentry{Kvantmekanik!V{\aa }gfunktion}{127}
+\indexentry{Elektrisk dipol}{127}
+\indexentry{Elektrisk polarisationsdensitet}{127}
+\indexentry{Elektrisk susceptibilitet $\chi _{\rm e}$}{127}
+\indexentry{Elektrisk fl{\"o}dest{\"a}thet}{127}
+\indexentry{Elektrisk susceptibilitet $\chi _{\rm e}$}{127}
+\indexentry{Brytningsindex $n$}{127}
+\indexentry{Dispersion}{127}
+\indexentry{Dubbelbrytning}{127}
+\indexentry{Skal{\"a}r potential $\phi $}{127}
+\indexentry{Elektrisk dipol!Klassisk modell f{\"o}r}{128}
+\indexentry{Elektronmoln}{128}
+\indexentry{Atomk{\"a}rna}{128}
+\indexentry{Kvantmekanik!Dipoloperator}{128}
+\indexentry{Multipolmoment}{128}
+\indexentry{Elektrisk dipol}{128}
+\indexentry{Dipolmoment!Elektriskt}{129}
+\indexentry{Elektrostatisk kraft}{129}
+\indexentry{Elektronmoln}{129}
+\indexentry{Atomk{\"a}rna}{129}
+\indexentry{Elektrisk f{\"a}ltstyrka}{129}
+\indexentry{Gauss lag}{129}
+\indexentry{Sf{\"a}risk symmetri}{129}
+\indexentry{Integral!Sluten yt-}{129}
+\indexentry{Integral!Volym-}{129}
+\indexentry{Laddningst{\"a}thet}{129}
+\indexentry{Sf{\"a}risk symmetri}{129}
+\indexentry{Integral!Yt-}{129}
+\indexentry{Dipolmoment!Elektriskt}{130}
+\indexentry{Atom{\"a}r polarisabilitet $\alpha $}{130}
+\indexentry{Linj{\"a}rt system}{130}
+\indexentry{Dipolmoment!Elektriskt}{130}
+\indexentry{Isotropt medium}{130}
+\indexentry{Dispersion}{130}
+\indexentry{Atomnummer}{130}
+\indexentry{Coulombs kraftlag}{130}
+\indexentry{Sf{\"a}risk symmetri}{131}
+\indexentry{Gravitation!Analogi med laddningsf{\"o}rdelning}{131}
+\indexentry{Gravitation!Ekvivalent punktladdning}{131}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$!Analogi med gravitation}{131}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$!Ekvivalent punktladdning}{131}
+\indexentry{Gauss lag}{131}
+\indexentry{Punktladdning}{131}
+\indexentry{Isotropt medium}{132}
+\indexentry{Anisotropt medium}{132}
+\indexentry{Homogent medium}{132}
+\indexentry{Inhomogent medium}{132}
+\indexentry{Dispersion}{132}
+\indexentry{Anisotropt medium}{132}
+\indexentry{Tensor!f{\"o}r polarisabilitet}{132}
+\indexentry{Optisk aktivitet}{132}
+\indexentry{Faraday-rotation}{132}
+\indexentry{Elektrisk polarisationsdensitet}{133}
+\indexentry{Elektronmoln}{133}
+\indexentry{Atomk{\"a}rna}{133}
+\indexentry{Elektrisk f{\"a}ltstyrka}{133}
+\indexentry{F{\"a}ltlinjer!Elektriska}{133}
+\indexentry{Elektrisk fl{\"o}dest{\"a}thet}{133}
+\indexentry{Relativ elektrisk permittivitet $\varepsilon _{\rm r}$}{133}
+\indexentry{Elektrisk permittivitet!Relativ permittivitet $\varepsilon _{\rm r}$}{133}
+\indexentry{Elektrisk permittivitet!Vakuumpermittivitet $\varepsilon _0$}{133}
+\indexentry{Atom{\"a}r polarisabilitet $\alpha $}{133}
+\indexentry{Elektrisk susceptibilitet $\chi _{\rm e}$}{133}
+\indexentry{Gauss lag!F{\"o}r elektrisk fl{\"o}dest{\"a}thet}{134}
+\indexentry{Elektrisk fl{\"o}dest{\"a}thet}{134}
+\indexentry{Elektrisk polarisationsdensitet}{134}
+\indexentry{Bundna laddningar}{134}
+\indexentry{Bunden laddningst{\"a}thet $\rho _{\rm b}$}{134}
+\indexentry{Laddningst{\"a}thet!Bunden, $\rho _{\rm b}$}{134}
+\indexentry{Fri laddningst{\"a}thet $\rho _{\rm f}$}{134}
+\indexentry{Laddningst{\"a}thet!Fri, $\rho _{\rm f}$}{134}
+\indexentry{Gauss lag!F{\"o}r elektrisk fl{\"o}dest{\"a}thet}{134}
+\indexentry{Elektrisk polarisationsdensitet}{134}
+\indexentry{Randvillkor}{135}
+\indexentry{Hoppvillkor}{135}
+\indexentry{Dielektrikum!{\"O}verg{\aa }ng mellan olika}{135}
+\indexentry{Hoppvillkor!F{\"o}r elektriska f{\"a}lt i vakuum}{135}
+\indexentry{Gauss lag!F{\"o}r elektrisk f{\"a}ltstyrka}{135}
+\indexentry{Stokes teorem}{135}
+\indexentry{Elektrisk fl{\"o}dest{\"a}thet}{136}
+\indexentry{Gauss lag}{136}
+\indexentry{Elektrisk permittivitet!Relativ permittivitet $\varepsilon _{\rm r}$}{136}
+\indexentry{Laddningst{\"a}thet!Yt-}{136}
+\indexentry{Ytladdningst{\"a}thet}{136}
+\indexentry{Upplagrad energi!I elektriskt f{\"a}lt}{137}
+\indexentry{Dielektrisk sf{\"a}r}{137}
+\indexentry{Atom{\"a}r polarisabilitet $\alpha $}{137}
+\indexentry{Clausius--Mossotti-relationen}{137}
+\indexentry{Mossotti, Ottaviano-Fabrizio (1791--1863)}{137}
+\indexentry{Clausius, Rudolf (1822--1888)}{137}
+\indexentry{Dipolmodellen av magneter}{140}
+\indexentry{Magnetiska monopoler!Icke-existens av}{140}
+\indexentry{Elektrisk dipol ${\bf p}$}{140}
+\indexentry{Gilberts modell f{\"o}r magneter}{140}
+\indexentry{Amp\`eres modell f{\"o}r magneter}{140}
+\indexentry{Elektrisk laddning!I r{\"o}relse}{140}
+\indexentry{Elektrisk dipol ${\bf p}$!Upplagrad energi $W_{\rm e}$}{141}
+\indexentry{Elektrisk dipol ${\bf p}$!Kraft ${\bf F}_{\rm e}$ verkande p{\aa }}{141}
+\indexentry{Elektrisk dipol ${\bf p}$!Vridmoment $\tau _{\rm e}$ verkande p{\aa }}{141}
+\indexentry{Magnetisk dipol ${\bf m}$!Upplagrad energi $W_{\rm m}$}{141}
+\indexentry{Magnetisk dipol ${\bf m}$!Kraft ${\bf F}_{\rm m}$ verkande p{\aa }}{141}
+\indexentry{Magnetisk dipol ${\bf m}$!Vridmoment $\tau _{\rm m}$ verkande p{\aa }}{141}
+\indexentry{Magnetisering ${\bf M}$}{141}
+\indexentry{Magnetisering ${\bf M}$!``Magnetisk polarisationsdensitet''}{141}
+\indexentry{Dipolmoment!Magnetiskt}{141}
+\indexentry{Elektrisk polarisationsdensitet ${\bf P}$}{141}
+\indexentry{Str{\"o}mslinga!Sluten}{141}
+\indexentry{Magnetisk permeabilitet!Relativ permeabilitet $\mu _{\rm r}$}{142}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{142}
+\indexentry{Magnetiseringsstyrka ${\bf H}$}{142}
+\indexentry{Magnetisk permeabilitet!Vakuumpermeabilitet $\mu _0$}{142}
+\indexentry{Faradays lag}{142}
+\indexentry{Diamagnetism}{142}
+\indexentry{Paramagnetism}{142}
+\indexentry{Ferromagnetism}{142}
+\indexentry{Curietemperatur}{142}
+\indexentry{Magnetisering ${\bf M}$!Som bundna yt- och volymstr{\"o}mmar}{142}
+\indexentry{Bunden ytstr{\"o}m ${\bf K}_{\rm b}$}{142}
+\indexentry{Bunden volymstr{\"o}m ${\bf J}_{\rm b}$}{142}
+\indexentry{Str{\"o}mslinga!Sluten}{142}
+\indexentry{Dipolmoment!Magnetiskt}{142}
+\indexentry{Upplagrad energi!I magnetf{\"a}lt}{143}
+\indexentry{Hysteres}{143}
+\indexentry{Vektorpotential ${\bf A}$}{144}
+\indexentry{Magnetisering ${\bf M}$!Statisk}{144}
+\indexentry{Observationspunkt ${\bf x}$}{144}
+\indexentry{Dipolmoment!Magnetiskt}{144}
+\indexentry{K{\"a}llpunkt ${\bf x}'$}{144}
+\indexentry{Magnetisering ${\bf M}$}{144}
+\indexentry{Partiell integration}{145}
+\indexentry{Tricket $\displaystyle \nabla {{1}\over {\char 124}{\bf x}-{\bf x}'{\char 124}} =-{{({\bf x}-{\bf x}')}\over {{\char 124}{\bf x}-{\bf x}'{\char 124}^3}}$}{145}
+\indexentry{Stokes teorem}{146}
+\indexentry{Vektorpotential ${\bf A}$}{146}
+\indexentry{Gauss lag}{146}
+\indexentry{Bunden volymstr{\"o}m ${\bf J}_{\rm b}$}{147}
+\indexentry{Bunden ytstr{\"o}m ${\bf K}_{\rm b}$}{147}
+\indexentry{Vektorpotential ${\bf A}$!Ekvivalenta volym- och ytstr{\"o}mmar}{147}
+\indexentry{Multipolutveckling!Klassificering av moment}{149}
+\indexentry{Monopol}{149}
+\indexentry{Dipol}{149}
+\indexentry{Kvadrupol}{149}
+\indexentry{Oktopol}{149}
+\indexentry{Hexadecapol}{149}
+\indexentry{Dotriacontapol}{149}
+\indexentry{Dipolapproximationen}{149}
+\indexentry{Dipolmoment!Elektriskt}{149}
+\indexentry{Dipolmoment!Magnetiskt}{149}
+\indexentry{Multipolutveckling}{151}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{151}
+\indexentry{Antenner}{151}
+\indexentry{Molekyler}{151}
+\indexentry{Magnetisk permeabilitet!Vakuumpermeabilitet $\mu _0$}{151}
+\indexentry{Magnetisk permeabilitet!Relativ permeabilitet $\mu _{\rm r}$}{151}
+\indexentry{Skal{\"a}r potential $\phi $}{151}
+\indexentry{Vektorpotential ${\bf A}$}{151}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{151}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{151}
+\indexentry{Dipol!Elektrisk}{152}
+\indexentry{Laddningsf{\"o}rdelning!Distribution f{\"o}r punktladdning}{152}
+\indexentry{Punktladdning}{152}
+\indexentry{Skal{\"a}r potential $\phi $}{153}
+\indexentry{Dipol}{153}
+\indexentry{Oktopol}{153}
+\indexentry{Dotriacontapol}{153}
+\indexentry{Integral!Volym-}{153}
+\indexentry{Skal{\"a}r potential $\phi $}{154}
+\indexentry{Dipol!Elektrisk}{154}
+\indexentry{Kvadrupol}{156}
+\indexentry{Hexadecapol}{156}
+\indexentry{Hexacontatetrapol}{156}
+\indexentry{Dipol!Elektrisk}{156}
+\indexentry{Multipolutveckling!Klassificering av moment}{156}
+\indexentry{Monopol}{156}
+\indexentry{Dipol}{156}
+\indexentry{Kvadrupol}{156}
+\indexentry{Oktopol}{156}
+\indexentry{Hexadecapol}{156}
+\indexentry{Dotriacontapol}{156}
+\indexentry{Hexacontatetrapol}{156}
+\indexentry{Multipolutveckling!F{\"o}r skal{\"a}r potential $\phi $}{159}
+\indexentry{Multipolutveckling!Av laddningst{\"a}thet $\rho $}{159}
+\indexentry{Taylor-utveckling}{159}
+\indexentry{Maclaurin-utveckling}{159}
+\indexentry{Skal{\"a}r potential $\phi $}{159}
+\indexentry{Taylor-utveckling}{160}
+\indexentry{Maclaurin-utveckling}{160}
+\indexentry{Skal{\"a}r potential $\phi $}{160}
+\indexentry{Taylor-utveckling}{160}
+\indexentry{Maclaurin-utveckling}{160}
+\indexentry{Skal{\"a}r potential $\phi $!Multipolutveckling}{160}
+\indexentry{Multipolutveckling!F{\"o}r vektorpotential ${\bf A}$}{162}
+\indexentry{Multipolutveckling!Av str{\"o}mt{\"a}thet ${\bf J}$}{162}
+\indexentry{Taylor-utveckling}{162}
+\indexentry{Maclaurin-utveckling}{162}
+\indexentry{Vektorpotential ${\bf A}$!Multipolutveckling}{162}
+\indexentry{Magnetiska monopoler!Icke-existens av, statiskt}{162}
+\indexentry{Magnetiska monopoler!Fr{\aa }n multipolutveckling av vektorpotential}{162}
+\indexentry{Vektorpotential ${\bf A}$!Magnetisk monopolterm}{162}
+\indexentry{Lagen om att laddning inte kan f{\"o}rsvinna}{162}
+\indexentry{Vektorpotential ${\bf A}$!Magnetiska monopolterm}{163}
+\indexentry{Magnetiskt dipolmoment!Fr{\aa }n multipolutveckling av vektorpotential}{164}
+\indexentry{Vektorpotential ${\bf A}$!Magnetiskt dipolmoment}{164}
+\indexentry{Magnetiskt kvadrupolmoment!Fr{\aa }n multipolutveckling av vektorpotential}{164}
+\indexentry{Vektorpotential ${\bf A}$!Magnetiskt kvadrupolmoment}{164}
+\indexentry{Magnetiska monopoler!Icke-existens av, dynamiskt}{165}
+\indexentry{Dipolapproximationen}{166}
+\indexentry{Skal{\"a}r potential $\phi $}{166}
+\indexentry{Vektorpotential ${\bf A}$}{166}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{166}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{166}
+\indexentry{Magnetiska monopoler!Icke-existens av, statiskt}{166}
+\indexentry{Lagen om att laddning inte kan f{\"o}rsvinna}{169}
+\indexentry{Kontinuitetsekvationen}{169}
+\indexentry{Maxwells ekvationer!Differentialform}{169}
+\indexentry{Maxwells ekvationer!Integralform}{169}
+\indexentry{Amp\`eres lag}{169}
+\indexentry{Faradays lag}{169}
+\indexentry{Gauss lag!F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{169}
+\indexentry{Gauss lag!F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{169}
+\indexentry{Elektromagnetiska v{\aa }gekvationer}{169}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{169}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{169}
+\indexentry{Amp\`eres lag!Maxwells generalisering av}{171}
+\indexentry{Lagen om att laddning inte kan f{\"o}rsvinna}{172}
+\indexentry{Maxwell, James Clerk (1831--1879)}{172}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$!Fria laddningar}{172}
+\indexentry{F{\"o}rskjutningsstr{\"o}m}{172}
+\indexentry{Elektrisk permittivitet!Vakuumpermittivitet $\varepsilon _0$}{172}
+\indexentry{Elektrisk polarisationsdensitet ${\bf P}$}{172}
+\indexentry{Lagen om att laddning inte kan f{\"o}rsvinna}{172}
+\indexentry{Elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{173}
+\indexentry{Maxwell, James Clerk (1831--1879)!{\it The Law of Total Currents}}{173}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$!Bundna laddningar}{173}
+\indexentry{Maxwells ekvationer}{174}
+\indexentry{Elektrisk permittivitet!Relativ permittivitet $\varepsilon _{\rm r}$}{174}
+\indexentry{Magnetisk permeabilitet!Relativ permeabilitet $\mu _{\rm r}$}{174}
+\indexentry{Maxwells ekvationer!Differentialform}{174}
+\indexentry{Maxwells ekvationer!Integralform}{174}
+\indexentry{Amp\`eres lag}{174}
+\indexentry{Faradays lag}{174}
+\indexentry{Gauss lag!F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{174}
+\indexentry{Gauss lag!F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{174}
+\indexentry{Konstitutiva relationer}{174}
+\indexentry{SI-enheter}{174}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{174}
+\indexentry{Elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{174}
+\indexentry{Elektrisk polarisationsdensitet ${\bf P}$}{174}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{174}
+\indexentry{Magnetisk f{\"a}ltstyrka ${\bf H}$}{174}
+\indexentry{Magnetisering ${\bf M}$}{174}
+\indexentry{Heaviside, Oliver (1850--1925)}{174}
+\indexentry{Gibbs, Josiah Willard (1839--1903)}{174}
+\indexentry{Hertz, Heinrich (1857--1894)}{174}
+\indexentry{Elektromagnetiska v{\aa }gekvationer!H{\"a}rledning fr{\aa }n Maxwells ekvationer}{175}
+\indexentry{Amp\`eres lag}{175}
+\indexentry{Faradays lag}{175}
+\indexentry{Gauss lag!F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{175}
+\indexentry{Gauss lag!F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{175}
+\indexentry{Elektrisk permittivitet!Relativ permittivitet $\varepsilon _{\rm r}$}{175}
+\indexentry{Amp\`eres lag}{175}
+\indexentry{Faradays lag}{175}
+\indexentry{Gauss lag!F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{175}
+\indexentry{Gauss lag!F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{175}
+\indexentry{Magnetisk permeabilitet!Relativ permeabilitet $\mu _{\rm r}$}{175}
+\indexentry{Elektromagnetiska v{\aa }gekvationer!H{\"a}rledning fr{\aa }n Maxwells ekvationer}{176}
+\indexentry{Elektromagnetiska v{\aa }gekvationer!Gemensam k{\"a}llterm}{176}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$!V{\aa }gekvation f{\"o}r}{176}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$!V{\aa }gekvation f{\"o}r}{176}
+\indexentry{Elektrisk polarisationsdensitet ${\bf P}$}{176}
+\indexentry{Magnetisering ${\bf M}$}{176}
+\indexentry{Elektrisk polarisationsdensitet ${\bf P}$!Kontra magnetisering}{177}
+\indexentry{Magnetisering ${\bf M}$!Kontra elektrisk polarisationsdensitet}{177}
+\indexentry{Elektrostatik!Fr{\aa }n elektromagnetisk v{\aa }gekvation}{178}
+\indexentry{Magnetostatik!Fr{\aa }n elektromagnetisk v{\aa }gekvation}{178}
+\indexentry{Maxwells ekvationer!Differentialform}{179}
+\indexentry{Maxwells ekvationer!Integralform}{179}
+\indexentry{Amp\`eres lag}{179}
+\indexentry{Faradays lag}{179}
+\indexentry{Gauss lag!F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{179}
+\indexentry{Gauss lag!F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{179}
+\indexentry{Konstitutiva relationer}{179}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$!Fria laddningar}{181}
+\indexentry{Laddningst{\"a}thet!Fria laddningar $\rho _{\rm f}$}{181}
+\indexentry{Elektrisk polarisationsdensitet ${\bf P}$}{181}
+\indexentry{Magnetisering ${\bf M}$}{181}
+\indexentry{Planv{\aa }guppdelning}{181}
+\indexentry{Elektromagnetisk v{\aa }gekvation}{181}
+\indexentry{d'Alembert, Jean le Rond (1717--1783)!d'Alemberts l{\"o}sningsmetod (1747)}{181}
+\indexentry{Planv{\aa }guppdelning}{181}
+\indexentry{Elektromagnetisk v{\aa }gekvation!I homogent dielektrikum}{183}
+\indexentry{Homogent medium}{183}
+\indexentry{Elektromagnetisk v{\aa }gekvation}{183}
+\indexentry{Laddningst{\"a}thet!Fria laddningar $\rho _{\rm f}$}{183}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$!Fria laddningar}{183}
+\indexentry{Elektrisk polarisationsdensitet ${\bf P}$}{183}
+\indexentry{Elektrisk polarisationsdensitet ${\bf P}$!Linearitet}{183}
+\indexentry{Polarisationsdensitet {\bf P}!Elektrisk}{183}
+\indexentry{Magnetisering ${\bf M}$}{183}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$!Divergens f{\"o}r}{183}
+\indexentry{Plana elektromagnetiska f{\"a}lt}{184}
+\indexentry{d'Alembert, Jean le Rond (1717--1783)!d'Alemberts l{\"o}sningsmetod (1747)}{184}
+\indexentry{d'Alembert, Jean le Rond (1717--1783)!d'Alembert-operator}{185}
+\indexentry{d'Alembert, Jean le Rond (1717--1783)!Integration of d'Alemberts transformerade v{\aa }gekvation}{186}
+\indexentry{Motpropagerande v{\aa }gor}{186}
+\indexentry{Brytningsindex $n$}{186}
+\indexentry{Ljushastighet!I dielektrikum, $c$}{186}
+\indexentry{Ljushastighet!I vakuum, $c_0$}{186}
+\indexentry{Magnetisk permeabilitet!Vakuumpermeabilitet $\mu _0$}{186}
+\indexentry{Elektrisk permittivitet!Vakuumpermittivitet $\varepsilon _0$}{186}
+\indexentry{Elektrisk permittivitet!Relativ permittivitet $\varepsilon $}{186}
+\indexentry{Initialvillkor f{\"o}r v{\aa }gpropagation}{186}
+\indexentry{Tidsharmoniska f{\"a}lt}{187}
+\indexentry{Planv{\aa }guppdelning}{187}
+\indexentry{Komplexv{\"a}rda f{\"a}ltenvelopper}{187}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$!Komplexv{\"a}rd envelopp}{187}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$!Komplexv{\"a}rd envelopp}{187}
+\indexentry{V{\aa }gvektor ${\bf k}$}{187}
+\indexentry{von Helmholtz, Hermann (1821--1894)}{187}
+\indexentry{Laplace-operatorn!Egenv{\"a}rdesproblem f{\"o}r}{187}
+\indexentry{Komplexv{\"a}rda f{\"a}ltenvelopper}{188}
+\indexentry{Ortogonalitet mellan f{\"a}lt och v{\aa }gvektor}{188}
+\indexentry{V{\aa }gvektor ${\bf k}$}{188}
+\indexentry{Poynting-vektorn ${\bf S}$!Effekt transporterat av elektromagnetiskt f{\"a}lt}{188}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrodynamisk}{191}
+\indexentry{Vektorpotential ${\bf A}$!Elektrodynamisk}{191}
+\indexentry{Lorenz-villkoret}{191}
+\indexentry{Lorenz-villkoret!{\it Lorenz gauge}}{191}
+\indexentry{Retarderad potential!Tidsf{\"o}rdr{\"o}jd potential}{191}
+\indexentry{Elektromagnetisk v{\aa }gekvation}{193}
+\indexentry{Str{\"o}mt{\"a}thet ${\bf J}$!Fria laddningar, ${\bf J}_{\rm f}$}{193}
+\indexentry{Elektrisk polarisationsdensitet ${\bf P}$}{193}
+\indexentry{Magnetisering ${\bf M}$}{193}
+\indexentry{Elektrisk f{\"a}ltstyrka ${\bf E}$}{193}
+\indexentry{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}{193}
+\indexentry{Elektromagnetisk v{\aa }gekvation!Gemensam k{\"a}llterm}{193}
+\indexentry{Retarderad potential!Tidsf{\"o}rdr{\"o}jd potential}{193}
+\indexentry{Skal{\"a}r potential $\phi $!Analogi med gravitation}{194}
+\indexentry{Elektrostatiskt f{\"a}lt!Analogi med gravitationsf{\"a}lt}{194}
+\indexentry{Potentiell energi!Elektrostatisk}{194}
+\indexentry{Retarderad potential!Tidsf{\"o}rdr{\"o}jd potential}{195}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrodynamisk}{195}
+\indexentry{Vektorpotential ${\bf A}$!Elektrodynamisk}{195}
+\indexentry{Magnetiska monopoler!Icke-existens av}{195}
+\indexentry{Elektromagnetisk v{\aa }gekvation!f{\"o}r retarderade potentialer}{196}
+\indexentry{Poissons ekvation}{196}
+\indexentry{Poissons ekvation!L{\"o}sningar p{\aa } integralform}{196}
+\indexentry{Amp\`eres lag}{196}
+\indexentry{Biot--Savarts lag}{196}
+\indexentry{Ljushastighet!I dielektrikum, $c$}{196}
+\indexentry{Ljushastighet!I vakuum, $c_0$}{196}
+\indexentry{Brytningsindex $n$}{196}
+\indexentry{Retarderad tid!Tidsf{\"o}rdr{\"o}jning}{196}
+\indexentry{Gauss lag!F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$}{197}
+\indexentry{Amp\`eres lag}{197}
+\indexentry{Konstitutiva relationer}{197}
+\indexentry{Skal{\"a}r potential $\phi $!V{\aa }gekvation f{\"o}r}{198}
+\indexentry{Gauge-transform}{198}
+\indexentry{Vektorpotential ${\bf A}$}{198}
+\indexentry{Gauge-transformation}{199}
+\indexentry{Lorenz-villkoret!{\it Lorenz gauge}}{200}
+\indexentry{Gauge-funktion $\psi $}{200}
+\indexentry{Retarderad potential!Tidsf{\"o}rdr{\"o}jd potential}{201}
+\indexentry{Lorenz-villkoret!{\it Lorenz gauge}}{201}
+\indexentry{Coulomb-villkoret!{\it Coulomb gauge}}{202}
+\indexentry{Retarderad potential!Tidsf{\"o}rdr{\"o}jd potential p{\aa } integralform}{203}
+\indexentry{Halvv{\aa }gsantenn}{205}
+\indexentry{Antenn!Halvv{\aa }gsantenn}{205}
+\indexentry{Elektrodynamik}{207}
+\indexentry{Retarderad potential!Tidsf{\"o}rdr{\"o}jd potential}{207}
+\indexentry{Skal{\"a}r potential $\phi $!Elektrodynamisk}{209}
+\indexentry{Vektorpotential ${\bf A}$!Elektrodynamisk}{209}
+\indexentry{Gauge-transform}{209}
+\indexentry{Gauge-funktion}{209}
+\indexentry{Lorenz-villkoret}{209}
+\indexentry{Retarderad potential!Tidsf{\"o}rdr{\"o}jd potential}{209}
+\indexentry{Retarderad tid!Tidsf{\"o}rdr{\"o}jning}{209}
+\indexentry{Retarderade potentialer!f{\"o}r cylindrisk rak antenn}{213}
+\indexentry{Dipolantenn}{213}
+\indexentry{Lorentz, Hendrik Antoon (1853--1928)}{214}
+\indexentry{Lorenz, Ludvig (1829--1891)}{214}
+\indexentry{Gauge-transformation}{215}

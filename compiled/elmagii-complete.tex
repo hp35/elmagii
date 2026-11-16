@@ -626,7 +626,7 @@
 %
 % File: teach/elmagii/formulas/src/formulas.tex [plain TeX code]
 % Github: https://github.com/elmagii/formulas/
-% Last change: November 8, 2026
+% Last change: November 16, 2026
 %
 % This is the primary collection of formulas in the course ``Elektromagnetism
 % II, 1TE626 (2022-2026)'' for Engineering Physics, held 2022-2026, at Uppsala
@@ -698,13 +698,6 @@
   \hrule width\hsize\vskip10pt}
 \parskip=0pt
 \def\eqtitle#1{\vskip2pt\goodbreak{\it #1}\par}
-%\def\trimspacing#1{%
-%  \begingroup%
-%    \parskip=-10pt%
-%%    \displaylines{#1}%
-%    #1%
-%  \endgroup%
-%}
 
 %
 % Definition of the vertical padding to use for displayed equations.
@@ -736,8 +729,8 @@
 %
 % Header of the compiled collection of formulas.
 %
-\def\versionnumber{1.3}             % Version of this collection of formulas
-\def\versiondate{8 november, 2026}  % Timestamp of this collection of formulas
+\def\versionnumber{1.4}              % Version of this collection of formulas
+\def\versiondate{16 november, 2026}  % Timestamp of this collection of formulas
 \def\version{v.\versionnumber\ (\versiondate)}
 \vskip-4pt
 \centerline{Uppsala Universitet}
@@ -1194,8 +1187,8 @@ $$
 $$
 
 \eqsection{Multipolutveckling av statiska potentialer}
-\sidx{Multipolutveckling}[Skal{\"a}r potential $\phi$]
-\sidx{Multipolutveckling}[Vektorpotential ${\bf A}$]
+\sidx{Multipolutveckling}[F{\"o}r skal{\"a}r potential $\phi$]
+\sidx{Multipolutveckling}[F{\"o}r vektorpotential ${\bf A}$]
 
 \eqtitle{Klassificering av multipolmoment}
 \sidx{Multipolutveckling}[Klassificering av moment]
@@ -1244,7 +1237,7 @@ $$
 $$
 
 \eqtitle{Multipolmoment f{\"o}r system av punktladdningar}
-\sidx{Multipolutveckling}[System av punktladdningar]
+\sidx{Multipolutveckling}[F{\"o}r system av punktladdningar $q'_k$]
 F{\"o}r ett system av $N$ punktladdningar $q'_k$ placerade vid k{\"a}llpunkterna
 ${\bf x}'_k$ {\"a}r den statiska multipolutvecklingen av skal{\"a}ra potentialen
 $$
@@ -1258,7 +1251,7 @@ $$
 $$
 
 \eqtitle{Multipolmoment f{\"o}r kontinuum av laddning}
-\sidx{Multipolutveckling}[Generell av laddningst{\"a}thet $\rho$]
+\sidx{Multipolutveckling}[Av laddningst{\"a}thet $\rho$]
 F{\"o}r en kontinuerlig statisk laddningst{\"a}thet $\rho({\bf x})$ {\"a}r den
 statiska multipolutvecklingen av skal{\"a}ra potentialen
 $$
@@ -1293,9 +1286,8 @@ d{\"a}r\par
   {\hbox to98pt{(kvadrupolmoment)\hfil}}}
 
 \eqtitle{Multipolmoment f{\"o}r kontinuum av str{\"o}mt{\"a}thet}
-\sidx{Multipolutveckling}[F{\"o}r kontinuum av str{\"o}mt{\"a}thet ${\bf J}$]
-\sidx{Multipolutveckling}[F{\"o}r vektorpotential]
-\sidx{Multipolutveckling}[Generell str{\"o}mt{\"a}thet ${\bf J}$]
+\sidx{Multipolutveckling}[Av str{\"o}mt{\"a}thet ${\bf J}$]
+\sidx{Multipolutveckling}[F{\"o}r vektorpotential ${\bf A}$]
 F{\"o}r en kontinuerlig statisk str{\"o}mt{\"a}thet ${\bf J}({\bf x})$ {\"a}r
 den statiska multipolutvecklingen av vektorpotentialen
 $$
@@ -13047,7 +13039,8 @@ $$}
 
 \section{Multipolutveckling av f{\"a}lt}
 \sidx{Multipolutveckling}
-Vi kan sammanfatta {\"a}mnet f{\"o}r dagens f{\"o}rel{\"a}sning, {\it multipolutvecklingen},
+Vi kan sammanfatta {\"a}mnet f{\"o}r dagens f{\"o}rel{\"a}sning,
+{\it multipolutvecklingen},
 med f{\"o}ljande punkter:
 \item{$\bullet$}{Multipolutvecklingen bist{\aa}r oss med en formalism f{\"o}r
    att projicera ut olika bidrag (s{\aa} kallade ``moment'') till
@@ -13359,8 +13352,8 @@ kvadrupol.}
 elektrisk kvadrupol med f{\"a}ltlinjer ${\bf E}(x,y)=-\nabla\phi(x,y)$.}
 
 \section{Multipolutveckling av skal{\"a}r potential f{\"o}r generella laddningsf{\"o}rdelningar}
-\sidx{Multipolutveckling}[F{\"o}r skal{\"a}r potential]
-\sidx{Multipolutveckling}[Generell laddnings\-f{\"o}r\-del\-ning]
+\sidx{Multipolutveckling}[F{\"o}r skal{\"a}r potential $\phi$]
+\sidx{Multipolutveckling}[Av laddningst{\"a}thet $\rho$]
 Vi betraktar en generell laddningsf{\"o}rdelning enligt figur.
 Laddningsf{\"ordelningen} kan vara en generell distribution i 3D, men {\"a}ven
 i kombinationer av 2D (ytladdningar, sk{\"a}rmar, jordplan),
@@ -13545,8 +13538,8 @@ ${\bf J}({\bf x})$.
 
 \section{Multipolutveckling av vektorpotentialen f{\"o}r generella
   str{\"o}mt{\"a}theter}
-\sidx{Multipolutveckling}[F{\"o}r vektorpotential]
-\sidx{Multipolutveckling}[Generell str{\"o}mt{\"a}thet]
+\sidx{Multipolutveckling}[F{\"o}r vektorpotential ${\bf A}$]
+\sidx{Multipolutveckling}[Av str{\"o}mt{\"a}thet ${\bf J}$]
 Motsvarande serieutveckling f{\"o}r vektorpotentialen f{\"o}ljer direkt
 fr{\aa}n exakt samma serietveckling av ``viktfunktionen'' $f({\bf x}')$ i
 k{\"a}llkoordinater som f{\"o}r den skal{\"a}ra potentialen, d{\"a}r
