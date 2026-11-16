@@ -528,14 +528,12 @@
   \item Sf{\"a}risk symmetri, 129, 131
   \item Sf{\"a}riska koordinater, 57
   \item SI-enheter, 174
-  \item Skal{\"a}r potential, 120
-    \subitem Elektrostatisk, 65
-  \item Skal{\"a}r potential $\phi $, xv, 58, 127, 151, 153, 154, 
+  \item Skal{\"a}r potential $\phi $, xv, 58, 120, 127, 151, 153, 154, 
 		159, 160, 166
     \subitem Analogi med gravitation, 194
     \subitem Elektrodynamisk, 191, 195, 209
     \subitem Elektrodynamiska potentialer, xvi
-    \subitem Elektrostatisk, xiv, 58--60
+    \subitem Elektrostatisk, xiv, 58--62, 65--71, 73--76
     \subitem Elektrostatisk potential, xiv
     \subitem Existens f{\"o}r, xiv
     \subitem Explicit l{\"o}sning till Poissons ekvation, xiv
@@ -562,13 +560,12 @@
     \subitem Sluten, 88, 109, 116, 123, 141, 142
     \subitem Station{\"a}r, 116, 118
     \subitem Varierande magnetiskt fl{\"o}de genom, 118
-  \item Str{\"o}mt{\"a}thet, 90, 91
+  \item Str{\"o}mt{\"a}thet ${\bf J}$, 10, 90, 91
     \subitem Bundna laddningar, 173
-    \subitem Fria laddningar, 172, 181, 183
-    \subitem Fria laddningar, ${\bf J}_{\rm f}$, 193
-  \item Str{\"o}mt{\"a}thet ${\bf J}$, 10
     \subitem Divergens i statiska problem, xiv
     \subitem Elektromagnetiska v{\aa }gekvationer, xvi
+    \subitem Fria laddningar, 172, 181, 183
+    \subitem Fria laddningar, ${\bf J}_{\rm f}$, 193
     \subitem I medium med konduktivitet $\sigma $, xiv
   \item Superpositionsprincipen, 40, 42, 47, 57, 58
 
@@ -615,13 +612,13 @@
     \subitem Notation, xviii
     \subitem Produktregler, xviii
     \subitem Trippelprodukter, xviii
-  \item Vektorpotential, 100, 120
+  \item Vektorpotential ${\bf A}$, xv, 5, 100, 120, 144, 146, 151, 166, 
+		198
     \subitem Amp\`eres lag, 100
-    \subitem Explicit l{\"o}sning, 101
-    \subitem Tolkning, 102
-  \item Vektorpotential ${\bf A}$, xv, 5, 144, 146, 151, 166, 198
     \subitem Ekvivalenta volym- och ytstr{\"o}mmar, 147
     \subitem Elektrodynamisk, 191, 195, 209
+    \subitem Elektrodynamiska potentialer, xvi
+    \subitem Explicit l{\"o}sning, 101
     \subitem Explicit l{\"o}sning till Poissons ekvation, xv
     \subitem Magnetisk monopolterm, 162
     \subitem Magnetiska monopolterm, 163
@@ -629,9 +626,8 @@
     \subitem Magnetiskt kvadrupolmoment, 164
     \subitem Magnetostatisk, xiv
     \subitem Multipolutveckling, 162
+    \subitem Tolkning, 102
     \subitem V{\aa }gekvation, generell, xvi
-  \item Vektorpotentialen ${\bf A}$
-    \subitem Elektrodynamiska potentialer, xvi
   \item Virtuell sf{\"a}r, 45, 49
   \item Virtuell slinga, 112
   \item Virtuella fotoner, 41
