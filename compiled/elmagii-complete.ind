@@ -336,9 +336,8 @@
   \item Kvantmekanik, 88
     \subitem Dipoloperator, 128
     \subitem V{\aa }gfunktion, 127
-  \item K{\"a}lladdning, 39, 42, 45, 55, 59
-  \item K{\"a}llpunkt, 39, 40
-  \item K{\"a}llpunkt ${\bf x}'$, 144
+  \item K{\"a}lladdning $q'$, 39, 42, 45, 55, 59
+  \item K{\"a}llpunkt ${\bf x}'$, 39, 40, 144
 
   \indexspace
 
@@ -487,6 +486,8 @@
     \subitem L{\"o}sningar p{\aa } integralform, 196
   \item Polarisationsdensitet {\bf P}
     \subitem Elektrisk, 183
+  \item Portr{\"a}ttgalleri
+    \subitem Klassisk elektromagnetism, xxi
   \item Potentialskillnad, 109
   \item Potentiell energi
     \subitem Elektrostatisk, 60, 194
@@ -531,16 +532,14 @@
   \item Skal{\"a}r potential $\phi $, xv, 58, 120, 127, 151, 153, 154, 
 		159, 160, 166
     \subitem Analogi med gravitation, 194
-    \subitem Elektrodynamisk, 191, 195, 209
-    \subitem Elektrodynamiska potentialer, xvi
+    \subitem Elektrodynamisk, xvi, 191, 195, 209
     \subitem Elektrostatisk, xiv, 58--62, 65--71, 73--76
-    \subitem Elektrostatisk potential, xiv
     \subitem Existens f{\"o}r, xiv
     \subitem Explicit l{\"o}sning till Poissons ekvation, xiv
     \subitem Fr{\aa }n punktladdning $q'$, xiv
     \subitem Multipolutveckling, 160
+    \subitem V{\aa }gekvation, xvi
     \subitem V{\aa }gekvation f{\"o}r, 198
-    \subitem V{\aa }gekvation, generell, xvi
   \item Spegelladdning, 72
     \subitem Cylindriska perfekt ledande gr{\"a}nsytor, 78--82
     \subitem Gr{\"a}nsytor mellan dielektrika, 77
@@ -616,8 +615,7 @@
 		198
     \subitem Amp\`eres lag, 100
     \subitem Ekvivalenta volym- och ytstr{\"o}mmar, 147
-    \subitem Elektrodynamisk, 191, 195, 209
-    \subitem Elektrodynamiska potentialer, xvi
+    \subitem Elektrodynamisk, xvi, 191, 195, 209
     \subitem Explicit l{\"o}sning, 101
     \subitem Explicit l{\"o}sning till Poissons ekvation, xv
     \subitem Magnetisk monopolterm, 162
@@ -627,7 +625,7 @@
     \subitem Magnetostatisk, xiv
     \subitem Multipolutveckling, 162
     \subitem Tolkning, 102
-    \subitem V{\aa }gekvation, generell, xvi
+    \subitem V{\aa }gekvation, xvi
   \item Virtuell sf{\"a}r, 45, 49
   \item Virtuell slinga, 112
   \item Virtuella fotoner, 41

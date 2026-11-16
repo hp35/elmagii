@@ -302,7 +302,11 @@
 \newif\ifshowindex
 \showindextrue  % Use \showindextrue and \showindexfalse to enable/disable index
 \def\index{\ifshowindex\vfill\eject%
-  ~\vskip 5pc\goodbreak\noindent{\twelvecmbx{Index}}%
+  \def\rightheadline{\tenrm{\it Index}
+    \hfil{\it \coursename, \coursecode\ (\courseyear)}}
+  \def\leftheadline{\tenrm{\it \coursename, \coursecode\ (\courseyear)}
+    \hfil{\it Index}}
+   ~\vskip 5pc\goodbreak\noindent{\twelvecmbx{Index}}%
   \writenumberedtocentry{index}{\hskip24pt{Index}}%
   \nobreak\vskip 48pt\noindent\ignorespaces%
   \readindexfile{i}\cleardoublepage\fi}
@@ -1067,7 +1071,7 @@ $$
   %  \ \Rightarrow\ {\bf E}({\bf x})=-\nabla\phi({\bf x})
 $$
 \eqtitle{Skal{\"a}r elektrostatisk potential fr{\aa}n punktladdning $q'$}
-\sidx{Skal{\"a}r potential $\phi$}[Elektrostatisk potential]
+\sidx{Skal{\"a}r potential $\phi$}[Elektrostatisk]
 \sidx{Skal{\"a}r potential $\phi$}[Fr{\aa}n punktladdning $q'$]
 $$
   \phi({\bf x})
@@ -1448,8 +1452,8 @@ beroende p{\aa} vilka termer som kan ignoreras.
 
 \eqsection{Elektrodynamik och potentialer}
 \eqtitle{Elektrodynamiska potentialer}
-\sidx{Vektorpotential ${\bf A}$}[Elektrodynamiska potentialer]
-\sidx{Skal{\"a}r potential $\phi$}[Elektrodynamiska potentialer]
+\sidx{Vektorpotential ${\bf A}$}[Elektrodynamisk]
+\sidx{Skal{\"a}r potential $\phi$}[Elektrodynamisk]
 $$
   \eqalign{
     {\bf E}({\bf x},t)
@@ -1460,8 +1464,8 @@ $$
   }
 $$
 \eqtitle{Generella elektrodynamiska v{\aa}gekvationer}
-\sidx{Vektorpotential ${\bf A}$}[V{\aa}gekvation, generell]
-\sidx{Skal{\"a}r potential $\phi$}[V{\aa}gekvation, generell]
+\sidx{Vektorpotential ${\bf A}$}[V{\aa}gekvation]
+\sidx{Skal{\"a}r potential $\phi$}[V{\aa}gekvation]
 F{\"o}r de elektrodynamiska potentialerna g{\"a}ller de gene\-rella
 v{\aa}gekvationerna
 $$
@@ -3036,9 +3040,11 @@ $$
 \ifnum\lang=\swedish
   \presection{Portr{\"a}ttgalleri inom klassisk elektromagnetism}
   \sidx{Klassisk elektromagnetism}[Portr{\"a}ttgalleri]
+  \sidx{Portr{\"a}ttgalleri}[Klassisk elektromagnetism]
 \else
   \presection{Portrait gallery in classical electromagnetism}
   \sidx{Classical electromagnetism}[Portrait gallery]
+  \sidx{Portrait gallery}[Classical electromagnetism]
 \fi
 
 \noindent
@@ -5979,7 +5985,7 @@ punktladdningar \sidx{Punktladdning}\sidx{Elektrisk laddning}
 respektive tecken f{\"o}r positiv eller negativ laddning i enheter av Coulomb
 (C) \sidx{Coulomb, enhet f{\"o}r laddning} och placerade i
 respektive {\it observationspunkten} \sidx{Observationspunkt} ${\bf x}$ och
-{\it k{\"a}llpunkten} \sidx{K{\"a}llpunkt} ${\bf x}'$,
+{\it k{\"a}llpunkten} \sidx{K{\"a}llpunkt ${\bf x}'$} ${\bf x}'$,
 attraherar \sidx{Attraktionskraft}[Elektrisk] eller repellerar varandra med en
 kraft ${\bf F}$ genom Coulombs lag\numberedfootnote{Griffiths Ekv.~(2.1),
   sid.~60; laddningen i observationspunkten betecknas som ``test charge''.
@@ -6006,7 +6012,7 @@ $$}
 kort och gott {\it vakuumpermittiviteten}.
 \sidx{Elektrisk permittivitet}[Vakuumpermittivitet $\varepsilon_0$]
 Sj{\"a}lvfallet agerar denna kraft reciprokt p{\aa} k{\"a}lladdningen
-\sidx{K{\"a}lladdning} $q'$, och vi kan i uttrycket f{\"o}r \idx{Coulombs
+\sidx{K{\"a}lladdning $q'$} $q'$, och vi kan i uttrycket f{\"o}r \idx{Coulombs
 kraftlag} ovan helt sonika v{\"a}xla primmet {\"o}ver till den andra positionen
 och direkt erh{\aa}lla
 \hl{$$
@@ -6019,7 +6025,7 @@ $$}
 
 \epsfig{../lect-01/figs/coulombsys.1}\noindent
 Om vi ist{\"a}llet f{\"o}r en enskild punktladdning vid k{\"a}llpunkten
-\sidx{K{\"a}llpunkt} betraktar ett {\hl{{\it system}
+\sidx{K{\"a}llpunkt ${\bf x}'$} betraktar ett {\hl{{\it system}
 \sidx{Punktladdning}[System av punktladdningar] av $N$ ladd\-ningar
 $q'_k$ vid respektive k{\"a}llpositioner ${\bf x}'_k$}} (med prim f{\"o}r
 konsekvent notation f{\"o}r k{\"a}llpunkter), {\"a}r den totala kraften som
@@ -6183,7 +6189,7 @@ komponenter av ett totalt elektriskt f{\"a}lt {\"a}r basen i vad vi kallar
 Vi kan utifr{\aa}n f{\"a}ltet vi nyss tog fram illustrera detta med en
 {\hl{godtycklig uppdelning av det elektriska f{\"a}ltet i tv{\aa} delar}},
 med tv{\aa} separata grupper av de $N$ k{\"a}lladdningarna,
-\sidx{K{\"a}lladdning} enligt
+\sidx{K{\"a}lladdning $q'$} enligt
 \hl{$$
   {\bf E}({\bf x})\equiv
   \underbrace{
@@ -6332,7 +6338,7 @@ fr{\aa}n en {\it k{\"a}lla}, och vi kommer fram{\"o}ver i kursen ofta att
 relatera till ``k{\"a}lladdningar'' som ger upphov till elektriska f{\"a}lt och
 fl{\"o}den.\numberedfootnote{Genomg{\aa}ende kommer vi i kursen att s{\"a}tta
   ett prim ($'$) p{\aa} de objekt som vi betraktar som k{\"a}llor,
-  \sidx{K{\"a}lladdning} som ${\bf x}'$, $dS'$ (ytelement) eller $dV'$
+  \sidx{K{\"a}lladdning $q'$} som ${\bf x}'$, $dS'$ (ytelement) eller $dV'$
   (volymelement), och l{\aa}ta observationspunkt och m{\"a}tetal vid denna
   vara oprimmade.
   Vi kommer {\"a}ven att genomg{\aa}ende explicit anv{\"a}nda
@@ -6884,7 +6890,7 @@ till det elektriska f{\"a}ltet i observationspunkten ${\bf x}={\bf e}_r r$
 (vi v{\"a}ljer $z=0$ f{\"o}r observationspunkten ${\bf x}$) fr{\aa}n
 linjeladdningen via Coulomb-integralen,
 \sidx{Coulombs generaliserade lag}[Coulombintegralen] s{\aa} har vi med
-k{\"a}llpunkter\sidx{K{\"a}lladdning} ${\bf x}'={\bf e}_z z'$ att
+k{\"a}llpunkter\sidx{K{\"a}lladdning $q'$} ${\bf x}'={\bf e}_z z'$ att
 $$
   \eqalign{
     {\bf E}({\bf x})
@@ -7148,7 +7154,7 @@ d{\"a}r vi ju observerar det elektriska f{\"a}ltet, eller {\it labbsystemet}
 \sidx{Labbsystem} om vi s{\aa} vill, och eftersom integralen utf{\"o}rs i det
 {\it primmade} systemet ${\bf x}'$ d{\"a}r vi summerar upp alla bidrag
 fr{\aa}n den elektriska laddningen, eller {\it k{\"a}llor},
-\sidx{K{\"a}lladdning} s{\aa} kan vi bryta ut gradienten utanf{\"o}r
+\sidx{K{\"a}lladdning $q'$} s{\aa} kan vi bryta ut gradienten utanf{\"o}r
 integralen, med resultatet
 $$
   \eqalign{
@@ -16820,10 +16826,10 @@ $$
 % Github: https://github.com/elmagii/lect-12/
 % Last change: November 9, 2026
 %
-% Lecture No 12 in the course ``Elektromagnetism II, 1TE626 (2023)'',
-% held December 12, 2025, at Uppsala University, Sweden.
+% Lecture No 12 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
+% held December 12, 2026, at Uppsala University, Sweden.
 %
-% Copyright (C) 2022-2025, Fredrik Jonsson, under Gnu General Public License
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public License
 % (GPL) v3. See the enclosed LICENSE for details.
 %
 % This program is free software: you can redistribute it and/or modify
@@ -16841,14 +16847,14 @@ $$
 %
 \def\coursename{Elektromagnetism II}
 \def\coursecode{1TE626}
-\def\courseyear{2025}
+\def\courseyear{2026}
 \def\courserepo{https://github.com/hp35/elmagii/}
 \def\lecturenumber{12}
 \def\lecturetitle{Grundl{\"a}ggande antennteori}
 \def\lecturesubtitle{}
 \def\lectureauthor{Fredrik Jonsson}
 \def\lectureplace{Uppsala Universitet}
-\def\lecturedate{12 december 2025}
+\def\lecturedate{12 december 2026}
 %-------------------- BEGIN OF LOCAL MACROS --------------------
 \edef\expandedlecturenumber{12}
 \def\ifempty#1{\ifx\relax#1\relax}
