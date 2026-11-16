@@ -30,8 +30,9 @@ all:
 	make inline-formulas
 	make inline-formula-src
 	make inline-worldmap
-	make inline-portrait
+	make inline-gallery
 	make inline-gallery-src
+	make inline-examprob
 	make inline-fonts
 	make inline-misc
 	make inline-toc
@@ -297,7 +298,7 @@ inline-worldmap:
 # incorporating the file contents of the file instead. This way,
 # we obtain a more self-consistent master TeX file for compilation.
 #
-inline-portrait:
+inline-gallery:
 	@INSERT=../gallery/src/portrait.tex;\
 	INPUT=$(PROJECT).tex;\
 	OUTPUT=$(PROJECT)-tmp.tex;\
@@ -324,6 +325,26 @@ inline-gallery-src:
 	echo "Replacing \\\input ../gallery/src/gallery-src.tex by content";\
 	awk ' \
 	   /\\input[[:space:]]+\.\.\/gallery\/src\/gallery-src\.tex/ { \
+	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
+	         close("'"$$INSERT"'"); \
+	         next; \
+	   } \
+	   { print } \
+	' "$$INPUT" > "$$OUTPUT";\
+	mv "$$OUTPUT" "$$INPUT"
+
+#
+# Replace the inclusion '\input ../examprob/src/examprob-src.tex' by
+# incorporating the file contents of the file instead. This way, we
+# obtain a more self-consistent master TeX file for compilation.
+#
+inline-examprob:
+	@INSERT=../examprob/src/examprob-src.tex;\
+	INPUT=$(PROJECT).tex;\
+	OUTPUT=$(PROJECT)-tmp.tex;\
+	echo "Replacing \\\input ../examprob/src/examprob-src.tex by content";\
+	awk ' \
+	   /\\input[[:space:]]+\.\.\/examprob\/src\/examprob-src\.tex/ { \
 	      while ((getline line < "'"$$INSERT"'") > 0) print line; \
 	         close("'"$$INSERT"'"); \
 	         next; \
@@ -525,5 +546,5 @@ wfreq:
 	}' | sort -k 2n | tail -n 40
 
 clean:
-	rm -Rf *~ lect*.tex *.log *.idx *.ilg *.ind *.dvi *.ps $(PROJECT).*
+	rm -Rf *~ *.tex *.log *.idx *.ilg *.ind *.dvi *.ps $(PROJECT).*
 	make clean -C src

@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/compiled/src/misc.tex [plain TeX code]
 % Github: https://github.com/hp35/elmagii/tree/main/compiled/src
-% Last change: February 22, 2026
+% Last change: November 11, 2026
 %
 % Miscellaneous formatting macros for the compilation of all Lecture
 % Notes in the course "Elektromagnetism II, 1TE626", held 2022-2026 at
@@ -69,6 +69,6 @@
   \centerline{[Page intentionally left blank]} ~\vfill\eject%
   \else\vfill\eject\fi}
 \newif\ifcolors % creates \ifcolors, \colorstrue, \colorsfalse
-\def\red#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
+\def\hl#1{\ifcolors{\color{red}#1}\else#1\fi\ignorespaces}
 \colorsfalse     % \colorstrue turns colors on, \colorsfalse turns them off
 \voffset=-10.2mm\topskip=0pt
