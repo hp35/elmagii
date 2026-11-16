@@ -1,0 +1,164 @@
+%
+% File: teach/elmagii/examprob/src/examprob-src.tex [plain TeX code]
+% Github: https://github.com/elmagii/examprob/
+% Last change: November 16, 2024
+%
+% The publicly available Examination Problem No 1 in the course
+% ``Elektromagnetism II, 1TE626 (2026)'', handed out during the first
+% lecture of November 3, 2026, at Uppsala University, Sweden.
+%
+% Copyright (C) 2026, Fredrik Jonsson, under Gnu General Public License
+% (GPL) v3. See the enclosed LICENSE for details.
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
+\presection{Tentamensuppgift 1}
+\sidx{Tentamensuppgift 1}[Elektromagnetisk v{\aa}gekvation]
+\sidx{Elektromagnetisk v{\aa}gekvation}[Tentamensuppgift 1]
+Givet Maxwells ekvationer
+$$
+  \eqalign{
+    \nabla\times{\bf E}
+       &=-{{\partial{\bf B}}\over{\partial t}},\hskip4.45em
+    \nabla\cdot{\bf D}=\rho,\cr
+    \nabla\times{\bf H}&={\bf J}_{\rm f}
+       +{{\partial{\bf D}}\over{\partial t}},\hskip3em
+       \nabla\cdot{\bf B}=0,
+  }
+$$
+samt de konstitutiva relationerna
+$$
+  \eqalign{
+    {\bf D}&=\varepsilon_0{\bf E}+{\bf P}
+            =\varepsilon_0\varepsilon_{\rm r}{\bf E},\cr
+    {\bf B}&=\mu_0({\bf H}+{\bf M})
+            =\mu_0\mu_{\rm r}{\bf H},\cr
+  }
+$$
+visa att den elektromagnetiska v{\aa}gekvationen i ett generellt medium lyder
+$$
+  \eqalign{
+    \nabla\times\nabla\times{\bf E}
+      +\mu_0\varepsilon_0{{\partial^2{\bf E}}\over{\partial t^2}}&=
+         -\mu_0{{\partial}\over{\partial t}}
+          \underbrace{
+             \bigg({\bf J}_{\rm f}
+	        +{{\partial{\bf P}}\over{\partial t}}
+	        +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}},\cr
+    \nabla\times\nabla\times{\bf B}
+      +\mu_0\varepsilon_0{{\partial^2{\bf B}}\over{\partial t^2}}&=
+          \mu_0\nabla\times
+          \underbrace{
+	     \bigg({\bf J}_{\rm f}
+	        +{{\partial{\bf P}}\over{\partial t}}
+	        +\nabla\times{\bf M}\bigg)}_{\hbox{gemensam k{\"a}llterm}}.\cr
+  }
+$$
+\vfill\eject
+\noindent
+{\bf L{\"o}sningsf{\"o}rslag till Tentamensuppgift 1}
+\sidx{Tentamensuppgift 1}[L{\"o}sningsf{\"o}rslag]
+\sidx{Elektrisk f{\"a}ltstyrka {\bf E}}
+\sidx{Elektrisk fl{\"o}dest{\"a}thet {\bf D}}
+\sidx{Elektrisk polarisationsdensitet {\bf P}}
+\sidx{Magnetisk fl{\"o}dest{\"a}thet {\bf B}}
+\sidx{Magnetisk f{\"a}ltstyrka {\bf H}}
+\sidx{Magnetisering {\bf M}}
+\sidx{Amp{\`e}res lag}
+\sidx{Faradays induktionslag}
+\par\medskip\noindent
+De ing{\aa}ende f{\"a}lten och deras respektive SI-enheter {\"a}r, f{\"o}r
+att rekapitulera,
+$$
+  \eqalign{
+    {\bf E} &= \hbox{Elektrisk f{\"a}ltstyrka (``elektriskt\ f{\"a}lt'')}
+               \ ({\rm V}/{\rm m})\cr
+    {\bf D} &= \hbox{Elektrisk fl{\"o}dest{\"a}thet}
+               \ ({\rm C}/{\rm m}^2)\cr
+    {\bf P} &= \hbox{Elektrisk polarisationsdensitet}
+               \ ({\rm C}/{\rm m}^2)\cr
+    {\bf B} &= \hbox{Magnetisk fl{\"o}dest{\"a}thet (``B-f{\"a}lt'')}
+               \ ({\rm T})\cr
+    {\bf H} &= \hbox{Magnetisk f{\"a}ltstyrka (``H-f{\"a}lt'')}
+               \ ({\rm A}/{\rm m})\cr
+    {\bf M} &= \hbox{Magnetisering}
+               \ ({\rm A}/{\rm m})\cr
+  }
+$$
+Vi b{\"o}rjar med den elektriska f{\"a}ltstyrkan ${\bf E}$ genom att applicera
+$\nabla\times$ (``ta rotationen'') p{\aa} Faradays generella induktionslag,
+$$
+  \eqalign{
+    \nabla\times\nabla\times{\bf E}
+      &=\nabla\times\bigg(-{{\partial{\bf B}}\over{\partial t}}\bigg)\cr
+      &=\{\ \hbox{Konstitutiv relation}
+             \ {\bf B}=\mu_0({\bf H}+{\bf M})\ \}\cr
+      &=-{{\partial}\over{\partial t}}
+          \nabla\times\bigg(\mu_0({\bf H}+{\bf M})\bigg)\cr
+      &=-\mu_0{{\partial}\over{\partial t}}\nabla\times{\bf H}
+          -\mu_0{{\partial}\over{\partial t}}\nabla\times{\bf M}\cr
+      &=\{\ \hbox{Till{\"a}mpa Amp\`eres lag}\ \}\cr
+      &=-\mu_0{{\partial}\over{\partial t}}
+          \bigg({\bf J}_{\rm f}+{{\partial{\bf D}}\over{\partial t}}\bigg)
+          -\mu_0{{\partial}\over{\partial t}}\nabla\times{\bf M}\cr
+      &=\{\ \hbox{Konstitutiv relation}
+             \ {\bf D}=\varepsilon_0{\bf E}+{\bf P}\ \}\cr
+      &=-\mu_0{{\partial^2}\over{\partial t^2}}
+          \big(\varepsilon_0{\bf E}+{\bf P}\big)
+          -\mu_0{{\partial}\over{\partial t}}
+	     \big({\bf J}_{\rm f}+\nabla\times{\bf M}\big)\cr
+      &=\{\ \hbox{Kombinera polarisationsdensiteten in i k{\"a}llterm}\ \}\cr
+      &=-\underbrace{\mu_0\varepsilon_0}_{=1/c^2_0}
+         {{\partial^2{\bf E}}\over{\partial t^2}}
+          -\underbrace{
+	     \mu_0{{\partial}\over{\partial t}}
+	     \bigg({\bf J}_{\rm f}
+	        +{{\partial{\bf P}}\over{\partial t}}
+	        +\nabla\times{\bf M}\bigg)}_{\hbox{k{\"a}llterm}}.\cr
+  }
+$$
+Notera att denna ekvation f{\"o}r ${\bf E}$ g{\"a}ller {\it oavsett} eventuella
+spatiala variationer hos relativa permittiviteten eller permeabiliteten, det
+vill s{\"a}ga oavsett om relationen mellan de exciterande f{\"a}lten och den
+resulterande elektriska polarisationsdensiteten eller magnetiseringen
+{\"a}ndras.
+
+P{\aa} samma s{\"a}tt har vi f{\"o}r magnetiska fl{\"o}dest{\"a}theten
+${\bf B}=\mu_0({\bf H}+{\bf M})$ att
+$$
+  \eqalign{
+    \nabla\times\nabla\times{\bf B}
+      &=\mu_0\nabla\times\nabla\times{\bf H}
+           +\mu_0\nabla\times\nabla\times{\bf M}\cr
+      &=\{\ \hbox{Till{\"a}mpa Amp\`eres lag}\ \}\cr
+      &=\mu_0\nabla\times\bigg({\bf J}_{\rm f}
+           +{{\partial{\bf D}}\over{\partial t}}\bigg)
+           +\mu_0\nabla\times\nabla\times{\bf M}\cr
+      &=\mu_0{{\partial}\over{\partial t}}\nabla\times{\bf D}
+           +\mu_0\nabla\times\bigg({\bf J}_{\rm f}+\nabla\times{\bf M}\bigg)\cr
+      &=\{\ \hbox{Konstitutiv relation}
+             \ {\bf D}=\varepsilon_0{\bf E}+{\bf P}\ \}\cr
+      &=\mu_0\varepsilon_0{{\partial}\over{\partial t}}\nabla\times{\bf E}
+           +\mu_0\nabla\times\bigg({\bf J}_{\rm f}
+	   +{{\partial{\bf P}}\over{\partial t}}
+	   +\nabla\times{\bf M}\bigg)\cr
+      &=\{\ \hbox{Till{\"a}mpa Faradays lag}\ \}\cr
+      &=-\underbrace{\mu_0\varepsilon_0}_{=1/c^2_0}
+         {{\partial^2{\bf B}}\over{\partial t^2}}
+           +\underbrace{\mu_0\nabla\times\bigg({\bf J}_{\rm f}
+	   +{{\partial{\bf P}}\over{\partial t}}
+	   +\nabla\times{\bf M}\bigg)}_{\hbox{k{\"a}llterm}}.\cr
+  }
+$$
+\vfill\eject

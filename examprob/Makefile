@@ -54,4 +54,4 @@ archive:
 	@$(TAR) --exclude="$(ARCHIVE)" -czf $(ARCHIVE) -C .. $(PROJDIR)
 
 clean:
-	@rm -Rf *~ *.aux *.toc *.log *.dvi *.ps $(ARCHIVE)
+	@rm -Rf *~ *.aux *.toc *.log *.dvi *.ps *.idx $(ARCHIVE)
