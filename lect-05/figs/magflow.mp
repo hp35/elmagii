@@ -70,7 +70,7 @@ beginfig(1);
   label.lft(btex $S$ etex,(-18u,-4u));
   label.rt(btex
       \def\iint{\mathop{\int\kern-8pt\int}}
-	$\displaystyle{\bf\Phi}_{\rm M}=\iint_S{\bf B}({\bf x})\cdot d{\bf A}$
+	$\displaystyle{\bf\Phi}_{\rm M}=\iint_S{\bf B}({\bf x})\cdot d{\bf S}$
 	etex,(30u,14u));
     draw (30u,14u){dir 190}..{dir 190}(8u,-1u);
 endfig;
