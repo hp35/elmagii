@@ -1,13 +1,14 @@
 %
 % File: teach/elmagii/formulas/src/formulas.tex [plain TeX code]
 % Github: https://github.com/elmagii/formulas/
-% Last change: November 16, 2026
+% Last change: November 17, 2026 [Revision 1.5]
 %
 % This is the primary collection of formulas in the course ``Elektromagnetism
 % II, 1TE626 (2022-2026)'' for Engineering Physics, held 2022-2026, at Uppsala
-% University, Sweden. This is a compilation of the source present at
-% elmagii/formulas/src/formulas.tex, into a compact and handy two-column
-% format.
+% University, Sweden. This is a compilation of the formulas present as source
+% at elmagii/formulas/src/formulas.tex, into a compact two-column format.
+% The formulas as such are read from the independent source simply to separate
+% content from presentation.
 %
 % Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
@@ -27,7 +28,7 @@
 %
 \input macros/epsf.tex
 \input macros/eplain.tex
-\input amssym % to get the {\Bbb E} font (strikethrough E)
+\input amssym  % to access the {\Bbb R} font (strikethrough R)
 \font\twelvecmbx=cmbx12
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
@@ -39,40 +40,29 @@
 \def\cleardoublepage{\ifodd\pageno\vfill\eject~\vskip260pt%
   \centerline{[Page intentionally left blank]} ~\vfill\eject%
   \else\vfill\eject\fi}
-\noindent{~\vskip -46pt\hskip-46pt%
-  {\epsfxsize=72pt\epsfbox{macros/UU_logo_color.eps}}}
-\vskip-46pt\hskip46pt
-{\twelvecmbx{Formelsamling}}%
-  \writenumberedtocentry{index}{\hskip24pt{Formelsamling}}%
-  \nobreak\vskip 0pt\noindent\ignorespaces
-%%%%%%%%%%%%%%%%% Begin two-column mode %%%%%%%%%%%%%%%%%%
-{\newdimen\fullhsize
-\fullhsize=170mm \hsize=82mm
-\topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\rightskip=0pt
-\parindent=0pt
-\def\fulline{\hbox to\fullhsize}
-\footline={\hfill{\rm\folio}}
-\let\lr=L \newbox\leftcolumn
-\output={\if L\lr
-  \global\setbox\leftcolumn=\columnbox \global\let\lr=R
-  \else \doubleformat \global\let\lr=L\fi
-  \ifnum\outputpenalty>-20000 \else\dosupereject\fi}
-\def\doubleformat{\shipout\vbox{\makeheadline
-    \fulline{\box\leftcolumn\hfil\columnbox}
-  \makefootline}
-  \advancepageno}
-\def\columnbox{\leftline{\pagebody}}
-\def\eqsection#1{%
-  \vskip6pt\goodbreak%
-  \hrule width\hsize\vskip1pt%
-  \hrule width\hsize
-  \vskip4pt%
-  \centerline{\bf\vphantom{lq} #1}%
-  \vskip4pt%
-  \hrule width\hsize\vskip1pt%
-  \hrule width\hsize\vskip10pt}
-\parskip=0pt
-\def\eqtitle#1{\vskip2pt\goodbreak{\it #1}\par}
+
+%
+% Define macros for page-counting purposes, to get the total number of
+% pages in the footer of the collection of formulas.
+%
+\newcount\pageshipped
+\newcount\totalpages
+\newread\pagesin
+\newwrite\pagesout
+\pageshipped=0
+\totalpages=0
+
+%
+% Read the total page count from the previous run, if available.
+%
+\openin\pagesin=\jobname.tpg
+\ifeof\pagesin
+  \totalpages=0
+\else
+  \read\pagesin to\temp
+  \totalpages=\temp
+\fi
+\closein\pagesin
 
 %
 % Definition of the vertical padding to use for displayed equations.
@@ -92,20 +82,70 @@
 % \belowdisplayshortskip are used when the preceding line is short enough
 % that the equation can be positioned closer to it.
 %
-% \abovedisplayskip=2pt plus 3pt minus 1pt      % Vertical padding of $$...$$
-% \belowdisplayskip=2pt plus 3pt minus 1pt      % Vertical padding of $$...$$
-% \abovedisplayshortskip=0pt plus 2pt minus 2pt % Vertical padding of $$...$$
-% \belowdisplayshortskip=2pt plus 2pt minus 2pt % Vertical padding of $$...$$
+% Default values would be:
+%    \abovedisplayskip=12pt plus 3pt minus 9pt
+%    \belowdisplayskip=12pt plus 3pt minus 9pt
+%    \abovedisplayshortskip=0pt plus 3pt
+%    \belowdisplayshortskip=7pt plus 3pt minus 4pt
+%
 \abovedisplayskip=12pt plus 3pt minus 9pt
 \belowdisplayskip=12pt plus 3pt minus 9pt
 \abovedisplayshortskip=0pt plus 3pt
 \belowdisplayshortskip=7pt plus 3pt minus 4pt
 
 %
+% Define the header and preamble of the collection of formulas. The formulas
+% as such are read from the independent source located in src/formulas.tex,
+% just to separate content from presentation.
+%
+\noindent{~\vskip -46pt\hskip-46pt%
+  {\epsfxsize=72pt\epsfbox{macros/UU_logo_color.eps}}}
+\vskip-46pt\hskip46pt
+{\twelvecmbx{Formelsamling}}%
+  \writenumberedtocentry{index}{\hskip24pt{Formelsamling}}%
+  \nobreak\vskip 0pt\noindent\ignorespaces
+%%%%%%%%%%%%%%%%% Begin two-column mode %%%%%%%%%%%%%%%%%%
+{\newdimen\fullhsize
+\fullhsize=170mm \hsize=82mm
+\vsize=236mm\voffset=6mm
+\topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\rightskip=0pt
+\parindent=0pt
+\def\fulline{\hbox to\fullhsize}
+\def\makeheadline{\vbox to 0pt{\vskip-22.5pt
+  \hbox to \fullhsize{\hfil{\it Formelsamling till{\aa}ten p{\aa}
+    tentamen i Elektromagnetism II, 1TE626, Uppsala Universitet}\hfil}
+  \vss}\nointerlineskip}
+\def\makefootline{\vbox to 0pt{\vskip0pt
+  \hbox to \fullhsize{\hfil{Sida {\folio} av \the\totalpages}\hfil}
+  \vss}\nointerlineskip}
+\let\lr=L \newbox\leftcolumn
+\output={\if L\lr
+  \global\setbox\leftcolumn=\columnbox \global\let\lr=R
+  \else \doubleformat \global\let\lr=L\fi
+  \ifnum\outputpenalty>-20000 \else\dosupereject\fi}
+\def\doubleformat{\global\advance\pageshipped by 1
+  \shipout\vbox{\makeheadline
+    \fulline{\box\leftcolumn\hfil\columnbox}
+    \makefootline}
+  \advancepageno}
+\def\columnbox{\leftline{\pagebody}}
+\def\eqsection#1{%
+  \goodbreak\vskip10pt%
+  \hrule width\hsize\vskip1pt%
+  \hrule width\hsize
+  \vskip4pt%
+  \centerline{\bf\vphantom{lq} #1}%
+  \vskip4pt%
+  \hrule width\hsize\vskip1pt%
+  \hrule width\hsize\vskip6pt}
+\parskip=0pt
+\def\eqtitle#1{\vskip2pt\goodbreak{\it #1}\par}
+
+%
 % Header of the compiled collection of formulas.
 %
-\def\versionnumber{1.4}              % Version of this collection of formulas
-\def\versiondate{16 november, 2026}  % Timestamp of this collection of formulas
+\def\versionnumber{1.5}             % Version of this collection of formulas
+\def\versiondate{17 november 2026}  % Timestamp of this collection of formulas
 \def\version{v.\versionnumber\ (\versiondate)}
 \vskip-4pt
 \centerline{Uppsala Universitet}
@@ -119,4 +159,12 @@
 \supereject
 \if R\lr \null\vfill\eject\fi}
 % \cleardoublepage
+
+%
+% Write the total number of shipped pages for the next run of TeX, as
+% counted by the \pageshipped register.
+%
+\immediate\openout\pagesout=\jobname.tpg
+\immediate\write\pagesout{\the\pageshipped}
+\immediate\closeout\pagesout
 %%%%%%%%%%%%%% Back to normal single-column %%%%%%%%%%%%%%

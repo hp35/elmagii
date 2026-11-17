@@ -410,7 +410,9 @@ $$
 \sidx{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}[Gauss lag]
 \sidx{Magnetisk monopol}
 $$
-  \nabla\cdot{\bf B}=0\qquad\hbox{(alltid)}
+  \hphantom{(alltid)}\qquad
+  \nabla\cdot{\bf B}=0
+  \qquad\hbox{(alltid)}
 $$
 \eqtitle{Amp\`eres statiska lag}
 \sidx{Amp\`eres lag}[F{\"o}r statiska magnetiska f{\"a}lt]
@@ -1036,10 +1038,10 @@ $$
     \int&{{dx}\over{x}}=\ln x\cr
     \int&\ln x\,dx=x\ln x - x\cr
     \int&{{dx}\over{x^2+a^2}}={{1}\over{a}}\arctan(x/a)\cr
+    \int&{{dx}\over{\sqrt{a^2-x^2}}}=\arcsin(x/a)\cr
     \int&\sqrt{x^2+a^2}\,dx={{1}\over{2}}
          [x\sqrt{x^2+a^2}\cr & \hskip100pt+a^2\ln(x+\sqrt{x^2+a^2})]\cr
     \int&{{dx}\over{\sqrt{x^2+a^2}}}=\ln|x+\sqrt{x^2+a^2}|\cr
-    \int&{{dx}\over{\sqrt{a^2-x^2}}}=\arcsin(x/a)\cr
     \int&{{dx}\over{(x^2\pm a^2)^{3/2}}}=\pm{{x}\over{a^2\sqrt{x^2\pm a^2}}}\cr
     \int&{{x\,dx}\over{(x^2\pm a^2)^{3/2}}}=-{{1}\over{\sqrt{x^2\pm a^2}}}\cr
     \int&{{x^2\,dx}\over{(x^2\pm a^2)^{3/2}}}=-{{x}\over{\sqrt{x^2\pm a^2}}}
@@ -1048,6 +1050,18 @@ $$
          -\ln\bigg|{{a+\sqrt{x^2+a^2}}\over{x}}\bigg|\cr
     \int&{{dx}\over{\cos^2x}}=\tan(x)\cr
     \int&{{dx}\over{\sin x}}=\ln|\tan(x/2)|\cr
+  }
+$$
+\eqtitle{Icke-element{\"a}ra funtioner}
+\sidx{Icke-element{\"a}ra funtioner}
+$$
+  \eqalign{
+    {\rm Si}(x)&=\int^x_0{{\sin t}\over{t}}\,dt,\hskip35.5pt
+    {{d{\rm Si}(x)}\over{dx}}={{\sin x}{x}}\cr
+    {\rm Ci}(x)&=-\int^{\infty}_x{{\cos t}\over{t}}\,dt,\qquad
+    {{d{\rm Ci}(x)}\over{dx}}={{\cos x}{x}}\cr
+    {\rm erf}(x)&={{2}\over{\sqrt{\pi}}}\int^x_0\exp(-t^2)\,dt,\quad
+    {\rm erfc}(x)=1-{\rm erf}(x)\cr
   }
 $$
 \vfill\eject
@@ -1181,6 +1195,7 @@ $$
         \Big)\cr
   }
 $$
+\vfill\eject
 
 \eqtitle{Sf{\"a}riska koordinater ($r,\varphi,\theta$)}
 \sidx{Koordinatsystem}[Sf{\"a}riska koordinater ($r,\varphi,\theta$)]
