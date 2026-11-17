@@ -626,13 +626,14 @@
 %
 % File: teach/elmagii/formulas/src/formulas.tex [plain TeX code]
 % Github: https://github.com/elmagii/formulas/
-% Last change: November 16, 2026
+% Last change: November 17, 2026 [Revision 1.5]
 %
 % This is the primary collection of formulas in the course ``Elektromagnetism
 % II, 1TE626 (2022-2026)'' for Engineering Physics, held 2022-2026, at Uppsala
-% University, Sweden. This is a compilation of the source present at
-% elmagii/formulas/src/formulas.tex, into a compact and handy two-column
-% format.
+% University, Sweden. This is a compilation of the formulas present as source
+% at elmagii/formulas/src/formulas.tex, into a compact two-column format.
+% The formulas as such are read from the independent source simply to separate
+% content from presentation.
 %
 % Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
@@ -652,7 +653,7 @@
 %
 \input macros/epsf.tex
 \input macros/eplain.tex
-\input amssym % to get the {\Bbb E} font (strikethrough E)
+\input amssym  % to access the {\Bbb R} font (strikethrough R)
 \font\twelvecmbx=cmbx12
 \def\iint{\mathop{\int\kern-8pt\int}}
 \def\iiint{\mathop{\int\kern-8pt\int\kern-8pt\int}}
@@ -664,40 +665,29 @@
 \def\cleardoublepage{\ifodd\pageno\vfill\eject~\vskip260pt%
   \centerline{[Page intentionally left blank]} ~\vfill\eject%
   \else\vfill\eject\fi}
-\noindent{~\vskip -46pt\hskip-46pt%
-  {\epsfxsize=72pt\epsfbox{macros/UU_logo_color.eps}}}
-\vskip-46pt\hskip46pt
-{\twelvecmbx{Formelsamling}}%
-  \writenumberedtocentry{index}{\hskip24pt{Formelsamling}}%
-  \nobreak\vskip 0pt\noindent\ignorespaces
-%%%%%%%%%%%%%%%%% Begin two-column mode %%%%%%%%%%%%%%%%%%
-{\newdimen\fullhsize
-\fullhsize=170mm \hsize=82mm
-\topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\rightskip=0pt
-\parindent=0pt
-\def\fulline{\hbox to\fullhsize}
-\footline={\hfill{\rm\folio}}
-\let\lr=L \newbox\leftcolumn
-\output={\if L\lr
-  \global\setbox\leftcolumn=\columnbox \global\let\lr=R
-  \else \doubleformat \global\let\lr=L\fi
-  \ifnum\outputpenalty>-20000 \else\dosupereject\fi}
-\def\doubleformat{\shipout\vbox{\makeheadline
-    \fulline{\box\leftcolumn\hfil\columnbox}
-  \makefootline}
-  \advancepageno}
-\def\columnbox{\leftline{\pagebody}}
-\def\eqsection#1{%
-  \vskip6pt\goodbreak%
-  \hrule width\hsize\vskip1pt%
-  \hrule width\hsize
-  \vskip4pt%
-  \centerline{\bf\vphantom{lq} #1}%
-  \vskip4pt%
-  \hrule width\hsize\vskip1pt%
-  \hrule width\hsize\vskip10pt}
-\parskip=0pt
-\def\eqtitle#1{\vskip2pt\goodbreak{\it #1}\par}
+
+%
+% Define macros for page-counting purposes, to get the total number of
+% pages in the footer of the collection of formulas.
+%
+\newcount\pageshipped
+\newcount\totalpages
+\newread\pagesin
+\newwrite\pagesout
+\pageshipped=0
+\totalpages=0
+
+%
+% Read the total page count from the previous run, if available.
+%
+\openin\pagesin=\jobname.tpg
+\ifeof\pagesin
+  \totalpages=0
+\else
+  \read\pagesin to\temp
+  \totalpages=\temp
+\fi
+\closein\pagesin
 
 %
 % Definition of the vertical padding to use for displayed equations.
@@ -717,20 +707,70 @@
 % \belowdisplayshortskip are used when the preceding line is short enough
 % that the equation can be positioned closer to it.
 %
-% \abovedisplayskip=2pt plus 3pt minus 1pt      % Vertical padding of $$...$$
-% \belowdisplayskip=2pt plus 3pt minus 1pt      % Vertical padding of $$...$$
-% \abovedisplayshortskip=0pt plus 2pt minus 2pt % Vertical padding of $$...$$
-% \belowdisplayshortskip=2pt plus 2pt minus 2pt % Vertical padding of $$...$$
+% Default values would be:
+%    \abovedisplayskip=12pt plus 3pt minus 9pt
+%    \belowdisplayskip=12pt plus 3pt minus 9pt
+%    \abovedisplayshortskip=0pt plus 3pt
+%    \belowdisplayshortskip=7pt plus 3pt minus 4pt
+%
 \abovedisplayskip=12pt plus 3pt minus 9pt
 \belowdisplayskip=12pt plus 3pt minus 9pt
 \abovedisplayshortskip=0pt plus 3pt
 \belowdisplayshortskip=7pt plus 3pt minus 4pt
 
 %
+% Define the header and preamble of the collection of formulas. The formulas
+% as such are read from the independent source located in src/formulas.tex,
+% just to separate content from presentation.
+%
+\noindent{~\vskip -46pt\hskip-46pt%
+  {\epsfxsize=72pt\epsfbox{macros/UU_logo_color.eps}}}
+\vskip-46pt\hskip46pt
+{\twelvecmbx{Formelsamling}}%
+  \writenumberedtocentry{index}{\hskip24pt{Formelsamling}}%
+  \nobreak\vskip 0pt\noindent\ignorespaces
+%%%%%%%%%%%%%%%%% Begin two-column mode %%%%%%%%%%%%%%%%%%
+{\newdimen\fullhsize
+\fullhsize=170mm \hsize=82mm
+\vsize=236mm\voffset=6mm
+\topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\rightskip=0pt
+\parindent=0pt
+\def\fulline{\hbox to\fullhsize}
+\def\makeheadline{\vbox to 0pt{\vskip-22.5pt
+  \hbox to \fullhsize{\hfil{\it Formelsamling till{\aa}ten p{\aa}
+    tentamen i Elektromagnetism II, 1TE626, Uppsala Universitet}\hfil}
+  \vss}\nointerlineskip}
+\def\makefootline{\vbox to 0pt{\vskip0pt
+  \hbox to \fullhsize{\hfil{Sida {\folio} av \the\totalpages}\hfil}
+  \vss}\nointerlineskip}
+\let\lr=L \newbox\leftcolumn
+\output={\if L\lr
+  \global\setbox\leftcolumn=\columnbox \global\let\lr=R
+  \else \doubleformat \global\let\lr=L\fi
+  \ifnum\outputpenalty>-20000 \else\dosupereject\fi}
+\def\doubleformat{\global\advance\pageshipped by 1
+  \shipout\vbox{\makeheadline
+    \fulline{\box\leftcolumn\hfil\columnbox}
+    \makefootline}
+  \advancepageno}
+\def\columnbox{\leftline{\pagebody}}
+\def\eqsection#1{%
+  \goodbreak\vskip10pt%
+  \hrule width\hsize\vskip1pt%
+  \hrule width\hsize
+  \vskip4pt%
+  \centerline{\bf\vphantom{lq} #1}%
+  \vskip4pt%
+  \hrule width\hsize\vskip1pt%
+  \hrule width\hsize\vskip6pt}
+\parskip=0pt
+\def\eqtitle#1{\vskip2pt\goodbreak{\it #1}\par}
+
+%
 % Header of the compiled collection of formulas.
 %
-\def\versionnumber{1.4}              % Version of this collection of formulas
-\def\versiondate{16 november, 2026}  % Timestamp of this collection of formulas
+\def\versionnumber{1.5}             % Version of this collection of formulas
+\def\versiondate{17 november 2026}  % Timestamp of this collection of formulas
 \def\version{v.\versionnumber\ (\versiondate)}
 \vskip-4pt
 \centerline{Uppsala Universitet}
@@ -1151,7 +1191,9 @@ $$
 \sidx{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}[Gauss lag]
 \sidx{Magnetisk monopol}
 $$
-  \nabla\cdot{\bf B}=0\qquad\hbox{(alltid)}
+  \hphantom{(alltid)}\qquad
+  \nabla\cdot{\bf B}=0
+  \qquad\hbox{(alltid)}
 $$
 \eqtitle{Amp\`eres statiska lag}
 \sidx{Amp\`eres lag}[F{\"o}r statiska magnetiska f{\"a}lt]
@@ -1777,10 +1819,10 @@ $$
     \int&{{dx}\over{x}}=\ln x\cr
     \int&\ln x\,dx=x\ln x - x\cr
     \int&{{dx}\over{x^2+a^2}}={{1}\over{a}}\arctan(x/a)\cr
+    \int&{{dx}\over{\sqrt{a^2-x^2}}}=\arcsin(x/a)\cr
     \int&\sqrt{x^2+a^2}\,dx={{1}\over{2}}
          [x\sqrt{x^2+a^2}\cr & \hskip100pt+a^2\ln(x+\sqrt{x^2+a^2})]\cr
     \int&{{dx}\over{\sqrt{x^2+a^2}}}=\ln|x+\sqrt{x^2+a^2}|\cr
-    \int&{{dx}\over{\sqrt{a^2-x^2}}}=\arcsin(x/a)\cr
     \int&{{dx}\over{(x^2\pm a^2)^{3/2}}}=\pm{{x}\over{a^2\sqrt{x^2\pm a^2}}}\cr
     \int&{{x\,dx}\over{(x^2\pm a^2)^{3/2}}}=-{{1}\over{\sqrt{x^2\pm a^2}}}\cr
     \int&{{x^2\,dx}\over{(x^2\pm a^2)^{3/2}}}=-{{x}\over{\sqrt{x^2\pm a^2}}}
@@ -1789,6 +1831,18 @@ $$
          -\ln\bigg|{{a+\sqrt{x^2+a^2}}\over{x}}\bigg|\cr
     \int&{{dx}\over{\cos^2x}}=\tan(x)\cr
     \int&{{dx}\over{\sin x}}=\ln|\tan(x/2)|\cr
+  }
+$$
+\eqtitle{Icke-element{\"a}ra funtioner}
+\sidx{Icke-element{\"a}ra funtioner}
+$$
+  \eqalign{
+    {\rm Si}(x)&=\int^x_0{{\sin t}\over{t}}\,dt,\hskip35.5pt
+    {{d{\rm Si}(x)}\over{dx}}={{\sin x}{x}}\cr
+    {\rm Ci}(x)&=-\int^{\infty}_x{{\cos t}\over{t}}\,dt,\qquad
+    {{d{\rm Ci}(x)}\over{dx}}={{\cos x}{x}}\cr
+    {\rm erf}(x)&={{2}\over{\sqrt{\pi}}}\int^x_0\exp(-t^2)\,dt,\quad
+    {\rm erfc}(x)=1-{\rm erf}(x)\cr
   }
 $$
 \vfill\eject
@@ -1922,6 +1976,7 @@ $$
         \Big)\cr
   }
 $$
+\vfill\eject
 
 \eqtitle{Sf{\"a}riska koordinater ($r,\varphi,\theta$)}
 \sidx{Koordinatsystem}[Sf{\"a}riska koordinater ($r,\varphi,\theta$)]
@@ -1985,6 +2040,14 @@ $$
 \supereject
 \if R\lr \null\vfill\eject\fi}
 % \cleardoublepage
+
+%
+% Write the total number of shipped pages for the next run of TeX, as
+% counted by the \pageshipped register.
+%
+\immediate\openout\pagesout=\jobname.tpg
+\immediate\write\pagesout{\the\pageshipped}
+\immediate\closeout\pagesout
 %%%%%%%%%%%%%% Back to normal single-column %%%%%%%%%%%%%%
 
 %
@@ -10160,10 +10223,10 @@ $$\sidx{Amp\`eres lag}[F{\"or}r statiska magnetiska f{\"a}lt]}
 %
 % File: teach/elmagii/lect-05/lecture-05.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-05/
-% Last change: November 13, 2026
+% Last change: November 17, 2026
 %
 % Lecture No 5 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
-% held November 17, 2025, at Uppsala University, Sweden.
+% held November 17, 2026, at Uppsala University, Sweden.
 %
 % Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
@@ -10379,9 +10442,9 @@ lag inom elektrodynamiken.\numberedfootnote{Det {\"a}r mycket vanligt att
   fr{\aa}n induktionslagen.) Denna approach med Faradays lag som ett axiom
   ger endast ett cirkelresonemang, d{\"a}r den ena vyn av induktion
   {\"o}msesidigt bevisar den andra. Om man fr{\aa}gar exempelvis \idx{ChatGPT},
-  \idx{Grok} eller n{\aa}gon annan LLM ({\it large language model}) s{\aa} finner
-  man sorgligt nog direkt att svaret man f{\aa}r s{\aa} gott som uteslutande
-  bygger p{\aa} just Faradays lag som ett axiom.}
+  \idx{Grok} eller n{\aa}gon annan LLM ({\it large language model}) s{\aa}
+  finner man sorgligt nog direkt att svaret man f{\aa}r s{\aa} gott som
+  uteslutande bygger p{\aa} just Faradays lag som ett axiom.}
 
 \section{Grundl{\"a}ggande begrepp inf{\"o}r Faradays induktionslag}
 \subsection{Definition: Magnetiskt fl{\"o}de}
@@ -10497,7 +10560,19 @@ fokus p{\aa} sj{\"a}lva k{\"a}rnan i den, l{\aa}t oss f{\"o}rst betrakta ett
 f{\"o}renklat specialfall med en rektangul{\"a}r slinga $\Gamma$ som med
 konstant hastighet ${\bf v}_0$ dras ut ur ett rektangul{\"a}rt omr{\aa}de med
 ett i {\"o}vrigt homogent magnetf{\"a}lt ${\bf B}_0$, ortogonalt mot slingans
-plan och ortogonalt mot den konstanta hastigheten ${\bf v}_0$.
+plan\numberedfootnote{I denna analys kommer vi att medvetet bryta mot
+  den m{\aa}h{\"a}nda spontana instinkten att v{\"a}lja plan med en normal
+  som {\"a}r riktad i samma riktning som n{\aa}gon av axlarna i v{\aa}rt
+  koordinatsystem, och kommer ist{\"a}llet helt enkelt att v{\"a}lja att
+  utf{\"o}ra integrationen moturs s{\aa} som vi ser slingan liggande i
+  papperets eller tavlans plan.
+  Po{\"a}ngen {\"a}r att s{\aa} l{\"a}nge som vi ser till att vara konsekventa
+  med att normalen till ytan f{\"o}ljer ``h{\"o}gerhandsregeln'' f{\"o}r
+  integration l{\"a}ngs den slutna trajektorian (integrationsv{\"a}gen)
+  $\Gamma$, och s{\aa} l{\"a}nge som vi {\"a}r konsekventa i v{\aa}r
+  hantering av riktningen av magnetf{\"a}ltet och integrationsv{\"a}garna,
+  s{\aa} kommer resultatet att bli detsamma.}
+och ortogonalt mot den konstanta hastigheten ${\bf v}_0$.
 \epsfig{../lect-05/figs/faradayrect.1}\noindent
 L{\aa}t oss se vad detta h{\"o}gst f{\"o}renklade system kan ge i form av
 elektromotorisk ``kraft''. Till att b{\"o}rja med, s{\aa} har vi f{\"o}r
@@ -10512,9 +10587,16 @@ $$
 $$
 \vfill\eject
 N{\"a}r vi integrerar denna kraft, normaliserad med laddningen $q$, l{\"a}ngs
-med $\Gamma$, s{\aa} ser vi att segmenten \encircle{2} och \encircle{4} som
-{\"a}r ortogonala mot denna kraft ger noll i bidrag, eftersom
-skal{\"a}rprodukten ${\bf F}\cdot d{\bf l}$ d{\"a}r {\"a}r identiskt noll.
+med den slutna trajektorian $\Gamma$, s{\aa} ser vi att segmenten \encircle{2}
+och \encircle{4} ger noll i bidrag, detta eftersom skal{\"a}rprodukten
+${\bf F}\cdot d{\bf l}$ d{\"a}r {\"a}r identiskt noll.
+Detta kan enkelt motiveras genom att vi observerar att linjeelementen $d{\bf l}$
+f{\"o}r dessa segment {\"a}r parallella eller anti-parallella med hastigheten
+${\bf v}$, vilket i sin tur inneb{\"a}r att produkten ${\bf v}\times{\bf B}_0$
+{\"a}r ortogonal mot dessa linjesegment $d{\bf l}$, det vill s{\"a}ga att
+$({\bf v}\times{\bf B}_0)\times d{\bf l}=0$ l{\"a}ngs segmenten~\encircle{2}
+och~\encircle{4}.
+
 Med andra ord {\"a}r det bara segmenten \encircle{1} och \encircle{3} som
 kan ge bidrag, och eftersom segment \encircle{3} ligger utanf{\"o}r
 magnetf{\"a}ltet och d{\"a}rmed {\"a}ven det ger noll i bidrag till
@@ -10524,13 +10606,13 @@ $$
   \eqalign{
     {\cal E}&=\oint_{\Gamma}\bigg({{{\bf F}}\over{q}}\bigg)\cdot d{\bf l}
        =\oint_{\Gamma}({\bf v}\times{\bf B}_0)\cdot d{\bf l}\cr
-      &=\oint_{\hbox{\encircle{1}}}({\bf v}\times{\bf B}_0)\cdot d{\bf l}
-          +\oint_{\hbox{\encircle{2}}}\underbrace{
+      &=\int_{\hbox{\encircle{1}}}({\bf v}\times{\bf B}_0)\cdot d{\bf l}
+          +\int_{\hbox{\encircle{2}}}\underbrace{
               ({\bf v}\times{\bf B}_0)\cdot d{\bf l}
            }_{=0,\ {\bf v}\parallel d{\bf l}}
-          +\oint_{\hbox{\encircle{3}}}
+          +\int_{\hbox{\encircle{3}}}
               \underbrace{({\bf v}\times{\bf 0})\cdot d{\bf l}}_{=0}
-          +\oint_{\hbox{\encircle{4}}}\underbrace{
+          +\int_{\hbox{\encircle{4}}}\underbrace{
               ({\bf v}\times{\bf B}_0)\cdot d{\bf l}
            }_{=0,\ {\bf v}\parallel d{\bf l}}\cr
       &=\int_{\hbox{\encircle{1}}}(-v_0 B_0 {\bf e}_x)\cdot({\bf e}_x dx)
@@ -10739,7 +10821,11 @@ $$
 $$
 Med andra ord kan vi formulera f{\"o}r{\"a}ndringen av det magnetiska fl{\"o}det
 \sidx{Magnetiskt fl{\"o}de $\Phi_{\rm M}$} genom trajektorian $\Gamma(t)$ som den
-s{\aa} gott som f{\"o}rv{\"a}ntade tidsderivatan
+s{\aa} gott som f{\"o}rv{\"a}ntade\numberedfootnote{{\it F{\"o}rv{\"a}ntad},
+  i och med att vi har tagit fram $d{\Phi}_{\rm M}$ och att vi i h{\"o}gerledet
+  har ett $dt$ som bara v{\"a}ntar p{\aa} att f{\aa} kombineras ihop till en
+  derivata $d{\Phi}_{\rm M}/dt$.}
+tidsderivatan
 $$
   \eqalign{
     {{d\Phi_{\rm M}}\over{dt}}
@@ -10747,7 +10833,7 @@ $$
            ({\bf v}({\bf x},t)\times d{\bf l}).
   }
 $$
-L{\aa}t oss med denna deriviata formulerad g{\aa} vidare med att analysera i
+L{\aa}t oss med denna derivata formulerad g{\aa} vidare med att analysera i
 mer detalj hur en laddning som f{\"a}rdas l{\"a}ngs den i sig {\it r{\"o}rliga
 trajektorian} $\Gamma(t)$ kommer att f{\"o}rflyttas.
 \epsfig{../lect-05/figs/faradayelement.1}\noindent
@@ -10931,8 +11017,8 @@ identiska f{\"o}r en generell trajektoria $\Gamma$, men l{\aa}t oss
 {\"a}nd{\aa} f{\"o}r sakens skull ta fram integralformen av Faradays lag
 fr{\aa}n differentialformen.
 Om vi integrerar differentialformen av Faradays lag {\"o}ver en yta $S$
-innesluten av en sluten trajektoria $\Gamma$ och direkt till{\"a}mpar Stokes
-teorem, s{\aa} har vi att\sidx{Stokes teorem}
+innesluten av en sluten, station{\"a}r och godtycklig trajektoria $\Gamma$
+och direkt till{\"a}mpar Stokes teorem, s{\aa} har vi att\sidx{Stokes teorem}
 $$
   \iint_S(\nabla\times{\bf E}({\bf r},t))\cdot d{\bf S}
   =\underline{\underline{
