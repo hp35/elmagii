@@ -1,10 +1,10 @@
 %
 % File: teach/elmagii/lect-05/lecture-05.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-05/
-% Last change: November 13, 2026
+% Last change: November 17, 2026
 %
 % Lecture No 5 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
-% held November 17, 2025, at Uppsala University, Sweden.
+% held November 17, 2026, at Uppsala University, Sweden.
 %
 % Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
@@ -265,9 +265,9 @@ lag inom elektrodynamiken.\numberedfootnote{Det {\"a}r mycket vanligt att
   fr{\aa}n induktionslagen.) Denna approach med Faradays lag som ett axiom
   ger endast ett cirkelresonemang, d{\"a}r den ena vyn av induktion
   {\"o}msesidigt bevisar den andra. Om man fr{\aa}gar exempelvis \idx{ChatGPT},
-  \idx{Grok} eller n{\aa}gon annan LLM ({\it large language model}) s{\aa} finner
-  man sorgligt nog direkt att svaret man f{\aa}r s{\aa} gott som uteslutande
-  bygger p{\aa} just Faradays lag som ett axiom.}
+  \idx{Grok} eller n{\aa}gon annan LLM ({\it large language model}) s{\aa}
+  finner man sorgligt nog direkt att svaret man f{\aa}r s{\aa} gott som
+  uteslutande bygger p{\aa} just Faradays lag som ett axiom.}
 
 \section{Grundl{\"a}ggande begrepp inf{\"o}r Faradays induktionslag}
 \subsection{Definition: Magnetiskt fl{\"o}de}
@@ -383,7 +383,19 @@ fokus p{\aa} sj{\"a}lva k{\"a}rnan i den, l{\aa}t oss f{\"o}rst betrakta ett
 f{\"o}renklat specialfall med en rektangul{\"a}r slinga $\Gamma$ som med
 konstant hastighet ${\bf v}_0$ dras ut ur ett rektangul{\"a}rt omr{\aa}de med
 ett i {\"o}vrigt homogent magnetf{\"a}lt ${\bf B}_0$, ortogonalt mot slingans
-plan och ortogonalt mot den konstanta hastigheten ${\bf v}_0$.
+plan\numberedfootnote{I denna analys kommer vi att medvetet bryta mot
+  den m{\aa}h{\"a}nda spontana instinkten att v{\"a}lja plan med en normal
+  som {\"a}r riktad i samma riktning som n{\aa}gon av axlarna i v{\aa}rt
+  koordinatsystem, och kommer ist{\"a}llet helt enkelt att v{\"a}lja att
+  utf{\"o}ra integrationen moturs s{\aa} som vi ser slingan liggande i
+  papperets eller tavlans plan.
+  Po{\"a}ngen {\"a}r att s{\aa} l{\"a}nge som vi ser till att vara konsekventa
+  med att normalen till ytan f{\"o}ljer ``h{\"o}gerhandsregeln'' f{\"o}r
+  integration l{\"a}ngs den slutna trajektorian (integrationsv{\"a}gen)
+  $\Gamma$, och s{\aa} l{\"a}nge som vi {\"a}r konsekventa i v{\aa}r
+  hantering av riktningen av magnetf{\"a}ltet och integrationsv{\"a}garna,
+  s{\aa} kommer resultatet att bli detsamma.}
+och ortogonalt mot den konstanta hastigheten ${\bf v}_0$.
 \epsfig{figs/faradayrect.1}\noindent
 L{\aa}t oss se vad detta h{\"o}gst f{\"o}renklade system kan ge i form av
 elektromotorisk ``kraft''. Till att b{\"o}rja med, s{\aa} har vi f{\"o}r
@@ -398,9 +410,16 @@ $$
 $$
 \vfill\eject
 N{\"a}r vi integrerar denna kraft, normaliserad med laddningen $q$, l{\"a}ngs
-med $\Gamma$, s{\aa} ser vi att segmenten \encircle{2} och \encircle{4} som
-{\"a}r ortogonala mot denna kraft ger noll i bidrag, eftersom
-skal{\"a}rprodukten ${\bf F}\cdot d{\bf l}$ d{\"a}r {\"a}r identiskt noll.
+med den slutna trajektorian $\Gamma$, s{\aa} ser vi att segmenten \encircle{2}
+och \encircle{4} ger noll i bidrag, detta eftersom skal{\"a}rprodukten
+${\bf F}\cdot d{\bf l}$ d{\"a}r {\"a}r identiskt noll.
+Detta kan enkelt motiveras genom att vi observerar att linjeelementen $d{\bf l}$
+f{\"o}r dessa segment {\"a}r parallella eller anti-parallella med hastigheten
+${\bf v}$, vilket i sin tur inneb{\"a}r att produkten ${\bf v}\times{\bf B}_0$
+{\"a}r ortogonal mot dessa linjesegment $d{\bf l}$, det vill s{\"a}ga att
+$({\bf v}\times{\bf B}_0)\times d{\bf l}=0$ l{\"a}ngs segmenten~\encircle{2}
+och~\encircle{4}.
+
 Med andra ord {\"a}r det bara segmenten \encircle{1} och \encircle{3} som
 kan ge bidrag, och eftersom segment \encircle{3} ligger utanf{\"o}r
 magnetf{\"a}ltet och d{\"a}rmed {\"a}ven det ger noll i bidrag till
@@ -410,13 +429,13 @@ $$
   \eqalign{
     {\cal E}&=\oint_{\Gamma}\bigg({{{\bf F}}\over{q}}\bigg)\cdot d{\bf l}
        =\oint_{\Gamma}({\bf v}\times{\bf B}_0)\cdot d{\bf l}\cr
-      &=\oint_{\hbox{\encircle{1}}}({\bf v}\times{\bf B}_0)\cdot d{\bf l}
-          +\oint_{\hbox{\encircle{2}}}\underbrace{
+      &=\int_{\hbox{\encircle{1}}}({\bf v}\times{\bf B}_0)\cdot d{\bf l}
+          +\int_{\hbox{\encircle{2}}}\underbrace{
               ({\bf v}\times{\bf B}_0)\cdot d{\bf l}
            }_{=0,\ {\bf v}\parallel d{\bf l}}
-          +\oint_{\hbox{\encircle{3}}}
+          +\int_{\hbox{\encircle{3}}}
               \underbrace{({\bf v}\times{\bf 0})\cdot d{\bf l}}_{=0}
-          +\oint_{\hbox{\encircle{4}}}\underbrace{
+          +\int_{\hbox{\encircle{4}}}\underbrace{
               ({\bf v}\times{\bf B}_0)\cdot d{\bf l}
            }_{=0,\ {\bf v}\parallel d{\bf l}}\cr
       &=\int_{\hbox{\encircle{1}}}(-v_0 B_0 {\bf e}_x)\cdot({\bf e}_x dx)
@@ -625,7 +644,11 @@ $$
 $$
 Med andra ord kan vi formulera f{\"o}r{\"a}ndringen av det magnetiska fl{\"o}det
 \sidx{Magnetiskt fl{\"o}de $\Phi_{\rm M}$} genom trajektorian $\Gamma(t)$ som den
-s{\aa} gott som f{\"o}rv{\"a}ntade tidsderivatan
+s{\aa} gott som f{\"o}rv{\"a}ntade\numberedfootnote{{\it F{\"o}rv{\"a}ntad},
+  i och med att vi har tagit fram $d{\Phi}_{\rm M}$ och att vi i h{\"o}gerledet
+  har ett $dt$ som bara v{\"a}ntar p{\aa} att f{\aa} kombineras ihop till en
+  derivata $d{\Phi}_{\rm M}/dt$.}
+tidsderivatan
 $$
   \eqalign{
     {{d\Phi_{\rm M}}\over{dt}}
@@ -633,7 +656,7 @@ $$
            ({\bf v}({\bf x},t)\times d{\bf l}).
   }
 $$
-L{\aa}t oss med denna deriviata formulerad g{\aa} vidare med att analysera i
+L{\aa}t oss med denna derivata formulerad g{\aa} vidare med att analysera i
 mer detalj hur en laddning som f{\"a}rdas l{\"a}ngs den i sig {\it r{\"o}rliga
 trajektorian} $\Gamma(t)$ kommer att f{\"o}rflyttas.
 \epsfig{figs/faradayelement.1}\noindent
@@ -817,8 +840,8 @@ identiska f{\"o}r en generell trajektoria $\Gamma$, men l{\aa}t oss
 {\"a}nd{\aa} f{\"o}r sakens skull ta fram integralformen av Faradays lag
 fr{\aa}n differentialformen.
 Om vi integrerar differentialformen av Faradays lag {\"o}ver en yta $S$
-innesluten av en sluten trajektoria $\Gamma$ och direkt till{\"a}mpar Stokes
-teorem, s{\aa} har vi att\sidx{Stokes teorem}
+innesluten av en sluten, station{\"a}r och godtycklig trajektoria $\Gamma$
+och direkt till{\"a}mpar Stokes teorem, s{\aa} har vi att\sidx{Stokes teorem}
 $$
   \iint_S(\nabla\times{\bf E}({\bf r},t))\cdot d{\bf S}
   =\underline{\underline{
