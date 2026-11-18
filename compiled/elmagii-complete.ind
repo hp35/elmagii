@@ -87,6 +87,7 @@
   \item Diamagnetism, 142
   \item Dielektrikum, 127
     \subitem {\"O}verg{\aa }ng mellan olika, 135
+    \subitem Randvillkor, xv
   \item Dielektrisk sf{\"a}r, 137
   \item Dipol, xv, 149, 153, 156
     \subitem Elektrisk, 75, 152, 154, 156
@@ -249,7 +250,7 @@
     \subitem F{\"o}r elektrisk fl{\"o}dest{\"a}thet ${\bf D}$, xiv, 169, 
 		174, 175, 179, 197
     \subitem F{\"o}r elektrisk f{\"a}ltstyrka, 44, 135
-    \subitem F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$, xv, 169, 
+    \subitem F{\"o}r magnetisk fl{\"o}dest{\"a}thet ${\bf B}$, xiv, 169, 
 		174, 175, 179
     \subitem H{\"a}rledning fr{\aa }n Coulombs lag, 45
     \subitem Integralform, 48, 49, 51
@@ -283,12 +284,12 @@
   \item Hexacontatetrapol, 156
   \item Hexadecapol, xv, 149, 156
   \item Homogent medium, 132, 183
-  \item Hoppvillkor, 135
-    \subitem F{\"o}r elektriska f{\"a}lt i vakuum, 135
+  \item Hoppvillkor, \indexsee{Randvillkor}{99999}
   \item Hysteres, 143
 
   \indexspace
 
+  \item Icke-element{\"a}ra funtioner, xix
   \item Induktionslagen
     \subitem Faradays induktionslag, 107
   \item Inhomogent medium, 132
@@ -400,7 +401,7 @@
     \subitem Rotation f{\"o}r, 96
   \item Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$, xiii, 142, 151, 166, 
 		169, 174, 193
-    \subitem Gauss lag, xv
+    \subitem Gauss lag, xiv
     \subitem Komplexv{\"a}rd envelopp, 187
     \subitem Statisk, 5
     \subitem V{\aa }gekvation f{\"o}r, 176
@@ -409,7 +410,7 @@
     \subitem {\OE }rsted, xxvi
   \item Magnetisk f{\"a}ltstyrka {\bf H}, xxx
   \item Magnetisk kraft utf{\"o}r inget arbete, 89
-  \item Magnetisk monopol, xv, 87
+  \item Magnetisk monopol, xiv, 87
   \item Magnetisk permeabilitet
     \subitem Relativ permeabilitet $\mu _{\rm r}$, 142, 151, 174, 175
     \subitem Vakuumpermeabilitet $\mu _0$, 94, 116, 121, 142, 151, 186
@@ -443,17 +444,12 @@
   \item Motpropagerande v{\aa }gor, 186
   \item Multipolmoment, 128
   \item Multipolutveckling, 151
-    \subitem F{\"o}r kontinuum av str{\"o}mt{\"a}thet ${\bf J}$, xv
-    \subitem F{\"o}r skal{\"a}r potential, 159
-    \subitem F{\"o}r vektorpotential, xv, 162
-    \subitem Generell av laddningst{\"a}thet $\rho $, xv
-    \subitem Generell laddnings\-f{\"o}r\-del\-ning, 159
-    \subitem Generell str{\"o}mt{\"a}thet, 162
-    \subitem Generell str{\"o}mt{\"a}thet ${\bf J}$, xv
+    \subitem Av laddningst{\"a}thet $\rho $, xv, 159
+    \subitem Av str{\"o}mt{\"a}thet ${\bf J}$, xv, 162
+    \subitem F{\"o}r skal{\"a}r potential $\phi $, xv, 159
+    \subitem F{\"o}r system av punktladdningar $q'_k$, xv
+    \subitem F{\"o}r vektorpotential ${\bf A}$, xv, 162
     \subitem Klassificering av moment, xv, 149, 156
-    \subitem Skal{\"a}r potential $\phi $, xv
-    \subitem System av punktladdningar, xv
-    \subitem Vektorpotential ${\bf A}$, xv
 
   \indexspace
 
@@ -502,6 +498,9 @@
 
   \item Radiov{\aa }gor, 36
   \item Randvillkor, 135
+    \subitem F{\"o}r elektrisk fl{\"o}dest{\"a}thet, xv, 136
+    \subitem F{\"o}r elektriska f{\"a}lt i vakuum, 135
+    \subitem F{\"o}r elektriska f{\"a}lt mellan olika media, xv, 136
     \subitem F{\"o}r Laplaces ekvation, 66
   \item Reciprocitet, 121
   \item Relativ elektrisk permittivitet $\varepsilon _{\rm r}$, 133
@@ -642,6 +641,8 @@
 
   \indexspace
 
+  \item Ytladdning $\sigma $, xv
+    \subitem Fria laddningar, xv
   \item Ytladdningst{\"a}thet, 136
   \item Ytstr{\"o}mt{\"a}thet ${\bf K}$
     \subitem Bunden, ${\bf K}_{\rm b}={\bf M}\times {\bf e}_n$, xv

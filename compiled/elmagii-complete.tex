@@ -626,7 +626,7 @@
 %
 % File: teach/elmagii/formulas/src/formulas.tex [plain TeX code]
 % Github: https://github.com/elmagii/formulas/
-% Last change: November 17, 2026 [Revision 1.5]
+% Last change: November 18, 2026 [Revision 1.5]
 %
 % This is the primary collection of formulas in the course ``Elektromagnetism
 % II, 1TE626 (2022-2026)'' for Engineering Physics, held 2022-2026, at Uppsala
@@ -769,8 +769,8 @@
 %
 % Header of the compiled collection of formulas.
 %
-\def\versionnumber{1.5}             % Version of this collection of formulas
-\def\versiondate{17 november 2026}  % Timestamp of this collection of formulas
+\def\versionnumber{1.6}             % Version of this collection of formulas
+\def\versiondate{18 november 2026}  % Timestamp of this collection of formulas
 \def\version{v.\versionnumber\ (\versiondate)}
 \vskip-4pt
 \centerline{Uppsala Universitet}
@@ -782,7 +782,7 @@
 %
 % File: teach/elmagii/formulas/src/formulas.tex [plain TeX code]
 % Github: https://github.com/elmagii/formulas/
-% Last change: November 9, 2026
+% Last change: November 18, 2026
 %
 % Source for the primary collection of formulas in ``Elektromagnetism II,
 % 1TE626 (2022-2026)'' for Engineering Physics, held 2022-2026, at Uppsala
@@ -824,6 +824,12 @@ ${\bf D}$
     & Elektrisk fl{\"o}dest{\"a}thet
       ${\bf D}=\varepsilon_0\varepsilon_{\rm r}{\bf E}$
     & ${\rm C}/{\rm m}^2$\cr
+$D^{\parallel}$
+    & Komponent parallell med gr{\"a}nsyta
+    & ${\rm C}/{\rm m}^2$\cr
+$D^{\perp}$
+    & Komponent ortogonal mot gr{\"a}nsyta
+    & ${\rm C}/{\rm m}^2$\cr
 $\delta$
     & Diracs delta-distribution $\delta({\bf x}-{\bf x}')$
     & $1/{\rm m}^{n}$\cr
@@ -844,6 +850,12 @@ ${\bf e}_r$
     & $1$\cr
 ${\bf E}$
     & Elektrisk f{\"a}ltstyrka
+    & ${\rm V}/{\rm m}$\cr
+$E^{\parallel}$
+    & Komponent parallell med gr{\"a}nsyta
+    & ${\rm V}/{\rm m}$\cr
+$E^{\perp}$
+    & Komponent ortogonal mot gr{\"a}nsyta
     & ${\rm V}/{\rm m}$\cr
 ${\cal E}$
     & Elektromotorisk ``kraft'' (EMK)
@@ -924,7 +936,7 @@ ${\bf m}$
     & Magnetiskt dipolmoment $\sum m_k {\bf e}_k$
     & ${\rm A}\cdot{\rm m}^2$\cr
 ${\bf M}$
-    & Magnetisering
+    & Magnetisering $\langle d{\bf m}/d V\rangle$
     & ${\rm A}/{\rm m}$\cr
 $n$
     & Brytningsindex $n=\varepsilon^{1/2}_{\rm r}$
@@ -933,10 +945,10 @@ $\psi$
     & Gauge-funktion $\psi=\psi({\bf x},t)$
     & ${\rm V}\cdot{\rm s}$\cr
 ${\bf p}$
-    & Elektriskt dipolmoment $\sum m_k {\bf e}_k$
+    & Elektriskt dipolmoment $\sum q_k {\bf x}_k$
     & ${\rm C}\cdot{\rm m}$\cr
 ${\bf P}$
-    & Elektrisk polarisationsdensitet
+    & El.~polarisationsdensitet $\langle d{\bf p}/d V\rangle$
     & ${\rm C}/{\rm m}^2$\cr
 $P$
     & Effekt
@@ -958,6 +970,12 @@ $\rho_{\rm f}$
     & ${\rm C}/{\rm m}^3$\cr
 $\sigma$
     & Ytladdningst{\"a}thet
+    & ${\rm C}/{\rm m}^2$\cr
+$\sigma_{\rm b}$
+    & Bunden ytladdningst{\"a}thet
+    & ${\rm C}/{\rm m}^2$\cr
+$\sigma_{\rm f}$
+    & Fri ytladdningst{\"a}thet
     & ${\rm C}/{\rm m}^2$\cr
 ${\bf S}$
     & Poyntingvektor
@@ -1228,10 +1246,26 @@ $$
     {{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV'
 $$
 
+\eqsection{Randvillkor mellan dielektrika}
+\sidx{Dielektrikum}[Randvillkor]
+\sidx{Randvillkor}[F{\"o}r elektriska f{\"a}lt mellan olika media]
+\sidx{Randvillkor}[F{\"o}r elektrisk fl{\"o}dest{\"a}thet]
+\sidx[see]{Hoppvillkor}{Randvillkor}
+\sidx{Ytladdning $\sigma$}
+\sidx{Ytladdning $\sigma$}[Fria laddningar]
+$$
+  \eqalign{
+    E^{\parallel}_2&=E^{\parallel}_1,\hskip42pt
+    E^{\perp}_2-E^{\perp}_1=\sigma/\varepsilon_0\cr
+    D^{\parallel}_2/\varepsilon^{(2)}_{\rm r}
+      &=D^{\parallel}_1/\varepsilon^{(1)}_{\rm r},\qquad
+    D^{\perp}_2-D^{\perp}_1=\sigma_{\rm f}\cr
+  }
+$$
+
 \eqsection{Multipolutveckling av statiska potentialer}
 \sidx{Multipolutveckling}[F{\"o}r skal{\"a}r potential $\phi$]
 \sidx{Multipolutveckling}[F{\"o}r vektorpotential ${\bf A}$]
-
 \eqtitle{Klassificering av multipolmoment}
 \sidx{Multipolutveckling}[Klassificering av moment]
 Multipolutvecklingen klassificeras term f{\"o}r term uti\-fr{\aa}n hur
@@ -11423,7 +11457,7 @@ p{\aa} differentialform.\numberedfootnote{Vilket f{\"o}r {\"o}vrigt
 %
 % File: teach/elmagii/lect-06/lecture-06.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-06/
-% Last change: November 15, 2026
+% Last change: November 18, 2026
 %
 % Lecture No 6 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
 % held November 18, 2026, at Uppsala University, Sweden.
@@ -12011,11 +12045,11 @@ $$
   \qquad
   \qquad
   \nabla\cdot{\bf P} = -\rho_{\rm b},
-  \qquad
-  \bigg(\quad\Leftrightarrow\qquad
+  \qquad\qquad
+  \bigg(\quad\Leftrightarrow\quad
   \iiint_V \rho_{\rm b}\,dV
     = -\iiint_V\nabla\cdot{\bf P}\,dV
-    = -\oiint_{\Omega}{\bf P}\,dS
+    = -\oiint_{\Omega}{\bf P}\cdot\,d{\bf S}
     \quad\bigg)
 $$
 s{\aa} har vi allts{\aa} f{\"o}r divergensen f{\"o}r det elektriska f{\"a}ltet
@@ -12051,7 +12085,8 @@ gr{\"a}nsytor mellan olika medier.
 \vfill\eject
 
 \section{Randvillkor och {\"o}verg{\aa}ngar mellan olika media}
-\sidx{Randvillkor}\sidx{Hoppvillkor}
+\sidx{Randvillkor}
+\sidx[see]{Hoppvillkor}{Randvillkor}
 \sidx{Dielektrikum}[{\"O}verg{\aa}ng mellan olika]
 Vid {\"o}verg{\aa}ngar mellan olika media blir {\"a}ndringarna p{\aa}
 ${\bf E}$- och ${\bf D}$-f{\"a}ltens komposanter olika bero\-ende p{\aa} om
@@ -12059,7 +12094,8 @@ de {\"a}r  normala (vinkelr{\"a}ta) eller tangentiala (parallella) mot
 gr{\"a}nsytan mellan media.\numberedfootnote{Se Griffiths s.~185.}
 
 \subsection{Recap p{\aa} hoppvillkor f{\"o}r elektriska f{\"a}lt i vakuum}
-\sidx{Hoppvillkor}[F{\"o}r elektriska f{\"a}lt i vakuum]
+\sidx{Randvillkor}[F{\"o}r elektriska f{\"a}lt i vakuum]
+\sidx[see]{Hoppvillkor}{Randvillkor}
 F{\"o}rst av allt en liten recap p{\aa} randvillkor (``hoppvillkor'') {\"o}ver
 gr{\"a}nsytor som uppb{\"a}r en ytladdning $\sigma$!
 \epsfig{../lect-06/figs/esurfnorm.1}\noindent
@@ -12104,7 +12140,9 @@ $$
 \vfill\eject
 
 \subsection{Hoppvillkor f{\"o}r elektriska f{\"a}lt mellan olika media}
-%\sidx{Hoppvillkor}[F{\"o}r elektriska f{\"a}lt mellan olika media]
+\sidx{Randvillkor}[F{\"o}r elektriska f{\"a}lt mellan olika media]
+\sidx{Randvillkor}[F{\"o}r elektrisk fl{\"o}dest{\"a}thet]
+\sidx[see]{Hoppvillkor}{Randvillkor}
 Vi kan nu anv{\"a}nda en analogi till ovanst{\aa}ende f{\"o}r att analysera vad
 som h{\"a}nder d{\aa} materialen under och ovanf{\"o}r gr{\"a}nsytan har olika
 relativ elektrisk permittivitet. \sidx{Elektrisk fl{\"o}dest{\"a}thet}
@@ -12154,15 +12192,15 @@ Om vi anv{\"a}nder Stokes teorem p{\aa} $\nabla\times{\bf P}$ s{\aa}
 erh{\aa}ller vi ist{\"a}llet
 $$
   \eqalign{
-  \hbox{Stokes:}\qquad
-  \iint_{\Sigma}\underbrace{(\nabla\times{\bf D})}_{\ne0}\cdot d{\bf S}
-    =\oint_{\Sigma}{\bf D}\cdot d{\bf s}
-    =\oint_{\Sigma}{\bf P}\cdot d{\bf s}
-  \quad\to\quad&
-  {\bf e}_n \times({\bf D}_{2}-{\bf D}_{1})=
-  {\bf e}_n \times({\bf P}_{2}-{\bf P}_{1})\cr
-  &\quad\Leftrightarrow\quad
-  D^{\parallel}_2-D^{\parallel}_1 = P^{\parallel}_2-P^{\parallel}_1\cr
+    \hbox{Stokes:}\qquad
+    \iint_{\Sigma}\underbrace{(\nabla\times{\bf D})}_{\ne0}\cdot d{\bf S}
+      =\oint_{\Sigma}{\bf D}\cdot d{\bf s}
+      =\oint_{\Sigma}{\bf P}\cdot d{\bf s}
+    \quad\to\quad&
+    {\bf e}_n \times({\bf D}_{2}-{\bf D}_{1})=
+    {\bf e}_n \times({\bf P}_{2}-{\bf P}_{1})\cr
+    &\quad\Leftrightarrow\quad
+    D^{\parallel}_2-D^{\parallel}_1 = P^{\parallel}_2-P^{\parallel}_1\cr
   }
 $$
 Om vi har tv{\aa} medier av olika relativ permittivitet
@@ -12309,7 +12347,7 @@ $$
     \qquad\Leftrightarrow\qquad
     {{D^{\parallel}_2}/{\varepsilon^{(2)}_{\rm r}}}
       ={{D^{\parallel}_1}/{\varepsilon^{(1)}_{\rm r}}}.
-  $$}
+  $$\sidx[see]{Hoppvillkor}{Randvillkor}}
 \item{$\bullet$}{Den upplagrade energin (Joule) hos ett dielektrikum i ett
   externt p{\aa}lagt elektriskt f{\"a}lt ${\bf E}$ ges av
   $$
