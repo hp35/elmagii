@@ -30,9 +30,10 @@ beginfig(1);
   draw p;
 
   %
-  % Lower left side panel.
+  % The closed loop, above and under the surface.
   %
   p := (0u,0u)--(10u,-2u)--(10u,-4u)--(0u,-2u)--(0u,0u)--cycle;
+  fill p shifted (34u,5u) withcolor white;
   draw p shifted (34u,5u);
   p := (10u,-2u)--(10u,-4u)--(0u,-2u)--(0u,0u);
   draw p shifted (34u,3u) dashed evenly;
@@ -43,10 +44,10 @@ beginfig(1);
   draw (64u,20u){dir -120}..{dir -120}(40u,5u);
   pickup pencircle scaled 1pt;
 
-  drawarrow ((0u,0u)--(10u,-2u)) shifted (39u,3u);
-  label.urt(btex $E^{\parallel}_2$ etex,(49u,1u));
-  drawarrow ((0u,0u)--(10u,-2u)) shifted (39u,1u);
-  label.lrt(btex $E^{\parallel}_1$ etex,(49u,-1u));
+  drawarrow ((0u,0u)--(15u,-3u)) shifted (39u,3u);
+  label.urt(btex $E^{\parallel}_2$ etex,(49u,2u));
+  drawarrow ((0u,0u)--(15u,-3u)) shifted (39u,1u) dashed evenly;
+  label.lrt(btex $E^{\parallel}_1$ etex,(47u,-2u));
 
   drawarrow (31u,8u)--(31u,20u);
   pickup pencircle scaled .5pt;
