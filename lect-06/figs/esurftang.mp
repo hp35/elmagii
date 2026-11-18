@@ -38,7 +38,10 @@ beginfig(1);
   draw p shifted (34u,3u) dashed evenly;
 
   label.top(btex $\sigma$ (${\rm C}/{\rm m}^2$) etex,(65u,0u));
-  label.ulft(btex $\Sigma$ etex,(42u,5u));
+  label.urt(btex Slinga $\Gamma$ inneslutande yta $\Sigma$ etex,(52u,20u));
+  pickup pencircle scaled .5pt;
+  draw (64u,20u){dir -120}..{dir -120}(40u,5u);
+  pickup pencircle scaled 1pt;
 
   drawarrow ((0u,0u)--(10u,-2u)) shifted (39u,3u);
   label.urt(btex $E^{\parallel}_2$ etex,(49u,1u));
