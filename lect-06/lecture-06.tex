@@ -719,7 +719,7 @@ $$
   \hbox{Stokes:}\qquad
   \iint_{\Sigma}\underbrace{(\nabla\times{\bf E})}_{=-\partial{\bf B}/\partial t=0}
       \cdot d{\bf S}
-    =\oint_{\Sigma}{\bf E}\cdot d{\bf s}
+    =\oint_{\Gamma}{\bf E}\cdot d{\bf s}
     =0
   \qquad\to\qquad
   {\bf e}_n \times({\bf E}_{2}-{\bf E}_{1})={\bf 0}
@@ -781,39 +781,44 @@ Om vi anv{\"a}nder Stokes teorem p{\aa} $\nabla\times{\bf P}$ s{\aa}
 erh{\aa}ller vi ist{\"a}llet
 $$
   \eqalign{
-  \hbox{Stokes:}\qquad
-  \iint_{\Sigma}\underbrace{(\nabla\times{\bf D})}_{\ne0}\cdot d{\bf S}
-    =\oint_{\Sigma}{\bf D}\cdot d{\bf s}
-    =\oint_{\Sigma}{\bf P}\cdot d{\bf s}
-  \quad\to\quad&
-  {\bf e}_n \times({\bf D}_{2}-{\bf D}_{1})=
-  {\bf e}_n \times({\bf P}_{2}-{\bf P}_{1})\cr
-  &\quad\Leftrightarrow\quad
-  D^{\parallel}_2-D^{\parallel}_1 = P^{\parallel}_2-P^{\parallel}_1\cr
+    \hbox{Stokes:}\qquad
+    \iint_{\Sigma}\underbrace{(\nabla\times{\bf D})}_{\ne0}\cdot d{\bf S}
+      =\oint_{\Gamma}{\bf D}\cdot d{\bf s}
+      =\oint_{\Gamma}{\bf P}\cdot d{\bf s}
+    \quad\to\quad&
+    {\bf e}_n \times({\bf D}_{2}-{\bf D}_{1})=
+    {\bf e}_n \times({\bf P}_{2}-{\bf P}_{1})\cr
+    &\quad\Leftrightarrow\quad
+    D^{\parallel}_2-D^{\parallel}_1 = P^{\parallel}_2-P^{\parallel}_1\cr
   }
 $$
 Om vi har tv{\aa} medier av olika relativ permittivitet
-$\varepsilon^{(1)}_{\rm r}=1+\chi^{(1)}_{\rm e}$ och
-$\varepsilon^{(2)}_{\rm r}=1+\chi^{(2)}_{\rm e}$,
+$$
+  \varepsilon^{(1)}_{\rm r}=1+\chi^{(1)}_{\rm e}
+  \qquad\hbox{och}\qquad
+  \varepsilon^{(2)}_{\rm r}=1+\chi^{(2)}_{\rm e},
+$$
 s{\aa} kan vi sammanfatta detta med att
 $$
   \underbrace{
     \varepsilon_0(1+\chi^{(2)}_{\rm e})E^{\parallel}_2
-      -\varepsilon_0(1+\chi^{(2)}_{\rm e})E^{\parallel}_2
+      -\varepsilon_0(1+\chi^{(1)}_{\rm e})E^{\parallel}_1
   }_{=D^{\parallel}_2-D^{\parallel}_1}
   =
   \underbrace{
     \varepsilon_0\chi^{(2)}_{\rm e} E^{\parallel}_2
-      -\varepsilon_0\chi^{(2)}_{\rm e} E^{\parallel}_2
+      -\varepsilon_0\chi^{(1)}_{\rm e} E^{\parallel}_1
   }_{=P^{\parallel}_2-P^{\parallel}_1}
   \qquad\Leftrightarrow\qquad
   E^{\parallel}_2=E^{\parallel}_1,
 $$
-alternativt uttryckt i ${\bf D}$-f{\"a}ltet och de relativa permittiviteterna
-som \sidx{Elektrisk permittivitet}[Relativ permittivitet $\varepsilon_{\rm r}$]
+alternativt uttryckt i ${\bf D}$-f{\"a}ltet\numberedfootnote{D{\"a}r vi
+  f{\"o}rst{\aa}s har ${\bf D}_k=\varepsilon_0\varepsilon^{(k)}_{\rm r}{\bf E}_k$}
+och de relativa permittiviteterna som
+\sidx{Elektrisk permittivitet}[Relativ permittivitet $\varepsilon_{\rm r}$]
 $$
   {{D^{\parallel}_2}\over{\varepsilon^{(2)}_{\rm r}}}
-    ={{D^{\parallel}_1}\over{\varepsilon^{(1)}_{\rm r}}}
+    ={{D^{\parallel}_1}\over{\varepsilon^{(1)}_{\rm r}}}.
 $$
 \vfill\eject
 
@@ -831,7 +836,7 @@ allteftersom j{\"a}mvikt i systemet uppn{\aa}s.
 Uttrycket f{\"o}r den upplagrade energin (i Joule) hos ett dielektrikun under
 ett externt p{\aa}lagt elektriskt f{\"a}lt ${\bf E}$ ges av
 $$
-  W = {{1}\over{2}}\iiint{\bf D}\cdot{\bf E}\,dV
+  W = {{1}\over{2}}\iiint{\bf D}\cdot{\bf E}\,dV.
 $$
 H{\"a}rledningen av denna form ges av Griffiths p{\aa} sidorna 197--198, och
 {\"a}r en nyttig {\"o}vningsuppgift att f{\"o}lja.
