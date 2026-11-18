@@ -1,7 +1,7 @@
 %
 % File: teach/elmagii/worldmap/worldmap.tex [plain TeX code]
 % Github: https://github.com/elmagii/worldmap/
-% Last change: February 17, 2026
+% Last change: November 18, 2026
 %
 % World map of the electromagnetic theory as presented in the series of
 % lectures in the course ``Elektromagnetism II, 1TE626 (2026)'', held
@@ -36,19 +36,23 @@
 \def\initmap{
   \hsize=150mm\hoffset=4.6mm\vsize=250mm\voffset=7mm
   \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
-  \noindent~\vskip-70pt\hskip-64pt%
+  \noindent~\vskip-60pt\hskip-64pt%
     {\epsfxsize=90pt\epsfbox{../lect-01/macros/UU_logo_color.eps}}
   \vskip-64pt\hfill\vbox{
       \hbox{{\it \coursename, \coursecode\ (\courseyear)}}
       \hbox{{\it Document Revision \today}}
-      \hbox{{\it \courserepo}}}\vskip 18pt
+      \hbox{{\it \courserepo}}}\vskip 8pt
   \centerline{\twelvesc V{\"a}rldskarta i elektromagnetisk f{\"a}ltteori}
   \vskip 8pt\nopagenumbers\noindent}
+\def\makeheadline{\vbox to 0pt{\vskip-56pt
+  \hbox to \hsize{\hfil{\it Till{\aa}ten p{\aa} tentamen i
+    Elektromagnetism II, 1TE626, Uppsala Universitet}\hfil}
+  \vss}\nointerlineskip}
 \def\epsfig#1{\bigskip\centerline{\epsfbox{#1}}\medskip}
 \def\captionwide{\advance\leftskip by 60pt
   \advance\rightskip by 60pt}
 \newif\ifshowindex
-\showindexfalse  % Use \showindextrue and \showindexfalse to enable/disable index
+\showindexfalse % Use \showindextrue and \showindexfalse to enable/disable index
 \def\index{\ifshowindex\vfill\eject%
   \noindent{\bf Index}\bigskip\readindexfile{i}\fi}
 %--------------------- END OF LOCAL MACROS ---------------------
