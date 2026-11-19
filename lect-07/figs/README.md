@@ -30,6 +30,11 @@ are any complaints.
     <i>MetaPost drawing of the molecular magnetic dipoles of the Gilbert
     and Ampère models.</i>
 
+[`surfcurr.mp`](surfcurr.mp)
+    ([`surfcurr.pdf`](surfcurr.pdf))
+    <i>MetaPost drawing of the equivalent bound surface current of a
+    magnetized cylindrical object..</i>
+
 [`vectpot.mp`](vectpot.mp)
     ([`vectpot.pdf`](vectpot.pdf))
     <i>MetaPost drawing of the geometry for extracting the vector potential
