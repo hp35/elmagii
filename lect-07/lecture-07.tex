@@ -372,6 +372,9 @@ d{\"a}r ${\bf e}_n$ {\"a}r normalvektorn ut fr{\aa}n den slutna ytan hos det
 magnetiserade objektet.
 \vfill\eject
 
+rrrrrrrrrrrrrrrrrrrrrrrr
+
+
 \section{Upplagrad energi i magnetf{\"a}lt}
 \sidx{Upplagrad energi}[I magnetf{\"a}lt]\sidx{Hysteres}
 I likhet med ett dielektrikum kommer ett p{\aa}lagt magnetiskt f{\"a}lt
@@ -424,20 +427,38 @@ ${\bf M}({\bf x})$ kan f{\aa} fram vektorpotentialen ${\bf A}({\bf x})$ eftersom
 vi via den kan extrahera {\"o}vriga f{\"a}lt.\numberedfootnote{Vi f{\"o}ljer
   h{\"a}r i huvudsak Griffiths kapitel 6.2.1, sidorna 274--275.}
 
+\subsection{Vektorpotentialen fr{\aa}n en isolerad magnetisk dipol}
 Som en f{\"o}rsta b{\"o}rjan i den kommande vektoralgebran, s{\aa} kan vi
 konstatera att vektorpotentialen i en {\it observationspunkt} ${\bf x}$
 \sidx{Observationspunkt ${\bf x}$} fr{\aa}n en enda, isolerad magnetisk dipol
 ${\bf m}$ \sidx{Dipolmoment}[Magnetiskt] i {\it k{\"a}llpunkten} ${\bf x}'$
 \sidx{K{\"a}llpunkt ${\bf x}'$} ges av\numberedfootnote{Se Griffiths
-  Ekv.~(5.85), sidan 253.}
+  Ekv.~(5.85), sidan 253. Notera att Griffiths notation ``$\hat{\bf r}$''
+  f{\"o}r enhetsvektorer l{\"a}tt leder till missf{\"o}rst{\aa}nd, d{\"a}r
+  hans uttryck
+  $$
+    {\bf A}_{\rm dip}({\bf r})={{\mu_0}\over{4\pi}}
+      {{{\bf m}\times\hat{\bf r}}\over{r^2}}.
+  $$
+  f{\"o}r vektorpotentialen fr{\aa}n en magnetisk dipol l{\"a}tt kan r{\aa}ka
+  misstolkas som det felaktiga
+  $$
+    \hbox{``}
+      {\bf A}_{\rm dip}({\bf r})={{\mu_0}\over{4\pi}}
+        {{{\bf m}\times({\bf x}-{\bf x}')
+        }\over{|{\bf x}-{\bf x}|^2}}.
+    \hbox{''}
+  $$}
 $$
   {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
-    {{{\bf m}\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^2}}.
+    {{{\bf m}\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
 $$
 Med denna enkla relation kan vi enkelt g{\aa} vidare med en generalisering om
 vi ser sm{\aa} volymelement $dV$ som en ensemble av k{\"a}llpunkter, var och
 en uppb{\"a}rande en rumsberoende magnetisering (``magnetisk
 polarisationsdensitet'') ${\bf M}({\bf x}')$.\sidx{Magnetisering ${\bf M}$}
+
+\subsection{Vektorpotentialen fr{\aa}n ett generellt magnetiserat objekt}
 \epsfig{figs/vectpot.1}\noindent
 Bidraget $d{\bf A}({\bf x})$ till vektorpotentialen vid observationspunkten
 ${\bf x}$ fr{\aa}n ett enskilt magnetiskt dipolmoment $d{\bf m}$ vid
@@ -633,6 +654,51 @@ fr{\aa}n det magnetiserade objektet ges som om objektet ist{\"a}llet hade
 uppburit en motsvarande {\it bunden volyms-str{\"o}m} ${\bf J}_{\rm b}$ och
 en {\it bunden ytstr{\"o}m} ${\bf K}_{\rm b}$. Detta illustrerar den t{\"a}ta
 kopplingen mellan magnetiska f{\"a}lt och ekvivalenta str{\"o}mmar.
+\vfill\eject
+
+\subsection{En observation kring monopoler versus dipoler}
+Bara en liten sak innan vi g{\aa}r vidare: I formen f{\"o}r f{\"o}r
+vektorpotentialen fr{\aa}n en magnetisk dipol, s{\aa} ser vi att denna g{\aa}r
+som inversen p{\aa} kvadraten av avst{\aa}ndet, eller
+$\sim|{\bf x}-{\bf x}'|^{-2}$, mellan k{\"a}llpunkt ${\bf x}'$ och
+observationspunkt ${\bf x}$.
+Samtidigt har vi ju i elektrostatiken att bidragen till den skal{\"a}ra
+potentialen $\phi({\bf x})$ fr{\aa}n en punktladdning vid k{\"a}llpunkten
+${\bf x}'$ g{\aa}r som
+$$
+  d\phi({\bf x})={{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+$$
+eller att motsvarande bidrag till vektorpotentialen ${\bf A}({\bf x})$ fr{\aa}n
+ett segment av en volymstr{\"o}m g{\aa}r som
+$$
+  d{\bf A}({\bf x})={{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+$$
+det vill s{\"a}ga att b{\aa}da dessa bidrag g{\aa}r som den direkta inversen
+p{\aa} avst{\aa}ndet mellan k{\"a}llpunkt och observationspunkt.
+Fr{\aa}gan {\"a}r {\it varifr{\aa}n den inversa kvadraten} h{\"a}rr{\"o}r i
+bidraget ovan till vektorpotentialen fr{\aa}n den {\it magnetiska dipolen}?
+
+Svaret till denna fr{\aa}ga ligger i att exempelvis den skal{\"a}ra potentialen
+i detta fall h{\"a}rr{\"o}r fr{\aa}n en {\it elektrisk monopol} i form av
+elektrisk punktladdning $dq'=\rho({\bf x}')\,dV'$, vilket resulterar i ett
+beroende p{\aa} avst{\aa}nd som f{\"o}ljer det inversa avst{\aa}ndet rakt av.
+Motsvarande bidrag fr{\aa}n en {\it elektrisk dipol}, oavsett om den {\"a}r
+konstruerad fr{\aa}n tv{\aa} punktladdningar eller h{\"a}rr{\"o}r fr{\aa}n en
+distribution av laddning via en laddningst{\"a}thet $x'\rho({\bf x}')\,dV'$,
+f{\"o}ljer {\"a}ven den ett beroende p{\aa} avst{\aa}ndet som den {\it inversa
+kvadraten p{\aa} avst{\aa}ndet}, det vill s{\"a}ga helt i linje med det bidrag
+som vi h{\"a}r har fr{\aa}n en {\it magnetisk dipol}.
+I fallet med magnetiska f{\"a}lt, och som genomg{\aa}ende diskuterats i kursen
+i form av att $\nabla\cdot{\bf B}=0$, s{\aa} existerar inga magnetiska
+monopoler, och med andra ord {\"a}r det f{\"o}rsta bidrag som {\"o}verhuvud
+taget {\it kan} uppst{\aa} det fr{\aa}n den magnetiska monopolen, men
+motsvarande beroende som {\it inversa kvadraten p{\aa} avst{\aa}ndet mellan
+k{\"a}llpunkt och observationspunkt}.
+
+Vi kommer att i detalj g{\aa} igenom multipolutvecklingen av skal{\"a}ra
+potentialen $\phi$ och vektorpotentialen ${\bf A}$ under F{\"o}rel{\"a}sning~8,
+och d{\"a}r se hur de olika potenserna av avst{\aa}ndsberoende uppst{\aa}r
+genom en Taylor-utveckling av volymintegralerna f{\"o}r dessa potentialer.
 \vfill\eject
 
 \section{Sammanfattning av F{\"o}rel{\"a}sning~7
