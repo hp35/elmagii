@@ -77,7 +77,12 @@ missing components in case there are any complaints.
 [`surfcurr.mp`](surfcurr.mp)
     ([`surfcurr.pdf`](surfcurr.pdf))
     <i>MetaPost drawing of the equivalent bound surface current of a
-    magnetized cylindrical object..</i>
+    magnetized cylindrical object.</i>
+
+[`vectpotmag.mp`](vectpotmag.mp)
+    ([`vectpotmag.pdf`](vectpotmag.pdf))
+    <i>MetaPost drawing of the geometry in which we extract the vector
+    potential for a single magnetic dipole.</i>
 
 [`figs/vectpot.mp`](figs/vectpot.mp)
     ([`figs/vectpot.pdf`](figs/vectpot.pdf))
