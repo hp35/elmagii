@@ -874,27 +874,62 @@ kan existera}, och den magnetiska monopoltermen m{\aa}ste vara identiskt noll
 \subsection{Magnetisk dipolterm}
 \sidx{Magnetiskt dipolmoment}[Fr{\aa}n multipolutveckling av vektorpotential]
 \sidx{Vektorpotential ${\bf A}$}[Magnetiskt dipolmoment]
-Den magnetiska dipoltermen kan uttryckas som
+Den magnetiska dipoltermen, vilken vi erinrar oss att vi har {\it definierat}
+som uttrycket som skalar den riktade summan som g{\aa}r som den inversa
+kvadraten av avst{\aa}ndet $|{\bf x}|$, kan uttryckas som
 $$
   \eqalign{
-%    {\bf m}&=\iiint_{V} x'_k {\bf J}({\bf x}')\,dV'\cr
-%      &=\iiint_{V} x'_k {\bf J}({\bf x}')\,dV'\cr
     \sum^{3}_{k=1} {{x_k}\over{|{\bf x}|^3}}\iiint_{V} x'_k {\bf J}({\bf x}')\,dV'
       &={{1}\over{|{\bf x}|^3}}\iiint_{V}
         \underbrace{
           ({\bf x}\cdot{\bf x}'){\bf J}({\bf x}')}
           _{\hbox{``$({\bf a}\cdot{\bf b}){\bf c}$''}}\,dV'\cr
-      &=\big\{\hbox{ Vektoridentitet ${\bf a}\times({\bf b}\times{\bf c})=
-          {\bf b}({\bf a}\cdot{\bf c})-{\bf c}({\bf a}\cdot{\bf b})$ }\big\}\cr
-      &={{1}\over{|{\bf x}|^3}}\iiint_{V}\big[
-              {\bf x}\times({\bf x}'\times{\bf J}({\bf x}'))
-                +{\bf x}'({\bf x}\cdot{\bf J}({\bf x}'))
-            \big]\,dV'\cr
   }
 $$
+Vi anv{\"a}nder oss av vektoridentiteten
+$$
+  {\bf a}\times({\bf b}\times{\bf c})=
+    {\bf b}({\bf a}\cdot{\bf c})-{\bf c}({\bf a}\cdot{\bf b})
+  \qquad\Leftrightarrow\qquad
+  ({\bf a}\cdot{\bf b}){\bf c}=
+    {\bf b}({\bf a}\cdot{\bf c})-{\bf a}\times({\bf b}\times{\bf c})
+$$
+med ${\bf a}={\bf x}$, ${\bf b}={\bf x}'$ och ${\bf c}={\bf J}({\bf x}')$,
+vilket ger att vi kan uttrycka den ing{\aa}ende volymintegralen {\"o}ver
+str{\"o}mf{\"o}rdelningen som
+$$
+  \eqalign{
+    \iiint_{V}({\bf x}\cdot{\bf x}'){\bf J}({\bf x}'))\,dV'
+      =\iiint_{V}{\bf x}'({\bf x}\cdot{\bf J}({\bf x}'))\,dV'
+         -{\bf x}\times\iiint_{V}({\bf x}'\times{\bf J}({\bf x}'))\,dV',
+  }
+$$
+d{\"a}r vi passar p{\aa} att p{\aa}minna om att integralen ju sker i de
+primmade k{\"a}llkoordinaterna, och att vi d{\"a}rmed kan dra ut kryssprodukten
+``${\bf x}\times$'' med observationspunkten utanf{\"o}r volymintegralen i den
+sista termen.
+F{\"o}r att vidareutveckla detta uttryck kan vi utnyttja kontinuitetsekvationen
+f{\"o}r elektrisk laddning, eller lite vardagligt talat ``lagen om att laddning
+inte kan f{\"o}rsvinna'',\numberedfootnote{Se exempelvis
+  F{\"o}rel{\"a}sning~4. En retorisk fr{\aa}ga: Varf{\"o}r har vi
+  h{\"a}r en divergens $\nabla'\cdot{\bf J}$ med avseende p{\aa}
+  {\it k{\"a}llkoordinaterna}? Svaret ligger i att det ju f{\"o}r
+  en spatial variation av en k{\"a}lla i form av en str{\"o}mf{\"o}rdelning,
+  liksom f{\"o}r en laddningsf{\"o}rdelning, handlar om hur denna varierar
+  just i {\it k{\"a}llkoordinaterna}, och det {\"a}r allts{\aa}
+  d{\"a}rf{\"o}r som vi {\"a}r noga att med ett prim h{\aa}lla
+  ordning p{\aa} vad vi deriverar med avseende p{\aa}.}
+\sidx{Str{\"o}mt{\"a}thet ${\bf J}$}
+\sidx{Lagen om att laddning inte kan f{\"o}rsvinna}
+\sidx[see]{Kontinuitetsekvationen}{Lagen om att laddning inte kan f{\"o}rsvinna}
+som s{\"a}ger att vi f{\"o}r en {\it station{\"a}r} och lokaliserad
+str{\"o}mf{\"o}rdelning har att
+$$
+  \nabla'\cdot{\bf J}=0.
+$$
 
-
-rrrrrrrrrrrrrrrrrrrrrrrrrrr
+% rrrrrrrrrrrrrrrrrrrrrrrrrrr
+\centerline{[WORK IN PROGRESS -- TO BE CONTINUED]}
 
 
 
@@ -902,7 +937,8 @@ rrrrrrrrrrrrrrrrrrrrrrrrrrr
 \sidx{Magnetiskt kvadrupolmoment}[Fr{\aa}n multipolutveckling av
   vektorpotential]
 \sidx{Vektorpotential ${\bf A}$}[Magnetiskt kvadrupolmoment]
-[TO BE CONTINUED]
+
+\centerline{[WORK IN PROGRESS -- TO BE CONTINUED]}
 
 \vfill\eject
 

@@ -185,69 +185,73 @@
 \tocsectionentry {Magnetisering sedd som bundna yt- och volymstr{\"o}mmar}{7.4}{142}
 \tocsectionentry {Upplagrad energi i magnetf{\"a}lt}{7.5}{143}
 \tocsectionentry {Vektorpotential fr{\aa }n ett magnetiserat objekt}{7.6}{144}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~7 -- Magnetiska f{\"a}lt i material}{7.7}{148}
-\tocchapterentry {F{\"o}rel{\"a}sning 8 -- {Multipolutvecklingen}}{8}{149}
-\tocsectionentry {Multipolutveckling av f{\"a}lt}{8.1}{151}
-\tocsectionentry {Multipolutveckling f{\"o}r skal{\"a}r potential f{\"o}r en elektrisk dipol}{8.2}{152}
-\tocsectionentry {Exempel p{\aa } multipoler}{8.3}{155}
-\tocsectionentry {Multipolutveckling f{\"o}r skal{\"a}r potential f{\"o}r en linj{\"a}r elektrisk kvadrupol}{8.4}{155}
-\tocsectionentry {Klassificering av multipolmoment}{8.5}{156}
-\tocsectionentry {Skal{\"a}r potential och elektriskt f{\"a}lt f{\"o}r en linj{\"a}r elektrisk kvadrupol}{8.6}{157}
-\tocsectionentry {Skal{\"a}r potential och elektriskt f{\"a}lt f{\"o}r en kvadratisk elektrisk kvadrupol}{8.7}{158}
-\tocsectionentry {Multipolutveckling av skal{\"a}r potential f{\"o}r generella laddningsf{\"o}rdelningar}{8.8}{158}
-\tocsubsectionentry {Maclaurin-utveckling av den geometriska viktfunktionen}{8.8.1}{159}
-\tocsubsectionentry {Sammanfattning av multipolutvecklingen av den skal{\"a}ra potentialen}{8.8.2}{161}
-\tocsectionentry {Multipolutveckling av vektorpotentialen f{\"o}r generella str{\"o}mt{\"a}theter}{8.9}{162}
-\tocsubsectionentry {Magnetisk monopolterm}{8.9.1}{162}
-\tocsubsectionentry {Fysikalisk tolkning av magnetisk monopolterm}{8.9.2}{163}
-\tocsubsectionentry {Magnetisk dipolterm}{8.9.3}{164}
-\tocsubsectionentry {Magnetisk kvadrupolterm}{8.9.4}{164}
-\tocsectionentry {Kan dynamiska magnetiska monopoler existera?}{8.10}{165}
-\tocsectionentry {Dipolapproximationen f{\"o}r station{\"a}ra laddningsf{\"o}rdelningar och str{\"o}mmar}{8.11}{166}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~8 -- Multipolutvecklingen}{8.12}{167}
-\tocchapterentry {F{\"o}rel{\"a}sning 9 -- {Maxwells ekvationer och v{\aa }gutbredning}}{9}{169}
-\tocsectionentry {Maxwells generalisering av Amp\`eres lag}{9.1}{171}
-\tocsectionentry {Maxwells ekvationer}{9.2}{174}
-\tocsectionentry {Fr{\aa }n Maxwells ekvationer till elektromagnetisk v{\aa }gekvation}{9.3}{175}
-\tocsectionentry {Aprop{\aa } s{\"a}rskiljning av polarisationsdensitet och magnetisering}{9.4}{177}
-\tocsectionentry {V{\aa }gekvation, induktion, elektrostatik, elektrodynamik, vad g{\"a}ller detta egentligen?}{9.5}{178}
-\tocsubsectionentry {Exempel I: Elektrostatik}{9.5.1}{178}
-\tocsubsectionentry {Exempel II: Magnetostatik}{9.5.2}{178}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~8 -- Maxwells ekvationer och v{\aa }gutbredning}{9.6}{179}
-\tocchapterentry {F{\"o}rel{\"a}sning 10 -- {V{\aa }gutbredning i homogena och isotropa dielektrika}}{10}{181}
-\tocsectionentry {Elektromagnetiska v{\aa }gekvationen i homogena dielektrika}{10.1}{183}
-\tocsectionentry {Plana elektromagnetiska f{\"a}lt och d'Alemberts generella l{\"o}sning till v{\aa }gekvationen}{10.2}{184}
-\tocsubsectionentry {d'Alemberts variabelsubstitution}{10.2.1}{185}
-\tocsubsectionentry {Integration of d'Alemberts transformerade v{\aa }gekvation}{10.2.2}{186}
-\tocsubsectionentry {Tolkning av reducerad fashastighet och brytningsindex}{10.2.3}{186}
-\tocsubsectionentry {Initialvillkor}{10.2.4}{186}
-\tocsectionentry {Tidsharmoniska f{\"a}lt och planv{\aa }guppdelning}{10.3}{186}
-\tocsubsectionentry {Komplexv{\"a}rda f{\"a}ltenvelopper}{10.3.1}{187}
-\tocsubsectionentry {Ortogonalitet mellan f{\"a}lt och v{\aa }gvektor}{10.3.2}{187}
-\tocsectionentry {Poynting-vektorn}{10.4}{188}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~10 -- V{\aa }gutbredning i homogena och isotropa dielektrika}{10.5}{189}
-\tocchapterentry {F{\"o}rel{\"a}sning 11 -- {Retarderade potentialer som l{\"o}sningar till Maxwells ekvationer}}{11}{191}
-\tocsectionentry {Elektrodynamiska f{\"a}lt och retarderade potentialer}{11.1}{193}
-\tocsectionentry {Recap p{\aa } vad skal{\"a}ra potentialen och vektorpotentialen {\"a}r bra f{\"o}r}{11.2}{194}
-\tocsectionentry {Retarderade potentialer och kopplingen till elektromagnetiska f{\"a}lt}{11.3}{195}
-\tocsectionentry {V{\aa }gekvationen f{\"o}r retarderade potentialer}{11.4}{196}
-\tocsubsectionentry {Plan f{\"o}r hur vi angriper problemet med tidsf{\"o}rdr{\"o}jning hos potentialer}{11.4.1}{196}
-\tocsubsectionentry {Den generella formen av v{\aa }gekvationen f{\"o}r vektorpotentialen}{11.4.2}{197}
-\tocsubsectionentry {Den generella formen av v{\aa }gekvationen f{\"o}r skal{\"a}ra potentialen}{11.4.3}{198}
-\tocsubsectionentry {Gauge-transformen}{11.4.4}{198}
-\tocsubsectionentry {Lorenz-villkoret (``Lorenz gauge'')}{11.4.5}{200}
-\tocsubsectionentry {Tre viktiga observationer}{11.4.6}{200}
-\tocsectionentry {[{\"O}verkurs] Gauge-transformen: Lorenz och Coulomb gauge}{11.5}{201}
-\tocsubsectionentry {Lorenz gauge}{11.5.1}{201}
-\tocsubsectionentry {Coulomb gauge}{11.5.2}{201}
-\tocsectionentry {Retarderade potentialer p{\aa } integralform}{11.6}{203}
-\tocsectionentry {Exempel: Halvv{\aa }gsantenn och emitterade elektromagnetiska f{\"a}lt}{11.7}{205}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~11 -- Retarderade potentialer}{11.8}{209}
-\tocchapterentry {F{\"o}rel{\"a}sning 12 -- {Grundl{\"a}ggande antennteori}}{12}{211}
-\tocsectionentry {Retarderade potentialer f{\"o}r antenner}{12.1}{213}
-\tocsectionentry {Val av potentialer}{12.2}{214}
-\tocsectionentry {Symmetrier och randvillkor f{\"o}r matning av antennen}{12.3}{214}
-\tocsectionentry {Vektorpotential f{\"o}r en tidsharmonisk str{\"o}mt{\"a}thet}{12.4}{215}
-\tocsectionentry {Lorenz-villkoret och kopplingen till den skal{\"a}ra potentialen}{12.5}{215}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~12 -- Grundl{\"a}ggande antennteori}{12.6}{217}
-\tocindexentry {\hskip 24pt{Index}}{\penalty \@M }{219}
+\tocsubsectionentry {Vektorpotentialen fr{\aa }n en isolerad magnetisk dipol}{7.6.1}{144}
+\tocsubsectionentry {Vektorpotentialen fr{\aa }n ett generellt magnetiserat objekt}{7.6.2}{145}
+\tocsubsectionentry {En observation kring monopoler versus dipoler}{7.6.3}{149}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~7 -- Magnetiska f{\"a}lt i material}{7.7}{150}
+\tocchapterentry {F{\"o}rel{\"a}sning 8 -- {Multipolutvecklingen}}{8}{151}
+\tocsectionentry {Motivation f{\"o}r dagens f{\"o}rel{\"a}sning}{8.1}{153}
+\tocsectionentry {Multipolutveckling av f{\"a}lt}{8.2}{153}
+\tocsectionentry {Multipolutveckling f{\"o}r skal{\"a}r potential f{\"o}r en elektrisk dipol}{8.3}{154}
+\tocsectionentry {Exempel p{\aa } multipoler}{8.4}{157}
+\tocsectionentry {Multipolutveckling f{\"o}r skal{\"a}r potential f{\"o}r en linj{\"a}r elektrisk kvadrupol}{8.5}{157}
+\tocsectionentry {Klassificering av multipolmoment}{8.6}{158}
+\tocsectionentry {Skal{\"a}r potential och elektriskt f{\"a}lt f{\"o}r en linj{\"a}r elektrisk kvadrupol}{8.7}{159}
+\tocsectionentry {Skal{\"a}r potential och elektriskt f{\"a}lt f{\"o}r en kvadratisk elektrisk kvadrupol}{8.8}{160}
+\tocsectionentry {Multipolutveckling av skal{\"a}r potential f{\"o}r generella laddningsf{\"o}rdelningar}{8.9}{160}
+\tocsubsectionentry {Maclaurin-utveckling av den geometriska viktfunktionen}{8.9.1}{161}
+\tocsubsectionentry {Sammanfattning av multipolutvecklingen av den skal{\"a}ra potentialen}{8.9.2}{163}
+\tocsectionentry {Multipolutveckling av vektorpotentialen f{\"o}r generella str{\"o}mt{\"a}theter}{8.10}{164}
+\tocsubsectionentry {Magnetisk monopolterm}{8.10.1}{165}
+\tocsubsectionentry {Fysikalisk tolkning av magnetisk monopolterm}{8.10.2}{165}
+\tocsubsectionentry {Magnetisk dipolterm}{8.10.3}{166}
+\tocsubsectionentry {Magnetisk kvadrupolterm}{8.10.4}{166}
+\tocsectionentry {Kan dynamiska magnetiska monopoler existera?}{8.11}{167}
+\tocsectionentry {Dipolapproximationen f{\"o}r station{\"a}ra laddningsf{\"o}rdelningar och str{\"o}mmar}{8.12}{168}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~8 -- Multipolutvecklingen}{8.13}{169}
+\tocchapterentry {F{\"o}rel{\"a}sning 9 -- {Maxwells ekvationer och v{\aa }gutbredning}}{9}{171}
+\tocsectionentry {Maxwells generalisering av Amp\`eres lag}{9.1}{173}
+\tocsectionentry {Maxwells ekvationer}{9.2}{176}
+\tocsectionentry {Fr{\aa }n Maxwells ekvationer till elektromagnetisk v{\aa }gekvation}{9.3}{177}
+\tocsectionentry {Aprop{\aa } s{\"a}rskiljning av polarisationsdensitet och magnetisering}{9.4}{179}
+\tocsectionentry {V{\aa }gekvation, induktion, elektrostatik, elektrodynamik, vad g{\"a}ller detta egentligen?}{9.5}{180}
+\tocsubsectionentry {Exempel I: Elektrostatik}{9.5.1}{180}
+\tocsubsectionentry {Exempel II: Magnetostatik}{9.5.2}{180}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~8 -- Maxwells ekvationer och v{\aa }gutbredning}{9.6}{181}
+\tocchapterentry {F{\"o}rel{\"a}sning 10 -- {V{\aa }gutbredning i homogena och isotropa dielektrika}}{10}{183}
+\tocsectionentry {Elektromagnetiska v{\aa }gekvationen i homogena dielektrika}{10.1}{185}
+\tocsectionentry {Plana elektromagnetiska f{\"a}lt och d'Alemberts generella l{\"o}sning till v{\aa }gekvationen}{10.2}{186}
+\tocsubsectionentry {d'Alemberts variabelsubstitution}{10.2.1}{187}
+\tocsubsectionentry {Integration of d'Alemberts transformerade v{\aa }gekvation}{10.2.2}{188}
+\tocsubsectionentry {Tolkning av reducerad fashastighet och brytningsindex}{10.2.3}{188}
+\tocsubsectionentry {Initialvillkor}{10.2.4}{188}
+\tocsectionentry {Tidsharmoniska f{\"a}lt och planv{\aa }guppdelning}{10.3}{188}
+\tocsubsectionentry {Komplexv{\"a}rda f{\"a}ltenvelopper}{10.3.1}{189}
+\tocsubsectionentry {Ortogonalitet mellan f{\"a}lt och v{\aa }gvektor}{10.3.2}{189}
+\tocsectionentry {Poynting-vektorn}{10.4}{190}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~10 -- V{\aa }gutbredning i homogena och isotropa dielektrika}{10.5}{191}
+\tocchapterentry {F{\"o}rel{\"a}sning 11 -- {Retarderade potentialer som l{\"o}sningar till Maxwells ekvationer}}{11}{193}
+\tocsectionentry {Elektrodynamiska f{\"a}lt och retarderade potentialer}{11.1}{195}
+\tocsectionentry {Recap p{\aa } vad skal{\"a}ra potentialen och vektorpotentialen {\"a}r bra f{\"o}r}{11.2}{196}
+\tocsectionentry {Retarderade potentialer och kopplingen till elektromagnetiska f{\"a}lt}{11.3}{197}
+\tocsectionentry {V{\aa }gekvationen f{\"o}r retarderade potentialer}{11.4}{198}
+\tocsubsectionentry {Plan f{\"o}r hur vi angriper problemet med tidsf{\"o}rdr{\"o}jning hos potentialer}{11.4.1}{198}
+\tocsubsectionentry {Den generella formen av v{\aa }gekvationen f{\"o}r vektorpotentialen}{11.4.2}{199}
+\tocsubsectionentry {Den generella formen av v{\aa }gekvationen f{\"o}r skal{\"a}ra potentialen}{11.4.3}{200}
+\tocsubsectionentry {Gauge-transformen}{11.4.4}{200}
+\tocsubsectionentry {Lorenz-villkoret (``Lorenz gauge'')}{11.4.5}{202}
+\tocsubsectionentry {Tre viktiga observationer}{11.4.6}{202}
+\tocsectionentry {[{\"O}verkurs] Gauge-transformen: Lorenz och Coulomb gauge}{11.5}{203}
+\tocsubsectionentry {Lorenz gauge}{11.5.1}{203}
+\tocsubsectionentry {Coulomb gauge}{11.5.2}{203}
+\tocsectionentry {Retarderade potentialer p{\aa } integralform}{11.6}{205}
+\tocsectionentry {Exempel: Halvv{\aa }gsantenn och emitterade elektromagnetiska f{\"a}lt}{11.7}{207}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~11 -- Retarderade potentialer}{11.8}{211}
+\tocchapterentry {F{\"o}rel{\"a}sning 12 -- {Grundl{\"a}ggande antennteori}}{12}{213}
+\tocsectionentry {Retarderade potentialer f{\"o}r antenner}{12.1}{215}
+\tocsectionentry {Val av potentialer}{12.2}{216}
+\tocsectionentry {Symmetrier och randvillkor f{\"o}r matning av antennen}{12.3}{216}
+\tocsectionentry {Vektorpotential f{\"o}r en tidsharmonisk str{\"o}mt{\"a}thet}{12.4}{217}
+\tocsectionentry {Lorenz-villkoret och kopplingen till den skal{\"a}ra potentialen}{12.5}{217}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~12 -- Grundl{\"a}ggande antennteori}{12.6}{219}
+\tocindexentry {\hskip 24pt{Index}}{\penalty \@M }{221}
