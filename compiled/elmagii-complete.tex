@@ -3394,7 +3394,7 @@ $$
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 0 ====================}
+\immediate\write16{================== Lecture 0 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 0 -- {Grundl{\"a}ggande vektoranalys inom f{\"a}ltteori}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -5653,7 +5653,7 @@ igenom i F{\"o}rel{\"a}sning~9.
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 1 ====================}
+\immediate\write16{================== Lecture 1 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 1 -- {Elektrostatik, superpositionsprincipen och Gauss lag}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -6839,7 +6839,7 @@ vilket sammanfattar {\it Gauss lag p{\aa} differentialform}.%
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 2 ====================}
+\immediate\write16{================== Lecture 2 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 2 -- {Elektrisk potential och till{\"a}mpningar av Gauss lag}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -7569,7 +7569,7 @@ Electrodynamics}.
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 3 ====================}
+\immediate\write16{================== Lecture 3 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 3 -- {Spegelladdningar, randvillkor och entydighet}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -8923,7 +8923,7 @@ $\phi_0=\hbox{konstant}$?
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 4 ====================}
+\immediate\write16{================== Lecture 4 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 4 -- {Magnetostatik}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -10294,7 +10294,7 @@ $$\sidx{Amp\`eres lag}[F{\"or}r statiska magnetiska f{\"a}lt]}
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 5 ====================}
+\immediate\write16{================== Lecture 5 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 5 -- {Elektrodynamik -- Elektromagnetisk induktion}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -11494,7 +11494,7 @@ p{\aa} differentialform.\numberedfootnote{Vilket f{\"o}r {\"o}vrigt
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 6 ====================}
+\immediate\write16{================== Lecture 6 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 6 -- {Elektriska f\"alt i material}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -12130,7 +12130,7 @@ $$
   \hbox{Stokes:}\qquad
   \iint_{\Sigma}\underbrace{(\nabla\times{\bf E})}_{=-\partial{\bf B}/\partial t=0}
       \cdot d{\bf S}
-    =\oint_{\Sigma}{\bf E}\cdot d{\bf s}
+    =\oint_{\Gamma}{\bf E}\cdot d{\bf s}
     =0
   \qquad\to\qquad
   {\bf e}_n \times({\bf E}_{2}-{\bf E}_{1})={\bf 0}
@@ -12194,8 +12194,8 @@ $$
   \eqalign{
     \hbox{Stokes:}\qquad
     \iint_{\Sigma}\underbrace{(\nabla\times{\bf D})}_{\ne0}\cdot d{\bf S}
-      =\oint_{\Sigma}{\bf D}\cdot d{\bf s}
-      =\oint_{\Sigma}{\bf P}\cdot d{\bf s}
+      =\oint_{\Gamma}{\bf D}\cdot d{\bf s}
+      =\oint_{\Gamma}{\bf P}\cdot d{\bf s}
     \quad\to\quad&
     {\bf e}_n \times({\bf D}_{2}-{\bf D}_{1})=
     {\bf e}_n \times({\bf P}_{2}-{\bf P}_{1})\cr
@@ -12204,27 +12204,32 @@ $$
   }
 $$
 Om vi har tv{\aa} medier av olika relativ permittivitet
-$\varepsilon^{(1)}_{\rm r}=1+\chi^{(1)}_{\rm e}$ och
-$\varepsilon^{(2)}_{\rm r}=1+\chi^{(2)}_{\rm e}$,
+$$
+  \varepsilon^{(1)}_{\rm r}=1+\chi^{(1)}_{\rm e}
+  \qquad\hbox{och}\qquad
+  \varepsilon^{(2)}_{\rm r}=1+\chi^{(2)}_{\rm e},
+$$
 s{\aa} kan vi sammanfatta detta med att
 $$
   \underbrace{
     \varepsilon_0(1+\chi^{(2)}_{\rm e})E^{\parallel}_2
-      -\varepsilon_0(1+\chi^{(2)}_{\rm e})E^{\parallel}_2
+      -\varepsilon_0(1+\chi^{(1)}_{\rm e})E^{\parallel}_1
   }_{=D^{\parallel}_2-D^{\parallel}_1}
   =
   \underbrace{
     \varepsilon_0\chi^{(2)}_{\rm e} E^{\parallel}_2
-      -\varepsilon_0\chi^{(2)}_{\rm e} E^{\parallel}_2
+      -\varepsilon_0\chi^{(1)}_{\rm e} E^{\parallel}_1
   }_{=P^{\parallel}_2-P^{\parallel}_1}
   \qquad\Leftrightarrow\qquad
   E^{\parallel}_2=E^{\parallel}_1,
 $$
-alternativt uttryckt i ${\bf D}$-f{\"a}ltet och de relativa permittiviteterna
-som \sidx{Elektrisk permittivitet}[Relativ permittivitet $\varepsilon_{\rm r}$]
+alternativt uttryckt i ${\bf D}$-f{\"a}ltet\numberedfootnote{D{\"a}r vi
+  f{\"o}rst{\aa}s har ${\bf D}_k=\varepsilon_0\varepsilon^{(k)}_{\rm r}{\bf E}_k$}
+och de relativa permittiviteterna som
+\sidx{Elektrisk permittivitet}[Relativ permittivitet $\varepsilon_{\rm r}$]
 $$
   {{D^{\parallel}_2}\over{\varepsilon^{(2)}_{\rm r}}}
-    ={{D^{\parallel}_1}\over{\varepsilon^{(1)}_{\rm r}}}
+    ={{D^{\parallel}_1}\over{\varepsilon^{(1)}_{\rm r}}}.
 $$
 \vfill\eject
 
@@ -12242,7 +12247,7 @@ allteftersom j{\"a}mvikt i systemet uppn{\aa}s.
 Uttrycket f{\"o}r den upplagrade energin (i Joule) hos ett dielektrikun under
 ett externt p{\aa}lagt elektriskt f{\"a}lt ${\bf E}$ ges av
 $$
-  W = {{1}\over{2}}\iiint{\bf D}\cdot{\bf E}\,dV
+  W = {{1}\over{2}}\iiint{\bf D}\cdot{\bf E}\,dV.
 $$
 H{\"a}rledningen av denna form ges av Griffiths p{\aa} sidorna 197--198, och
 {\"a}r en nyttig {\"o}vningsuppgift att f{\"o}lja.
@@ -12360,7 +12365,7 @@ $$
 %
 % File: teach/elmagii/lect-07/lecture-07.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-07/
-% Last change: November 15, 2026
+% Last change: November 19, 2026
 %
 % Lecture No 7 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
 % held November 19, 2026, at Uppsala University, Sweden.
@@ -12397,7 +12402,7 @@ $$
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 7 ====================}
+\immediate\write16{================== Lecture 7 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 7 -- {Magnetiska f{\"a}lt i material}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -12687,6 +12692,9 @@ d{\"a}r ${\bf e}_n$ {\"a}r normalvektorn ut fr{\aa}n den slutna ytan hos det
 magnetiserade objektet.
 \vfill\eject
 
+rrrrrrrrrrrrrrrrrrrrrrrr
+
+
 \section{Upplagrad energi i magnetf{\"a}lt}
 \sidx{Upplagrad energi}[I magnetf{\"a}lt]\sidx{Hysteres}
 I likhet med ett dielektrikum kommer ett p{\aa}lagt magnetiskt f{\"a}lt
@@ -12739,20 +12747,29 @@ ${\bf M}({\bf x})$ kan f{\aa} fram vektorpotentialen ${\bf A}({\bf x})$ eftersom
 vi via den kan extrahera {\"o}vriga f{\"a}lt.\numberedfootnote{Vi f{\"o}ljer
   h{\"a}r i huvudsak Griffiths kapitel 6.2.1, sidorna 274--275.}
 
+\subsection{Vektorpotentialen fr{\aa}n en isolerad magnetisk dipol}
 Som en f{\"o}rsta b{\"o}rjan i den kommande vektoralgebran, s{\aa} kan vi
 konstatera att vektorpotentialen i en {\it observationspunkt} ${\bf x}$
 \sidx{Observationspunkt ${\bf x}$} fr{\aa}n en enda, isolerad magnetisk dipol
 ${\bf m}$ \sidx{Dipolmoment}[Magnetiskt] i {\it k{\"a}llpunkten} ${\bf x}'$
 \sidx{K{\"a}llpunkt ${\bf x}'$} ges av\numberedfootnote{Se Griffiths
-  Ekv.~(5.85), sidan 253.}
+  Ekv.~(5.85), sidan 253. Notera att Griffiths notation ``$\hat{\bf r}$''
+  f{\"o}r enhetsvektorer l{\"a}tt leder till missf{\"o}rst{\aa}nd, d{\"a}r
+  hans uttryck ``${{{\bf m}\times\hat{\bf r}}/{r^2}}$'' i vektorpotentialen
+  fr{\aa}n en magnetisk dipol l{\"a}tt kan r{\aa}ka misstolkas som det
+  felaktiga ``${{{\bf m}\times({\bf x}-{\bf x}')}/{|{\bf x}-{\bf x}|^2}}.$''}
 $$
   {\bf A}({\bf x})={{\mu_0}\over{4\pi}}
-    {{{\bf m}\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^2}}.
+    {{{\bf m}\times({\bf x}-{\bf x}')}\over{|{\bf x}-{\bf x}'|^3}}.
 $$
+\epsfig{../lect-07/figs/vectpotmag.1}\noindent
 Med denna enkla relation kan vi enkelt g{\aa} vidare med en generalisering om
 vi ser sm{\aa} volymelement $dV$ som en ensemble av k{\"a}llpunkter, var och
 en uppb{\"a}rande en rumsberoende magnetisering (``magnetisk
 polarisationsdensitet'') ${\bf M}({\bf x}')$.\sidx{Magnetisering ${\bf M}$}
+\vfill\eject
+
+\subsection{Vektorpotentialen fr{\aa}n ett generellt magnetiserat objekt}
 \epsfig{../lect-07/figs/vectpot.1}\noindent
 Bidraget $d{\bf A}({\bf x})$ till vektorpotentialen vid observationspunkten
 ${\bf x}$ fr{\aa}n ett enskilt magnetiskt dipolmoment $d{\bf m}$ vid
@@ -12950,6 +12967,51 @@ en {\it bunden ytstr{\"o}m} ${\bf K}_{\rm b}$. Detta illustrerar den t{\"a}ta
 kopplingen mellan magnetiska f{\"a}lt och ekvivalenta str{\"o}mmar.
 \vfill\eject
 
+\subsection{En observation kring monopoler versus dipoler}
+Bara en liten sak innan vi g{\aa}r vidare: I formen f{\"o}r f{\"o}r
+vektorpotentialen fr{\aa}n en magnetisk dipol, s{\aa} ser vi att denna g{\aa}r
+som inversen p{\aa} kvadraten av avst{\aa}ndet, eller
+$\sim|{\bf x}-{\bf x}'|^{-2}$, mellan k{\"a}llpunkt ${\bf x}'$ och
+observationspunkt ${\bf x}$.
+Samtidigt har vi ju i elektrostatiken att bidragen till den skal{\"a}ra
+potentialen $\phi({\bf x})$ fr{\aa}n en punktladdning vid k{\"a}llpunkten
+${\bf x}'$ g{\aa}r som
+$$
+  d\phi({\bf x})={{\rho({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+$$
+eller att motsvarande bidrag till vektorpotentialen ${\bf A}({\bf x})$ fr{\aa}n
+ett segment av en volymstr{\"o}m g{\aa}r som
+$$
+  d{\bf A}({\bf x})={{{\bf J}({\bf x}')}\over{|{\bf x}-{\bf x}'|}}\,dV',
+$$
+det vill s{\"a}ga att b{\aa}da dessa bidrag g{\aa}r som den direkta inversen
+p{\aa} avst{\aa}ndet mellan k{\"a}llpunkt och observationspunkt.
+Fr{\aa}gan {\"a}r {\it varifr{\aa}n den inversa kvadraten} h{\"a}rr{\"o}r i
+bidraget ovan till vektorpotentialen fr{\aa}n den {\it magnetiska dipolen}?
+
+Svaret till denna fr{\aa}ga ligger i att exempelvis den skal{\"a}ra potentialen
+i detta fall h{\"a}rr{\"o}r fr{\aa}n en {\it elektrisk monopol} i form av
+elektrisk punktladdning $dq'=\rho({\bf x}')\,dV'$, vilket resulterar i ett
+beroende p{\aa} avst{\aa}nd som f{\"o}ljer det inversa avst{\aa}ndet rakt av.
+Motsvarande bidrag fr{\aa}n en {\it elektrisk dipol}, oavsett om den {\"a}r
+konstruerad fr{\aa}n tv{\aa} punktladdningar eller h{\"a}rr{\"o}r fr{\aa}n en
+distribution av laddning via en laddningst{\"a}thet $x'\rho({\bf x}')\,dV'$,
+f{\"o}ljer {\"a}ven den ett beroende p{\aa} avst{\aa}ndet som den {\it inversa
+kvadraten p{\aa} avst{\aa}ndet}, det vill s{\"a}ga helt i linje med det bidrag
+som vi h{\"a}r har fr{\aa}n en {\it magnetisk dipol}.
+I fallet med magnetiska f{\"a}lt, och som genomg{\aa}ende diskuterats i kursen
+i form av att $\nabla\cdot{\bf B}=0$, s{\aa} existerar inga magnetiska
+monopoler, och med andra ord {\"a}r det f{\"o}rsta bidrag som {\"o}verhuvud
+taget {\it kan} uppst{\aa} det fr{\aa}n den magnetiska monopolen, men
+motsvarande beroende som {\it inversa kvadraten p{\aa} avst{\aa}ndet mellan
+k{\"a}llpunkt och observationspunkt}.
+
+Vi kommer att i detalj g{\aa} igenom multipolutvecklingen av skal{\"a}ra
+potentialen $\phi$ och vektorpotentialen ${\bf A}$ under F{\"o}rel{\"a}sning~8,
+och d{\"a}r se hur de olika potenserna av avst{\aa}ndsberoende uppst{\aa}r
+genom en Taylor-utveckling av volymintegralerna f{\"o}r dessa potentialer.
+\vfill\eject
+
 \section{Sammanfattning av F{\"o}rel{\"a}sning~7
   -- Magnetiska f{\"a}lt i material}
 \item{$\bullet$}{Att $\nabla\cdot{\bf B}=0$ betyder att det inte existerar
@@ -13034,7 +13096,7 @@ $$}
 %
 % File: teach/elmagii/lect-08/lecture-08.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-08/
-% Last change: November 7, 2026
+% Last change: November 23, 2026
 %
 % Lecture No 8 in the course ``Elektromagnetism II, 1TE626 (2022-2026)'',
 % held November 23, 2026, at Uppsala University, Sweden.
@@ -13071,7 +13133,7 @@ $$}
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 8 ====================}
+\immediate\write16{================== Lecture 8 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 8 -- {Multipolutvecklingen}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -13160,6 +13222,21 @@ $$}
   \sidx{Dipolmoment}[Elektriskt]\sidx{Dipolmoment}[Magnetiskt]
 }
 \vfill\eject\copyrights
+
+\section{Motivation f{\"o}r dagens f{\"o}rel{\"a}sning}
+Vi har s{\aa} l{\aa}ngt i f{\"o}rel{\"a}sningarna till{\"a}mpat enkla
+geometrier f{\"o}r laddningsf{\"o}rdelningar och str{\"o}m\-mar, f{\"o}r
+punkter, linjer, ytor och enklare generaliseringar av dessa geometrier.
+Dock kan man fr{\aa}ga sig hur vi beskriver generella f{\"o}rdelningar av
+laddning och str{\"o}mmar, som generellt m{\aa}ste behandlas med den
+generaliserade Coulombs lag f{\"o}r laddningst{\"a}theter eller dess
+motsvarighet f{\"o}r str{\"o}mt{\"a}theter och vektorpotentialen. Specifikt
+kommer vi att i denna f{\"o}rel{\"a}sning inom {\it multipolutveckling av
+f{\"a}lt} att unders{\"o}ka hur vi kan extrahera och klassificera hur olika
+bidrag till den skal{\"a}ra potentialen och vektorpotentialen som har ett
+beroende som g{\aa}r som inversa potenser av avst{\aa}ndet fr{\aa}n en
+laddnings- eller str{\"o}mt{\"a}thet, och hur detta kan anv{\"a}ndas under
+det att vi betraktar symmetrier.
 
 \section{Multipolutveckling av f{\"a}lt}
 \sidx{Multipolutveckling}
@@ -13267,7 +13344,6 @@ $$
         ={\rm N}/{\rm A}.\cr
   }
 $$
-\vfill\eject
 
 \section{Multipolutveckling f{\"o}r skal{\"a}r potential f{\"o}r en
          elektrisk dipol}
@@ -13293,8 +13369,8 @@ $$
   \rho({\bf x})=(+q)\delta({\bf x}-b{\bf e}_z)
      +(-q)\delta({\bf x}+b{\bf e}_z)
 $$
-\epsfig{../lect-08/figs/eldipole.1}\noindent
-\vfill\eject
+\epsfig{../lect-08/figs/eldipole.1}
+\noindent
 Den {\it elektriska skal{\"a}ra potentialen} \sidx{Skal{\"a}r potential $\phi$}
 fr{\aa}n denna specifika distribution av tv{\aa}
 punktk{\"a}llor\numberedfootnote{Vi utg{\aa}r h{\"a}r ifr{\aa}n den generella
@@ -13676,7 +13752,23 @@ $$
 $$
 Rent matematiskt {\"a}r den enda skillnaden egentligen bara att vi nu tar fram
 vektorpotentialen ${\bf A}({\bf x})$ i observationspunkten komponentvis
-fr{\aa}n {\it str{\"o}mt{\"a}theten} (k{\"a}llan) ${\bf J}({\bf x}')$, som
+fr{\aa}n {\it str{\"o}mt{\"a}theten} (k{\"a}llan) ${\bf J}({\bf x}')$,
+som\numberedfootnote{Griffith's {\it Introduction to Electrodynamics}
+  h{\aa}ller generellt en utm{\"a}rkt pedagogisk niv{\aa} som l{\"a}robok,
+  dock har den i aspekten multipolutveckling av den magnetostatiska
+  vektorpotentialen fr{\aa}n generella str{\"o}mt{\"a}theter lite att
+  {\"o}nska.
+  H{\"a}r introducerar Griffiths omedelbart vektorpotentialen som
+  h{\"a}rr{\"o}rande fr{\aa}n linjeintegral fr{\aa}n str{\"o}mslingor,
+  vilket i sig m{\aa} vara helt korrekt men {\"a}nd{\aa} g{\"o}r att
+  man l{\"a}tt missar po{\"a}ngen n{\"a}r man betraktar serieutvecklingar
+  av $\rho$ och ${\bf J}$ i {\it volymintegraler} som de fundamentala
+  utg{\aa}ngspunkterna f{\"o}r analysen.
+  I den form som Griffiths presenterar uppl{\"a}gget, i Ekv.~(5.80)
+  p{\aa} sidan 252, {\"a}r det sannolikt inte helt uppenbart f{\"o}r
+  l{\"a}saren var uttrycken kommer ifr{\aa}n, speciellt som utveckling
+  i Legendre-polynom f{\"o}reg{\aa}r denna, n{\aa}got som i alla
+  h{\"a}ndelser inte ing{\aa}r i denna kurs i elektromagnetism.}
 \sidx{Taylor-utveckling}\sidx{Maclaurin-utveckling}
 \sidx{Vektorpotential ${\bf A}$}[Multipolutveckling]
 $$
@@ -13715,7 +13807,7 @@ $$
         \Bigg).\cr
   }
 $$
-Tolkningen av de ing{\aa}ende magnetiska momenten, som nu involverar
+Tolkningen av de ing{\aa}ende {\it magnetiska momenten}, som nu involverar
 str{\"o}mt{\"a}theten ${\bf J}$ snarare {\"a}n den statiska
 laddningst{\"a}theten $\rho$ som f{\"o}r den skal{\"a}ra potentialen,
 blir dock lite annorlunda som vi nu skall se.
@@ -13736,6 +13828,7 @@ f{\"o}r den skal{\"a}ra potentialen $\phi$, m{\aa}ste uppfylla att den {\"a}r
 {\it lokaliserad}, det vill s{\"a}ga att den g{\aa}r mot noll f{\"o}r ett
 tillr{\"a}ckligt stort avst{\aa}nd fr{\aa}n origo (som vi valt att lokalisera
 n{\aa}gonstans inuti k{\"a}llans utstr{\"a}ckning).
+\vfill\eject
 
 \subsection{Magnetisk monopolterm}
 \sidx{Magnetiska monopoler}[Icke-existens av, statiskt]
@@ -13847,7 +13940,7 @@ $$
 $$
 
 
-
+rrrrrrrrrrrrrrrrrrrrrrrrrrr
 
 
 
@@ -14089,7 +14182,7 @@ just vektorpotentialen.
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 9 ====================}
+\immediate\write16{================== Lecture 9 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 9 -- {Maxwells ekvationer och v{\aa}gutbredning}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -14918,7 +15011,7 @@ generella v{\aa}gekvationerna ovan.
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 10 ====================}
+\immediate\write16{================== Lecture 10 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 10 -- {V{\aa}gutbredning i homogena och isotropa dielektrika}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -15652,7 +15745,7 @@ med enheten ${\rm W}/{\rm m}^2$.
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 11 ====================}
+\immediate\write16{================== Lecture 11 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 11 -- {Retarderade potentialer som l{\"o}sningar till Maxwells ekvationer}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
@@ -16978,7 +17071,7 @@ $$
 \advance\chapno by 1
 \secno=0
 \footnotenumber=0
-\message{==================== Lecture 12 ====================}
+\immediate\write16{================== Lecture 12 ==================}
 \writenumberedtocentry{chapter}{F{\"o}rel{\"a}sning 12 -- {Grundl{\"a}ggande antennteori}}{\thechapno}
 \hsize=150mm\hoffset=4.6mm\vsize=230mm\voffset=7mm
 \topskip=0pt\baselineskip=12pt\parskip=0pt\leftskip=0pt\parindent=15pt
