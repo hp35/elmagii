@@ -122,7 +122,7 @@
 \tocsectionentry {Vad {\"a}r ett magnetf{\"a}lt?}{4.3}{88}
 \tocsectionentry {{\hl {Lorentz-kraften}} - R{\"o}rliga laddningar i statiska elektriska och magnetiska f{\"a}lt}{4.4}{88}
 \tocsubsectionentry {{\hl {Magnetisk kraft utf{\"o}r inget arbete}}}{4.4.1}{88}
-\tocsectionentry {{\hl {Amp\`eres kraftlag - Kraften p{\aa } str{\"o}mslingor i magnetf{\"a}lt}}}{4.5}{89}
+\tocsectionentry {{\hl {Amp{\`e}res kraftlag - Kraften p{\aa } str{\"o}mslingor i magnetf{\"a}lt}}}{4.5}{89}
 \tocsectionentry {{\hl {Volymstr{\"o}mmar och ``lagen om att laddning inte kan f{\"o}rsvinna''}}}{4.6}{91}
 \tocsectionentry {Aprop{\aa } detta med {\hl {magnetostatik vs elektrostatik}}}{4.7}{91}
 \tocsectionentry {{\hl {Biot--Savarts lag - Magnetf{\"a}lt fr{\aa }n str{\"o}mslingor}}}{4.8}{93}
@@ -135,7 +135,7 @@
 \tocsubsectionentry {Term~1 i rotationen}{4.10.1}{97}
 \tocsubsectionentry {Term~2 i rotationen}{4.10.2}{97}
 \tocsubsectionentry {Slutligt resultat f{\"o}r rotationen av magnetf{\"a}ltet}{4.10.3}{98}
-\tocsectionentry {{\hl {Amp\`eres lag}}}{4.11}{98}
+\tocsectionentry {{\hl {Amp{\`e}res lag}}}{4.11}{98}
 \tocsectionentry {{\hl {Vektorpotentialen}}}{4.12}{100}
 \tocsectionentry {{\hl {Explicit l{\"o}sning f{\"o}r vektorpotentialen}}}{4.13}{101}
 \tocsectionentry {{\hl {Tolkning av vektorpotentialen}}}{4.14}{102}
@@ -210,14 +210,15 @@
 \tocsectionentry {Dipolapproximationen f{\"o}r station{\"a}ra laddningsf{\"o}rdelningar och str{\"o}mmar}{8.12}{168}
 \tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~8 -- Multipolutvecklingen}{8.13}{169}
 \tocchapterentry {F{\"o}rel{\"a}sning 9 -- {Maxwells ekvationer och v{\aa }gutbredning}}{9}{171}
-\tocsectionentry {Maxwells generalisering av Amp\`eres lag}{9.1}{173}
-\tocsectionentry {Maxwells ekvationer}{9.2}{176}
-\tocsectionentry {Fr{\aa }n Maxwells ekvationer till elektromagnetisk v{\aa }gekvation}{9.3}{177}
-\tocsectionentry {Aprop{\aa } s{\"a}rskiljning av polarisationsdensitet och magnetisering}{9.4}{179}
-\tocsectionentry {V{\aa }gekvation, induktion, elektrostatik, elektrodynamik, vad g{\"a}ller detta egentligen?}{9.5}{180}
-\tocsubsectionentry {Exempel I: Elektrostatik}{9.5.1}{180}
-\tocsubsectionentry {Exempel II: Magnetostatik}{9.5.2}{180}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~8 -- Maxwells ekvationer och v{\aa }gutbredning}{9.6}{181}
+\tocsectionentry {En kort introduktion till denna f{\"o}rel{\"a}sning}{9.1}{173}
+\tocsectionentry {Maxwells generalisering av Amp\`eres lag}{9.2}{174}
+\tocsectionentry {Maxwells ekvationer}{9.3}{177}
+\tocsectionentry {Fr{\aa }n Maxwells ekvationer till elektromagnetisk v{\aa }gekvation}{9.4}{178}
+\tocsectionentry {Aprop{\aa } s{\"a}rskiljning av polarisationsdensitet och magnetisering}{9.5}{180}
+\tocsectionentry {V{\aa }gekvation, induktion, elektrostatik, elektrodynamik, vad g{\"a}ller detta egentligen?}{9.6}{181}
+\tocsubsectionentry {Exempel I: Elektrostatik}{9.6.1}{181}
+\tocsubsectionentry {Exempel II: Magnetostatik}{9.6.2}{181}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~8 -- Maxwells ekvationer och v{\aa }gutbredning}{9.7}{182}
 \tocchapterentry {F{\"o}rel{\"a}sning 10 -- {V{\aa }gutbredning i homogena och isotropa dielektrika}}{10}{183}
 \tocsectionentry {Elektromagnetiska v{\aa }gekvationen i homogena dielektrika}{10.1}{185}
 \tocsectionentry {Plana elektromagnetiska f{\"a}lt och d'Alemberts generella l{\"o}sning till v{\aa }gekvationen}{10.2}{186}
