@@ -6,20 +6,17 @@
 
   \indexspace
 
-  \item Amp\`eres lag, 171, 177, 178, 182, 198, 199
-    \subitem F{\"o}r statiska magnetiska f{\"a}lt, xv
-    \subitem Maxwells generalisering av, 174
   \item Amp\`eres modell f{\"o}r magneter, 140
-  \item Amp{\`e}re, Andr{\'e}-Marie (1775--1836), xxii, 87
+  \item Amp{\`e}re, Andr{\'e}-Marie (1775--1836), xxii, 87, 173
   \item Amp{\`e}re, enhet f{\"o}r str{\"o}m, 89
   \item Amp{\`e}res kraftlag, xiv, 89, 90
-  \item Amp{\`e}res lag, xxx
+  \item Amp{\`e}res lag, xxx, 171, 177, 178, 182, 198, 199
     \subitem Amp{\`e}re--Maxwells elektrodynamiska lag, 10
-    \subitem F{\"or}r statiska magnetiska f{\"a}lt, xxii, 99, 104
-    \subitem F{\"o}r statiska magnetiska f{\"a}lt, 173
+    \subitem F{\"o}r statiska magnetiska f{\"a}lt, xv, xxii, 85, 99, 
+		104, 173
     \subitem Magnetostatik, 10
+    \subitem Maxwells generalisering av, 174
     \subitem Uttryckt i vektorpotentialen, 100
-  \item Amp{\`e}res lag[F{\"or}r statiska magnetiska f{\"a}lt], 85
   \item Analysens fundamentalsats
     \subitem F{\"o}r gradienter, xviii
   \item Anaxagoras (500--428~BC), 87
@@ -480,7 +477,7 @@
   \item Planv{\aa }guppdelning, 183, 189
   \item Poisson, Sim\'eon Denis (1781--1840), xxvii
   \item Poissons ekvation, xv, xxvii, 61, 66, 120, 198
-    \subitem F{\"or} skal{\"a}r potential $\phi $, xiv
+    \subitem F{\"o}r skal{\"a}r potential $\phi $, xiv
     \subitem F{\"o}r vektorpotentialen ${\bf A}$, xv
     \subitem L{\"o}sningar p{\aa } integralform, 198
   \item Polarisationsdensitet {\bf P}

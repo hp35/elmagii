@@ -211,7 +211,7 @@
 \tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~8 -- Multipolutvecklingen}{8.13}{169}
 \tocchapterentry {F{\"o}rel{\"a}sning 9 -- {Maxwells ekvationer och v{\aa }gutbredning}}{9}{171}
 \tocsectionentry {En kort introduktion till denna f{\"o}rel{\"a}sning}{9.1}{173}
-\tocsectionentry {Maxwells generalisering av Amp\`eres lag}{9.2}{174}
+\tocsectionentry {Maxwells generalisering av Amp{\`e}res lag}{9.2}{174}
 \tocsectionentry {Maxwells ekvationer}{9.3}{177}
 \tocsectionentry {Fr{\aa }n Maxwells ekvationer till elektromagnetisk v{\aa }gekvation}{9.4}{178}
 \tocsectionentry {Aprop{\aa } s{\"a}rskiljning av polarisationsdensitet och magnetisering}{9.5}{180}
