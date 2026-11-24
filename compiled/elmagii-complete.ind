@@ -186,7 +186,7 @@
   \item Elektromagnetism, 3
     \subitem V{\"a}rldskarta, xi
   \item Elektromotorisk ``kraft'' ${\cal E}$, xvi, 109, 116, 123
-  \item Elektron, 38, 41, 87
+  \item Elektron, 38, 41, 87, 174
     \subitem Fr{\aa }n gammalgrekiska $\eta \lambda \varepsilon \kern -.4pt\kappa \tau \kern -1.4pt\rho o\nu $, 
 		38
   \item Elektronmoln, 128, 129, 133
@@ -352,7 +352,7 @@
     \subitem Yt-, 136
     \subitem Ytladdning i perfekt ledande plan, 76
   \item Lagen om att laddning inte kan f{\"o}rsvinna, 91, 165, 166, 171, 
-		174
+		174, 175
   \item Laplace, Pierre-Simon (1749--1827), xxv, 66
   \item Laplace-operatorn
     \subitem Egenv{\"a}rdesproblem f{\"o}r, 189
@@ -577,12 +577,12 @@
     \subitem L{\"o}sningsf{\"o}rslag, xxx
   \item Tesla, Nikola (1856--1943), xxvii
   \item Testladdning, 40
-  \item Thomson, George Paget (1892--1975), xxviii
-  \item Thomson, Joseph John (1856--1940), xxviii, 38, 41
+  \item Thomson, George Paget (1892--1975), xxviii, 174
+  \item Thomson, Joseph John (1856--1940), xxviii, 38, 41, 174
   \item Tidsharmoniska f{\"a}lt, 189
   \item Tricket $\displaystyle \nabla {{1}\over {\char 124}{\bf x}-{\bf x}'{\char 124}} =-{{({\bf x}-{\bf x}')}\over {{\char 124}{\bf x}-{\bf x}'{\char 124}^3}}$, 
 		xviii, 59, 95, 146
-  \item Tricket II $\displaystyle \nabla {{1}\over {\char 124}{\bf x}-{\bf x}'{\char 124}} =-{{({\bf x}-{\bf x}')}\over {{\char 124}{\bf x}-{\bf x}'{\char 124}^3}}$, 
+  \item Tricket II $\displaystyle \nabla \times {{({\bf x}-{\bf x}')} \over {{\char 124}{\bf x}-{\bf x}'{\char 124}^3}}=0$, 
 		xviii
 
   \indexspace
