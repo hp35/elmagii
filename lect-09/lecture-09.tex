@@ -1,12 +1,12 @@
 %
 % File: teach/elmagii/lect-09/lecture-09.tex [plain TeX code]
 % Github: https://github.com/elmagii/lect-09/
-% Last change: October 22, 2024
+% Last change: November 24, 2026
 %
 % Lecture No 9 in the course ``Elektromagnetism II, 1TE626 (2023)'',
-% held November 25, 2025, at Uppsala University, Sweden.
+% held November 24, 2026, at Uppsala University, Sweden.
 %
-% Copyright (C) 2022-2025, Fredrik Jonsson, under Gnu General Public
+% Copyright (C) 2022-2026, Fredrik Jonsson, under Gnu General Public
 % License (GPL) v3. See the enclosed LICENSE for details.
 %
 % This program is free software: you can redistribute it and/or modify
@@ -24,14 +24,14 @@
 %
 \def\coursename{Elektromagnetism II}
 \def\coursecode{1TE626}
-\def\courseyear{2025}
+\def\courseyear{2026}
 \def\courserepo{https://github.com/hp35/elmagii/}
 \def\lecturenumber{9}
 \def\lecturetitle{Maxwells ekvationer och v{\aa}gutbredning}
 \def\lecturetitlesub{}
 \def\lectureauthor{Fredrik Jonsson}
 \def\lectureplace{Uppsala Universitet}
-\def\lecturedate{25 november 2025}
+\def\lecturedate{24 november 2026}
 %-------------------- BEGIN OF LOCAL MACROS --------------------
 \input macros/epsf.tex
 \input macros/eplain.tex
@@ -209,6 +209,37 @@ Caltech's Division of Physics, Mathematics and Astronomy, {\it The Feynman Lectu
 }, Volume 2, Chapter I-6.
 \bigskip
 
+\section{En kort introduktion till denna f{\"o}rel{\"a}sning}
+Vi har nu g{\aa}tt igenom elektrostatik med aspekter som entydighetsteoremet
+utifr{\aa}n Laplaces och Poissons ekvationer, allt utifr{\aa}n Coulombs lag
+d{\"a}r den fria permittiviteten $\varepsilon_0$ f{\"o}rst introducerats som
+en ``etikett'' p{\aa} allt som h{\"a}rletts ifr{\aa}n denna.
+Vi har {\"a}ven g{\aa}tt igenom magnetostatiken och konstaterat att allt som
+h{\"a}rletts utifr{\aa}n Biot--Savarts lag, som Amp\`eres induktionslag eller
+formen p{\aa} vektorpotentialen f{\"o}r en generell str{\"o}mt{\"a}thet, har
+f{\aa}tt en liknande ``etikett'' i form av den fria permeabiliteten$\mu_0$.
+Vi har dessutom som ett tredje, frist{\aa}ende sp{\aa}r h{\"a}rlett Faradays
+lag, utifr{\aa}n Lorentz kraftlag, och vi noterar att eftersom denna ej
+h{\"a}rletts utifr{\aa}n vare sig Coulombs eller Biot--Savarts lagar eller
+derivat av dessa, s{\aa} saknar Faradays lag ``etiketter'' fr{\aa}n
+s{\aa}v{\"a}l $\epsilon_0$ som $\mu_0$.
+\sidx{Biot--Savarts lag}
+\sidx{Amp{\`e}res lag}[F{\"o}r statiska magnetiska f{\"a}lt]
+\sidx{Faradays induktionslag}
+\sidx{Lorentz-kraften ${\bf F}_{\rm m}=q\,{\bf v}\times{\bf B}$}
+
+Vi kommer i denna f{\"o}rel{\"a}sning att f{\"o}rst av allt g{\aa} in p{\aa}
+hur det fortfarande finns ett kvarvarande problem med att generalisera
+Amp{\`e}res lag i den statiska formen f{\"o}r tidsberoende f{\"a}lt, och hur
+Maxwell \sidx{Maxwell, James Clerk (1831--1879)} l{\"o}ste detta problem.
+Det magiska kommer d{\"a}refter i hur vi kan omformulera Maxwells ekvationer
+\sidx{Maxwells ekvationer} som en elektromagnetisk v{\aa}gekvation.
+Om man rekapitulerar hur vi kommit fram till denna v{\aa}gekvation, som
+beskriver ljus och radiov{\aa}gors utbredning och v{\"a}xelverkan, s{\aa}
+{\"a}r det onekligen lite hisnande att denna h{\"a}rledning i grund och botten
+{\"a}r baserad i mycket grundl{\"a}ggande antaganden i form av Coulombs lag,
+Biot--Savarts lag, samt Lorentz kraftlag.
+
 \section{Maxwells generalisering av Amp\`eres lag}
 \sidx{Amp\`eres lag}[Maxwells generalisering av]
 S{\aa} l{\aa}ngt i kursen\numberedfootnote{Den f{\"o}ljande behandlingen i
@@ -228,7 +259,7 @@ $$
   \nabla\times{\bf E}=-{{\partial{\bf B}}\over{\partial t}},\qquad
   \nabla\cdot{\bf B}=0,
 $$
-samt med Amp\`eres lag (s{\aa} l{\aa}ngt) p{\aa} den {\it statiska} formen
+samt med Amp\`eres lag p{\aa} den (s{\aa} l{\aa}ngt) {\it statiska} formen
 $$
   \hskip70pt\nabla\times{\bf B}=\mu_0{\bf J}.\hskip30pt(\hbox{Statisk!})
 $$
