@@ -17,8 +17,9 @@ are any complaints.
 
 [`arbitrary.mp`](arbitrary.mp)
     ([`arbitrary.pdf`](arbitrary.pdf))
-    <i>MetaPost drawing of an arbitrary wave traveling in the positive
-    z-direction, following the general solution by the d'Alembert ansatz.</i>
+    <i>dding MetaPost drawing of arbitrary waves forms traveling in the
+    positive and negative z-direction, following the general solution by
+    the d'Alembert ansatz.</i>
 
 ## Copyright
 Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
