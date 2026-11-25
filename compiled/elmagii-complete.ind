@@ -131,7 +131,7 @@
     \subitem Divergens f{\"o}r, 185
     \subitem Dynamisk, tidsberoende, 4, 5
     \subitem Ekvivalent punktladdning, 131
-    \subitem Komplexv{\"a}rd envelopp, 189
+    \subitem Komplexv{\"a}rd envelopp, 190
     \subitem V{\aa }gekvation f{\"o}r, 179
   \item Elektrisk f{\"a}ltstyrka {\bf E}, xxx
   \item Elektrisk konduktivitet $\sigma $, xiv
@@ -278,6 +278,7 @@
   \indexspace
 
   \item Halvv{\aa }gsantenn, 207
+  \item Harmoniska v{\aa }gor, 189
   \item Heaviside, Oliver (1850--1925), xxiv, 88, 177
   \item Hertz, Heinrich (1857--1894), 177
   \item Hexacontatetrapol, 158
@@ -292,7 +293,7 @@
   \item Induktionslagen
     \subitem Faradays induktionslag, 107
   \item Inhomogent medium, 132
-  \item Initialvillkor f{\"o}r v{\aa }gpropagation, 188
+  \item Initialvillkor f{\"o}r v{\aa }gpropagation, 189
   \item Integral
     \subitem Linje-, 121
     \subitem Linjeintegral, 57
@@ -322,7 +323,7 @@
     \subitem Stokes teorem, xviii
   \item Klassisk elektromagnetism
     \subitem Portr{\"a}ttgalleri, xxi
-  \item Komplexv{\"a}rda f{\"a}ltenvelopper, 189, 190
+  \item Komplexv{\"a}rda f{\"a}ltenvelopper, 190, 191
   \item Konservativt f{\"a}lt
     \subitem Definition, 3
   \item Konstitutiva relationer, xiii, 177, 182, 199
@@ -356,7 +357,7 @@
 		174, 175
   \item Laplace, Pierre-Simon (1749--1827), xxv, 66
   \item Laplace-operatorn
-    \subitem Egenv{\"a}rdesproblem f{\"o}r, 189
+    \subitem Egenv{\"a}rdesproblem f{\"o}r, 190
   \item Laplace-operatorn $\nabla ^2$, xxv
   \item Laplaces ekvation, xxv, 65, 66
   \item Leibniz integralregel, 114
@@ -403,7 +404,7 @@
   \item Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$, xiii, 142, 154, 168, 
 		171, 177, 195
     \subitem Gauss lag, xiv
-    \subitem Komplexv{\"a}rd envelopp, 189
+    \subitem Komplexv{\"a}rd envelopp, 190
     \subitem Statisk, 5
     \subitem V{\aa }gekvation f{\"o}r, 179
   \item Magnetisk fl{\"o}dest{\"a}thet {\bf B}, xxx
@@ -466,7 +467,7 @@
   \item Observationspunkt ${\bf x}$, 144
   \item Oktopol, xv, 151, 155, 158
   \item Optisk aktivitet, 132
-  \item Ortogonalitet mellan f{\"a}lt och v{\aa }gvektor, 190
+  \item Ortogonalitet mellan f{\"a}lt och v{\aa }gvektor, 191
 
   \indexspace
 
@@ -489,7 +490,7 @@
   \item Potentiell energi
     \subitem Elektrostatisk, 60, 196
   \item Poynting-vektorn ${\bf S}$
-    \subitem Effekt transporterat av elektromagnetiskt f{\"a}lt, 190
+    \subitem Effekt transporterat av elektromagnetiskt f{\"a}lt, 191
   \item Proton, 41
   \item Punktladdning, 39, 45, 109, 131, 154
     \subitem System av punktladdningar, 40
@@ -626,14 +627,15 @@
     \subitem Multipolutveckling, 164
     \subitem Tolkning, 102
     \subitem V{\aa }gekvation, xvi
+  \item Vinkelfrekvens $\omega $, 189, 190
   \item Virtuell sf{\"a}r, 45, 49
   \item Virtuell slinga, 112
   \item Virtuella fotoner, 41
   \item Volymintegral
     \subitem Av Diracs delta-distribution, 7
-  \item von Helmholtz, Hermann (1821--1894), 189
+  \item von Helmholtz, Hermann (1821--1894), 190
   \item V{\"a}rldskarta {\"o}ver elektromagnetisk f{\"a}ltteori, xi
-  \item V{\aa }gvektor ${\bf k}$, 189, 190
+  \item V{\aa }gvektor ${\bf k}$, 190, 191
 
   \indexspace
 

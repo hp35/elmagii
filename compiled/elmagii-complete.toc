@@ -226,11 +226,12 @@
 \tocsubsectionentry {{\hl {Integration}} of d'Alemberts transformerade v{\aa }gekvation}{10.2.2}{188}
 \tocsubsectionentry {Tolkning av reducerad {\hl {fashastighet och brytningsindex}}}{10.2.3}{188}
 \tocsubsectionentry {Initialvillkor}{10.2.4}{188}
-\tocsectionentry {{\hl {Tidsharmoniska f{\"a}lt och planv{\aa }guppdelning}}}{10.3}{188}
-\tocsubsectionentry {{\hl {Komplexv{\"a}rda f{\"a}ltenvelopper}}}{10.3.1}{189}
-\tocsubsectionentry {{\hl {Ortogonalitet mellan f{\"a}lt och v{\aa }gvektor}}}{10.3.2}{189}
-\tocsectionentry {{\hl {Poynting-vektorn}}}{10.4}{190}
-\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~10 -- V{\aa }gutbredning i homogena och isotropa dielektrika}{10.5}{191}
+\tocsectionentry {{\hl {Tidsharmoniska f{\"a}lt och planv{\aa }guppdelning}}}{10.3}{189}
+\tocsubsectionentry {{\hl {Harmoniska v{\aa }gor}}}{10.3.1}{189}
+\tocsubsectionentry {{\hl {Komplexv{\"a}rda f{\"a}ltenvelopper}}}{10.3.2}{189}
+\tocsubsectionentry {{\hl {Ortogonalitet mellan f{\"a}lt och v{\aa }gvektor}}}{10.3.3}{191}
+\tocsectionentry {{\hl {Poynting-vektorn}}}{10.4}{191}
+\tocsectionentry {Sammanfattning av F{\"o}rel{\"a}sning~10 -- V{\aa }gutbredning i homogena och isotropa dielektrika}{10.5}{192}
 \tocchapterentry {F{\"o}rel{\"a}sning 11 -- {Retarderade potentialer som l{\"o}sningar till Maxwells ekvationer}}{11}{193}
 \tocsectionentry {Elektrodynamiska f{\"a}lt och retarderade potentialer}{11.1}{195}
 \tocsectionentry {Recap p{\aa } vad skal{\"a}ra potentialen och vektorpotentialen {\"a}r bra f{\"o}r}{11.2}{196}

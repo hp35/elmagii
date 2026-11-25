@@ -150,8 +150,7 @@
   \noindent
   Med dessa approximationer omformulerar vi v{\aa}gekvationerna f{\"o}r det
   elektromagnetiska f{\"a}ltet i form av tv{\aa} identiska ekvationer, f{\"o}r
-  det elektriska respektive magnetiska f{\"a}ltet, vilka direkt kan reduceras
-  till en skal{\"a}r v{\aa}gekvation.
+  det elektriska respektive magnetiska f{\"a}ltet.
   Vi identifierar ljushastigheten i vakuum som $c^{-2}_0=\mu_0\varepsilon_0$
   samt brytningsindex $n=\varepsilon^{1/2}_{\rm r}$, som reducerar
   utbredningshastigheten f{\"o}r de elektromagnetiska v{\aa}gorna som $c=c_0/n$.
@@ -193,12 +192,10 @@
   Planv{\aa}gsuppdelning av den elektromagnetiska v{\aa}gen med
   komplex-v{\"a}rda envelopper,\sidx{Planv{\aa}guppdelning}
   $$
-    \eqalign{
-      {\bf E}({\bf x},t)&=\sum_{\bf k}
-         \Re[{\bf E}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega({\bf k}) t)],\cr
-      {\bf B}({\bf x},t)&=\sum_{\bf k}
-         \Re[{\bf B}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega({\bf k}) t)].\cr
-    }
+      {\bf E}({\bf x},t)=\sum_{\bf k}
+         \Re[{\bf E}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega t)],\quad
+      {\bf B}({\bf x},t)=\sum_{\bf k}
+         \Re[{\bf B}_{\bf k}\exp(i{\bf k}\cdot{\bf x}-i\omega t)].
   $$
 }
 %----------------------- END OF PREAMBLE -----------------------
@@ -523,6 +520,8 @@ v{\aa}gor {\"a}r generella till sin form, och beh{\"o}ver ej vara ``klassiska
 harmoniska sinusv{\aa}gor''. V{\aa}gorna beh{\"o}ver ej heller vara repetitiva,
 utan kan lika v{\"a}l beskriva solit{\"a}ra pulser.\sidx{Motpropagerande
 v{\aa}gor}
+\epsfig{figs/arbitrary.1}
+\medskip
 
 \subsection{Tolkning av reducerad {\hl{fashastighet och brytningsindex}}}
 \sidx{Brytningsindex $n$}
@@ -585,10 +584,71 @@ superpositionsprincipen g{\"a}ller, varvid vi kan analysera l{\"o}sningar
 f{\"o}r olika delar av ett elektromagnetiskt f{\"a}lt, och d{\"a}refter
 sammanfoga den totala l{\"o}sningen f{\"o}r f{\"a}ltet.
 
+\subsection{{\hl{Harmoniska v{\aa}gor}}}
+\sidx{Harmoniska v{\aa}gor}
+\sidx{V{\aa}gtal $k=|{\bf k}|$}
+\sidx{Vinkelfrekvens $\omega$}
+Om vi nu t{\"a}nker oss att den v{\aa}g vi studerar r{\"o}r sig i positiv
+$z$-led, samt att denna v{\aa}g {\"a}r {\it harmonisk}, det vill s{\"a}ga att
+den best{\aa}r av en cosinus-funktion i rum och tid,\numberedfootnote{Eftersom
+  vi alltid har att cosinus och sinus {\"a}r relaterade genom ett skifte
+  i fas $\cos(\theta)=\sin(\theta-\pi/2)$, s{\aa} bryr vi oss h{\"a}r inte
+  om att s{\"a}rskilja dessa. I och med att vi anv{\"a}nder $\cos$ s{\aa}
+  leds vi dessutom per automatik in p{\aa} att associera denna med realdelen
+  $\Re[E_k\exp(i\theta)]$ n{\"a}r vi formulerar planv{\aa}g-uppdelningen av
+  f{\"a}ltet.}
+s{\aa} kan vi generellt formulera denna som
+\hl{$$
+  E(z,t)=E_k\cos(k(z-ct)),
+$$}
+d{\"a}r $E_k$ {\"a}r amplituden och d{\"a}r $k$ {\"a}r det s{\aa} kallade
+{\it v{\aa}gtalet} som best{\"a}mmer den spatiala frekvensen hos v{\aa}gen.
+Vi kan h{\"a}r se indexet\numberedfootnote{H{\"a}r {\it ej} att
+  f{\"o}rv{\"a}xlas med n{\aa}got uppr{\"a}kningsindex eller liknande.}
+``$k$'' hos f{\"a}ltet som en etikett som talar om f{\"o}r oss att denna
+amplitud {\"a}r kopplad till en v{\aa}g med just $k$ som v{\aa}gtalet.
+\medskip
+\epsfig{figs/harmonic.1}
+\medskip
+\noindent
+Vi ser h{\"a}r direkt att denna form {\"a}r periodisk med den {\hl{spatiala
+perioden}}\numberedfootnote{$\hbox{``Spatial''} = \hbox{``i rummet''}$;
+  $\hbox{``Temporal''} = \hbox{``i tiden''.}$}
+l{\"a}ngs $z$-axeln, eller {\it v{\aa}gl{\"a}ngden}, {\"a}r
+\hl{$$
+  \lambda={{2\pi}\over{k}}
+  \qquad\Leftrightarrow\qquad
+  k={{2\pi}\over{\lambda}},
+$$}
+och likas{\aa} ser vi direkt, genom att helt enkelt multiplicera in v{\aa}gtalet
+$k$ med hastigheten $c$ i uttrycket $\cos(k(z-ct))$, att den vinkelfrekvens med
+vilken denna form oscillerar i tiden ges som
+\hl{$$
+  \omega={{2\pi}\over{f}}=kc
+  \qquad\Leftrightarrow\qquad
+  k={{\omega}\over{c}}.
+$$}
+
 \subsection{{\hl{Komplexv{\"a}rda f{\"a}ltenvelopper}}}
 \sidx{Komplexv{\"a}rda f{\"a}ltenvelopper}
 \sidx{Elektrisk f{\"a}ltstyrka ${\bf E}$}[Komplexv{\"a}rd envelopp]
 \sidx{Magnetisk fl{\"o}dest{\"a}thet ${\bf B}$}[Komplexv{\"a}rd envelopp]
+\sidx{V{\aa}gtal $k=|{\bf k}|$}
+\sidx{Vinkelfrekvens $\omega$}
+Med f{\"o}reg{\aa}ende resonemang kring harmoniska v{\aa}gor, s{\aa} kan vi
+konstatera att vi kan inf{\"o}ra komplex-v{\"a}rda f{\"a}lt, med allt av
+f{\"o}rdelar som dessa har att erbjuda vad g{\"a}ller analys av fas, riktning
+och f{\"o}renkling n{\"a}r det kommer till en mer komplex v{\"a}xelverkan
+mellan ljus och materia, som\numberedfootnote{Som vanligt betecknar
+  ``$\hbox{c.\kern1ptc.}$'' komplexkonjugatet av den f{\"o}reg{\aa}ende
+  termen, det vill s{\"a}ga att
+  $$
+    E(z,t)={{1}\over{2}}[E_k\exp(ik(z-ct))+E^*_k\exp(-ik(z-ct))]
+  $$}
+{\hl{$$
+  E(z,t)=\Re[E_k\exp(ik(z-ct))]
+    ={{1}\over{2}}E_k\exp(ik(z-ct))+\hbox{c.\kern1ptc.}
+$$}}
 Formen p{\aa} den homogena differentialekvationen,\numberedfootnote{Den
   f{\"o}ljande behandlingen av plana v{\aa}gor f{\"o}ljer i huvudsak
   Griffiths Kap.~9.2, sid.~393--415.}
@@ -639,6 +699,7 @@ Om vi har generella v{\aa}gformer som inte {\"a}r av ``sinus-typ'', s{\aa} kan
 vi alltid f{\aa} fram dessa genom addition av harmoniska f{\"a}lt till en
 {\it Fourier-utveckling}, med respektive amplitud hos varje frekvenskomponent
 som {\it Fourier-koefficienter}.\sidx{V{\aa}gvektor ${\bf k}$}
+\vfill\eject
 
 Denna tids- och rums-harmoniska form f{\"o}r {\"o}ver de partiella
 differentialekvationerna f{\"o}r f{\"a}lten p{\aa}
