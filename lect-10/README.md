@@ -86,9 +86,14 @@ missing components in case there are any complaints.
 
 [`arbitrary.mp`](arbitrary.mp)
     ([`arbitrary.pdf`](arbitrary.pdf))
-    <i>dding MetaPost drawing of arbitrary waves forms traveling in the
-    positive and negative z-direction, following the general solution by
-    the d'Alembert ansatz.</i>
+    <i>MetaPost drawing of arbitrary waves forms traveling in the positive
+    and negative z-direction, following the general solution by the d'Alembert
+    ansatz.</i>
+
+[`harmonic.mp`](harmonic.mp)
+    ([`harmonic.pdf`](harmonic.pdf))
+    <i>MetaPost drawing of a harmonic wave traveling in the positive
+    z-direction.</i>
 
 ## Copyright
 Copyright (C) 2024, Fredrik Jonsson, under GPL 3.0.
